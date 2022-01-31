@@ -1,0 +1,1331 @@
+\documentclass[a4paper,oneside,11pt,bibliography=totoc]{scrartcl}
+%Use bibliography=totoc or bibliography=totocnumbered to show the List of References in the table of contents, numbered if using the latter
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{exscale}
+%\newcommand\hmmax{0}
+%\newcommand\bmmax{1}
+%\newcommand{\Plus}{\mathord{\tikz\draw[line width=0.3ex, x=1ex, y=1ex] (0.75,0) -- (0.75,1.5)(0,0.75) -- (1.5,0.75);}} 
+\def\RPlus{\ensuremath{\mathbin{\rule[.13em]{.66em}{.22em}\hspace{-.44em}\rule[-.08em]{.22em}{.66em}\,}}} %Fat plus symbol
+\usepackage[english]{babel}
+\usepackage{graphicx} %extended \includegraphics options
+%\usepackage{CJKutf8} %Kanji signs
+\usepackage{dsfont}%even more mathematical symbols
+%\usepackage{bm} %use \bm to get bold math symbols
+\usepackage{amssymb} %even more mathematical symbols
+\usepackage{amsthm} %theorem style usually needed for AMS (american mathematical society)
+\usepackage{amsmath} %important stuff like equation structures and so on
+\usepackage{amsfonts} %new mathematical symbols like fractals
+%\usepackage{amscd}
+%\usepackage{amstext}
+%\usepackage{mathabx}
+\usepackage{booktabs} %enhanced table stuff
+%\usepackage{amsbsy} %bold mathematical symbols, also loaded in amsmath
+\usepackage{fancybox} %for theorem boxes
+%\usepackage[hypcap=false]{caption} %new captions for floating options
+%\captionsetup{font={small,sf},labelfont=bf,textfont=rm} 
+%\usepackage{float} %provides H for images-here
+%\usepackage{subfigure} %citing subfigures in a figure
+\usepackage{lmodern} %latin modern font
+\usepackage{fixcmex} %Fixing the issue with scaling brackets etc. in lmodern
+%\renewcommand\familydefault{lmr}% uses lm only for text
+%\usepackage[numbib,nottoc]{tocbibind} %Options for including the bibliography to content list etc.; nottoc prevents listing of Contents in the list of contents, numbib also numbers the section of the biblio
+%\usepackage[pdfstartview={FitH},linkbordercolor={0 1 0}]{hyperref}
+\usepackage[pdfstartview={FitH},linkbordercolor={0 1 0},colorlinks]{hyperref}
+\usepackage{esint} %für \oiint und andere Integralformen
+%\usepackage{fancyhdr} %Different handling for footers and headers
+\usepackage[headsepline=.5pt,footsepline=.5pt,automark]{scrlayer-scrpage}
+\usepackage{pdfpages} %For \includepdf etc
+%\usepackage{trfsigns} % Fourier and Laplacesymbols for engineering und für \e für \exp
+\newcommand{\e}{\ensuremath{\mathrm{e\;\!}}}
+%\usepackage{wasysym} %Smiley
+%\usepackage{siunitx} %SI Einheiten
+%\usepackage{eqnarray} %Gleichungen in Tabellenform
+\usepackage{mathtools} %für mathclap
+\usepackage{relsize} %Integralgröße
+\usepackage{scrhack} %Warnung bei book bezüglich toc
+\usepackage{mleftright} %Distanz zu \left \right weg
+\usepackage{tikz} %Diagramme
+\usepackage{stmaryrd} % fuer llbracket usw.
+\usepackage[many]{tcolorbox} %Coloured boxes around theorems etc
+\tcbuselibrary{theorems} % siehe oben
+%\usepackage{xfrac}    %for \sfrac quotient of sets
+
+\usetikzlibrary{cd}
+
+\makeatletter
+\DeclareFontEncoding{LS1}{}{}
+\DeclareFontSubstitution{LS1}{stix}{m}{n}
+\DeclareMathAlphabet{\mathKel}{LS1}{stixscr}{m}{n}
+\DeclareMathAlphabet{\mathcal}{LS1}{stixscr}{m}{n}
+\makeatother
+\DeclareMathOperator{\sAut}{\mathKel{A\mkern-5.5mu u\mkern-4mu t\mkern-1.5mu}}
+\DeclareMathOperator{\saut}{\mathKel{a\mkern-4.5mu u\mkern-4mu t\mkern-1.5mu}}
+\DeclareMathOperator{\sEnd}{\mathKel{E\mkern-4mu n\mkern-4.5mu d\mkern-1mu}}
+
+%\tikzset{every node/.style={align=center}}
+%\usepackage{pst-node} %Diagramme
+%\usepackage{auto-pst-pdf}
+%\usepackage{stackengine} %Kommawedge
+%\usepackage{mathabx}
+%\usepackage{here}
+%\usepackage[style=authortitle-icomp]{biblatex}
+%\usepackage[babel,german=guillemets]{csquotes}
+
+\setcounter{tocdepth}{4}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{4}
+\setcounter{secnumdepth}{5}
+\setlength{\jot}{12pt} % Zeilenabstand in der Align-Umgebung
+\allowdisplaybreaks % mit \displaybreak einen Seitenumbruch in align-Umgebung erzeugen
+
+%\pagestyle{headings}
+\pagestyle{scrheadings}
+%\pagestyle{fancy} %eigener Seitenstil
+%\fancyhf{}
+%\lhead{\leftmark} %\nouppercase, um auch Kleinbuchstaben zu bekommen
+%\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+%  \markboth{\thesection{} #1}} 
+%\fancyhead[L]{Titel} %Kopfzeile links
+\clearpairofpagestyles
+\ihead{\headmark} %Kopfzeile links, automark has to be loaded in the package scrlayer-scrpage
+\ohead{Simon-Raphael Fischer} %Kopfzeile rechts
+%\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+%\fancyfoot[C]{\thepage} %Seitennummer
+\cfoot{\pagemark}
+%\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+\renewcommand{\theequation}{\arabic{equation}}
+
+
+%\renewcommand*{\chapterpagestyle}{scrheadings}
+
+
+%Folgender Befehl dafür da, dass sections auf ungeraden Seiten anfangen
+%\let\Section\section
+%\renewcommand\section[2][]{%
+  %\cleardoublepage
+  %\def\myTEMP{#1}\ifx\myTEMP\empty\Section{#2}\else\Section[#1]{#2}\fi}
+	
+	
+%\usepackage[automark]{scrlayer-scrpage}
+%\ohead{\pagemark}
+%\ihead{\leftmark}
+
+
+\renewcommand{\listoffigures}{\begingroup
+\tocsection
+\tocfile{\listfigurename}{lof}
+\endgroup} 
+
+\renewcommand{\listoftables}{\begingroup
+\tocsection
+\tocfile{\listtablename}{lot}
+\endgroup} 
+
+\oddsidemargin -0.0 cm
+\evensidemargin -0.5 cm
+\topmargin -1.5 cm
+\headheight 1.2 cm
+\headsep 1.3 cm
+\topskip 0.5 cm
+\textheight 23.0 cm
+\textwidth 16.0 cm
+\parindent 0.0 cm
+\renewcommand{\baselinestretch}{1.2}
+%\renewcommand{\arraystretch}{1.6}
+\setcounter{totalnumber}{2}
+
+\def\tp{^{^{^{\leftrightarrow}}}\!\!\!\!\!\!\!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Definitionen %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\renewcommand{\chapterheadstartvskip}{\vspace{0cm}} %für bookklasse
+
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bs{\begin{subequations}}
+\def\es{\end{subequations}}
+\def\ba#1\ea{\begin{align}#1\end{align}}
+\def\bes{\begin{equation*}}
+\def\ees{\end{equation*}}
+\def\bas#1\eas{\begin{align*}#1\end{align*}}
+
+
+%um die Theoreme etc. in das Inhaltsverzeichnis zu packen
+%\let\amsthmhead\thmhead
+%\let\amsswappedhead\swappedhead
+%\makeatletter
+%\renewcommand*\thmhead[3]{\amsthmhead{#1}{#2}{#3}%
+%%\@ifnotempty{#2}{\addcontentsline{toc}{subsection}{#2 ~ #3}}{}}
+%\renewcommand*\swappedhead[3]{\amsswappedhead{#1}{#2}{#3}%
+%%\@ifnotempty{#2}{\addcontentsline{toc}{subsection}{#2 ~ #3}}{}}
+%\makeatother
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+%\newtcbtheorem[number within=section]{theorem}{Theorem}
+%{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtcbtheorem
+  [use counter*=theorem,number within=section]% init options
+  {lemmata}% name
+  {Lemma}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+    colback=gray!25,
+    colframe=gray!0!black,
+    fonttitle=\bfseries,
+  }% options
+  {lem}% prefix
+\newtheorem{proposition}[theorem]{Proposition}
+\newtcbtheorem
+  [use counter*=theorem,number within=section]% init options
+  {propositions}% name
+  {Proposition}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+    colback=gray!25,
+    colframe=gray!0!black,
+    fonttitle=\bfseries,
+  }% options
+  {prop}% prefix
+\newtcbtheorem
+  [use counter*=theorem,number within=section]% init options
+  {theorems}% name
+  {Theorem}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+    colback=gray!25,
+    colframe=gray!0!black,
+    fonttitle=\bfseries,
+  }% options
+  {thm}% prefix
+\newtcbtheorem
+  [use counter*=theorem,number within=section]% init options
+  {corollaries}% name
+  {Corollary}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+    colback=gray!25,
+    colframe=gray!0!black,
+    fonttitle=\bfseries,
+  }% options
+  {cor}% prefix
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+
+\theoremstyle{remark}
+\newtcbtheorem
+  [use counter*=theorem,number within=section]% init options
+  {remarks}% name
+  {Remark}% title
+  {%
+		breakable,
+		enhanced,
+    colback=gray!5,
+    colframe=gray!50!black,
+    fonttitle=\bfseries,
+  }% options
+  {rem}% prefix
+\newtheorem*{note}{Note}
+\newtheorem{remark}[theorem]{Remarks}
+\newtheorem{motivation}[theorem]{Motivation} 
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtcbtheorem
+  [use counter*=theorem,number within=section]% init options
+  {definitions}% name
+  {Definition}% title
+  {%
+		breakable,
+		enhanced,
+    colback=gray!25,
+    colframe=gray!0!black,
+    fonttitle=\bfseries,
+  }% options
+  {def}% prefix
+\newtcbtheorem
+  [use counter*=theorem,number within=section]% init options
+  {examples}% name
+  {Example}% title
+  {%colback=black!5,colframe=red!35!black
+		breakable,
+		enhanced,
+    colback=gray!5,
+    colframe=gray!50!black,
+    fonttitle=\bfseries,
+  }% options
+  {ex}% prefix
+\newtcbtheorem
+  [use counter*=theorem,number within=section]% init options
+  {situations}% name
+  {Situation}% title
+  {%colback=black!5,colframe=red!35!black
+		breakable,
+		enhanced,
+    colback=gray!5,
+    colframe=gray!50!black,
+    fonttitle=\bfseries,
+  }% options
+  {sit}% prefix
+\newtcbtheorem
+  [use counter*=theorem,number within=section]% init options
+  {fieldredefinitions}% name
+  {Theorem}% title
+  {%colback=black!5,colframe=red!35!black
+		breakable,
+		enhanced,
+    colback=gray!25,
+    colframe=gray!0!black,
+    fonttitle=\bfseries,
+  }% options
+  {fieldredef}% prefix
+\newtheorem{example}[theorem]{Example}
+
+
+% hier Namen etc. einsetzen
+%\newcommand{\fullname}{Simon-Raphael Fischer}
+%\newcommand{\email}{sfischer@ncts.tw}
+%\newcommand{\titel}{Examples and No-Gos of curves Yang-Mill-Higgs gauge theories}
+%\newcommand{\titel}{Titel der Arbeit}
+%\newcommand{\jahr}{2020}
+%\newcommand{\matnr}{11424951}
+%\newcommand{\gutachterA}{Prof. Dr. Mark John David Hamilton}
+%\newcommand{\betreuer}{Professor Dr. Anna Dall'Acqua}
+% hier richtige Fakultät auswählen
+%\newcommand{\fakultaet}{Fakultät noch ergänzen}
+%\newcommand{\fakultaet}{Mathematik und\\Wirtschaftswissenschaften}
+%\newcommand{\fakultaet}{Naturwissenschaften}
+%\newcommand{\fakultaet}{Medizin}
+% nun noch unten das Institut einsetzen
+%\newcommand{\institut}{Institut noch ergänzen}
+
+% Für \widecheck: (umgekehrter Zirkumflex)
+
+\DeclareFontFamily{U}{mathx}{\hyphenchar\font45}
+\DeclareFontShape{U}{mathx}{m}{n}{
+      <5> <6> <7> <8> <9> <10>
+      <10.95> <12> <14.4> <17.28> <20.74> <24.88>
+      mathx10
+      }{}
+\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
+\DeclareFontSubstitution{U}{mathx}{m}{n}
+\DeclareMathAccent{\widecheck}{0}{mathx}{"71}
+\DeclareMathAccent{\wideparen}{0}{mathx}{"75}
+
+%\newtheorem{cor}{Corollary}
+%\newtheorem{ad}{Theorem}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{theorem}{Theorem}
+
+%\includeonly{PhysicalBasics/f(R)gravity} %nur das kompilieren
+
+%\let\endtitlepage\relax %No page break after titlepage
+
+\begin{document}
+\pagenumbering{Roman}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{titlepage}
+%\thispagestyle{empty}
+
+\author{Simon-Raphael Fischer\footnote{Email: \href{mailto:sfischer@ncts.tw}{sfischer@ncts.tw}; ORCID iD: \href{https://orcid.org/0000-0002-5859-2825}{0000-0002-5859-2825}} }
+\title{Curved Yang-Mills gauge theories} 
+\subtitle{Infinitesimal and integrated gauge theory}
+\date{\today} 
+\maketitle
+\thispagestyle{empty}
+
+\begin{center}
+National Center for Theoretical Sciences, Mathematics Division, National Taiwan University\\
+No. 1, Sec. 4, Roosevelt Rd., Taipei City 106, Taiwan Room 503, Cosmology Building, Taiwan
+\ \\
+\ \\
+\ \\
+\textbf{Abstract}\footnote[2]{Abbreviations used in this paper: \textbf{LGB} for Lie group bundle, \textbf{LAB} for Lie algebra bundle.}
+%\footnote[2]{Abbreviations used in this paper: \textbf{(C)YMH GT} for (curved) Yang-Mills-Higgs gauge theory.}
+\begin{abstract}
+  \small{
+}
+ \end{abstract}
+\end{center}
+
+\textit{2020 MSC:} Primary 53D17; Secondary 81T13, 17B99.
+
+\textit{Keywords:} \texttt{Mathematical Gauge Theory}, Differential Geometry, High Energy Physics - Theory, Mathematical Physics
+
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Inhaltsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\tableofcontents
+
+
+
+%\thispagestyle{empty}\hspace{1em}\newpage
+% \thispagestyle{empty}\hspace{1em}\newpage
+
+
+\renewcommand{\thefootnote}{\arabic{footnote}}
+%
+\setlength{\parindent}{12 pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hier beginnt der Hauptteil %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cleardoublepage
+% für die leere(n) Seite(n)
+
+
+\pagenumbering{arabic}
+
+\section{Introduction}
+
+\subsection{Basic notations}
+
+\subsection{Assumed background knowledge}
+
+It is highly recommended to have basic knowledge about differential geometry and gauge theory as presented in \cite[especially Chapter 1 to 5]{Hamilton}; however, sometimes we will still give explicit references to help with more technical details. It can be useful to have knowledge about Lie algebra and Lie group bundles, and even Lie algebroids and Lie groupoids, but we will introduce their basic notions such that it is not necessarily needed to have knowledge about these upfront.
+
+See also the previous subsection about notions we assume to be known.
+
+%\twocolumn
+\section{Basic definitions}\label{BasicDefinitions}
+%
+%In the following, we denote with $V^*$ the dual of a vector bundle $V \to N$ over a smooth manifold $N$, and $\Phi^*V$ denotes the pull-back of $V$ by $\Phi: M \to N$, a smooth map from a smooth manifold $M$ to $N$. We have a similar notation for the pull-back of sections, especially we will have sections $F$ as an element of $\Gamma\left( \left(\bigotimes_{m=1}^{l} E_m^*\right) \otimes E_{l+1} \right)$, where $E_1, \dots, E_{l+1} \to N$ ($l \in \mathbb{N}$) are real vector bundles of finite rank over a smooth manifold $N$, and $\Gamma(\cdot)$ denotes the space of smooth sections. Then we view the pull-back $\Phi^*F$ as an element of $\Gamma\left( \mleft(\bigotimes_{m=1}^{l} \mleft(\Phi^*E_m\mright)^*\mright) \otimes \Phi^*E_{l+1} \right)$, and it is essentially given by
+%\bas
+	%(\Phi^*F)(\Phi^*\nu_1, \dotsc , \Phi^*\nu_l)
+	%&=
+	%\Phi^*\mleft( F\mleft( \nu_1, \dotsc, \nu_l \mright) \mright)
+%\eas
+%for all $\nu_1 \in \Gamma(E_1), \dotsc, \nu_l \in \Gamma(E_l)$. In general we also make use of that sections of $\Phi^*E$ can be viewed as sections of $E$ along $\Phi$, where $E \stackrel{\pi}{\to} N$ is any vector bundle over $N$. Let $\mu \in \Gamma(\Phi^*E)$, then it has the form $\mu_p = (p, u_p)$ for all $p \in M$, where $u_p \in E_{\Phi(p)}$, the fibre of $E$ at $\Phi(p)$; and a section $\nu$ of $E$ along $\Phi$ is a smooth map $M \to E$ such that $\pi \circ \nu = \Phi$. Then on one hand $\mathrm{pr}_2 \circ \mu$ is a section along $\Phi$, where $\mathrm{pr}_2$ is the projection onto the second component, and on the other hand $M \ni p \mapsto (p, \nu_p)$ defines an element of $\Gamma(\Phi^*E)$. With that one can show that there is a 1:1 correspondence of $\Gamma(\Phi^*E)$ with sections along $\Phi$. Similarly, vector bundle morphisms $L: G \to E$ over $\Phi$ have 1:1 correspondences to base-preserving vector bundle morpishms $G \to \Phi^*E$, where $G \to M$ is a vector bundle over $M$. We do not necessarily mention it when we make use of such trivial identifications, it should be clear by the context. For example $\mathrm{D}\Phi$ denotes the total differential of $\Phi$ (also called tangent map). It can be viewed as a vector bundle morphism $\mathrm{T}M \to \mathrm{T}N$ over $\Phi$, and we often view it as an element of $\Omega^1(M; \Phi^*\mathrm{T}N)$ by $\mathfrak{X}(M) \ni Y \mapsto \mathrm{D}\Phi(Y)$, where $\mathrm{D}\Phi(Y) \in \Gamma(\Phi^*\mathrm{T}N), M \ni p \mapsto \mathrm{D}_p\Phi(Y_p)$.
+%
+%Additionally, with $\Omega^k(N; E)$ ($k \in \mathbb{N}_0$) we denote $k$-forms on $N$ with values in a vector bundle $E \to N$, and we always use the Einstein's sum convention. If one has a connection $\nabla$ on a vector bundle $V \to N$, then one has the notion of the exterior covariant derivative on $\Omega^p(M;E)$, denoted by $\mathrm{d}^\nabla$. In the case of a trivial vector bundle $V=N \times W \to N$, where $W$ is some vector space, we will often use the \textbf{canonical flat connection} for $\nabla$, defined by $\nabla \nu = 0$, where $\nu$ is a constant section of $N \times W$, see \textit{e.g.}~\cite[Example 5.1.7; page 260f.]{hamilton} for a geometric interpretation as horizontal distribution. The canonical flat connection is clearly uniquely defined (if a trivialization is given) because constant sections generate all sections and due to the Leibniz rule and linearity of $\nabla$. Let $\mleft( e_a \mright)_a$ be a constant global frame of $N \times W$, thence,
+%\bas
+%\mathrm{d}^\nabla \omega
+%&=
+%\mathrm{d} \omega^a \otimes e_a
+%\eas
+%for all $\omega \in \Omega^p(M; W)$, where we write $\omega= \omega^a \otimes e_a$. Hence, we define
+%\ba
+%\mathrm{d}\omega
+%&\coloneqq
+%\mathrm{d}^\nabla \omega,
+%\ea
+%when $\nabla$ is the canonical flat connection. $\mathrm{d}$ is clearly a differential.
+%
+%As usual, there will be definitions of certain objects depending on other elements, and for keeping notations simple we will not always explicitly denote all dependencies. It will be clear by context on which it is based on, that is, when we define an object $A$ using the notion of Lie algebra actions $\gamma$ and we write "Let $A$ be [as defined before]", then it will be clear by context which Lie algebra action is going to be used, for example given in a previous sentence writing "Let $\gamma$ be a Lie algebra action".
+%%, and recall the following wedge product\footnote{As also defined in \cite[\S 5, third part of Exercise 5.15.12; page 316]{hamilton}.} of forms with values in a vector bundle $E$ and values in its space of endomorphisms $\mathrm{End}(E)$,
+%%\bas
+%%\wedge: \Omega^k(N; \mathrm{End}(E)) \times \Omega^l(N; E)
+%%&\mapsto
+%%\Omega^{k+l}(N; E) \\
+%%(T, \omega) &\mapsto T \wedge \omega
+%%\eas
+%%for all $k, l \in \mathbb{N}_0$, given by
+%%\ba\label{DefVonWedgedemitEnd}
+%%\mleft( T \wedge \omega \mright) \mleft( Y_1, \dotsc, Y_{k+l} \mright)
+%%&\coloneqq
+%%\frac{1}{k! l!} \sum_{\sigma \in S_{k+l}} \mathrm{sgn}(\sigma) ~
+	%%T \mleft( Y_{\sigma(1)}, \dotsc, Y_{\sigma(k)} \mright)
+		%%\mleft( \omega\mleft( Y_{\sigma(k+1)}, \dotsc, Y_{\sigma(k+l)} \mright) \mright),
+%%\ea
+%%where $S_{k+l}$ is the group of permutations $\{1, \dotsc, k+l\}$. This is then locally given by, with respect to a frame $\mleft( e_a \mright)_a$ of $E$,
+%%\bas
+%%T \wedge \omega &= T(e_a) \wedge w^a,
+%%\eas
+%%where $T$ acts as an endomorphism on $e_a$, \textit{i.e.}~$T(e_a) \in \Omega^k(N; E)$, and $\omega = \omega^a \otimes e_a$. Also recall that there is the canonical extension of $\nabla$ on $\mathrm{End}(E)$ by forcing the Leibniz rule. We still denote this connection by $\nabla$, too.
+%
+%We also need the following definitions.
+%
+%\begin{definitions}{Graded extension of products, \newline \cite[generalization of Definition 5.5.3; page 275]{hamilton}}{GradingOfProducts}
+%Let $l \in \mathbb{N}$ and $E_1, \dots E_{l+1} \to N$ be vector bundles over a smooth manifold $N$, and $F \in \Gamma\left( \left(\bigotimes_{m=1}^{l} E_m^*\right) \otimes E_{l+1} \right)$. Then we define the \textbf{graded extension of $F$} as
+	%\bas
+%\Omega^{k_1}(N; E_1) \times \dots \times \Omega^{k_l}(N; E_l)
+%&\to \Omega^{k}(N; E_{l+1}), \\
+%(A_1, \dots, A_l)
+%&\mapsto
+%F\mleft(A_1\stackrel{\wedge}{,} \dotsc \stackrel{\wedge}{,} A_l\mright),
+%\eas
+%where $k := k_1+\dots k_l$ and $k_i \in \mathbb{N}_0$ for all $i\in \{1, \dots, l\}$. $F\mleft(A_1\stackrel{\wedge}{,} \dotsc \stackrel{\wedge}{,} A_l\mright)$ is defined as an element of $\Omega^{k}(N; E_{l+1})$ by
+%\bas
+%&F\mleft(A_1\stackrel{\wedge}{,} \dotsc \stackrel{\wedge}{,} A_l\mright)\mleft(Y_1, \dots, Y_{k}\mright)
+%\coloneqq \\
+%&\frac{1}{k_1! \cdot \dots \cdot k_l!} \sum_{\sigma \in S_{k}} \mathrm{sgn}(\sigma) ~ F\left( A_1\left( Y_{\sigma(1)}, \dots, Y_{\sigma(k_1)} \right), \dots, A_l\left( Y_{\sigma(k-k_l+1)}, \dots, Y_{\sigma(k)} \right) \right)
+%\eas
+%for all $Y_1, \dots, Y_{k} \in \mathfrak{X}(N)$, where $S_{k}$ is the group of permutations of $\{1, \dots, k\}$ and $\mathrm{sgn}(\sigma)$ the signature of a given permutation $\sigma$. 
+%
+%$\stackrel{\wedge}{,}$ may be written just as a comma when a zero-form is involved.
+%
+%Locally, with respect to given frames $\mleft( e^{(i)}_{a_i} \mright)_{a_i}$ of $E_i$, this definition has the form
+%\ba\label{CoordExprOfGradedExtension}
+%F\mleft(A_1\stackrel{\wedge}{,} \dotsc \stackrel{\wedge}{,} A_l\mright)
+%&=
+%F\mleft(e^{(1)}_{a_1}, \dotsc, e^{(l)}_{a_l}\mright) \otimes A_1^{a_1} \wedge \dotsc \wedge A_l^{a_l}
+%\ea
+%for all $A_i = A_i^{a_i} \otimes e^{(i)}_{a_i}$, where $A_i^{a_i}$ are $k_i$-forms on $N$.
+%\end{definitions}
+%
+%\begin{remark}
+%\leavevmode\newline
+%Assume $F \in \Gamma\left( \mleft(\bigwedge_{m=1}^{l} \mathrm{T}^*N \mright) \otimes E \right) \cong \Omega^l(N; E)$ for some vector bundle $E$, \textit{i.e.}~$F$ is an $l$-form on $N$ with values in $E$. The pull-back $\Phi^*F$ by $\Phi$ can be then viewed as an element of $\Gamma\left( \bigwedge_{m=1}^{l} \mleft(\Phi^*\mathrm{T}N\mright)^* \otimes \Phi^*E \right)$.
+%
+%Do not confuse this pull-back with the pull-back of forms, here denoted by $\Phi^!F$, which is an element of $\Gamma\left( \mleft(\bigwedge_{m=1}^{l} \mathrm{T}^*M \mright) \otimes \Phi^*E \right) \cong \Omega^l(M; \Phi^*E)$ defined by
+%\ba
+%\mleft.\mleft(\Phi^!F\mright)(Y_1, \dots, Y_l)\mright|_p
+%&\coloneqq
+%F_{\Phi(p)}\mleft(\mathrm{D}_p\Phi\mleft(\mleft.Y_1\mright|_p\mright), \dots, \mathrm{D}_p\Phi\mleft(\mleft.Y_l\mright|_p\mright)\mright)
+%\ea
+%for all $p \in M$ and $Y_1, \dots, Y_l \in \mathfrak{X}(M)$. Then
+%\ba\label{EqPullBackFormelFuerVerschiedeneDefinitionen}
+%\Phi^!F 
+%&=
+%\frac{1}{l!}~
+%\mleft(\Phi^*F\mright) ( \underbrace{\mathrm{D}\Phi \stackrel{\wedge}{,} \dotsc \stackrel{\wedge}{,} \mathrm{D}\Phi}_{l \text{ times}} )
+%\ea
+%by using the anti-symmetry of $F$ and Def.~\ref{def:GradingOfProducts}, \textit{i.e.}
+%\bas
+%&\mleft.\frac{1}{l!}~
+%\Big(\mleft(\Phi^*F\mright) ( \mathrm{D}\Phi \stackrel{\wedge}{,} \dotsc \stackrel{\wedge}{,} \mathrm{D}\Phi ) \Big) (Y_1, \dots, Y_l)\mright|_p \\
+%&\hspace{1cm}
+%=
+%\frac{1}{l!}~
+%\sum_{\sigma \in S_{l}} \mathrm{sgn}(\sigma) ~ \underbrace{(\Phi^*F)\mleft(\mathrm{D}\Phi\mleft(Y_{\sigma(1)}\mright), \dots, \mathrm{D}\Phi\mleft(Y_{\sigma(l)}\mright)\mright)}_{\mathclap{= \mathrm{sgn}(\sigma) ~ (\Phi^*F)\mleft(\mathrm{D}\Phi\mleft(Y_{1}\mright), \dots, \mathrm{D}\Phi\mleft(Y_{l}\mright)\mright)}}\Big|_p \\
+%&\hspace{1cm}
+%=
+%\frac{1}{l!}~ \underbrace{\mleft( \sum_{\sigma \in S_{l}} 1 \mright)}_{= l!} ~
+%F_{\Phi(p)}\mleft(\mathrm{D}_p\Phi\mleft(\mleft.Y_{1}\mright|_p\mright), \dots, \mathrm{D}_p\Phi\mleft(\mleft.Y_{l}\mright|_{p}\mright)\mright) \\
+%&\hspace{1cm}
+%= \mleft.\mleft(\Phi^!F\mright)(Y_1, \dots, Y_l)\mright|_p
+%\eas
+%for all $p \in M$ and $Y_1, \dots, Y_l \in \mathfrak{X}(M)$.
+%\end{remark}
+%
+%In case of antisymmetric tensors we of course preserve that.
+%
+%\begin{propositions}{Graded extensions of antisymmetric tensors}{GradedExtensionPlusAntiSymm}
+%Let $E_1, E_2 \to N$ be real vector bundles of finite rank over a smooth manifold $N$, $F \in \Omega^2(E_1; E_2)$. Then
+%\ba
+%F \mleft( A \stackrel{\wedge}{,} B \mright)
+%&=
+%-\mleft( -1 \mright)^{km}
+%F \mleft( B \stackrel{\wedge}{,} A \mright)
+%\ea 
+%for all $A \in \Omega^k(N; E_1)$ and $B \in \Omega^m(N; E_2)$ ($k,m \in \mathbb{N}_0$). Similarly extended to all $F \in \Omega^l(E_1; E_2)$.
+%\end{propositions}
+%
+%\begin{remark}
+%\leavevmode\newline
+%This is a generalization of similar relations just using the Lie algebra bracket $\mleft[ \cdot, \cdot\mright]_{\mathfrak{g}}$ of a Lie algebra $\mathfrak{g}$, see \cite[\S 5, first statement of Exercise 5.15.14; page 316]{hamilton}.
+%\end{remark}
+%
+%\begin{proof}
+%\leavevmode\newline
+%Trivial by using Eq.~\eqref{CoordExprOfGradedExtension}.
+%\end{proof}
+%
+%We also need to know what a Lie algebroid is, a generalization of both, tangent bundles and Lie algebras; this concept will just be defined, refer to the references for thorough discussions of these definitions, especially \cite{mackenzieGeneralTheory} and \cite[\S VII; page 113ff.]{DaSilva}.
+%
+%\begin{definitions}{Lie algebroid, \newline \cite[\S 3.3, first part of Definition 3.3.1; page 100]{mackenzieGeneralTheory}}{test}
+%%\leavevmode\newline
+%Let $E \to N$ be a real vector bundle of finite rank. Then $E$ is a smooth Lie algebroid if there is a bundle map $\rho: E \to \mathrm{T}N$, called the \textbf{anchor}, and a Lie algebra structure on $\Gamma(E)$ with Lie bracket $\mleft[ \cdot, \cdot \mright]_E$ satisfying
+%\ba
+  %\mleft[\mu, f \nu\mright]_E = f \mleft[\mu, \nu\mright]_E + \mathcal{L}_{\rho(\mu)}(f) ~ \nu
+%\label{eq:E-Leibniz}
+%\ea
+%for all $f \in C^\infty(N)$ and $\mu, \nu \in \Gamma(E)$, where $\mathcal{L}_{\rho(\mu)}(f)$ is the action of the vector field $\rho(\mu)$ on the function $f$ by derivation. We will sometimes denote a Lie algebroid by $\mleft( E, \rho, \mleft[ \cdot, \cdot \mright]_E \mright)$.
+%%We will sometimes denote a Lie algebroid by $\mleft( E, \rho, \mleft[ \cdot, \cdot \mright]_E \mright)$.
+%\end{definitions}
+%
+%%Tangent bundles are a canonical example of Lie algebroids, their anchor is the identity with which we also equip them; another canonical example with zero anchor are the Lie algebra bundles:
+%Tangent bundles and bundles of Lie algebras are canonical examples of Lie algebroids, their anchor is the identity and zero, respectively. The important example for us is a mixture of those examples:
+%
+%\begin{propositions}{Action Lie algebroids, \cite[\S 16.2, Example 5; page 114]{DaSilva}}{ActionLieoidsAreOids}
+%Let $\mleft(\mathfrak{g}, \mleft[\cdot, \cdot \mright]_{\mathfrak{g}}\mright)$ be some Lie algebra equipped with a Lie algebra action $\gamma: \mathfrak{g} \to \mathfrak{X}(N)$ on a smooth manifold $N$. Then there is a unique Lie algebroid structure on $E = N \times \mathfrak{g}$ such that we have
+%\ba
+%\rho(\nu)
+%&=
+%\gamma(\nu),
+%\\
+%\mleft[\mu, \nu\mright]_E
+%&=
+%\mleft[\mu, \nu\mright]_{\mathfrak{g}}
+%\ea
+%for all constant sections $\mu, \nu \in \Gamma(E)$. We call this structure \textbf{action Lie algebroid}.
+%\end{propositions}
+
+\section{Curved Yang-Mills gauge theory}
+
+Notation as in \cite{Hamilton}
+
+\begin{itemize}
+	\item $\widetilde{G}$ Lie group with Lie algebra $\mathfrak{g}$
+	\item $M$ smooth manifold (usually also a spacetime). An open subset of $M$ is usually denoted by $U$; typically small enough that "everything works out" (especially without further mentioning intersections of given open sets and so on)
+	\item $P \to M$ a principal bundle, a (local) gauge is usually denoted by $s$, an element of $\Gamma(P)$, sections of $P$
+	\item $V$ a vector space
+	\item $\rho$ a Lie group representation on $V$, $\rho_*$ the induced Lie algebra representation on $V$
+	\item $K \coloneqq P \times_\rho V$ the associated vector bundle induced by $P$ and $\rho$ on $V$. An element $\Phi$ of $K$ is denoted by by $[p, \phi]$ for $p \in P$ and $\phi \in V$, where $[ \cdot, \cdot]$ denotes the equivalence class with respect to the equivalence
+	\bas
+		(p, \phi) &\sim \mleft(p g, \rho\mleft( g^{-1} \mright) \cdot \phi \mright)
+	\eas
+	for all $g \in \widetilde{G}$; $pg$ denotes the canonical group action (from the right) $P \times \widetilde{G} \to P$ and $\cdot$ the action of $\mathrm{Aut}(V) \subset \mathrm{End}(V)$ on $V$.
+	\item Especially if fixing a local gauge $s: U \to P$ we can write for sections $\Phi \in \Gamma(K)$ locally 
+	\bas
+		\Phi|_U
+		&=
+		[s, \phi],
+	\eas
+	where $\phi: U \to V$, \textit{i.e.}\ a local section of the trivial vector bundle $M \times V \to M$.
+	\item We especially focus on $V = \mathfrak{g}$ and $\rho = \mathrm{Ad}$ the adjoint representation of $\widetilde{G}$ on $\mathfrak{g}$.
+\end{itemize}
+
+The field of gauge bosons $A$ is a connection on the principal bundle, \textit{i.e.}\ an element of $\Omega^1(P; \mathfrak{g})$ with
+
+\bas
+r_g^!A &= \mathrm{Ad}_{g^{-1}} (A) \coloneqq \mathrm{Ad}_{g^{-1}} \circ A, \\
+A\mleft( \widetilde{X} \mright) &= X
+\eas
+for all $g \in \widetilde{G}$ and $X \in \mathfrak{g}$, where $r_g^!$ is the pullback of forms via the right $\widetilde{G}$-multiplication on $P$, and $\widetilde{X}$ the fundamental vector field of $X$ on $P$. 
+
+Typically, a lot of the formalism of gauge theory comes from how to define the minimal coupling. So, let us look at this and reinvent it a bit. Usually the covariant derivative/minimal coupling $\nabla^A$ of $A$ and $\Phi \in \Gamma(K)$ is locally (w.r.t.\ to a gauge $s$) defined by
+\bas
+\nabla^A \Phi
+&\coloneqq
+\mleft[ s, \nabla^A \phi \mright],
+\eas
+where
+\ba\label{ClassicalMiniCoupling}
+\nabla^A \phi
+&\coloneqq
+\mathrm{d}\phi
+	+ \rho_*\mleft( A_s \mright) \cdot \phi,
+\ea
+where $A_s \coloneqq s^! A \in \Omega^1(U; \mathfrak{g})$ (local pullback as a form of $A$ via $s$) and $\mathrm{d} \phi \coloneqq \nabla^0 \phi$, $\nabla^0$ the canonical flat connection on $M \times V$.
+
+The explicit definition of the field strength $F$ of $A$ is then usually motivated by looking at the curvature $R_{\nabla^A}$ of $\nabla^A$, that is
+\bas
+\mleft.R_{\nabla^A}(\cdot, \cdot) \Phi\mright|_U
+&=
+\mleft[ s,
+	\rho_*(F_s) \cdot \phi
+\mright],
+\eas
+where 
+\bas
+F_s
+&\coloneqq
+\mathrm{d}A_s
+	+ \frac{1}{2} \mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}
+\eas
+is the typical local definition of $F_s \in \Omega^2(U; \mathfrak{g})$ with
+\bas
+\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}(X, Y)
+&=
+2 ~ \mleft[ A_s(X) , A_s(Y) \mright]_{\mathfrak{g}}
+\eas
+for all $X, Y \in \mathfrak{X}(U)$. (The notation $F_s$ is of course due to the fact that $F_s = s^!F$, where $F$ is the curvature of $A$. But I want to avoid that for now because of what we are about doing to do.) We shortly could denote this also as
+\ba\label{MotivOfFieldStrength}
+R_{\nabla^A} \phi
+&=
+\rho_*(F_s) \cdot \phi
+\ea
+
+\textbf{Now:} One could question why using $\mathrm{d}\phi = \nabla^0 \phi$ in Eq.\ \eqref{ClassicalMiniCoupling}. Thence, let us assume that we have a general vector bundle connection $\widehat{\nabla}$ on the trivial vector bundle $M \times V \to M$. We are going to redefine $\nabla^A$ and $F$ locally w.r.t.\ a gauge $s$, then discuss how the gauge transformations have to look like to receive definitions independent of the chosen gauge $s$. This also means that the following discussion is now often local by fixing a gauge without further mentioning it.
+
+Let us first locally redefine $\nabla^A \phi$:
+\ba\label{NewMinimalCoupling}
+\nabla^A \phi
+&\coloneqq
+\widehat{\nabla} \phi
+	+ \rho_*(A_s) \cdot \phi.
+\ea
+Motivated by Eq.\ \eqref{MotivOfFieldStrength}, we want to identify the field strength with the curvature of $\nabla^A$. One can check that we have
+\ba\label{FirstStepTowardsNewFieldStrength}
+R_{\nabla^A}
+&=
+R_{\widehat{\nabla}}
+	+ \mathrm{d}^{\widehat{\nabla}} \bigl( \rho_*(A_s) \bigr)
+	+ \rho_*(A_s) \wedge \rho_*(A_s),
+\ea
+where $\mathrm{d}^{\widehat{\nabla}}$ is the exterior covariant derivative of $\widehat{\nabla}$ canonically extended to $\mathrm{End}(V)$, viewing $\rho_*(A_s)$ as an element of $\Omega^1(U; \mathrm{End}(V))$, and where $\rho_*(A_s) \wedge \rho_*(A_s)$ is an element of $\Omega^2(U; \mathrm{End}(V))$ given by
+\bas
+\bigl(\rho_*(A_s) \wedge \rho_*(A_s)\bigr)(X, Y)
+&\coloneqq
+\rho_*\bigl( A_s(X) \bigr) \circ \rho_*\bigl(A_s(Y)\bigr)
+	- \rho_*\bigl( A_s(Y) \bigr) \circ \rho_*\bigl(A_s(X)\bigr)
+\\
+&=
+\mleft[ \rho_*\bigl( A_s(X) \bigr), \rho_*\bigl( A_s(Y) \bigr) \mright]_{\mathrm{End}(V)}
+\\
+&=\rho_* \mleft(
+	\mleft[ A_s(X), A_s(Y) \mright]_{\mathfrak{g}}
+\mright)
+\\
+&=\rho_* \mleft(
+	\frac{1}{2}\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}
+\mright)(X,Y)
+\eas
+for all $X, Y \in \mathfrak{X}(U)$.
+
+In order to have a similar shape as in Eq.\ \eqref{MotivOfFieldStrength}, we now assume that $\widehat{\nabla}$ satisfies the following \textbf{compatibility conditions}:
+\begin{remarks}{Comaptibility conditions}{CompCondsSimple}
+\ba
+R_{\widehat{\nabla}} 
+&=
+\rho_*(\zeta),\label{ZetaCondition}\\
+\widehat{\nabla} \circ \rho_*
+&=
+\rho_* \circ \nabla\label{VanishingBasicCurvature}
+\ea
+for some $\zeta \in \Omega^2(M; \mathfrak{g})$ and $\nabla$ a vector bundle connection on the trivial vector bundle $M \times \mathfrak{g} \to M$.
+\end{remarks}
+
+If we want that Eq.\ \eqref{FirstStepTowardsNewFieldStrength} has a shape like Eq.\ \eqref{MotivOfFieldStrength}, it is obvious why we require \eqref{ZetaCondition}; \eqref{VanishingBasicCurvature} is needed for the second summand in Eq.\ \eqref{FirstStepTowardsNewFieldStrength}. Hence, let us study \eqref{VanishingBasicCurvature}, that is
+\bas
+\widehat{\nabla}\bigl( \rho_*(\nu) \bigr)
+&=
+\rho_*(\nabla \nu)
+\eas
+for all $\nu \in \Gamma(M \times \mathfrak{g})$,\footnote{Elements of $\mathfrak{g}$ are viewed as constant sections of $M \times \mathfrak{g}$.} especially $\widehat{\nabla}$ is again extended to $\mathrm{End}(V)$ on the left hand side. With this we get
+\bas
+\mathrm{d}^{\widehat{\nabla}} \bigl( \rho_*(A_s) \bigr)(X,Y)
+&=
+\widehat{\nabla}_X\bigl( \rho_*(A_s(Y)) \bigr)
+	- \widehat{\nabla}_Y\bigl( \rho_*(A_s(X)) \bigr)
+	- \rho_*\mleft( A_s\bigl([X, Y]\bigr) \mright)
+\\
+&=
+\rho_*\mleft(\nabla_X \bigl( A_s(Y) \bigr) \mright)
+	- \rho_*\mleft( \nabla_Y \bigl(A_s(X)\bigr) \mright)
+	- \rho_*\mleft( A_s\bigl([X, Y]\bigr) \mright)
+\\
+&=
+\rho_* \mleft(
+	\nabla_X \bigl( A_s(Y) \bigr)
+	- \nabla_Y \bigl(A_s(X)\bigr)
+	- A_s\bigl([X, Y]\bigr)
+\mright)
+\\
+&=
+\rho_*\mleft( \mathrm{d}^\nabla A_s \mright)(X,Y)
+\eas
+for all $X, Y \in \mathfrak{X}(U)$. Collecting everything, Eq.\ \eqref{FirstStepTowardsNewFieldStrength} has now the following form
+\bas
+R_{\nabla^A}
+&=
+\rho_*\mleft( \mathrm{d}^\nabla A_s + \frac{1}{2}\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}+ \zeta \mright).
+\eas
+So, we have a new form of the field strength, assuming that $\nabla$ and $\zeta$ satisfy the compatibility conditions in Remark \ref{rem:CompCondsSimple}. This is precisely the definition of the field strength as in the gauge theory of Thomas and Alexei, that is, we have a new field strength
+\bas
+G
+&\coloneqq
+\mathrm{d}^\nabla A_s + \frac{1}{2}\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}+ \zeta.
+\eas
+Furthermore, if we are interested into Yang-Mills gauge theories, then we'd have $K = P \times_{\mathrm{Ad}} \mathfrak{g}$ (the adjoint bundle), and so also $\rho_* = \mathrm{ad}$. In this case we can put $\widehat{\nabla} = \nabla$ and then the compatibility conditions in Remark \ref{rem:CompCondsSimple} read
+\bas
+R_\nabla
+&=
+\mathrm{ad}(\zeta),
+\\
+\nabla \circ \mathrm{ad}
+&=
+\mathrm{ad} \circ \nabla.
+\eas
+The second condition precisely gives after a short calculation
+\bas
+\nabla\mleft( \mleft[ \mu, \nu \mright]_{\mathfrak{g}} \mright)
+&=
+\mleft[ \nabla\mu, \nu \mright]_{\mathfrak{g}}
+	+ \mleft[ \mu, \nabla\nu \mright]_{\mathfrak{g}}
+\eas
+for all $\mu, \nu \in \Gamma(M \times \mathfrak{g})$, so, $\nabla$ has to be a Lie bracket derivation. So, in this case the compatibility conditions in Remark \ref{rem:CompCondsSimple} precisely reduce to the compatibility conditions of Alexei's and Thomas's theory! (in the case of Lie algebra bundles; the general theory is more general, formulated on general Lie algebroids)
+
+As a summary:
+
+\begin{remarks}{Summary}{FirstSummary}
+We have
+\ba
+R_\nabla
+&=
+\mathrm{ad}(\zeta),
+\\
+\nabla \circ \mathrm{ad}
+&=
+\mathrm{ad} \circ \nabla,
+\\
+G
+&=
+\mathrm{d}^\nabla A_s + \frac{1}{2}\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}+ \zeta.
+\ea
+\end{remarks}
+
+In fact, the compatibility conditions lead to a gauge invariant theory: Fix an $\mathrm{ad}$-invariant scalar product $\kappa$ on $\mathfrak{g}$; then define the Lagrangian by
+\ba
+\mathfrak{L}_{\mathrm{YM}}
+&\coloneqq
+- \frac{1}{2} \kappa\mleft( G \stackrel{\wedge}{,} *G \mright)
+\ea
+where $*$ is the Hodge star operator w.r.t.\ some spacetime metric. (In short, the typical definition, but replace $F$ with $G$) It is easier to look at the infinitesimal version of the gauge transformations, hence everything with respect to a gauge $s$ now.
+
+In order to derive a formula for these, let us again look at $\nabla^A$. Fix an $\varepsilon \in \Gamma(M \times \mathfrak{g})$, then the infinitesimal gauge transformation $\delta_\varepsilon \phi$ of $\phi \in \Gamma(M \times \mathfrak{g})$ is usually defined by
+\bas
+\delta_\varepsilon \phi
+&\coloneqq
+\rho_*(\varepsilon) \cdot \phi.
+\eas
+We fix the infinitesimal gauge trafo $\delta_\varepsilon A$ of $A$ by looking at the gauge trafo of $\nabla^A \phi$ via
+\bas
+\delta_\varepsilon \nabla^A \phi
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{dt}}\mright|_{t=0}\mleft( \nabla^{A + t\delta_\varepsilon A} \mleft( \phi + t \delta_\varepsilon \phi \mright) \mright)
+\\
+&=
+\underbrace{\widehat{\nabla} \mleft( \delta_\varepsilon \phi \mright)}
+	_{\mathclap{ = \mleft(\widehat{\nabla} \mleft( \rho_*(\varepsilon) \mright)\mright) \cdot \phi + \rho_*(\varepsilon) \cdot \widehat{\nabla} \phi }}
+	+ \rho_*\mleft( \delta_\varepsilon A_s \mright) \cdot \phi
+	+ \rho_*(A_s) \cdot \delta_\varepsilon \phi
+\\
+&=
+\bigl( \rho_*\mleft( \nabla \varepsilon + \delta_\varepsilon A_s \mright) + \rho_*(A_s) \cdot \rho_*(\varepsilon) \bigr) \cdot \phi
+	+ \rho_*(\varepsilon) \cdot \widehat{\nabla} \phi
+\eas
+using Remark \ref{rem:CompCondsSimple}. We want $\delta_\varepsilon \nabla^A \phi = \rho_*(\varepsilon) \cdot \nabla^A \phi$ which gives
+\bas
+\rho_*(\varepsilon) \cdot \nabla^A \phi
+&=
+\rho_*(\varepsilon) \cdot \widehat{\nabla} \phi
+	+ \rho_*(\varepsilon) \cdot \rho_*(A_s) \cdot \phi.
+\eas
+Imposing $\delta_\varepsilon \nabla^A \phi = \rho_*(\varepsilon) \cdot \nabla^A \phi$ we get
+\bas
+\rho_*\mleft(\delta_\varepsilon A_s + \nabla \varepsilon + \mleft[ A_s, \varepsilon \mright]_{\mathfrak{g}} \mright)
+&=
+0
+\eas
+using again that $\rho_*$ is a Lie algebra representation. If we require that this shall work for all $\rho_*$, we may say
+\ba\label{GaugeTrafoOfANew}
+\delta_\varepsilon A_s
+&\coloneqq
+-\nabla \varepsilon
+	+ \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}}.
+\ea
+This is precisely the infinitesimal gauge trafo of $A$ as in the theory of Thomas and Alexei! Hence, we achieve infinitesimal gauge invariance of $\mathfrak{L}_{\mathrm{YM}}$. For completeness, let us check the gauge trafo of $G$ using Def.\ \eqref{GaugeTrafoOfANew} and Remark \ref{rem:FirstSummary}, it is very similar to the "classical" calculation due to Remark \ref{rem:FirstSummary} which is why I skip some straightforward calculations to keep it short,
+\bas
+\delta_\varepsilon G
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}
+\mleft(
+	\mathrm{d}^\nabla (A_s + t\delta_\varepsilon A_s) + \frac{1}{2}\mleft[ A_s + t\delta_\varepsilon A_s \stackrel{\wedge}{,} A_s + t\delta_\varepsilon A_s \mright]_{\mathfrak{g}}+ \zeta
+\mright)
+\\
+&=
+\mathrm{d}^\nabla \mleft( -\nabla \varepsilon
+	+ \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright)
+		+ \mleft[ A_s \stackrel{\wedge}{,} -\nabla \varepsilon + \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
+\\
+&=
+\underbrace{- \mleft(\mathrm{d}^\nabla\mright)^2 \varepsilon}_{= - R_\nabla \varepsilon = \mleft[ \varepsilon, \zeta \mright]_{\mathfrak{g}}}
+	+ \mleft[ \nabla \varepsilon \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}
+	+ \mleft[ \varepsilon, \mathrm{d}^\nabla A_s \mright]_{\mathfrak{g}}
+	+ \underbrace{\mleft[ A_s \stackrel{\wedge}{,} -\nabla \varepsilon \mright]_{\mathfrak{g}}}_{= - \mleft[ \nabla \varepsilon \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}}
+	+ \mleft[ A_s \stackrel{\wedge}{,} \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
+\\
+&=
+\mleft[ \varepsilon,
+	\mathrm{d}^\nabla A_s + \zeta
+\mright]_{\mathfrak{g}}
+	+ \mleft[ A_s \stackrel{\wedge}{,} \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
+\eas
+and, using the Jacobi identity,
+\bas
+\mleft[ A_s \stackrel{\wedge}{,} \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}} (X,Y)
+&=
+\mleft[ A_s(X) , \mleft[ \varepsilon, A_s(Y) \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
+	- \mleft[ A_s(Y) , \mleft[ \varepsilon, A_s(X) \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
+\\
+&=
+\mleft[ \varepsilon, \mleft[ A_s(X), A_s(Y) \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
+\\
+&=
+\mleft[ \varepsilon, \frac{1}{2} \mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}} (X, Y)
+\eas
+for all $X, Y \in \mathfrak{X}(U)$. Altogether
+\bas
+\delta_\varepsilon G
+&=
+\mleft[ \varepsilon,
+	\mathrm{d}^\nabla A_s + \frac{1}{2} \mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}} + \zeta
+\mright]_{\mathfrak{g}}
+=
+\mleft[ \varepsilon, G
+\mright]_{\mathfrak{g}}.
+\eas
+Hence, the field strength transforms with the adjoin of $\varepsilon$; since $\kappa$ is $\mathrm{ad}$-invariant, we can derive that $\mathfrak{L}_{\mathrm{YM}}$ is invariant under the infinitesimal gauge trafo in Def.\ \eqref{GaugeTrafoOfANew}!
+
+Observe that by Remark \ref{rem:FirstSummary} that $\zeta$ can be non-trivial even if we still use $\nabla = \nabla^0$, the canonical flat connection on $M\times \mathfrak{g}$, even though this whole discussion started with allowing more general connections.
+
+If we minimise $\mathfrak{L}_{\mathrm{YM}}$, then one obvious way would be to search solutions with $G \equiv 0$ for an absolute minimum/maximum (because of the sign), doing so would result into that the classical Yang-Mills energy would have a bound which is non-zero. May this be an explanation for the mass gap? As shown in my thesis, every classical theory has a $\zeta$ after a field redefinition. Even though field redefinitions are an equivalence for the classical theories, one may argue that it does not describe an equivalence for the quantised theory, leading to a possible explanation of the mass gap? But that is just high hope right now :) 
+
+\subsection{Integration}
+
+For an integrated version of Def.\ \eqref{GaugeTrafoOfANew} we need to discuss when the new "minimal coupling" of Def.\ \eqref{NewMinimalCoupling} behaves nicely under a change of the gauge $s$. That is, we now want to extend the new definition of $\nabla^A$ to a well-defined connection on $K = P \times_{\rho} V$, especially on the adjoint bundle $K = P \times_{\mathrm{Ad}} \mathfrak{g}$ in our case. (and later maybe generalise this to a $\widetilde{G}$-quotient of a general Lie algebra bundle over $P$)
+
+Let $s^\prime$ be another (local) gauge such that we have a unique smooth map $g: U \to G$ such that
+\bas
+s^\prime
+&=
+s g,
+\eas
+then we want for well-definedness
+\ba\label{WellDef}
+\nabla^A \Phi
+&=
+\mleft[ s, \nabla \phi + \mathrm{ad}(A_s) \cdot \phi \mright]
+\stackrel{!}{=}
+\mleft[ s^\prime, \nabla \phi^\prime + \mathrm{ad}(A_{s^\prime}) \cdot \phi^\prime \mright],
+\ea
+where we have $\Phi = [s, \phi] = [s^\prime, \phi^\prime]$, especially
+\bas
+\phi^\prime
+&=
+\mathrm{Ad}\mleft( g^{-1} \mright) \cdot \phi.
+\eas
+Since the new field strength $G$ still transforms via the adjoin under $\delta_\varepsilon$ (see above), we make the following ansatz
+\ba
+A_{s^\prime} 
+&=
+\mathrm{Ad}\mleft( g^{-1} \mright) \cdot A_s
+	+ \mu,
+\ea
+where $\mu \in \Omega^1(U; \mathfrak{g})$. Usually, $\mu = g^!\mu_{\widetilde{G}}$, the pullback as a form of the Maurer-Cartan-Form $\mu_{\widetilde{G}}$ on $\widetilde{G}$. One can then check with some short calculation that Eq.\ \eqref{WellDef} is equivalent to
+\bas
+\nabla\mleft( \mathrm{Ad}\mleft( g^{-1} \mright) \cdot \phi \mright)
+	+ \mathrm{ad}(\mu) \cdot \mathrm{Ad}\mleft( g^{-1} \mright) \cdot \phi
+&\stackrel{!}{=}
+\mathrm{Ad}\mleft( g^{-1} \mright) \cdot \nabla \phi
+\eas
+using the definition of $P \times_{\mathrm{Ad}} \mathfrak{g}$. Equivalently,
+\bas
+\mathrm{ad}(\mu)
+&=
+\mathrm{Ad}\mleft( g \mright) \circ \mleft(
+\mright)
+\eas
+
+\section{Axiomatic Yang-Mills gauge theory}
+
+Let us discuss where the compatibility conditions may arise from a certain axiomatic point of view.
+
+\section{Curved Yang-Mills gauge theory based on using Lie group bundles}
+
+\subsection{Lie group bundles}
+
+\subsubsection{Definition and examples}
+%\pagebreak
+\begin{definitions}{Lie group bundle, \cite[\S 1.1, Def.\ 1.1.19; p. 11]{mackenzieGeneralTheory}}{LieGroupBundle}
+Let $G, \mathcal{G}, M$ be smooth manifolds. A fibre bundle
+\begin{center}
+	\begin{tikzcd}
+		G \arrow{r} & \mathcal{G} \arrow{d}{\pi} \\
+		& M
+	\end{tikzcd}
+\end{center}
+is called a \textbf{Lie group bundle} if:
+\begin{enumerate}
+	\item $G$ and each fibre $\mathcal{G}_x \coloneqq \pi^{-1}\mleft( \{x\} \mright)$, $x\in M$, are Lie groups;
+	\item there exists a bundle atlas $\mleft\{ \mleft( U_i, \phi_i \mright) \mright\}_{i \in I}$ such that the induced maps
+	\bas
+	\phi_{ix}
+	&\coloneqq
+	\mathrm{pr}_2 \circ \mleft. \phi_i\mright|_{\mathcal{G}_x}: \mathcal{G}_x \to G
+	\eas
+	are Lie group isomorphisms, where $I$ is an (index) set, $U_i$ are open sets covering $M$, $\phi_i: \mathcal{G}|_U \to U \times G$ subordinate trivializations, and $\mathrm{pr}_2$ the projection onto the second factor. This atlas will be called \textbf{Lie group bundle atlas} or \textbf{LGB atlas}.
+\end{enumerate}
+
+We also often say that \textbf{$\mathcal{G}$ is an LGB (over $M$)}, whose structural Lie group is either clear by context or not explicitly needed; and we may also denote LGBs by $G \to \mathcal{G} \stackrel{\pi}{\to} M$.
+\end{definitions}
+
+\begin{remarks}{Principal and Lie group bundles}{LiegroupbundlesNotPrincipalBundles}
+Beware, a Lie group bundle is \textbf{not} the same as a principal bundle $P \to M$ with the same fibre type $G$. First of all, the fibres of $P$ are just diffeomorphic to a Lie group, a priori they carry no Lie group structure, while the fibres of $\mathcal{G}$ carry a Lie group structure.
+\newline
+
+Second, on $P$ we have a multiplication given as an action of $G$ on $P$
+\bas
+P \times G \to P,
+\eas
+preserving the fibres $P_x$ ($x\in M$) and simply transitive on them. Restricted on $P_x$ we have
+\bas
+P_x \times G \to P_x.
+\eas
+For $\mathcal{G}$ we have canonically a multiplication over $x$ given by
+\bas
+\mathcal{G}_x \times \mathcal{G}_x \to \mathcal{G}_x,
+\eas
+also clearly simply transitive. Observe, the second factor is not "constant", \textit{i.e.}\ we do not have $\mathcal{G}_x \times G \to \mathcal{G}_x$ in general. Hence, there is in general no well-defined product $\mathcal{G} \times \mathcal{G} \to \mathcal{G}$.
+\newline
+
+All of that is also resembled in the existence of sections. The existence of a section of $P$ has a 1:1 correspondence to trivializations of $P$, which is why $P$ in general only admits sections locally; see \textit{e.g.}\ \cite[\S 4.2, Thm.\ 4.2.19; page 219f.]{Hamilton}. $\mathcal{G}$ clearly admits always a global section, even if $\mathcal{G}$ is non-trivial; just take the section which assigns each base point the neutral element of its fibre.
+\end{remarks}
+
+As usual, we have trivial examples given by the trivial LGB $M \times G \to M$ with canonical multiplication $(x, g) \cdot (x, q) \coloneqq (x, gq)$, and we recover the notion of a Lie group in the case of $M = \{*\}$. For another important example recall that there is the notion of associated fibre bundles; following and stating the results of \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$, a smooth manifold $F$ and a smooth left $G$-action $\Psi$ given by
+\bas
+G \times F &\to F,\\
+(g, v) &\mapsto \Psi(g, v) \coloneqq g \cdot v.
+\eas
+Then we have a right $G$-action on $P \times F$ given by
+\bas
+(P \times F) \times G &\to P \times F,\\
+(p,v,g) &\mapsto \mleft( p \cdot g, g^{-1} \cdot v \mright),
+\eas
+and one can show that the quotient under this action, $P\times_\Psi F \coloneqq ( P \times F) \Big/ G$, yields the structure of a fibre bundle
+\begin{center}
+	\begin{tikzcd}
+		F \arrow{r} & P\times_\Psi F \arrow{d}{\pi_{P\times_\Psi F}} \\
+		& M
+	\end{tikzcd}
+\end{center}
+such that the projection $P \times F \to P \times_\Psi F$ is a smooth surjective submersion,
+where the projection $\pi_{P\times_\Psi F}: P\times_\Psi F \to M$ is given by 
+\bas
+\pi_{P\times_\Psi F}\mleft( [p, v] \mright)
+&\coloneqq
+\pi_P(p)
+\eas
+for all $[p, v] \in P\times_\Psi F$, denoting equivalence classes of $(p, v)$ by square brackets. For $x \in M$, the fibre $\mleft(P\times_\Psi F\mright)_x$ is given by $\mleft( P_x \times F  \mright) \Big/ G = P_x \times_\Psi F$, and the fibre is diffeomorphic to $F$ by $F \ni v \mapsto [p, v] \in \mleft(P\times_\Psi F\mright)_x$ for a fixed $p \in P_x$.
+
+A very important example are of course associated vector bundles, related to $F$ being a vetor space. We need a similar concept for Lie groups.
+
+\begin{definitions}{Lie group representation on Lie groups}{LieGroupActingOnLieGroup}
+Let $G, H$ be Lie groups. Then a \textbf{Lie group representation of $G$ on $H$} is a smooth left action $\psi$ of $G$ on $H$
+\bas
+G \times H
+&\to H,\\
+(g,h)
+&\mapsto
+\psi_g(h)
+\coloneqq
+\psi(g, h)
+\eas
+such that
+\ba
+\psi_g(hq)
+&=
+\psi_g(h)
+~ \psi_g(q)
+\ea
+for all $g \in G$ and $h,q \in H$.
+\end{definitions}
+
+\begin{remarks}{Note about labeling}{WhyRepresentation}
+Observe that we have by the definition of group actions
+\bas
+\psi_{gg^\prime}
+&=
+\psi_g \circ \psi_{g^\prime}
+\eas
+for all $g, g^\prime \in G$, viewing $\psi_g$ as a map $H \to H$. Therefore we can view the action $\psi$ as a homomorphism
+\bas
+G &\to \mathrm{Aut}(H),
+\eas
+where $\mathrm{Aut}(H)$ is the set of Lie group automorphisms. The similarity to Lie group representations on vector spaces is obvious, thence the name.
+\newline
+
+This definition is of course also motivated by various references pointing out that Lie group representations define Lie group actions with extra properties; see for example \cite[\S 3, Ex.\ 3.4.2, page 143f.]{Hamilton}.
+\end{remarks}
+
+With this we can discuss and define associated Lie group bundles.
+
+\begin{theorems}{Associated Lie group bundle as quotient, \newline\cite[motivated by vector spaces as in \S 4, Thm.\ 4.7.2, page 239f.]{Hamilton}}{AssociatedGroupBundlesHaveGroupStructure}
+Let $G, H$ be Lie groups, $P \stackrel{\pi_P}{\to} M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then $\mathcal{H} \coloneqq P \times_\psi H$ is an LGB 
+\begin{center}
+	\begin{tikzcd}
+		H \arrow{r} & \mathcal{H} \arrow{d}{\pi} \\
+		& M
+	\end{tikzcd}
+\end{center}
+with projection $\pi$ given by
+\ba
+\mathcal{H} &\to M,\nonumber\\
+[p, h] &\mapsto \pi_P(p),
+\ea
+and fibres
+\ba
+\mathcal{H}_x
+&=
+P_x \times_\psi H
+\ea
+for all $x \in M$, which are isomorphic to $H$ as Lie groups. The Lie group structure on each fibre $\mathcal{H}_x$ is defined by
+\ba\label{LiegroupStructureOnFibresofAssociated}
+[p, h] \cdot \mleft[p, q\mright]
+&\coloneqq
+\mleft[ p, hq \mright]
+\ea
+for all $h, q \in H$ and $p_x \in P_x$, where $\pi_P(p) = x$.
+\end{theorems}
+
+\begin{proof}
+\leavevmode\newline
+$\bullet$ That $\pi$ is the well-defined projection and that the fibres are precisely $P_x \times_\psi H$ for all $x \in M$ is well-known, see our discussion before Def.\ \ref{def:LieGroupActingOnLieGroup} and the references therein; it is also very straightforward to check. We also discussed that $\mathcal{H}$ is a fibre bundle with structural fibre $H$. Hence, if one knows that the proposed group structure in Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined, then the smoothness of the group structure is implied by the smoothness structures of $H$ and $\mathcal{H}$. Thence, let us check whether Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined. Let $x \in M$, $p \in P_x$ and $p^\prime \coloneqq p \cdot g^\prime$ be another element of $P_x$, where $g^\prime \in G$. Also let $[p_1,h_1], [p_2, h_2] \in P_x \times_\psi H$; then we have unique elements $q_i, q_i^\prime$ of $G$ such that ($i \in \{1,2\}$)
+\bas
+p_i &= p \cdot q_i,&
+p_i &= p^\prime \cdot q_i^\prime,
+\eas
+especially, it follows $q_i = g^\prime q_i^\prime$.
+On the one hand, if we use $p$ as fixed element of $P_x$ to calculate the multiplication, we get
+\ba\label{MultiPlicationInAssocGroup}
+[p_1,h_1] \cdot [p_2,h_2]
+&=
+\mleft[ p, \psi_{q_1}(h_1) \mright]
+\cdot \mleft[ p, \psi_{q_2}(h_2) \mright]
+=
+\mleft[ p, \psi_{q_1}(h_1) ~ \psi_{q_2}(h_2) \mright],
+\ea
+on the other hand, using Def.\ \ref{def:LieGroupActingOnLieGroup} and $p^\prime = p \cdot g^\prime$ instead of $p$,
+\bas
+[p_1,h_1] \cdot [p_2,h_2]
+&=
+\mleft[ p \cdot g^\prime, \psi_{q_1^\prime}(h_1) ~ \psi_{q_2^\prime}(h_2) \mright]
+\\
+&=
+\Bigl[ p, \underbrace{\psi_{g^\prime} \mleft( \psi_{q_1^\prime}(h_1) ~ \psi_{q_2^\prime}(h_2) \mright)}_{= \psi_{g^\prime} \mleft( \psi_{q_1^\prime}(h_1) \mright) ~ \psi_{g^\prime} \mleft( \psi_{q_2^\prime}(h_2) \mright)} \Bigr]
+\\
+&=
+\mleft[ p, \psi_{g^\prime q_1^\prime}(h_1) ~ \psi_{g^\prime q_2^\prime}(h_2) \mright]
+\\
+&=
+\mleft[ p, \psi_{q_1}(h_1) ~ \psi_{q_2}(h_2) \mright],
+\eas
+which implies that Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined, and thus defines a Lie group structure on each fibre of $\mathcal{H}$.
+
+$\bullet$ That the fibres $\mathcal{H}_x$ are isomorphic to $H$ as Lie groups for all $x \in M$ also quickly follows. Recall by our discussion before Def.\ \ref{def:LieGroupActingOnLieGroup} that the fibres are diffeormorphic to $H$ by $H \ni h \mapsto [p, h] \in \mathcal{H}_x$ for a fixed $p \in P_x$. By Def.\ \eqref{LiegroupStructureOnFibresofAssociated} it is clear that this map is a Lie group homomorphism and hence a Lie group isomorphism.
+
+$\bullet$ Let us now construct an LGB atlas for $\mathcal{H}$ by using a principal bundle atlas for $P$. That is, for some $U \subset M$ open and a trivialization $\varphi_U: P|_U \to U \times G$ we write
+\bas
+\varphi_U(p)
+&=
+\bigl( \pi_P(p), \beta_U(p) \bigr)
+\eas
+for all $p \in P$, where $\beta_U: P|_U \to G$ is an equivariant map, \textit{i.e.}\ $\beta_U(p \cdot g) = \beta_U(p) ~ g$ for all $g \in G$. Then define $\phi_U$ as a map by 
+\bas
+\mathcal{H}|_U
+&\to
+U \times H,\\
+[p, h]
+&\mapsto
+\mleft(
+	\pi_P(p), \psi_{\beta_U(p)} (h)
+\mright).
+\eas
+$\phi_U$ is well-defined: Let $\mleft[p^\prime, h^\prime\mright] \in \mathcal{H}|_U$ with $\mleft[p^\prime, h^\prime\mright] = \mleft[p, h\mright]$. Then there is a $g \in G$ such that
+\bas
+\mleft(p^\prime, h^\prime\mright)
+&=
+\mleft( p \cdot g, \psi_{g^{-1}}(h) \mright),
+\eas
+hence, using the equivariance of $\beta_U$ and Def.\ \ref{def:LieGroupActingOnLieGroup},
+\bas
+\phi_U\mleft( \mleft[p^\prime, h^\prime\mright] \mright)
+&=
+\Bigl(
+	\underbrace{\pi_P\mleft(p \cdot g\mright)}_{= \pi_P(p)}, \underbrace{\mleft(\psi_{\beta_U\mleft(p \cdot g\mright)} \circ \psi_{g^{-1}} \mright)}_{= \psi_{\beta_U(p)} \circ \psi_g \circ \psi_{g^{-1}} } (h)
+\Bigr)
+=
+\mleft(
+	\pi_P(p), \psi_{\beta_U(p)} (h)
+\mright)
+=
+\phi_U\bigl( [p, h] \bigr),
+\eas
+which proves that $\phi_U$ is well-defined. Denote the projection onto equivalence classes $P \times H \to \mathcal{H}$ by $\varpi$, then observe
+\bas
+\phi_U \circ \varpi
+&=
+L,
+\eas
+where $L_U: P|_U \times H \to U \times H$ is given by $L_U(p,h) \coloneqq \mleft( \pi_P(p), \psi_{\beta_U(p)} (h) \mright)$ for all $(p, h) \in P|_U \times H$. $L_U$ is clearly smooth and recall that $\varpi$ is a smooth surjective submersion, therefore $\phi_U$ is smooth; this is a well-known fact for right-compositions with surjective submersions, see \textit{e.g.}\ \cite[\S 3.7.2, Lemma 3.7.5]{Hamilton}. We define a candidate of the inverse $\phi_U^{-1}: U \times H \to \mathcal{H}|_U$ by
+\bas
+\phi_U^{-1}(x, h)
+&=
+\mleft[ \varphi_U^{-1}\mleft(x, e\mright), h \mright]
+\eas
+for all $(x, h) \in U \times H$, where $e$ is the neutral element of $G$.
+By the definition of $\varphi_U$ we immediately get
+\bas
+\mleft( \varphi_U \circ \varphi^{-1}_U \mright)(x, e)
+&=
+\Bigl(
+	\pi_P\mleft( \varphi_U^{-1}(x, e) \mright), \beta_U\mleft( \varphi_U^{-1}(x, e) \mright)
+\Bigr)
+=
+(x, e),
+\eas
+for all $x \in U$, and, also using again the equivariance of $\beta_U$,
+\bas
+\varphi^{-1}_U\mleft(\pi_P(p), e\mright)
+&=
+\varphi^{-1}_U\Bigl(\pi_P\mleft(p \cdot \beta_U^{-1}(p) \mright), \beta_U(p)~\beta_U^{-1}(p)\Bigr)
+\\
+&=
+\varphi^{-1}_U\Bigl(\pi_P\mleft(p \cdot \beta_U^{-1}(p) \mright), \beta_U\mleft(p \cdot \beta_U^{-1}(p)\mright)\Bigr)
+\\
+&=
+\mleft(\varphi^{-1}_U \circ \varphi_U\mright)\mleft( p \cdot \beta_U^{-1}(p) \mright)
+\\
+&=
+p \cdot \beta_U^{-1}(p)
+\eas
+for all $p \in P|_U$.
+Then
+\bas
+\mleft(\phi_U \circ \phi_U^{-1}\mright)(x, h)
+&=
+\mleft(
+	\pi_P\mleft( \varphi^{-1}_U(x, e) \mright), \psi_{\beta_U\mleft( \varphi^{-1}_U(x, e) \mright)} (h)
+\mright)
+=
+\bigl(
+	x, \psi_e(h)
+\bigr)
+=
+(x, h),
+\eas
+for all $(x, h) \in U \times H$, and
+\bas
+\mleft(\phi_U^{-1} \circ \phi_U\mright)([p, h])
+&=
+\bigl[
+	\underbrace{\varphi_U^{-1}\mleft( \pi_P(p), e \mright)}_{= p \cdot \beta_U^{-1}(p) },
+	\psi_{\beta_U(p)}(h)
+\bigr]
+\\
+&=
+\mleft[
+	p, h
+\mright]
+\eas
+for all $[p, h] \in \mathcal{H}|_U$. Thus, $\phi_U$ is bijective; additionally observe
+\bas
+\phi_U^{-1}(x, h)
+&=
+\varpi\mleft( \varphi_U^{-1}(x, e), h \mright)
+\eas
+such that $\phi_U^{-1}$ is clearly smooth as the composition of smooth maps, and we therefore conclude that $\phi_U$ is a diffeomorphism. Finally, derive with Def.\ \ref{def:LieGroupActingOnLieGroup} and Eq.\ \eqref{MultiPlicationInAssocGroup} that
+\bas
+\mleft(\mathrm{pr}_2 \circ \phi_U\mright)\bigl( [p_1, h_1] \cdot [p_2, h_2] \bigr)
+&=
+\mleft(\mathrm{pr}_2 \circ \phi_U\mright)\bigl( \mleft[ p, \psi_{q_1}(h_1) \cdot \psi_{q_2}(h_2) \mright] \bigr)
+\\
+&=
+\psi_{\beta_U(p)} \bigl( \psi_{q_1}(h_1) \cdot \psi_{q_2}(h_2) \bigr)
+\\
+&=
+\underbrace{\psi_{\beta_U(p)} \bigl( \psi_{q_1}(h_1) \bigr)}_{= \psi_{\beta_U(p) \cdot q_1} (h)}
+	\cdot ~ \psi_{\beta_U(p)} \bigl( \psi_{q_2}(h_2) \bigr)
+\\
+&=
+\psi_{\beta_U(p_1)} (h) \cdot \psi_{\beta_U(p_2)} (h)
+\\
+&=
+\mleft( \mathrm{pr}_2 \circ \phi_U \mright)\bigl( [p_1, h_1] \bigr)
+	\cdot \mleft( \mathrm{pr}_2 \circ \phi_U \mright)\bigl( [p_1, h_1] \bigr)
+\eas
+for all $[p_1, h_1], [p_2, h_2] \in \mathcal{H}_x$, where we used again the equivariance of $\beta_U$ and the same notation as introduced for Eq.\ \eqref{MultiPlicationInAssocGroup}, and $\mathrm{pr}_2$ denotes the projection onto the second factor. Thence, $\mathrm{pr}_2 \circ \phi_U$ induces Lie group isomorphisms $\mathcal{H}_x \to H$ for all $x \in U$; by Def.\ \ref{def:LieGroupBundle} we can finally conclude that $\mathcal{H}$ is an LGB.
+\end{proof}
+
+The special situation of $H = G$ is already an important example:
+
+\begin{examples}{Inner group bundle, \newline \cite[\S1, paragraph after Def.\ 1.1.19, page 11; comment after Construction 1.3.8, page 20]{mackenzieGeneralTheory}}{InnerLGBs}
+The \textbf{inner group bundle} or \textbf{inner LGB} of a principal bundle $P \to M$, denoted by $c_G(P)$, is defined by
+\ba
+c_G(P)
+&\coloneqq
+P \times_{c_G} G,
+\ea
+where $c_G: G \times G \to G$ is the left action of $G$ on itself given by the very well-known \textbf{conjugation}
+\ba
+c_G(g,h)
+&\coloneqq
+c_g (h)
+=
+\mleft(L_g \circ R_{g^{-1}}\mright)(h)
+=
+ghg^{-1}
+\ea
+for all $g, h \in G$, where we also denote left- and right-multiplications (with $g$) by $L_g$ and $R_g$, respectively; see \textit{e.g.}\ \cite[beginning of \S 1.5.2, page 40f.]{Hamilton} for its common properties. It is well-known that $c_G$ satsfies the properties of a Lie group representation of $G$ on itself in the sense of Def.\ \ref{def:LieGroupActingOnLieGroup}.
+
+$c_G(P)$ is an LGB by Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}.
+\end{examples}
+
+\subsubsection{LGB actions}
+
+As for Lie groups, we are interested into their actions. The idea is the following, similar to \cite[\S 1.6, discussion around Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}: We have an LGB $\mathcal{G} \to M$ over a smooth manifold $M$, and we want to construct an action of $\mathcal{G}$ on another smooth manifold $N$. Each fibre of $\mathcal{G}$ is a Lie group, and we have a notion of Lie groups actions on manifold $N$. Therefore
+
+Recall that there is a notion of pullbacks of fibre bundles, see \textit{e.g.}\ \cite[\S 4.1.4, page 203ff.; especially Thm.\ 4.1.17, page 204f.]{Hamilton}. That is, if we additionally have a smooth manifold $N$ and a smooth map $f: M \to N$, then we have the pullback $f^*\mathcal{G}$ of $\mathcal{G}$ as a fibre bundle defined as usual by
+\ba
+f^*\mathcal{G}
+&\coloneqq
+\left\{
+	(g, x) \in \mathcal{G} \times N ~\middle|~
+	f(x) = \pi(g)
+\right\}.
+\ea
+That is, the following diagram commutes
+\begin{center}
+	\begin{tikzcd}
+		f^*\mathcal{G} \arrow{d} \arrow{r}{\pi_1}& \mathcal{G} \arrow{d}{\pi} \\
+		N \arrow{r}{f}& M
+	\end{tikzcd}
+\end{center}
+where $\pi_1: \mathcal{G} \times N \to \mathcal{G}$ is the projection onto the first factor.
+
+\begin{definitions}{Lie group actions, \cite[\S 1.6, special case of Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}}{LiegroupACtion}
+Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map.
+\end{definitions}
+
+\subsubsection{Toy model}
+
+We want to use LGBs in the context in the context of gauge theory, somewhat as a replacement of the structural Lie group. 
+
+\section{Conclusion}
+
+\textbf{Acknowledgements:} I want to thank Mark John David Hamilton and Alessandra Frabetti for their great help and support in making this paper.
+
+\textbf{Funding:} The paper was finalised as part of my post-doc fellowship at the National Center for Theoretical Sciences (NCTS), which is why I also want to thank the NCTS.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hier beginnt der Anhang %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+
+
+%\listoftables % Tabellenverzeichnis
+
+%\listoffigures %Abbildungsverzeichnis
+
+\renewcommand\refname{List of References}
+%\begin{thebibliography}{99}
+%\bibitem[I]{Anl01} \url{http://adsabs.harvard.edu/abs/1971ApJ...170..319D}, Datum: 01.11.2014
+%\end{thebibliography}
+
+%\printbibliography 
+\bibliography{Literatur}
+\bibliographystyle{unsrt}
+
+%\newpage\thispagestyle{empty}\hspace{1em}\newpage
+
+
+\end{document}
