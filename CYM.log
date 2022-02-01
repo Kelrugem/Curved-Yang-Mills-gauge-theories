@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  1 FEB 2022 12:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  1 FEB 2022 23:54
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1299,14 +1299,17 @@ ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
 ) [15] (CYM.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33085 strings out of 478907
- 690840 string characters out of 2851891
- 1169919 words of memory out of 3000000
- 50274 multiletter control sequences out of 15000+600000
+ 33093 strings out of 478907
+ 690990 string characters out of 2851891
+ 1171457 words of memory out of 3000000
+ 50280 multiletter control sequences out of 15000+600000
  493175 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,108p,10627b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1341,9 +1344,9 @@ e1/public/lm/lmsy9.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (16 pages, 509077 bytes).
+Output written on CYM.pdf (16 pages, 511859 bytes).
 PDF statistics:
- 402 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
+ 407 PDF objects out of 1000 (max. 8388607)
+ 71 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
