@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  31 JAN 2022 23:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  1 FEB 2022 12:41
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1272,23 +1272,23 @@ mm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/10.95
 
 [3] [4] [5] [6]
 LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 941.
+ne 937.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 964--966
+Underfull \hbox (badness 10000) in paragraph at lines 960--962
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 978--981
+Underfull \hbox (badness 10000) in paragraph at lines 974--977
 
  []
 
 [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 1044--1047
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1043
 
  []
 
@@ -1303,10 +1303,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33083 strings out of 478907
- 691085 string characters out of 2851891
- 1171676 words of memory out of 3000000
- 50272 multiletter control sequences out of 15000+600000
+ 33085 strings out of 478907
+ 690840 string characters out of 2851891
+ 1169919 words of memory out of 3000000
+ 50274 multiletter control sequences out of 15000+600000
  493175 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,108p,10627b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1341,7 +1341,7 @@ e1/public/lm/lmsy9.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (16 pages, 509742 bytes).
+Output written on CYM.pdf (16 pages, 509077 bytes).
 PDF statistics:
  402 PDF objects out of 1000 (max. 8388607)
  69 named destinations out of 1000 (max. 500000)

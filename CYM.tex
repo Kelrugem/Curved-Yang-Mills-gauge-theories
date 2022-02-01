@@ -927,10 +927,6 @@ using the definition of $P \times_{\mathrm{Ad}} \mathfrak{g}$. Equivalently,
 \mright)
 \eas
 
-\section{Axiomatic Yang-Mills gauge theory}
-
-Let us discuss where the compatibility conditions may arise from a certain axiomatic point of view.
-
 \section{Curved Yang-Mills gauge theory based on using Lie group bundles}
 
 \subsection{Lie group bundles}
@@ -1273,7 +1269,7 @@ $c_G(P)$ is an LGB by Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}.
 
 \subsubsection{LGB actions}
 
-As for Lie groups, we are interested into their actions. The idea is the following, similar to \cite[\S 1.6, discussion around Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}: We have an LGB $\mathcal{G} \to M$ over a smooth manifold $M$, and we want to construct an action of $\mathcal{G}$ on another smooth manifold $N$. Each fibre of $\mathcal{G}$ is a Lie group, and we have a notion of Lie groups actions on manifold $N$. Therefore
+As for Lie groups, we are interested into their actions. The idea is the following, similar to \cite[\S 1.6, discussion around Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}: We have an LGB $\mathcal{G} \to M$ over a smooth manifold $M$, and we want to construct an action of $\mathcal{G}$ on another smooth manifold $N$. Each fibre of $\mathcal{G}$ is a Lie group, and we have a notion of Lie groups actions on manifold $N$. Therefore one could define an LGB action as a collection of Lie group actions, that is, sections of $\mathcal{G}$ act on $N$; however, this would lead to that the general outcome of a product of $\Gamma(\mathcal{G})$ on $N$ would be smooth maps from $M$ to $N$. 
 
 Recall that there is a notion of pullbacks of fibre bundles, see \textit{e.g.}\ \cite[\S 4.1.4, page 203ff.; especially Thm.\ 4.1.17, page 204f.]{Hamilton}. That is, if we additionally have a smooth manifold $N$ and a smooth map $f: M \to N$, then we have the pullback $f^*\mathcal{G}$ of $\mathcal{G}$ as a fibre bundle defined as usual by
 \ba
@@ -1316,7 +1312,12 @@ We want to use LGBs in the context in the context of gauge theory, somewhat as a
 
 %\listoffigures %Abbildungsverzeichnis
 
+\appendix
+\setcounter{equation}{0}
+\renewcommand{\theequation}{\Alph{chapter}.\arabic{equation}} %Reset first and then add section to number
+
 \renewcommand\refname{List of References}
+
 %\begin{thebibliography}{99}
 %\bibitem[I]{Anl01} \url{http://adsabs.harvard.edu/abs/1971ApJ...170..319D}, Datum: 01.11.2014
 %\end{thebibliography}
@@ -1327,5 +1328,8 @@ We want to use LGBs in the context in the context of gauge theory, somewhat as a
 
 %\newpage\thispagestyle{empty}\hspace{1em}\newpage
 
+\section{Axiomatic Yang-Mills gauge theories}
+
+Let us discuss where the compatibility conditions may arise from a certain axiomatic point of view.
 
 \end{document}
