@@ -402,6 +402,8 @@ No. 1, Sec. 4, Roosevelt Rd., Taipei City 106, Taiwan Room 503, Cosmology Buildi
 
 It is highly recommended to have basic knowledge about differential geometry and gauge theory as presented in \cite[especially Chapter 1 to 5]{Hamilton}; however, sometimes we will still give explicit references to help with more technical details. It can be useful to have knowledge about Lie algebra and Lie group bundles, and even Lie algebroids and Lie groupoids, but we will introduce their basic notions such that it is not necessarily needed to have knowledge about these upfront.
 
+We also often give references about Lie group bundles (LGBs), but the given references are often about Lie groupoids. If the reader has no knowledge about Lie groupoids, then it is important to know that LGBs are a special example of Lie groupoids; Lie groupoids carry "two projections", called \textbf{source} and \textbf{target}. An LGB is a special example of a Lie groupoid whose source equals the target.\footnote{But not every Lie groupoid with equal source and target are LGBs, they're in general bundles of Lie groups which is not completely the same; this nuance will not be important here.} If you look into such a reference, then the source and target are often denoted by $\alpha$ and $\beta$, or by $s$ and $t$; simply put both to be the same and identify these with our bundle projection which we often denote by $\pi$. In that way it should be possible to read the references without the need to know Lie groupoids. However, we try to re-prove the needed statements such that these types of references could be avoided by the reader.
+
 See also the previous subsection about notions we assume to be known.
 
 %\twocolumn
@@ -978,7 +980,41 @@ also clearly simply transitive. Observe, the second factor is not "constant", \t
 All of that is also resembled in the existence of sections. The existence of a section of $P$ has a 1:1 correspondence to trivializations of $P$, which is why $P$ in general only admits sections locally; see \textit{e.g.}\ \cite[\S 4.2, Thm.\ 4.2.19; page 219f.]{Hamilton}. $\mathcal{G}$ clearly admits always a global section, even if $\mathcal{G}$ is non-trivial; just take the section which assigns each base point the neutral element of its fibre.
 \end{remarks}
 
-As usual, we have trivial examples given by the trivial LGB $M \times G \to M$ with canonical multiplication $(x, g) \cdot (x, q) \coloneqq (x, gq)$, and we recover the notion of a Lie group in the case of $M = \{*\}$. For another important example recall that there is the notion of associated fibre bundles; following and stating the results of \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$, a smooth manifold $F$ and a smooth left $G$-action $\Psi$ given by
+As usual, we have trivial examples given by the \textbf{trivial LGB} $M \times G \to M$ with canonical multiplication $(x, g) \cdot (x, q) \coloneqq (x, gq)$, and we recover the notion of a Lie group in the case of $M = \{*\}$. We are of course also interested into LGB bundle morphisms:
+
+\begin{definitions}{LGB morphism, \newline \cite[\S 1.2, special situation of Def.\ 1.2.1 \& 1.2.3, page 12]{mackenzieGeneralTheory}}{LGB morphism}
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ and $\mathcal{H} \stackrel{\pi_{\mathcal{H}}}{\to} N$ be two LGBs over two smooth manifolds $M$ and $N$. An \textbf{LGB morphism} is a pair of smooth maps $F: \mathcal{H} \to \mathcal{G}$ and $f: N \to M$ such that
+\ba\label{FibreRelationOverf}
+\pi_{\mathcal{G}} \circ F &= f \circ \pi_{\mathcal{H}},\\
+F(gq) &= F(g) ~ F(q)\label{LGBHomomorph}
+\ea
+for all $g, q \in \mathcal{H}$ with $\pi_{\mathcal{H}}(g) = \pi_{\mathcal{H}}(q)$. We then say that \textbf{$F$ is an LGB morphism over $f$}. If $N = M$ and $f = \mathrm{id}_M$, then we often omit mentioning $f$ explicitly and either just write that \textbf{$F$ is a (base-preserving) LGB morphism}.
+
+We speak of an \textbf{LGB isomorphism (over $f$)} if $F$ is a diffeomorphism.
+\end{definitions}
+
+\begin{remark}
+\leavevmode\newline
+\indent $\bullet$ It is clear that condition 2 in Def.\ \ref{def:LieGroupBundle} is equivalent to say that $\mathcal{G}$ is locally isomorphic to a trivial LGB; as one may have expected already.
+
+$\bullet$ If $F$ is a diffeomorphism, then also $f$: By Eq.\ \eqref{FibreRelationOverf} surjectivity of $f$ is clear; for $y \in M$ just take any $g \in \mathcal{G}_y$, and since $F$ is a bijective, we have a $q \in \mathcal{H}_x$ for some $x\in N$ with $F(q)=g$. By Eq.\ \eqref{FibreRelationOverf} we have $y = \pi_{\mathcal{G}}(F(q)) \stackrel{\eqref{FibreRelationOverf}}{=} f(x)$, thence, surjectivity follows. For injectivity we know by Eq.\ \eqref{LGBHomomorph} and \eqref{FibreRelationOverf} that $F\mleft(e^{\mathcal{H}}_x\mright) = e^{\mathcal{G}}_{f(x)}$, where $e^{\mathcal{H}}_x$ and $e^{\mathcal{G}}_{f(x)}$ denote the unique neutral elements of $\mathcal{H}_x$ and $\mathcal{G}_{f(x)}$, respectively. Assume that there are $x, x^\prime \in N$ with $f(x) = f(x^\prime)$, then we can derive
+\bas
+F\mleft(e^{\mathcal{H}}_x\mright)
+&=
+e^{\mathcal{G}}_{f(x)}
+=
+e^{\mathcal{G}}_{f(x^\prime)}
+=
+F\mleft(e^{\mathcal{H}}_{x^\prime}\mright).
+\eas
+Then we have $e^{\mathcal{H}}_x = e^{\mathcal{H}}_{x^\prime}$ due to that $F$ is bijective, and hence $x = x^\prime$. Therefore $f$ is bijective. Finally, $F^{-1}$ is by assumption also a diffeomorphism, Eq.\ \eqref{LGBHomomorph} clearly carries over, and Eq.\ \eqref{FibreRelationOverf} is clearly w.r.t.\ $f^{-1}$, that is
+\bas
+\pi_{\mathcal{H}} \circ F^{-1} &= f^{-1} \circ \pi_{\mathcal{G}}.
+\eas
+Since $\pi_{\mathcal{H}} \circ F^{-1}$ is smooth and $\pi_{\mathcal{G}}$ is a smooth surjective submersion, it follows that $f^{-1}$ is smooth; this is a well-known fact for right-compositions with surjective submersions, see \textit{e.g.}\ \cite[\S 3.7.2, Lemma 3.7.5, page 153]{Hamilton}. We can conclude that $f$ is a diffeomorphism. Observe that we also concluded that $F^{-1}$ is an LGB isomorphism, too.
+\end{remark}
+
+For another important example recall that there is the notion of associated fibre bundles; following and stating the results of \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$, a smooth manifold $F$ and a smooth left $G$-action $\Psi$ given by
 \bas
 G \times F &\to F,\\
 (g, v) &\mapsto \Psi(g, v) \coloneqq g \cdot v.
@@ -1153,7 +1189,7 @@ which proves that $\phi_U$ is well-defined. Denote the projection onto equivalen
 &=
 L,
 \eas
-where $L_U: P|_U \times H \to U \times H$ is given by $L_U(p,h) \coloneqq \mleft( \pi_P(p), \psi_{\beta_U(p)} (h) \mright)$ for all $(p, h) \in P|_U \times H$. $L_U$ is clearly smooth and recall that $\varpi$ is a smooth surjective submersion, therefore $\phi_U$ is smooth; this is a well-known fact for right-compositions with surjective submersions, see \textit{e.g.}\ \cite[\S 3.7.2, Lemma 3.7.5]{Hamilton}. We define a candidate of the inverse $\phi_U^{-1}: U \times H \to \mathcal{H}|_U$ by
+where $L_U: P|_U \times H \to U \times H$ is given by $L_U(p,h) \coloneqq \mleft( \pi_P(p), \psi_{\beta_U(p)} (h) \mright)$ for all $(p, h) \in P|_U \times H$. $L_U$ is clearly smooth and recall that $\varpi$ is a smooth surjective submersion, therefore $\phi_U$ is smooth; this is a well-known fact for right-compositions with surjective submersions, see \textit{e.g.}\ \cite[\S 3.7.2, Lemma 3.7.5, page 153]{Hamilton}. We define a candidate of the inverse $\phi_U^{-1}: U \times H \to \mathcal{H}|_U$ by
 \bas
 \phi_U^{-1}(x, h)
 &=
@@ -1280,6 +1316,7 @@ f^*\mathcal{G}
 	f(x) = \pi(g)
 \right\}.
 \ea
+The structural fibre is the same Lie group as for $\mathcal{G}$.
 That is, the following diagram commutes
 \begin{center}
 	\begin{tikzcd}
@@ -1290,16 +1327,27 @@ That is, the following diagram commutes
 where $\pi_1$ and $\pi_2$ are the projections onto the first and second factor, respectively, of $N \times \mathcal{G}$. Actually, $f^*\mathcal{G}$ carries a natural structure as an LGB.
 
 \begin{corollaries}{Pullbacks of LGBs are LGBs, \newline \cite[\S 2.3, simplified situation of the discussion around Prop.\ 2.3.1, page 63ff.]{mackenzieGeneralTheory}}{PullbackLGB}
-Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then $f^*\mathcal{G}$ has a unique LGB structure such that the projection $\pi_2: N \times \mathcal{G} \to \mathcal{G}$ onto the second factor is an LGB isomorphism.
+Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then $f^*\mathcal{G}$ has a unique (up to isomorphisms) LGB structure such that the projection $\pi_2: f^*\mathcal{G} \to \mathcal{G}$ onto the second factor is an LGB morphism over $f$.
 \end{corollaries}
 
 \begin{remark}
 \leavevmode\newline
-The mentioned reference, \cite[\S 2.3, discussion around Prop.\ 2.3.1, page 63ff.]{mackenzieGeneralTheory}, is rather general and for Lie groupoids. If the reader is only interested into LGBs, then see \cite[\S 3, Thm.\ 3.1]{PullbackLGBLAB}.
+The mentioned reference, \cite[\S 2.3, discussion around Prop.\ 2.3.1, page 63ff.]{mackenzieGeneralTheory}, is rather general, formulated for Lie groupoids. If the reader is only interested into LGBs, then see \textit{e.g.}\ \cite[\S 3, Thm.\ 3.1]{PullbackLGBLAB}.
 \end{remark}
 
 \begin{proof}
 \leavevmode\newline
+By construction, the structural fibre of $f^*\mathcal{G}$ is the same Lie group $G$ as for $\mathcal{G}$, and for all $x \in N$ we have $\mleft(f^*\mathcal{G}\mright)_x \cong \mathcal{G}_{f(x)}$, thence, the fibres are Lie groups and the fibrewise group multiplication has the form
+\bas
+(x, g) \cdot (x, q) &= (x, gq)
+\eas
+for all $x \in N$ and $g,q \in \mleft(f^*\mathcal{G}\mright)_x$.
+The only real thing left to show it the existence of an LGB atlas. For this fix an LGB atlas $\{(U_i, \phi_i \}_{i \in I}$, where $I$ is an (index) set, $(U_i)_{i \in I}$ an open covering of $M$, and $\phi_i: \mathcal{G}|_U \to U \times G$ are LGB isomorphisms. Then $f^{-1}(U_i)$ gives rise to an open covering of $N$, and we get 
+\bas
+f^*\phi_i: \mleft.f^*\mathcal{G}\mright|_{f^{-1}(U)} &\to f^{-1}(U) \times G,\\
+(x, g) &\mapsto \mleft( x, \phi_{i, f(x)}(g) \mright),
+\eas
+where $\phi_{i, f(x)}: \mathcal{G}_{f(x)} \to G$ are the Lie group isomorphisms as defined in Def.\ \ref{def:LieGroupBundle}. It is immediate by construction that this gives an LGB atlas.
 \end{proof}
 
 Let us now define $\mathcal{G}$-actions.

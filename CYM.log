@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  3 FEB 2022 00:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  3 FEB 2022 23:16
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1251,14 +1251,15 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \tf@toc=\write6
 \openout6 = `CYM.toc'.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 577
+ [1]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 579
 .
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-[1] [2]
-Overfull \hbox (2.20065pt too wide) in paragraph at lines 664--682
+[2]
+Overfull \hbox (2.20065pt too wide) in paragraph at lines 666--684
 \OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/
 10.95 )$ \T1/lmr/m/n/10.95 as an el-e-ment of $\OT1/lmr/m/n/10.95 
 [](\OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.95 ; [](\OML/lmm/m/it/10.95 V\OT1/lmr/m
@@ -1270,53 +1271,52 @@ mm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/10.95
 /n/10.95 ))$
  []
 
-[3] [4] [5] [6]
+[3] [4] [5] [6] [7]
 LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 937.
+ne 939.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 960--962
+Underfull \hbox (badness 10000) in paragraph at lines 962--964
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 974--977
+Underfull \hbox (badness 10000) in paragraph at lines 976--979
 
  []
 
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 1040--1043
+[8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1079
 
  []
 
-[10] [11] [12] [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 1318--1321
+[11] [12] [13] [14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1369
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1329--1332
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 1377--1380
 
  []
 
-[15] (CYM.bbl
+[17] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-[16]) [17] (CYM.aux)
+) [18] (CYM.aux)
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33111 strings out of 478907
- 691236 string characters out of 2851891
- 1171806 words of memory out of 3000000
- 50287 multiletter control sequences out of 15000+600000
+ 33124 strings out of 478907
+ 691443 string characters out of 2851891
+ 1173126 words of memory out of 3000000
+ 50294 multiletter control sequences out of 15000+600000
  502767 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,108p,10627b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1353,9 +1353,9 @@ e1/public/lm/lmsy6.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
 public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (18 pages, 541429 bytes).
+Output written on CYM.pdf (19 pages, 555108 bytes).
 PDF statistics:
- 444 PDF objects out of 1000 (max. 8388607)
- 80 named destinations out of 1000 (max. 500000)
+ 470 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
