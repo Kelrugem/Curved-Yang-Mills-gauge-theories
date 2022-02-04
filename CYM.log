@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  3 FEB 2022 23:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  4 FEB 2022 23:10
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1288,36 +1288,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 976--979
  []
 
 [8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1079
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1087
 
  []
 
-[11] [12] [13] [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1366--1369
+[11] [12] [13] [14] [15] [16]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
+380.
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 1397--1400
 
  []
 
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 1377--1380
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 1408--1411
 
  []
 
-[17] (CYM.bbl
+[18] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-) [18] (CYM.aux)
+) [19] (CYM.aux)
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33124 strings out of 478907
- 691443 string characters out of 2851891
- 1173126 words of memory out of 3000000
- 50294 multiletter control sequences out of 15000+600000
- 502767 words of font info for 133 fonts, out of 8000000 for 9000
+ 33157 strings out of 478907
+ 692070 string characters out of 2851891
+ 1173160 words of memory out of 3000000
+ 50317 multiletter control sequences out of 15000+600000
+ 503247 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,108p,10627b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C
@@ -1327,35 +1333,37 @@ ers/kelru/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Us
 ers/kelru/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users
 /kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 <C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmext
-ra/cmex8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/euler/eufm10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/euler/eufm7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmmi10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmmi6.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/lm/lmmi8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/lm/lmmi9.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/lm/lmr10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/lm/lmr12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/lm/lmr6.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/lm/lmr8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmr9.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmri10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmri7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/lm/lmri8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmro10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmssbx10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmsy10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmsy6.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/lm/lmsy8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmsy9.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (19 pages, 555108 bytes).
+ra/cmex8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/d
+oublestroke/dsrom10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/doublestroke/dsrom8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/kelru/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/euler/eufm7.pfb><C:/Users/kelru/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/kelru/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/kelru/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/kelru/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/kelru/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/kelru/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/kelru/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kelru/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/kelru/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/kelru/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/kelru/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/kelru/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/kelru/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/kelru/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Users/kelru/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Users/kelru/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/kelru/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/kelru/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/kelru/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/kelru/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/kelru/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
+Output written on CYM.pdf (20 pages, 567016 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
+ 493 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

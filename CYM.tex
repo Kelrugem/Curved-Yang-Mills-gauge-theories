@@ -980,7 +980,13 @@ also clearly simply transitive. Observe, the second factor is not "constant", \t
 All of that is also resembled in the existence of sections. The existence of a section of $P$ has a 1:1 correspondence to trivializations of $P$, which is why $P$ in general only admits sections locally; see \textit{e.g.}\ \cite[\S 4.2, Thm.\ 4.2.19; page 219f.]{Hamilton}. $\mathcal{G}$ clearly admits always a global section, even if $\mathcal{G}$ is non-trivial; just take the section which assigns each base point the neutral element of its fibre.
 \end{remarks}
 
-As usual, we have trivial examples given by the \textbf{trivial LGB} $M \times G \to M$ with canonical multiplication $(x, g) \cdot (x, q) \coloneqq (x, gq)$, and we recover the notion of a Lie group in the case of $M = \{*\}$. We are of course also interested into LGB bundle morphisms:
+As usual, we have several trivial examples:
+
+\begin{examples}{Trivial examples}{TrivialLGBundle}
+The \textbf{trivial LGB} is given as the trivial bundle $M \times G \to M$ with canonical multiplication $(x, g) \cdot (x, q) \coloneqq (x, gq)$, and we recover the notion of a Lie group in the case of $M = \{*\}$.
+\end{examples}
+
+We are of course also interested into LGB bundle morphisms:
 
 \begin{definitions}{LGB morphism, \newline \cite[\S 1.2, special situation of Def.\ 1.2.1 \& 1.2.3, page 12]{mackenzieGeneralTheory}}{LGB morphism}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ and $\mathcal{H} \stackrel{\pi_{\mathcal{H}}}{\to} N$ be two LGBs over two smooth manifolds $M$ and $N$. An \textbf{LGB morphism} is a pair of smooth maps $F: \mathcal{H} \to \mathcal{G}$ and $f: N \to M$ such that
@@ -995,7 +1001,9 @@ We speak of an \textbf{LGB isomorphism (over $f$)} if $F$ is a diffeomorphism.
 
 \begin{remark}
 \leavevmode\newline
-\indent $\bullet$ It is clear that condition 2 in Def.\ \ref{def:LieGroupBundle} is equivalent to say that $\mathcal{G}$ is locally isomorphic to a trivial LGB; as one may have expected already.
+\indent $\bullet$ The right hand side of Eq.\ \eqref{LGBHomomorph} is well-defined because of Eq.\ \eqref{FibreRelationOverf}.
+
+$\bullet$ It is clear that condition 2 in Def.\ \ref{def:LieGroupBundle} is equivalent to say that $\mathcal{G}$ is locally isomorphic to a trivial LGB; as one may have expected already.
 
 $\bullet$ If $F$ is a diffeomorphism, then also $f$: By Eq.\ \eqref{FibreRelationOverf} surjectivity of $f$ is clear; for $y \in M$ just take any $g \in \mathcal{G}_y$, and since $F$ is a bijective, we have a $q \in \mathcal{H}_x$ for some $x\in N$ with $F(q)=g$. By Eq.\ \eqref{FibreRelationOverf} we have $y = \pi_{\mathcal{G}}(F(q)) \stackrel{\eqref{FibreRelationOverf}}{=} f(x)$, thence, surjectivity follows. For injectivity we know by Eq.\ \eqref{LGBHomomorph} and \eqref{FibreRelationOverf} that $F\mleft(e^{\mathcal{H}}_x\mright) = e^{\mathcal{G}}_{f(x)}$, where $e^{\mathcal{H}}_x$ and $e^{\mathcal{G}}_{f(x)}$ denote the unique neutral elements of $\mathcal{H}_x$ and $\mathcal{G}_{f(x)}$, respectively. Assume that there are $x, x^\prime \in N$ with $f(x) = f(x^\prime)$, then we can derive
 \bas
@@ -1327,7 +1335,7 @@ That is, the following diagram commutes
 where $\pi_1$ and $\pi_2$ are the projections onto the first and second factor, respectively, of $N \times \mathcal{G}$. Actually, $f^*\mathcal{G}$ carries a natural structure as an LGB.
 
 \begin{corollaries}{Pullbacks of LGBs are LGBs, \newline \cite[\S 2.3, simplified situation of the discussion around Prop.\ 2.3.1, page 63ff.]{mackenzieGeneralTheory}}{PullbackLGB}
-Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then $f^*\mathcal{G}$ has a unique (up to isomorphisms) LGB structure such that the projection $\pi_2: f^*\mathcal{G} \to \mathcal{G}$ onto the second factor is an LGB morphism over $f$.
+Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then $f^*\mathcal{G}$ has a unique (up to isomorphisms) LGB structure such that the projection $\pi_2: f^*\mathcal{G} \to \mathcal{G}$ onto the second factor is an LGB morphism over $f$ with $\pi_2|_x: (f^*\mathcal{G})_x \to \mathcal{G}_{f(x)}$ being a Lie group isomorphism for all $x \in N$.
 \end{corollaries}
 
 \begin{remark}
@@ -1338,16 +1346,39 @@ The mentioned reference, \cite[\S 2.3, discussion around Prop.\ 2.3.1, page 63ff
 \begin{proof}
 \leavevmode\newline
 By construction, the structural fibre of $f^*\mathcal{G}$ is the same Lie group $G$ as for $\mathcal{G}$, and for all $x \in N$ we have $\mleft(f^*\mathcal{G}\mright)_x \cong \mathcal{G}_{f(x)}$, thence, the fibres are Lie groups and the fibrewise group multiplication has the form
-\bas
+\ba\label{MultiplicationForPullbackLGBs}
 (x, g) \cdot (x, q) &= (x, gq)
-\eas
+\ea
 for all $x \in N$ and $g,q \in \mleft(f^*\mathcal{G}\mright)_x$.
-The only real thing left to show it the existence of an LGB atlas. For this fix an LGB atlas $\{(U_i, \phi_i \}_{i \in I}$, where $I$ is an (index) set, $(U_i)_{i \in I}$ an open covering of $M$, and $\phi_i: \mathcal{G}|_U \to U \times G$ are LGB isomorphisms. Then $f^{-1}(U_i)$ gives rise to an open covering of $N$, and we get 
+We are left to show the existence of an LGB atlas. For this fix an LGB atlas $\{(U_i, \phi_i \}_{i \in I}$ of $\mathcal{G}$, where $I$ is an (index) set, $(U_i)_{i \in I}$ an open covering of $M$, and $\phi_i: \mathcal{G}|_{U_i} \to U_i \times G$ are LGB isomorphisms. Then $f^{-1}(U_i)$ gives rise to an open covering of $N$, and we get 
 \bas
-f^*\phi_i: \mleft.f^*\mathcal{G}\mright|_{f^{-1}(U)} &\to f^{-1}(U) \times G,\\
+f^*\phi_i: \mleft.f^*\mathcal{G}\mright|_{f^{-1}(U_i)} &\to f^{-1}(U_i) \times G,\\
 (x, g) &\mapsto \mleft( x, \phi_{i, f(x)}(g) \mright),
 \eas
 where $\phi_{i, f(x)}: \mathcal{G}_{f(x)} \to G$ are the Lie group isomorphisms as defined in Def.\ \ref{def:LieGroupBundle}. It is immediate by construction that this gives an LGB atlas.
+
+That this is the unique (up to isomorphisms) LGB structure such that $\pi_2: f^*\mathcal{G} \to \mathcal{G}$ is an LGB morphism over $f$ inducing a Lie group isomorphism on each fibre simply follows by construction; observe for all $x \in N$ that $\pi_2|_x$ is clearly bijective. Furthermore, LGB morphisms need to be homomorphisms, which means here
+\bas
+\pi_2\bigl(
+	(x, g) \cdot (x, q)
+\bigr)
+&\stackrel{!}{=}
+\pi_2\mleft( (x, g) \mright) \cdot \pi_2\mleft( (x, q) \mright)
+=
+gq
+=
+\pi_2\bigl( (x, gq) \bigr)
+\eas
+for all $x \in N$ and $g,q \in \mleft(f^*\mathcal{G}\mright)_x$. By using the bijectivity of $\pi_2|_x$, the group structure leading to this is uniquely the one provided in Eq.\ \eqref{MultiplicationForPullbackLGBs}. Especially, $\pi_2$ is a homomorphism with the provided structure. Assume we have another LGB chart $\psi_i$ on (a subset of) $f^{-1}(U_i)$, then
+\bas
+\phi_i \circ \pi_2 \circ \psi_i^{-1}
+&=
+\underbrace{\phi_i \circ \pi_2 \circ \mleft( f^*\phi_i \mright)^{-1}}_{= (f, \mathds{1}_G)} \circ f^*\phi_i \circ \psi_i^{-1}
+=
+(f, \mathds{1}_G) \circ
+f^*\phi_i \circ \psi_i^{-1},
+\eas
+If evaluating this at $x \in f^{-1}(U_i)$, then all parts are bijective, and thus the condition about $\pi_2|_x$ being a Lie group isomorphism enforces that $\psi_i$ is an LGB atlas compatible with $f^*\phi_i$. This concludes the proof.
 \end{proof}
 
 Let us now define $\mathcal{G}$-actions.
@@ -1375,10 +1406,10 @@ Observe that by the definition of $f^*\mathcal{G}$ we can also write
 \bas
 f(p \cdot g) &= f(p),
 \eas
-so, the $\mathcal{G}$-action is defined in such a way that $f$ is invariant under it. Thus, the fibre-wise group structure on $\mathcal{G}$ naturally defines a $\mathcal{G}$-action on $\mathcal{G}$; in this situation $f$ would be $\pi$ itself. This is mainly a technical condition. On one hand, having $M = \{*\}$ already recovers the notion of a Lie group action and condition \eqref{InvarianceOffUnderGAction} is then trivial, and on the other hand the mentioned reference, \cite[\S 1.6, Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}, actually generalizes this condition making use of the structure of groupoids.
+so, the $\mathcal{G}$-action is defined in such a way that $f$ is invariant under it. Moreover, the fibre-wise group structure on $\mathcal{G}$ naturally defines a $\mathcal{G}$-action on $\mathcal{G}$; in this situation $f$ would be $\pi$ itself. This is mainly a technical condition. On one hand, having $M = \{*\}$ already recovers the notion of a Lie group action and condition \eqref{InvarianceOffUnderGAction} is then trivial, and on the other hand the mentioned reference, \cite[\S 1.6, Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}, actually generalizes this condition making use of the structure of groupoids.
 \newline
 
-Furthermore, the other conditions are the typical conditions for actions, especially such that we get another canonical $\mathcal{G}$-action on $f^*\mathcal{G}$ by
+Furthermore, the other conditions are the typical conditions for actions, especially such that we get a $\mathcal{G}$-action on $f^*\mathcal{G}$ by
 \ba
 (p, g) \cdot q
 &\coloneqq
@@ -1387,6 +1418,27 @@ Furthermore, the other conditions are the typical conditions for actions, especi
 for all $p \in N$ and $g, q \in \mathcal{G}_{f(p)}$.\footnote{In alignment to Def.\ \ref{def:LiegroupACtion}, this action is a map $(f \circ \pi_1)^*\mathcal{G} \to f^*\mathcal{G}$, where $\pi_1$ is the projection onto the first factor in $f^*\mathcal{G}$.}
 As usual, this gives rise to an equivalence relation, whose set of equivalence classes $f^*\mathcal{G} \Big/ G$ is isomorphic to $N$ (as a set) by $[p, g] \mapsto p \cdot g$, where we denote equivalence classes of $(p, g) \in f^*\mathcal{G}$ by $[p, g]$. All of this is straight-forward to check. Finally, observe the similarity to associated fibre bundles.
 \end{remarks}
+
+We have the following examples, the second of which will be important in this paper.
+
+\begin{examples}{Trivial action, \cite[\S 1.6, special situation of Ex.\ 1.6.3, page 35]{mackenzieGeneralTheory}}{TrivialAction}
+The projection $\pi_1$ onto the first factor of $f^*\mathcal{G} \stackrel{\pi_1}{\to} N$ satisfies the properties of a right $\mathcal{G}$-action on $N$, that is, the action is given by
+\bas
+f^*\mathcal{G} &\to N,\\
+(p, g) &\mapsto p \cdot g = p.
+\eas
+That this action satisfies the properties of an action for all $f$ is trivial, hence we call it the \textbf{trivial action}.
+\end{examples}
+
+\begin{examples}{}{AssocLGACtingOnAssocVec}
+
+\end{examples}
+
+In the following we usually define everything with respect to right-actions; however, one can of course define the same for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
+
+\begin{definitions}{Left and right translations}{LRTranslations}
+
+\end{definitions}
 
 \subsubsection{Toy model}
 
