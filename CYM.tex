@@ -1118,6 +1118,31 @@ for all $x \in M$, which are isomorphic to $H$ as Lie groups. The Lie group stru
 for all $h, q \in H$ and $p_x \in P_x$, where $\pi_P(p) = x$.
 \end{theorems}
 
+\begin{remarks}{Neutral and inverse elements}{NeutralAndInverseInAssocLGB}
+The neutral element for $\mathcal{H}_x$ ($x \in M$) is given by
+\bas
+e_x
+&=
+[p, e],
+\eas
+where $p \in P_x$ is arbitrary and $e$ is the neutral element of $H$. This is clearly independent of the choice of $p$ due to
+\bas
+\mleft[ p, e \mright]
+&=
+\mleft[ p \cdot g, \psi_{g^{-1}}(e) \mright]
+=
+\mleft[ p \cdot g, e \mright]
+\eas
+for all $g \in G$. Thence, the fact that $e_x$ is the neutral element follows immediately.
+
+The inverse of $[p, h] \in \mathcal{H}_x$ is clearly given by
+\bas
+\mleft( [p, h] \mright)^{-1}
+&=
+\mleft[ p, h^{-1} \mright].
+\eas
+\end{remarks}
+
 \begin{proof}
 \leavevmode\newline
 \indent $\bullet$ That $\pi$ is the well-defined projection and that the fibres are precisely $P_x \times_\psi H$ for all $x \in M$ is well-known, see our discussion before Def.\ \ref{def:LieGroupActingOnLieGroup} and the references therein; it is also very straightforward to check. We also discussed that $\mathcal{H}$ is a fibre bundle with structural fibre $H$. Hence, if one knows that the proposed group structure in Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined, then the smoothness of the group structure is implied by the smoothness structures of $H$ and $\mathcal{H}$. Thence, let us check whether Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined. Let $x \in M$, $p \in P_x$ and $p^\prime \coloneqq p \cdot g^\prime$ be another element of $P_x$, where $g^\prime \in G$. Also let $[p_1,h_1], [p_2, h_2] \in P_x \times_\psi H$; then we have unique elements $q_i, q_i^\prime$ of $G$ such that ($i \in \{1,2\}$)
@@ -1450,23 +1475,32 @@ f^*\mathcal{G} &\to N,\\
 That this action satisfies the properties of an action for all $f$ is trivial, hence we call it the \textbf{trivial action}.
 \end{examples}
 
-\begin{examples}{Inner group bundle acting on associated fibre bundles, \newline\cite[\S 1.6, adjustet version of Ex.\ 1.6.4, page 35]{mackenzieGeneralTheory}}{AssocLGACtingOnAssocVec}
-Let $P \to M$ be a principal bundle with structural Lie group $G$ over a smooth manifold $M$, and recall Def.\ \ref{def:AssociatedLGB}. Especially, let $H$ be another Lie group, equipped with a $G$-representation $\psi$ on $H$, and $F$ be another smooth manifold, equipped with a smooth left $H$-action $\Psi: H \times F \to F$, such that we have two associated bundles over $M$: $\mathcal{H} \coloneqq P \times_\psi H \stackrel{\pi_{\mathcal{H}}}{\to} M$ and $\mathcal{F} \coloneqq P \times_\Psi F \stackrel{\pi_{\mathcal{F}}}{\to} M$, an associated LGB and fibre bundle, respectively.
+\begin{examples}{Inner group bundle acting on associated fibre bundles, \newline\cite[\S 1.6, simplified version of Ex.\ 1.6.4, page 35]{mackenzieGeneralTheory}}{AssocLGACtingOnAssocVec}
+Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$ over a smooth manifold $M$, and recall Ex.\ \ref{ex:InnerLGBs}. Furthermore, let $F$ be another smooth manifold, equipped with a smooth left $G$-action $\Psi: G \times F \to F$. In total we have two associated bundles over $M$: 
+\begin{center}
+	\begin{tikzcd}
+		G \arrow{r} & c_G(P) \arrow{d}{\pi_{c_G(P)}} && F \arrow{r} & \mathcal{F} \coloneqq P \times_\Psi F \arrow{d}{\pi_{\mathcal{F}}} \\
+		& M & && M
+	\end{tikzcd}
+\end{center}
+the inner group bundle of $P$ and an associated $F$-bundle, respectively.
 
-Then we have a right $\mathcal{H}$-action on $\mathcal{F}$ given by
+Then we have a right $c_G(P)$-action on $\mathcal{F}$ given by
 \bas
-\pi_{\mathcal{F}}^*\mathcal{H} &\to \mathcal{F},\\
-\bigl( \mleft[ p, v \mright], \mleft[ p, h \mright] \bigr)
+\pi_{\mathcal{F}}^*c_G(P) &\to \mathcal{F},\\
+\bigl( \mleft[ p, v \mright], \mleft[ p, g \mright] \bigr)
 &\mapsto
-\mleft[ p, \Psi (h^{-1}, v) \mright]
+\mleft[ p, \Psi \mleft(g, v\mright) \mright]
+=
+\mleft[ p \cdot g, v \mright]
 \eas
-for all $p \in P_x$ ($x \in M$), $h \in H$ and $v \in F$.
+for all $p \in P_x$ ($x \in M$), $g \in G$ and $v \in F$.
 \end{examples}
 
 \begin{proof}
 \leavevmode\newline
-We first check again that the action is well-defined.
-Thence, let $x \in M$, $p \in P_x$ and $p^\prime \coloneqq p \cdot g^\prime$ be another element of $P_x$, where $g^\prime \in G$. Also let $[p_1,v] \in \mathcal{F}_x$ and $[p_2, h] \in \mathcal{H}_x$; then we have unique elements $q_i, q_i^\prime$ of $G$ such that ($i \in \{1,2\}$)
+\indent $\bullet$ We first check again that the action is well-defined, that is, we are going to prove that the action is independent of the choice of fixed point in $P_x$.
+Thence, let $x \in M$, $p \in P_x$ and $p^\prime \coloneqq p \cdot g^\prime$ be another element of $P_x$, where $g^\prime \in G$. Also let $[p_1,v] \in \mathcal{F}_x$ and $[p_2, g] \in c_G(P)_x$; then we have unique elements $q_i, q_i^\prime$ of $G$ such that ($i \in \{1,2\}$)
 \bas
 p_i &= p \cdot q_i,&
 p_i &= p^\prime \cdot q_i^\prime,
@@ -1475,20 +1509,110 @@ especially, it follows $q_i = g^\prime q_i^\prime$.
 
 On one hand, if we use $p$ as fixed element of $P_x$ to calculate the multiplication, we get 
 \bas
-[p_1, v] \cdot [p_2, h]
+[p_1, v] \cdot [p_2, g]
 &=
-[p, \Psi(q_1, v)] \cdot [p, \psi_{q_2}(h)]
+[p, \Psi(q_1, v)] \cdot [p, c_{q_2}(g)]
 =
-\mleft[p, \Psi\mleft( \bigl( \psi_{q_2}(h) \bigr)^{-1}, \Psi(q_1, v) \mright) \mright]
+\mleft[p \cdot c_{q_2}(g), \Psi(q_1, v) \mright]
 =
-\mleft[p, \Psi\mleft( \psi_{q_2}\mleft( h^{-1} \mright), v \mright) \mright].
+\mleft[p \cdot c_{q_2}\mleft( g \mright) ~ q_1, v \mright].
 \eas
-On the other hand, using $p^\prime$ as a fixed element, we derive
+On the other hand, using $p^\prime$ as a fixed element, we derive, using $q_i^\prime = \mleft( g^\prime \mright)^{-1} q_i$,
 \bas
 [p_1, v] \cdot [p_2, h]
 &=
+\mleft[p^\prime \cdot c_{q_2^\prime}\mleft( g \mright) ~ q_1^\prime, v \mright]
+=
+\mleft[p \cdot g^\prime q_2^\prime g \mleft( q_2^\prime \mright)^{-1} q_1^\prime, v \mright]
+=
+\mleft[p \cdot q_2 g q_2^{-1} q_1, v \mright]
+=
+\mleft[p \cdot c_{g_2}\mleft(g\mright) ~ q_1, v \mright],
 \eas
+which finalizes the argument needed to show that the action is well-defined.
+
+$\bullet$ Let us now quickly check that the conditions in Def.\ \ref{def:LiegroupACtion} are satisfied. We have
+\bas
+\pi_{\mathcal{F}}\bigl( [p, v] \cdot [p, g] \bigr)
+&=
+\pi_{\mathcal{F}}\mleft( \mleft[p , \Psi \mleft(g, v \mright) \mright] \mright)
+=
+\pi_P(p)
+=
+\pi_{c_G(P)}\bigl( [p, g] \bigr)
+\eas
+for all $p \in P_x$ ($x \in M$), $v \in F$ and $g \in G$; similarly, having additionally $h \in G$,
+\bas
+\bigl([p, v] \cdot [p, g] \bigr) \cdot [p, h]
+&=
+\mleft[ p \cdot g, v \mright] \cdot [p, h]
+=
+\mleft[ p \cdot g h, v \mright]
+=
+[p, v] \cdot [p, gh]
+=
+[p, v] \cdot \bigl([p, g] ~ [p, h] \bigr),
+\eas
+and
+\bas
+[p, v] \cdot [p, e]
+&=
+[p \cdot e, v]
+=
+[p, v].
+\eas
+Therefore this describes an action.
 \end{proof}
+
+\begin{remarks}{Relation to automorphisms of principal bundles and gauge transformations}{ClassGaugeTrafosAndcgPMulti}
+Recall that gauge transformations on associated fibre bundles can also be interpreted as principal bundle automorphisms $f$ of the principal bundle $P$; see \textit{e.g.}\ \cite[\S 5.3, Def.\ 5.3.1, page 256f.]{Hamilton}. That is, $f$ is a diffeomorphism $P \to P$ with
+\bas
+\pi_P \circ f &= f,\\
+f(p \cdot g) &= f(p) \cdot g
+\eas
+for all $p \in P$ and $g \in G$. The group of such maps will be denoted by $\sAut(P)$. One can identify such automorphisms with certain $G$-valued maps on $P$, following \cite[\S 5.3, Def.\ 5.3.2 \& Prop.\ 5.3.3, page 266f.]{Hamilton}: We define the following set of smooth maps $P \to G$ by
+\bas
+C^\infty(P;G)^G
+&\coloneqq
+\left\{
+	\sigma: P \to G \text{ smooth}
+	~\middle|~
+	\sigma(p \cdot g) = c_{g^{-1}}\bigl( \sigma(p) \bigr) \text{ for all } p \in P, g \in G
+\right\}.
+\eas
+It is straightforward to check that this is a group w.r.t.\ pointwise multiplication. Furthermore, there is a group isomorphism
+\bas
+\sAut(P) &\to C^\infty(P; G)^G,\\
+f &\mapsto \sigma_f,
+\eas
+where $\sigma_f$ is defined by
+\bas
+f(p)
+&=
+p \cdot \sigma_f(p)
+\eas
+for all $p \in P$; one can prove that this is well-defined.
+
+As argued in \cite[\S 5.3, Thm.\ 5.3.8, page 269; formulated as left action there, which is why we have an inverse here]{Hamilton}, $\sAut(P)$ acts (on the right) on associated fibre bundles $\mathcal{F} = P \times_\Psi F$ by
+\bas
+[p, v] \cdot f
+&\coloneqq
+\mleft[ f^{-1}(p), v \mright]
+=
+\mleft[ p \cdot \sigma_{f}(p)^{-1}, v \mright]
+\eas
+for all $[p, v] \in \mathcal{F}_x$ ($x \in M$) and $f \in \sAut(P)$. $\sigma_f$ can also be just locally defined, therefore one could investigate whether there is also an action just with an element $g$ of $G$, basically the restriction of $\sigma_f$ onto the fibre $P_x$. However, the action given by $[p, v] \cdot g = \mleft[ p \cdot g^{-1}, v \mright]$ for $g \in G$ is in general clearly only well-defined w.r.t.\ a change of the representative of $[p, v] = \mleft[ p \cdot q, \Psi_{q^{-1}}(v) \mright]$ ($q \in G$), if $G$ is abelian. But one can resolve this by looking at it carefully: The rough idea is that $g$ basically comes from $\sigma_f(p)$ in this context, but
+\bas
+\sigma_f(p \cdot q)
+&=
+c_{q^{-1}}\bigl( \sigma_f(p) \bigr).
+\eas
+Roughly, while $p$ is multiplied with $g^{-1}$, $p \cdot q$ has to be multiplied with $q^{-1} g^{-1} q$. It is easy to check that this resolves that issue, and the result is precisely the action described in Ex.\ \ref{ex:AssocLGACtingOnAssocVec}. In fact, we have the following proposition:
+\end{remarks}
+
+\begin{propositions}{Gauge transformations as sections of the inner LGB}{}
+
+\end{propositions}
 
 In the following we usually define everything with respect to right-actions; however, one can of course define the same for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
 
