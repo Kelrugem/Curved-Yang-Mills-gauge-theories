@@ -1120,7 +1120,7 @@ for all $h, q \in H$ and $p_x \in P_x$, where $\pi_P(p) = x$.
 
 \begin{proof}
 \leavevmode\newline
-$\bullet$ That $\pi$ is the well-defined projection and that the fibres are precisely $P_x \times_\psi H$ for all $x \in M$ is well-known, see our discussion before Def.\ \ref{def:LieGroupActingOnLieGroup} and the references therein; it is also very straightforward to check. We also discussed that $\mathcal{H}$ is a fibre bundle with structural fibre $H$. Hence, if one knows that the proposed group structure in Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined, then the smoothness of the group structure is implied by the smoothness structures of $H$ and $\mathcal{H}$. Thence, let us check whether Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined. Let $x \in M$, $p \in P_x$ and $p^\prime \coloneqq p \cdot g^\prime$ be another element of $P_x$, where $g^\prime \in G$. Also let $[p_1,h_1], [p_2, h_2] \in P_x \times_\psi H$; then we have unique elements $q_i, q_i^\prime$ of $G$ such that ($i \in \{1,2\}$)
+\indent $\bullet$ That $\pi$ is the well-defined projection and that the fibres are precisely $P_x \times_\psi H$ for all $x \in M$ is well-known, see our discussion before Def.\ \ref{def:LieGroupActingOnLieGroup} and the references therein; it is also very straightforward to check. We also discussed that $\mathcal{H}$ is a fibre bundle with structural fibre $H$. Hence, if one knows that the proposed group structure in Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined, then the smoothness of the group structure is implied by the smoothness structures of $H$ and $\mathcal{H}$. Thence, let us check whether Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined. Let $x \in M$, $p \in P_x$ and $p^\prime \coloneqq p \cdot g^\prime$ be another element of $P_x$, where $g^\prime \in G$. Also let $[p_1,h_1], [p_2, h_2] \in P_x \times_\psi H$; then we have unique elements $q_i, q_i^\prime$ of $G$ such that ($i \in \{1,2\}$)
 \bas
 p_i &= p \cdot q_i,&
 p_i &= p^\prime \cdot q_i^\prime,
@@ -1287,6 +1287,26 @@ such that $\phi_U^{-1}$ is clearly smooth as the composition of smooth maps, and
 for all $[p_1, h_1], [p_2, h_2] \in \mathcal{H}_x$, where we used again the equivariance of $\beta_U$ and the same notation as introduced for Eq.\ \eqref{MultiPlicationInAssocGroup}, and $\mathrm{pr}_2$ denotes the projection onto the second factor. Thence, $\mathrm{pr}_2 \circ \phi_U$ induces Lie group isomorphisms $\mathcal{H}_x \to H$ for all $x \in U$; by Def.\ \ref{def:LieGroupBundle} we can finally conclude that $\mathcal{H}$ is an LGB.
 \end{proof}
 
+Hence, we define:
+
+\begin{definitions}{Associated Lie group bundle, \newline labeling similar to \cite[\S 4.7, Def.\ 4.7.3, page 240]{Hamilton}}{AssociatedLGB}
+Let $G, H$ be Lie groups, $P \stackrel{\pi_P}{\to} M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then we call the LGB
+\bas
+\mathcal{H}
+&\coloneqq
+P \times_\psi H
+=
+\mleft( P \times H \mright) \Big/ G
+\eas
+the \textbf{Lie group bundle (LGB) associated} to the principal bundle $P$ and the representation $\psi$ on $H$:
+\begin{center}
+	\begin{tikzcd}
+	H \arrow{r}& P \times_\psi H \arrow{d}{\pi_{\mathcal{H}}}\\
+	& M
+	\end{tikzcd}
+\end{center}
+\end{definitions}
+
 The special situation of $H = G$ is already an important example:
 
 \begin{examples}{Inner group bundle, \newline \cite[\S1, paragraph after Def.\ 1.1.19, page 11; comment after Construction 1.3.8, page 20]{mackenzieGeneralTheory}}{InnerLGBs}
@@ -1430,9 +1450,45 @@ f^*\mathcal{G} &\to N,\\
 That this action satisfies the properties of an action for all $f$ is trivial, hence we call it the \textbf{trivial action}.
 \end{examples}
 
-\begin{examples}{}{AssocLGACtingOnAssocVec}
+\begin{examples}{Inner group bundle acting on associated fibre bundles, \newline\cite[\S 1.6, adjustet version of Ex.\ 1.6.4, page 35]{mackenzieGeneralTheory}}{AssocLGACtingOnAssocVec}
+Let $P \to M$ be a principal bundle with structural Lie group $G$ over a smooth manifold $M$, and recall Def.\ \ref{def:AssociatedLGB}. Especially, let $H$ be another Lie group, equipped with a $G$-representation $\psi$ on $H$, and $F$ be another smooth manifold, equipped with a smooth left $H$-action $\Psi: H \times F \to F$, such that we have two associated bundles over $M$: $\mathcal{H} \coloneqq P \times_\psi H \stackrel{\pi_{\mathcal{H}}}{\to} M$ and $\mathcal{F} \coloneqq P \times_\Psi F \stackrel{\pi_{\mathcal{F}}}{\to} M$, an associated LGB and fibre bundle, respectively.
 
+Then we have a right $\mathcal{H}$-action on $\mathcal{F}$ given by
+\bas
+\pi_{\mathcal{F}}^*\mathcal{H} &\to \mathcal{F},\\
+\bigl( \mleft[ p, v \mright], \mleft[ p, h \mright] \bigr)
+&\mapsto
+\mleft[ p, \Psi (h^{-1}, v) \mright]
+\eas
+for all $p \in P_x$ ($x \in M$), $h \in H$ and $v \in F$.
 \end{examples}
+
+\begin{proof}
+\leavevmode\newline
+We first check again that the action is well-defined.
+Thence, let $x \in M$, $p \in P_x$ and $p^\prime \coloneqq p \cdot g^\prime$ be another element of $P_x$, where $g^\prime \in G$. Also let $[p_1,v] \in \mathcal{F}_x$ and $[p_2, h] \in \mathcal{H}_x$; then we have unique elements $q_i, q_i^\prime$ of $G$ such that ($i \in \{1,2\}$)
+\bas
+p_i &= p \cdot q_i,&
+p_i &= p^\prime \cdot q_i^\prime,
+\eas
+especially, it follows $q_i = g^\prime q_i^\prime$.
+
+On one hand, if we use $p$ as fixed element of $P_x$ to calculate the multiplication, we get 
+\bas
+[p_1, v] \cdot [p_2, h]
+&=
+[p, \Psi(q_1, v)] \cdot [p, \psi_{q_2}(h)]
+=
+\mleft[p, \Psi\mleft( \bigl( \psi_{q_2}(h) \bigr)^{-1}, \Psi(q_1, v) \mright) \mright]
+=
+\mleft[p, \Psi\mleft( \psi_{q_2}\mleft( h^{-1} \mright), v \mright) \mright].
+\eas
+On the other hand, using $p^\prime$ as a fixed element, we derive
+\bas
+[p_1, v] \cdot [p_2, h]
+&=
+\eas
+\end{proof}
 
 In the following we usually define everything with respect to right-actions; however, one can of course define the same for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
 
