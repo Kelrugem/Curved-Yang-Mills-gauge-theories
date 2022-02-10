@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  7 FEB 2022 00:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  10 FEB 2022 21:47
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1308,21 +1308,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 1453--1456
 
  []
 
-[18] [19] [20] [21] (CYM.bbl
+[18] [19] [20] [21] [22] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-) [22] (CYM.aux)
+) [23] (CYM.aux)
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33286 strings out of 478907
- 695022 string characters out of 2851891
- 1182305 words of memory out of 3000000
- 50438 multiletter control sequences out of 15000+600000
+ 33289 strings out of 478907
+ 695069 string characters out of 2851891
+ 1182465 words of memory out of 3000000
+ 50439 multiletter control sequences out of 15000+600000
  503247 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,108p,10627b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1361,9 +1361,9 @@ ms/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/kelru/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (23 pages, 586437 bytes).
+Output written on CYM.pdf (24 pages, 592745 bytes).
 PDF statistics:
- 519 PDF objects out of 1000 (max. 8388607)
- 99 named destinations out of 1000 (max. 500000)
+ 530 PDF objects out of 1000 (max. 8388607)
+ 101 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
