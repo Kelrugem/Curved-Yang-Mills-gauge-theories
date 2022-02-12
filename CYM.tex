@@ -929,11 +929,9 @@ using the definition of $P \times_{\mathrm{Ad}} \mathfrak{g}$. Equivalently,
 \mright)
 \eas
 
-\section{Curved Yang-Mills gauge theory based on using Lie group bundles}
+\section{Lie group bundles (LGBs)}
 
-\subsection{Lie group bundles}
-
-\subsubsection{Definition and examples}
+\subsection{Definition and examples}
 %\pagebreak
 \begin{definitions}{Lie group bundle, \cite[\S 1.1, Def.\ 1.1.19; p. 11]{mackenzieGeneralTheory}}{LieGroupBundle}
 Let $G, \mathcal{G}, M$ be smooth manifolds. A fibre bundle
@@ -1046,7 +1044,7 @@ where the projection $\pi_{P\times_\Psi F}: P\times_\Psi F \to M$ is given by
 &\coloneqq
 \pi_P(p)
 \eas
-for all $[p, v] \in P\times_\Psi F$, denoting equivalence classes of $(p, v)$ by square brackets. For $x \in M$, the fibre $\mleft(P\times_\Psi F\mright)_x$ is given by $\mleft( P_x \times F  \mright) \Big/ G = P_x \times_\Psi F$, and the fibre is diffeomorphic to $F$ by $F \ni v \mapsto [p, v] \in \mleft(P\times_\Psi F\mright)_x$ for a fixed $p \in P_x$.
+for all $[p, v] \in P\times_\Psi F$, denoting equivalence classes of $(p, v)$ by square brackets. For $x \in M$, the fibre $\mleft(P\times_\Psi F\mright)_x$ is given by $\mleft( P_x \times F  \mright) \Big/ G = P_x \times_\Psi F$, and the fibre is diffeomorphic to $F$ by $F \ni v \mapsto [p, v] \in \mleft(P\times_\Psi F\mright)_x$ for a fixed $p \in P_x$. We will frequently use this diffeomorphism in the following without further notice.
 
 A very important example are of course associated vector bundles, related to $F$ being a vetor space. We need a similar concept for Lie groups.
 
@@ -1356,7 +1354,13 @@ for all $g, h \in G$, where we also denote left- and right-multiplications (with
 $c_G(P)$ is an LGB by Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}.
 \end{examples}
 
-\subsubsection{LGB actions}
+\subsection{Lie algebra bundles (LABs)}
+
+\subsection{From LGBs to LABs}
+
+\section{LGB actions}
+
+\subsection{Definition}
 
 As for Lie groups, we are interested into their actions. The idea is the following, similar to \cite[\S 1.6, discussion around Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}: We have an LGB $\mathcal{G} \to M$ over a smooth manifold $M$, and we want to construct an action of $\mathcal{G}$ on another smooth manifold $N$. Each fibre of $\mathcal{G}$ is a Lie group, and we have a notion of Lie groups actions on manifold $N$. Therefore one could define an LGB action as a collection of Lie group actions, that is, only sections of $\mathcal{G}$ act on $N$; however, one then expects that the general outcome of a product of $\Gamma(\mathcal{G})$ on $N$ would be smooth maps from $M$ to $N$. In order to recover a typical structure of action one could instead introduce a "multiplication rule", \textit{i.e.}~each point $p \in N$ can only be multiplied with elements of a specific fibre of $\mathcal{G}$. This "multiplication rule" will be described by a smooth map $f: N \to M$ in the sense of that the fibre over $f(p)$ will act on $p$.
 
@@ -1443,7 +1447,13 @@ p \cdot e_{f(p)} &= p
 for all $p \in N$ and $g, h \in \mathcal{G}_{f(p)}$, where $e_{f(p)}$ is the neutral element of $\mathcal{G}_{f(p)}$.
 \newline
 
-We similarly define left-actions, and we may sometimes write (left or right) \textbf{$\mathcal{G}$-action on $N$}.
+We similarly define left-actions, and we may sometimes write (left or right) \textbf{$\mathcal{G}$-action on $N$}. Furthermore, in order to increase readability as long as the dependency on $f$ is not important, we introduce the notation
+\ba
+N * \mathcal{G}
+&\coloneqq
+f^*\mathcal{G},
+\ea
+such that the action's notation has the typical shape $N * \mathcal{G} \to N$.
 \end{definitions}
 
 \begin{remarks}{Relation to the structure of the canonical pullback Lie group bundle over $N$}{ActionAndPullbackLGBs}
@@ -1464,12 +1474,24 @@ for all $p \in N$ and $g, q \in \mathcal{G}_{f(p)}$.\footnote{In alignment to De
 As usual, this gives rise to an equivalence relation, whose set of equivalence classes $f^*\mathcal{G} \Big/ G$ is isomorphic to $N$ (as a set) by $[p, g] \mapsto p \cdot g$, where we denote equivalence classes of $(p, g) \in f^*\mathcal{G}$ by $[p, g]$. All of this is straight-forward to check. Finally, observe the similarity to associated fibre bundles.
 \end{remarks}
 
+\begin{remarks}{Left- and right-actions}{LeftRightAction}
+In the following we usually define everything with respect to right-actions; however, one can of course define the same for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
+\end{remarks}
+
+One can probably see that it is straightforward to extend a lot of the typical notions of Lie group actions to LGB actions; hence, we mainly focus on the definitions and properties which we need in this paper. 
+
+\begin{definitions}{Left and right translations, \cite[\S 3.2, notation similar to Def.\ 3.2.3, page 131]{Hamilton}}{LRTranslations}
+
+\end{definitions}
+
+\subsection{Examples of LGB actions}
+
 We have the following examples, the second of which will be important in this paper.
 
 \begin{examples}{Trivial action, \cite[\S 1.6, special situation of Ex.\ 1.6.3, page 35]{mackenzieGeneralTheory}}{TrivialAction}
 The projection $\pi_1$ onto the first factor of $f^*\mathcal{G} \stackrel{\pi_1}{\to} N$ satisfies the properties of a right $\mathcal{G}$-action on $N$, that is, the action is given by
 \bas
-f^*\mathcal{G} &\to N,\\
+N * \mathcal{G} &\to N,\\
 (p, g) &\mapsto p \cdot g \coloneqq p.
 \eas
 That this action satisfies the properties of an action for all $f$ is trivial, hence we call it the \textbf{trivial action}.
@@ -1487,6 +1509,8 @@ the inner group bundle of $P$ and an associated $F$-bundle, respectively.
 
 Then we have a right $c_G(P)$-action on $\mathcal{F}$ given by
 \bas
+\mathcal{F} * c_G(P)
+\coloneqq
 \pi_{\mathcal{F}}^*c_G(P) &\to \mathcal{F},\\
 \bigl( \mleft[ p, v \mright], \mleft[ p, g \mright] \bigr)
 &\mapsto
@@ -1610,15 +1634,17 @@ c_{q^{-1}}\bigl( \sigma_f(p) \bigr).
 Roughly, while $p$ is multiplied with $g^{-1}$, $p \cdot q$ has to be multiplied with $q^{-1} g^{-1} q$. It is easy to check that this resolves that issue, and the result is precisely the action described in Ex.\ \ref{ex:AssocLGACtingOnAssocVec}. In fact, we have the following proposition:
 \end{remarks}
 
+For the following proposition observe that the (local) sections of an LGB have a group structure given by pointwise multiplication.
+
 \begin{propositions}{Gauge transformations as sections of the inner LGB, \newline \cite[\S 1.4, (the last sentence of) Ex.\ 1.4.7, page 25]{mackenzieGeneralTheory}}{GaugeTrafoAndInnerLGB}
 Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$ over a smooth manifold $M$. Then there is a group isomorphism 
 \bas
-\sAut(P) &\mapsto \Gamma\bigl( c_G(P) \bigr),\\
-f &\to g_f
+\sAut(P) &\to \Gamma\bigl( c_G(P) \bigr),\\
+f &\mapsto q_f
 \eas
 where $g_f \in \Gamma\bigl( c_G(P) \bigr)$ is defined by
 \bas
-\mleft.g_f\mright|_x
+\mleft.q_f\mright|_x
 &\coloneqq
 \bigl[ p, \sigma_f(p) \bigr]
 \eas
@@ -1627,7 +1653,7 @@ for all $x \in M$, where $p$ is any element of $P$ such that $\pi_P(p) = x$, and
 
 \begin{remark}
 \leavevmode\newline
-As one may guess, $\Gamma\bigl( c_G(P) \bigr)$ is the analogue of $C^\infty(M; G)^G$ such that one could ask for a more direct analogue to $\sAut(P)$. Indeed, as argued in \cite[\S 1.3, Prop.\ 1.3.9, page 20]{mackenzieGeneralTheory} $c_G(P)$ is actually isomorphic to $\mleft(P \times_M P\mright) \Big/ G$, where $P\times_M P \coloneqq \pi_P^*P$, and the $G$-action is the diagonal action on $P \times P$. One can prove that an isomorphism is given by 
+As one may guess, $\Gamma\bigl( c_G(P) \bigr)$ is the analogue of $C^\infty(M; G)^G$ such that one could ask for a more direct analogue to $\sAut(P)$. Indeed, as argued in \cite[\S 1.3, Prop.\ 1.3.9, page 20]{mackenzieGeneralTheory}, $c_G(P)$ is actually isomorphic to $\mleft(P \times_M P\mright) \Big/ G$, where $P\times_M P \coloneqq \pi_P^*P$, and the $G$-action is the diagonal action on $P \times P$. One can prove that an isomorphism is given by 
 \bas
 c_G(P) &\to \mleft(P \times_M P\mright) \Big/ G,\\
 [p, g] &\mapsto [p, p \cdot g].
@@ -1647,20 +1673,114 @@ where $L_f \in \Gamma\mleft(\mleft(P \times_M P\mright) \Big/ G\mright)$ is give
 \eas
 for all $x \in M$, where $p$ is any element of $P$ such that $\pi_P(p) = x$. This is clearly well-defined, and, so, while $c_G(P)$ is the bundle-analogue of $C^\infty(P; G)^G$ one can think of $\mleft(P \times_M P\mright) \Big/ G$ as the bundle-analogue of $\sAut(P)$.
 
-However, this description often arises if one wants to use the formalism of groupoids and algebroids, here especially using the \textbf{gauge groupoid} and \textbf{Atiyah algebroid} induced by $P$. These would allow an even more elegant version of the gauge transformations, however, we intend to write this paper without the need that the reader has knowledge about those bundle structures. See the cited references for more details in that regard.
+However, this description often arises if one wants to use the formalism of groupoids and algebroids, here especially using the \textbf{gauge groupoid} and \textbf{Atiyah algebroid} induced by $P$. These would allow an even more elegant version of the gauge transformations, however, we intend to write this paper in such a way that there is no need that the reader has knowledge about those bundle structures. See the cited references for more details in that regard.
 \end{remark}
 
 \begin{proof}[Proof of Prop.\ \ref{prop:GaugeTrafoAndInnerLGB}]
 \leavevmode\newline
+\indent $\bullet$ Let us first quickly check whether $g_f \in \Gamma\bigl( c_G(P) \bigr)$ is well-defined for all $f \in \sAut(P)$. For $p \in P_x$ ($x \in M$) we have
+\bas
+\mleft. q_f \mright|_x
+&=
+\mleft[ p, \sigma_f(p) \mright],
+\eas
+If $p^\prime = p \cdot g$ ($g \in G$) is another element of $P_x$, then, using $p^\prime$ to define $q_f$,
+\bas
+\mleft. q_f \mright|_x
+&=
+\mleft[ p \cdot g, \sigma_f(p \cdot g) \mright]
+=
+\mleft[ p \cdot g, c_{g^{-1}}\bigl(\sigma_f(p)\bigr) \mright]
+=
+\mleft[ p, \sigma_f(p) \mright],
+\eas
+also using the definition of $c_G(P)$, recall Ex.\ \ref{ex:InnerLGBs}. It follows that $q_f$ is well-defined, and it is clear that $q_f$ is smooth.
+
+$\bullet$ We want to show that $f \mapsto q_f$ is a group isomorphism by using that it is a composition of the group isomorphisms $\sAut \to C^\infty(P; G)^G$ as in Rem.\ \ref{rem:ClassGaugeTrafosAndcgPMulti} and 
+\ba
+C^\infty(P; G)^G &\to \Gamma\bigl( c_G(P) \bigr),\nonumber\\
+\sigma &\mapsto q_\sigma,\label{IsomCPGGTocGPSec}
+\ea
+where $q_\sigma$ is effectively the same definition as $q_f$, that is $q_\sigma|_x = [p, \sigma(p)]$ which is well-defined by the very same reasons as before. It is only left to show that $C^\infty(P; G)^G \to \Gamma\bigl( c_G(P) \bigr)$ is a group isomorphism. For injectivity let $\sigma^\prime$ be another element of $C^\infty(P; G)^G$ and assume $[p, \sigma(p)] = \mleft[ p, \sigma^\prime(p) \mright]$. Then
+\bas
+e_x
+&=
+[p, e]
+=
+[p, \sigma(p)] \cdot \underbrace{\mleft( \mleft[ p, \sigma^\prime(p) \mright] \mright)^{-1}}
+	_{= \mleft[ p, \mleft(\sigma^\prime(p)\mright)^{-1} \mright]}
+=
+\mleft[ p, \sigma(p) \mleft(\sigma^\prime(p)\mright)^{-1} \mright],
+\eas
+such that
+\bas
+\sigma(p) \mleft(\sigma^\prime(p)\mright)^{-1}
+&=
+e,
+\eas
+so $\sigma = \sigma^\prime$ and hence injectivity follows. For surjectivity observe that for a section $q \in \Gamma\bigl( c_G(P) \bigr)$ we can define a map $\sigma: P \to G$ by
+\bas
+q_x
+&=
+[p, \sigma(p)].
+\eas
+This map satisfies
+\bas
+[p, \sigma(p)]
+&=
+\mleft[p \cdot g, c_{g^{-1}}\bigl(\sigma(p)\bigr)\mright]
+=
+[p \cdot g, \sigma(p \cdot g)]
+\eas
+for all $g \in G$; the last equality implies $\sigma(p \cdot g) = c_{g^{-1}}\bigl(\sigma(p)\bigr)$, which is precisely what we need for $C^\infty(P; G)^G$. It is only left to show smoothness of $\sigma$. For an open neighbourhood $U \subset M$ of $x$ fix a trivialization $\varphi_U: P|_U \to U \times G$, and we denote
+\bas
+\varphi_U\mleft(p^\prime\mright)
+&=
+\mleft( \pi_P\mleft(p^\prime\mright), \beta_U\mleft(p^\prime\mright) \mright)
+\eas
+for all $p^\prime \in P$, where $\beta_U: P|_U \to G$ is an equivariant map, \textit{i.e.}\ $\beta_U\mleft(p^\prime \cdot g\mright) = \beta_U\mleft(p^\prime\mright) ~ g$ for all $g \in G$. As shown in the proof of Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}, we have a trivialization of $c_G(P)$ given by
+\bas
+c_G(P)|_U
+&\to
+U \times G,\\
+\mleft[p^\prime, g\mright]
+&\mapsto
+\mleft(
+	\pi_P\mleft(p^\prime\mright), \psi_{\beta_U\mleft(p^\prime\mright)} (g)
+\mright).
+\eas
+Applying that trivialization to $q$ we derive that
+\bas
+\mleft[ p^\prime \mapsto \psi_{\beta_U\mleft(p^\prime\mright)}\mleft( \sigma\mleft(p^\prime\mright) \mright) \mright]
+\eas
+is smooth, because $q$ is smooth. Since $\psi_{\beta_U\mleft(p^\prime\mright)}$ is smooth and bijective, we conclude that $\sigma$ is smooth. Hence, $\sigma \in C^\infty(P; G)^G$, so, Def.\ \eqref{IsomCPGGTocGPSec} is also surjective and thence bijective.
+
+Finally let us show that Def.\ \eqref{IsomCPGGTocGPSec} is a group isomorphism. Let $\sigma, \sigma^\prime$ be elements of $C^\infty(P; G)^G$, then use Def.\ \eqref{IsomCPGGTocGPSec} to derive
+\bas
+\sigma \sigma^\prime
+&\mapsto
+q_{\sigma \sigma^\prime}
+\eas
+with
+\bas
+\mleft.q_{\sigma \sigma^\prime}\mright|_x
+&=
+\mleft[ p, \sigma(p) ~ \sigma^\prime(p) \mright]
+=
+[p, \sigma(p)] \cdot \mleft[p, \sigma^\prime(p) \mright]
+=
+\mleft.q_{\sigma}\mright|_x \cdot \mleft.q_{\sigma^\prime}\mright|_x,
+\eas
+such that Def.\ \eqref{IsomCPGGTocGPSec} satisfies
+\bas
+\sigma\sigma^\prime &\mapsto q_\sigma \cdot q_{\sigma^\prime}.
+\eas
+This concludes the proof.
 \end{proof}
 
-In the following we usually define everything with respect to right-actions; however, one can of course define the same for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
+Associated fibre bundles are motivated by making the invariance of gauge theory under local gauge transformations (that is, the change of gauge) an inherent part of the bundle, while the action of the global and other transformations remain. This procedure of "reducing" the action onto the these is reflected in the quotient behind $c_G(P)$.
 
-\begin{definitions}{Left and right translations}{LRTranslations}
-
-\end{definitions}
-
-\subsubsection{Toy model}
+\subsection{Toy model}
 
 We want to use LGBs in the context in the context of gauge theory, somewhat as a replacement of the structural Lie group. 
 

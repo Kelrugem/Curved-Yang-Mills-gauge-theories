@@ -5,12 +5,15 @@
 \contentsline {section}{\numberline {2}Basic definitions}{2}{section.2}%
 \contentsline {section}{\numberline {3}Curved Yang-Mills gauge theory}{2}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Integration}{7}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Curved Yang-Mills gauge theory based on using Lie group bundles}{8}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Lie group bundles}{8}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Definition and examples}{8}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}LGB actions}{16}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Toy model}{23}{subsubsection.4.1.3}%
-\contentsline {section}{\numberline {5}Conclusion}{23}{section.5}%
-\contentsline {section}{\nonumberline List of References}{23}{section*.3}%
-\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{23}{appendix.A}%
+\contentsline {section}{\numberline {4}Lie group bundles (LGBs)}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Definition and examples}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Lie algebra bundles (LABs)}{17}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}From LGBs to LABs}{17}{subsection.4.3}%
+\contentsline {section}{\numberline {5}LGB actions}{17}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Definition}{17}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Examples of LGB actions}{20}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Toy model}{26}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Conclusion}{26}{section.6}%
+\contentsline {section}{\nonumberline List of References}{26}{section*.3}%
+\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{26}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
