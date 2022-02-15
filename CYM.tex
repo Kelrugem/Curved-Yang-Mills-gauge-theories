@@ -978,7 +978,7 @@ also clearly simply transitive. Observe, the second factor is not "constant", \t
 All of that is also resembled in the existence of sections. The existence of a section of $P$ has a 1:1 correspondence to trivializations of $P$, which is why $P$ in general only admits sections locally; see \textit{e.g.}\ \cite[\S 4.2, Thm.\ 4.2.19; page 219f.]{Hamilton}. $\mathcal{G}$ clearly admits always a global section, even if $\mathcal{G}$ is non-trivial; just take the section which assigns each base point the neutral element of its fibre.
 \end{remarks}
 
-As usual, we have several trivial examples:
+If $M$ is a point we recover the notion of Lie groups, and, as usual, we have the notion of trivial LGBs:
 
 \begin{examples}{Trivial examples}{TrivialLGBundle}
 The \textbf{trivial LGB} is given as the trivial bundle $M \times G \to M$ with canonical multiplication $(x, g) \cdot (x, q) \coloneqq (x, gq)$, and we recover the notion of a Lie group in the case of $M = \{*\}$.
@@ -1356,6 +1356,31 @@ $c_G(P)$ is an LGB by Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}.
 
 \subsection{Lie algebra bundles (LABs)}
 
+Lie algebras are the infinitesimal version of Lie groups, hence, we expect something similar for LGBs, the Lie algebra bundles:
+
+\begin{definitions}{Lie algebra bundle (LAB), \cite[\S 3.3, Definition 3.3.8, page 104]{mackenzieGeneralTheory}}{LAB}
+Let $\mathfrak{g}$ be a vector space, and $\mathcal{g}, M$ be smooth manifolds. A vector bundle
+\begin{center}
+	\begin{tikzcd}
+	\mathfrak{g} \arrow{r} & \mathcal{g} \arrow{d}{\pi} \\
+	& M
+	\end{tikzcd}
+\end{center}
+is called a \textbf{Lie algebra bundle} if:
+\begin{enumerate}
+	\item $\mathfrak{g}$ and each fibre $\mathcal{g}_x$, $x \in M$, are Lie algebras;
+	\item there exists a bundle atlas $\mleft\{ \mleft( U_i, \phi_i \mright) \mright\}_{i \in I}$ such that the induced maps
+	\bas
+	\phi_{ix}
+	&\coloneqq
+	\mathrm{pr}_2 \circ \mleft. \phi_i\mright|_{\mathcal{g}_x}: \mathcal{g}_x \to \mathfrak{g}
+	\eas
+	are Lie algebra isomorphisms, where $I$ is an (index) set, $U_i$ are open sets covering $M$, $\phi_i: \mathcal{g}|_U \to U \times G$ subordinate trivializations, and $\mathrm{pr}_2$ the projection onto the second factor. This atlas will be called \textbf{Lie algebra bundle atlas} or \textbf{LAB atlas}.
+\end{enumerate}
+We often say that \textbf{$\mathcal{g}$ is an LAB (over $M$)}, whose structural Lie group is either clear by context or not explicitly needed; and we may also denote LABs by $\mathfrak{g} \to \mathcal{g} \stackrel{\pi}{\to} M$.
+The corresponding field of Lie algebra brackets is denoted by $\mleft[ \cdot, \cdot \mright]_{\mathfrak{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathfrak{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$ which restricts to a Lie algebra bracket on each fibre.
+\end{definitions}
+
 \subsection{From LGBs to LABs}
 
 \section{LGB actions}
@@ -1478,9 +1503,61 @@ As usual, this gives rise to an equivalence relation, whose set of equivalence c
 In the following we usually define everything with respect to right-actions; however, one can of course define the same for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
 \end{remarks}
 
+If $M$ is a point or $f$ a constant map, then we recover the typical notion of a Lie group action acting on $N$.
+
 One can probably see that it is straightforward to extend a lot of the typical notions of Lie group actions to LGB actions; hence, we mainly focus on the definitions and properties which we need in this paper. 
 
-\begin{definitions}{Left and right translations, \cite[\S 3.2, notation similar to Def.\ 3.2.3, page 131]{Hamilton}}{LRTranslations}
+\begin{definitions}{Left and right translations, \newline \cite[\S 3.2, notation similar to Def.\ 3.2.3, page 131]{Hamilton} \newline \cite[\S 1.4, special situation of Def.\ 1.4.1 and its discussion, page 22]{mackenzieGeneralTheory}}{LRTranslations}
+Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Furthermore assume that we have a right action $N * \mathcal{G} \to N$. We define the \textbf{right translation} over $x \in M$ with $g \in \mathcal{G}$ as a map $R_g$ defined by
+\bas
+f^{-1}(\{x\}) &\to f^{-1}(\{x\}),\\
+p &\mapsto p \cdot g,
+\eas
+and we define the \textbf{orbit map} through $p \in f^{-1}(\{x\})$ as a map $\Phi_p$ given by
+\bas
+\mathcal{G}_x &\to N,\\
+g&\mapsto p \cdot g.
+\eas
+For $\sigma \in \Gamma(\mathcal{G})$ we define the \textbf{right translation} on $N$ as a map $R_\sigma$ by
+\bas
+N &\to N,\\
+p &\mapsto p \cdot \sigma_p.
+\eas
+\end{definitions}
+
+\begin{remarks}{Left action and translation}{LeftTranslation}
+Similarly we define left translations for left actions, which we similarly denote by $L_g$ and $L_\sigma$.
+\end{remarks}
+
+\begin{remark}
+\leavevmode\newline
+Similar to the arguments in \cite[\S 3.2, discussion after Def.\ 3.2.3, page 131]{Hamilton}, $\Phi_p$ is given by the composition of smooth maps
+\bas
+\mathcal{G}_x &\to N * \mathcal{G} \to N,\\
+g &\mapsto (p, g) \mapsto p \cdot g.
+\eas
+The second arrow/map is smooth due to the fact that we have a smooth action; the first one is smooth because $N * \mathcal{G}$ is the pullback LGB $f^*\mathcal{G}$ and the first arrow is precisely the embedding of $\mathcal{G}_x$ into $f^*\mathcal{G}$ as a fibre over $p$; recall \textit{e.g.}\ Cor.\ \ref{cor:PullbackLGB}.
+
+For the right-translation $R_\sigma$ we have a similar argument, namely, $R_\sigma$ is a composition of smooth maps
+\bas
+N &\to N*\mathcal{G} \to N,\\
+p &\mapsto (p, \sigma_p) \mapsto p \cdot \sigma_p.
+\eas
+The first map describes now a section of $N*\mathcal{G} = f^*\mathcal{G}$, and thus an embedding. Thus, smoothness follows again.
+
+However, for $R_g$ smoothness can only be discussed if $f^{-1}(\{x\})$ is a smooth manifold. That is for example the case if $x$ is a regular value of $f$; recall the regular value theorem as cited in \cite[\S A.1, Thm.\ A.1.32, page 611]{Hamilton}. This would be the case if \textit{e.g.}\ $f$ is a submersion. If $x$ is a regular value, then $f^{-1}(\{x\})$ is an embedded submanifold of $N$, and $R_g$ is a similar composition of smooth maps as for $R_\sigma$ but restricted to $f^{-1}(\{x\})$
+\bas
+f^{-1}(\{x\}) &\to \mleft.N*\mathcal{G}\mright|_{f^{-1}(\{x\})} \to f^{-1}(\{x\}),\\
+p &\mapsto (p, g) \mapsto p \cdot g.
+\eas
+Since $f^{-1}(\{x\})$ is an embedded submanifold, $\mleft.N*\mathcal{G}\mright|_{f^{-1}(\{x\})}$ is also a fibre bundle, see for example \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}, and trivially an embedded submanifold of $N*\mathcal{G}$. Altogether, the same arguments as for $R_\sigma$ apply.
+\end{remark}
+
+Motivated by the previous remark, it might be hence useful to require that $f$ is a submersion, or that $N$ is actually some bundle over $M$ and $f$ its projection. In fact, this will be later the case.
+
+In order to generalize principal bundles we need the following terms.
+
+\begin{definitions}{}{}
 
 \end{definitions}
 
@@ -1778,7 +1855,9 @@ such that Def.\ \eqref{IsomCPGGTocGPSec} satisfies
 This concludes the proof.
 \end{proof}
 
-Associated fibre bundles are motivated by making the invariance of gauge theory under local gauge transformations (that is, the change of gauge) an inherent part of the bundle, while the action of the global and other transformations remain. This procedure of "reducing" the action onto the these is reflected in the quotient behind $c_G(P)$.
+Associated fibre bundles are motivated by making the invariance of gauge theory under local gauge transformations (that is, the change of gauge/local section of $P$) an inherent part of the bundle, similar to typical manifold coordinates; while the action of the global and other transformations "remain", similar to diffeomorphisms of a manifold. This procedure of "reducing" the action onto these is reflected in the quotient bundle $c_G(P)$.
+
+\subsection{Fundamental vector fields}
 
 \subsection{Toy model}
 
