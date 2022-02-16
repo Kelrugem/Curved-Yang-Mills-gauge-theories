@@ -3,18 +3,18 @@
 \contentsline {subsection}{\numberline {1.1}Basic notations}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Assumed background knowledge}{1}{subsection.1.2}%
 \contentsline {section}{\numberline {2}Basic definitions}{2}{section.2}%
-\contentsline {section}{\numberline {3}Curved Yang-Mills gauge theory}{2}{section.3}%
+\contentsline {section}{\numberline {3}Motivation}{3}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Integration}{7}{subsection.3.1}%
 \contentsline {section}{\numberline {4}Lie group bundles (LGBs)}{8}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Definition and examples}{8}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Lie algebra bundles (LABs)}{16}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}From LGBs to LABs}{17}{subsection.4.3}%
-\contentsline {section}{\numberline {5}LGB actions}{17}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Definition}{17}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Examples of LGB actions}{22}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Fundamental vector fields}{28}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Toy model}{28}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Conclusion}{28}{section.6}%
-\contentsline {section}{\nonumberline List of References}{28}{section*.3}%
-\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{28}{appendix.A}%
+\contentsline {subsection}{\numberline {4.3}From LGBs to LABs}{18}{subsection.4.3}%
+\contentsline {section}{\numberline {5}LGB actions}{19}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Definition}{19}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Examples of LGB actions}{24}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Fundamental vector fields}{29}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Toy model}{29}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Conclusion}{29}{section.6}%
+\contentsline {section}{\nonumberline List of References}{30}{section*.3}%
+\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{30}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

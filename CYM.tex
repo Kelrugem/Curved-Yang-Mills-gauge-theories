@@ -402,7 +402,7 @@ No. 1, Sec. 4, Roosevelt Rd., Taipei City 106, Taiwan Room 503, Cosmology Buildi
 
 It is highly recommended to have basic knowledge about differential geometry and gauge theory as presented in \cite[especially Chapter 1 to 5]{Hamilton}; however, sometimes we will still give explicit references to help with more technical details. It can be useful to have knowledge about Lie algebra and Lie group bundles, and even Lie algebroids and Lie groupoids, but we will introduce their basic notions such that it is not necessarily needed to have knowledge about these upfront.
 
-We also often give references about Lie group bundles (LGBs), but the given references are often about Lie groupoids. If the reader has no knowledge about Lie groupoids, then it is important to know that LGBs are a special example of Lie groupoids; Lie groupoids carry "two projections", called \textbf{source} and \textbf{target}. An LGB is a special example of a Lie groupoid whose source equals the target.\footnote{But not every Lie groupoid with equal source and target are LGBs, they're in general bundles of Lie groups which is not completely the same; this nuance will not be important here.} If you look into such a reference, then the source and target are often denoted by $\alpha$ and $\beta$, or by $s$ and $t$; simply put both to be the same and identify these with our bundle projection which we often denote by $\pi$. In that way it should be possible to read the references without the need to know Lie groupoids. However, we try to re-prove the needed statements such that these types of references could be avoided by the reader.
+We also often give references about Lie group bundles (LGBs), but the given references are often about Lie groupoids. If the reader has no knowledge about Lie groupoids, then it is important to know that LGBs are a special example of Lie groupoids; Lie groupoids carry "two projections", called \textbf{source} and \textbf{target}. An LGB is a special example of a Lie groupoid whose source equals the target.\footnote{But not every Lie groupoid with equal source and target is an LGB, they're in general bundles of Lie groups which is not completely the same; this nuance will not be important here.} If you look into such a reference, then the source and target are often denoted by $\alpha$ and $\beta$, or by $s$ and $t$; simply put both to be the same and identify these with our bundle projection which we often denote by $\pi$. In that way it should be possible to read the references without the need to know Lie groupoids. However, we try to re-prove the needed statements such that these types of references could be avoided by the reader.
 
 See also the previous subsection about notions we assume to be known.
 
@@ -571,8 +571,6 @@ See also the previous subsection about notions we assume to be known.
 %for all constant sections $\mu, \nu \in \Gamma(E)$. We call this structure \textbf{action Lie algebroid}.
 %\end{propositions}
 
-\section{Curved Yang-Mills gauge theory}
-
 Notation as in \cite{Hamilton}
 
 \begin{itemize}
@@ -646,6 +644,8 @@ R_{\nabla^A} \phi
 &=
 \rho_*(F_s) \cdot \phi
 \ea
+
+\section{Motivation}
 
 \textbf{Now:} One could question why using $\mathrm{d}\phi = \nabla^0 \phi$ in Eq.\ \eqref{ClassicalMiniCoupling}. Thence, let us assume that we have a general vector bundle connection $\widehat{\nabla}$ on the trivial vector bundle $M \times V \to M$. We are going to redefine $\nabla^A$ and $F$ locally w.r.t.\ a gauge $s$, then discuss how the gauge transformations have to look like to receive definitions independent of the chosen gauge $s$. This also means that the following discussion is now often local by fixing a gauge without further mentioning it.
 
@@ -1375,13 +1375,62 @@ is called a \textbf{Lie algebra bundle} if:
 	&\coloneqq
 	\mathrm{pr}_2 \circ \mleft. \phi_i\mright|_{\mathcal{g}_x}: \mathcal{g}_x \to \mathfrak{g}
 	\eas
-	are Lie algebra isomorphisms, where $I$ is an (index) set, $U_i$ are open sets covering $M$, $\phi_i: \mathcal{g}|_U \to U \times G$ subordinate trivializations, and $\mathrm{pr}_2$ the projection onto the second factor. This atlas will be called \textbf{Lie algebra bundle atlas} or \textbf{LAB atlas}.
+	are Lie algebra isomorphisms, where $I$ is an (index) set, $U_i$ are open sets covering $M$, $\phi_i: \mathcal{g}|_U \to U \times \mathfrak{g}$ subordinate trivializations, and $\mathrm{pr}_2$ the projection onto the second factor. This atlas will be called \textbf{Lie algebra bundle atlas} or \textbf{LAB atlas}.
 \end{enumerate}
-We often say that \textbf{$\mathcal{g}$ is an LAB (over $M$)}, whose structural Lie group is either clear by context or not explicitly needed; and we may also denote LABs by $\mathfrak{g} \to \mathcal{g} \stackrel{\pi}{\to} M$.
-The corresponding field of Lie algebra brackets is denoted by $\mleft[ \cdot, \cdot \mright]_{\mathfrak{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathfrak{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$ which restricts to a Lie algebra bracket on each fibre.
+We often say that \textbf{$\mathcal{g}$ is an LAB (over $M$)}, whose structural Lie algebra is either clear by context or not explicitly needed; and we may also denote LABs by $\mathfrak{g} \to \mathcal{g} \stackrel{\pi}{\to} M$.
+The corresponding field of Lie algebra brackets is denoted by $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$ which restricts to a Lie algebra bracket on each fibre.
 \end{definitions}
 
+We have the notion of structure constants on all fibres, such that we get now structure functions after fixing a frame.\footnote{However, observe that $\Gamma(\mathcal{g})$ is an infinite-dimensional Lie algebra, such that there is still a notion structure constants, but an inconvenient one due to that these constants are in general not finitely many.}
+
+\begin{definitions}{Structure functions, \cite[\S 16.5, page 119]{DaSilva}}{StructureFunctons}
+Let $\mathcal{g} \to M$ be an LAB over a smooth manifold $M$, and $\mleft( e_a \mright)_a$ be a local frame of $\mathcal{g}$ over some open subset $U \subset M$. Then the \textbf{structure functions} $C^a_{bc} \in C^\infty(U)$ are defined by 
+\bas
+	\mleft[e_b, e_c\mright]_{\mathcal{g}} = C^a_{bc} e_a.
+\eas
+\end{definitions}
+
+\begin{remarks}{Properties of the structure functions}{PropOfStrFunctions}
+Of course, one has the typical properties for such structure functions as for structure constants due to that $C^a_{bc}$ restrict to typical structure constants on each fibre. Similar to \cite[\S 1.4, discussion after Def.\ 1.4.17, page 38]{Hamilton},
+\bas
+C^a_{bc} &= - C^a_{cb},\\
+0&=
+	C^d_{ae} C^e_{bc} + C^d_{be} C^e_{ca} + C^d_{ce} C^e_{ab}
+\eas
+for all $a, b, c, d$; the former due to antisymmetry, the latter because of the Jacobi identity.
+\end{remarks}
+
 \subsection{From LGBs to LABs}
+
+Let us now quickly discuss how LGBs and LABs are related; it is very similar to the relation of Lie groups and algebras, now somewhat fibre-wise. We will follow the style of \cite[\S 1.5.2, page 40ff.]{Hamilton} and \cite[\S 3.5, page 119ff.]{mackenzieGeneralTheory}; our approach will be using left-invariant vector fields but the mentioned latter reference actually use right-invariant vector fields.
+
+Let us start with introducing the basic notations needed.
+
+\begin{definitions}{Left and right translation and conjugation, \newline \cite[\S 1.5, straightforward generalization of Def.\ 1.5.3, page 40]{Hamilton}}{LeftRightTranslationConjugation}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$. For $g \in \mathcal{G}_x$ ($x \in M$) we define the following maps:
+\begin{itemize}
+	\item \textbf{Left translation} given by
+		\bas
+			L_g: \mathcal{G}_x &\to \mathcal{G}_x,\\
+			h &\mapsto g h.
+		\eas
+	\item \textbf{Right translation} given by
+		\bas
+			R_g: \mathcal{G}_x &\to \mathcal{G}_x,\\
+			h &\mapsto h g.
+		\eas
+	\item \textbf{Conjugation} given by
+		\bas
+			c_g: \mathcal{G}_x &\to \mathcal{G}_x,\\
+			h &\mapsto g h g^{-1}.
+		\eas
+\end{itemize}
+\end{definitions}
+
+\begin{remark}
+\leavevmode\newline
+By definition of $\mathcal{G}$, all these maps are smooth.
+\end{remark}
 
 \section{LGB actions}
 
@@ -1472,13 +1521,13 @@ p \cdot e_{f(p)} &= p
 for all $p \in N$ and $g, h \in \mathcal{G}_{f(p)}$, where $e_{f(p)}$ is the neutral element of $\mathcal{G}_{f(p)}$.
 \newline
 
-We similarly define left-actions, and we may sometimes write (left or right) \textbf{$\mathcal{G}$-action on $N$}. Furthermore, in order to increase readability as long as the dependency on $f$ is not important, we introduce the notation
+We analogously define left-actions, and we often write (left or right) \textbf{$\mathcal{G}$-action on $N$}. Furthermore, in order to increase readability as long as the dependency on $f$ is not important, we introduce the notation
 \ba
 N * \mathcal{G}
 &\coloneqq
 f^*\mathcal{G},
 \ea
-such that the action's notation has the typical shape $N * \mathcal{G} \to N$.
+such that the action's notation has the typical shape $N * \mathcal{G} \to N$. For left actions similarly $\mathcal{G} * N \to N$.
 \end{definitions}
 
 \begin{remarks}{Relation to the structure of the canonical pullback Lie group bundle over $N$}{ActionAndPullbackLGBs}
@@ -1503,12 +1552,10 @@ As usual, this gives rise to an equivalence relation, whose set of equivalence c
 In the following we usually define everything with respect to right-actions; however, one can of course define the same for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
 \end{remarks}
 
-If $M$ is a point or $f$ a constant map, then we recover the typical notion of a Lie group action acting on $N$.
-
 One can probably see that it is straightforward to extend a lot of the typical notions of Lie group actions to LGB actions; hence, we mainly focus on the definitions and properties which we need in this paper. 
 
 \begin{definitions}{Left and right translations, \newline \cite[\S 3.2, notation similar to Def.\ 3.2.3, page 131]{Hamilton} \newline \cite[\S 1.4, special situation of Def.\ 1.4.1 and its discussion, page 22]{mackenzieGeneralTheory}}{LRTranslations}
-Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Furthermore assume that we have a right action $N * \mathcal{G} \to N$. We define the \textbf{right translation} over $x \in M$ with $g \in \mathcal{G}$ as a map $R_g$ defined by
+Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Furthermore assume that we have a right action $N * \mathcal{G} \to N$. We define the \textbf{right translation} over $x \in M$ with $g \in \mathcal{G}$ as a map $r_g$ defined by
 \bas
 f^{-1}(\{x\}) &\to f^{-1}(\{x\}),\\
 p &\mapsto p \cdot g,
@@ -1518,15 +1565,15 @@ and we define the \textbf{orbit map} through $p \in f^{-1}(\{x\})$ as a map $\Ph
 \mathcal{G}_x &\to N,\\
 g&\mapsto p \cdot g.
 \eas
-For $\sigma \in \Gamma(\mathcal{G})$ we define the \textbf{right translation} on $N$ as a map $R_\sigma$ by
+For $\sigma \in \Gamma(\mathcal{G})$ we define the \textbf{right translation} on $N$ as a map $r_\sigma$ by
 \bas
 N &\to N,\\
-p &\mapsto p \cdot \sigma_p.
+p &\mapsto p \cdot \sigma_{f(p)}.
 \eas
 \end{definitions}
 
 \begin{remarks}{Left action and translation}{LeftTranslation}
-Similarly we define left translations for left actions, which we similarly denote by $L_g$ and $L_\sigma$.
+Similarly we define left translations for left actions, which we similarly denote by $l_g$ and $l_\sigma$.
 \end{remarks}
 
 \begin{remark}
@@ -1538,19 +1585,19 @@ g &\mapsto (p, g) \mapsto p \cdot g.
 \eas
 The second arrow/map is smooth due to the fact that we have a smooth action; the first one is smooth because $N * \mathcal{G}$ is the pullback LGB $f^*\mathcal{G}$ and the first arrow is precisely the embedding of $\mathcal{G}_x$ into $f^*\mathcal{G}$ as a fibre over $p$; recall \textit{e.g.}\ Cor.\ \ref{cor:PullbackLGB}.
 
-For the right-translation $R_\sigma$ we have a similar argument, namely, $R_\sigma$ is a composition of smooth maps
+For the right-translation $r_\sigma$ we have a similar argument, namely, $r_\sigma$ is a composition of smooth maps
 \bas
 N &\to N*\mathcal{G} \to N,\\
 p &\mapsto (p, \sigma_p) \mapsto p \cdot \sigma_p.
 \eas
 The first map describes now a section of $N*\mathcal{G} = f^*\mathcal{G}$, and thus an embedding. Thus, smoothness follows again.
 
-However, for $R_g$ smoothness can only be discussed if $f^{-1}(\{x\})$ is a smooth manifold. That is for example the case if $x$ is a regular value of $f$; recall the regular value theorem as cited in \cite[\S A.1, Thm.\ A.1.32, page 611]{Hamilton}. This would be the case if \textit{e.g.}\ $f$ is a submersion. If $x$ is a regular value, then $f^{-1}(\{x\})$ is an embedded submanifold of $N$, and $R_g$ is a similar composition of smooth maps as for $R_\sigma$ but restricted to $f^{-1}(\{x\})$
+However, for $r_g$ smoothness can only be discussed if $f^{-1}(\{x\})$ is a smooth manifold. That is for example the case if $x$ is a regular value of $f$; recall the regular value theorem as cited in \cite[\S A.1, Thm.\ A.1.32, page 611]{Hamilton}. This would be the case if \textit{e.g.}\ $f$ is a submersion. If $x$ is a regular value, then $f^{-1}(\{x\})$ is an embedded submanifold of $N$, and $r_g$ is a similar composition of smooth maps as for $r_\sigma$ but restricted to $f^{-1}(\{x\})$
 \bas
 f^{-1}(\{x\}) &\to \mleft.N*\mathcal{G}\mright|_{f^{-1}(\{x\})} \to f^{-1}(\{x\}),\\
 p &\mapsto (p, g) \mapsto p \cdot g.
 \eas
-Since $f^{-1}(\{x\})$ is an embedded submanifold, $\mleft.N*\mathcal{G}\mright|_{f^{-1}(\{x\})}$ is also a fibre bundle, see for example \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}, and trivially an embedded submanifold of $N*\mathcal{G}$. Altogether, the same arguments as for $R_\sigma$ apply.
+Since $f^{-1}(\{x\})$ is an embedded submanifold, $\mleft.N*\mathcal{G}\mright|_{f^{-1}(\{x\})}$ is also a fibre bundle, see for example \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}, and trivially an embedded submanifold of $N*\mathcal{G}$. Altogether, the same arguments as for $r_\sigma$ apply.
 \end{remark}
 
 Motivated by the previous remark, it might be hence useful to require that $f$ is a submersion, or that $N$ is actually some bundle over $M$ and $f$ its projection. In fact, this will be later the case.
@@ -1563,7 +1610,16 @@ In order to generalize principal bundles we need the following terms.
 
 \subsection{Examples of LGB actions}
 
-We have the following examples, the second of which will be important in this paper.
+If $M$ is a point or $f$ a constant map, then we recover the typical notion of a Lie group action acting on $N$.
+We have the following examples, the third of which will be important in this paper. The notation will be as in Def.\ \ref{def:LRTranslations}.
+
+\begin{examples}{LGB acting on itself}{LGBActingOnItself}
+It is obvious that each LGB $\mathcal{G} \stackrel{\pi}{\to} N$ acts on itself from the left and right
+\bas
+\mathcal{G} * \mathcal{G} \coloneqq \pi^*\mathcal{G} &\to \mathcal{G},\\
+(g,h) &\mapsto gh.
+\eas
+\end{examples}
 
 \begin{examples}{Trivial action, \cite[\S 1.6, special situation of Ex.\ 1.6.3, page 35]{mackenzieGeneralTheory}}{TrivialAction}
 The projection $\pi_1$ onto the first factor of $f^*\mathcal{G} \stackrel{\pi_1}{\to} N$ satisfies the properties of a right $\mathcal{G}$-action on $N$, that is, the action is given by
@@ -1735,7 +1791,7 @@ As one may guess, $\Gamma\bigl( c_G(P) \bigr)$ is the analogue of $C^\infty(M; G
 c_G(P) &\to \mleft(P \times_M P\mright) \Big/ G,\\
 [p, g] &\mapsto [p, p \cdot g].
 \eas
-It is also argued in \cite[\S 1.4, Ex.\ 1.4.7, page 25]{mackenzieGeneralTheory} that $\sAut(P)$ is then directly isomorphic to $\Gamma\mleft(\mleft(P \times_M P\mright) \Big/ G\mright)$ by 
+It is also argued in \cite[\S 1.4, Ex.\ 1.4.7, page 25]{mackenzieGeneralTheory} that $\sAut(P)$ is then isomorphic to $\Gamma\mleft(\mleft(P \times_M P\mright) \Big/ G\mright)$ by 
 \bas
 \sAut(P) &\to \Gamma\mleft(\mleft(P \times_M P\mright) \Big/ G\mright),\\
 f &\mapsto L_f,
@@ -1855,7 +1911,7 @@ such that Def.\ \eqref{IsomCPGGTocGPSec} satisfies
 This concludes the proof.
 \end{proof}
 
-Associated fibre bundles are motivated by making the invariance of gauge theory under local gauge transformations (that is, the change of gauge/local section of $P$) an inherent part of the bundle, similar to typical manifold coordinates; while the action of the global and other transformations "remain", similar to diffeomorphisms of a manifold. This procedure of "reducing" the action onto these is reflected in the quotient bundle $c_G(P)$.
+Associated fibre bundles are motivated by making the invariance of gauge theory under local gauge transformations (that is, the change of gauge/local section of $P$) an inherent part of the bundle, similar to typical manifold coordinates; while the action of more global transformations "remain", similar to diffeomorphisms of a manifold. This procedure of "reducing" the action onto these is reflected in the quotient bundle $c_G(P)$.
 
 \subsection{Fundamental vector fields}
 
