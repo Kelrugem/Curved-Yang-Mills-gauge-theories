@@ -1406,7 +1406,7 @@ Let us now quickly discuss how LGBs and LABs are related; it is very similar to 
 
 Let us start with introducing the basic notations needed.
 
-\begin{definitions}{Left and right translation and conjugation, \newline \cite[\S 1.5, straightforward generalization of Def.\ 1.5.3, page 40]{Hamilton}}{LeftRightTranslationConjugation}
+\begin{definitions}{Left and right translation and conjugation, \newline \cite[\S 1.5, Def.\ 1.5.3, page 40]{Hamilton}}{LeftRightTranslationConjugation}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$. For $g \in \mathcal{G}_x$ ($x \in M$) we define the following maps:
 \begin{itemize}
 	\item \textbf{Left translation} given by
@@ -1429,8 +1429,10 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$. For $g \in \mathca
 
 \begin{remark}
 \leavevmode\newline
-By definition of $\mathcal{G}$, all these maps are smooth. Furthermore, they clearly satisfy the typical properties as known for these maps since $\mathcal{G}_x$ is a Lie group for all $x \in M$; for reference about their basic properties see for example \cite[\S 1.5, Lemma 1.5.5, page 40f.]{Hamilton}.
+By definition of $\mathcal{G}$, all these maps are smooth. Furthermore, they clearly satisfy the typical properties as known for these maps since $\mathcal{G}_x$ is a Lie group for all $x \in M$; for reference about their basic properties see for example \cite[\S 1.5, Lemma 1.5.5, page 40f.]{Hamilton}. We will later introduce similar notations using sections of $\mathcal{G}$, see Def.\ \ref{def:LRTranslations}.
 \end{remark}
+
+
 
 \section{LGB actions}
 
@@ -1447,7 +1449,7 @@ f^*\mathcal{G}
 	f(x) = \pi(g)
 \right\}.
 \ea
-The structural fibre is the same Lie group as for $\mathcal{G}$.
+It is an embedded submanifold of $N \times \mathcal{G}$, and the structural fibre is the same Lie group as for $\mathcal{G}$.
 That is, the following diagram commutes
 \begin{center}
 	\begin{tikzcd}
@@ -1612,6 +1614,8 @@ f^{-1}(\{x\}) &\to \mleft.N*\mathcal{G}\mright|_{f^{-1}(\{x\})} \to f^{-1}(\{x\}
 p &\mapsto (p, g) \mapsto p \cdot g.
 \eas
 Since $f^{-1}(\{x\})$ is an embedded submanifold, $\mleft.N*\mathcal{G}\mright|_{f^{-1}(\{x\})}$ is also a fibre bundle, see for example \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}, and trivially an embedded submanifold of $N*\mathcal{G}$. Altogether, the same arguments as for $r_\sigma$ apply.
+
+Last but not least, $r_\sigma$ is clearly a diffeomorphism with inverse $r_{\sigma^{-1}}$, where $\mleft(\sigma^{-1}\mright)_x = (\sigma_x)^{-1} \eqqcolon \sigma_x^{-1}$. Similarly for $r_g$ if $f^{-1}(\{x\})$ is an embedded submanifold. Analogously for $l_\sigma$ and $l_g$ in case of a left action.
 \end{remark}
 
 Motivated by the previous remark, it might be hence useful to require that $f$ is a submersion, or that $N$ is actually some bundle over $M$ and $f$ its projection. In fact, this will be later the case.
@@ -1625,7 +1629,7 @@ In order to generalize principal bundles we need the following terms.
 \subsection{Examples of LGB actions}
 
 If $M$ is a point or $f$ a constant map, then we recover the typical notion of a Lie group action acting on $N$.
-Additionally, we have the following examples, the third of which will be important in this paper. The notation will be as in Def.\ \ref{def:LRTranslations}.
+Additionally, we have the following examples, the last two of which will be important in this paper. The notation will be as in Def.\ \ref{def:LRTranslations}.
 
 \begin{examples}{LGB acting on itself}{LGBActingOnItself}
 It is obvious that each LGB $\mathcal{G} \stackrel{\pi}{\to} N$ acts on itself from the left and right
@@ -1633,7 +1637,12 @@ It is obvious that each LGB $\mathcal{G} \stackrel{\pi}{\to} N$ acts on itself f
 \mathcal{G} * \mathcal{G} \coloneqq \pi^*\mathcal{G} &\to \mathcal{G},\\
 (g,h) &\mapsto gh.
 \eas
-The left and right translations of Def.\ \ref{def:LeftRightTranslationConjugation} and \ref{def:LRTranslations} then align, and thus the smoothness concerns as mentioned in the last part of Rem.\ \ref{SmoothnessOfACtionTranslations} for right translations $r_g = R_g$ ($g \in \mathcal{G}$) do not arise.
+The left and right translations of Def.\ \ref{def:LeftRightTranslationConjugation} and \ref{def:LRTranslations} then align, and thus the smoothness concerns as mentioned in the last part of Rem.\ \ref{SmoothnessOfACtionTranslations} for right translations $r_g = R_g$ ($g \in \mathcal{G}_x$, $x \in M$) do not arise. Moreover, while the conjugation $c_g$ is a Lie group automorphism of $\mathcal{G}_x$, it describes an LGB automorphism of $\mathcal{G}$ if similarly extended to sections; following \cite[\S 1.4, Def.\ 1.4.6 and its discussion afterwards, page 24f.]{mackenzieGeneralTheory}. That is for $\sigma \in \Gamma(\mathcal{G})$ we define the conjugation $c_\sigma$ as a smooth map by
+\bas
+\mathcal{G} &\to \mathcal{G},\\
+q &\mapsto c_\sigma(q) \coloneqq \mleft(L_\sigma \circ R_{\sigma^{-1}}\mright)(q) = \mleft( R_{\sigma^{-1}} \circ L_\sigma \mright)(q) = \sigma_{\pi(q)} \cdot q \cdot \sigma_{\pi(q)}^{-1}.
+\eas
+It is clear that $c_\sigma(gq) = c_\sigma(g) \cdot c_\sigma(q)$ for all $g, q \in \mathcal{G}$ with $\pi(g) = \pi(q)$, and that a smooth inverse is given by $c_{\sigma^{-1}}$; thence, $c_\sigma$ is an LGB isomorphism of $\mathcal{G}$ on itself, an automorphism, in sense of Def.\ \ref{def:LGB morphism}. It is also trivial to check that we have $c_{\sigma \cdot \tau} = c_\sigma \circ c_\tau$, where $\tau$ is another section of $\mathcal{G}$.
 \end{examples}
 
 \begin{examples}{Trivial action, \cite[\S 1.6, special situation of Ex.\ 1.6.3, page 35]{mackenzieGeneralTheory}}{TrivialAction}
@@ -1646,7 +1655,7 @@ That this action satisfies the properties of an action for all $f$ is trivial, h
 \end{examples}
 
 \begin{examples}{Actions of trivial LGBs}{TrivialLGBAction}
-Assume that $\mathcal{G}$ is trivial, that is $\mathcal{G} \cong M \times G$ as LGBs, where $G$ is the structural Lie group of $\mathcal{G}$. In that case, for $p \in N$, the product $p \cdot q$ is only defined if $q \in \mathcal{G}$ is of the form $(f(p), g)$, where $g \in G$; for this recall that $(p, q)$ needs to be an element of $N*\mathcal{G}=f^*\mathcal{G}$. We also have
+Assume that $\mathcal{G}$ is trivial, that is $\mathcal{G} \cong M \times G$ as LGBs, where $G$ is the structural Lie group of $\mathcal{G}$. In that case, for $p \in N$, the product $p \cdot q$ is only defined if $q \in \mathcal{G}$ is of the form $(f(p), g)$, where $g \in G$; for this recall that $(p, q)$ needs to be an element of $N*\mathcal{G}=f^*\mathcal{G}$ in order to define $(p, q) \mapsto p \cdot q$. We also have
 \bas
 f^*\mathcal{G}
 &\cong
@@ -1655,11 +1664,22 @@ N \times G,
 the trivial $G$-LGB over N. Hence, let us define a map by
 \bas
 N \times G &\to N,\\
-(p, g) &\mapsto p \cdot g \coloneqq p \cdot (f(p), g)
+(p, g) &\mapsto p \cdot g \coloneqq p \cdot (f(p), g),
 \eas
-
- In that case $e_{f(p)} = (f(p), e) \in M \times \mathcal{G}$, where $e$ on the right hand side is the neutral element of $G$. Furthermore, 
+which is clearly a smooth map since it is a composition of the $\mathcal{G}$-action on $N$ and $(f, \mathds{1}_G): N \times G \to f^*\mathcal{G}$, $(p, g) \mapsto (p, f(p), g)$; the latter is smooth because $(p, g) \mapsto (p, f(p), g)$ is a smooth map $N \times G \to N \times M \times G$ and $f^*\mathcal{G}$ is an embedded submanifold of $N \times M \times G$. Using Def.\ \ref{def:LiegroupACtion}, It is trivial to see that $p \cdot e = p$, and
+\bas
+p \cdot (gh)
+&=
+p \cdot \underbrace{(f(p), gh)}_{\mathclap{= (f(p), g) \cdot (f(p), h)}}
+=
+\bigl( p \cdot (f(p), g) \bigr) \cdot (f(p), h)
+=
+(p \cdot g) \cdot h
+\eas
+for all $g,h \in G$. Hence, we have a $G$-action on N, and by construction it is equivalent to the $\mathcal{G}$-action on $N$. Due to the discussion in Rem.\ \ref{rem:LocalLGBAction} we can therefore conclude that every $\mathcal{G}$-action is locally a typical Lie group action. If $f$ is a submersion, then the action is also a $G$-action on each fibre.
 \end{examples}
+
+Hence, if one wants something "truly" new, then one has to look at global structures of LGBs and their actions. In fact, the following example will provide such a new structure, which we will understand later once we have introduced the physical theory.
 
 \begin{examples}{Inner group bundle acting on associated fibre bundles, \newline\cite[\S 1.6, simplified version of Ex.\ 1.6.4, page 35]{mackenzieGeneralTheory}}{AssocLGACtingOnAssocVec}
 Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$ over a smooth manifold $M$, and recall Ex.\ \ref{ex:InnerLGBs}. Furthermore, let $F$ be another smooth manifold, equipped with a smooth left $G$-action $\Psi: G \times F \to F$. In total we have two associated bundles over $M$: 

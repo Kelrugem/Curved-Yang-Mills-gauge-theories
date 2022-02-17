@@ -12,9 +12,9 @@
 \contentsline {section}{\numberline {5}LGB actions}{19}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Definition}{19}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Examples of LGB actions}{24}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Fundamental vector fields}{30}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Toy model}{30}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Conclusion}{30}{section.6}%
+\contentsline {subsection}{\numberline {5.3}Fundamental vector fields}{31}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Toy model}{31}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Conclusion}{31}{section.6}%
 \contentsline {section}{\nonumberline List of References}{31}{section*.3}%
 \contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{31}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
