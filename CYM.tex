@@ -1429,7 +1429,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$. For $g \in \mathca
 
 \begin{remark}
 \leavevmode\newline
-By definition of $\mathcal{G}$, all these maps are smooth.
+By definition of $\mathcal{G}$, all these maps are smooth. Furthermore, they clearly satisfy the typical properties as known for these maps since $\mathcal{G}_x$ is a Lie group for all $x \in M$; for reference about their basic properties see for example \cite[\S 1.5, Lemma 1.5.5, page 40f.]{Hamilton}.
 \end{remark}
 
 \section{LGB actions}
@@ -1508,12 +1508,12 @@ Let us now define $\mathcal{G}$-actions.
 
 \begin{definitions}{Lie group bundle actions, \newline \cite[\S 1.6, special case of Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}}{LiegroupACtion}
 Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then a \textbf{right-action of $\mathcal{G}$ on $N$} is a smooth map 
-\bas\label{InvarianceOffUnderGAction}
+\bas
 f^*\mathcal{G} &\to N,\\
 (p, g) &\mapsto p \cdot g,
 \eas
 satisfying the following properties:
-\ba
+\ba\label{InvarianceOffUnderGAction}
 f(p \cdot g) &= \pi(g),\\
 (p \cdot g) \cdot h &= p \cdot (gh),\\
 p \cdot e_{f(p)} &= p
@@ -1548,6 +1548,20 @@ for all $p \in N$ and $g, q \in \mathcal{G}_{f(p)}$.\footnote{In alignment to De
 As usual, this gives rise to an equivalence relation, whose set of equivalence classes $f^*\mathcal{G} \Big/ G$ is isomorphic to $N$ (as a set) by $[p, g] \mapsto p \cdot g$, where we denote equivalence classes of $(p, g) \in f^*\mathcal{G}$ by $[p, g]$. All of this is straight-forward to check. Finally, observe the similarity to associated fibre bundles.
 \end{remarks}
 
+\begin{remarks}{Localizing LGB actions}{LocalLGBAction}
+We can actually localize the LGB action, but in general not with respect to any open neighbourhood of $N$ since that is in general not possible in a non-trivial way, \textit{i.e.}\ the action cannot be brought into the form $(N*\mathcal{G})|_U \to U$ for arbitrary $U$ because $p \cdot g$ may for example leave an neighbourhood $U$ of $p$. However, with respect to $M$ this is possible:
+
+Fix any open neighbourhood $U$ of $M$. Then $f^{-1}(U)$ is an open neighbourhood of $N$, and we can restrict the action to $f^{-1}(U)$, resulting into a map
+\bas
+\mleft.(N*\mathcal{G})\mright|_{f^{-1}(U)} \to f^{-1}(U),
+\eas
+because of $f(p \cdot g) \stackrel{\text{Eq.\ \eqref{InvarianceOffUnderGAction}}}{=} \pi(g) = f(p)$, that is, if $(p, g) \in \mleft.(N*\mathcal{G})\mright|_{f^{-1}(U)}$, then $p \in f^{-1}(U)$ and so $p \cdot g \in f^{-1}(U)$. In fact, by the definition of $N*\mathcal{G}$ as $f^*\mathcal{G}$, this describes a $\mathcal{G}|_{U}$-action on $f^{-1}(U)$
+\bas
+f^{-1}(U) * \mleft.\mathcal{G}\mright|_{U} \coloneqq \mleft( f|_U\mright)^*(\mathcal{G}|_U) &\to f^{-1}(U).
+\eas
+If $x \in M$ is a regular value of $f$, then $f^{-1}(\{x\})$ is an embedded submanifold of $N$ due to the regular value theorem (for this see \textit{e.g.}\ \cite[\S A.1, Thm.\ A.1.32, page 611]{Hamilton}). In that case one could apply the same arguments to restrict the action on $f^{-1}(\{x\})$. Since $\mathcal{G}_x$ is a Lie group one actually gets a typical Lie group action on $f^{-1}(\{x\})$. For more details about this see Ex.\ \ref{ex:TrivialLGBAction} later.
+\end{remarks}
+
 \begin{remarks}{Left- and right-actions}{LeftRightAction}
 In the following we usually define everything with respect to right-actions; however, one can of course define the same for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
 \end{remarks}
@@ -1576,7 +1590,7 @@ p &\mapsto p \cdot \sigma_{f(p)}.
 Similarly we define left translations for left actions, which we similarly denote by $l_g$ and $l_\sigma$.
 \end{remarks}
 
-\begin{remark}
+\begin{remark}\label{SmoothnessOfACtionTranslations}
 \leavevmode\newline
 Similar to the arguments in \cite[\S 3.2, discussion after Def.\ 3.2.3, page 131]{Hamilton}, $\Phi_p$ is given by the composition of smooth maps
 \bas
@@ -1611,7 +1625,7 @@ In order to generalize principal bundles we need the following terms.
 \subsection{Examples of LGB actions}
 
 If $M$ is a point or $f$ a constant map, then we recover the typical notion of a Lie group action acting on $N$.
-We have the following examples, the third of which will be important in this paper. The notation will be as in Def.\ \ref{def:LRTranslations}.
+Additionally, we have the following examples, the third of which will be important in this paper. The notation will be as in Def.\ \ref{def:LRTranslations}.
 
 \begin{examples}{LGB acting on itself}{LGBActingOnItself}
 It is obvious that each LGB $\mathcal{G} \stackrel{\pi}{\to} N$ acts on itself from the left and right
@@ -1619,6 +1633,7 @@ It is obvious that each LGB $\mathcal{G} \stackrel{\pi}{\to} N$ acts on itself f
 \mathcal{G} * \mathcal{G} \coloneqq \pi^*\mathcal{G} &\to \mathcal{G},\\
 (g,h) &\mapsto gh.
 \eas
+The left and right translations of Def.\ \ref{def:LeftRightTranslationConjugation} and \ref{def:LRTranslations} then align, and thus the smoothness concerns as mentioned in the last part of Rem.\ \ref{SmoothnessOfACtionTranslations} for right translations $r_g = R_g$ ($g \in \mathcal{G}$) do not arise.
 \end{examples}
 
 \begin{examples}{Trivial action, \cite[\S 1.6, special situation of Ex.\ 1.6.3, page 35]{mackenzieGeneralTheory}}{TrivialAction}
@@ -1628,6 +1643,22 @@ N * \mathcal{G} &\to N,\\
 (p, g) &\mapsto p \cdot g \coloneqq p.
 \eas
 That this action satisfies the properties of an action for all $f$ is trivial, hence we call it the \textbf{trivial action}.
+\end{examples}
+
+\begin{examples}{Actions of trivial LGBs}{TrivialLGBAction}
+Assume that $\mathcal{G}$ is trivial, that is $\mathcal{G} \cong M \times G$ as LGBs, where $G$ is the structural Lie group of $\mathcal{G}$. In that case, for $p \in N$, the product $p \cdot q$ is only defined if $q \in \mathcal{G}$ is of the form $(f(p), g)$, where $g \in G$; for this recall that $(p, q)$ needs to be an element of $N*\mathcal{G}=f^*\mathcal{G}$. We also have
+\bas
+f^*\mathcal{G}
+&\cong
+N \times G,
+\eas
+the trivial $G$-LGB over N. Hence, let us define a map by
+\bas
+N \times G &\to N,\\
+(p, g) &\mapsto p \cdot g \coloneqq p \cdot (f(p), g)
+\eas
+
+ In that case $e_{f(p)} = (f(p), e) \in M \times \mathcal{G}$, where $e$ on the right hand side is the neutral element of $G$. Furthermore, 
 \end{examples}
 
 \begin{examples}{Inner group bundle acting on associated fibre bundles, \newline\cite[\S 1.6, simplified version of Ex.\ 1.6.4, page 35]{mackenzieGeneralTheory}}{AssocLGACtingOnAssocVec}
