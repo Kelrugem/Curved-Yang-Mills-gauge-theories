@@ -1020,33 +1020,33 @@ Then we have $e^{\mathcal{H}}_x = e^{\mathcal{H}}_{x^\prime}$ due to that $F$ is
 Since $\pi_{\mathcal{H}} \circ F^{-1}$ is smooth and $\pi_{\mathcal{G}}$ is a smooth surjective submersion, it follows that $f^{-1}$ is smooth; this is a well-known fact for right-compositions with surjective submersions, see \textit{e.g.}\ \cite[\S 3.7.2, Lemma 3.7.5, page 153]{Hamilton}. We can conclude that $f$ is a diffeomorphism. Observe that we also concluded that $F^{-1}$ is an LGB isomorphism, too.
 \end{remark}
 
-For another important example recall that there is the notion of associated fibre bundles; following and stating the results of \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$, a smooth manifold $F$ and a smooth left $G$-action $\Psi$ given by
+For another important example recall that there is the notion of associated fibre bundles; following and stating the results of \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$, a smooth manifold $N$ and a smooth left $G$-action $\Psi$ given by
 \bas
-G \times F &\to F,\\
+G \times N &\to N,\\
 (g, v) &\mapsto \Psi(g, v) \coloneqq g \cdot v.
 \eas
-Then we have a right $G$-action on $P \times F$ given by
+Then we have a right $G$-action on $P \times N$ given by
 \bas
-(P \times F) \times G &\to P \times F,\\
+(P \times N) \times G &\to P \times N,\\
 (p,v,g) &\mapsto \mleft( p \cdot g, g^{-1} \cdot v \mright),
 \eas
-and one can show that the quotient under this action, $P\times_\Psi F \coloneqq ( P \times F) \Big/ G$, yields the structure of a fibre bundle
+and one can show that the quotient under this action, $P\times_\Psi N \coloneqq ( P \times N) \Big/ G$, yields the structure of a fibre bundle
 \begin{center}
 	\begin{tikzcd}
-		F \arrow{r} & P\times_\Psi F \arrow{d}{\pi_{P\times_\Psi F}} \\
+		N \arrow{r} & P\times_\Psi N \arrow{d}{\pi_{P\times_\Psi N}} \\
 		& M
 	\end{tikzcd}
 \end{center}
-such that the projection $P \times F \to P \times_\Psi F$ is a smooth surjective submersion,
-where the projection $\pi_{P\times_\Psi F}: P\times_\Psi F \to M$ is given by 
+such that the projection $P \times N \to P \times_\Psi N$ is a smooth surjective submersion,
+where the projection $\pi_{P\times_\Psi N}: P\times_\Psi N \to M$ is given by 
 \bas
-\pi_{P\times_\Psi F}\mleft( [p, v] \mright)
+\pi_{P\times_\Psi N}\mleft( [p, v] \mright)
 &\coloneqq
 \pi_P(p)
 \eas
-for all $[p, v] \in P\times_\Psi F$, denoting equivalence classes of $(p, v)$ by square brackets. For $x \in M$, the fibre $\mleft(P\times_\Psi F\mright)_x$ is given by $\mleft( P_x \times F  \mright) \Big/ G = P_x \times_\Psi F$, and the fibre is diffeomorphic to $F$ by $F \ni v \mapsto [p, v] \in \mleft(P\times_\Psi F\mright)_x$ for a fixed $p \in P_x$. We will frequently use this diffeomorphism in the following without further notice.
+for all $[p, v] \in P\times_\Psi N$, denoting equivalence classes of $(p, v)$ by square brackets. For $x \in M$, the fibre $\mleft(P\times_\Psi N\mright)_x$ is given by $\mleft( P_x \times N  \mright) \Big/ G = P_x \times_\Psi N$, and the fibre is diffeomorphic to $N$ by $N \ni v \mapsto [p, v] \in \mleft(P\times_\Psi N\mright)_x$ for a fixed $p \in P_x$. We will frequently use this diffeomorphism in the following without further notice.
 
-A very important example are of course associated vector bundles, related to $F$ being a vetor space. We need a similar concept for Lie groups.
+A very important example are of course associated vector bundles, related to $N$ being a vetor space. We need a similar concept for Lie groups.
 
 \begin{definitions}{Lie group representation on Lie groups, \newline \cite[special situation of the comment after Ex.\ 1.7.14, page 47]{mackenzieGeneralTheory}}{LieGroupActingOnLieGroup}
 Let $G, H$ be Lie groups. Then a \textbf{Lie group representation of $G$ on $H$} is a smooth left action $\psi$ of $G$ on $H$
@@ -1359,7 +1359,7 @@ $c_G(P)$ is an LGB by Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}.
 Lie algebras are the infinitesimal version of Lie groups, hence, we expect something similar for LGBs, the Lie algebra bundles:
 
 \begin{definitions}{Lie algebra bundle (LAB), \cite[\S 3.3, Definition 3.3.8, page 104]{mackenzieGeneralTheory}}{LAB}
-Let $\mathfrak{g}$ be a vector space, and $\mathcal{g}, M$ be smooth manifolds. A vector bundle
+Let $\mathfrak{g}$ be a Lie algebra, and $\mathcal{g}, M$ be smooth manifolds. A vector bundle
 \begin{center}
 	\begin{tikzcd}
 	\mathfrak{g} \arrow{r} & \mathcal{g} \arrow{d}{\pi} \\
@@ -1378,8 +1378,13 @@ is called a \textbf{Lie algebra bundle} if:
 	are Lie algebra isomorphisms, where $I$ is an (index) set, $U_i$ are open sets covering $M$, $\phi_i: \mathcal{g}|_U \to U \times \mathfrak{g}$ subordinate trivializations, and $\mathrm{pr}_2$ the projection onto the second factor. This atlas will be called \textbf{Lie algebra bundle atlas} or \textbf{LAB atlas}.
 \end{enumerate}
 We often say that \textbf{$\mathcal{g}$ is an LAB (over $M$)}, whose structural Lie algebra is either clear by context or not explicitly needed; and we may also denote LABs by $\mathfrak{g} \to \mathcal{g} \stackrel{\pi}{\to} M$.
-The corresponding field of Lie algebra brackets is denoted by $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$ which restricts to a Lie algebra bracket on each fibre.
 \end{definitions}
+
+\textbf{Add trivial example and morphism definition.}
+
+\begin{remarks}{Smooth field of Lie brackets}{FieldOfLieBrackets}
+As usual, the second point means that $\mathcal{g}$ is locally isomorphic to the trivial Lie algebra bundle. Hence, we have locally canonically a smooth field of Lie brackets which restricts to a Lie bracket on each fibre. Using a partition of unity subordinate to an open covering of $M$ over which trivializations of the LAB is defined, we conclude that there is a smooth field of Lie algebra brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$ which restricts to a Lie algebra bracket on each fibre. We will often fix such a smooth field of Lie brackets when speaking about an LAB.
+\end{remarks}
 
 We have the notion of structure constants on all fibres, such that we get now structure functions after fixing a frame.\footnote{However, observe that $\Gamma(\mathcal{g})$ is an infinite-dimensional Lie algebra, such that there is still a notion structure constants, but an inconvenient one due to that these constants are in general not finitely many.}
 
@@ -1402,7 +1407,7 @@ for all $a, b, c, d$; the former due to antisymmetry, the latter because of the 
 
 \subsection{From LGBs to LABs}
 
-Let us now quickly discuss how LGBs and LABs are related; it is very similar to the relation of Lie groups and algebras, now somewhat fibre-wise. We will follow the style of \cite[\S 1.5.2, page 40ff.]{Hamilton} and \cite[\S 3.5, page 119ff.]{mackenzieGeneralTheory}; our approach will be using left-invariant vector fields but the mentioned latter reference actually use right-invariant vector fields.
+Let us now quickly discuss how LGBs and LABs are related; it is very similar to the relation of Lie groups and algebras, now somewhat fibre-wise. We will follow the style of \cite[\S 1.5.2, page 40ff.]{Hamilton} and \cite[\S 3.5, page 119ff.]{mackenzieGeneralTheory}; our approach will be using left-invariant vector fields but the mentioned latter reference actually uses right-invariant vector fields.
 
 Let us start with introducing the basic notations needed.
 
@@ -1432,7 +1437,38 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$. For $g \in \mathca
 By definition of $\mathcal{G}$, all these maps are smooth. Furthermore, they clearly satisfy the typical properties as known for these maps since $\mathcal{G}_x$ is a Lie group for all $x \in M$; for reference about their basic properties see for example \cite[\S 1.5, Lemma 1.5.5, page 40f.]{Hamilton}. We will later introduce similar notations using sections of $\mathcal{G}$, see Def.\ \ref{def:LRTranslations}.
 \end{remark}
 
+Since these are diffeomorphism of the fibres, it makes sense to say that a left-invariant vector field of $\mathcal{G}$ has to be a vertical vector field, that is, it is in the kernel of $\mathrm{D}\pi$, the total differential/tangent map of the projection of $\mathcal{G} \stackrel{\pi}{\to} M$. For this recall that there is the notion of a \textbf{vertical bundle} for fibre bundles $F \stackrel{\varpi}{\to} M$ (as \textit{e.g.}~introduced in \cite[\S 5.1.1, for principal bundles, but it is straightforward to extend the definitions; page 258ff.]{Hamilton}), which is defined as a subbundle $\mathrm{VF} \to F$ of the tangent bundle $\mathrm{T}F \to F$ given as the kernel of $\mathrm{D}\varpi : \mathrm{T}F \to \mathrm{T}M$. The fibres $\mathrm{V}_v F$ of $F$ at $v \in F$ are then given by 
+\bas
+\mathrm{V}_v F
+&=
+\mathrm{T}_v F_x,
+\eas
+where $x \coloneqq \varpi(v) \in M$ and $F_p$ is the fibre of $F$ at $x$.
 
+In our case $F = \mathcal{G}$, in this case $F_x$ is then a Lie group, so, the vertical bundle just consists of the tangent bundles of Lie groups of all fibres. All of these generated by their Lie algebra at $e_x$, the identity element of $\mathcal{G}_x$. Hence, it is natural to guess that the LAB for $\mathcal{G}$ will be $\mathrm{VF}|_{e_M}$, where $e_M$ is the image of $M$ under the identity section of $\mathcal{G}$, thus, an embedding of $M$ into $\mathcal{G}$. Therefore $\mathrm{VF}|_{e_M}$ is a fibre bundle by \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}, and clearly a vector bundle.
+
+\begin{corollaries}{LGBs induce an LAB structure, \newline\cite[\S 3.5, simplified version of the discussion after Cor.\ 3.5.4, page 121ff.]{mackenzieGeneralTheory}}{LGBToLAB}
+Let $G \to \mathcal{G} \to M$ be an LGB over a smooth manifold $M$. Then $\mathrm{VF}|_{e_M} \to e_M$ is an LAB with structural Lie algebra $\mathfrak{g}$, the Lie algebra of $G$.
+\end{corollaries}
+
+\begin{proof}
+\leavevmode\newline
+As already discussed $\mathrm{VF}|_{e_M}$ is a vector bundle. The fibres are given by
+\bas
+\mleft(\mathrm{VF}|_{e_M}\mright)_{e_x}
+&=
+\mathrm{T}_{e_x}\mathcal{G}_x
+\cong
+\mathrm{T}_{e} G
+=
+\mathfrak{g}
+\eas
+for all $x \in M$, where $e$ is the neutral element of $G$, and we used that $\mathcal{G}_x$ is isomorphic to $G$ as a Lie group. All fibres are Lie algebras of the fibre Lie group, isomorphic to $\mathfrak{g}$.
+\end{proof}
+
+\begin{definitions}{The LAB of an LGB, \newline\cite[\S 3.5, special situation of Def.\ 3.5.1, page 120]{mackenzieGeneralTheory}}{LABOfAnLGB}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$. Then we define the \textbf{LAB $L(\mathcal{G})$ of $\mathcal{G}$} as the vector bundle $\mathrm{VF}|_{e_M}$, where $e_M$ is the embedding of $M$ into $\mathcal{G}$ via the identity section $e$ of $\mathcal{G}$.
+\end{definitions}
 
 \section{LGB actions}
 
