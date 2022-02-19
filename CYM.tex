@@ -981,7 +981,7 @@ All of that is also resembled in the existence of sections. The existence of a s
 If $M$ is a point we recover the notion of Lie groups, and, as usual, we have the notion of trivial LGBs:
 
 \begin{examples}{Trivial examples}{TrivialLGBundle}
-The \textbf{trivial LGB} is given as the trivial bundle $M \times G \to M$ with canonical multiplication $(x, g) \cdot (x, q) \coloneqq (x, gq)$, and we recover the notion of a Lie group in the case of $M = \{*\}$.
+The \textbf{trivial LGB} is given as the product manifold $M \times G \to M$ with canonical multiplication $(x, g) \cdot (x, q) \coloneqq (x, gq)$, and we recover the notion of a Lie group in the case of $M = \{*\}$.
 \end{examples}
 
 We are of course also interested into LGB bundle morphisms:
@@ -992,12 +992,12 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ and $\mathcal{H} \stackrel
 \pi_{\mathcal{G}} \circ F &= f \circ \pi_{\mathcal{H}},\\
 F(gq) &= F(g) ~ F(q)\label{LGBHomomorph}
 \ea
-for all $g, q \in \mathcal{H}$ with $\pi_{\mathcal{H}}(g) = \pi_{\mathcal{H}}(q)$. We then say that \textbf{$F$ is an LGB morphism over $f$}. If $N = M$ and $f = \mathrm{id}_M$, then we often omit mentioning $f$ explicitly and either just write that \textbf{$F$ is a (base-preserving) LGB morphism}.
+for all $g, q \in \mathcal{H}$ with $\pi_{\mathcal{H}}(g) = \pi_{\mathcal{H}}(q)$. We then say that \textbf{$F$ is an LGB morphism over $f$}. If $N = M$ and $f = \mathrm{id}_M$, then we often omit mentioning $f$ explicitly and just write that \textbf{$F$ is a (base-preserving) LGB morphism}.
 
 We speak of an \textbf{LGB isomorphism (over $f$)} if $F$ is a diffeomorphism.
 \end{definitions}
 
-\begin{remark}
+\begin{remark}\label{LGBMOrphismRemark}
 \leavevmode\newline
 \indent $\bullet$ The right hand side of Eq.\ \eqref{LGBHomomorph} is well-defined because of Eq.\ \eqref{FibreRelationOverf}.
 
@@ -1380,10 +1380,43 @@ is called a \textbf{Lie algebra bundle} if:
 We often say that \textbf{$\mathcal{g}$ is an LAB (over $M$)}, whose structural Lie algebra is either clear by context or not explicitly needed; and we may also denote LABs by $\mathfrak{g} \to \mathcal{g} \stackrel{\pi}{\to} M$.
 \end{definitions}
 
-\textbf{Add trivial example and morphism definition.}
+Of course, we have the typical trivial examples:
+
+\begin{examples}{Trivial examples}{TrivialLABs}
+We recover the notion of a Lie algebra, if $M$ consist of just one point. Moreover, the \textbf{trivial LAB} is given as the product manifold $\mathcal{g} \coloneqq M \times \mathfrak{g} \to M$. We have obviously a canonical smooth field of Lie brackets on this bundle $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$ which restricts to the Lie algebra bracket $\mleft[ \cdot, \cdot \mright]_{\mathfrak{g}}$ of $\mathfrak{g}$ on each fibre. The bracket is given by
+\bas
+\mleft[ (x, X), (x, Y) \mright]_{\mathcal{g}}
+&\coloneqq
+\mleft( x, \mleft[ X, Y \mright]_{\mathfrak{g}} \mright)
+\eas
+for all $(x, X), (x, Y) \in M \times \mathfrak{g}$. Smoothness is an immediate consequence.
+\end{examples}
+
+The definition of LAB morphisms is straight-forward:
+
+\begin{definitions}{LAB morphism, \newline\cite[\S. 4.3, simplified version of Def.\ 4.3.1, page 158]{mackenzieGeneralTheory}}{LABmorphism}
+Let $\mathcal{g} \stackrel{\pi_{\mathcal{g}}}{\to} M$ and $\mathcal{h} \stackrel{\pi_{\mathcal{h}}}{\to} N$ be two LGBs over two smooth manifolds $M$ and $N$. An \textbf{LAB morphism} is a pair of smooth maps $F: \mathcal{h} \to \mathcal{g}$ and $f: N \to M$ such that
+\ba\label{FibreRelationOverfForLABMorph}
+\pi_{\mathcal{g}} \circ F &= f \circ \pi_{\mathcal{h}},\\
+F &\text{ linear},\\
+F\mleft(\mleft[g, q\mright]_{\mathcal{h}_p}\mright) &= \mleft[F(g), F(q)\mright]_{\mathcal{g}_{f(p)}}\label{LABHomomorph}
+\ea
+for all $g, q \in \mathcal{h}_p$ ($p \in N$), where $\mleft[\cdot, \cdot\mright]_{\mathcal{h}_p}$ and $\mleft[\cdot, \cdot\mright]_{\mathcal{g}_{f(p)}}$ are Lie brackets of $\mathcal{h}_p$ and $g_{f(p)}$, respectively. We then say that \textbf{$F$ is an LAB morphism over $f$}. If $N = M$ and $f = \mathrm{id}_M$, then we often omit mentioning $f$ explicitly and just write that \textbf{$F$ is a (base-preserving) LAB morphism}.
+
+We speak of an \textbf{LAB isomorphism (over $f$)} if $F$ is a diffeomorphism.
+\end{definitions}
 
 \begin{remarks}{Smooth field of Lie brackets}{FieldOfLieBrackets}
-As usual, the second point means that $\mathcal{g}$ is locally isomorphic to the trivial Lie algebra bundle. Hence, we have locally canonically a smooth field of Lie brackets which restricts to a Lie bracket on each fibre. Using a partition of unity subordinate to an open covering of $M$ over which trivializations of the LAB is defined, we conclude that there is a smooth field of Lie algebra brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$ which restricts to a Lie algebra bracket on each fibre. We will often fix such a smooth field of Lie brackets when speaking about an LAB.
+We have similar remarks as in Rem.\ \ref{LGBMOrphismRemark}. Additionally, we have locally a canonical smooth field of Lie brackets which restricts to a Lie bracket on each fibre because every LAB is locally isomorphic to a trivial LAB as in Ex.\ \ref{ex:TrivialLABs}. Define a field of Lie brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$, by
+\ba
+\mleft[ X, Y \mright]_{\mathcal{g}}
+&\coloneqq
+\mleft[ X, Y \mright]_{\mathcal{g}_x}
+\ea
+for all $X, Y \in \mathcal{g}_x$ ($x \in M$). Using a local trivialization, this bracket is locally of the form as in Rem.\ \ref{LGBMOrphismRemark} such that smoothness follows.
+%Using a partition of unity subordinate to an open covering of $M$ over which trivializations of the LAB is defined, we conclude that there is a smooth field of Lie algebra brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$ which restricts to a Lie algebra bracket on each fibre. We will often fix such a smooth field of Lie brackets when speaking about an LAB.
+
+We actually have a similar smooth extension for LGB's algebra. See our discussion of LGB actions later, especially Ex.\ \ref{ex:LGBActingOnItself}.
 \end{remarks}
 
 We have the notion of structure constants on all fibres, such that we get now structure functions after fixing a frame.\footnote{However, observe that $\Gamma(\mathcal{g})$ is an infinite-dimensional Lie algebra, such that there is still a notion structure constants, but an inconvenient one due to that these constants are in general not finitely many.}
@@ -1404,6 +1437,8 @@ C^a_{bc} &= - C^a_{cb},\\
 \eas
 for all $a, b, c, d$; the former due to antisymmetry, the latter because of the Jacobi identity.
 \end{remarks}
+
+
 
 \subsection{From LGBs to LABs}
 
@@ -1463,7 +1498,7 @@ As already discussed $\mathrm{VF}|_{e_M}$ is a vector bundle. The fibres are giv
 =
 \mathfrak{g}
 \eas
-for all $x \in M$, where $e$ is the neutral element of $G$, and we used that $\mathcal{G}_x$ is isomorphic to $G$ as a Lie group. All fibres are Lie algebras of the fibre Lie group, isomorphic to $\mathfrak{g}$.
+for all $x \in M$, where $e$ is the neutral element of $G$, and we used that $\mathcal{G}_x$ is isomorphic to $G$ as a Lie group. All fibres are Lie algebras of the fibre Lie group, isomorphic to $\mathfrak{g}$. 
 \end{proof}
 
 \begin{definitions}{The LAB of an LGB, \newline\cite[\S 3.5, special situation of Def.\ 3.5.1, page 120]{mackenzieGeneralTheory}}{LABOfAnLGB}
@@ -1668,11 +1703,18 @@ If $M$ is a point or $f$ a constant map, then we recover the typical notion of a
 Additionally, we have the following examples, the last two of which will be important in this paper. The notation will be as in Def.\ \ref{def:LRTranslations}.
 
 \begin{examples}{LGB acting on itself}{LGBActingOnItself}
-It is obvious that each LGB $\mathcal{G} \stackrel{\pi}{\to} N$ acts on itself from the left and right
+For each LGB $\mathcal{G} \stackrel{\pi}{\to} M$ acts on itself from the left and right, having $N \coloneqq M$ and $f \coloneqq \pi$,
 \bas
 \mathcal{G} * \mathcal{G} \coloneqq \pi^*\mathcal{G} &\to \mathcal{G},\\
 (g,h) &\mapsto gh.
 \eas
+That this satisfies all properties for an LGB action is clear by definition of LGBs; however, let us give a note about the smoothness of this action. Recall that an LGB is locally isomorphic to a trivial LGB $U \times G$ ($U$ an open subset of $M$) with its canonical group multiplication, $(x, g) \cdot (x, q) = (x, gq)$. Hence, using that the multiplication of $G$ is smooth and using local LGB trivializations of $\mathcal{G}$ and $f^*\mathcal{G}$ (recall Cor.\ \ref{cor:PullbackLGB} and its proof to show that $f^*\mathcal{G}$ is locally diffeomorphic to the product manifold $U \times G \times G$), we achieve smoothness of the $\mathcal{G}$-action on itself because it is locally of the form
+\bas
+U \times G \times G &\to U \times G,\\
+(x, g, q) &\mapsto (x, gq).
+\eas
+We will also call the $\mathcal{G}$-action on itself the \textbf{multiplication in $\mathcal{G}$}.
+
 The left and right translations of Def.\ \ref{def:LeftRightTranslationConjugation} and \ref{def:LRTranslations} then align, and thus the smoothness concerns as mentioned in the last part of Rem.\ \ref{SmoothnessOfACtionTranslations} for right translations $r_g = R_g$ ($g \in \mathcal{G}_x$, $x \in M$) do not arise. Moreover, while the conjugation $c_g$ is a Lie group automorphism of $\mathcal{G}_x$, it describes an LGB automorphism of $\mathcal{G}$ if similarly extended to sections; following \cite[\S 1.4, Def.\ 1.4.6 and its discussion afterwards, page 24f.]{mackenzieGeneralTheory}. That is for $\sigma \in \Gamma(\mathcal{G})$ we define the conjugation $c_\sigma$ as a smooth map by
 \bas
 \mathcal{G} &\to \mathcal{G},\\
