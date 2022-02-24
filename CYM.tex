@@ -1953,9 +1953,11 @@ We have similar remarks as in Rem.\ \ref{LGBMOrphismRemark}. Additionally, we ha
 \mleft[ X, Y \mright]_{\mathcal{g}_x}
 \ea
 for all $X, Y \in \mathcal{g}_x$ ($x \in M$). Using a local trivialization, this bracket is locally of the form as in Rem.\ \ref{LGBMOrphismRemark} such that smoothness follows.
-%Using a partition of unity subordinate to an open covering of $M$ over which trivializations of the LAB is defined, we conclude that there is a smooth field of Lie algebra brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$ which restricts to a Lie algebra bracket on each fibre. We will often fix such a smooth field of Lie brackets when speaking about an LAB.
 
-We actually have a similar smooth extension for LGB's algebra. See our discussion of LGB actions later, especially Ex.\ \ref{ex:LGBActingOnItself}.
+In fact, as also argued in \cite[\S 16.2, Example 2, page 114; but speaking in the context of Lie algebroids there whose are a generalization of LABs]{DaSilva}, every vector bundle equipped with a smooth field of Lie brackets is an LAB.
+%Using a partition of unity subordinate to an open covering of $M$ over which trivializations of the LAB is defined, we conclude that there is a smooth field of Lie algebra brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$ which restricts to a Lie algebra bracket on each fibre. We will often fix such a smooth field of Lie brackets when speaking about an LAB.
+%
+%We actually have a similar smooth extension for LGB's algebra. See our discussion of LGB actions later, especially Ex.\ \ref{ex:LGBActingOnItself}.
 \end{remarks}
 
 We have the notion of structure constants on all fibres, such that we get now structure functions after fixing a frame.\footnote{However, observe that $\Gamma(\mathcal{g})$ is an infinite-dimensional Lie algebra, such that there is still a notion structure constants, but an inconvenient one due to that these constants are in general not finitely many.}
@@ -2108,7 +2110,7 @@ for all $f \in C^\infty(M)$ and $X \in L(\mathcal{G})$.
 \leavevmode\newline
 Obviously, $fX \in \Gamma(\mathrm{V}\mathcal{G})$ since
 \bas
-\mathrm{D}\pi(fX) &= f \mathrm{D}\pi(X) = 0.
+\mathrm{D}\pi(fX) &= \mathrm{D}\pi(\pi^*f~ X) = \pi^*f~ \mathrm{D}\pi(X) = 0.
 \eas
 Furthermore, $fX|_{\mathcal{G}_x}$ ($x \in M$) is left-invariant over $\mathcal{G}_x$ since $X|_{\mathcal{G}_x}$ is left-invariant and $f|_{\mathcal{G}_x} \equiv f(x) \in \mathbb{R}$. Thence, $fX \in L(\mathcal{G})$.
 \end{proof}
@@ -2220,7 +2222,7 @@ X_\nu|_g,
 where $\gamma: I \to \mathcal{G}_{x}$ ($I$ an open interval containing 0) is a curve with $\gamma(0)= e_x$ and $\mathrm{d}/\mathrm{d}t|_{t=0} \gamma = \nu_x$. Since $\mu$ is smooth, $\mathrm{D}\mu$ is smooth, and thus 
 \bas
 \mathcal{G} &\to \mathrm{T}(\mathcal{G} * \mathcal{G}),\\
-g &\mapsto \mathrm{D}\mu \circ (0,\nu) = \mathrm{D}_{(g, e_x)}\mu\mleft(0_g, \nu_{\pi(g)}\mright) = X_\nu|_g
+g &\mapsto \mleft.\bigl(\mathrm{D}\mu \circ (0,\nu)\bigr)\mright|_g = \mathrm{D}_{(g, e_x)}\mu\mleft(0_g, \nu_{\pi(g)}\mright) = X_\nu|_g
 \eas
 is smooth, also using the smoothness of $\nu$, $\pi$ and $g \mapsto 0_g$.
 %Fix an element $g$ of $\mathcal{G}$ and a trivialization of $\mathcal{G}$ around $g$, so, w.r.t.\ this trivialization $\mathcal{G} \cong U \times G$ ($U$ open subset of $M$). Then define a section $\sigma$ of this trivial bundle to be the constant section with values $g$. By Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs} we have
@@ -2268,15 +2270,29 @@ where $\psi: \Gamma(e^*\mathrm{V}\mathcal{G}) \to L(\mathcal{G}), \nu \mapsto X_
 for all $\nu \in \Gamma(e^*\mathrm{V}\mathcal{G})$ and $x \in M$. This finishes the proof.
 \end{proof}
 
+Hence, it immediately follows:
+
 \begin{corollaries}{LGBs induce an LAB structure, \newline\cite[\S 3.5, simplified version of the discussion after Cor.\ 3.5.4, page 121ff.]{mackenzieGeneralTheory}}{LGBToLAB}
-Let $G \to \mathcal{G} \to M$ be an LGB over a smooth manifold $M$. Then $e^*\mathrm{VF} \to M$ admits the structure as an LAB with structural Lie algebra $\mathfrak{g}$, the Lie algebra of $G$.
+Let $G \to \mathcal{G} \to M$ be an LGB over a smooth manifold $M$. Then $\mathcal{g} \coloneqq e^*\mathrm{V}\mathcal{G} \to M$ admits the structure as an LAB with structural Lie algebra $\mathfrak{g}$, the Lie algebra of $G$. The field of Lie algebra brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ is given by
+\bas
+\mleft[ \nu, \mu \mright]_{\mathcal{g}}
+&\coloneqq
+e^*\bigl( [X_\nu, X_\mu] \bigr)
+\eas
+for all $\nu, \mu \in \Gamma(e^*\mathrm{V}\mathcal{G})$, where $X_\nu, X_\mu$ are elements of $L(\mathcal{G})$ as given in Cor.\ \ref{cor:LeftInvVfToLAB}. Point-wise
+\bas
+\mleft[ \nu_x, \mu_x \mright]_{\mathcal{g}}
+&=
+\bigl.[X_\nu, X_\mu]\bigr|_{e_x}
+\eas
+for all $x \in M$.
 \end{corollaries}
 
 \begin{proof}
 \leavevmode\newline
-As already discussed $e^*\mathrm{VF}$ is a vector bundle. The fibres are given by
+As already discussed $e^*\mathrm{V}\mathcal{G}$ is a vector bundle. The fibres are given by
 \bas
-\mleft(e^*\mathrm{VF}\mright)_{x}
+\mathcal{g}_{x}
 &=
 \mathrm{T}_{e_x}\mathcal{G}_x
 \cong
@@ -2284,16 +2300,11 @@ As already discussed $e^*\mathrm{VF}$ is a vector bundle. The fibres are given b
 =
 \mathfrak{g}
 \eas
-for all $x \in M$, where $e$ is the neutral element of $G$, and we used that $\mathcal{G}_x$ is isomorphic to $G$ as a Lie group. All fibres are Lie algebras of the fibre Lie group, isomorphic to $\mathfrak{g}$. The LAB atlas is quickly constructed: Fix an LGB atlas $\{(U_i, \phi_i \}_{i \in I}$ of $\mathcal{G}$, where $I$ is an (index) set, $(U_i)_{i \in I}$ an open covering of $M$, and $\phi_i: \mathcal{G}|_{U_i} \to U_i \times G$ are LGB isomorphisms. The total derivatives of $\phi_i$ give rise to an LAB atlas for $e^*\mathrm{VF}$, \textit{i.e.}\
-\bas
-e^!\mleft(\mleft.\mathrm{D}\phi_i\mright|_{\mathrm{VF}}\mright):  &\to \mathrm{T}U_i \times \mathfrak{g},\\
-(x, g) &\mapsto \mleft( x, \phi_{i, f(x)}(g) \mright),
-\eas
-where $\phi_{i, f(x)}: \mathcal{G}_{f(x)} \to G$ are the Lie group isomorphisms as defined in Def.\ \ref{def:LieGroupBundle}.
+for all $x \in M$, where we used that $\mathcal{G}_x$ is isomorphic to $G$ as a Lie group. All fibres are Lie algebras of the fibre Lie group, isomorphic to $\mathfrak{g}$. By construction, the Lie bracket is precisely the Lie bracket isomorphic to the one of $\mathfrak{g}$, and $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ is smooth. Therefore we conclude that $\mathcal{g}$ is an LAB with structural Lie algebra $\mathfrak{g}$.
 \end{proof}
 
 \begin{definitions}{The LAB of an LGB, \newline\cite[\S 3.5, special situation of Def.\ 3.5.1, page 120]{mackenzieGeneralTheory}}{LABOfAnLGB}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$. Then we define the \textbf{LAB $L(\mathcal{G})$ of $\mathcal{G}$} as the vector bundle $\mathrm{VF}|_{e_M}$, where $e_M$ is the embedding of $M$ into $\mathcal{G}$ via the identity section $e$ of $\mathcal{G}$.
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$. Then we define the \textbf{LAB $\mathcal{g}$ of $\mathcal{G}$} as the vector bundle $e^*\mathrm{V}\mathcal{G}$, where $e$ is the identity section of $\mathcal{G}$.
 \end{definitions}
 
 \subsection{Fundamental vector fields}
