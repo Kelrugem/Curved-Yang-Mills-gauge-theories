@@ -14,10 +14,10 @@
 \contentsline {section}{\numberline {6}Lie algebra bundles (LABs)}{29}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Definition}{29}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}From LGBs to LABs}{31}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Fundamental vector fields}{38}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Connections and curvature on LGB principal bundles}{38}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Toy model}{38}{subsection.7.1}%
-\contentsline {section}{\numberline {8}Conclusion}{38}{section.8}%
-\contentsline {section}{\nonumberline List of References}{38}{section*.3}%
-\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{38}{appendix.A}%
+\contentsline {subsection}{\numberline {6.3}Fundamental vector fields}{39}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Connections and curvature on LGB principal bundles}{39}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Toy model}{39}{subsection.7.1}%
+\contentsline {section}{\numberline {8}Conclusion}{39}{section.8}%
+\contentsline {section}{\nonumberline List of References}{39}{section*.3}%
+\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{40}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

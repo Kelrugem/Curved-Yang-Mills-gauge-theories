@@ -1979,7 +1979,16 @@ C^a_{bc} &= - C^a_{cb},\\
 for all $a, b, c, d$; the former due to antisymmetry, the latter because of the Jacobi identity.
 \end{remarks}
 
+As we have seen it for LGBs, the pullback of LABs is again an LAB.
 
+\begin{corollaries}{Pullbacks of LABs are LABs, \cite[\S 3, Thm.\ 3.2]{PullbackLGBLAB}}{PullBackLABIsLAB}
+Let $M, N$ be smooth manifolds, $\mathcal{g} \stackrel{\pi}{\to} M$ an LAB over $M$ and $f: N \to M$ a smooth map. Then the pullback vector bundle $f^*\mathcal{g}$ has a unique (up to isomorphisms) LAB structure such that the projection $\pi_2: f^*\mathcal{g} \to \mathcal{g}$ onto the second factor is an LAB morphism over $f$ with $\pi_2|_x: (f^*\mathcal{g})_x \to \mathcal{g}_{f(x)}$ being a Lie algebra isomorphism for all $x \in N$.
+\end{corollaries}
+
+\begin{proof}
+\leavevmode\newline
+Either prove this similarly as Cor.\ \ref{cor:PullbackLGB} (by also using a similar statement already known for vector bundles), or observe that the pullback $f^*\mleft(\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}\mright)$ of the field of Lie brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ on $\mathcal{g}$ as a section is clearly also a smooth field of Lie brackets on $f^*\mathcal{g}$ with same structural Lie algebra $\mathfrak{g}$.
+\end{proof}
 
 \subsection{From LGBs to LABs}
 
@@ -2306,6 +2315,37 @@ for all $x \in M$, where we used that $\mathcal{G}_x$ is isomorphic to $G$ as a 
 \begin{definitions}{The LAB of an LGB, \newline\cite[\S 3.5, special situation of Def.\ 3.5.1, page 120]{mackenzieGeneralTheory}}{LABOfAnLGB}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$. Then we define the \textbf{LAB $\mathcal{g}$ of $\mathcal{G}$} as the vector bundle $e^*\mathrm{V}\mathcal{G}$, where $e$ is the identity section of $\mathcal{G}$.
 \end{definitions}
+
+As we have seen, elements of $L(\mathcal{G})$ are as usual therefore determined by their value at $e_M$:
+
+\begin{corollaries}{Tangent space of $\mathcal{G}$, \newline \cite[\S 3.5, a reformulation of Prop.\ 3.5.3 and Cor.\ 3.5.4, page 121]{mackenzieGeneralTheory}}{TLGBAsLGB}
+Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. Then we have an isomorphism of vector bundles
+\bas
+\mathrm{V}\mathcal{G} &\cong \pi^*\mathcal{g}.
+\eas
+\end{corollaries}
+
+\begin{remark}
+\leavevmode\newline
+Observe that by Cor.\ \ref{cor:PullBackLABIsLAB} we know that $\mathrm{V}\mathcal{G}$ admits a unique LAB structure such that $\mathrm{V}\mathcal{G} \cong \pi^*\mathcal{g}$ is an isomorphism of LABs. This statement is also not in contradiction with $\mathcal{g} = e^*\mathrm{V}\mathcal{G}$, because
+\bas
+e^*\mathrm{V}\mathcal{G}
+&=
+e^*\pi^*\mathcal{g}
+=
+(\pi \circ e)^* \mathcal{g}
+=
+\mathcal{g}.
+\eas
+By this we also know that $\mathrm{V}\mathcal{G}$ is trivial if and only if $\mathcal{g}$ is trivial; as also argued in \cite[\S 3.5, discussion after Cor.\ 3.5.4, page 121]{mackenzieGeneralTheory}. For sections we therefore get
+\bas
+\Gamma(\mathrm{V}\mathcal{G})
+&\cong
+C^\infty(\mathcal{G}) \otimes_{C^\infty(M)} \Gamma(\mathcal{g}).
+\eas
+\end{remark}
+
+We are going to define LGB representations and corresponding LAB representations.
 
 \subsection{Fundamental vector fields}
 
