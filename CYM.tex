@@ -398,6 +398,8 @@ No. 1, Sec. 4, Roosevelt Rd., Taipei City 106, Taiwan Room 503, Cosmology Buildi
 
 \subsection{Basic notations}
 
+
+
 \subsection{Assumed background knowledge}
 
 It is highly recommended to have basic knowledge about differential geometry and gauge theory as presented in \cite[especially Chapter 1 to 5]{Hamilton}; however, sometimes we will still give explicit references to help with more technical details. It can be useful to have knowledge about Lie algebra and Lie group bundles, and even Lie algebroids and Lie groupoids, but we will introduce their basic notions such that it is not necessarily needed to have knowledge about these upfront.
@@ -2152,14 +2154,14 @@ Since $e^*\mathrm{V}\mathcal{G} \cong \mathrm{V}\mathcal{G}|_{e_M}$ is a very na
 &=
 \mathrm{D}_{e_x}L_g ( \nu_x ),
 \eas
-omitting $\mathrm{pr}_2$ and using that natural isomorphism without further mentioning.
+omitting $\mathrm{pr}_2$ and using that natural isomorphism without further mention.
 
 Also observe that we can actually define a left translations by (local) sections of $\mathcal{G}$, \textit{i.e.}\ for $\sigma \in \Gamma(\mathcal{G})$ we define the left translation $L_\sigma$ as a map by
 \bas
 \mathcal{G} &\to \mathcal{G},\\
 q &\mapsto \sigma_{\pi(q)} \cdot q.
 \eas
-It is trivial to check that this map is a diffeomorphism; in case of trouble seeing this, we discuss this later in more generality in Rem.\ \ref{SmoothnessOfACtionTranslations}. Observe that for vertical vector fields $Y \in \Gamma(\mathrm{V}\mathcal{G})$ we have
+This map is a diffeomorphism; we discussed this in more generality in Rem.\ \ref{SmoothnessOfACtionTranslations}. Observe that for vertical vector fields $Y \in \Gamma(\mathrm{V}\mathcal{G})$ we have
 %\bas
 %\mathrm{D}\pi\bigl(\mathrm{D}L_\sigma(Y)\bigr)
 %&=
@@ -2192,7 +2194,7 @@ X_\nu \circ \sigma
 However, be careful, in general one cannot simply replace $L_g$ with $L_\sigma$, even if $\sigma_{\pi(g)} = g$. This only works with respect to vertical tangent vectors; once horizontal parts play a role things change, $L_g$ is a priori not even defined then. Once we turn to the definition of horizontal distributions we will come back to this.
 \end{remarks}
 
-\begin{proof}
+\begin{proof}[Proof of Cor.\ \ref{cor:LeftInvVfToLAB}]
 \leavevmode\newline
 This map is clearly $C^\infty(M)$-linear, especially due to
 \bas
@@ -2282,7 +2284,7 @@ for all $\nu \in \Gamma(e^*\mathrm{V}\mathcal{G})$ and $x \in M$. This finishes 
 Hence, it immediately follows:
 
 \begin{corollaries}{LGBs induce an LAB structure, \newline\cite[\S 3.5, simplified version of the discussion after Cor.\ 3.5.4, page 121ff.]{mackenzieGeneralTheory}}{LGBToLAB}
-Let $G \to \mathcal{G} \to M$ be an LGB over a smooth manifold $M$. Then $\mathcal{g} \coloneqq e^*\mathrm{V}\mathcal{G} \to M$ admits the structure as an LAB with structural Lie algebra $\mathfrak{g}$, the Lie algebra of $G$. The field of Lie algebra brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ is given by
+Let $G \to \mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and denote with $e$ the identity section of $\mathcal{G}$. Then $\mathcal{g} \coloneqq e^*\mathrm{V}\mathcal{G} \to M$ admits the structure as an LAB with structural Lie algebra $\mathfrak{g}$, the Lie algebra of $G$, and the fibres $\mathcal{g}_x$ ($x \in N$) are the Lie algebras of $\mathcal{G}_x$. The field of Lie algebra brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ is given by
 \bas
 \mleft[ \nu, \mu \mright]_{\mathcal{g}}
 &\coloneqq
@@ -2313,7 +2315,7 @@ for all $x \in M$, where we used that $\mathcal{G}_x$ is isomorphic to $G$ as a 
 \end{proof}
 
 \begin{definitions}{The LAB of an LGB, \newline\cite[\S 3.5, special situation of Def.\ 3.5.1, page 120]{mackenzieGeneralTheory}}{LABOfAnLGB}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$. Then we define the \textbf{LAB $\mathcal{g}$ of $\mathcal{G}$} as the vector bundle $e^*\mathrm{V}\mathcal{G}$, where $e$ is the identity section of $\mathcal{G}$.
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and denote with $e$ the identity section of $\mathcal{G}$. Then we define the \textbf{LAB $\mathcal{g}$ of $\mathcal{G}$} as the vector bundle $e^*\mathrm{V}\mathcal{G}$.
 \end{definitions}
 
 As we have seen, elements of $L(\mathcal{G})$ are as usual therefore determined by their value at $e_M$:
@@ -2337,13 +2339,28 @@ e^*\pi^*\mathcal{g}
 =
 \mathcal{g}.
 \eas
-By this we also know that $\mathrm{V}\mathcal{G}$ is trivial if and only if $\mathcal{g}$ is trivial; as also argued in \cite[\S 3.5, discussion after Cor.\ 3.5.4, page 121]{mackenzieGeneralTheory}. For sections we therefore get
+By this we also know that $\mathrm{V}\mathcal{G}$ is trivial if and only if $\mathcal{g}$ is trivial; as also argued in \cite[\S 3.5, discussion after Cor.\ 3.5.4, page 121]{mackenzieGeneralTheory}. Compare this result with $\mathrm{T}G \cong G \times \mathfrak{g}$, where $G$ is a Lie group with Lie algebra $\mathfrak{g}$. We recover this result by restricting to the Lie group fibres $\mathcal{G}_x$ ($x \in M$), that is,
 \bas
-\Gamma(\mathrm{V}\mathcal{G})
-&\cong
-C^\infty(\mathcal{G}) \otimes_{C^\infty(M)} \Gamma(\mathcal{g}).
+\mathrm{V}\mathcal{G}|_{\mathcal{G}_x}
+&=
+\mathrm{T}\mathcal{G}_x
+\cong
+\mathcal{G}_x \times \mathcal{g}_x
+=
+\pi^*\mathcal{g}|_{\mathcal{G}_x}.
 \eas
+%For sections we therefore get
+%\bas
+%\Gamma(\mathrm{V}\mathcal{G})
+%&\cong
+%C^\infty(\mathcal{G}) \otimes_{C^\infty(M)} \Gamma(\mathcal{g}).
+%\eas
 \end{remark}
+
+\begin{proof}[Proof of Cor.\ \ref{cor:TLGBAsLGB}]
+\leavevmode\newline
+
+\end{proof}
 
 We are going to define LGB representations and corresponding LAB representations.
 
