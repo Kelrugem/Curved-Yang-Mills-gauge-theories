@@ -396,9 +396,45 @@ No. 1, Sec. 4, Roosevelt Rd., Taipei City 106, Taiwan Room 503, Cosmology Buildi
 
 \section{Introduction}
 
-\subsection{Basic notations}
+\subsection{Basic notations}\label{BasicNotations}
 
+\begin{itemize}
+	\item With $f^*F$ we denote the pullback/pull-back of the fibre bundles $F \to M$ under a smooth map $f: N \to M$. Similarly we denote the pullbacks of sections of a fibre bundle.
+	%We will also have sections $F$ as an element of $\Gamma\left( \left(\bigotimes_{m=1}^{l} E_m^*\right) \otimes E_{l+1} \right)$, where $E_1, \dots E_{l+1}$ ($l \in \mathbb{N}$) are real vector bundles of finite rank over $N$. Those pull-back as section, denoted by $\Phi^*F$, we will view as an element of $\Gamma\left( \mleft(\bigotimes_{m=1}^{l} \mleft(\Phi^*E_m\mright)^*\mright) \otimes \Phi^*E_{l+1} \right)$, and it is essentially given by
+%\bas
+	%(\Phi^*F)(\Phi^*\nu_1, \dotsc , \Phi^*\nu_l)
+	%&=
+	%\Phi^*\mleft( F\mleft( \nu_1, \dotsc, \nu_l \mright) \mright)
+%\eas
+%for all $\nu_1 \in \Gamma(E_1), \dotsc, \nu_l \in \Gamma(E_l)$, using that pullbacks of sections generate the sections of a pullback bundle. 
+	\item Let $F \stackrel{\pi_F}{\to} M$ and $G \stackrel{\pi_G}{\to} N$ be two fibre bundles over smooth manifolds $M$ and $N$, and let $\phi: N \to M$ be a smooth map. Furthermore, let us assume we have a morphism $\Phi: G \to F$ of fibre bundles over $\phi$, that is, $\Phi$ is a smooth map such that the following diagram commutes
+	\begin{center}
+		\begin{tikzcd}
+		G \arrow{d}{\pi_G} \arrow{r}{\Phi} & F \arrow{d}{\pi_F}\\
+		N \arrow{r}{\phi} & M
+		\end{tikzcd}
+	\end{center}
+especially, $\pi_F \circ \Phi = \phi \circ \pi_G$.
+We make often use of that such morphisms have a 1:1 correspondence to \textbf{base-preserving} fibre bundle morphisms $\widetilde{\Phi}: G \to \phi^*F$, \textit{i.e.}\ $\widetilde{\Phi}$ is a smooth map with $\phi^*\pi_F \circ \widetilde{\Phi} = \pi_G$. For $p \in N$ the morphism $\widetilde{\Phi}$ has the form
+\bas
+\widetilde{\Phi}_p
+&=
+(p, \Phi_p),
+\eas
+that is,
+\bas
+\widetilde{\Phi}_p(g)
+&=
+\bigl(p, \Phi_p(g) \bigr)
+\eas
+for all $g \in G_p$, which is well-defined since $\Phi_p(g) \in F_{\phi(p)}$. The map $\widetilde{\Phi} \mapsto \Phi \coloneqq \mathrm{pr}_2 \circ \widetilde{\Phi}$ is then a bijective map between base-preserving morphisms $G \to \phi^*F$ and morphisms $G \to F$ over $\phi$, where $\mathrm{pr}_2$ is the projection onto the second component. One can extend this similarly for more specific types of morphisms like vector bundle-morphisms.
 
+Observe that $\widetilde{\Phi}$ is an isomorphism (diffeomorphism) if and only if $\Phi$ is a fibre-wise isomorphism (diffeomorphism).
+
+We will not mention this 1:1 correspondence explicitly, it should be clear by context. Hence, we will also denote $\widetilde{\Phi}$ by $\Phi$. In fact, we usually calculate with $\widetilde{\Phi}$, while $\Phi$ and its diagram may only arise to give an illustration about the geometry.
+	%
+	%In general we also make use of that sections of $\Phi^*E$ can be viewed as sections of $E$ along $\Phi$, where $E \stackrel{\pi}{\to} N$ is any vector bundle over $N$. Let $\mu \in \Gamma(\Phi^*E)$, then it has the form $\mu_p = (p, v_p)$ for all $p \in M$, where $v_p \in E_{\Phi(p)}$, the fibre of $E$ at $\Phi(p)$; and a section $\nu$ of $E$ along $\Phi$ is a smooth map $M \to E$ such that $\pi(\nu) \coloneqq \pi \circ \nu = \Phi$. Then on one hand $\mathrm{pr}_2 \circ \mu$ is a section along $\Phi$, where $\mathrm{pr}_2$ is the projection onto the second component, and on the other hand $M \ni p \mapsto (p, \nu_p)$ defines an element of $\Gamma(\Phi^*E)$. With that one can show that there is a 1:1 correspondence of $\Gamma(\Phi^*E)$ with sections along $\Phi$. We do not necessarily mention it when we make use of that identification, it should be clear by the context.
+\end{itemize}
 
 \subsection{Assumed background knowledge}
 
@@ -2318,7 +2354,13 @@ for all $x \in M$, where we used that $\mathcal{G}_x$ is isomorphic to $G$ as a 
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and denote with $e$ the identity section of $\mathcal{G}$. Then we define the \textbf{LAB $\mathcal{g}$ of $\mathcal{G}$} as the vector bundle $e^*\mathrm{V}\mathcal{G}$.
 \end{definitions}
 
-As we have seen, elements of $L(\mathcal{G})$ are as usual therefore determined by their value at $e_M$:
+\subsection{Vertical Maurer-Cartan form of LGBs}
+
+As one may expect, elements of $L(\mathcal{G})$ are as determined by their value at $e_M$; this can be shown with the Maurer-Cartan form on LGBs, which we will call vertical Maurer-Cartan form. It will be clear later why we choose to add this adjective; however, as a first argument recal Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs}, especially the last paragraph.
+
+\begin{definitions}{Vertical Maurer-Cartan form of LGBs}{MCFormOnLGBs}
+Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. The \textbf{vertical Maurer-Cartan form $\mu_\mathcal{G}$} is then defined to be an element of $\Omega^1($
+\end{definitions}
 
 \begin{corollaries}{Tangent space of $\mathcal{G}$, \newline \cite[\S 3.5, a reformulation of Prop.\ 3.5.3 and Cor.\ 3.5.4, page 121]{mackenzieGeneralTheory}}{TLGBAsLGB}
 Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. Then we have an isomorphism of vector bundles
@@ -2359,12 +2401,23 @@ By this we also know that $\mathrm{V}\mathcal{G}$ is trivial if and only if $\ma
 
 \begin{proof}[Proof of Cor.\ \ref{cor:TLGBAsLGB}]
 \leavevmode\newline
-
+This can be quickly shown by observing that we have the following commuting diagram
+\begin{center}
+	\begin{tikzcd}
+	\mathrm{V}\mathcal{G} \arrow{d} \arrow{r}{\mu_\mathcal{G}} & \mathcal{g} \arrow{d}\\
+	\mathcal{G} \arrow{r}{\pi} & M
+	\end{tikzcd}
+\end{center}
+where $\mu_\mathcal{G}$
 \end{proof}
+
+\subsection{LABs of pullback LGBs}
 
 We are going to define LGB representations and corresponding LAB representations.
 
 \subsection{Fundamental vector fields}
+
+\subsection{Differential of smooth LGB actions}
 
 \section{Connections and curvature on LGB principal bundles}
 
