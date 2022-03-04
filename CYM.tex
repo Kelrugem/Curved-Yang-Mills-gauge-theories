@@ -2183,7 +2183,6 @@ for all $g \in \mathcal{G}$ and $x \coloneqq \pi(g)$, where $\mathrm{pr}_2$ is t
 \end{corollaries}
 
 \begin{remarks}{Abstract notation 2}{AbstractNotationTwoForLeftInvarVfs}
-\leavevmode\newline
 Since $e^*\mathrm{V}\mathcal{G} \cong \mathrm{V}\mathcal{G}|_{e_M}$ is a very natural isomorphism, we will often just write
 \bas
 \mleft.X_\nu\mright|_g
@@ -2358,8 +2357,61 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and denote with $e
 
 As one may expect, elements of $L(\mathcal{G})$ are as determined by their value at $e_M$; this can be shown with the Maurer-Cartan form on LGBs, which we will call vertical Maurer-Cartan form. It will be clear later why we choose to add this adjective; however, as a first argument recal Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs}, especially the last paragraph.
 
-\begin{definitions}{Vertical Maurer-Cartan form of LGBs}{MCFormOnLGBs}
-Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. The \textbf{vertical Maurer-Cartan form $\mu_\mathcal{G}$} is then defined to be an element of $\Omega^1($
+\begin{corollaries}{Well-definedness of the vertical Maurer-Cartan form}{VertMCVormIsWellDefined}
+Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. Then the following map
+\bas
+(\mu_\mathcal{G})_g(v)
+&\coloneqq
+\mleft( \mathrm{D}_g L_{g^{-1}} \mright)(v)
+\eas
+for all $g \in \mathcal{G}$ and $v \in V_g\mathcal{G}$,
+is an element of $\Gamma(\mathrm{V}^*\mathcal{G} \otimes \pi^*\mathcal{g})$, where $\mathrm{V}^*\mathcal{G}$ is the dual bundle of $\mathrm{V}\mathcal{G}$.
+\end{corollaries}
+
+\begin{proof}
+\leavevmode\newline
+Observe that
+\bas
+\mathrm{D}_g L_{g^{-1}}: \mathrm{V}_g\mathcal{G} &\to \mathrm{V}_{e_x}\mathcal{G} \cong \mleft( \pi^*\mathcal{g} \mright)_g
+\eas
+where $x \coloneqq \pi(g)$ and $e_x$ is the neutral element of $\mathcal{G}_x$. Smoothness follows similarly to the smoothness of left-invariant vector fields, that is, denote with $\mu$ the multiplication $\mathcal{G} * \mathcal{G} \to \mathcal{G}$ and recall the arguments and the notation in the proof of Cor.\ \ref{cor:LeftInvVfToLAB}. We have
+\bas
+&\mathrm{T}\mleft(\mathcal{G} * \mathcal{G}\mright)\\
+&=
+\left\{
+	(Y, Z)
+	~\middle|~
+	Y \in \mathrm{T}_q \mathcal{G}, Z \in \mathrm{T}_h \mathcal{G} \text{ with } \mathrm{D}_q\pi(Y) = \mathrm{D}_h\pi(Z), \text{ where } q, h \in \mathcal{G} \text{ with } \pi(q)=\pi(h)
+\right\}
+\eas
+and thus
+\bas
+\mleft( 0_{g^{-1}}, v \mright) &\in \mathrm{T}(\mathcal{G} * \mathcal{G})
+\eas
+where $0$ is the zero vector field, $v \in \mathrm{V}_g\mathcal{G}$ and $g \in \mathcal{G}$. Therefore we can calculate
+\bas
+\mathrm{D}_{\mleft(g^{-1}, g \mright)}\mu(0_{g^{-1}}, v)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\mleft(g^{-1} \cdot \gamma \mright)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\mleft(L_{g^{-1}} \circ \gamma \mright)
+=
+\mathrm{D}_{g}L_{g^{-1}}(v)
+=
+\mu_{\mathcal{G}}(v),
+\eas
+where $\gamma: I \to \mathcal{G}_{x}$ ($I$ an open interval containing 0, and $x \coloneqq \pi(g)$) is a curve with $\gamma(0)= g$ and $\mathrm{d}/\mathrm{d}t|_{t=0} \gamma = v$. Since $\mu$ is smooth, also $\mathrm{D}\mu \in \Omega^1(\mathcal{G}*\mathcal{G}; \mu^*\mathcal{G})$ is smooth. Denote with $\iota_0$ the contraction 
+\end{proof}
+
+\begin{definitions}{Vertical Maurer-Cartan form of LGBs, \newline \cite[generalization of Def.\ 3.5.2, page 148]{Hamilton}}{MCFormOnLGBs}
+Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. The \textbf{vertical Maurer-Cartan form $\mu_\mathcal{G}$} is then defined to be an element of $\Gamma\mleft( \mathrm{V}^*\mathcal{G} \otimes \pi^*\mathcal{g} \mright)$ given by
+\bas
+(\mu_\mathcal{G})_g(v)
+&\coloneqq
+\mleft( \mathrm{D}_g L_{g^{-1}} \mright)(v)
+\eas
+for all $g \in \mathcal{G}$ and $v \in V_g\mathcal{G}$,
+where $\mathrm{V}^*\mathcal{G}$ is the dual bundle of $\mathrm{V}\mathcal{G}$.
 \end{definitions}
 
 \begin{corollaries}{Tangent space of $\mathcal{G}$, \newline \cite[\S 3.5, a reformulation of Prop.\ 3.5.3 and Cor.\ 3.5.4, page 121]{mackenzieGeneralTheory}}{TLGBAsLGB}
