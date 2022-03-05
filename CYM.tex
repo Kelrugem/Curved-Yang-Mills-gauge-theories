@@ -2268,7 +2268,7 @@ X_\nu|_g,
 where $\gamma: I \to \mathcal{G}_{x}$ ($I$ an open interval containing 0) is a curve with $\gamma(0)= e_x$ and $\mathrm{d}/\mathrm{d}t|_{t=0} \gamma = \nu_x$. Since $\mu$ is smooth, $\mathrm{D}\mu$ is smooth, and thus 
 \bas
 \mathcal{G} &\to \mathrm{T}(\mathcal{G} * \mathcal{G}),\\
-g &\mapsto \mleft.\bigl(\mathrm{D}\mu \circ (0,\nu)\bigr)\mright|_g = \mathrm{D}_{(g, e_x)}\mu\mleft(0_g, \nu_{\pi(g)}\mright) = X_\nu|_g
+g &\mapsto \mleft.\bigl(\mathrm{D}\mu \circ (0,\nu_\pi)\bigr)\mright|_g = \mathrm{D}_{(g, e_x)}\mu\mleft(0_g, \nu_{\pi(g)}\mright) = X_\nu|_g
 \eas
 is smooth, also using the smoothness of $\nu$, $\pi$ and $g \mapsto 0_g$.
 %Fix an element $g$ of $\mathcal{G}$ and a trivialization of $\mathcal{G}$ around $g$, so, w.r.t.\ this trivialization $\mathcal{G} \cong U \times G$ ($U$ open subset of $M$). Then define a section $\sigma$ of this trivial bundle to be the constant section with values $g$. By Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs} we have
@@ -2316,7 +2316,7 @@ where $\psi: \Gamma(e^*\mathrm{V}\mathcal{G}) \to L(\mathcal{G}), \nu \mapsto X_
 for all $\nu \in \Gamma(e^*\mathrm{V}\mathcal{G})$ and $x \in M$. This finishes the proof.
 \end{proof}
 
-Hence, it immediately follows:
+This result shows the typical statement about that elements of $L(\mathcal{G})$ are uniquely determined by their values at $e_M$. It immediately follows, too, that:
 
 \begin{corollaries}{LGBs induce an LAB structure, \newline\cite[\S 3.5, simplified version of the discussion after Cor.\ 3.5.4, page 121ff.]{mackenzieGeneralTheory}}{LGBToLAB}
 Let $G \to \mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and denote with $e$ the identity section of $\mathcal{G}$. Then $\mathcal{g} \coloneqq e^*\mathrm{V}\mathcal{G} \to M$ admits the structure as an LAB with structural Lie algebra $\mathfrak{g}$, the Lie algebra of $G$, and the fibres $\mathcal{g}_x$ ($x \in N$) are the Lie algebras of $\mathcal{G}_x$. The field of Lie algebra brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ is given by
@@ -2355,17 +2355,16 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and denote with $e
 
 \subsection{Vertical Maurer-Cartan form of LGBs}
 
-As one may expect, elements of $L(\mathcal{G})$ are as determined by their value at $e_M$; this can be shown with the Maurer-Cartan form on LGBs, which we will call vertical Maurer-Cartan form. It will be clear later why we choose to add this adjective; however, as a first argument recal Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs}, especially the last paragraph.
+As one may expect, the last result gives hints about the tangent bundle structure of $\mathcal{G}$; this can be shown with the Maurer-Cartan form on LGBs, which we will call vertical Maurer-Cartan form. It will be clear later why we choose to add this adjective; however, as a first argument recall Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs}, especially the last paragraph.
 
 \begin{corollaries}{Well-definedness of the vertical Maurer-Cartan form}{VertMCVormIsWellDefined}
-Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. Then the following map
+Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. Define the following map
 \bas
 (\mu_\mathcal{G})_g(v)
 &\coloneqq
 \mleft( \mathrm{D}_g L_{g^{-1}} \mright)(v)
 \eas
-for all $g \in \mathcal{G}$ and $v \in V_g\mathcal{G}$,
-is an element of $\Gamma(\mathrm{V}^*\mathcal{G} \otimes \pi^*\mathcal{g})$, where $\mathrm{V}^*\mathcal{G}$ is the dual bundle of $\mathrm{V}\mathcal{G}$.
+for all $g \in \mathcal{G}$ and $v \in V_g\mathcal{G}$. Then this map is an element of $\Gamma(\mathrm{V}^*\mathcal{G} \otimes \pi^*\mathcal{g})$, where $\mathrm{V}^*\mathcal{G}$ is the dual bundle of $\mathrm{V}\mathcal{G}$.
 \end{corollaries}
 
 \begin{proof}
@@ -2400,11 +2399,31 @@ where $0$ is the zero vector field, $v \in \mathrm{V}_g\mathcal{G}$ and $g \in \
 =
 \mu_{\mathcal{G}}(v),
 \eas
-where $\gamma: I \to \mathcal{G}_{x}$ ($I$ an open interval containing 0, and $x \coloneqq \pi(g)$) is a curve with $\gamma(0)= g$ and $\mathrm{d}/\mathrm{d}t|_{t=0} \gamma = v$. Since $\mu$ is smooth, also $\mathrm{D}\mu \in \Omega^1(\mathcal{G}*\mathcal{G}; \mu^*\mathcal{G})$ is smooth. Denote with $\iota_0$ the contraction 
+where $\gamma: I \to \mathcal{G}_{x}$ ($I$ an open interval containing 0, and $x \coloneqq \pi(g)$) is a curve with $\gamma(0)= g$ and $\mathrm{d}/\mathrm{d}t|_{t=0} \gamma = v$. Denote with $0^{-1}$ the vector field on $\mathcal{G}$ given by $g \mapsto 0_{g^{-1}}$ and with $\iota_{0^{-1}}$ the contraction with $0^{-1}$, that is,
+\bas
+\mleft.\mleft(\iota_{0^{-1}}\mathrm{D}\mu\mright)\mright|_g
+&\coloneqq
+\mathrm{D}_{\mleft( g^{-1}, g \mright)}\mu\mleft( 0_{g^{-1}}, \cdot \mright)
+=
+\Bigl[
+	\mathrm{V}_g\mathcal{G} \ni v \mapsto 
+	\mathrm{D}_{\mleft( g^{-1}, g \mright)}\mu\mleft( 0_{g^{-1}}, v \mright)
+\Bigr]
+=
+\mu_\mathcal{G}
+\eas
+for all $g \in \mathcal{G}$, using the structure of $\mathrm{T}(\mathcal{G} *\mathcal{G})$. Thus, we get in total that
+\bas
+\mu_{\mathcal{G}}
+&=
+\iota_{0^{-1}}\mathrm{D}\mu 
+\in \Gamma(V^*\mathcal{G} \otimes \pi^*\mathcal{g}),
+\eas
+using the smoothness of all involved parts, especially that $\mu$ is smooth, hence also $\mathrm{D}\mu$ is smooth as an element of $\Omega^1(\mathcal{G}*\mathcal{G}; \mu^*\mathcal{G})$.
 \end{proof}
 
 \begin{definitions}{Vertical Maurer-Cartan form of LGBs, \newline \cite[generalization of Def.\ 3.5.2, page 148]{Hamilton}}{MCFormOnLGBs}
-Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. The \textbf{vertical Maurer-Cartan form $\mu_\mathcal{G}$} is then defined to be an element of $\Gamma\mleft( \mathrm{V}^*\mathcal{G} \otimes \pi^*\mathcal{g} \mright)$ given by
+Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. The map defined in Cor.\ \ref{cor:VertMCVormIsWellDefined} is the \textbf{vertical Maurer-Cartan form $\mu_\mathcal{G}$}, \textit{i.e.}\ defined to be an element of $\Gamma\mleft( \mathrm{V}^*\mathcal{G} \otimes \pi^*\mathcal{g} \mright)$ given by
 \bas
 (\mu_\mathcal{G})_g(v)
 &\coloneqq
@@ -2414,7 +2433,22 @@ for all $g \in \mathcal{G}$ and $v \in V_g\mathcal{G}$,
 where $\mathrm{V}^*\mathcal{G}$ is the dual bundle of $\mathrm{V}\mathcal{G}$.
 \end{definitions}
 
-\begin{corollaries}{Tangent space of $\mathcal{G}$, \newline \cite[\S 3.5, a reformulation of Prop.\ 3.5.3 and Cor.\ 3.5.4, page 121]{mackenzieGeneralTheory}}{TLGBAsLGB}
+\begin{remarks}{Recovering of the classical definition}{RecoveringofClassicalMCForm}
+Observe that $\mu_{\mathcal{G}}|_{\mathcal{G}_x}$ ($x \in M$) is the typical Maurer-Cartan form of $\mathcal{G}_x$, hence, $\mu_{\mathcal{G}}$ restricts to the Maurer-Cartan form of Lie groups on each fibre.
+
+Also recall Subsection \ref{BasicNotations}, we have a 1:1 correspondence of $\mu_\mathcal{G}$ to the following commuting diagram
+\begin{center}
+	\begin{tikzcd}
+		\mathrm{V}\mathcal{G} \arrow{d} \arrow{r}{\mu_\mathcal{G}} & \mathcal{g} \arrow{d}\\
+		\mathcal{G} \arrow{r}{\pi} & M
+	\end{tikzcd}
+\end{center}
+which is the same diagram as in \cite[\S 3.5, special situation of Prop.\ 3.5.3, page 121]{mackenzieGeneralTheory}.
+\end{remarks}
+
+We can finally finish the discussion about the vertical bundle of an LGB.
+
+\begin{corollaries}{Vertical tangent space of $\mathcal{G}$, \newline \cite[\S 3.5, a reformulation of Prop.\ 3.5.3, page 121]{mackenzieGeneralTheory}}{TLGBAsLGB}
 Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. Then we have an isomorphism of vector bundles
 \bas
 \mathrm{V}\mathcal{G} &\cong \pi^*\mathcal{g}.
@@ -2423,7 +2457,7 @@ Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. Th
 
 \begin{remark}
 \leavevmode\newline
-Observe that by Cor.\ \ref{cor:PullBackLABIsLAB} we know that $\mathrm{V}\mathcal{G}$ admits a unique LAB structure such that $\mathrm{V}\mathcal{G} \cong \pi^*\mathcal{g}$ is an isomorphism of LABs. This statement is also not in contradiction with $\mathcal{g} = e^*\mathrm{V}\mathcal{G}$, because
+Observe that by Cor.\ \ref{cor:PullBackLABIsLAB} we know that $\mathrm{V}\mathcal{G}$ admits a unique LAB structure such that $\mathrm{V}\mathcal{G} \cong \pi^*\mathcal{g}$ is an isomorphism of LABs. This statement is also not in contradiction with $\mathcal{g} = e^*\mathrm{V}\mathcal{G}$ ($e$ the identity section of $\mathcal{G}$), because
 \bas
 e^*\mathrm{V}\mathcal{G}
 &=
@@ -2449,23 +2483,37 @@ By this we also know that $\mathrm{V}\mathcal{G}$ is trivial if and only if $\ma
 %&\cong
 %C^\infty(\mathcal{G}) \otimes_{C^\infty(M)} \Gamma(\mathcal{g}).
 %\eas
+
+Last but not least, sections of $\mathrm{V}\mathcal{G}$ are therefore generated by sections of $\mathcal{g}$, the left-invariant vector fields.
 \end{remark}
 
 \begin{proof}[Proof of Cor.\ \ref{cor:TLGBAsLGB}]
 \leavevmode\newline
-This can be quickly shown by observing that we have the following commuting diagram
+This can be quickly shown by recalling Rem.\ \ref{rem:RecoveringofClassicalMCForm}, that is, we have the following commuting diagram
 \begin{center}
 	\begin{tikzcd}
 	\mathrm{V}\mathcal{G} \arrow{d} \arrow{r}{\mu_\mathcal{G}} & \mathcal{g} \arrow{d}\\
 	\mathcal{G} \arrow{r}{\pi} & M
 	\end{tikzcd}
 \end{center}
-where $\mu_\mathcal{G}$
+where $\mu_\mathcal{G}$ is defined as in Def.\ \ref{def:MCFormOnLGBs}, and $\mu_{\mathcal{G}}$ restricts to the Maurer-Cartan form of $\mathcal{G}_x$ ($x \in M$) on each fibre of $\mathcal{G}$; especially, $\mu_\mathcal{G}: \mathrm{V}\mathcal{G} \to \mathcal{g}$ is a fibre-wise isomorphism (since $\mathrm{D}_gL_{g^{-1}}$ is an isomorphism). Hence, as described in Subsection \ref{BasicNotations}, $\mu_\mathcal{G}$ as an element of $\Gamma(\mathrm{V}^*\mathcal{G} \otimes \pi^*\mathcal{G})$, \textit{i.e.}\ a vector bundle morphism $\mathrm{V}\mathcal{G} \to \pi^*\mathcal{g}$ (linearity of $\mu_G$ is clear), is a vector bundle isomorphism. This finishes the proof.
 \end{proof}
 
 \subsection{LABs of pullback LGBs}
 
-We are going to define LGB representations and corresponding LAB representations.
+We are going to define LGB representations and corresponding LAB representations. Since group representation are a special form of actions, we will have something similar in the case of LGB representations. Since actions are defined as maps on a pullback of an LGB $\mathcal{G}$, which is also an LGB by Cor.\ \ref{cor:PullbackLGB}, we expect that the corresponding LAB representation is related to the LAB of the pullback of $\mathcal{G}$. It is natural to think of this LAB as the pullback of $\mathcal{g}$, which is also an LAB by Cor.\ \ref{cor:PullBackLABIsLAB}. Let us show this now with the following important result.
+
+\begin{propositions}{Differentials of LGB homormophisms are LAB homomorphisms}{}
+Let $\mathcal{H} \to N$ and $\mathcal{G} \to M$ be two LGBs over two smooth manifolds $N$ and $M$, and we denote with $\mathcal{h}$ and $\mathcal{g}$ the LABs of $\mathcal{H}$ and $\mathcal{G}$, respectively. Furthermore, assume that we have an LGB morphism $F: \mathcal{H} \to \mathcal{G}$ over a smooth map $f: N \to M$. 
+\end{propositions}
+
+\begin{corollaries}{LAB of pullback LGB is pullback LAB, \newline \cite[\S 3, Thm.\ 3.5, page 21]{PullbackLGBLAB}}{LABOfPullbackLGBIsPullbackLAB}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and let $f: N \to M$ be a smooth map defined on another smooth manifold $N$. Then the LAB of $f^*\mathcal{G}$ is isomorphic to the pullback LAB $f^*\mathcal{g}$.
+\end{corollaries}
+
+\begin{proof}
+\leavevmode\newline
+\end{proof}
 
 \subsection{Fundamental vector fields}
 

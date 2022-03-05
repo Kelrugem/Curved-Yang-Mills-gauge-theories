@@ -16,11 +16,11 @@
 \contentsline {subsection}{\numberline {6.2}From LGBs to LABs}{32}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Vertical Maurer-Cartan form of LGBs}{39}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}LABs of pullback LGBs}{41}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Fundamental vector fields}{41}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Differential of smooth LGB actions}{41}{subsection.6.6}%
-\contentsline {section}{\numberline {7}Connections and curvature on LGB principal bundles}{41}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Toy model}{41}{subsection.7.1}%
-\contentsline {section}{\numberline {8}Conclusion}{41}{section.8}%
-\contentsline {section}{\nonumberline List of References}{41}{section*.3}%
-\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{41}{appendix.A}%
+\contentsline {subsection}{\numberline {6.5}Fundamental vector fields}{42}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Differential of smooth LGB actions}{42}{subsection.6.6}%
+\contentsline {section}{\numberline {7}Connections and curvature on LGB principal bundles}{42}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Toy model}{42}{subsection.7.1}%
+\contentsline {section}{\numberline {8}Conclusion}{42}{section.8}%
+\contentsline {section}{\nonumberline List of References}{42}{section*.3}%
+\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{43}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

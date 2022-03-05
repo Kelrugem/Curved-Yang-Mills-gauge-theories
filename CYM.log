@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  4 MAR 2022 21:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  6 MAR 2022 00:15
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1315,21 +1315,25 @@ Overfull \hbox (4.5506pt too wide) in paragraph at lines 1809--1814
 5 is then iso-mor-phic to $\OT1/lmr/m/n/10.95  [][]$
  []
 
-[27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] (CYM.bbl
+[27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
+(CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-) [41] (CYM.aux)
+[42]) [43] (CYM.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33542 strings out of 478907
- 699517 string characters out of 2851891
- 1189800 words of memory out of 3000000
- 50622 multiletter control sequences out of 15000+600000
+ 33596 strings out of 478907
+ 700803 string characters out of 2851891
+ 1190034 words of memory out of 3000000
+ 50671 multiletter control sequences out of 15000+600000
  503247 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,108p,10627b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1369,9 +1373,9 @@ s/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
 /kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (42 pages, 711319 bytes).
+Output written on CYM.pdf (44 pages, 722302 bytes).
 PDF statistics:
- 785 PDF objects out of 1000 (max. 8388607)
- 171 named destinations out of 1000 (max. 500000)
+ 807 PDF objects out of 1000 (max. 8388607)
+ 176 named destinations out of 1000 (max. 500000)
  205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
