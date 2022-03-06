@@ -427,11 +427,13 @@ that is,
 &=
 \bigl(p, \Phi_p(g) \bigr)
 \eas
-for all $g \in G_p$, which is well-defined since $\Phi_p(g) \in F_{\phi(p)}$. The map $\widetilde{\Phi} \mapsto \Phi \coloneqq \mathrm{pr}_2 \circ \widetilde{\Phi}$ is then a bijective map between base-preserving morphisms $G \to \phi^*F$ and morphisms $G \to F$ over $\phi$, where $\mathrm{pr}_2$ is the projection onto the second component. One can extend this similarly for more specific types of morphisms like vector bundle-morphisms.
+for all $g \in G_p$, which is well-defined since $\Phi_p(g) \in F_{\phi(p)}$. The map $\widetilde{\Phi} \mapsto \Phi \coloneqq \mathrm{pr}_2 \circ \widetilde{\Phi}$ is then a bijective map between base-preserving morphisms $G \to \phi^*F$ and morphisms $G \to F$ over $\phi$, where $\mathrm{pr}_2$ is the projection onto the second component. 
 
-Observe that $\widetilde{\Phi}$ is an isomorphism (diffeomorphism) if and only if $\Phi$ is a fibre-wise isomorphism (diffeomorphism).
+In total, $\widetilde{\Phi}$ is a base-preserving morphism if and only if $\Phi$ is a morphism over $\phi$; in fact, one defines pullback bundles in such a way that this equivalence holds. Observe that $\widetilde{\Phi}$ is an isomorphism (diffeomorphism) if and only if $\Phi$ is a fibre-wise isomorphism (diffeomorphism).
 
-We will not mention this 1:1 correspondence explicitly, it should be clear by context. Hence, we will also denote $\widetilde{\Phi}$ by $\Phi$. In fact, we usually calculate with $\widetilde{\Phi}$, while $\Phi$ and its diagram may only arise to give an illustration about the geometry.
+One can extend all of this similarly for more specific types of morphisms like vector bundle-morphisms.
+
+Most of the time we will not mention this 1:1 correspondence explicitly, it should be clear by context. Hence, we will also denote $\widetilde{\Phi}$ by $\Phi$. In fact, we usually calculate with $\widetilde{\Phi}$, while $\Phi$ and its diagram may only arise to give an illustration about the geometry.
 	%
 	%In general we also make use of that sections of $\Phi^*E$ can be viewed as sections of $E$ along $\Phi$, where $E \stackrel{\pi}{\to} N$ is any vector bundle over $N$. Let $\mu \in \Gamma(\Phi^*E)$, then it has the form $\mu_p = (p, v_p)$ for all $p \in M$, where $v_p \in E_{\Phi(p)}$, the fibre of $E$ at $\Phi(p)$; and a section $\nu$ of $E$ along $\Phi$ is a smooth map $M \to E$ such that $\pi(\nu) \coloneqq \pi \circ \nu = \Phi$. Then on one hand $\mathrm{pr}_2 \circ \mu$ is a section along $\Phi$, where $\mathrm{pr}_2$ is the projection onto the second component, and on the other hand $M \ni p \mapsto (p, \nu_p)$ defines an element of $\Gamma(\Phi^*E)$. With that one can show that there is a 1:1 correspondence of $\Gamma(\Phi^*E)$ with sections along $\Phi$. We do not necessarily mention it when we make use of that identification, it should be clear by the context.
 \end{itemize}
@@ -1394,7 +1396,7 @@ for all $g, h \in G$, where we also denote left- and right-multiplications (with
 $c_G(P)$ is an LGB by Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}.
 \end{examples}
 
-\section{LGB actions}
+\section{LGB actions, part I}
 
 \subsection{Definition}
 
@@ -2346,7 +2348,7 @@ As already discussed $e^*\mathrm{V}\mathcal{G}$ is a vector bundle. The fibres a
 =
 \mathfrak{g}
 \eas
-for all $x \in M$, where we used that $\mathcal{G}_x$ is isomorphic to $G$ as a Lie group. All fibres are Lie algebras of the fibre Lie group, isomorphic to $\mathfrak{g}$. By construction, the Lie bracket is precisely the Lie bracket isomorphic to the one of $\mathfrak{g}$, and $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ is smooth. Therefore we conclude that $\mathcal{g}$ is an LAB with structural Lie algebra $\mathfrak{g}$.
+for all $x \in M$, where we used that $\mathcal{G}_x$ is isomorphic to $G$ as a Lie group. All fibres are Lie algebras of the fibre Lie group, isomorphic to $\mathfrak{g}$. By construction, the Lie bracket is precisely the Lie bracket isomorphic to the one of $\mathfrak{g}$, and $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ is smooth. Therefore we conclude that $\mathcal{g}$ is an LAB with structural Lie algebra $\mathfrak{g}$. Alternatively see \cite[\S 3.5, Ex.\ 3.5.12, page 126]{mackenzieGeneralTheory} for an explicit construction of an LAB atlas.
 \end{proof}
 
 \begin{definitions}{The LAB of an LGB, \newline\cite[\S 3.5, special situation of Def.\ 3.5.1, page 120]{mackenzieGeneralTheory}}{LABOfAnLGB}
@@ -2501,11 +2503,7 @@ where $\mu_\mathcal{G}$ is defined as in Def.\ \ref{def:MCFormOnLGBs}, and $\mu_
 
 \subsection{LABs of pullback LGBs}
 
-We are going to define LGB representations and corresponding LAB representations. Since group representation are a special form of actions, we will have something similar in the case of LGB representations. Since actions are defined as maps on a pullback of an LGB $\mathcal{G}$, which is also an LGB by Cor.\ \ref{cor:PullbackLGB}, we expect that the corresponding LAB representation is related to the LAB of the pullback of $\mathcal{G}$. It is natural to think of this LAB as the pullback of $\mathcal{g}$, which is also an LAB by Cor.\ \ref{cor:PullBackLABIsLAB}. Let us show this now with the following important result.
-
-\begin{propositions}{Differentials of LGB homormophisms are LAB homomorphisms}{}
-Let $\mathcal{H} \to N$ and $\mathcal{G} \to M$ be two LGBs over two smooth manifolds $N$ and $M$, and we denote with $\mathcal{h}$ and $\mathcal{g}$ the LABs of $\mathcal{H}$ and $\mathcal{G}$, respectively. Furthermore, assume that we have an LGB morphism $F: \mathcal{H} \to \mathcal{G}$ over a smooth map $f: N \to M$. 
-\end{propositions}
+We are going to define LGB representations and corresponding LAB representations. Since group representation are a special form of actions, we will have something similar in the case of LGB representations. Since actions are defined as maps on a pullback of an LGB $\mathcal{G}$, which is also an LGB by Cor.\ \ref{cor:PullbackLGB}, we expect that the corresponding LAB representation is related to the LAB of the pullback of $\mathcal{G}$. It is natural to think of this LAB as the pullback of $\mathcal{g}$, which is also an LAB by Cor.\ \ref{cor:PullBackLABIsLAB}:
 
 \begin{corollaries}{LAB of pullback LGB is pullback LAB, \newline \cite[\S 3, Thm.\ 3.5, page 21]{PullbackLGBLAB}}{LABOfPullbackLGBIsPullbackLAB}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and let $f: N \to M$ be a smooth map defined on another smooth manifold $N$. Then the LAB of $f^*\mathcal{G}$ is isomorphic to the pullback LAB $f^*\mathcal{g}$.
@@ -2513,7 +2511,67 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and let $f: N \to 
 
 \begin{proof}
 \leavevmode\newline
+By Cor.\ \ref{cor:PullbackLGB} we know that $\pi_2: f^*\mathcal{G} \to \mathcal{G}$, the projection onto the second factor, is an LGB morphism over $f$,
+\begin{center}
+	\begin{tikzcd}
+		f^*\mathcal{G} \arrow{d} \arrow{r}{\pi_2} & \mathcal{G} \arrow{d}\\
+		N \arrow{r}{f} & M
+	\end{tikzcd}
+\end{center}
+and it is fibre-wise a Lie group isomorphism such that
+\bas
+\mathrm{D}_{(p,e_x)}\pi_2: \mathcal{h}_p &\to \mathcal{g}_x
+\eas
+is a Lie algebra isomorphism for all $p \in N$, where $e_x$ is the neutral element of $\mathcal{G}_x$ for $x \coloneqq f(p)$, and $\mathcal{h}$ and $\mathcal{g}$ are the LABs of $f^*\mathcal{G}$ and $\mathcal{G}$, respectively; for all of that recall that $\mleft(f^*\mathcal{G}\mright)_p$ and $\mathcal{G}_x$ are Lie groups. Hence, we have a vector bundle morphism over $f$ given by the following commuting diagram
+\begin{center}
+	\begin{tikzcd}[column sep=huge]
+		\mathcal{h} \arrow{d} \arrow{r}{\mathrm{D}_{\mleft( \mathds{1}_N, e_f \mright)} \pi_2} & \mathcal{g} \arrow{d} \\
+		N \arrow{r}{f} & M
+	\end{tikzcd}
+\end{center}
+which describes fibre-wise a Lie algebra isomorphism, where 
+\bas
+\mathrm{D}_{\mleft( \mathds{1}_N, e_f \mright)} \pi_2
+&\coloneqq
+\mathrm{D}\pi_2 \circ \mleft( \mathds{1}_N, e_f \mright)
+=
+\mleft[
+	N \ni p \mapsto \mathrm{D}_{\mleft( p, e_{f(p)} \mright)} \pi_2
+\mright].
+\eas
+By our notes in Subsection \ref{BasicNotations}, we therefore achieve an LAB isomorphism $\mathcal{h} \to f^*\mathcal{g}$.
 \end{proof}
+
+\begin{remarks}{LAB of $f^*\mathcal{G}$}{LABofPullBackNotation}
+Since this isomorphism is very natural, we always use that identification and will refer to $f^*\mathcal{g}$ as \textit{the} LAB of $f^*\mathcal{G}$.
+\end{remarks}
+
+With this we can quickly show the following familiar result.
+
+\begin{corollaries}{Differentials of LGB morphisms are LAB morphisms, \newline \cite[\S 3.5, section about morphisms, page 124f.]{mackenzieGeneralTheory}}{LGBToLABHomomorphis}
+Let $\mathcal{H} \to N$ and $\mathcal{G} \to M$ be two LGBs over two smooth manifolds $N$ and $M$, and we denote with $\mathcal{h}$ and $\mathcal{g}$ the LABs of $\mathcal{H}$ and $\mathcal{G}$, respectively. Furthermore, assume that we have an LGB morphism $F: \mathcal{H} \to \mathcal{G}$ over a smooth map $f: N \to M$. Then
+\bas
+\mathrm{D}_e F: \mathcal{h} &\to \mathcal{g}
+\eas
+is an LAB morphism over $f$, where $e$ is the identity section of $\mathcal{H}$, that is,
+\bas
+\mathrm{D}_eF|_p
+&\coloneqq
+\mleft.\bigl(\mathrm{D}F|_{e_N}\bigr)\mright|_p
+=
+\mathrm{D}_{e_p}F: \mathcal{h}_p \to \mathcal{g}_{f(p)}
+\eas
+for all $p \in N$.
+\end{corollaries}
+
+\begin{proof}
+\leavevmode\newline
+Again by our notes in Subsection \ref{BasicNotations}, we can view $F$ as a base-preserving LGB morphism $F: \mathcal{H} \to f^*\mathcal{G}$, since $f^*\mathcal{G}$ is an LGB whose structure is naturally inherited by $\mathcal{G}$ as given in Cor.\ \ref{cor:PullbackLGB}; similarly for its LAB by Cor.\ \ref{cor:PullBackLABIsLAB}. Thus, it is fibre-wise a Lie group morphism, and its tangent map restricted to the identity section, $\mathrm{D}_eF$, gives fibre-wise a Lie algebra morphism. Thus, $\mathrm{D}_e F: \mathcal{h} \to f^*\mathcal{g}$ is an LAB morphism (using Cor.\ \ref{cor:LABOfPullbackLGBIsPullbackLAB}), and can be seen as an LAB morphism $\mathcal{h} \to \mathcal{g}$ over $f$. Alternatively, it is straightforward and trivial to show it directly.
+\end{proof}
+
+\section{LGB actions, part II}
+
+Finally, we come to the last part of the \textit{basics} for LGBs and their notions needed in this paper. We essentially are left to construct fundamental vector fields, and with their help we can express the differential of the multiplication $\mathcal{G} * \mathcal{G} \to \mathcal{G}$.
 
 \subsection{Fundamental vector fields}
 
