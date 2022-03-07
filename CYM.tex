@@ -2571,7 +2571,31 @@ Again by our notes in Subsection \ref{BasicNotations}, we can view $F$ as a base
 
 \section{LGB actions, part II}
 
-Finally, we come to the last part of the \textit{basics} for LGBs and their notions needed in this paper. We essentially are left to construct fundamental vector fields, and with their help we can express the differential of the multiplication $\mathcal{G} * \mathcal{G} \to \mathcal{G}$.
+Finally, we come to the last part of the \textit{basics} for LGBs and their notions needed in this paper and needed to formulate a new and more general form of gauge theory.
+
+\subsection{LGB and LAB representations}
+
+As usual, representations are a special type of group action, with an infinitesimal analogue. 
+%The approach in \cite[\S 1.7, page 43ff.]{mackenzieGeneralTheory} defines an LGB representation by a map which restricts to a typical representation on each fibre of the LGB. However, in alignment with the previous approach we want to keep the fibre-wise behaviour as a remark while the definition itself emphasizes the global structure. For this it will now be important that we have shown that the pullback of an LGB is again an LGB; recall Cor.\ \ref{cor:PullbackLGB}.
+
+\begin{definitions}{LGB representation, \newline\cite[\S 1.7, special situation of Def.\ 1.7.1, page 43]{mackenzieGeneralTheory}}{LGBRep}
+Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold, $V \stackrel{p}{\to} M$ be a vector bundle, and assume that we have a left $\mathcal{G}$-action on $V$, $\Psi: \mathcal{G}*V \coloneqq p^*\mathcal{G}\to V$. Then we say that $\Psi$ is a \textbf{$\mathcal{G}$-representation on $V$} if it is linear, that is,
+\bas
+\Psi\bigl( (g, \alpha v ) \bigr)
+&=
+\alpha \Psi\bigl( (g, v) \bigr),\\
+\Psi\bigl( (g, v + w) \bigr)
+&=
+\Psi\bigl( (g, v) \bigr) + \Psi\bigl( (g, w ) \bigr)
+\eas
+for all $\alpha \in \mathbb{R}$, and $(g, v), (g, w) \in \mathcal{G}*V$. In alignment with previous notations we may also write $\Psi(g, v) = \Psi_g(v)$, or $\Psi(g, v) = g \cdot v$.
+\end{definitions}
+
+\begin{remarks}{Well-definedness and fibrewise a typical representation}{FibreIsTypicalRep}
+Observe that $(g, v) \in \mathcal{G}*V$ means that $p(v) = \pi(g)$, same for $(g, w)$. Hence, given a base point in $x\in M$, the pairs $(g, v)$ in $\mathcal{G}*V|_{p^{-1}(\{x\})}$ are given by elements $g \in \mathcal{G}_x$ and $v \in V_x$. 
+
+Last but not least, by fixing a base point $x \in M$ we clearly have the typical notion of a $\mathcal{G}_x$-representation on $V_x$.
+\end{remarks}
 
 \subsection{Fundamental vector fields}
 
