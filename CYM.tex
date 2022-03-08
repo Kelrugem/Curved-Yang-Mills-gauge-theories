@@ -2592,14 +2592,85 @@ for all $\alpha \in \mathbb{R}$, and $(g, v), (g, w) \in \mathcal{G}*V$. In alig
 \end{definitions}
 
 \begin{remarks}{Well-definedness and fibrewise a typical representation}{FibreIsTypicalRep}
-Observe that $(g, v) \in \mathcal{G}*V$ means that $p(v) = \pi(g)$, same for $(g, w)$. Hence, given a base point in $x\in M$, the pairs $(g, v)$ in $\mathcal{G}*V|_{p^{-1}(\{x\})}$ are given by elements $g \in \mathcal{G}_x$ and $v \in V_x$. 
+Observe that $(g, v) \in \mathcal{G}*V$ means that $p(v) = \pi(g)$, same for $(g, w)$. Hence, given a base point in $x\in M$, the pairs $(g, v)$ in $\mathcal{G}*V|_{p^{-1}(\{x\})}$ are given by elements $g \in \mathcal{G}_x$ and $v \in V_x$. By Def.\ \ref{def:LiegroupACtion} we also have 
+\bas
+p\bigl(\Psi(g, v)\bigr)
+&=
+\pi(g) = p(v) = x.
+\eas
+Thence, linearity of $\Psi$ is well-defined. In fact, observe that $\mathcal{G} * V = p*\mathcal{G} \cong \pi^*V$ as fibre bundle, therefore $\mathcal{G} * V$ carries not only the structure of an LGB but also of a vector bundle. That is, we have the following commuting diagram
+\begin{center}
+	\begin{tikzcd}
+	\mathcal{G} * V \arrow{r}{\mathrm{pr}_1} \arrow{d}{\mathrm{pr}_2} & \mathcal{G} \arrow{d}{\pi}\\
+	V \arrow{r}{p} & M
+	\end{tikzcd}
+\end{center}
+the horizontal arrows describe the vector bundle structure (viewing $\mathcal{G} * V$ as the vector bundle $\pi^*V$), and the vertical ones the LGB structure (viewing $\mathcal{G} * V$ as the LGB $p^*\mathcal{G}$); $\mathrm{pr}_i$ ($i \in \{1,2\}$) is the projection onto the $i$-th component.
 
 Last but not least, by fixing a base point $x \in M$ we clearly have the typical notion of a $\mathcal{G}_x$-representation on $V_x$.
 \end{remarks}
 
 \subsection{Fundamental vector fields}
 
+\begin{definitions}{Fundamental vector fields, \newline \cite[\S 3.4, generalization of Def.\ 3.4.1, page 143]{Hamilton}}{FundVecs}
+Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \to M$ an LGB over $M$, $f: N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, $N * \mathcal{G} \to N$. For $\nu \in \Gamma(\mathcal{g})$ we define its induced \textbf{fundamental vector field $\widetilde{\nu}$} as an element of $\mathfrak{X}(N)$ by
+\bas
+\widetilde{\nu}_p
+&\coloneqq
+\mathrm{D}_{e_{f(p)}}\Phi_p(\nu_p)
+\eas 
+for all $p \in N$, where $\Phi_p$ is the orbit map defined in Def.\ \ref{def:LRTranslations} and $e_{f(p)}$ the neutral element of $\mathcal{G}_{f(p)}$. 
+
+For left actions we define fundamental vector fields similarly by
+\bas
+\widetilde{\nu}_p
+&\coloneqq
+\mathrm{D}_{e_{f(p)}}\Phi^\prime_p(\nu_p)
+\eas
+for all $p \in N$,
+where $\Phi^\prime_p$ is a slightly adjusted orbit map given by
+\bas
+\mathcal{G}_{f(p)} &\to N,\\
+g &\mapsto g^{-1} \cdot p.
+\eas
+\end{definitions}
+%
+%\subsection{Maurer-Cartan form of LGBs}
+%
+%We discussed the vertical Maurer-Cartan form, the form that is just defined on vertical tangent vectors. However, we can extend the vertical form to a form defined on the whole tangent space of an LGB by using an Ehresmann connection.
+
 \subsection{Differential of smooth LGB actions}
+
+\begin{lemmata}{Tangent space of pullback fibre bundles}{PullbackFibreBundleItsTangentSp}
+Let $M$ and $N$ be two smooth manifolds, $F \stackrel{\pi}{\to} M$ a fibre bundle over $M$, and $f: N \to M$ a smooth map. Then we have for its tangent spaces
+\bas
+\mathrm{T}_{(p, v)}\mleft( f^*F \mright)
+&=
+\bigl\{
+	(X, Y)
+	~\big|~
+	X \in \mathrm{T}_pN, Y\in \mathrm{T}_vF \text{ with } \mathrm{D}_pf(X) = \mathrm{D}_v\pi(Y)
+\bigr\}
+\eas
+for all $(p, v) \in f^*F$.
+\end{lemmata}
+
+\begin{proof}
+\leavevmode\newline
+Recall that $(p, v) \in f^*F$ implies that
+\bas
+f(p) &= \pi(v)
+\eas
+such that we can immediately derive its infinitesimal version as
+\bas
+\mathrm{D}_pf(X) = \mathrm{D}_v\pi(Y)
+\eas
+for all $X \in \mathrm{T}_pN, Y\in \mathrm{T}_vF$. Hence, we have derived that $\mathrm{T}_{(p, v)}\mleft( f^*F \mright)$ is a subset of the set of such pairs $(X, Y)$. That all tangent vectors are of that form can be derived 
+\end{proof}
+
+\begin{theorems}{Differential of smooth LGB actions}{DiffOfLGBAction}
+Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \to M$ an LGB over $M$, $f: N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, $\Phi: N * \mathcal{G} \to N$.
+\end{theorems}
 
 \section{Connections and curvature on LGB principal bundles}
 
