@@ -344,7 +344,7 @@
 \begin{titlepage}
 %\thispagestyle{empty}
 
-\author{Simon-Raphael Fischer\footnote{Email: \href{mailto:sfischer@ncts.tw}{sfischer@ncts.tw}; ORCID iD: \href{https://orcid.org/0000-0002-5859-2825}{0000-0002-5859-2825}} }
+\author{Simon-Raphael Fischer\footnote{Email: \href{mailto:sfischer@ncts.tw}{sfischer@ncts.tw}; ORCiD: \href{https://orcid.org/0000-0002-5859-2825}{0000-0002-5859-2825}} }
 \title{Curved Yang-Mills gauge theories} 
 \subtitle{Infinitesimal and integrated gauge theory}
 \date{\today} 
@@ -2068,6 +2068,8 @@ The left and right translations of Def.\ \ref{def:LeftRightTranslationConjugatio
 q &\mapsto c_\sigma(q) \coloneqq \mleft(L_\sigma \circ R_{\sigma^{-1}}\mright)(q) = \mleft( R_{\sigma^{-1}} \circ L_\sigma \mright)(q) = \sigma_{\pi(q)} \cdot q \cdot \sigma_{\pi(q)}^{-1}.
 \eas
 It is clear that $c_\sigma(gq) = c_\sigma(g) \cdot c_\sigma(q)$ for all $g, q \in \mathcal{G}$ with $\pi(g) = \pi(q)$, and that a smooth inverse is given by $c_{\sigma^{-1}}$; thence, $c_\sigma$ is an LGB isomorphism of $\mathcal{G}$ on itself, an automorphism, in sense of Def.\ \ref{def:LGB morphism}. It is also trivial to check that we have $c_{\sigma \cdot \tau} = c_\sigma \circ c_\tau$, where $\tau$ is another section of $\mathcal{G}$.
+
+Analogously we define $R_\sigma$ as $r_\sigma$ of Def.\ \ref{def:LRTranslations}; with the capital letter we put an emphasis on that the $\mathcal{G}$-action acts on $\mathcal{G}$ itself. Similarly for left translations.
 \end{remark}
 
 Since these are diffeomorphism of the fibres, it makes sense to say that a left-invariant vector field of $\mathcal{G}$ has to be a vertical vector field, that is, it is in the kernel of $\mathrm{D}\pi$, the total differential/tangent map of the projection of $\mathcal{G} \stackrel{\pi}{\to} M$. For this recall that there is the notion of a \textbf{vertical bundle} for fibre bundles $F \stackrel{\varpi}{\to} M$ (as \textit{e.g.}~introduced in \cite[\S 5.1.1, for principal bundles, but it is straightforward to extend the definitions; page 258ff.]{Hamilton}), which is defined as a subbundle $\mathrm{VF} \to F$ of the tangent bundle $\mathrm{T}F \to F$ given as the kernel of $\mathrm{D}\varpi : \mathrm{T}F \to \mathrm{T}M$. The fibres $\mathrm{V}_v F$ of $\mathrm{V}F$ at $v \in F$ are then given by 
@@ -2665,12 +2667,50 @@ such that we can immediately derive its infinitesimal version as
 \bas
 \mathrm{D}_pf(X) = \mathrm{D}_v\pi(Y)
 \eas
-for all $X \in \mathrm{T}_pN, Y\in \mathrm{T}_vF$. Hence, we have derived that $\mathrm{T}_{(p, v)}\mleft( f^*F \mright)$ is a subset of the set of such pairs $(X, Y)$. That all tangent vectors are of that form can be derived 
+for all $X \in \mathrm{T}_pN, Y\in \mathrm{T}_vF$. Hence, we have derived that $\mathrm{T}_{(p, v)}\mleft( f^*F \mright)$ is a subset of the set of such pairs $(X, Y)$. That this is an equivalent description quickly follows by the fact that $f$ and $\pi$ are transversal to each other (trivially, because $\pi$ is a surjective submersion). This means, the following linear map
+\bas
+\mathrm{T}_pN \times \mathrm{T}_vF&\to \mathrm{T}_{f(p)}M,\\
+(X, Y) &\mapsto \mathrm{D}_pf(X) - \mathrm{D}_v\pi(Y)
+\eas
+is surjective because $\pi$ is a submersion; it is also well-defined because of $f(p) = \pi(v)$. Hence, the dimension of the kernel of this map has the dimension
+\bas
+\mathrm{dim}(N) + \mathrm{dim}(F) - \mathrm{dim}(M)
+&=
+\mathrm{dim}(N) + \mathrm{rk}(F)
+=
+\mathrm{dim}(f^*N),
+\eas
+where $\mathrm{dim}$ denotes the dimension as a manifold and $\mathrm{rk}$ the rank of a bundle (the dimension of its structural fibre). Its dimension is precisely the dimension of $f^*F$, and since it is about finite dimensions we can therefore identify $\mathrm{T}_{(p, v)}\mleft( f^*F \mright)$ with this kernel. This concludes the proof due to the fact that the kernel consists of $(X, Y)$ with $\mathrm{D}_pf(X) = \mathrm{D}_v\pi(Y)$.
 \end{proof}
 
 \begin{theorems}{Differential of smooth LGB actions}{DiffOfLGBAction}
 Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \to M$ an LGB over $M$, $f: N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, $\Phi: N * \mathcal{G} \to N$.
 \end{theorems}
+
+\begin{proof}
+\leavevmode\newline
+We want to calculate the derivative of $\Psi$, and due to $N*\mathcal{G} = f^*\mathcal{G}$ we are going to use Lemma \ref{lem:PullbackFibreBundleItsTangentSp}. That is, fix $(p, g) \in N*\mathcal{G}$ and $X \in \mathrm{T}_pN$, $Y \in \mathrm{T}_vF$ with
+\bas
+\mathrm{D}_p f(X) &= \mathrm{D}_v\pi(Y) \eqqcolon \omega \in \mathrm{T}_{f(p)}M.
+\eas
+Recall that we can localize LGB actions in sense of Rem.\ \ref{rem:LocalLGBAction}; so, let $x \coloneqq f(p) = \pi(g)$, and fix a trivialization of $\mathcal{G}$ around $x$. Then it is clear that there is a (local) section $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$. Recall the notations introduced in Def.\ \ref{def:LRTranslations} and \ref{def:LeftRightTranslationConjugation}, then observe that we can write
+\bas
+Y
+&=
+Y 
+	- \mathrm{D}_x \sigma (w)
+	+ \mathrm{D}_x \sigma (w)
+\eas
+and
+\bas
+\mathrm{D}_{e_x}R_\sigma \circ \mathrm{D}_x e
+&=
+\mathrm{D}_x \underbrace{\mleft( R_\sigma \circ e \mright)}
+	_{\mathclap{x \mapsto e_x \sigma_x = \sigma_x}}
+=
+\mathrm{D}_x \sigma
+\eas
+\end{proof}
 
 \section{Connections and curvature on LGB principal bundles}
 
