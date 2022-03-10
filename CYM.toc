@@ -19,10 +19,10 @@
 \contentsline {section}{\numberline {7}LGB actions, part II}{43}{section.7}%
 \contentsline {subsection}{\numberline {7.1}LGB and LAB representations}{44}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Fundamental vector fields}{45}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Differential of smooth LGB actions}{45}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Connections and curvature on LGB principal bundles}{46}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Toy model}{46}{subsection.8.1}%
-\contentsline {section}{\numberline {9}Conclusion}{47}{section.9}%
-\contentsline {section}{\nonumberline List of References}{47}{section*.3}%
-\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{47}{appendix.A}%
+\contentsline {subsection}{\numberline {7.3}Differential of smooth LGB actions}{46}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Connections and curvature on LGB principal bundles}{48}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Toy model}{48}{subsection.8.1}%
+\contentsline {section}{\numberline {9}Conclusion}{48}{section.9}%
+\contentsline {section}{\nonumberline List of References}{48}{section*.3}%
+\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{49}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

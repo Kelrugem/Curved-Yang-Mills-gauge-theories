@@ -58,6 +58,13 @@
 \DeclareFontSubstitution{LS1}{stix}{m}{n}
 \DeclareMathAlphabet{\mathKel}{LS1}{stixscr}{m}{n}
 \DeclareMathAlphabet{\mathcal}{LS1}{stixscr}{m}{n}
+%Big tilde
+\def\oversortoftilde#1{\mathop{\vbox{\m@th\ialign{##\crcr\noalign{\kern3\p@}%
+      \sortoftildefill\crcr\noalign{\kern3\p@\nointerlineskip}%
+      $\hfil\displaystyle{#1}\hfil$\crcr}}}\limits}
+
+\def\sortoftildefill{$\m@th \setbox\z@\hbox{$\braceld$}%
+  \braceld\leaders\vrule \@height\ht\z@ \@depth\z@\hfill\braceru$}
 \makeatother
 \DeclareMathOperator{\sAut}{\mathKel{A\mkern-5.5mu u\mkern-4mu t\mkern-1.5mu}}
 \DeclareMathOperator{\saut}{\mathKel{a\mkern-4.5mu u\mkern-4mu t\mkern-1.5mu}}
@@ -1551,7 +1558,7 @@ p &\mapsto p \cdot \sigma_{f(p)}.
 \end{definitions}
 
 \begin{remarks}{Left action and translation}{LeftTranslation}
-Similarly we define left translations for left actions, which we similarly denote by $l_g$ and $l_\sigma$.
+Similarly we define left translations for left actions, which we similarly denote by $l_g$ and $l_\sigma$. By Rem.\ \ref{rem:LocalLGBAction} we can define $r_\sigma$ (and $l_\sigma$) also for local sections $\sigma \in \Gamma(\mathcal{G}|_U)$ by restricting $N$ onto $f^{-1}(U)$, where $U$ is some open subset of $M$; then $r_\sigma, l_\sigma: f^{-1}(U) \to f^{-1}(U)$.
 \end{remarks}
 
 \begin{remark}\label{SmoothnessOfACtionTranslations}
@@ -1577,7 +1584,7 @@ p &\mapsto (p, g) \mapsto p \cdot g.
 \eas
 Since $f^{-1}(\{x\})$ is an embedded submanifold, $\mleft.N*\mathcal{G}\mright|_{f^{-1}(\{x\})}$ is also a fibre bundle, see for example \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}, and trivially an embedded submanifold of $N*\mathcal{G}$. Altogether, the same arguments as for $r_\sigma$ apply.
 
-Last but not least, $r_\sigma$ is clearly a diffeomorphism with inverse $r_{\sigma^{-1}}$, where $\mleft(\sigma^{-1}\mright)_x = (\sigma_x)^{-1} \eqqcolon \sigma_x^{-1}$. Similarly for $r_g$ if $f^{-1}(\{x\})$ is an embedded submanifold. Analogously for $l_\sigma$ and $l_g$ in case of a left action.
+Last but not least, $r_\sigma$ is clearly a diffeomorphism with inverse $r_{\sigma^{-1}}$, where $\mleft(\sigma^{-1}\mright)_x = (\sigma_x)^{-1} \eqqcolon \sigma_x^{-1}$. Similarly for $r_g$ if $f^{-1}(\{x\})$ is an embedded submanifold (otherwise $r_g$ is just a bijection). Analogously for $l_\sigma$ and $l_g$ in case of a left action.
 \end{remark}
 
 Motivated by the previous remark, it might be hence useful to require that $f$ is a submersion, or that $N$ is actually some bundle over $M$ and $f$ its projection. In fact, this will be later the case.
@@ -2619,7 +2626,7 @@ Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \to M$ an LGB over $M$, $f
 \bas
 \widetilde{\nu}_p
 &\coloneqq
-\mathrm{D}_{e_{f(p)}}\Phi_p(\nu_p)
+\mathrm{D}_{e_{f(p)}}\Phi_p\mleft(\nu_{f(p)}\mright)
 \eas 
 for all $p \in N$, where $\Phi_p$ is the orbit map defined in Def.\ \ref{def:LRTranslations} and $e_{f(p)}$ the neutral element of $\mathcal{G}_{f(p)}$. 
 
@@ -2627,7 +2634,7 @@ For left actions we define fundamental vector fields similarly by
 \bas
 \widetilde{\nu}_p
 &\coloneqq
-\mathrm{D}_{e_{f(p)}}\Phi^\prime_p(\nu_p)
+\mathrm{D}_{e_{f(p)}}\Phi^\prime_p\mleft(\nu_{f(p)}\mright)
 \eas
 for all $p \in N$,
 where $\Phi^\prime_p$ is a slightly adjusted orbit map given by
@@ -2636,14 +2643,27 @@ where $\Phi^\prime_p$ is a slightly adjusted orbit map given by
 g &\mapsto g^{-1} \cdot p.
 \eas
 \end{definitions}
+
+\begin{remarks}{Notation}{FundVecsNotations}
+Again, point-wise this is just the typical definition of a fundamental vector field at $x \coloneqq f(p)$ with respect to $\nu_x \in \mathcal{g}_x$ (except that $f^{-1}(\{x\})$ may not be a manifold). Hence, one has also a point-wise definition which we will also denote similarly by $\widetilde{\nu_x}$. If $f^{-1}(\{x\})$ is not a manifold, then $\mleft.\widetilde{\nu_x}\mright|_p$ is just a formal notation, and it only defines an element of $\mathrm{T}_pN$ which may not be related to a vector field on $f^{-1}(\{x\})$, not even to a vector field on $N$ if $\nu_x$ does not formally come from a fixed section of $\mathcal{g}$.
+
+For long expressions we use the following different font 
+\bas
+\oversortoftilde{\nu}
+\eas
+instead of $\widetilde{\nu}$.
+\end{remarks}
+
 %
 %\subsection{Maurer-Cartan form of LGBs}
 %
 %We discussed the vertical Maurer-Cartan form, the form that is just defined on vertical tangent vectors. However, we can extend the vertical form to a form defined on the whole tangent space of an LGB by using an Ehresmann connection.
 
+\textbf{Adding typical stuff about fundamental vector fields, like Prop 3.4.4 in Hamilton; and smoothness}
+
 \subsection{Differential of smooth LGB actions}
 
-\begin{lemmata}{Tangent space of pullback fibre bundles}{PullbackFibreBundleItsTangentSp}
+\begin{lemmata}{Tangent bundle of pullback fibre bundles}{PullbackFibreBundleItsTangentSp}
 Let $M$ and $N$ be two smooth manifolds, $F \stackrel{\pi}{\to} M$ a fibre bundle over $M$, and $f: N \to M$ a smooth map. Then we have for its tangent spaces
 \bas
 \mathrm{T}_{(p, v)}\mleft( f^*F \mright)
@@ -2684,31 +2704,129 @@ where $\mathrm{dim}$ denotes the dimension as a manifold and $\mathrm{rk}$ the r
 \end{proof}
 
 \begin{theorems}{Differential of smooth LGB actions}{DiffOfLGBAction}
-Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \to M$ an LGB over $M$, $f: N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, $\Phi: N * \mathcal{G} \to N$.
+Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$, $f: N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, $\Phi: N * \mathcal{G} \to N$.
 \end{theorems}
 
 \begin{proof}
 \leavevmode\newline
-We want to calculate the derivative of $\Psi$, and due to $N*\mathcal{G} = f^*\mathcal{G}$ we are going to use Lemma \ref{lem:PullbackFibreBundleItsTangentSp}. That is, fix $(p, g) \in N*\mathcal{G}$ and $X \in \mathrm{T}_pN$, $Y \in \mathrm{T}_vF$ with
+We want to calculate the derivative of $\Psi$, and due to $N*\mathcal{G} = f^*\mathcal{G}$ we are going to use Lemma \ref{lem:PullbackFibreBundleItsTangentSp}. That is, fix $(p, g) \in N*\mathcal{G}$ and $X \in \mathrm{T}_pN$, $Y \in \mathrm{T}_g \mathcal{G}$ with
 \bas
-\mathrm{D}_p f(X) &= \mathrm{D}_v\pi(Y) \eqqcolon \omega \in \mathrm{T}_{f(p)}M.
+\mathrm{D}_p f(X) &= \mathrm{D}_g\pi(Y) \eqqcolon \omega \in \mathrm{T}_{f(p)}M.
 \eas
-Recall that we can localize LGB actions in sense of Rem.\ \ref{rem:LocalLGBAction}; so, let $x \coloneqq f(p) = \pi(g)$, and fix a trivialization of $\mathcal{G}$ around $x$. Then it is clear that there is a (local) section $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$. Recall the notations introduced in Def.\ \ref{def:LRTranslations} and \ref{def:LeftRightTranslationConjugation}, then observe that we can write
+Recall that we can localize LGB actions in sense of Rem.\ \ref{rem:LocalLGBAction}; so, let $x \coloneqq f(p) = \pi(g)$, and fix a trivialization of $\mathcal{G}$ around $x$. Then it is clear that there is a (local)\footnote{For simplicity of notation we omit the notation of restricting on some open subset of $M$.} section $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$. Observe that we can write
 \bas
 Y
 &=
 Y 
-	- \mathrm{D}_x \sigma (w)
-	+ \mathrm{D}_x \sigma (w)
+	- \mathrm{D}_x \sigma (\omega)
+	+ \mathrm{D}_x \sigma (\omega).
 \eas
-and
+The two first summands result into a vertical tangent vector due to
+\bas
+\mathrm{D}_g\pi\bigl( Y - \mathrm{D}_x\sigma(\omega) \bigr)
+&=
+\mathrm{D}_g\pi( Y ) - \mathrm{D}_x\underbrace{(\pi \circ \sigma)}_{= \mathds{1}_M}(\omega)
+=
+\mathrm{D}_g \pi (Y) - \omega
+=
+0.
+\eas
+For the following recall the notations introduced in Def.\ \ref{def:LRTranslations} and \ref{def:LeftRightTranslationConjugation}; we can derive that
 \bas
 \mathrm{D}_{e_x}R_\sigma \circ \mathrm{D}_x e
 &=
 \mathrm{D}_x \underbrace{\mleft( R_\sigma \circ e \mright)}
 	_{\mathclap{x \mapsto e_x \sigma_x = \sigma_x}}
 =
-\mathrm{D}_x \sigma
+\mathrm{D}_x \sigma.
+\eas
+So, let us write 
+\bas
+Y^v
+&\coloneqq
+Y - \mathrm{D}_x \sigma(\omega)
+=
+Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr).
+\eas
+We have proven that $Y^v \in \mathrm{V}_g\mathcal{G}$, and thus $(0_p, Y^v) \in \mathrm{T}_{(p, g)}(f^*\mathcal{G})$ by Lemma \ref{lem:PullbackFibreBundleItsTangentSp}, where $0_p$ is the zero tangent vector. In the same fashion we also have
+\bas
+\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+&\in \mathrm{T}_{(p, g)}(f^*\mathcal{G})
+\eas
+because of
+\bas
+\mathrm{D}_g\pi \Bigl( \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
+&=
+\mathrm{D}_g \pi (Y - Y^v)
+=
+\mathrm{D}_g \pi (Y)
+=
+\mathrm{D}_p f (X),
+\eas
+thence we can write
+\bas
+(X, Y)
+&=
+\mleft(X, Y^v + \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+=
+(0_p, Y^v)
+	+ \mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright).
+\eas
+Hence also
+\bas
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_{(p, g)}\Phi(0_p, Y^v)
+	+ \mathrm{D}_{(p, g)}\Phi\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright).
+\eas
+The first summand is quickly calculated as
+\ba\label{DifferentialOfActionSplitFirst}
+\mathrm{D}_{(p, g)}\Phi(0_p, Y^v)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \underbrace{(p \cdot \gamma)}
+	_{\Phi_p(\gamma)}
+=
+\mathrm{D}_{g}\Phi_p (Y^v)
+\ea
+where $\gamma: I \to \mathcal{G}_x$ ($I$ open interval of $\mathbb{R}$ containing 0) is a curve with $\gamma(0) = g$ and $\mathrm{d}/\mathrm{d}t|_{t=0} \gamma = Y^v$; by the verticality of $Y^v$, $\mathrm{D}_g\Phi_p(Y^v)$ is well-defined since $\Phi_p$ is a map $\mathcal{G}_x \to N$. Now recall Def.\ \ref{def:MCFormOnLGBs} and \ref{def:FundVecs}, and observe that we can write
+\bas
+\mathrm{D}_{g}\Phi_p (Y^v)
+&=
+\mleft(\mathrm{D}_{g}\Phi_p \circ \mathrm{D}_{e_x}L_g \circ \mathrm{D}_g L_{g^{-1}} \mright)(Y^v)
+=
+\mathrm{D}_{e_x}\underbrace{\mleft( \Phi_p \circ L_g \mright)}
+	_{\mathclap{ \mathcal{G} \ni q \mapsto p \cdot gq = \Phi_{p \cdot g}(q) }}
+	\mleft(\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v) \mright)
+=
+\mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g}
+%\mleft.{\widetilde{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g},
+\eas
+making use of the verticality of $Y^v$ such that $\mathrm{D}L_g$ can act on $Y^v$ and of $\mleft(\mu_{\mathcal{G}}\mright)_g (Y^v) \in \mathcal{g}_x$.
+
+For the second summand in Eq.\ \eqref{DifferentialOfActionSplitFirst} we use
+\bas
+\mathrm{D}_{(p, g)}\Phi\Bigl(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
+&=
+\mathrm{D}_{(p, e_x)} \underbrace{\bigl( \Phi \circ \mleft( \mathds{1}_N, R_\sigma \mright) \bigr)}_{\mathclap{ N * \mathcal{G} \ni (p, g) \mapsto p \cdot g \sigma_x = r_\sigma(p \cdot g) }}
+	\bigl( X, \mathrm{D}_x e(\omega) \bigr)
+\\
+&=
+\mathrm{D}_{(p, e_x)}( r_\sigma \circ \Phi ) \bigl( X, \mathrm{D}_x e(\omega) \bigr)
+\\
+&=
+\mathrm{D}_p r_\sigma \Bigl(
+	\mathrm{D}_{(p, e_x)} \Phi \bigl( X, \mathrm{D}_x e(\omega) \bigr)
+\Bigr),
+\eas
+which is well-defined because of
+\bas
+\mathrm{D}_{e_x}\pi \bigl(\mathrm{D}_x e(\omega)\bigr)
+&=
+\mathrm{D}_x (\pi \circ e) (\omega)
+=
+\omega
+=
+\mathrm{D}_pf(X).
 \eas
 \end{proof}
 
