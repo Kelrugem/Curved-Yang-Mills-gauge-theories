@@ -1555,10 +1555,16 @@ For $\sigma \in \Gamma(\mathcal{G})$ we define the \textbf{right translation} on
 N &\to N,\\
 p &\mapsto p \cdot \sigma_{f(p)}.
 \eas
+
+If one has a smooth map $\tau: M \to N$, $x \mapsto \tau_x$, with $f \circ \tau = \mathds{1}_M$, then we can define the \textbf{orbit map} through $\tau$ as a map $\Phi_\tau$ given by
+\bas
+\mathcal{G} &\to N,\\
+g &\mapsto \tau_{\pi(g)} \cdot g.
+\eas
 \end{definitions}
 
 \begin{remarks}{Left action and translation}{LeftTranslation}
-Similarly we define left translations for left actions, which we similarly denote by $l_g$ and $l_\sigma$. By Rem.\ \ref{rem:LocalLGBAction} we can define $r_\sigma$ (and $l_\sigma$) also for local sections $\sigma \in \Gamma(\mathcal{G}|_U)$ by restricting $N$ onto $f^{-1}(U)$, where $U$ is some open subset of $M$; then $r_\sigma, l_\sigma: f^{-1}(U) \to f^{-1}(U)$.
+Similarly we define left translations for left actions, which we similarly denote by $l_g$ and $l_\sigma$. By Rem.\ \ref{rem:LocalLGBAction} we can define $r_\sigma$ (and $l_\sigma$) also for local sections $\sigma \in \Gamma(\mathcal{G}|_U)$ by restricting $N$ onto $f^{-1}(U)$, where $U$ is some open subset of $M$; then $r_\sigma, l_\sigma: f^{-1}(U) \to f^{-1}(U)$. In the same manner one achieves a restriction for $\Phi_\tau: \mathcal{G}|_U \to f^{-1}(U)$, if $\tau: U \to f^{-1}(U)$.
 \end{remarks}
 
 \begin{remark}\label{SmoothnessOfACtionTranslations}
@@ -1573,9 +1579,14 @@ The second arrow/map is smooth due to the fact that we have a smooth action; the
 For the right-translation $r_\sigma$ we have a similar argument, namely, $r_\sigma$ is a composition of smooth maps
 \bas
 N &\to N*\mathcal{G} \to N,\\
-p &\mapsto (p, \sigma_p) \mapsto p \cdot \sigma_p.
+p &\mapsto \mleft(p, \sigma_{f(p)}\mright) \mapsto p \cdot \sigma_{f(p)}.
 \eas
-The first map describes now a section of $N*\mathcal{G} = f^*\mathcal{G}$, and thus an embedding. Thus, smoothness follows again.
+The first map describes now a section of $N*\mathcal{G} = f^*\mathcal{G}$, and thus an embedding. Thus, smoothness follows again. Similarly, $\Phi_\tau$ is the composition of maps
+\bas
+\mathcal{G} &\to N * \mathcal{G} \to N,\\
+g &\mapsto \mleft( \tau_{\pi(g)}, g \mright) \mapsto \tau_{\pi(g)} \cdot g,
+\eas
+and the first arrow is clearly a smooth map $\mathcal{G} \to N \times \mathcal{G}$ with values in $f^*\mathcal{G} = N * \mathcal{G}$ which is an embedded submanifold of $N \times \mathcal{G}$. Thence, smoothness follows as usual. In fact, $\Phi_\tau|_{\mathcal{G}_x} = \Phi_{\tau_x}$.
 
 However, for $r_g$ smoothness can only be discussed if $f^{-1}(\{x\})$ is a smooth manifold. That is for example the case if $x$ is a regular value of $f$; recall the regular value theorem as cited in \cite[\S A.1, Thm.\ A.1.32, page 611]{Hamilton}. This would be the case if \textit{e.g.}\ $f$ is a submersion. If $x$ is a regular value, then $f^{-1}(\{x\})$ is an embedded submanifold of $N$, and $r_g$ is a similar composition of smooth maps as for $r_\sigma$ but restricted to $f^{-1}(\{x\})$
 \bas
@@ -2703,11 +2714,59 @@ is surjective because $\pi$ is a submersion; it is also well-defined because of 
 where $\mathrm{dim}$ denotes the dimension as a manifold and $\mathrm{rk}$ the rank of a bundle (the dimension of its structural fibre). Its dimension is precisely the dimension of $f^*F$, and since it is about finite dimensions we can therefore identify $\mathrm{T}_{(p, v)}\mleft( f^*F \mright)$ with this kernel. This concludes the proof due to the fact that the kernel consists of $(X, Y)$ with $\mathrm{D}_pf(X) = \mathrm{D}_v\pi(Y)$.
 \end{proof}
 
+With this we can finally show the following theorem; also recall the notations introduced in Def.\ \ref{def:LRTranslations}, \ref{def:LeftRightTranslationConjugation}, \ref{def:MCFormOnLGBs} and \ref{def:FundVecs}.
+
 \begin{theorems}{Differential of smooth LGB actions}{DiffOfLGBAction}
-Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$, $f: N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, $\Phi: N * \mathcal{G} \to N$.
+Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$, $f: N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, $\Phi: N * \mathcal{G} \to N$. Then we have
+\ba\label{NewDIffACtionwithMCForm}
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_pr_\sigma(X)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g \mleft(Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr)\mright)}}\mright|_{p \cdot g}
+\ea
+for all $(p, g) \in N * \mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(p, g)}(N*\mathcal{G})$, where $x \coloneqq f(p) = \pi(g)$, $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_{x} = g$, $e$ is the identity section of $\mathcal{G}$, and $\omega$ is an element of $\mathrm{T}_xM$ given by
+\bas
+\omega
+&\coloneqq
+\mathrm{D}_p f(X)
+= 
+\mathrm{D}_g\pi(Y).
+\eas
+We may omit the natural embedding of $\omega$ into $\mathrm{T}_{e_x}\mathcal{G}$ via $\mathrm{D}_xe$, just writing 
+\ba
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_pr_\sigma(X)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g \bigl(Y - \mathrm{D}_{e_x}R_\sigma (\omega)\bigr)}}\mright|_{p \cdot g}.
+\ea
+
+If $f$ is a surjective submersion, then we can also write
+\ba\label{DIFfActionSimilarToTangenGroupoid}
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_pr_\sigma(X)
+	+ \mathrm{D}_g\Phi_\tau (Y)
+	- \mathrm{D}_{e_x}(\Phi_\tau \circ R_\sigma)\bigl( \mathrm{D}_xe(\omega) \bigr)
+\ea
+and
+\ba\label{DiffActionAsClassicalButWithExtraContribution}
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_pr_g\mleft( X - \mathrm{D}_{e_x}\Phi_\tau\bigl( \mathrm{D}_xe(\omega) \bigr) \mright)
+	+ \mathrm{D}_g\Phi_p \mleft( Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+\nonumber\\
+&\hspace{1cm}
+	+ \mathrm{D}_{e_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{D}_xe(\omega) \bigr),
+\ea
+where $\tau$ is any additional (local) section of $f$ with $\tau_x = p$.
 \end{theorems}
 
-\begin{proof}
+\begin{remark}
+\leavevmode\newline
+The assumption about $f$ being a surjective submersion is done in order to assure the existence of $\tau$; see the proof for more details.
+\end{remark}
+
+\begin{proof}[Proof of Thm.\ \ref{thm:DiffOfLGBAction}]
 \leavevmode\newline
 We want to calculate the derivative of $\Psi$, and due to $N*\mathcal{G} = f^*\mathcal{G}$ we are going to use Lemma \ref{lem:PullbackFibreBundleItsTangentSp}. That is, fix $(p, g) \in N*\mathcal{G}$ and $X \in \mathrm{T}_pN$, $Y \in \mathrm{T}_g \mathcal{G}$ with
 \bas
@@ -2767,17 +2826,17 @@ thence we can write
 \bas
 (X, Y)
 &=
-\mleft(X, Y^v + \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) + Y^v \mright)
 =
-(0_p, Y^v)
-	+ \mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright).
+\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+	+ (0_p, Y^v).
 \eas
 Hence also
 \bas
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
-\mathrm{D}_{(p, g)}\Phi(0_p, Y^v)
-	+ \mathrm{D}_{(p, g)}\Phi\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright).
+\mathrm{D}_{(p, g)}\Phi\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright).
+	+ \mathrm{D}_{(p, g)}\Phi(0_p, Y^v)
 \eas
 The first summand is quickly calculated as
 \ba\label{DifferentialOfActionSplitFirst}
@@ -2816,19 +2875,151 @@ For the second summand in Eq.\ \eqref{DifferentialOfActionSplitFirst} we use
 &=
 \mathrm{D}_p r_\sigma \Bigl(
 	\mathrm{D}_{(p, e_x)} \Phi \bigl( X, \mathrm{D}_x e(\omega) \bigr)
+\Bigr)
+\\
+&=
+\mathrm{D}_p r_\sigma \Bigl(
+	\mathrm{D}_{(p, e_x)} \Phi \bigl( X, \mathrm{D}_p (e \circ f) (X) \bigr)
+\Bigr)
+\\
+&=
+\mathrm{D}_p r_\sigma \Bigl(
+	\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathds{1}_N, e\circ f)\bigr)( X, X )
 \Bigr),
 \eas
-which is well-defined because of
+but
 \bas
-\mathrm{D}_{e_x}\pi \bigl(\mathrm{D}_x e(\omega)\bigr)
+\Bigl[
+N \times N \ni (p,p)
+\mapsto
+\bigl(\Phi \circ (\mathds{1}_N, e\circ f)\bigr)(p,p)
+=
+\Phi\mleft(p, e_{f(p)}\mright)
+=
+p \cdot e_{f(p)}
+=
+p
+\Bigr]
 &=
-\mathrm{D}_x (\pi \circ e) (\omega)
+\bigl[
+p \mapsto \mathds{1}_N(p)
+\bigr],
+\eas
+hence,
+\bas
+\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathds{1}_N, e\circ f)\bigr)( X, X )
+&=
+\mathrm{D}_{p} \mathds{1}_N( X )
 =
-\omega
+\mathds{1}_{\mathrm{T}_pN}(X)
 =
-\mathrm{D}_pf(X).
+X.
+\eas
+So, we get in total
+\bas
+\mathrm{D}_{(p, g)}\Phi\Bigl(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
+&=
+\mathrm{D}_pr_\sigma(X),
+\eas
+therefore
+\bas
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_pr_\sigma(X)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g}.
+\eas
+
+If $f$ is a surjective submersion, then $x$ is a regular value and thus $f^{-1}(\{x\})$ is an embedded submanifold, and we can assure the existence of a smooth local section $\tau: U \to N$ of $f$ ($U$ an open neighbourhood of $x \in M$), \textit{i.e.}\ $f \circ \tau = \mathds{1}_U$ with $\tau_x = p$; in case of doubt, this can be shown as in \cite[\S 3.7, Lemma 3.7.4, page 152f.]{Hamilton} via the Regular Point Theorem. Recalling the arguments of Rem. \ref{rem:AbstractNotationTwoForLeftInvarVfs}, we can rewrite Eq.\ \eqref{DifferentialOfActionSplitFirst} to
+\bas
+\mathrm{D}_g\Phi_p (Y^v)
+&=
+\mathrm{D}_g\Phi_\tau (Y^v)
+\\
+&=
+\mathrm{D}_g\Phi_\tau (Y)
+	- \mathrm{D}_g\Phi_\tau \mleft(\mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr)\mright)
+\\
+&=
+\mathrm{D}_g\Phi_\tau (Y)
+	- \mathrm{D}_{e_x}(\Phi_\tau \circ R_\sigma)\bigl( \mathrm{D}_xe(\omega) \bigr)
+\eas
+making use of that $\mathrm{D}_g\Phi_\tau$ is linear map $\mathrm{T}_g\mathcal{G} \to \mathrm{T}_{p \cdot g}N$. In that case we would get in total
+\bas
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_pr_\sigma(X)
+	+ \mathrm{D}_g\Phi_\tau (Y)
+	- \mathrm{D}_{e_x}(\Phi_\tau \circ R_\sigma)\bigl( \mathrm{D}_xe(\omega) \bigr).
+\eas
+Alternatively, we can keep the form of Eq.\ \eqref{DifferentialOfActionSplitFirst} and instead apply the same trick to $X$ as for $Y$, that is,
+\bas
+X &= X^v + \mathrm{D}_{e_x}\Phi_\tau\bigl( \mathrm{D}_xe(\omega) \bigr),
+\eas
+where
+\bas
+X^v
+&\coloneqq
+X
+	- \mathrm{D}_x \tau(\omega)
+=
+X
+	- \mathrm{D}_{e_x}\Phi_\tau\bigl( \mathrm{D}_xe(\omega) \bigr),
+\eas
+and $X^v$ is vertical, too, that is,
+\bas
+\mathrm{D}_p f (X^v)
+&=
+\mathrm{D}_p f (X)
+	- \mathrm{D}_x (f \circ \tau) (\omega)
+=
+\omega - \omega
+=
+0,
+\eas
+especially $X^v \in \mathrm{T}_p\mleft( f^{-1}(\{x\}) \mright)$ and so we can apply a similar argument as in Rem. \ref{rem:AbstractNotationTwoForLeftInvarVfs} to derive
+\bas
+\mathrm{D}_p r_\sigma(X)
+&=
+\mathrm{D}_p r_\sigma(X^v)
+	+ \mathrm{D}_p r_\sigma\Bigl( \mathrm{D}_{e_x}\Phi_\tau\bigl( \mathrm{D}_xe(\omega) \bigr) \Bigr)
+\\
+&=
+\mathrm{D}_p r_g(X^v)
+	+ \mathrm{D}_{e_x} \mleft( r_\sigma \circ \Phi_\tau \mright)\bigl( \mathrm{D}_xe(\omega) \bigr).
+\eas
+Finally, using these expressions, the total formula would look like
+\bas
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_pr_g(X^v)
+	+ \mathrm{D}_g\Phi_p (Y^v)
+	+ \mathrm{D}_{e_x} \underbrace{\mleft( r_\sigma \circ \Phi_\tau \mright)}
+		_{\mathclap{ \mathcal{G} \ni g \mapsto \tau_{\pi(g)} \cdot g \sigma_{\pi(g)} = (\Phi_\tau \circ R_\sigma)(g) }}
+		\bigl( \mathrm{D}_xe(\omega) \bigr)
+\\
+&=
+\mathrm{D}_pr_g(X^v)
+	+ \mathrm{D}_g\Phi_p (Y^v)
+	+ \mathrm{D}_{e_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{D}_xe(\omega) \bigr).
 \eas
 \end{proof}
+
+\begin{remark}
+\leavevmode\newline
+Eq.\ \eqref{NewDIffACtionwithMCForm} is very similar to the "classical" formula used in gauge theory, see \textit{e.g.}\ \cite[\S 3.5, Prop.\ 3.5.4, page 146]{Hamilton}: In the case of a Lie group action on $N$ (so, $\mathcal{G}$ a Lie group $G$ and $M$ a point) we have
+\bas
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_pr_g(X)
+	+ \mleft.\oversortoftilde{(\mu_G)_g(Y)}\mright|_{p \cdot g}
+\eas
+for all $p \in N$, $g \in G$, $X \in \mathrm{T}_pN$ and $Y \in \mathrm{T}_g G$.
+However, in our general case the vector $Y$ is deformed by $\omega$, due to the fact that the action $\Phi$ has no "constant" Lie group factor anymore. This will be important later when we are going to derive the gauge transformations. Furthermore, already the first summand is different than the classical formula, because we need to use LGB sections in order to define the push-forward of tangent vectors which are not vertical, that is, $X$ may not be a tangent vector of $f^{-1}(\{x\})$ (which is in the general case not even an embedded submanifold) such that $\mathrm{D}_p r_g(X)$ is in general not well-defined anymore.
+
+The other two equations in the case of $f$ being a surjective submersion are mainly for reference; the last equation, Eq.\ \eqref{DiffActionAsClassicalButWithExtraContribution}, emphasises the contribution of non-vertical vectors measured by $\omega$. While the first two summands are the classical product rule on the vertical parts, the third summand shows the deformation of the product rule because of the new structure of an action without a "constant" Lie group factor.
+
+Eq.\ \eqref{DIFfActionSimilarToTangenGroupoid} may be the most elegant formulation, making use of local sections $\sigma$ and $\tau$ and their advantage that these can act on all tangent vectors, not just the vertical ones; the reader who knows Lie groupoids may recognize this equation's structure with the one as given in \cite[\S 1.4, Thm.\ 1.4.14, page 28]{mackenzieGeneralTheory}, where it is about the induced multiplication structure on the tangent bundle of a Lie groupoid making use of bisections playing a similar role like $\sigma$ and $\tau$.
+\end{remark}
 
 \section{Connections and curvature on LGB principal bundles}
 
