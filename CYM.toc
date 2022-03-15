@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {7.3}Differential of smooth LGB actions}{46}{subsection.7.3}%
 \contentsline {section}{\numberline {8}Connections and curvature on LGB principal bundles}{51}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Toy model}{51}{subsection.8.1}%
-\contentsline {section}{\numberline {9}Conclusion}{53}{section.9}%
-\contentsline {section}{\nonumberline List of References}{53}{section*.3}%
-\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{53}{appendix.A}%
+\contentsline {section}{\numberline {9}Conclusion}{54}{section.9}%
+\contentsline {section}{\nonumberline List of References}{54}{section*.3}%
+\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{54}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

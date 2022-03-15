@@ -3031,7 +3031,7 @@ Finally, let us now define the gauge theory, starting with horizontal distributi
 
 As usual for gauge theory we will understand connections as horizontal distributions as a complement of the vertical bundle with a certain symmetry along the fibres to assure that connection forms have a relationship to a form defined on the spacetime/basis itself;\footnote{Recall that connection 1-forms on principal bundles (in the classical gauge theory) can be viewed as a 1-form on the spacetime with values in the Atiyah bundle. We usually also want that the connection acting on a section $X$, denoted by $\nabla X$ in the case of vector bundles, is still a section of that vector bundle as a bundle over the spacetime/basis; one usually wants to avoid that $\nabla X$ is a section over the tangent bundle of the vector bundle, but this may be the case without further symmetry of the horizontal distribution.} this symmetry is usually formulated by looking at push-forwards of horizontal vectors. The basis for this is the notion of an Ehresmann connection. However, as we have seen in Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs} and Thm.\ \ref{thm:DiffOfLGBAction} (and its proof) the push-forward of horizontal vectors is not well-defined anymore on non-vertical vectors if one uses a fixed element of an LGB. Hence, we were using sections of an LGB instead. Using sections carries the problem that the tangential behaviour of their image (as embedding of the base) may contribute; then a horizontal vector may be still horizontal after a push-forward with one LGB section but not with respect to another LGB section. Thus, we need to adjust the definition of an Ehresmann connection.
 
-In order to understand what has to be changed, let us look at a very trivial LGB and action thereof. We will now discuss the trivial LGB $\mathcal{G}$ given by
+In order to understand what has to be changed, let us look at a very trivial LGB and action thereof; we will omit discussions about smoothness in the following. We will now discuss the trivial LGB $\mathcal{G}$ given by
 \begin{center}
 	\begin{tikzcd}
 	\mathbb{R}^* \arrow{r}& \mathbb{R} \times \mathbb{R}^* \arrow{d}{\mathrm{pr}_1}\\
@@ -3072,14 +3072,53 @@ We clearly have $\mathrm{T}\mathcal{P} = \mathrm{H}^{\mathrm{flat}}\mathcal{P} \
 
 We want to describe horizontal distributions by a projection onto the vertical bundle, $\mathrm{T}\mathcal{P} \to \mathrm{V}\mathcal{P}$; for $\mathrm{H}^{\mathrm{flat}}\mathcal{P}$ this projection is simply given by $(v_x, v_g) \mapsto (0, v_g)$. However, one can think of course of other horizontal distributions $\mathrm{H}\mathcal{P}$ with $\mathrm{T}\mathcal{P} = \mathrm{H}\mathcal{P} \oplus \mathrm{V}\mathcal{P}$ given by a more general projection $\mathrm{T}\mathcal{P} \to \mathrm{V}\mathcal{P}$. Imagine we have
 \ba
-\pi_v: \mathrm{T}\mathcal{P} &\to \mathrm{V}\mathcal{P},\\
+\pi_v: \mathrm{T}\mathcal{P} &\to \mathrm{V}\mathcal{P},\nonumber\\\label{ToyModelProjectionConn}
 (v_x, v_g) &\mapsto 
-\Bigl(0, v_g + \mathrm{D}_{(x, e)}r_{(x, g)}\bigl(\omega_{x}(v_x)\bigr) \Bigr)
+\Bigl(0, v_g + \mathrm{D}_{(x, e)}\Phi_{(x, g)}\bigl(\omega_{x}(v_x)\bigr) \Bigr)
 \ea
-for all $(x, g) \in \mathcal{P}$, where $(x, e)$ is the neutral element of $\mathcal{G}_x$ and
+for all $(x, g) \in \mathcal{P}$, where $\Phi_{(x, g)}$ is the orbit map as defined in Def.\ \ref{def:LRTranslations}, $(x, e)$ is the neutral element of $\mathcal{G}_x$ and
 \bas
-\omega \in \Omega^1(M; \mathcal{g})
+\omega \in \Omega^1(M; \mathcal{g}).
 \eas
+By definition $\mathrm{D}_{(x, e)}\Phi_{(x, g)}: \mathcal{g}_x \to \mathrm{V}_{(x,g)}\mathcal{P}$; that its image is vertical quickly follows by $\mathcal{g}_x = \mathrm{V}_{(x,e)}\mathcal{G}$ (Def.\ \ref{def:LABOfAnLGB}) and
+\bas
+\mathrm{D}_{(x,g)}\mathrm{pr}_1 \circ \mathrm{D}_{(x,e)}\Phi_{(x,g)}
+&=
+\mathrm{D}_{(x, e)}\underbrace{\mleft( \mathrm{pr}_1 \circ \Phi_{(x,g)} \mright)}
+	_{= \mathrm{pr_1}}
+=
+\mathrm{D}_{(x, e)} \mathrm{pr}_1
+\eas
+such that vertical vectors as the kernel of $\mathrm{D}\mathrm{pr}_1$ stay vertical under $\mathrm{D}_{(x,e)}\Phi_{(x,g)}$; or simply recall the proof of Cor.\ \ref{cor:TLGBAsLGB}. Hence, Def.\ \eqref{ToyModelProjectionConn} is well-defined. Since $\mathbb{R}^*$ is a (rather trivial) abelian matrix group one knows that $\mathrm{D}\Phi_{(x, g)}$ is just the multiplication with $(x, g)$, that is, we can write
+\bas
+\pi_v(v_x, v_g)
+&=
+\mleft(
+	0, v_g + w_x(v_x) ~ g
+\mright).
+\eas
+
+Let us now define a \textit{\textbf{horizontal distribution $\mathrm{H}\mathcal{P}$}} as the kernel of $\pi_v$. By $\pi_v(0, v_g) = (0, v_g)$ we know that $\pi_v$ is surjective, and thus the dimension of the kernel is
+\bas
+\mathrm{dim}\mleft( \mathrm{Ker} \mleft( \mleft.\pi_v\mright|_{(x, g)} \mright) \mright)
+&=
+\mathrm{dim}\mleft( \mathrm{T}_{(x, g)}\mathcal{P} \mright)
+	- \mathrm{dim}\mleft( \mathrm{V}_{(x, g)} \mathcal{P} \mright)
+=
+\mathrm{dim}(M),
+\eas
+and its elements are of the form
+\bas
+\mleft( v_x, - \omega_x(v_x) ~ g \mright),
+\eas
+desribing a lift of $v_x$ as a tangent vector of the basis.
+Therefore we constructed a subbundle $\mathrm{H}\mathcal{P}$ of $\mathrm{T}\mathcal{P}$ with
+\bas
+\mathrm{T}\mathcal{P}
+&=
+\mathrm{H}\mathcal{P} \oplus \mathrm{V}\mathcal{P}.
+\eas
+Let us now investigate the behaviour of this horizontal distribution under push-forwards of right-multiplications; as we already discussed before, we are interested into such push-forwards using sections of $\mathcal{G}$. That is, let $X \in \mathrm{H}_{(x, g)}\mathcal{P}$ and $\sigma$ a (local) section of $\mathcal{G}$.
 
 \section{Conclusion}
 
