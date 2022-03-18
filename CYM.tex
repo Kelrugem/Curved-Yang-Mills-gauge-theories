@@ -3025,7 +3025,7 @@ Eq.\ \eqref{DIFfActionSimilarToTangenGroupoid} may be the most elegant formulati
 
 \section{Connections and curvature on LGB principal bundles}
 
-Finally, let us now define the gauge theory, starting with horizontal distributions. For readability, we start with a very easy toy model which should help in understanding the general definitions. We expect a basic understanding of horizontal distributions and their relationship to what we call connections (on principal and vector bundles).
+Finally, let us now define the gauge theory, starting with horizontal distributions. For readability, we start with a very easy toy model which should help in understanding the general definitions. We expect a basic understanding of horizontal distributions and their relationship to what we call connections (on principal and vector bundles). The basis is the notion of an Ehresmann connection.
 
 \subsection{Toy model}
 
@@ -3059,7 +3059,7 @@ The vertical bundle $\mathrm{V}\mathcal{P}$ of $\mathcal{P}$ is canonically isom
 	& \mathcal{P}
 	\end{tikzcd}
 \end{center}
-as a natural subbundle of $\mathrm{T}\mathcal{P}$ via $\{0\} \times \mathbb{R} \subset \mathbb{R}^2$. In this case we have $\mathcal{P} = \mathcal{G}$, and thus we have $\mathrm{V}\mathcal{P}\cong \mathrm{pr}_1^*\mathcal{g}$ by Cor.\ \ref{cor:TLGBAsLGB}. Hence, we can think of the LAB $\mathcal{g}$ as the vertical bundle.
+as a natural subbundle of $\mathrm{T}\mathcal{P}$ via $\{0\} \times \mathbb{R} \subset \mathbb{R}^2$. In this case we have $\mathcal{P} = \mathcal{G}$, and thus we have $\mathrm{V}\mathcal{P}\cong \mathrm{pr}_1^*\mathcal{g}$ by Cor.\ \ref{cor:TLGBAsLGB}; though one expects something also in general by using the notion of fundamental vector fields. Hence, we can think of the LAB $\mathcal{g}$ as the vertical bundle.
 
 We want to define a horizontal bundle as a "suitable" complement to the vertical bundle, the \textit{\textbf{canonical flat horizontal distribution $\mathrm{H}^{\mathrm{flat}}\mathcal{P}$}} of $\mathcal{P}$ is given by
 \begin{center}
@@ -3118,7 +3118,40 @@ Therefore we constructed a subbundle $\mathrm{H}\mathcal{P}$ of $\mathrm{T}\math
 &=
 \mathrm{H}\mathcal{P} \oplus \mathrm{V}\mathcal{P}.
 \eas
-Let us now investigate the behaviour of this horizontal distribution under push-forwards of right-multiplications; as we already discussed before, we are interested into such push-forwards using sections of $\mathcal{G}$. That is, let $X \in \mathrm{H}_{(x, g)}\mathcal{P}$ and $\sigma$ a (local) section of $\mathcal{G}$.
+Let us now investigate the behaviour of this horizontal distribution under push-forwards of right-multiplications; as we already discussed before, we are interested into such push-forwards using sections of $\mathcal{G}$. That is, let $\widetilde{\sigma}$ a (local) section of $\mathcal{G}$; for the section we also write $\widetilde{\sigma}_x = (x, \sigma_x)$, where $\sigma$ is a (locally) defined map with values in $\mathbb{R}^*$. Then
+\bas
+\mathrm{D}_{(x, g)}r_\sigma(v_x, v_g)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\bigl( 
+	(x + tv_x, g + tv_g) \cdot \mleft(x + tv_x, \sigma_{x + tv_x} \mright)
+\bigr)
+\\
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} 
+	\mleft(x + tv_x, (g + tv_g) ~ \sigma_{x + tv_x} \mright)
+\\
+&=
+\bigl(
+	v_x, v_g \sigma_{x} + g ~ \mathrm{D}_x \sigma(v_x)
+\bigr).
+\eas
+Also let $X = \mleft(X_x, -\omega_x(X_x) ~ g\mright) \in \mathrm{H}_{(x, g)}\mathcal{P}$, then
+\ba\label{SectionContributionToHorizontalStuff}
+\mathrm{D}_{(x, g)}r_\sigma(X)
+&=
+\bigl(
+	X_x, -\omega_x(X_x) ~ g \sigma_{x} + g ~ \mathrm{D}_x \sigma(X_x)
+\bigr).
+\ea
+In order to have $\mathrm{D}_{(x, g)}r_\sigma(X) \in \mathrm{H}_{(x, g \sigma_x)}\mathcal{P}$ we would need
+\bas
+\mathrm{D}_{(x, g)}r_\sigma(X)
+&\stackrel{!}{=}
+\bigl(
+	X_x, -\omega_x(X_x) ~ g \sigma_{x}
+\bigr),
+\eas
+and we would like that for all $X_x$, hence, $\mathrm{D}_{(x, g)}r_\sigma(X) \in \mathrm{H}_{(x, g \sigma_x)}\mathcal{P}$ for all $X_x$ holds if and only if $\mathrm{D}_x\sigma = 0$. Varying with respect to $x$, $\sigma$ needs to be a constant section of $\mathcal{P} = \mathbb{R} \times \mathbb{R}^*$. A constant section is equivalent to an element of $\mathbb{R}^*$, and thus we are back at the classical formulation of horizontal distributions. However, due to the lack of a suitable notion of a constant section in the general case, especially if $\mathcal{G}$ is non-trivial, we need to work differently with Eq.\ \eqref{SectionContributionToHorizontalStuff}.
 
 \section{Conclusion}
 
