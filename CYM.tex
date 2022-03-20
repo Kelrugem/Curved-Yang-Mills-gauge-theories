@@ -1664,6 +1664,8 @@ p \cdot \underbrace{(f(p), gh)}_{\mathclap{= (f(p), g) \cdot (f(p), h)}}
 (p \cdot g) \cdot h
 \eas
 for all $g,h \in G$. Hence, we have a $G$-action on N, and by construction it is equivalent to the $\mathcal{G}$-action on $N$. Due to the discussion in Rem.\ \ref{rem:LocalLGBAction} we can therefore conclude that every $\mathcal{G}$-action is locally a typical Lie group action. If $f$ is a submersion, then the action is also a $G$-action on each fibre.
+
+Observe, that one can therefore recover the notion of Lie group actions not only via $M = \{*\}$, the point manifold, but also via trivial LGBs. Translations with constant sections of $M \times G$ w.r.t.\ the action $N*\mathcal{G}\to N$ are trivially to be seen as translations with an element of $G$ w.r.t.\ the action $N \times G \to N$.
 \end{examples}
 
 Hence, if one wants something "truly" new, then one has to look at global structures of LGBs and their actions. In fact, the following example will provide such a new structure, which we will understand later once we have introduced the physical theory.
@@ -3027,11 +3029,21 @@ Eq.\ \eqref{DIFfActionSimilarToTangenGroupoid} may be the most elegant formulati
 
 Finally, let us now define the gauge theory, starting with horizontal distributions. For readability, we start with a very easy toy model which should help in understanding the general definitions. We expect a basic understanding of horizontal distributions and their relationship to what we call connections (on principal and vector bundles). The basis is the notion of an Ehresmann connection.
 
+\begin{definitions}{Ehresmann connection, \newline \cite[\S 5.1.2, Def.\ 5.1.6, page 260; without the symmetry along right-translations here]{Hamilton}}{EhresmannConnectionBasics}
+Let $F \to M$ be a fibre bundle over a smooth manifold $M$. Then an \textbf{Ehresmann connection of $F$} is a smooth subbundle $\mathrm{H}F$ of $\mathrm{T}F$ with
+\bas
+\mathrm{T}F
+&=
+\mathrm{H}F \oplus \mathrm{V}F.
+\eas
+We often call $\mathrm{H}F$ also a \textbf{horizontal distribution/bundle of $F$}, while the term Ehresmann connection may imply a further property which will then have been declared. For $p \in M$ the fibre is denoted by $\mathrm{H}_p F$.
+\end{definitions}
+
 \subsection{Toy model}
 
-As usual for gauge theory we will understand connections as horizontal distributions as a complement of the vertical bundle with a certain symmetry along the fibres to assure that connection forms have a relationship to a form defined on the spacetime/basis itself;\footnote{Recall that connection 1-forms on principal bundles (in the classical gauge theory) can be viewed as a 1-form on the spacetime with values in the Atiyah bundle. We usually also want that the connection acting on a section $X$, denoted by $\nabla X$ in the case of vector bundles, is still a section of that vector bundle as a bundle over the spacetime/basis; one usually wants to avoid that $\nabla X$ is a section over the tangent bundle of the vector bundle, but this may be the case without further symmetry of the horizontal distribution.} this symmetry is usually formulated by looking at push-forwards of horizontal vectors. The basis for this is the notion of an Ehresmann connection. However, as we have seen in Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs} and Thm.\ \ref{thm:DiffOfLGBAction} (and its proof) the push-forward of horizontal vectors is not well-defined anymore on non-vertical vectors if one uses a fixed element of an LGB. Hence, we were using sections of an LGB instead. Using sections carries the problem that the tangential behaviour of their image (as embedding of the base) may contribute; then a horizontal vector may be still horizontal after a push-forward with one LGB section but not with respect to another LGB section. Thus, we need to adjust the definition of an Ehresmann connection.
+As usual for gauge theory we will understand connections as horizontal distributions as a complement of the vertical bundle with a certain symmetry along the fibres to assure that connection forms have a relationship to a form defined on the spacetime/basis itself;\footnote{Recall that connection 1-forms on principal bundles (in the classical gauge theory) can be viewed as a 1-form on the spacetime with values in the Atiyah bundle. We usually also want that the connection acting on a section $X$, denoted by $\nabla X$ in the case of vector bundles, is still a section of that vector bundle as a bundle over the spacetime/basis; one usually wants to avoid that $\nabla X$ is a section over the tangent bundle of the vector bundle, but this may be the case without further symmetry of the horizontal distribution.} this symmetry is usually formulated by looking at push-forwards of horizontal vectors. However, as we have seen in Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs} and Thm.\ \ref{thm:DiffOfLGBAction} (and its proof) the push-forward of horizontal vectors is not well-defined anymore on non-vertical vectors if one uses a fixed element of an LGB. Hence, we were using sections of an LGB instead. Using sections carries the problem that the tangential behaviour of their image (as embedding of the base) may contribute; then a horizontal vector may be still horizontal after a push-forward with one LGB section but not with respect to another LGB section. Thus, we need to adjust the typical definition of connections on principal bundles.
 
-In order to understand what has to be changed, let us look at a very trivial LGB and action thereof; we will omit discussions about smoothness in the following. We will now discuss the trivial LGB $\mathcal{G}$ given by
+In order to understand what has to be changed, let us look at a very trivial LGB and an action thereof; we will omit discussions about smoothness in the following. We will now discuss the trivial LGB $\mathcal{G}$ given by
 \begin{center}
 	\begin{tikzcd}
 	\mathbb{R}^* \arrow{r}& \mathbb{R} \times \mathbb{R}^* \arrow{d}{\mathrm{pr}_1}\\
@@ -3061,14 +3073,14 @@ The vertical bundle $\mathrm{V}\mathcal{P}$ of $\mathcal{P}$ is canonically isom
 \end{center}
 as a natural subbundle of $\mathrm{T}\mathcal{P}$ via $\{0\} \times \mathbb{R} \subset \mathbb{R}^2$. In this case we have $\mathcal{P} = \mathcal{G}$, and thus we have $\mathrm{V}\mathcal{P}\cong \mathrm{pr}_1^*\mathcal{g}$ by Cor.\ \ref{cor:TLGBAsLGB}; though one expects something also in general by using the notion of fundamental vector fields. Hence, we can think of the LAB $\mathcal{g}$ as the vertical bundle.
 
-We want to define a horizontal bundle as a "suitable" complement to the vertical bundle, the \textit{\textbf{canonical flat horizontal distribution $\mathrm{H}^{\mathrm{flat}}\mathcal{P}$}} of $\mathcal{P}$ is given by
+We want to define a horizontal bundle as a "suitable" complement to the vertical bundle. One way would be the \textit{\textbf{canonical flat horizontal distribution/connection $\mathrm{H}^{\mathrm{flat}}\mathcal{P}$}} of $\mathcal{P}$ given by
 \begin{center}
 	\begin{tikzcd}
 	\mathbb{R} \arrow{r} & \mathcal{P} \times \mathbb{R} \times \{0\} \arrow{d} \\
 	& \mathcal{P}
 	\end{tikzcd}
 \end{center}
-We clearly have $\mathrm{T}\mathcal{P} = \mathrm{H}^{\mathrm{flat}}\mathcal{P} \oplus \mathrm{V}\mathcal{P}$ (Whitney sum). So, we will denote elements of $\mathrm{T}_{(x, g)}\mathcal{P}$ ($(x, g) \in \mathcal{P}$) by $(v_x, v_g) \in \mathbb{R}^2 \cong \mathrm{T}_x\mathbb{R} \oplus \mathrm{T}_g\mathbb{R}^*$, and we interpret the second component as a vertical component (but not necessarily the projection onto the vertical part of $(v_x, v_g)$). In the case of $\mathrm{H}^{\mathrm{flat}}\mathcal{P}$, we have $(v_x, v_g) \in \mathrm{H}^{\mathrm{flat}}_{(x, g)}\mathcal{P}$ (in the fibre of $\mathrm{H}^{\mathrm{flat}}\mathcal{P}$ at $(x, g)$) if and only if $v_x = 0$.
+We clearly have $\mathrm{T}\mathcal{P} = \mathrm{H}^{\mathrm{flat}}\mathcal{P} \oplus \mathrm{V}\mathcal{P}$ (Whitney sum). So, we will denote elements of $\mathrm{T}_{(x, g)}\mathcal{P}$ ($(x, g) \in \mathcal{P}$) by $(v_x, v_g) \in \mathbb{R}^2 \cong \mathrm{T}_x\mathbb{R} \oplus \mathrm{T}_g\mathbb{R}^*$, and we interpret the second component as a vertical component (but not necessarily the projection onto the vertical part of $(v_x, v_g)$). In the case of $\mathrm{H}^{\mathrm{flat}}\mathcal{P}$, we have $(v_x, v_g) \in \mathrm{H}^{\mathrm{flat}}_{(x, g)}\mathcal{P}$ if and only if $v_g = 0$.
 
 We want to describe horizontal distributions by a projection onto the vertical bundle, $\mathrm{T}\mathcal{P} \to \mathrm{V}\mathcal{P}$; for $\mathrm{H}^{\mathrm{flat}}\mathcal{P}$ this projection is simply given by $(v_x, v_g) \mapsto (0, v_g)$. However, one can think of course of other horizontal distributions $\mathrm{H}\mathcal{P}$ with $\mathrm{T}\mathcal{P} = \mathrm{H}\mathcal{P} \oplus \mathrm{V}\mathcal{P}$ given by a more general projection $\mathrm{T}\mathcal{P} \to \mathrm{V}\mathcal{P}$. Imagine we have
 \ba
@@ -3151,7 +3163,41 @@ In order to have $\mathrm{D}_{(x, g)}r_\sigma(X) \in \mathrm{H}_{(x, g \sigma_x)
 	X_x, -\omega_x(X_x) ~ g \sigma_{x}
 \bigr),
 \eas
-and we would like that for all $X_x$, hence, $\mathrm{D}_{(x, g)}r_\sigma(X) \in \mathrm{H}_{(x, g \sigma_x)}\mathcal{P}$ for all $X_x$ holds if and only if $\mathrm{D}_x\sigma = 0$. Varying with respect to $x$, $\sigma$ needs to be a constant section of $\mathcal{P} = \mathbb{R} \times \mathbb{R}^*$. A constant section is equivalent to an element of $\mathbb{R}^*$, and thus we are back at the classical formulation of horizontal distributions. However, due to the lack of a suitable notion of a constant section in the general case, especially if $\mathcal{G}$ is non-trivial, we need to work differently with Eq.\ \eqref{SectionContributionToHorizontalStuff}.
+and we would like that for all $X_x$, hence, $\mathrm{D}_{(x, g)}r_\sigma(X) \in \mathrm{H}_{(x, g \sigma_x)}\mathcal{P}$ for all $X_x$ holds if and only if $\mathrm{D}_x\sigma = 0$. Varying with respect to $x$, $\sigma$ needs to be a constant section of $\mathcal{P} = \mathbb{R} \times \mathbb{R}^*$. A constant section is equivalent to an element of $\mathbb{R}^*$, also recall Ex.\ \ref{ex:TrivialLGBAction}, and thus we are back at the classical formulation of horizontal distributions. However, due to the lack of a suitable notion of a constant section in the general case, especially if $\mathcal{G}$ is non-trivial, we need to work differently with Eq.\ \eqref{SectionContributionToHorizontalStuff}.
+
+Rewrite Eq.\ \eqref{SectionContributionToHorizontalStuff} to
+\bas
+\mathrm{D}_{(x, g)}r_\sigma(X)
+&=
+\bigl(
+	X_x, -\omega_x(X_x) ~ g \sigma_{x}
+\bigr)
+	+  \bigl(0, g ~ \mathrm{D}_x \sigma(X_x) \bigr)
+\\
+&=
+\bigl(
+	X_x, -\omega_x(X_x) ~ g \sigma_{x}
+\bigr)
+	+  \mleft.\oversortoftilde{\mu_{\mathcal{G}}^{\mathrm{tot}}\bigl( \mathrm{D}_x\sigma(X_x) \bigr)}\mright|_{(x, g \sigma_x)},
+\eas
+where 
+\bas
+\mu_{\mathcal{G}}^{\mathrm{tot}}(Y)
+&\coloneqq
+\mu_{\mathcal{G}}\mleft( \pi^{\mathrm{flat}}(Y) \mright)
+\eas
+for all $Y \in \mathrm{T}\mathcal{G}$, were $\pi^{\mathrm{flat}}$ is the projection onto $\mathrm{V}\mathcal{G}$ along the canonically flat horizontal distribution. The notation $\mu_{\mathcal{G}}^{\mathrm{tot}}$ comes from that it is essentially the Maurer-Cartan form but defined on the \textbf{tot}al tangent bundle of $\mathcal{G}$; in fact, by construction, it is \textbf{the} connection-1-form corresponding to the canonical flat connection on $\mathcal{G}$. So, in total we get that
+\bas
+\mathrm{D}_{(x, g)}r_\sigma(X)
+	- \mleft.\oversortoftilde{\mu_{\mathcal{G}}^{\mathrm{tot}}\bigl( \mathrm{D}_x\sigma(X_x) \bigr)}\mright|_{(x, g \sigma_x)}
+\eas
+is horizontal. 
+
+Recall Ex.\ \ref{ex:TrivialLGBAction}, observe that $\mathcal{P}$ clearly admits the structure of an $\mathbb{R}^*$-principal bundle, and we have proven that $\mathrm{H}\mathcal{P}$ is a "typical" horizontal distribution on $\mathcal{P}$,\footnote{We have shown that the typical symmetry of horizontal distributions applies w.r.t.\ constant sections; then argue with Ex.\ \ref{ex:TrivialLGBAction}.} such that we have a 1:1 correspondence to a field of gauge bosons corresponding to $\mathrm{H}\mathcal{P}$. Thus, this example has obviously a strong correspondence to the classical formulation which allows us to compare the notions.
+
+That is, altogether, we have derived that the pushforward of a horizontal vector is horizontal after subtracting a form very similar to the Maurer-Cartan form making use of a horizontal distribution on $\mathcal{G}$ itself. This horizontal distribution is the canonical flat one on $\mathcal{G}$, and the "classical" notion of a connection on $\mathcal{P}$ uses this canonical flat horizontal distribution in order to remediate the contribution of $\sigma$ to the horizontality of $\mathrm{D}_{(x, g)}r_\sigma(X)$.
+
+Henceforth, one now asks what happens if one chooses a different connection on $\mathcal{G}$. This is the notion we need because such a notion also allows non-trivial LGBs $\mathcal{G}$. The answer is clearly provided by Thm.\ \ref{thm:DiffOfLGBAction}:
 
 \section{Conclusion}
 
