@@ -3054,7 +3054,7 @@ where $\mathbb{R}^* \coloneqq \mathbb{R} \setminus \{0\}$ and $\mathrm{pr}_1$ is
 \bas
 (x, g) \cdot (x, q) &\coloneqq (x, gq)
 \eas
-for all $x \in \mathbb{R}$ and $g, q \in \mathbb{R}^*$. We are interested into an action of $\mathcal{G}$ on another bundle $\mathcal{P}$, and we define $\mathcal{P}$ to be the same bundle as $\mathcal{G}$ for simplicity. The action is a right-action $\mathcal{P} * \mathcal{G} \to \mathcal{P}$ whose explicit form is precisely the same as the multiplication on $\mathcal{G}$. For bookkeeping reasons we keep the notation $\mathcal{P}$ because this bundle will later be interpreted as the principal bundle.
+for all $x \in \mathbb{R}$ and $g, q \in \mathbb{R}^*$. We are interested into an action of $\mathcal{G}$ on another bundle $\mathcal{P}$, and we define $\mathcal{P}$ to be the same bundle as $\mathcal{G}$ for simplicity. The action is a right-action $\Phi: \mathcal{P} * \mathcal{G} \to \mathcal{P}$ whose explicit form is precisely the same as the multiplication on $\mathcal{G}$. For bookkeeping reasons we keep the notation $\mathcal{P}$ because this bundle will later be interpreted as the principal bundle; that $\mathcal{P}$ is the LGB $\mathcal{G}$ itself makes it easier to express certain things explicitly in the following.
 
 The tangent bundle $\mathrm{T}\mathcal{P}$ of $\mathcal{P}$ is canonically isomorphic to
 \begin{center}
@@ -3086,22 +3086,22 @@ We want to describe horizontal distributions by a projection onto the vertical b
 \ba
 \pi_v: \mathrm{T}\mathcal{P} &\to \mathrm{V}\mathcal{P},\nonumber\\\label{ToyModelProjectionConn}
 (v_x, v_g) &\mapsto 
-\Bigl(0, v_g + \mathrm{D}_{(x, e)}\Phi_{(x, g)}\bigl(\omega_{x}(v_x)\bigr) \Bigr)
+\Bigl(0, v_g + \mathrm{D}_{(x, e)}R_{(x, g)}\bigl(\omega_{x}(v_x)\bigr) \Bigr)
 \ea
-for all $(x, g) \in \mathcal{P}$, where $\Phi_{(x, g)}$ is the orbit map as defined in Def.\ \ref{def:LRTranslations}, $(x, e)$ is the neutral element of $\mathcal{G}_x$ and
+for all $(x, g) \in \mathcal{P}$, where $(x, e)$ is the neutral element of $\mathcal{G}_x$ and
 \bas
 \omega \in \Omega^1(M; \mathcal{g}).
 \eas
-By definition $\mathrm{D}_{(x, e)}\Phi_{(x, g)}: \mathcal{g}_x \to \mathrm{V}_{(x,g)}\mathcal{P}$; that its image is vertical quickly follows by $\mathcal{g}_x = \mathrm{V}_{(x,e)}\mathcal{G}$ (Def.\ \ref{def:LABOfAnLGB}) and
+By definition $\mathrm{D}_{(x, e)}R_{(x, g)}: \mathcal{g}_x \to \mathrm{V}_{(x,g)}\mathcal{P}$; that its image is vertical quickly follows by $\mathcal{g}_x = \mathrm{V}_{(x,e)}\mathcal{G}$ (Def.\ \ref{def:LABOfAnLGB}) and
 \bas
-\mathrm{D}_{(x,g)}\mathrm{pr}_1 \circ \mathrm{D}_{(x,e)}\Phi_{(x,g)}
+\mathrm{D}_{(x,g)}\mathrm{pr}_1 \circ \mathrm{D}_{(x,e)}R_{(x,g)}
 &=
-\mathrm{D}_{(x, e)}\underbrace{\mleft( \mathrm{pr}_1 \circ \Phi_{(x,g)} \mright)}
+\mathrm{D}_{(x, e)}\underbrace{\mleft( \mathrm{pr}_1 \circ R_{(x,g)} \mright)}
 	_{= \mathrm{pr_1}}
 =
 \mathrm{D}_{(x, e)} \mathrm{pr}_1
 \eas
-such that vertical vectors as the kernel of $\mathrm{D}\mathrm{pr}_1$ stay vertical under $\mathrm{D}_{(x,e)}\Phi_{(x,g)}$; or simply recall the proof of Cor.\ \ref{cor:TLGBAsLGB}. Hence, Def.\ \eqref{ToyModelProjectionConn} is well-defined. Since $\mathbb{R}^*$ is a (rather trivial) abelian matrix group one knows that $\mathrm{D}\Phi_{(x, g)}$ is just the multiplication with $(x, g)$, that is, we can write
+such that vertical vectors as the kernel of $\mathrm{D}\mathrm{pr}_1$ stay vertical under $\mathrm{D}_{(x,e)}R_{(x,g)}$; or simply recall the proof of Cor.\ \ref{cor:TLGBAsLGB}. Hence, Def.\ \eqref{ToyModelProjectionConn} is well-defined. Since $\mathbb{R}^*$ is a (rather trivial) abelian matrix group one knows that $\mathrm{D}R_{(x, g)}$ is just the multiplication with $(x, g)$, that is, we can write
 \bas
 \pi_v(v_x, v_g)
 &=
@@ -3130,7 +3130,7 @@ Therefore we constructed a subbundle $\mathrm{H}\mathcal{P}$ of $\mathrm{T}\math
 &=
 \mathrm{H}\mathcal{P} \oplus \mathrm{V}\mathcal{P}.
 \eas
-Let us now investigate the behaviour of this horizontal distribution under push-forwards of right-multiplications; as we already discussed before, we are interested into such push-forwards using sections of $\mathcal{G}$. That is, let $\widetilde{\sigma}$ a (local) section of $\mathcal{G}$; for the section we also write $\widetilde{\sigma}_x = (x, \sigma_x)$, where $\sigma$ is a (locally) defined map with values in $\mathbb{R}^*$. Then
+Let us now investigate the behaviour of this horizontal distribution under push-forwards of right-multiplications; as we already discussed before, we are interested into such push-forwards using sections of $\mathcal{G}$. That is, let $\widetilde{\sigma}$ a (local) section of $\mathcal{G}$; for the section we also write $\widetilde{\sigma}_x = (x, \sigma_x)$, where $\sigma$ is a (locally) defined map with values in $\mathbb{R}^*$; for simplicity we also write $\sigma$ for $\widetilde{\sigma}$, it should be clear by context what we mean. Then
 \bas
 \mathrm{D}_{(x, g)}r_\sigma(v_x, v_g)
 &=
@@ -3140,7 +3140,7 @@ Let us now investigate the behaviour of this horizontal distribution under push-
 \\
 &=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} 
-	\mleft(x + tv_x, (g + tv_g) ~ \sigma_{x + tv_x} \mright)
+	\bigl(x + tv_x, (g + tv_g) ~ \sigma_{x + tv_x} \bigr)
 \\
 &=
 \bigl(
@@ -3197,7 +3197,21 @@ Recall Ex.\ \ref{ex:TrivialLGBAction}, observe that $\mathcal{P}$ clearly admits
 
 That is, altogether, we have derived that the pushforward of a horizontal vector is horizontal after subtracting a form very similar to the Maurer-Cartan form making use of a horizontal distribution on $\mathcal{G}$ itself. This horizontal distribution is the canonical flat one on $\mathcal{G}$, and the "classical" notion of a connection on $\mathcal{P}$ uses this canonical flat horizontal distribution in order to remediate the contribution of $\sigma$ to the horizontality of $\mathrm{D}_{(x, g)}r_\sigma(X)$.
 
-Henceforth, one now asks what happens if one chooses a different connection on $\mathcal{G}$. This is the notion we need because such a notion also allows non-trivial LGBs $\mathcal{G}$. The answer is clearly provided by Thm.\ \ref{thm:DiffOfLGBAction}:
+Henceforth, one now asks what happens if one chooses a different connection on $\mathcal{G}$. This is the notion we need because such a notion also allows non-trivial LGBs $\mathcal{G}$. The answer is clearly provided by Thm.\ \ref{thm:DiffOfLGBAction}: Define $Y \coloneqq \mathrm{D}_x\sigma(X_x) = \mathrm{D}_{e_x}R_\sigma\bigl( \mathrm{D}_xe(X_x) \bigr)$, then
+\bas
+\mathrm{D}_{\sigma_x}\mathrm{pr}_1(Y)
+&=
+X_x
+=
+\mathrm{D}_{(x, g)}\mathrm{pr}_1(X),
+\eas
+and by Thm.\ \ref{thm:DiffOfLGBAction} we get
+\bas
+\mathrm{D}_{(x, g)}r_\sigma(X)
+&=
+\mathrm{D}_{((x, g), \sigma_x)}\Phi(X, Y).
+\eas
+
 
 \section{Conclusion}
 
