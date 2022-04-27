@@ -1498,7 +1498,7 @@ N * \mathcal{G}
 &\coloneqq
 f^*\mathcal{G},
 \ea
-such that the action's notation has the typical shape $N * \mathcal{G} \to N$. For left actions similarly $\mathcal{G} * N \to N$.
+such that the action's notation has the typical shape $N * \mathcal{G} \to N$; one may also write $N * \mathcal{G} = N \times_M \mathcal{G}$. For left actions similarly $\mathcal{G} * N \to N$. 
 \end{definitions}
 
 \begin{remarks}{Relation to the structure of the canonical pullback Lie group bundle over $N$}{ActionAndPullbackLGBs}
@@ -1516,7 +1516,7 @@ Furthermore, the other conditions are the typical conditions for actions, especi
 \mleft( p \cdot q, q^{-1} g \mright)
 \ea
 for all $p \in N$ and $g, q \in \mathcal{G}_{f(p)}$.\footnote{In alignment to Def.\ \ref{def:LiegroupACtion}, this action is a map $(f \circ \pi_1)^*\mathcal{G} \to f^*\mathcal{G}$, where $\pi_1$ is the projection onto the first factor in $f^*\mathcal{G}$.}
-As usual, this gives rise to an equivalence relation, whose set of equivalence classes $f^*\mathcal{G} \Big/ G$ is isomorphic to $N$ (as a set) by $[p, g] \mapsto p \cdot g$, where we denote equivalence classes of $(p, g) \in f^*\mathcal{G}$ by $[p, g]$. All of this is straight-forward to check. Finally, observe the similarity to associated fibre bundles.
+As usual, this gives rise to an equivalence relation, whose set of equivalence classes denoted by $f^*\mathcal{G} \Big/ \mathcal{G}$ is isomorphic to $N$ (as a set) by $[p, g] \mapsto p \cdot g$, where we denote equivalence classes of $(p, g) \in f^*\mathcal{G}$ by $[p, g]$. All of this is straight-forward to check. Finally, observe the similarity to associated fibre bundles.
 \end{remarks}
 
 \begin{remarks}{Localizing LGB actions}{LocalLGBAction}
@@ -2766,7 +2766,7 @@ and
 &\hspace{1cm}
 	+ \mathrm{D}_{e_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{D}_xe(\omega) \bigr),
 \ea
-where $\tau$ is any additional (local) section of $f$\footnote{That is, $f \circ \tau = \mathds{1}_M$.} with $\tau_x = p$.
+where $\tau$ is any additional (local) section of $f$\footnote{That is, $f \circ \tau = \mathds{1}_M$ (locally).} with $\tau_x = p$.
 \end{theorems}
 
 \begin{remark}
@@ -2843,7 +2843,7 @@ Hence also
 \bas
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
-\mathrm{D}_{(p, g)}\Phi\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright).
+\mathrm{D}_{(p, g)}\Phi\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
 	+ \mathrm{D}_{(p, g)}\Phi(0_p, Y^v)
 \eas
 The first summand is quickly calculated as
@@ -3216,7 +3216,31 @@ and by Thm.\ \ref{thm:DiffOfLGBAction} we get
 \mathrm{D}_{((x, g), \sigma_x)}\Phi(X, Y).
 \eas
 
-\subsection{Principal fibre bundles with structural LGB}
+\subsection{Principal bundles with structural LGB}
+
+\begin{definitions}{Principal bundles with structural LGB, \newline \cite[simplification of the beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}}{PrinciBdleWithStruLGB}
+Let $G$ be a Lie group, $M$ a smooth manifold, and an LGB $\mathcal{G}$ which acts on the right on another $G$-fibre bundle $\mathcal{P}$
+\begin{center}
+	\begin{tikzcd}
+	G \arrow{r} & \mathcal{P} \arrow{d} & \arrow[bend right]{l} \mathcal{G} \arrow{d} & \arrow{l} G \\
+	& M & M
+	\end{tikzcd}
+\end{center}
+Then we call $\mathcal{P}$ a principal $\mathcal{G}$-bundle if 
+\begin{enumerate}
+	\item The right $\mathcal{G}$-action on $\mathcal{P}$ \textbf{is simply transitive on the fibres}, that is, the restriction of $\mathcal{P}*\mathcal{G} \to \mathcal{P}$ on $x\in M$
+	\bas
+	\mathcal{P}_x \times \mathcal{G}_x &\to \mathcal{P}_x
+	\eas
+	induces bijective orbit maps
+	\bas
+	\mathcal{G}_x &\to \mathcal{P}_x,\\
+	g &\mapsto p \cdot g
+	\eas
+	for $p \in \mathcal{P}_x$.
+	\item 
+\end{enumerate}
+\end{definitions}
 
 \subsection{Generalized distributions and connections}
 

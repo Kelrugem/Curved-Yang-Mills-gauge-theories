@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {7.3}Differential of smooth LGB actions}{45}{subsection.7.3}%
 \contentsline {section}{\numberline {8}Connections and curvature on LGB principal bundles}{50}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Toy model}{51}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Principal fibre bundles with structural LGB}{55}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.2}Principal bundles with structural LGB}{54}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}Generalized distributions and connections}{55}{subsection.8.3}%
 \contentsline {subsection}{\numberline {8.4}Generalized connection 1-forms on principal bundles}{55}{subsection.8.4}%
 \contentsline {subsection}{\numberline {8.5}Gauge transformations}{55}{subsection.8.5}%
@@ -31,5 +31,5 @@
 \contentsline {section}{\numberline {9}Curved Yang-Mills gauge theory}{55}{section.9}%
 \contentsline {section}{\numberline {10}Conclusion}{55}{section.10}%
 \contentsline {section}{\nonumberline List of References}{55}{section*.3}%
-\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{55}{appendix.A}%
+\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{56}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -14,7 +14,7 @@ K.~Mackenzie.
 
 \bibitem{PullbackLGBLAB}
 K~Ajaykumar, B.~S. Kiranagi, and R~Rangarajan.
-\newblock Pullback of lie algebra and lie group bundles, and their homotopy
+\newblock Pullback of {L}ie algebra and {L}ie group bundles, and their homotopy
   invariance.
 \newblock {\em Journal of Algebra and Related Topics}, 8(1):15--26, 2020.
 \newblock https://doi.org/10.22124/jart.2020.13988.1156.
@@ -23,5 +23,11 @@ K~Ajaykumar, B.~S. Kiranagi, and R~Rangarajan.
 Ana~Cannas Da~Silva and Alan Weinstein.
 \newblock {\em Geometric models for noncommutative algebras}, volume~10.
 \newblock American Mathematical Soc., 1999.
+
+\bibitem{GroupoidBasedPrincipalBundles}
+Ieke Moerdijk and Janez Mrcun.
+\newblock {\em Introduction to foliations and Lie groupoids}, volume~91.
+\newblock Cambridge University Press, 2003.
+\newblock https://doi.org/10.1017/CBO9780511615450.
 
 \end{thebibliography}
