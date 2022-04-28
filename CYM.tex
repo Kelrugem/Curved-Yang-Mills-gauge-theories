@@ -3222,10 +3222,11 @@ and by Thm.\ \ref{thm:DiffOfLGBAction} we get
 Let $G$ be a Lie group, $M$ a smooth manifold, and an LGB $\mathcal{G}$ which acts on the right on another $G$-fibre bundle $\mathcal{P}$
 \begin{center}
 	\begin{tikzcd}
-	G \arrow{r} & \mathcal{P} \arrow{d} & \arrow[bend right]{l} \mathcal{G} \arrow{d} & \arrow{l} G \\
+	G \arrow{r} & \mathcal{P} \arrow{d}{\pi_{\mathcal{P}}} & \arrow[bend right]{l} \mathcal{G} \arrow{d} & \arrow{l} G \\
 	& M & M
 	\end{tikzcd}
 \end{center}
+where the right-action is defined on $\mathcal{P} * \mathcal{G}$ given by $\pi_{\mathcal{P}}^*\mathcal{G}$.
 Then we call $\mathcal{P}$ a principal $\mathcal{G}$-bundle if 
 \begin{enumerate}
 	\item The right $\mathcal{G}$-action on $\mathcal{P}$ \textbf{is simply transitive on the fibres}, that is, the restriction of $\mathcal{P}*\mathcal{G} \to \mathcal{P}$ on $x\in M$
@@ -3238,9 +3239,50 @@ Then we call $\mathcal{P}$ a principal $\mathcal{G}$-bundle if
 	g &\mapsto p \cdot g
 	\eas
 	for $p \in \mathcal{P}_x$.
+	\item There exist \textbf{$\mathcal{G}$-equivariant diffeomorphisms $\varphi_i: \mathcal{P}|_{U_i} \to \mathcal{G}|_{U_i}$}	subordinate to an open covering $\mleft( U_i \mright)_i$ of $M$, that is,
+	\bas
+	\varphi_i(p \cdot g)
+	&=
+	\varphi_i(p) \cdot g,
+	\eas
+	where the multiplication on the right hand side is inherited by $\mathcal{G} * \mathcal{G} \to \mathcal{G}$, the multiplication on $\mathcal{G}$.
+	%\textbf{bundle atlas of $\mathcal{G}$-equivariant bundle charts $\varphi_i: \mathcal{P}|_{U_i} \to U_i \times G$}, where $\mleft(U_i\mright)_i$ is an open covering of $M$ also subordinate to LGB charts $\vartheta_i: \mathcal{G}|_{U_i} \to U_i \times G$ of $\mathcal{G}$, that is, we have
+	%\bas
+	%\varphi_i(p \cdot g)
+	%&=
+	%\varphi_i(p) \cdot \vartheta_i(g)
+	%\eas
+	%for all $(p,g) \in \mleft.\mleft(\mathcal{P} * \mathcal{G}\mright)\mright|_{\pi_{\mathcal{P}}^{-1}(U_i)} = \mathcal{P} \times_{U_i} \mathcal{G}$, where on the right hand side the multiplication is the canonical multiplication of $U_i \times G$ as a trivial LGB; recall Ex.\ \ref{ex:TrivialLGBundle}.
+	%
+	%We will call such an atlas and its charts as \textbf{principal bundle atlas} and \textbf{principal bundle charts} for $\mathcal{P}$, respectively.
+	%$(x, q) \in U_i \times G$ acts on $(x, v) \in U_i \times G$ via
+	%\bas
+	%(x, v) \cdot (x, q)
+	%&=
+	%(x, vq).
+	%\eas
+\end{enumerate}
+
+The LGB $\mathcal{G}$ is the \textbf{structural LGB} of the principal bundle $\mathcal{P}$.
+\end{definitions}
+
+\begin{remarks}{Discussing the definition of $\mathcal{G}$-principal bundles}{LGBPrincDefDiscussion}
+There are several things in need to be discussed:
+\begin{enumerate}
+	\item The $\mathcal{G}$-equivariant diffeomorphisms $\varphi_i$ give rise to a \textbf{bundle atlas of $\mathcal{G}$-equivariant bundle charts $\xi_i: \mathcal{P}|_{U_i} \to U_i \times G$}. Assume w.l.o.g.\ that $U_i$ is small enough so that there is an LGB chart $\phi_i: \mathcal{G}|_{U_i} \to U_i \times G$ of $\mathcal{G}$; recall Def.\ \ref{def:LieGroupBundle}. Then $\xi_i \coloneqq \phi_i \circ \varphi_i$, which clearly satisfies
+	\bas
+	\xi_i(p \cdot g)
+	&=
+	\xi_i(p) \cdot \phi_i(g),
+	\eas
+	where the multiplication on the right hand side is the canonical one for $U_i \times G$ as a trivial LGB (recall Ex.\ \ref{ex:TrivialLGBundle}),
+	and this can be viewed as $\mathcal{G}$-equivariance (under the trivialization induced by $\phi_i$).
+	
+	We will call such an atlas and its charts a \textbf{principal bundle atlas} and \textbf{principal bundle charts} for $\mathcal{P}$, respectively. For simplicity we may also refer to $\varphi_i$ as principal bundle chart.
+	\item Due to the existence of $\varphi_i$ one does not need to claim upfront that $\mathcal{P}$ is a $G$-fibre bundle. However, for readability, we decided to structure the definition like this.
 	\item 
 \end{enumerate}
-\end{definitions}
+\end{remarks}
 
 \subsection{Generalized distributions and connections}
 
