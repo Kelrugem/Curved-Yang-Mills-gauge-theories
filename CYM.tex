@@ -1135,9 +1135,9 @@ where $\mathrm{Aut}(H)$ is the set of Lie group automorphisms. The similarity to
 This definition is of course also motivated by various references pointing out that Lie group representations define Lie group actions with extra properties; see for example \cite[\S 3, Ex.\ 3.4.2, page 143f.]{Hamilton}. In \cite[comments after Ex.\ 1.7.14, page 47]{mackenzieGeneralTheory} this definition is also called \textit{action by Lie group isomorphisms}.
 \end{remarks}
 
-With this we can discuss and define associated Lie group bundles.
+With this we can discuss and define associated Lie group bundles; the following definition is clearly motivated by the definition of associated vector bundles as provided in \cite[\S 4, Thm.\ 4.7.2, page 239f.]{Hamilton}.
 
-\begin{theorems}{Associated Lie group bundle as quotient, \newline\cite[motivated by vector spaces as in \S 4, Thm.\ 4.7.2, page 239f.]{Hamilton}}{AssociatedGroupBundlesHaveGroupStructure}
+\begin{theorems}{Associated Lie group bundle as quotient}{AssociatedGroupBundlesHaveGroupStructure}
 Let $G, H$ be Lie groups, $P \stackrel{\pi_P}{\to} M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then $\mathcal{H} \coloneqq P \times_\psi H$ is an LGB 
 \begin{center}
 	\begin{tikzcd}
@@ -1182,7 +1182,7 @@ where $p \in P_x$ is arbitrary and $e$ is the neutral element of $H$. This is cl
 \eas
 for all $g \in G$. Thence, the fact that $e_x$ is the neutral element follows immediately.
 
-The inverse of $[p, h] \in \mathcal{H}_x$ is clearly given by
+By Def.\ \eqref{LiegroupStructureOnFibresofAssociated} the inverse of $[p, h] \in \mathcal{H}_x$ is clearly given by
 \bas
 \mleft( [p, h] \mright)^{-1}
 &=
@@ -1506,7 +1506,7 @@ Observe that by the definition of $f^*\mathcal{G}$ we can also write
 \bas
 f(p \cdot g) &= f(p),
 \eas
-so, the $\mathcal{G}$-action is defined in such a way that $f$ is invariant under it. Moreover, the fibre-wise group structure on $\mathcal{G}$ naturally defines a $\mathcal{G}$-action on $\mathcal{G}$; in this situation $f$ would be $\pi$ itself. This is mainly a technical condition. On one hand, having $M = \{*\}$ already recovers the notion of a Lie group action and condition \eqref{InvarianceOffUnderGAction} is then trivial, and on the other hand the mentioned reference, \cite[\S 1.6, Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}, actually generalizes this condition making use of the structure of groupoids.
+so, the $\mathcal{G}$-action is defined in such a way that $f$ is invariant under it. If $f$ is the projection of $N$ as a bundle over $M$, then this means that an LGB action is fibre-preserving. Moreover, the fibre-wise group structure on $\mathcal{G}$ naturally defines a $\mathcal{G}$-action on $\mathcal{G}$; in this situation $f$ would be $\pi$ itself. This is mainly a technical condition. On one hand, having $M = \{*\}$ already recovers the notion of a Lie group action and condition \eqref{InvarianceOffUnderGAction} is then trivial, and on the other hand the mentioned reference, \cite[\S 1.6, Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}, actually generalizes this condition making use of the structure of groupoids.
 \newline
 
 Furthermore, the other conditions are the typical conditions for actions, especially such that we get a $\mathcal{G}$-action on $f^*\mathcal{G}$ by
@@ -3043,7 +3043,7 @@ Let $F \to M$ be a fibre bundle over a smooth manifold $M$. Then an \textbf{Ehre
 We often call $\mathrm{H}F$ also a \textbf{horizontal distribution/bundle of $F$}, while the term Ehresmann connection may imply a further property which will then have been declared. For $p \in M$ the fibre is denoted by $\mathrm{H}_p F$.
 \end{definitions}
 
-\subsection{Toy model}
+\subsection{Toy model}\label{TheBigMotivationBehindEverything}
 
 As usual for gauge theory we will understand connections as horizontal distributions as a complement of the vertical bundle with a certain symmetry along the fibres to assure that connection forms have a relationship to a form defined on the spacetime/basis itself;\footnote{Recall that connection 1-forms on principal bundles (in the classical gauge theory) can be viewed as a 1-form on the spacetime with values in the Atiyah bundle. We usually also want that the connection acting on a section $X$, denoted by $\nabla X$ in the case of vector bundles, is still a section of that vector bundle as a bundle over the spacetime/basis; one usually wants to avoid that $\nabla X$ is a section over the tangent bundle of the vector bundle, but this may be the case without further symmetry of the horizontal distribution.} this symmetry is usually formulated by looking at push-forwards of horizontal vectors. However, as we have seen in Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs} and Thm.\ \ref{thm:DiffOfLGBAction} (and its proof) the push-forward of horizontal vectors is not well-defined anymore on non-vertical vectors if one uses a fixed element of an LGB. Hence, we were using sections of an LGB instead. Using sections carries the problem that the tangential behaviour of their image (as embedding of the base) may contribute; then a horizontal vector may be still horizontal after a push-forward with one LGB section but not with respect to another LGB section. Thus, we need to adjust the typical definition of connections on principal bundles.
 
@@ -3219,10 +3219,10 @@ and by Thm.\ \ref{thm:DiffOfLGBAction} we get
 \subsection{Principal bundles with structural LGB}
 
 \begin{definitions}{Principal bundles with structural LGB, \newline \cite[simplification of the beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}}{PrinciBdleWithStruLGB}
-Let $G$ be a Lie group, $M$ a smooth manifold, and an LGB $\mathcal{G}$ which acts on the right on another $G$-fibre bundle $\mathcal{P}$
+Let $G$ be a Lie group, $M$ a smooth manifold, and an LGB $\mathcal{G} \to M$ which acts on the right on another $G$-fibre bundle $\mathcal{P} \to M$
 \begin{center}
 	\begin{tikzcd}
-	G \arrow{r} & \mathcal{P} \arrow{d}{\pi_{\mathcal{P}}} & \arrow[bend right]{l} \mathcal{G} \arrow{d} & \arrow{l} G \\
+	G \arrow{r} & \mathcal{P} \arrow{d}{\pi_{\mathcal{P}}} & \arrow[bend right]{l} \mathcal{G} \arrow{d}{\pi_{\mathcal{G}}} & \arrow{l} G \\
 	& M & M
 	\end{tikzcd}
 \end{center}
@@ -3266,9 +3266,10 @@ Then we call $\mathcal{P}$ a principal $\mathcal{G}$-bundle if
 The LGB $\mathcal{G}$ is the \textbf{structural LGB} of the principal bundle $\mathcal{P}$.
 \end{definitions}
 
-\begin{remarks}{Discussing the definition of $\mathcal{G}$-principal bundles}{LGBPrincDefDiscussion}
+\begin{remarks}{Discussion about the definition of $\mathcal{G}$-principal bundles}{LGBPrincDefDiscussion}
 There are several things in need to be discussed:
 \begin{enumerate}
+	\item By Remark \ref{rem:ActionAndPullbackLGBs} the $\mathcal{G}$-action on $\mathcal{P}$ is fibre-preserving, thus, the restriction of $\mathcal{P}*\mathcal{G} \to \mathcal{P}$ is indeed a map $\mathcal{P}_x \times \mathcal{G}_x \to \mathcal{P}_x$.
 	\item The $\mathcal{G}$-equivariant diffeomorphisms $\varphi_i$ give rise to a \textbf{bundle atlas of $\mathcal{G}$-equivariant bundle charts $\xi_i: \mathcal{P}|_{U_i} \to U_i \times G$}. Assume w.l.o.g.\ that $U_i$ is small enough so that there is an LGB chart $\phi_i: \mathcal{G}|_{U_i} \to U_i \times G$ of $\mathcal{G}$; recall Def.\ \ref{def:LieGroupBundle}. Then $\xi_i \coloneqq \phi_i \circ \varphi_i$, which clearly satisfies
 	\bas
 	\xi_i(p \cdot g)
@@ -3278,11 +3279,114 @@ There are several things in need to be discussed:
 	where the multiplication on the right hand side is the canonical one for $U_i \times G$ as a trivial LGB (recall Ex.\ \ref{ex:TrivialLGBundle}),
 	and this can be viewed as $\mathcal{G}$-equivariance (under the trivialization induced by $\phi_i$).
 	
-	We will call such an atlas and its charts a \textbf{principal bundle atlas} and \textbf{principal bundle charts} for $\mathcal{P}$, respectively. For simplicity we may also refer to $\varphi_i$ as principal bundle chart.
-	\item Due to the existence of $\varphi_i$ one does not need to claim upfront that $\mathcal{P}$ is a $G$-fibre bundle. However, for readability, we decided to structure the definition like this.
-	\item 
+	We will call such an atlas and its charts a \textbf{principal bundle atlas} and \textbf{principal bundle charts} for $\mathcal{P}$, respectively. For simplicity we may also refer to $\varphi_i$ as principal bundle chart giving rise to the principal bundle atlas.
+	\item Due to the existence of $\varphi_i$ one does not need to claim upfront that $\mathcal{P}$ is a $G$-fibre bundle. However, for readability, we decided to structure the definition like this. We kept a similar style as for "classical" principal bundles as provided in \cite[\S 4.2, Def.\ 4.2.1, page 207f.]{Hamilton}.
+	\item Since $\pi_{\mathcal{P}}$ is a surjective submersion we know by Remark \ref{SmoothnessOfACtionTranslations} that right-translations $r_g$ ($g \in \mathcal{G}_x$) are diffeomorphisms on $\mathcal{P}_{x}$. Furthermore, following \cite[\S 4.2, discussion after Def.\ 4.2.1, page 208f.]{Hamilton}, by definition we have a simply transitive $\mathcal{G}_x$-action (as a Lie group) on $\mathcal{P}_x$, and the isotropy group for each $p \in \mathcal{P}_x$ is trivial; the isotropy group consists in general of $g \in \mathcal{G}_x$ with $p \cdot g = p$, see \textit{e.g.}\ \cite[\S 3.2, third part of Def.\ 3.2.4, page 132]{Hamilton}. Therefore, and by \cite[\S 3.8, Thm.\ 3.8.8, page 165]{Hamilton}, the orbit map $\Phi_p$ gives rise to a $\mathcal{G}_x$-equivariant diffeomorphism
+	\bas
+	\mathcal{G}_x &\to \mathcal{P}_x,
+	\eas
+	where the action on $\mathcal{G}_x$ is the right-action on itself regarding the $\mathcal{G}_x$-equivariance.
 \end{enumerate}
 \end{remarks}
+
+Let us provide examples of such principal bundles.
+
+\begin{examples}{The "classical" principal bundle}{TheCLassicalPrincAsEx}
+$G$-principal bundles themselves are $\mathcal{G} \coloneqq M \times G$-principal bundles. Recall Ex.\ \ref{ex:TrivialLGBAction}, the LGB action of a trivial LGB $\mathcal{G} \cong M \times G$ is equivalent to a $G$-action, the right-translation with an element $g \in G$ is then either the right-translation of the corresponding constant section in $\mathcal{G}$or the right-translation with $(x, g)$ pointwise; this action is clearly simply transitive. The $\mathcal{G}$-principal bundle atlas is then inherited by the existing $G$-principal bundle atlas.
+
+We often refer to principal bundles related to trivial LGBs as \textbf{classical principal bundles}.
+\end{examples}
+
+\begin{examples}{The "trivial" $\mathcal{G}$-principal bundle}{TrivialPrincAsLGB}
+$\mathcal{G}$ itself is a $\mathcal{G}$-principal bundle, equipped with its canonical right-action inherited by its multiplication $\mathcal{G}*\mathcal{G} \to \mathcal{G}$. The principal bundle atlas then just consists of the identity map $\mathds{1}_{\mathcal{G}}$.
+
+By Ex.\ \ref{ex:TheCLassicalPrincAsEx}, it may be natural to call this the \textbf{trivial $\mathcal{G}$-principal bundle} even if $\mathcal{G}$ itself might not be trivial. It will be clearer later why one may choose to do so.
+
+The remarkable property is that this example shows that we are going to define a gauge theory for which LGBs themselves are allowed as principal bundles. One might have wondered why classical gauge theory uses classical principal bundles instead of LGBs, especially including non-trivial LGBs, because LGBs could be viewed as a more natural choice due to the fact that they are an analogue to how vector bundles are the "bundle-construction" of vector spaces. The problems described in Subsection \ref{TheBigMotivationBehindEverything} show why it was easier to choose classical principal bundles, since these avoid the difficulties regarding the definition of a connection; however, we are going to solve these problems in such a way that one can either use LGBs or classical bundles or even something more general.
+\end{examples}
+
+Our main example will be the inner bundle of a classical principal bundle, recall Ex.\ \ref{ex:InnerLGBs}. 
+
+The pullbacks of  LGB-principal bundles are also principal bundles; for this also recall Cor.\ \ref{cor:PullbackLGB}. To formulate this statement let us define morphisms of LGB-principal bundles
+
+\begin{definitions}{Morphism of principal bundles with structural LGB}{MorphOfPrincBundles}
+Let $M$ and $N$ be smooth manifolds, $\mathcal{H} \stackrel{\pi_{\mathcal{H}}}{\to} N$ and $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ LGBs, and $\mathcal{H} \to \mathcal{P}^\prime \stackrel{\pi^\prime}{\to} N$ and $\mathcal{G} \to \mathcal{P} \stackrel{\pi}{\to} M$ a $\mathcal{H}$- and a $\mathcal{G}$-principal bundle, respectively. A \textbf{principal bundle morphism} between $\mathcal{P}^\prime$ and $\mathcal{P}$ is a triple of smooth maps $F: \mathcal{H} \to \mathcal{G}$, $f: N \to M$ and $H: \mathcal{P}^\prime \to \mathcal{P}$ such that the pair $(F, f)$ is an LGB morphism as in Def.\ \ref{def:LGB morphism} and
+\ba
+\pi \circ H &= f \circ \pi^\prime,\label{PrincMorphoverBaseMap}\\
+H(p \cdot h) &= H(p) \cdot F(h)\label{PrincMorphLGBEquiv}
+\ea
+for all $(p, h) \in \mathcal{P}^\prime * \mathcal{H} = \mleft(\pi^\prime\mright)^*\mathcal{H}$.
+
+We speak of a \textbf{principal bundle isomorphism (over $f$)} if $H$ is a diffeomorphism.
+\end{definitions}
+
+\begin{remarks}{Equivalent definition}{EquivalentDefinitionForPrincMorphisms}
+Recall Cor.\ \ref{cor:PullbackLGB}, that is, $\mathcal{P}^\prime * \mathcal{H} \to \mathcal{P}^\prime$ and $\mathcal{P} * \mathcal{G}\to \mathcal{P}$ are LGBs as the pullbacks of $\mathcal{H}$ and $\mathcal{G}$, respectively. Furthermore, $(H, F)$ is a well-defined map $\mathcal{P}^\prime * \mathcal{H} \to \mathcal{P} * \mathcal{G}$ over $H$. Then Eq.\ \eqref{PrincMorphLGBEquiv} is equivalent to say that $(H, F)$ is an LGB morphism (over $H$).
+\end{remarks}
+
+\begin{remark}
+\leavevmode\newline
+\indent $\bullet$ Observe that the right hand side of Eq.\ \eqref{PrincMorphLGBEquiv} is well-defined because of Eq.\ \eqref{PrincMorphoverBaseMap}, $(p, h) \in \mathcal{P}^\prime * \mathcal{H}$ and Def.\ \ref{def:LGB morphism}, that is,
+\bas
+\mleft( \pi_{\mathcal{G}} \circ F \mright)(h)
+&\stackrel{\text{\ref{def:LGB morphism}}}{=}
+\mleft( f \circ \pi_{\mathcal{H}} \mright)(h)
+\stackrel{\pi^\prime(p) = \pi_{\mathcal{H}}(h)}{=}
+\mleft( f \circ \pi^\prime \mright)(p)
+\stackrel{\eqref{PrincMorphoverBaseMap}}{=}
+\mleft( \pi \circ H \mright)(p),
+\eas
+thus,
+\bas
+\bigl( H(p), F(h) \bigr)
+&\in
+\mathcal{P} * \mathcal{G}
+=
+\pi^* \mathcal{G}.
+\eas
+Furthermore, by additionally using Remark \ref{rem:LGBPrincDefDiscussion} we know that LGB actions preserve the fibres of the principal bundles, therefore both, $H(p \cdot h)$ and $H(p) \cdot F(h)$, are over the same base point $\mleft(f \circ \pi^\prime\mright)(p)$, so that Eq.\ \eqref{PrincMorphLGBEquiv} as a whole is well-defined.
+
+$\bullet$ Also observe that one can conclude that $(F,f)$ has to be an LGB morphism in order to have a satisfied and well-defined Eq.\ \eqref{PrincMorphLGBEquiv}, assuming that $H$ is a map over $f$. To well-define the right hand side, $F$ is a morphism over $f$, since $H$ is defined over $f$. Furthermore, for $h^\prime \in \mathcal{H}_{\pi^\prime(p)}$ we have
+\bas
+H\mleft(p \cdot h^\prime h \mright)
+&=
+H(p) \cdot F\mleft(h^\prime h\mright),
+\eas
+but we also get by associativity
+\bas
+H\mleft(p \cdot h^\prime h \mright)
+&=
+H(p) \cdot F\mleft(h^\prime\mright) ~ F(h).
+\eas
+Using that $\mathcal{G}$ acts simply transitive on $\mathcal{P}$, we derive
+\bas
+F\mleft(h^\prime h\mright)
+&=
+F\mleft(h^\prime\mright) ~ F(h).
+\eas
+
+$\bullet$ If $H$ is a diffeomorphism, then $F$ is an LGB isomorphism. For this we only have to show that $F$ is a diffeomorphism by Def.\ \ref{def:LGB morphism}; by Remark \ref{LGBMOrphismRemark}, also $f$ is then a diffeomorphism. Thence, let us show that $F$ is a diffeomorphism. This follows by the fact that the LGB actions are simply transitive on the fibres of $\mathcal{P}^\prime$ and $\mathcal{P}$, \textit{i.e.}\ orbit maps are diffeomorphisms, also recall Remark \ref{rem:LGBPrincDefDiscussion}. Denoting the orbit maps inherited by the action on $\mathcal{P}^\prime$ and $\mathcal{P}$ by $\Phi^{\mathcal{P}^\prime}$ and $\Phi^{\mathcal{P}}$, respectively, we can write
+\bas
+F(h)
+&=
+\mleft(
+	\mleft(\Phi^{\mathcal{P}}_{H(p)}\mright)^{-1} \circ H \circ \Phi^{\mathcal{P}^\prime}_p 
+\mright)(h)
+\eas
+for arbitrary $p$ by rewriting Eq.\ \eqref{PrincMorphLGBEquiv}. Hence, $F$ is a diffeomorphism as the composition of diffeomorphisms.
+
+Last but not least, it follows that $H^{-1}$ is then $\mathcal{G}$-equivariant in the sense of 
+\bas
+H^{-1}(q \cdot g) &= H^{-1}(q) \cdot F^{-1}(g)
+\eas
+for all $(q, g) \in \mathcal{P}*\mathcal{G}$, which is well-defined by similar arguments as before, especially because the inverses are maps over $f^{-1}$. To prove this, observe that there is a unique $(p, h) \in \mathcal{P}^\prime * \mathcal{H}$ such that $H(p) = q$ and $F(h) = g$ due to bijectivity.
+
+$\bullet$ Lokal by H = Principal Chart, F = Id eine "Trivialisierung"
+\end{remark}
+
+\begin{corollaries}{Pullbacks of $\mathcal{G}$-principal bundles}{PullBacksArePrincToo}
+Let $M, N$ be smooth manifolds, $f: N \to M$ a smooth map, $\mathcal{G} \to M$ an LGB, and $\mathcal{P} \to M$ a $\mathcal{G}$-principal bundle. Then 
+\end{corollaries}
 
 \subsection{Generalized distributions and connections}
 
