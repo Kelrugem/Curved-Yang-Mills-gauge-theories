@@ -1039,7 +1039,7 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ and $\mathcal{H} \stackrel
 \pi_{\mathcal{G}} \circ F &= f \circ \pi_{\mathcal{H}},\\
 F(gq) &= F(g) ~ F(q)\label{LGBHomomorph}
 \ea
-for all $g, q \in \mathcal{H}$ with $\pi_{\mathcal{H}}(g) = \pi_{\mathcal{H}}(q)$. We then say that \textbf{$F$ is an LGB morphism over $f$}. If $N = M$ and $f = \mathrm{id}_M$, then we often omit mentioning $f$ explicitly and just write that \textbf{$F$ is a (base-preserving) LGB morphism}.
+for all $g, q \in \mathcal{H}$ with $\pi_{\mathcal{H}}(g) = \pi_{\mathcal{H}}(q)$. We then also say that \textbf{$F$ is an LGB morphism over $f$}. If $N = M$ and $f = \mathrm{id}_M$, then we often omit mentioning $f$ explicitly and just write that \textbf{$F$ is a (base-preserving) LGB morphism}.
 
 We speak of an \textbf{LGB isomorphism (over $f$)} if $F$ is a diffeomorphism.
 \end{definitions}
@@ -2002,7 +2002,7 @@ Let $\mathcal{g} \stackrel{\pi_{\mathcal{g}}}{\to} M$ and $\mathcal{h} \stackrel
 F &\text{ linear},\\
 F\mleft(\mleft[g, q\mright]_{\mathcal{h}_p}\mright) &= \mleft[F(g), F(q)\mright]_{\mathcal{g}_{f(p)}}\label{LABHomomorph}
 \ea
-for all $g, q \in \mathcal{h}_p$ ($p \in N$), where $\mleft[\cdot, \cdot\mright]_{\mathcal{h}_p}$ and $\mleft[\cdot, \cdot\mright]_{\mathcal{g}_{f(p)}}$ are Lie brackets of $\mathcal{h}_p$ and $g_{f(p)}$, respectively. We then say that \textbf{$F$ is an LAB morphism over $f$}. If $N = M$ and $f = \mathrm{id}_M$, then we often omit mentioning $f$ explicitly and just write that \textbf{$F$ is a (base-preserving) LAB morphism}.
+for all $g, q \in \mathcal{h}_p$ ($p \in N$), where $\mleft[\cdot, \cdot\mright]_{\mathcal{h}_p}$ and $\mleft[\cdot, \cdot\mright]_{\mathcal{g}_{f(p)}}$ are Lie brackets of $\mathcal{h}_p$ and $g_{f(p)}$, respectively. We also say that \textbf{$F$ is an LAB morphism over $f$}. If $N = M$ and $f = \mathrm{id}_M$, then we often omit mentioning $f$ explicitly and just write that \textbf{$F$ is a (base-preserving) LAB morphism}.
 
 We speak of an \textbf{LAB isomorphism (over $f$)} if $F$ is a diffeomorphism.
 \end{definitions}
@@ -3277,10 +3277,10 @@ There are several things in need to be discussed:
 	\xi_i(p) \cdot \phi_i(g),
 	\eas
 	where the multiplication on the right hand side is the canonical one for $U_i \times G$ as a trivial LGB (recall Ex.\ \ref{ex:TrivialLGBundle}),
-	and this can be viewed as $\mathcal{G}$-equivariance (under the trivialization induced by $\phi_i$).
+	and this can be viewed as $\mathcal{G}$-equivariance (under the trivialization induced by $\phi_i$). We usually then speak of \textbf{$\mathcal{G}$-equivariance with LGB morphism $\phi_i$}.
 	
 	We will call such an atlas and its charts a \textbf{principal bundle atlas} and \textbf{principal bundle charts} for $\mathcal{P}$, respectively. For simplicity we may also refer to $\varphi_i$ as principal bundle chart giving rise to the principal bundle atlas.
-	\item Due to the existence of $\varphi_i$ one does not need to claim upfront that $\mathcal{P}$ is a $G$-fibre bundle. However, for readability, we decided to structure the definition like this. We kept a similar style as for "classical" principal bundles as provided in \cite[\S 4.2, Def.\ 4.2.1, page 207f.]{Hamilton}.
+	\item Due to the existence of $\varphi_i$ one does not need to claim upfront that $\mathcal{P}$ is a $G$-fibre bundle. However, for readability, we decided to structure the definition like this. We kept a similar style as for "typical" principal bundles as provided in \cite[\S 4.2, Def.\ 4.2.1, page 207f.]{Hamilton}.
 	\item Since $\pi_{\mathcal{P}}$ is a surjective submersion we know by Remark \ref{SmoothnessOfACtionTranslations} that right-translations $r_g$ ($g \in \mathcal{G}_x$) are diffeomorphisms on $\mathcal{P}_{x}$. Furthermore, following \cite[\S 4.2, discussion after Def.\ 4.2.1, page 208f.]{Hamilton}, by definition we have a simply transitive $\mathcal{G}_x$-action (as a Lie group) on $\mathcal{P}_x$, and the isotropy group for each $p \in \mathcal{P}_x$ is trivial; the isotropy group consists in general of $g \in \mathcal{G}_x$ with $p \cdot g = p$, see \textit{e.g.}\ \cite[\S 3.2, third part of Def.\ 3.2.4, page 132]{Hamilton}. Therefore, and by \cite[\S 3.8, Thm.\ 3.8.8, page 165]{Hamilton}, the orbit map $\Phi_p$ gives rise to a $\mathcal{G}_x$-equivariant diffeomorphism
 	\bas
 	\mathcal{G}_x &\to \mathcal{P}_x,
@@ -3291,10 +3291,10 @@ There are several things in need to be discussed:
 
 Let us provide examples of such principal bundles.
 
-\begin{examples}{The "classical" principal bundle}{TheCLassicalPrincAsEx}
+\begin{examples}{The "pre-classical" principal bundle}{TheCLassicalPrincAsEx}
 $G$-principal bundles themselves are $\mathcal{G} \coloneqq M \times G$-principal bundles. Recall Ex.\ \ref{ex:TrivialLGBAction}, the LGB action of a trivial LGB $\mathcal{G} \cong M \times G$ is equivalent to a $G$-action, the right-translation with an element $g \in G$ is then either the right-translation of the corresponding constant section in $\mathcal{G}$or the right-translation with $(x, g)$ pointwise; this action is clearly simply transitive. The $\mathcal{G}$-principal bundle atlas is then inherited by the existing $G$-principal bundle atlas.
 
-We often refer to principal bundles related to trivial LGBs as \textbf{classical principal bundles}.
+We often refer to principal bundles related to trivial LGBs as \textbf{pre-classical principal bundles}. We will later clarify why "pre-classical" as adjective instead of "classical"; however, at this point both adjectives are permutable.
 \end{examples}
 
 \begin{examples}{The "trivial" $\mathcal{G}$-principal bundle}{TrivialPrincAsLGB}
@@ -3302,10 +3302,10 @@ $\mathcal{G}$ itself is a $\mathcal{G}$-principal bundle, equipped with its cano
 
 By Ex.\ \ref{ex:TheCLassicalPrincAsEx}, it may be natural to call this the \textbf{trivial $\mathcal{G}$-principal bundle} even if $\mathcal{G}$ itself might not be trivial. It will be clearer later why one may choose to do so.
 
-The remarkable property is that this example shows that we are going to define a gauge theory for which LGBs themselves are allowed as principal bundles. One might have wondered why classical gauge theory uses classical principal bundles instead of LGBs, especially including non-trivial LGBs, because LGBs could be viewed as a more natural choice due to the fact that they are an analogue to how vector bundles are the "bundle-construction" of vector spaces. The problems described in Subsection \ref{TheBigMotivationBehindEverything} show why it was easier to choose classical principal bundles, since these avoid the difficulties regarding the definition of a connection; however, we are going to solve these problems in such a way that one can either use LGBs or classical bundles or even something more general.
+The remarkable property is that this example shows that we are going to define a gauge theory for which LGBs themselves are allowed as principal bundles. One might have wondered why classical gauge theory uses pre-classical principal bundles instead of LGBs, especially including non-trivial LGBs, because LGBs could be viewed as a more natural choice due to the fact that they are an analogue to how vector bundles are the "bundle-construction" of vector spaces. The problems described in Subsection \ref{TheBigMotivationBehindEverything} show why it was easier to choose pre-classical principal bundles, since these avoid the difficulties regarding the definition of a connection; however, we are going to solve these problems in such a way that one can either use LGBs or pre-classical bundles or even something more general.
 \end{examples}
 
-Our main example will be the inner bundle of a classical principal bundle, recall Ex.\ \ref{ex:InnerLGBs}. 
+Our main example will be the inner bundle of a pre-classical principal bundle, recall Ex.\ \ref{ex:InnerLGBs}. 
 
 The pullbacks of  LGB-principal bundles are also principal bundles; for this also recall Cor.\ \ref{cor:PullbackLGB}. To formulate this statement let us define morphisms of LGB-principal bundles
 
@@ -3315,14 +3315,16 @@ Let $M$ and $N$ be smooth manifolds, $\mathcal{H} \stackrel{\pi_{\mathcal{H}}}{\
 \pi \circ H &= f \circ \pi^\prime,\label{PrincMorphoverBaseMap}\\
 H(p \cdot h) &= H(p) \cdot F(h)\label{PrincMorphLGBEquiv}
 \ea
-for all $(p, h) \in \mathcal{P}^\prime * \mathcal{H} = \mleft(\pi^\prime\mright)^*\mathcal{H}$.
+for all $(p, h) \in \mathcal{P}^\prime * \mathcal{H} = \mleft(\pi^\prime\mright)^*\mathcal{H}$. We also speak of a \textbf{principal bundle morphism over $f$ with LGB morphism $F$}.
 
-We speak of a \textbf{principal bundle isomorphism (over $f$)} if $H$ is a diffeomorphism.
+We speak of a \textbf{principal bundle isomorphism (over $f$, with $F$)} if $H$ is a diffeomorphism. 
+
+If $H$ is a base-preserving isomorphism $\mathcal{P} \to \mathcal{P}$ with $F = \mathds{1}_{\mathcal{G}}$, then we say that $H$ is a \textbf{(global) gauge transformation} or \textbf{principal bundle automorphism}, and the set of all such automorphisms is denoted by $\sAut(\mathcal{P})$.
 \end{definitions}
-
-\begin{remarks}{Equivalent definition}{EquivalentDefinitionForPrincMorphisms}
-Recall Cor.\ \ref{cor:PullbackLGB}, that is, $\mathcal{P}^\prime * \mathcal{H} \to \mathcal{P}^\prime$ and $\mathcal{P} * \mathcal{G}\to \mathcal{P}$ are LGBs as the pullbacks of $\mathcal{H}$ and $\mathcal{G}$, respectively. Furthermore, $(H, F)$ is a well-defined map $\mathcal{P}^\prime * \mathcal{H} \to \mathcal{P} * \mathcal{G}$ over $H$. Then Eq.\ \eqref{PrincMorphLGBEquiv} is equivalent to say that $(H, F)$ is an LGB morphism (over $H$).
-\end{remarks}
+%Following remark is wrong, an equivalent statement may be related to the quotient space
+%\begin{remarks}{Equivalent definition}{EquivalentDefinitionForPrincMorphisms}
+%Recall Cor.\ \ref{cor:PullbackLGB}, that is, $\mathcal{P}^\prime * \mathcal{H} \to \mathcal{P}^\prime$ and $\mathcal{P} * \mathcal{G}\to \mathcal{P}$ are LGBs as the pullbacks of $\mathcal{H}$ and $\mathcal{G}$, respectively. Furthermore, $(H, F)$ is a well-defined map $\mathcal{P}^\prime * \mathcal{H} \to \mathcal{P} * \mathcal{G}$ over $H$. Then Eq.\ \eqref{PrincMorphLGBEquiv} is equivalent to say that $(H, F)$ is an LGB morphism (over $H$).
+%\end{remarks}
 
 \begin{remark}
 \leavevmode\newline
@@ -3379,14 +3381,47 @@ Last but not least, it follows that $H^{-1}$ is then $\mathcal{G}$-equivariant i
 \bas
 H^{-1}(q \cdot g) &= H^{-1}(q) \cdot F^{-1}(g)
 \eas
-for all $(q, g) \in \mathcal{P}*\mathcal{G}$, which is well-defined by similar arguments as before, especially because the inverses are maps over $f^{-1}$. To prove this, observe that there is a unique $(p, h) \in \mathcal{P}^\prime * \mathcal{H}$ such that $H(p) = q$ and $F(h) = g$ due to bijectivity.
+for all $(q, g) \in \mathcal{P}*\mathcal{G}$, which is well-defined by similar arguments as before, especially because the inverses are maps over $f^{-1}$. To prove this, observe that there is a unique $(p, h) \in \mathcal{P}^\prime * \mathcal{H}$ such that $H(p) = q$ and $F(h) = g$ due to the fact that both are bijective maps over $f$.\footnote{In fact, it is easy to prove that $(H, F):\mathcal{P}^\prime * \mathcal{H} \to \mathcal{P} * \mathcal{G}$ is an LGB isomorphism (over $H$); also recall Cor.\ \ref{cor:PullbackLGB}.} Then
+\bas
+H^{-1}(q \cdot g)
+&=
+H^{-1}\bigl( \underbrace{H(p) \cdot F(h)}_{= H(p \cdot h)} \bigr)
+=
+p \cdot h
+=
+H^{-1}(q) \cdot F^{-1}(g).
+\eas
+Thence, Def.\ \ref{def:MorphOfPrincBundles} is a valid definition for a principal bundle morphism, because it is easy to check that the principal bundle atlas on $\mathcal{P}$ (consisting of $\varphi_i$ related to an open covering $\mleft(U_i\mright)_i$ of $M$) is related to the principal bundle atlas on $\mathcal{P}^\prime$ by
+\bas
+\mleft(F^{-1} \circ \varphi_i \circ H\mright)|_{f^{-1}(U_i)}.
+\eas
 
-$\bullet$ Lokal by H = Principal Chart, F = Id eine "Trivialisierung"
+$\bullet$ Finally, observe that we have locally an isomorphism of every principal bundle $\mathcal{P}$ to $\mathcal{G}$: Fix a principal bundle chart $\varphi: \mathcal{P}|_U \to \mathcal{G}|_U$ ($U$ some open subset of $M$). Then take $H \coloneqq \varphi$, $F \coloneqq \mathds{1}_{\mathcal{G}|_U}$ and $f \coloneqq \mathds{1}_U$; by the definition of a principal bundle chart this gives a principal bundle isomorphism. Therefore one could say that every principal bundle is locally "trivial" in the sense of being an LGB; recall Ex.\ \ref{ex:TrivialPrincAsLGB}. 
+
+Additionally using Remark \ref{rem:LGBPrincDefDiscussion} we have locally an isomorphism of $\mathcal{P}$ to a trivial LGB; keeping the same notation as in Remark \ref{rem:LGBPrincDefDiscussion}, choose $H \coloneqq \xi_i$, $F \coloneqq \phi_i$ and $f \coloneqq \mathds{1}_{U_i}$. Hence, locally every principal bundle is also pre-classical in the sense of Ex.\ \ref{ex:TheCLassicalPrincAsEx}.
 \end{remark}
 
-\begin{corollaries}{Pullbacks of $\mathcal{G}$-principal bundles}{PullBacksArePrincToo}
-Let $M, N$ be smooth manifolds, $f: N \to M$ a smooth map, $\mathcal{G} \to M$ an LGB, and $\mathcal{P} \to M$ a $\mathcal{G}$-principal bundle. Then 
+Let us study pullbacks of principal bundles, also recall again Cor.\ \ref{cor:PullbackLGB}.
+
+\begin{corollaries}{Pullbacks of $\mathcal{G}$-principal bundles are principal bundles}{PullBacksArePrincToo}
+Let $M, N$ be smooth manifolds, $f: N \to M$ a smooth map, $\mathcal{G} \to M$ an LGB, and $\mathcal{P} \to M$ a $\mathcal{G}$-principal bundle. Then there is a unique (up to isomorphisms) $f^*\mathcal{G}$-principal bundle structure on $f^*\mathcal{P}$ such that the projection $\pi_2: f^*\mathcal{P} \to \mathcal{P}$ onto the second factor is a principal bundle morphism (over $f$) with the projection $\pi_2^{\mathcal{G}}: f^*\mathcal{G} \to \mathcal{G}$ onto the second factor as LGB morphism and such that $\pi_2|_x: (f^*\mathcal{P})_x \to \mathcal{P}_{f(x)}$ is a $\mathcal{G}_x$-equivariant diffeomorphism with the LGB isomorphism $\pi_2^{\mathcal{G}}$.
 \end{corollaries}
+
+\begin{remark}
+\leavevmode\newline
+For an even more general type of principal in \cite[\S 5.7, second argument in Remark 5.34, page 145]{GroupoidBasedPrincipalBundles} it was also stated that pullbacks of principal bundles are principal bundles, but without proof.
+\end{remark}
+
+\begin{proof}
+\leavevmode\newline
+As in the previous statements about pullback structures, this is a rather trivial and canonical construction. We have a right $f^*\mathcal{G}$-action on $f^*\mathcal{G}$ defined by
+\bas
+(x, p) \cdot (x, g)
+&\coloneqq
+(x, p \cdot g)
+\eas
+for all $(x, p) \in f^*\mathcal{P}$ and $(x, g) \in f^*\mathcal{G}$, that is, $x \in N$, $p\in \mathcal{P}_{f(x)}$ and $g \in \mathcal{G}_{f(x)}$. This is clearly an action $f^*\mathcal{P} * f^*\mathcal{G} \coloneqq \pi_1^*f^*\mathcal{G} \to f^*\mathcal{P}$, where $\pi_1$ is the canonical projection of $f^*\mathcal{P} \to N$ as fibre bundle. This action's restriction onto the fibres is simply transitive: A fibre of $f^*\mathcal{P}$ at $x$ is $\{x\} \times \mathcal{P}_{f(x)} \cong \mathcal{P}_{f(x)}$, similarly $(f^*\mathcal{G})_x \cong \mathcal{G}_{f(x)}$. Hence, the restriction of that action at $x \in N$ is the right $\mathcal{G}_{f(x)}$-action on $\mathcal{P}_{f(x)}$ such that the action is simply transitive.
+\end{proof}
 
 \subsection{Generalized distributions and connections}
 
