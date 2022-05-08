@@ -3302,6 +3302,7 @@ The LGB $\mathcal{G}$ is the \textbf{structural LGB} of the principal bundle $\m
 \begin{remarks}{Discussion about the definition of $\mathcal{G}$-principal bundles}{LGBPrincDefDiscussion}
 There are several things in need to be discussed:
 \begin{enumerate}
+	\item The mentioned reference, \cite[simplification of the beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}, introduces principal bundles slightly different; we will come back later to this in Remark \ref{AlternativePrincBdlDef}.
 	\item By Remark \ref{rem:ActionAndPullbackLGBs} the $\mathcal{G}$-action on $\mathcal{P}$ is fibre-preserving, thus, the restriction of $\mathcal{P}*\mathcal{G} \to \mathcal{P}$ is indeed a map $\mathcal{P}_x \times \mathcal{G}_x \to \mathcal{P}_x$.
 	\item The $\mathcal{G}$-equivariant diffeomorphisms $\varphi_i$ give rise to a \textbf{bundle atlas of $\mathcal{G}$-equivariant bundle charts $\xi_i: \mathcal{P}|_{U_i} \to U_i \times G$}. Assume w.l.o.g.\ that $U_i$ is small enough so that there is an LGB chart $\phi_i: \mathcal{G}|_{U_i} \to U_i \times G$ of $\mathcal{G}$; recall Def.\ \ref{def:LieGroupBundle}. Then $\xi_i \coloneqq \phi_i \circ \varphi_i$, which clearly satisfies
 	\bas
@@ -3341,7 +3342,11 @@ The remarkable property is that this example shows that we are going to define a
 
 Our main example will be the inner bundle of a pre-classical principal bundle, recall Ex.\ \ref{ex:InnerLGBs}. 
 
-The pullbacks of  LGB-principal bundles are also principal bundles; for this also recall Cor.\ \ref{cor:PullbackLGB}. To formulate this statement let us define morphisms of LGB-principal bundles
+To explain the "triviality" of the previous example we need to introduce morphisms of principal bundles.
+%
+%\subsection{Morphism of principal LGB-bundles}
+%
+%Let us define morphisms of LGB-principal bundles
 
 \begin{definitions}{Morphism of principal bundles with structural LGB}{MorphOfPrincBundles}
 Let $M$ and $N$ be smooth manifolds, $\mathcal{H} \stackrel{\pi_{\mathcal{H}}}{\to} N$ and $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ LGBs, and $\mathcal{H} \to \mathcal{P}^\prime \stackrel{\pi^\prime}{\to} N$ and $\mathcal{G} \to \mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{H}$- and $\mathcal{G}$-bundle, respectively. A \textbf{principal bundle morphism} between $\mathcal{P}^\prime$ and $\mathcal{P}$ is a triple of smooth maps $F: \mathcal{H} \to \mathcal{G}$, $f: N \to M$ and $H: \mathcal{P}^\prime \to \mathcal{P}$ such that the pair $(F, f)$ is an LGB morphism as in Def.\ \ref{def:LGB morphism} and
@@ -3435,6 +3440,29 @@ $\bullet$ Finally, observe that we have locally an isomorphism of every principa
 Additionally using Remark \ref{rem:LGBPrincDefDiscussion} we have locally an isomorphism of $\mathcal{P}$ to a trivial LGB; keeping the same notation as in Remark \ref{rem:LGBPrincDefDiscussion}, choose $H \coloneqq \xi_i$, $F \coloneqq \phi_i$ and $f \coloneqq \mathds{1}_{U_i}$. Hence, locally every principal bundle is also pre-classical in the sense of Ex.\ \ref{ex:TheCLassicalPrincAsEx}.
 \end{remark}
 
+As expected, there is a natural isomorphism induced by local sections of $\mathcal{P}$.
+
+\begin{lemmata}{Local sections of principal bundles induce isomorphisms to the structural LGB}{SectionsNowInduceIsomToLGBsNotNecTriv}
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Let $s: U \to \mathcal{P}$ be a local section of $\mathcal{P}$ over an open subset $U$ of $M$. Then the map $H$ defined by
+\bas
+\mathcal{G}|_U &\to \mathcal{P}|_U,\\
+g &\mapsto s_{\pi_{\mathcal{G}}(g)} \cdot g
+\eas
+is a base-preserving principal bundle isomorphism w.r.t.\ $\mathds{1}_{\mathcal{G}|_U}$.
+\end{lemmata}
+
+\begin{remark}
+\leavevmode\newline
+As in the typical formulation of gauge theory, we have an isomorphism induced by sections, but it is not necessarily a trivialization as fibre bundle, so that we do not necessarily also have a "pre-classical" bundle; it is a trivialization in the sense of Ex.\ \ref{ex:TrivialPrincAsLGB}. Due to the similarity with the "classical" statement, we therefore were speaking of the "trivial" principal bundle in Ex.\ \ref{ex:TrivialPrincAsLGB}. Of course, since every LGB is locally trivial, we can find a typical trivialization by taking a "local-enough" section.
+
+The latter about the typical trivialization is also stated in \cite[\S 5.7, fourth part of Remark 5.34, page 145]{GroupoidBasedPrincipalBundles} for groupoid-based principal bundles.
+\end{remark}
+
+\begin{proof}[Proof of Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}]
+\leavevmode\newline
+
+\end{proof}
+
 Let us study pullbacks of principal bundles, also recall again Cor.\ \ref{cor:PullbackLGB}.
 
 \begin{corollaries}{Pullbacks of $\mathcal{G}$-principal bundles are principal bundles}{PullBacksArePrincToo}
@@ -3518,7 +3546,7 @@ where $\Phi_p$ is the orbit map through $p$, a diffeomorphism by Remark \ref{rem
 %The first arrow is clearly a diffeomorphism, since it is the restriction of the image of $\mathcal{P} * \mathcal{G} \to \mathcal{P}\times \mleft(\mathcal{P}*\mathcal{G}\mright)$, $(p, g) \mapsto (p, p, g)$, onto the embedded submanifold $\pi^*\mleft(\mathcal{P}*\mathcal{G}\mright)$; the inverse is given by the smooth projection of $(p, p, g) \mapsto (p,g)$. The second arrow is the map
 \end{proof}
 
-\begin{remark}
+\begin{remark}\label{AlternativePrincBdlDef}
 \leavevmode\newline
 \end{remark}
 

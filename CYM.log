@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  8 MAY 2022 01:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  8 MAY 2022 23:16
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1317,26 +1317,31 @@ Overfull \hbox (4.5506pt too wide) in paragraph at lines 1857--1862
 
 [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
 [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56]
-[57] [58] [59] [60]
-Underfull \hbox (badness 10000) in paragraph at lines 3522--3523
+[57] [58] [59]
+Underfull \hbox (badness 10000) in paragraph at lines 3462--3463
 
  []
 
-[61] (CYM.bbl
+[60] [61]
+Underfull \hbox (badness 10000) in paragraph at lines 3550--3551
+
+ []
+
+[62] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-) [62] (CYM.aux)
+) [63] (CYM.aux)
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34085 strings out of 478907
- 711699 string characters out of 2851891
- 1199218 words of memory out of 3000000
- 51085 multiletter control sequences out of 15000+600000
+ 34092 strings out of 478907
+ 711820 string characters out of 2851891
+ 1199584 words of memory out of 3000000
+ 51088 multiletter control sequences out of 15000+600000
  507518 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1378,9 +1383,9 @@ ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/User
 s/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
 
-Output written on CYM.pdf (64 pages, 872116 bytes).
+Output written on CYM.pdf (65 pages, 876721 bytes).
 PDF statistics:
- 1116 PDF objects out of 1200 (max. 8388607)
- 250 named destinations out of 1000 (max. 500000)
+ 1130 PDF objects out of 1200 (max. 8388607)
+ 254 named destinations out of 1000 (max. 500000)
  277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
