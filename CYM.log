@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  8 MAY 2022 23:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  9 MAY 2022 21:33
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1317,13 +1317,8 @@ Overfull \hbox (4.5506pt too wide) in paragraph at lines 1857--1862
 
 [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
 [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56]
-[57] [58] [59]
-Underfull \hbox (badness 10000) in paragraph at lines 3462--3463
-
- []
-
-[60] [61]
-Underfull \hbox (badness 10000) in paragraph at lines 3550--3551
+[57] [58] [59] [60] [61]
+Underfull \hbox (badness 10000) in paragraph at lines 3568--3569
 
  []
 
@@ -1383,9 +1378,9 @@ ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/User
 s/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
 
-Output written on CYM.pdf (65 pages, 876721 bytes).
+Output written on CYM.pdf (65 pages, 878404 bytes).
 PDF statistics:
- 1130 PDF objects out of 1200 (max. 8388607)
+ 1132 PDF objects out of 1200 (max. 8388607)
  254 named destinations out of 1000 (max. 500000)
  277 words of extra memory for PDF output out of 10000 (max. 10000000)
 

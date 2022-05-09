@@ -3443,7 +3443,7 @@ Additionally using Remark \ref{rem:LGBPrincDefDiscussion} we have locally an iso
 As expected, there is a natural isomorphism induced by local sections of $\mathcal{P}$.
 
 \begin{lemmata}{Local sections of principal bundles induce isomorphisms to the structural LGB}{SectionsNowInduceIsomToLGBsNotNecTriv}
-Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Let $s: U \to \mathcal{P}$ be a local section of $\mathcal{P}$ over an open subset $U$ of $M$. Then the map $H$ defined by
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Let $s: U \to \mathcal{P}$ be a smooth local section of $\mathcal{P}$ over an open subset $U$ of $M$. Then the map $H$ defined by
 \bas
 \mathcal{G}|_U &\to \mathcal{P}|_U,\\
 g &\mapsto s_{\pi_{\mathcal{G}}(g)} \cdot g
@@ -3460,7 +3460,25 @@ The latter about the typical trivialization is also stated in \cite[\S 5.7, four
 
 \begin{proof}[Proof of Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}]
 \leavevmode\newline
+The proof is similar to the "classical" statement as \textit{e.g.}\ given in \cite[\S 4.2, proof of Lemma 4.2.7, page 210ff.]{Hamilton}. $H$ is well-defined because of $\pi_{\mathcal{P}} \circ s = \mathds{1}_{U}$ such that $\mleft(s_{\pi_{\mathcal{G}}(g)}, g\mright) \in \mathcal{P}*\mathcal{G}$. Let us denote with $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{G}$ the right $\mathcal{G}$-action $(p, g) \mapsto p \cdot g$ on $\mathcal{P}$, then
+\bas
+H(g)
+&=
+\Phi\mleft( s_{\pi_{\mathcal{G}}(g)}, g\mright)
+=
+\bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathds{1}_{\mathcal{G}} \mright) \bigr) (g,g).
+\eas
+Thence, $H$ is clearly a smooth map as the composition of smooth maps; the second map $\mleft( \pi_{\mathcal{G}}^*s, \mathds{1}_{\mathcal{G}} \mright): \mathcal{G} \times \mathcal{G} \to \mathcal{G}$ is given by $(g, q) \mapsto \mleft( s_{\pi_{\mathcal{G}(g)}} , g \mright)$ and is clearly smooth if restricted to the diagonal as embedded submanifold. By Def.\ \ref{def:LiegroupACtion} we have
+\bas
+\mleft( \pi_{\mathcal{P}} \circ H \mright)(g)
+&=
+\pi_{\mathcal{P}}\mleft( s_{\pi_{\mathcal{G}}(g)} \cdot g \mright)
+=
+\pi_{\mathcal{G}}(g),
+\eas
+thus, $H$ is base-preserving, similarly it follows that $H$ is $\mathcal{G}$-equivariant w.r.t.\ $\mathds{1}_{\mathcal{G}}$. 
 
+We want to use the inverse function theorem 
 \end{proof}
 
 Let us study pullbacks of principal bundles, also recall again Cor.\ \ref{cor:PullbackLGB}.
