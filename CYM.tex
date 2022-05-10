@@ -2772,12 +2772,12 @@ for all $(p, g) \in N * \mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(p, g)}(N*\math
 = 
 \mathrm{D}_g\pi(Y).
 \eas
-We may omit the natural embedding of $\omega$ into $\mathrm{T}_{e_x}\mathcal{G}$ via $\mathrm{D}_xe$, just writing 
+We may omit the natural embedding of $\omega$ into $\mathrm{T}_{e_x}\mathcal{G}$ via $\mathrm{D}_xe$, writing instead
 \ba
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
 \mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g \bigl(Y - \mathrm{D}_{e_x}R_\sigma (\omega)\bigr)}}\mright|_{p \cdot g}.
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}.
 \ea
 
 If $f$ is a surjective submersion, then we can also write
@@ -3250,6 +3250,8 @@ and by Thm.\ \ref{thm:DiffOfLGBAction} we get
 
 \subsection{Principal bundles with structural LGB}
 
+The principal bundle $\mathcal{P}$ we are interested into is still a fibre bundle related to the same Lie group as the one behind the LGB $\mathcal{G}$, especially also $\mathrm{dim}(\mathcal{P}) = \mathrm{dim}(\mathcal{G})$, but it is equipped with an LGB action.
+
 \begin{definitions}{Principal bundles with structural LGB, \newline \cite[simplification of the beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}}{PrinciBdleWithStruLGB}
 Let $G$ be a Lie group, $M$ a smooth manifold, and an LGB $\mathcal{G} \to M$ which acts on the right on another $G$-fibre bundle $\mathcal{P} \to M$
 \begin{center}
@@ -3461,13 +3463,13 @@ The latter about the typical trivialization is also stated in \cite[\S 5.7, four
 \begin{proof}[Proof of Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}]
 \leavevmode\newline
 The proof is similar to the "classical" statement as \textit{e.g.}\ given in \cite[\S 4.2, proof of Lemma 4.2.7, page 210ff.]{Hamilton}. $H$ is well-defined because of $\pi_{\mathcal{P}} \circ s = \mathds{1}_{U}$ such that $\mleft(s_{\pi_{\mathcal{G}}(g)}, g\mright) \in \mathcal{P}*\mathcal{G}$. Let us denote with $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{G}$ the right $\mathcal{G}$-action $(p, g) \mapsto p \cdot g$ on $\mathcal{P}$, then
-\bas
+\ba\label{RewritingLocalTrivOfPrinc}
 H(g)
 &=
 \Phi\mleft( s_{\pi_{\mathcal{G}}(g)}, g\mright)
 =
 \bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathds{1}_{\mathcal{G}} \mright) \bigr) (g,g).
-\eas
+\ea
 Thence, $H$ is clearly a smooth map as the composition of smooth maps; the second map $\mleft( \pi_{\mathcal{G}}^*s, \mathds{1}_{\mathcal{G}} \mright): \mathcal{G} \times \mathcal{G} \to \mathcal{G}$ is given by $(g, q) \mapsto \mleft( s_{\pi_{\mathcal{G}(g)}} , g \mright)$ and is clearly smooth if restricted to the diagonal as embedded submanifold. By Def.\ \ref{def:LiegroupACtion} we have
 \bas
 \mleft( \pi_{\mathcal{P}} \circ H \mright)(g)
@@ -3476,9 +3478,80 @@ Thence, $H$ is clearly a smooth map as the composition of smooth maps; the secon
 =
 \pi_{\mathcal{G}}(g),
 \eas
-thus, $H$ is base-preserving, similarly it follows that $H$ is $\mathcal{G}$-equivariant w.r.t.\ $\mathds{1}_{\mathcal{G}}$. 
+thus, $H$ is base-preserving, similarly it follows that $H$ is $\mathcal{G}$-equivariant w.r.t.\ $\mathds{1}_{\mathcal{G}}$ by making use of $\pi_{\mathcal{G}}(g q) = \pi_{\mathcal{G}}(g)$ for all $g, q \in \mathcal{G}*\mathcal{G}$. Furthermore, $H$ is bijective since the right $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive, that is, when we restrict $H$ to an $x \in U$, then it is a map
+\bas
+\mathcal{G}_x &\to \mathcal{P}_x,\\
+g &\mapsto s_x \cdot g,
+\eas
+thence, $H_x = \Phi_{s_x}$, the orbit map through $s_x$ which is a $\mathcal{G}_x$-equivariant diffeomorphism by Remark \ref{rem:LGBPrincDefDiscussion}. So, $H$ is fibre-wise bijective and therefore bijective as a whole since it is base-preserving.
 
-We want to use the inverse function theorem 
+Now we want to use the inverse function theorem to show that its inverse is also smooth. Once we know that the tangent map/total derivative $\mathrm{D}_gH: \mathrm{T}_g \mathcal{G} \to \mathrm{T}_{s_{\pi_{\mathcal{G}}(g)} \cdot g}\mathcal{P}$ is an isomorphism of vector spaces for all $g \in \mathcal{G}|_U$, then we know by the inverse function theorem that $H^{-1}$ is smooth. Hence, we will now show that $\mathrm{D}_gH$ is injective, then it has to bijective by dimensional reasons so that we are done. This differential is given by Thm.\ \ref{thm:DiffOfLGBAction}, making use of Eq.\ \eqref{RewritingLocalTrivOfPrinc},
+\bas
+\mathrm{D}_g H (Y)
+&=
+\mathrm{D}_{s_x}r_\sigma\bigl( \mathrm{D}_x s(\omega) \bigr)
+	+ \mleft.\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y - \mathrm{D}_x \sigma(\omega) \bigr) }\mright|_{s_x \cdot g}
+\\
+&=
+\mathrm{D}_x \mleft( r_\sigma \circ s \mright)(\omega)
+	+ \mleft.\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y - \mathrm{D}_x \sigma(\omega) \bigr) }\mright|_{s_x \cdot g}
+\eas
+for all $Y \in \mathrm{T}_g \mathcal{G}$, where $x \coloneqq \pi_{\mathcal{G}}(g)$, $\sigma \in \Gamma(\mathcal{G}|_U)$\footnote{W.l.o.g.\ we assume that $\sigma$ is defined on $U$, otherwise "make $U$ smaller".} with $\sigma_{x} = g$ and $\omega \coloneqq \mathrm{D}_{g}\pi_{\mathcal{G}}(Y) \in \mathrm{T}_xM$. We want to decompose $H$ now. Observe that $Y - \mathrm{D}_x \sigma(\omega) \in \mathrm{V}_g \mathcal{G}$, \textit{i.e.}\ it is vertical in $\mathcal{G}$ due to the fact that
+\ba\label{DecomposingTheLGBVectorfieldsWithsections}
+\mathrm{D}_g\pi_{\mathcal{G}}
+\mleft(Y - \mathrm{D}_x \sigma(\omega)\mright)
+&=
+\underbrace{\mathrm{D}_g\pi_{\mathcal{G}}(Y)}_{= \omega}
+	- \underbrace{\mathrm{D}_g\pi_{\mathcal{G}} \mleft(\mathrm{D}_x \sigma(\omega)\mright)}_{= \omega}
+=
+0
+\ea
+because of
+\bas
+\pi_{\mathcal{G}} \circ \sigma
+&=
+\mathds{1}_U
+\eas
+such that
+\bas
+\mathrm{D}\pi_{\mathcal{G}} \circ \mathrm{D}\sigma
+&=
+\mathds{1}_{\mathrm{T}M|_U}.
+\eas
+Usually, we just make use of that without further mention; we repeat this trivial fact in order to emphasize that $\mathrm{D}\sigma$ is injective because $\mathds{1}_{\mathrm{T}M|_U}$ bijective and that we have
+\bas
+%\mathrm{T}_g\mathcal{G}
+%&=
+\mathrm{Im}\mleft( \mathrm{D}_x\sigma \mright)
+	\cap \mathrm{Ker}\mleft( \mathrm{D}_{g}\pi_{\mathcal{G}} \mright)
+&=
+\{0\}
+\eas
+(the image of $\mathrm{D}_x\sigma$ intersects trivially with the kernel of $\mathrm{D}_{g}\pi_{\mathcal{G}}$). The injectivity of $\mathrm{D}\sigma$ implies that the dimension of its image satisfies
+\bas
+\mathrm{dim}\bigl(\mathrm{Im}\mleft( \mathrm{D}_x\sigma \mright)\bigr)
+&=
+\mathrm{dim}(M),
+\eas
+so that we know by dimensional reasons
+\bas
+\mathrm{T}_g\mathcal{G}
+&=
+\mathrm{Im}\mleft( \mathrm{D}_x\sigma \mright)
+	\oplus \mathrm{Ker}\mleft( \mathrm{D}_{g}\pi_{\mathcal{G}} \mright)
+=
+\mathrm{Im}\mleft( \mathrm{D}_x\sigma \mright)
+	\oplus \mathrm{V}_g \mathcal{G}.
+\eas
+We can decompose $Y$ accordingly by Eq.\ \eqref{DecomposingTheLGBVectorfieldsWithsections},
+\bas
+Y
+&=
+\underbrace{\mathrm{D}_x\sigma(\omega)}_{\eqqcolon Y^h}
+	+ \underbrace{Y - \mathrm{D}_x\sigma(\omega)}_{\eqqcolon Y^v}
+=
+Y^h + Y^v.
+\eas
 \end{proof}
 
 Let us study pullbacks of principal bundles, also recall again Cor.\ \ref{cor:PullbackLGB}.
