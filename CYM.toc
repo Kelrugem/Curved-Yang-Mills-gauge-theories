@@ -23,13 +23,13 @@
 \contentsline {section}{\numberline {8}Connections and curvature on LGB principal bundles}{51}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Toy model}{51}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Principal bundles with structural LGB}{55}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Generalized distributions and connections}{64}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Generalized connection 1-forms on principal bundles}{64}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Gauge transformations}{64}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Generalized curvature/field strength}{64}{subsection.8.6}%
-\contentsline {subsection}{\numberline {8.7}Generalized covariant derivative/minimal coupling}{64}{subsection.8.7}%
-\contentsline {section}{\numberline {9}Curved Yang-Mills gauge theory}{64}{section.9}%
-\contentsline {section}{\numberline {10}Conclusion}{64}{section.10}%
-\contentsline {section}{\nonumberline List of References}{64}{section*.3}%
-\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{65}{appendix.A}%
+\contentsline {subsection}{\numberline {8.3}Generalized distributions and connections}{65}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Generalized connection 1-forms on principal bundles}{65}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Gauge transformations}{65}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Generalized curvature/field strength}{65}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Generalized covariant derivative/minimal coupling}{65}{subsection.8.7}%
+\contentsline {section}{\numberline {9}Curved Yang-Mills gauge theory}{65}{section.9}%
+\contentsline {section}{\numberline {10}Conclusion}{65}{section.10}%
+\contentsline {section}{\nonumberline List of References}{66}{section*.3}%
+\contentsline {section}{\numberline {A}Axiomatic Yang-Mills gauge theories}{66}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

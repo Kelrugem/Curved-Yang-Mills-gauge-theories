@@ -2698,6 +2698,8 @@ g &\mapsto g^{-1} \cdot p.
 \begin{remarks}{Notation}{FundVecsNotations}
 Again, point-wise this is just the typical definition of a fundamental vector field at $x \coloneqq f(p)$ with respect to $\nu_x \in \mathcal{g}_x$ (except that $f^{-1}(\{x\})$ may not be a manifold). Hence, one has also a point-wise definition which we will also denote similarly by $\widetilde{\nu_x}$. If $f^{-1}(\{x\})$ is not a manifold, then $\mleft.\widetilde{\nu_x}\mright|_p$ is just a formal notation, and it only defines an element of $\mathrm{T}_pN$ which may not be related to a vector field on $f^{-1}(\{x\})$, not even to a vector field on $N$ if $\nu_x$ does not formally come from a fixed section of $\mathcal{g}$.
 
+However, if $f$ is \textit{e.g.}\ the projection of a bundle, then we have a $\mathcal{G}$-action on the fibre $f^{-1}(\{x\})$ as manifold, and therefore $\widetilde{v}|_{f^{-1}(\{x\})}$ and $\widetilde{\nu_x}$ give rise to a vector field on $f^{-1}(\{x\})$. In other words, fundamental vector fields are vertical vector fields as expected.
+
 For long expressions we use the following different font 
 \bas
 \oversortoftilde{\nu}
@@ -2888,7 +2890,7 @@ The first summand is quickly calculated as
 \mathrm{D}_{g}\Phi_p (Y^v)
 \ea
 where $\gamma: I \to \mathcal{G}_x$ ($I$ open interval of $\mathbb{R}$ containing 0) is a curve with $\gamma(0) = g$ and $\mathrm{d}/\mathrm{d}t|_{t=0} \gamma = Y^v$; by the verticality of $Y^v$, $\mathrm{D}_g\Phi_p(Y^v)$ is well-defined since $\Phi_p$ is a map $\mathcal{G}_x \to N$. Now recall Def.\ \ref{def:MCFormOnLGBs} and \ref{def:FundVecs}, and observe that we can write
-\bas
+\ba\label{ClassicalWayToWriteLeibnizRuleWithLeftPushForwardInsteadOfMCForm}
 \mathrm{D}_{g}\Phi_p (Y^v)
 &=
 \mleft(\mathrm{D}_{g}\Phi_p \circ \mathrm{D}_{e_x}L_g \circ \mathrm{D}_g L_{g^{-1}} \mright)(Y^v)
@@ -2899,7 +2901,7 @@ where $\gamma: I \to \mathcal{G}_x$ ($I$ open interval of $\mathbb{R}$ containin
 =
 \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g}
 %\mleft.{\widetilde{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g},
-\eas
+\ea
 making use of the verticality of $Y^v$ such that $\mathrm{D}L_g$ can act on $Y^v$ and of $\mleft(\mu_{\mathcal{G}}\mright)_g (Y^v) \in \mathcal{g}_x$.
 
 For the second summand in Eq.\ \eqref{DifferentialOfActionSplitFirst} we use
@@ -3442,10 +3444,10 @@ $\bullet$ Finally, observe that we have locally an isomorphism of every principa
 Additionally using Remark \ref{rem:LGBPrincDefDiscussion} we have locally an isomorphism of $\mathcal{P}$ to a trivial LGB; keeping the same notation as in Remark \ref{rem:LGBPrincDefDiscussion}, choose $H \coloneqq \xi_i$, $F \coloneqq \phi_i$ and $f \coloneqq \mathds{1}_{U_i}$. Hence, locally every principal bundle is also pre-classical in the sense of Ex.\ \ref{ex:TheCLassicalPrincAsEx}.
 \end{remark}
 
-As expected, there is a natural isomorphism induced by local sections of $\mathcal{P}$.
+As expected, there is a natural isomorphism induced by local sections of $\mathcal{P}$, which are, however, no trivializations in general.
 
 \begin{lemmata}{Local sections of principal bundles induce isomorphisms to the structural LGB}{SectionsNowInduceIsomToLGBsNotNecTriv}
-Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Let $s: U \to \mathcal{P}$ be a smooth local section of $\mathcal{P}$ over an open subset $U$ of $M$. Then the map $H$ defined by
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Let $s: U \to \mathcal{P}$ be a smooth local section of $\mathcal{P}$ over an open subset $U$ of $M$. Then the orbit map $H \coloneqq \Phi_s$ through $s$ given by
 \bas
 \mathcal{G}|_U &\to \mathcal{P}|_U,\\
 g &\mapsto s_{\pi_{\mathcal{G}}(g)} \cdot g
@@ -3485,7 +3487,7 @@ g &\mapsto s_x \cdot g,
 \eas
 thence, $H_x = \Phi_{s_x}$, the orbit map through $s_x$ which is a $\mathcal{G}_x$-equivariant diffeomorphism by Remark \ref{rem:LGBPrincDefDiscussion}. So, $H$ is fibre-wise bijective and therefore bijective as a whole since it is base-preserving.
 
-Now we want to use the inverse function theorem to show that its inverse is also smooth. Once we know that the tangent map/total derivative $\mathrm{D}_gH: \mathrm{T}_g \mathcal{G} \to \mathrm{T}_{s_{\pi_{\mathcal{G}}(g)} \cdot g}\mathcal{P}$ is an isomorphism of vector spaces for all $g \in \mathcal{G}|_U$, then we know by the inverse function theorem that $H^{-1}$ is smooth. Hence, we will now show that $\mathrm{D}_gH$ is injective, then it has to bijective by dimensional reasons so that we are done. This differential is given by Thm.\ \ref{thm:DiffOfLGBAction}, making use of Eq.\ \eqref{RewritingLocalTrivOfPrinc},
+Now we want to use the inverse function theorem to show that its inverse is also smooth. Once we know that the tangent map/total derivative $\mathrm{D}_gH: \mathrm{T}_g \mathcal{G} \to \mathrm{T}_{s_{x} \cdot g}\mathcal{P}$ is an isomorphism of vector spaces for all $g \in \mathcal{G}|_U$, then we know by the inverse function theorem that $H^{-1}$ is smooth. Hence, we will now show that $\mathrm{D}_gH$ is injective, then it has to bijective by dimensional reasons so that we are done. This differential is given by Thm.\ \ref{thm:DiffOfLGBAction}, making use of Eq.\ \eqref{RewritingLocalTrivOfPrinc},
 \bas
 \mathrm{D}_g H (Y)
 &=
@@ -3513,11 +3515,11 @@ because of
 \mathds{1}_U
 \eas
 such that
-\bas
+\ba\label{DsigmaIsASPlitting}
 \mathrm{D}\pi_{\mathcal{G}} \circ \mathrm{D}\sigma
 &=
 \mathds{1}_{\mathrm{T}M|_U}.
-\eas
+\ea
 Usually, we just make use of that without further mention; we repeat this trivial fact in order to emphasize that $\mathrm{D}\sigma$ is injective because $\mathds{1}_{\mathrm{T}M|_U}$ bijective and that we have
 \bas
 %\mathrm{T}_g\mathcal{G}
@@ -3533,10 +3535,10 @@ Usually, we just make use of that without further mention; we repeat this trivia
 &=
 \mathrm{dim}(M),
 \eas
-so that we know by dimensional reasons
+so that, in total, we know by dimensional reasons
 \bas
 \mathrm{T}_g\mathcal{G}
-&=
+&\cong
 \mathrm{Im}\mleft( \mathrm{D}_x\sigma \mright)
 	\oplus \mathrm{Ker}\mleft( \mathrm{D}_{g}\pi_{\mathcal{G}} \mright)
 =
@@ -3550,8 +3552,55 @@ Y
 \underbrace{\mathrm{D}_x\sigma(\omega)}_{\eqqcolon Y^h}
 	+ \underbrace{Y - \mathrm{D}_x\sigma(\omega)}_{\eqqcolon Y^v}
 =
-Y^h + Y^v.
+Y^h + Y^v,
 \eas
+$v$ stands for the vertical part and $h$ for its complementary part ("horizontal"). In fact, as it is well-known, a section $\sigma$ of a bundle induces a splitting of the short exact sequence of vector bundles
+\bes
+	\begin{tikzcd}
+		\sigma^*\mathrm{V}\mathcal{G}|_U \arrow[hook]{r} & \sigma^*\mathrm{T}\mathcal{G}|_U \arrow[two heads]{r}{\mathrm{D}\pi_{\mathcal{G}}} & \mathrm{T}M|_U,
+	\end{tikzcd}
+\ees
+and $\mathrm{D}\sigma$ is a splitting/section of this sequence
+so that we have $\sigma^*\mathrm{T}\mathcal{G} \cong \mathrm{Im}(\mathrm{D}\sigma) \oplus \sigma^*\mathrm{V}\mathcal{G}$.\footnote{$\sigma$ is actually an embedding, and thus $\mathrm{Im}(\mathrm{D}\sigma)$ is a well-defined subbundle isomorphic to $\mathrm{T}M$.} Furthermore, again due to Eq.\ \eqref{DsigmaIsASPlitting}, we have $\mathrm{Im}(\mathrm{D}_x\sigma) \cong \mathrm{T}_xM$ as vector spaces by $Y^h \mapsto \mathrm{D}_g\pi_{\mathcal{G}}\mleft(Y^h\mright) = \mathrm{D}_g\pi_{\mathcal{G}}(Y) = \omega$ since $Y^v$ is vertical. Hence, we can view $\mathrm{D}_gH$ as a map
+\bas
+\mathrm{T}_xM \oplus \mathrm{V}_g \mathcal{G} &\to \mathrm{T}_{s_{x} \cdot g}\mathcal{P},\\
+\mleft(\omega, Y^v\mright) &\mapsto
+\mathrm{D}_x \mleft( r_\sigma \circ s \mright)(\omega)
+	+ \mleft.\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y^v \bigr) }\mright|_{s_x \cdot g}.
+\eas
+
+These arguments apply to any section of a bundle, hence, we repeat this now. Observe that $r_\sigma \circ s$ is also a section of $\mathcal{P}|_U$ due to Def.\ \ref{def:LiegroupACtion}, that is,
+\bas
+\pi_{\mathcal{P}}\mleft(s_y \cdot \sigma_y\mright)
+&=
+\pi_{\mathcal{P}}\mleft(s_y\mright)
+=
+y
+\eas
+for all $y \in M$. As before, we split
+\bas
+\mathrm{T}_{s_x\cdot g} \mathcal{P}|_U
+&\cong
+\mathrm{Im}\bigl( \mathrm{D}_x(r_\sigma\circ s) \bigr)
+	\oplus \mathrm{V}_{s_x \cdot g} \mathcal{P},
+\eas
+and we identify $\mathrm{Im}\bigl( \mathrm{D}_x(r_\sigma\circ s) \bigr) \cong \mathrm{T}_xM$ as vector spaces, now via $\omega \mapsto \mathrm{D}_x(r_\sigma\circ s) (\omega)$ due to Eq.\ \eqref{DsigmaIsASPlitting} but with $r_\sigma \circ s$ playing the role as section. Additionally by Def.\ \ref{def:FundVecs} and Remark \ref{rem:FundVecsNotations} we know that fundamental vector fields are vertical, and so we can view $\mathrm{D}_g H$ as a map
+\bas
+\mathrm{T}_xM \oplus \mathrm{V}_g \mathcal{G} 
+&\to 
+\mathrm{T}_x M \oplus \mathrm{V}_{s_x \cdot g} \mathcal{P},
+\\
+\mleft(\omega, Y^v\mright) &\mapsto
+\mleft(
+	\omega,
+	\mleft.\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y^v \bigr) }\mright|_{s_x \cdot g}
+\mright).
+\eas
+Thus, $\mathrm{D}_gH$ is the pair of two linear independent maps $\mathrm{T}_x M \to \mathrm{T}_xM$ and $\mathrm{V}_g\mathcal{G} \to \mathrm{V}_{s_x \cdot g}\mathcal{P}$. The former is clearly an isomorphism, and the latter is by definition of fundamental vector fields and the Maurer-Cartan form of the shape as in Eq.\ \eqref{ClassicalWayToWriteLeibnizRuleWithLeftPushForwardInsteadOfMCForm}, \textit{i.e.}\
+\bas
+Y^v &\mapsto \mathrm{D}_g \Phi_{s_x}(Y^v).
+\eas
+By Remark \ref{rem:LGBPrincDefDiscussion}, $\Phi_{s_x}$ is a $\mathcal{G}_x$-equivariant diffeomorphism $\mathcal{G}_x \to \mathcal{P}_x$, thence, $\mathrm{D}_g \Phi_{s_x}: \mathrm{T}_g \mathcal{G}_x = \mathrm{V}_g\mathcal{G} \to \mathrm{T}_{s_x \cdot g}\mathcal{P}_x = \mathrm{V}_{s_x \cdot g}\mathcal{P}_x$ is an isomorphism of vector spaces. Finally we can conclude that $\mathrm{D}_g H$ is a linear isomorphism as the sum of two linear independent isomorphisms. As argued earlier, the inverse function theorem finishes now the proof.
 \end{proof}
 
 Let us study pullbacks of principal bundles, also recall again Cor.\ \ref{cor:PullbackLGB}.
