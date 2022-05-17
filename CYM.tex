@@ -49,7 +49,7 @@
 \usepackage{stmaryrd} % fuer llbracket usw.
 \usepackage[many]{tcolorbox} %Coloured boxes around theorems etc
 \tcbuselibrary{theorems} % siehe oben
-\usepackage{float} %For H descriptor in figure, but also for allowing figure in minipages
+%\usepackage{float} %For H descriptor in figure, but also for allowing figure in minipages
 %\usepackage{xfrac}    %for \sfrac quotient of sets
 
 \usetikzlibrary{cd}
@@ -1581,7 +1581,7 @@ N &\to N,\\
 p &\mapsto p \cdot \sigma_{f(p)}.
 \eas
 
-If one has a smooth map $\tau: M \to N$, $x \mapsto \tau_x$, with $f \circ \tau = \mathds{1}_M$, then we can define the \textbf{orbit map} through $\tau$ as a map $\Phi_\tau$ given by
+If one has a section of $f$, \textit{i.e.}\ a smooth map $\tau: M \to N$, $x \mapsto \tau_x$, with $f \circ \tau = \mathds{1}_M$, then we can define the \textbf{orbit map} through $\tau$ as a map $\Phi_\tau$ given by
 \bas
 \mathcal{G} &\to N,\\
 g &\mapsto \tau_{\pi(g)} \cdot g.
@@ -1592,6 +1592,16 @@ g &\mapsto \tau_{\pi(g)} \cdot g.
 Similarly we define left translations for left actions, which we similarly denote by $l_g$ and $l_\sigma$. By Rem.\ \ref{rem:LocalLGBAction} we can define $r_\sigma$ (and $l_\sigma$) also for local sections $\sigma \in \Gamma(\mathcal{G}|_U)$ by restricting $N$ onto $f^{-1}(U)$, where $U$ is some open subset of $M$; then $r_\sigma, l_\sigma: f^{-1}(U) \to f^{-1}(U)$. In the same manner one achieves a restriction for $\Phi_\tau: \mathcal{G}|_U \to f^{-1}(U)$, if $\tau: U \to f^{-1}(U)$.
 
 In case of $N$ being $\mathcal{G}$ itself we will denote right (and left) translations via capital letters.
+\end{remarks}
+
+\begin{remarks}{Group action on sections}{SectionMultiplication}
+Assume that $N$ is a fibre bundle over $M$ with $f$ as its projection. Also observe that $\Gamma(\mathcal{G})$ is clearly a group and it may be possible to endow it with an infinite-dimensional Lie group structure. In the same fashion as before, we can define a $\Gamma(\mathcal{G})$-action on $\Gamma(N)$ given by
+\bas
+\mleft(\tau \cdot \sigma\mright)_x
+&\coloneqq
+\tau_x \cdot \sigma_x
+\eas
+for all $\tau \in \Gamma(N)$, $\sigma \in \Gamma(\mathcal{G})$, and $x \in M$. It is straightforward to show that this is well-defined. We will make use of this action without further mention.
 \end{remarks}
 
 \begin{remark}\label{SmoothnessOfACtionTranslations}
@@ -3612,7 +3622,7 @@ As usual for gauge theory we will understand connections as horizontal distribut
 
 For $\mathcal{G} \to M$ an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle we fix a point $p \in \mathcal{P}_x$ ($x \in M$) and can multiply that with an element $g \in \mathcal{G}_x$. Infinitesimally, we are interested into how this multiplication by $g$ affects tangent vectors, especially non-vertical ones.
 
-However, as we have seen in Def.\ \ref{def:LRTranslations}, Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs} and Thm.\ \ref{thm:DiffOfLGBAction} (and its proof) the push-forward of horizontal vectors is not well-defined anymore on non-vertical vectors if one uses a fixed element of an LGB; $r_g$ is just a map $\mathcal{P}_x \to \mathcal{P}_x$. In order to study push-forwards of non-vertical vectors, we need information of the $\mathcal{G}$-action in an open neighbourhood $U$ around the fibres over $x$. Hence, we want to use an section $\sigma \in \Gamma(\mathcal{G}|_U)$ with $\sigma_x= g$ instead. 
+However, as we have seen in Def.\ \ref{def:LRTranslations}, Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs} and Thm.\ \ref{thm:DiffOfLGBAction} (and its proof) the push-forward of horizontal vectors is not well-defined anymore on non-vertical vectors if one uses a fixed element of an LGB; $r_g$ is just a map $\mathcal{P}_x \to \mathcal{P}_x$. In order to study push-forwards of non-vertical vectors, we need information of the $\mathcal{G}$-action in an open neighbourhood $U$ around the fibres over $x$. Hence, we want to use an section $\sigma \in \Gamma(\mathcal{G}|_U)$ with $\sigma_x= g$ instead.
 
 \begin{center}
 \begin{tikzpicture}[scale=0.80]
@@ -3673,10 +3683,140 @@ However, as we have seen in Def.\ \ref{def:LRTranslations}, Rem.\ \ref{rem:Abstr
 \end{tikzpicture}
 \end{center}
 
-But there are in general a plethora of sections with $\sigma_x= g$, thenceforth one expects that a definition of connections based on that may depend on the choice of sections and thus leading to conflicts once one looks at push-forwards with all possible $g \in \mathcal{G}$. Especially the tangential behaviour of the section's image (as an embedding of the base) may contribute to the push-forward; given a horizontal distribution, a horizontal vector may be still horizontal after a push-forward with one LGB section but not with respect to another LGB section. Thus, we need to adjust the typical definition of connections on principal bundles.
+But there are in general a plethora of sections with $\sigma_x= g$, thenceforth one expects that a definition of connections based on that may depend on the choice of sections and thus leading to conflicts once one looks at push-forwards with all possible $g \in \mathcal{G}$. Especially the tangential behaviour of the section's image (as an embedding of the base) may contribute to the push-forward; given a horizontal distribution, a horizontal vector may be still horizontal after a push-forward with one LGB section but not with respect to another LGB section. A similar problem may arise if we would work with local trivializations instead in order to use Ex.\ \ref{ex:TrivialLGBAction}. Thus, we need to adjust the typical definition of connections on principal bundles.
 
 In order to understand what has to be changed, let us revisit the "typical" situation, that is, let $\mathcal{P}$ be a pre-classical principal bundle as in Ex.\ \ref{ex:TheCLassicalPrincAsEx}, \textit{i.e.}\ $\mathcal{G} = M \times G$ is trivial with Lie group $G$. That is, the $\mathcal{G}$-action is equivalent to a $G$-action on $\mathcal{P}$ by Ex.\ \ref{ex:TrivialLGBAction}, a push-forward with $g \in G$ w.r.t.\ the latter action is equivalent to the push-forward with a constant section in $\mathcal{G}$ for which we may still simply write $g$.
 
+Equip $\mathcal{P}$ with a "typical" (Ehresmann) connection as in \cite[\S 5.1, Def.\ 5.1.6, page 260]{Hamilton}, that is, a horizontal distribution $\mathrm{H}\mathcal{P}$ of $\mathcal{P}$ with
+\ba\label{ClassicalSymmetryOfHorizontalDistr}
+\mathrm{D}_pr_g\mleft(\mathrm{H}\mathcal{P}_p\mright) &= \mathrm{H}\mathcal{P}_{p \cdot g}
+\ea
+for all $p \in \mathcal{P}$ and $g \in G$. Recall that a connection has a 1:1 correspondence to a parallel transport, as presented in \cite[\S 5.8, page 286ff.]{Hamilton}. This means corresponding to a piece-wise smooth base curve $\alpha: [0, t] \to M$ ($t > 0$) with $\alpha(0) = x$ we have a \textbf{parallel transport along $\alpha$} as a map $\mathrm{PT}_\alpha^{\mathcal{P}}: \mathcal{P}_x \to \Gamma(\alpha^*\mathcal{P})$ satisfying
+\ba\label{PTProp1}
+\mleft.\mathrm{PT}^{\mathcal{P}}_{\alpha*\alpha^\prime}\mright|_t
+&=
+\mleft.\mathrm{PT}^{\mathcal{P}}_{\alpha^\prime}\mright|_t
+	\circ \mleft.\mathrm{PT}_\alpha^{\mathcal{P}}\mright|_t,\\
+\mleft.\mathrm{PT}_{\alpha^-}^{\mathcal{P}}\mright|_t
+&=
+\mleft.\mleft( \mathrm{PT}_\alpha^{\mathcal{P}} \mright)^{-1}\mright|_t,\label{PTProp2}
+\ea
+especially parallel transport is a diffeomorphism between the fibres, where $\alpha^\prime$ is just another similarly defined base curve with $\alpha^\prime(0)= \alpha(t)$, $\alpha*\alpha^\prime$ their concatenation ($\alpha$ coming first and with a suitable parametrization such that $\alpha*\alpha^\prime: [0, t] \to M$), and $\alpha^-$ denotes $\alpha$ traversed backwards. The second equation could also be replaced with the condition that the parallel transport along a constant curve is the identity. Moreover, Eq.\ \eqref{ClassicalSymmetryOfHorizontalDistr} integrates to
+\ba\label{ClassicalSymmetryofPTs}
+\mleft.\mathrm{PT}_\alpha^{\mathcal{P}}(p \cdot g)\mright|_t
+&=
+\mleft.\mathrm{PT}_\alpha^{\mathcal{P}}(p)\mright|_t \cdot g.
+\ea
+Thinking of the associated $\mathcal{G}$-action, $g$ is an element of $\mathcal{G}_x$ such that the right hand side is in general not well-defined\footnote{Also here one could work with trivializations, especially since $\alpha^*\mathcal{P}$ is trivial as a fibre bundle due to the fact that the image of $\alpha$ is contractible. As before, this would just lead to other problems on a global scale, and we aim to provide a definition of connections on $\mathcal{P}$ without making use of trivializations.} anymore due to the fact that $\mleft.\mathrm{PT}_\alpha^{\mathcal{P}}(p)\mright|_t \in \mathcal{P}_{\alpha(t)}$; it is well-defined if interpreting $g$ as a constant section of $\mathcal{G} = M \times G$, denoted by $\widetilde{g} \in \Gamma(\mathcal{G})$ for bookkeeping reasons. The left hand side uses $\widetilde{g}_{\alpha(0)} = (x, g)$, the right hand side $\widetilde{g}_{\alpha(t)} = (\alpha(t), g)$, and by Ex.\ \ref{ex:TrivialLGBAction} we rewrite the $G$-action to a $\mathcal{G}$-action:
+\bas
+p \cdot g
+&=
+p \cdot (x, g)
+=
+p \cdot \widetilde{g}_x,&
+\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot g
+&=
+\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot (\alpha, g)
+=
+\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \alpha^*\widetilde{g},
+\eas
+where we recall that $\alpha^*\mathcal{P}$ is a principal $\alpha^*\mathcal{G}$-bundle in sense of Def.\ \ref{def:PullbackPrincBundleDef}. 
+
+Now we equip $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ with its \textbf{canonical flat connection} $\mathrm{H}\mathcal{G} \coloneqq \pi^*_{\mathcal{G}}\mathrm{T}M$ which induces a parallel transport $\mathrm{PT}_\alpha^{\mathcal{G}}: \mathcal{G}_{x} \to \Gamma\mleft(\alpha^*\mathcal{G}\mright)$ with $\mleft.\mathrm{PT}_\alpha^{\mathcal{G}}\mright|_t(x, g) = ( \alpha(t), g)$, especially $\mathrm{PT}_\alpha^{\mathcal{G}}\mleft( \widetilde{g}_x \mright) = \alpha^*\widetilde{g}$. In total, we can rewrite Eq.\ \eqref{ClassicalSymmetryofPTs} to
+\bas
+\mathrm{PT}_\alpha^{\mathcal{P}}\mleft(p \cdot \widetilde{g}_x\mright)
+&=
+\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \alpha^*\widetilde{g}
+=
+\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}\mleft( \widetilde{g}_x \mright).
+\eas
+This opens a gateway to define Eq.\ \eqref{ClassicalSymmetryofPTs} on general principal $\mathcal{G}$-bundles. That is, now let $\mathcal{P}$ be again a general principal $\mathcal{G}$-bundle. Fix any horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$ inducing a parallel transport $\mathrm{PT}_\alpha^{\mathcal{G}}$, then a connection on $\mathcal{P}$ should be equivalent to a parallel transport $\mathrm{PT}_\alpha^{\mathcal{P}}$ on $\mathcal{P}$ satisfying Eq.\ \eqref{PTProp1}, \eqref{PTProp2} and
+\ba\label{PTHomomNEw}
+\mathrm{PT}_\alpha^{\mathcal{P}}(p \cdot g)
+&=
+\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}(g)
+\ea
+for all $p \in \mathcal{P}_x$ and $g \in \mathcal{G}_x$. The right hand side is now well-defined since both, $\mathrm{PT}_\alpha^{\mathcal{P}}(p)$ and $\mathrm{PT}_\alpha^{\mathcal{G}}(g)$, are elements of $\Gamma(\alpha^*\mathcal{P})$ and $\Gamma\mleft(\alpha^*\mathcal{G}\mright)$, respectively. We now want to derive its infinitesimal analogue similar to Eq.\ \eqref{ClassicalSymmetryOfHorizontalDistr}. Recall that we can view the parallel transports like $\mathrm{PT}_\alpha^{\mathcal{P}}(p)$ also as a map $[0, t] \to \mathcal{P}$ with $\pi \circ \mathrm{PT}_\alpha^{\mathcal{P}}(p) = \alpha$ (recall Subsection \ref{BasicNotations}; alternatively use Lemma \ref{lem:PullbackFibreBundleItsTangentSp} and project onto the second component for the following derivatives). Then by construction
+\bas
+Y
+\coloneqq
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mathrm{PT}_\alpha^{\mathcal{G}}(g)
+&\in
+\mathrm{H}_g\mathcal{G}
+\eas
+for all $g \in \mathcal{G}$, that is, it is horizontal in $\mathcal{G}$; similarly for the parallel transport on $\mathcal{P}$,
+\bas
+X
+\coloneqq
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mathrm{PT}_\alpha^{\mathcal{P}}(p)
+&\in
+\mathrm{H}_p\mathcal{P}.
+\eas
+We want to use Thm.\ \ref{thm:DiffOfLGBAction} now in order to understand what Eq.\ \eqref{PTHomomNEw} implies about the corresponding horizontal distribution of $\mathcal{P}$. For this we differentiate both sides of Eq.\ \eqref{PTHomomNEw} with $\mathrm{d}/\mathrm{d}t|_{t=0}$; the left hand side implies that the right hand side is an element of $\mathrm{H}_{p\cdot g}\mathcal{P}$, while the right hand side gives
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft(
+	\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}(g)
+\mright)
+&=
+\mathrm{D}_{(p, g)}\Phi\mleft(
+	X, 
+	Y
+\mright)
+\\
+&=
+\mathrm{D}_pr_\sigma\mleft( 
+	X 
+\mright)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g \Bigl(
+		Y
+		- \mathrm{D}_x \sigma \bigl( \dot{\alpha}(0) \bigr)
+	\Bigr)}}\mright|_{p \cdot g}
+\eas
+where $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{P}$ denotes the $\mathcal{G}$-action on $\mathcal{P}$, $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$ and
+\bas
+\dot{\alpha}(0)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha
+=
+\mathrm{D}_p\pi (X)
+\eas
+because of $\pi \circ \mathrm{PT}_\alpha^{\mathcal{P}}(p) = \alpha$. As we already have shown several times, for example recall the beginning of the proof of Thm.\ \ref{thm:DiffOfLGBAction}, we have
+\bas
+Y - \mathrm{D}_x \sigma \bigl( \dot{\alpha}(0) \bigr)
+&\in
+\mathrm{V}_g\mathcal{G},
+\eas
+so that the canonical projection $\pi^{\mathrm{vert}, \mathcal{G}}: \mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$ onto the vertical structure of $\mathcal{G}$ acts as identity on it. By making use of the horizontality, we can write
+\bas
+\mleft( \mu_{\mathcal{G}}\mright)_g \Bigl(
+		Y - \mathrm{D}_x \sigma \bigl( \dot{\alpha}(0) \bigr)
+	\Bigr)
+&=
+\mleft( \mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G}}\mright)_g \bigl(
+		Y
+		- \mathrm{D}_p (\sigma \circ \pi)(X)
+	\bigr)
+\\
+&=
+-
+\mleft( \mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G}}\mright)_g \bigl(
+		\mathrm{D}_p (\sigma \circ \pi)(X)
+	\bigr).
+\eas
+It may not surprise that $\mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G}}$ is by construction actually \textit{the} connection 1-form on $\mathcal{G}$ corresponding to $\mathrm{H}\mathcal{G}$, therefore we will denote $\mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G}}$ as the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ of $\mathcal{G}$}. Hence we get in total
+\ba
+\mathrm{D}_pr_\sigma\mleft( 
+	X 
+\mright)
+	- \mleft.{\oversortoftilde{
+		\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g \bigl(
+		\mathrm{D}_p (\sigma \circ \pi)(X)
+	\bigr)
+	}}\mright|_{p \cdot g}
+&\in
+\mathrm{H}_{p \cdot g}\mathcal{P}
+\ea
+for all $X \in \mathrm{H}_p\mathcal{P}$. This is independent of the chosen section $\sigma$ because Thm.\ \ref{thm:DiffOfLGBAction} is, and thence gives the fundamental formula for the following sections.
 \begin{figure}
 \begin{minipage}[]{0.5\textwidth} 
 %\begin{figure}[H]
@@ -3699,8 +3839,8 @@ In order to understand what has to be changed, let us revisit the "typical" situ
 		\draw [->, thick] (4.41,1) -- (4.71,1.12);
 		%\draw [<-,dotted,thick] (4.63,2) -- (4.71,1.12);
 		%Labels
-		\draw (3.2,1) node {\textcolor[rgb]{0,0.58,0}{$\mathrm{H}\mathcal{P}_{p \cdot g}$}};
-		\draw (3.2,-1) node {\textcolor[rgb]{0,0.58,0}{$\mathrm{H}\mathcal{P}_p$}};
+		\draw (3.1,1) node {\textcolor[rgb]{0,0.58,0}{$\mathrm{H}_{p \cdot g}\mathcal{P}$}};
+		\draw (3.2,-1) node {\textcolor[rgb]{0,0.58,0}{$\mathrm{H}_p\mathcal{P}$}};
 		\draw (5.5,0) node {\textcolor[rgb]{0,0,1}{$\cdot g$}};
 		\draw (3,2.2) node {$\mathcal{P}_U$};
 		\draw (4.71,-0.6) node {$X$};
@@ -3737,8 +3877,8 @@ In order to understand what has to be changed, let us revisit the "typical" situ
 		\draw [->,dotted,thick] (4.41,1) -- (4.71,1.12);
 		\draw [<-,dotted,thick] (4.63,2) -- (4.71,1.12);
 		%Labels
-		\draw (3.2,1) node {\textcolor[rgb]{0,0.58,0}{$\mathrm{H}\mathcal{P}_{p \cdot \sigma_x}$}};
-		\draw (3.2,-1) node {\textcolor[rgb]{0,0.58,0}{$\mathrm{H}\mathcal{P}_p$}};
+		\draw (3,1) node {\textcolor[rgb]{0,0.58,0}{$\mathrm{H}_{p \cdot \sigma_x}\mathcal{P}$}};
+		\draw (3.2,-1) node {\textcolor[rgb]{0,0.58,0}{$\mathrm{H}_p\mathcal{P}$}};
 		\draw (5.5,0) node {\textcolor[rgb]{0,0,1}{$\cdot \sigma$}};
 		\draw (3,2.2) node {$\mathcal{P}_U$};
 		\draw (4.71,-0.6) node {$X$};
@@ -3748,58 +3888,8 @@ In order to understand what has to be changed, let us revisit the "typical" situ
 	\end{tikzpicture}
 	\end{center}
 	\end{minipage}
-	Figure 1: Push-forward of a horizontal tangent vector $X$ with constant section (left) and general section(right).
+	Figure 1: Push-forward of a horizontal tangent vector $X$ with constant section (left) and general section(right), where $\mathcal{P}$ is a pre-classical principal bundle as in Ex.\ \ref{ex:TheCLassicalPrincAsEx} equipped with a "typical" connection $\mathrm{H}\mathcal{P}$ of principal $G$-bundles ($G$ the structural Lie group).
 \end{figure}
-
-Equip $\mathcal{P}$ with a "typical" (Ehresmann) connection as in \cite[\S 5.1, Def.\ 5.1.6, page 260]{Hamilton}, that is, a horizontal distribution $\mathrm{H}\mathcal{P}$ of $\mathcal{P}$ with
-\ba\label{ClassicalSymmetryOfHorizontalDistr}
-\mathrm{D}_pr_g\mleft(\mathrm{H}\mathcal{P}_p\mright) &= \mathrm{H}\mathcal{P}_{p \cdot g}
-\ea
-for all $p \in \mathcal{P}$ and $g \in G$. Recall that a connection has a 1:1 correspondence to a parallel transport, as presented in \cite[\S 5.8, page 286ff.]{Hamilton}. This means corresponding to a piece-wise smooth base curve $\alpha: [a, b] \to M$ ($a < b \in \mathbb{R}$) with $\alpha(a) = x$ we have a \textbf{parallel transport along $\alpha$} as a map $\mathrm{PT}_\alpha^{\mathcal{P}}: \mathcal{P}_x \to \mathcal{P}_{\alpha(b)}$ satisfying
-\ba\label{PTProp1}
-\mathrm{PT}^{\mathcal{P}}_{\alpha*\alpha^\prime}
-&=
-\mathrm{PT}^{\mathcal{P}}_{\alpha^\prime}
-	\circ \mathrm{PT}_\alpha^{\mathcal{P}},\\
-\mathrm{PT}_{\alpha^-}^{\mathcal{P}}
-&=
-\mleft( \mathrm{PT}_\alpha^{\mathcal{P}} \mright)^{-1},\label{PTProp2}
-\ea
-especially parallel transport is a diffeomorphism between the fibres, where $\alpha^\prime$ is just another similarly defined base curve with $\alpha^\prime(0)= \alpha(1)$, $\alpha*\alpha^\prime$ their concatenation ($\alpha$ coming first), and $\alpha^-$ denotes $\alpha$ traversed backwards. The second equation could also be replaced with the condition that the parallel transport along a constant curve is the identity. Moreover, Eq.\ \eqref{ClassicalSymmetryOfHorizontalDistr} integrates to
-\ba\label{ClassicalSymmetryofPTs}
-\mathrm{PT}_\alpha^{\mathcal{P}}(p \cdot g)
-&=
-\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot g.
-\ea
-Thinking of the associated $\mathcal{G}$-action, $g$ is an element of $\mathcal{G}_x$ such that the right hand side is in general not well-defined anymore due to the fact that $\mathrm{PT}_\alpha^{\mathcal{P}}(p) \in \mathcal{P}_{\alpha(b)}$; it is well-defined if interpreting $g$ as a constant section of $\mathcal{G} = M \times G$, denoted by $\widetilde{g} \in \Gamma(\mathcal{G})$ for bookkeeping reasons. The left hand side uses $\widetilde{g}_{\alpha(a)} = (x, g)$, the right hand side $\widetilde{g}_{\alpha(b)} = (\alpha(b), g)$, and by Ex.\ \ref{ex:TrivialLGBAction} we rewrite the $G$-action to a $\mathcal{G}$-action:
-\bas
-p \cdot g
-&=
-p \cdot (x, g)
-=
-p \cdot \widetilde{g}_x,&
-\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot g
-&=
-\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot (\alpha(b), g)
-=
-\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \widetilde{g}_{\alpha(b)}.
-\eas
-
-Now we equip $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ with its \textbf{canonical flat connection} $\mathrm{H}\mathcal{G} \coloneqq \pi^*_{\mathcal{G}}\mathrm{T}M$ which induces a parallel transport $\mathrm{PT}_\alpha^{\mathcal{G}}: \mathcal{G}_{x} \to \mathcal{G}_{\alpha(b)}$ with $\mathrm{PT}_\alpha^{\mathcal{G}}(x, g) = ( \alpha(b), g)$, especially $\mathrm{PT}_\alpha^{\mathcal{G}}\mleft( \widetilde{g}_x \mright) = \widetilde{g}_{\alpha(b)}$. In total, we can rewrite Eq.\ \eqref{ClassicalSymmetryofPTs} to
-\bas
-\mathrm{PT}_\alpha^{\mathcal{P}}\mleft(p \cdot \widetilde{g}_x\mright)
-&=
-\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \widetilde{g}_{\alpha(b)}
-=
-\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}\mleft( \widetilde{g}_x \mright).
-\eas
-This opens a gateway to define Eq.\ \eqref{ClassicalSymmetryofPTs} on general principal $\mathcal{G}$-bundles. That is, now let $\mathcal{P}$ be again a general principal $\mathcal{G}$-bundle. Fix any horizontal distribution on $\mathcal{G}$ inducing a parallel transport $\mathrm{PT}_\alpha^{\mathcal{G}}$, then a connection on $\mathcal{P}$ should be equivalent to a parallel transport $\mathrm{PT}_\alpha^{\mathcal{P}}$ on $\mathcal{P}$ satisfying Eq.\ \eqref{PTProp1}, \eqref{PTProp2} and
-\ba
-\mathrm{PT}_\alpha^{\mathcal{P}}(p \cdot g)
-&=
-\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}(g)
-\ea
-for all $p \in \mathcal{P}_x$ and $g \in \mathcal{G}_x$. The right hand side is now well-defined since both, $\mathrm{PT}_\alpha^{\mathcal{P}}(p)$ and $\mathrm{PT}_\alpha^{\mathcal{G}}(g)$, are elements of $\mathcal{P}_{\alpha(b)}$ and $\mathcal{G}_{\alpha(b)}$, respectively. We now want to derive its infinitesimal analogue similar to Eq.\ \eqref{ClassicalSymmetryOfHorizontalDistr}; for this we want to use Thm.\ \ref{thm:DiffOfLGBAction}.
 
  %a very trivial LGB and an action thereof; we will omit discussions about smoothness in the following. We will now discuss the trivial LGB $\mathcal{G}$ given by
 %\begin{center}

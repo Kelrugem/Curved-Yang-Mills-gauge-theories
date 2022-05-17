@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  16 MAY 2022 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  17 MAY 2022 23:16
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1032,23 +1032,7 @@ Library (tcolorbox): 'tcbfitting.code.tex' version '4.51'
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbxparse.cod
 e.tex
 Library (tcolorbox): 'tcbxparse.code.tex' version '4.51'
-)) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count323
-\float@exts=\toks51
-\float@box=\box83
-\@float@everytoks=\toks52
-\@floatcapt=\box84
-)
-Package scrhack Info: loading float hack on input line 54.
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\float.hak
-File: float.hak 2021/06/25 v3.34 KOMA-Script scrhack part (hacking package floa
-t)
-Package scrhack Info: redefining \newfloat on input line 163.
-Package scrhack Info: redefining \listof on input line 163.
-Package scrhack Info: undefining \float@addtolists on input line 163.
-)
+))
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikzlibrarycd.c
 ode.tex
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
@@ -1070,7 +1054,7 @@ File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 Now handling font encoding LS1 ...
 ... no UTF-8 mapping file for font encoding LS1
 LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 61.
-\c@theorem=\count324
+\c@theorem=\count323
 \symmathx=\mathgroup8
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 34
 8.
@@ -1113,17 +1097,17 @@ Package scrbase Info: activating english \listtablename on input line 348.
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count325
+\scratchcounter=\count324
 \scratchdimen=\dimen297
-\scratchbox=\box85
-\nofMPsegments=\count326
-\nofMParguments=\count327
-\everyMPshowfont=\toks53
-\MPscratchCnt=\count328
+\scratchbox=\box83
+\nofMPsegments=\count325
+\nofMParguments=\count326
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count327
 \MPscratchDim=\dimen298
-\MPnumerator=\count329
-\makeMPintoPDFobject=\count330
-\everyMPtoPDFconversion=\toks54
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
+\everyMPtoPDFconversion=\toks52
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -1203,7 +1187,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count331
+\c@section@level=\count330
 )
 LaTeX Info: Redefining \ref on input line 348.
 LaTeX Info: Redefining \pageref on input line 348.
@@ -1226,7 +1210,7 @@ Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count332
+\BKM@id=\count331
 ))
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
@@ -1325,7 +1309,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1533--1536
  []
 
 [19] [20] [21] [22] [23] [24] [25] [26]
-Overfull \hbox (4.5506pt too wide) in paragraph at lines 1858--1863
+Overfull \hbox (4.5506pt too wide) in paragraph at lines 1868--1873
 \T1/lmr/m/n/10.95 It is also ar-gued in [[], Ÿ1.4, Ex. 1.4.7, page 25] that $[]
 \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 P\OT1/lmr/m/n/10.95 )$ \T1/lmr/m/n/10.9
 5 is then iso-mor-phic to $\OT1/lmr/m/n/10.95  [][]$
@@ -1333,21 +1317,21 @@ Overfull \hbox (4.5506pt too wide) in paragraph at lines 1858--1863
 
 [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
 [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56]
-[57] [58] [59] [60] [61] [62] [63] [64] [65] (CYM.bbl
+[57] [58] [59] [60] [61] [62] [63] [64] [65] [66] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-[66]) [67] (CYM.aux)
+[67]) [68] (CYM.aux)
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34254 strings out of 478907
- 715078 string characters out of 2851891
- 1215558 words of memory out of 3000000
- 51228 multiletter control sequences out of 15000+600000
+ 34201 strings out of 478907
+ 714167 string characters out of 2851891
+ 1201566 words of memory out of 3000000
+ 51177 multiletter control sequences out of 15000+600000
  503247 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1387,9 +1371,9 @@ s/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
 /kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (69 pages, 893626 bytes).
+Output written on CYM.pdf (70 pages, 903378 bytes).
 PDF statistics:
- 1210 PDF objects out of 1440 (max. 8388607)
- 271 named destinations out of 1000 (max. 500000)
+ 1227 PDF objects out of 1440 (max. 8388607)
+ 275 named destinations out of 1000 (max. 500000)
  301 words of extra memory for PDF output out of 10000 (max. 10000000)
 
