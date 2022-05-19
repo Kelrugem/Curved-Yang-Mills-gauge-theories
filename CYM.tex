@@ -1173,7 +1173,7 @@ Observe that by the definition of $f^*\mathcal{G}$ we can also write
 \bas
 f(p \cdot g) &= f(p),
 \eas
-so, the $\mathcal{G}$-action is defined in such a way that $f$ is invariant under it. If $f$ is the projection of $N$ as a bundle over $M$, then this means that an LGB action is fibre-preserving. Moreover, the fibre-wise group structure on $\mathcal{G}$ naturally defines a $\mathcal{G}$-action on $\mathcal{G}$; in this situation $f$ would be $\pi$ itself. This is mainly a technical condition. On one hand, having $M = \{*\}$ already recovers the notion of a Lie group action and condition \eqref{InvarianceOffUnderGAction} is then trivial, and on the other hand the mentioned reference, \cite[\S 1.6, Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}, actually generalizes this condition making use of the structure of groupoids.
+so, the $\mathcal{G}$-action is defined in such a way that $f$ is invariant under it. If $f$ is the projection of $N$ as a bundle over $M$, then this means that an LGB action is fibre-preserving. Moreover, the fibre-wise group structure on $\mathcal{G}$ naturally defines a $\mathcal{G}$-action on $\mathcal{G}$; in this situation $f$ would be $\pi$ itself, see also Ex.\ \ref{ex:LGBActingOnItself}. This is mainly a technical condition. On one hand, having $M = \{*\}$ already recovers the notion of a Lie group action and condition \eqref{InvarianceOffUnderGAction} is then trivial, and on the other hand the mentioned reference, \cite[\S 1.6, Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}, actually generalizes this condition making use of the structure of groupoids.
 \newline
 
 Furthermore, the other conditions are the typical conditions for actions, especially such that we get a $\mathcal{G}$-action on $f^*\mathcal{G}$ by
@@ -2289,7 +2289,7 @@ Finally, we come to the last part of the \textit{basics} for LGBs and their noti
 As usual, representations are a special type of group action, with an infinitesimal analogue. 
 %The approach in \cite[\S 1.7, page 43ff.]{mackenzieGeneralTheory} defines an LGB representation by a map which restricts to a typical representation on each fibre of the LGB. However, in alignment with the previous approach we want to keep the fibre-wise behaviour as a remark while the definition itself emphasizes the global structure. For this it will now be important that we have shown that the pullback of an LGB is again an LGB; recall Cor.\ \ref{cor:PullbackLGB}.
 
-\begin{definitions}{LGB representation, \newline\cite[\S 1.7, special situation of Def.\ 1.7.1, page 43]{mackenzieGeneralTheory}}{LGBRep}
+\begin{definitions}{LGB representations, \newline\cite[\S 1.7, special situation of Def.\ 1.7.1, page 43]{mackenzieGeneralTheory}}{LGBRep}
 Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold, $V \stackrel{p}{\to} M$ be a vector bundle, and assume that we have a left $\mathcal{G}$-action on $V$, $\Psi: \mathcal{G}*V \coloneqq p^*\mathcal{G}\to V$. Then we say that $\Psi$ is a \textbf{$\mathcal{G}$-representation on $V$} if it is linear, that is,
 \bas
 \Psi\bigl( (g, \alpha v ) \bigr)
@@ -2321,9 +2321,43 @@ the horizontal arrows describe the vector bundle structure (viewing $\mathcal{G}
 Last but not least, by fixing a base point $x \in M$ we clearly have the typical notion of a $\mathcal{G}_x$-representation on $V_x$.
 \end{remarks}
 
-\textbf{Add induced representations, especially adjoint ones}
+Infinitesimally, we have LAB actions and representations; recall Cor.\ \ref{cor:PullBackLABIsLAB}.
+
+\begin{definitions}{LAB actions, \newline \cite[\S 4.1, simplified version of Def.\ 4.1.1, page 149]{mackenzieGeneralTheory}}{LABACtions}
+Let $M, N$ be smooth manifolds, $\mathcal{g} \stackrel{\pi}{\to} M$ an LAB, and $f: N \to M$ a smooth map. Then a \textbf{$\mathcal{g}$-action on $N$} is a vector bundle morphism 
+\bas
+f^*\mathcal{g} &\to \mathrm{T}N,\\
+\nu &\mapsto \rho(\nu),
+\eas
+satisfying
+\ba\label{LABActionAlongFibres}
+\mathrm{D}f \circ \rho
+&=
+0
+\ea
+and such that the induced map
+\bas
+\Gamma(\mathcal{g}) &\to \Gamma(f^*\mathcal{g}) \to \mathrm{T}N,\\
+\mu &\mapsto f^*\mu \mapsto \rho\mleft( f^*\mu \mright)
+\eas
+is a homomorphism of Lie algebras, that is,
+\ba
+\rho\biggl( f^*\mleft(\mleft[ \mu, \nu \mright]_{\mathcal{g}}\mright) \biggr)
+&=
+\bigl[ \rho\mleft(f^*\mu\mright), \rho\mleft(f^*\nu\mright) \bigr]
+\ea
+for all $\mu, \eta \in \Gamma(\mathcal{g})$.
+\end{definitions}
+
+We will later see the canonical example given by fundamental vector fields. Using this we can define LAB representations.
+
+\begin{definitions}{LAB representations}{LABReps}
+
+\end{definitions}
 
 \subsection{Fundamental vector fields}
+
+\textbf{Maybe introduce as LAB action}
 
 \begin{definitions}{Fundamental vector fields, \newline \cite[\S 3.4, generalization of Def.\ 3.4.1, page 143]{Hamilton}}{FundVecs}
 Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \to M$ an LGB over $M$, $f: N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, $N * \mathcal{G} \to N$. For $\nu \in \Gamma(\mathcal{g})$ we define its induced \textbf{fundamental vector field $\widetilde{\nu}$} as an element of $\mathfrak{X}(N)$ by
@@ -2358,6 +2392,10 @@ For long expressions we use the following different font
 \oversortoftilde{\nu}
 \eas
 instead of $\widetilde{\nu}$.
+\end{remarks}
+
+\begin{remarks}{Map to fundamental vector fields an LAB action}{FundVecsAreLABActions}
+As expected 
 \end{remarks}
 
 %
@@ -3201,17 +3239,17 @@ As usual for gauge theory we will understand connections as horizontal distribut
 
 \begin{corollaries}{The natural invariance of the vertical bundle of $\mathcal{P}$}{VerticalBundleOfPrincIsNearlyAsUsual}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, $\mathcal{g}$ its LAB, and $\mathcal{P}\stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Then
-\bas
+\ba\label{SymmetryOfTheVerticalBundle}
 \mathrm{D}_p r_g\mleft( \mathrm{V}_p \mathcal{P} \mright)
 &=
 \mathrm{V}_{p \cdot g} \mathcal{P}
-\eas
+\ea
 for all $(p, g) \in \mathcal{P} * \mathcal{G}$, and we have an isomorphism of vector bundles
-\bas
+\ba
 \mathrm{V}\mathcal{P}
 &\cong
 \pi^*\mathcal{g}
-\eas
+\ea
 given by
 \bas
 \pi^*\mathcal{g} &\to \mathrm{V}\mathcal{P},\\
@@ -3223,6 +3261,8 @@ given by
 \leavevmode\newline
 
 \end{proof}
+
+By this result, we would like to have Eq.\ \eqref{SymmetryOfTheVerticalBundle} also for a chosen horizontal distribution. However, its formulation leads to certain problems which we now want to discuss.
 
 \subsubsection{Idea and motivation}\label{TheBigMotivationBehindEverything}
 
@@ -3471,7 +3511,7 @@ so that the canonical projection $\pi^{\mathrm{vert}, \mathcal{G}}: \mathrm{T}\m
 	\bigr).
 \eas
 It may not surprise that $\mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G}}$ is by construction actually \textit{the} connection 1-form on $\mathcal{G}$ corresponding to $\mathrm{H}\mathcal{G}$, therefore we will denote $\mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G}}$ as the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ of $\mathcal{G}$}. Hence we get in total
-\ba
+\ba\label{OiTHatIsHowWeFormulateHorizSymmetry}
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
@@ -3483,7 +3523,18 @@ It may not surprise that $\mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G
 &\in
 \mathrm{H}_{p \cdot g}\mathcal{P}
 \ea
-for all $X \in \mathrm{H}_p\mathcal{P}$. This is independent of the chosen section $\sigma$ because Thm.\ \ref{thm:DiffOfLGBAction} is, and thence gives the fundamental formula for the following sections.
+for all $X \in \mathrm{H}_p\mathcal{P}$, and we would like. This is independent of the chosen section $\sigma$ because Thm.\ \ref{thm:DiffOfLGBAction} is, and thence gives the fundamental formula for the following sections. Last but not least, our starting point was Eq.\ \eqref{SymmetryOfTheVerticalBundle}; there is no contradiction between the approaches of Eq.\ \eqref{SymmetryOfTheVerticalBundle} and \eqref{OiTHatIsHowWeFormulateHorizSymmetry}. If $X$ is a vertical vector, then
+\bas
+\mathrm{D}_p\pi(X) &= 0,
+\eas
+and
+\bas
+\mathrm{D}_p r_\sigma (X)
+&=
+\mathrm{D}_p r_g (X)
+\eas
+by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry behind Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} will be compatible with the one of Eq.\ \eqref{SymmetryOfTheVerticalBundle} on the vertical bundle.
+
 \begin{figure}
 \begin{minipage}[]{0.5\textwidth} 
 %\begin{figure}[H]
@@ -3728,6 +3779,16 @@ for all $X \in \mathrm{H}_p\mathcal{P}$. This is independent of the chosen secti
 %\eas
 
 \subsection{Generalized connection 1-forms on principal bundles}
+
+As we have seen, we need a slight adjustment of the vertical Maurer-Cartan as presented in Def.\ \ref{def:MCFormOnLGBs}.
+
+\begin{definitions}{Total Maurer-Cartan form}{TotMCFormOnLGB}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$
+\end{definitions}
+
+\begin{definitions}{Ehresmann connection on principal LGB-bundles}{FinallyTheConnection}
+
+\end{definitions}
 
 \subsection{Gauge transformations}
 
