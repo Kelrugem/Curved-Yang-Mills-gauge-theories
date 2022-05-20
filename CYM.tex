@@ -2136,7 +2136,7 @@ using the smoothness of all involved parts, especially that $\mu$ is smooth, hen
 \begin{definitions}{Vertical Maurer-Cartan form of LGBs, \newline \cite[generalization of Def.\ 3.5.2, page 148]{Hamilton}}{MCFormOnLGBs}
 Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. The map defined in Cor.\ \ref{cor:VertMCVormIsWellDefined} is the \textbf{vertical Maurer-Cartan form $\mu_\mathcal{G}$}, \textit{i.e.}\ defined to be an element of $\Gamma\mleft( \mathrm{V}^*\mathcal{G} \otimes \pi^*\mathcal{g} \mright)$ given by
 \bas
-(\mu_\mathcal{G})_g(v)
+\mleft(\mu_\mathcal{G}\mright)_g(v)
 &\coloneqq
 \mleft( \mathrm{D}_g L_{g^{-1}} \mright)(v)
 \eas
@@ -3783,8 +3783,45 @@ by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry beh
 As we have seen, we need a slight adjustment of the vertical Maurer-Cartan as presented in Def.\ \ref{def:MCFormOnLGBs}.
 
 \begin{definitions}{Total Maurer-Cartan form}{TotMCFormOnLGB}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$, where we denote with $\pi^{\mathrm{vert}}: \mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$ the canonical projection onto its vertical bundle. Then we define the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}} \in \Omega^1\mleft(\mathcal{G}; \pi^*\mathcal{g}\mright)$ of $\mathcal{G}$} as the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$, \textit{i.e.}\
+\bas
+\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)_g(Y)
+&\coloneqq
+\mleft(\mu_\mathcal{G} \circ \pi^{\mathrm{vert}}\mright)_g(Y)
+=
+\mleft( \mathrm{D}_g L_{g^{-1}} \mright)\mleft(\pi^{\mathrm{vert}}(Y)\mright)
+\eas
+for all $g \in G$ and $Y \in \mathrm{T}_g\mathcal{G}$.
 \end{definitions}
+
+\textbf{Besser: Darboux offiziell definieren und zeigen dass MC Term tatsächlich darauf zurückzuführen ist und direkt etwas mit dem Nabla auf LAB zu tun hat}
+
+\begin{remarks}{Maurer-Cartan form as the generalization of derivative}{MCFormAGeneralizationOfDerivative}
+If $G$ is a Lie group and $\mathfrak{g}$ its Lie algebra, then there is actually some stance that the typical Maurer-Cartan form $\mu_G \in \Omega^1(G; \mathfrak{g})$ describes \textit{the} generalization of the total derivative of smooth maps $M \to \mathbb{R}^n$, given by the \textbf{Darboux derivative $\Delta$} as given in \cite[\S 5.1, page 182ff.]{mackenzieGeneralTheory}. For a smooth section $\sigma: M \to G$ of the trivial LGB over $M$, this is $\Delta \sigma \in \Omega^1(M; \mathfrak{g})$ given by
+\bas
+\Delta \sigma
+&\coloneqq
+\sigma^! \mu_G,
+\eas
+that is,
+\bas
+(\Delta \sigma)_p(X)
+&=
+\mathrm{D}_{\sigma_x}L_{\sigma_x^{-1}}\bigl( \mathrm{D}_x \sigma(X) \bigr)
+\eas
+for all $p \in M$ and $X \in \mathrm{T}_p M$. For $G = \mathbb{R}^n$ one usually shows that $\mathrm{D}\sigma$ is the actual total derivative (Jacobian) by making use of $\mathrm{T}\mathbb{R}^n \cong \mathbb{R}^n \times \mathbb{R}^n$; however, if one views the triviality of $\mathrm{T}\mathbb{R}^n$ as the trivialization of general $\mathrm{T}G$ as given by $G \times \mathfrak{g}$, then it is more natural to think of the total derivative as $\mathrm{D}\sigma$ followed by $\mathrm{D}_{\sigma_x}L_{\sigma_x^{-1}}$ in order to receive information about the essential Lie algebra element. Then the classical total derivative of $\mathbb{R}^n$-valued maps is actually more natural generalized by the Darboux derivative.
+
+We now have a similar behaviour here but related to arbitrary connections on $\mathbb{R}^n$ (as a trivial bundle over $M$). For $\sigma \in \Gamma(\mathcal{G})$ define
+\bas
+\Delta \sigma
+&=
+\sigma^! \mu_{\mathcal{G}}^{\mathrm{tot}}
+=
+\mleft(\sigma^* \mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma
+\in
+\Omega^1(M; \mathcal{g})
+\eas
+\end{remarks}
 
 \begin{definitions}{Ehresmann connection on principal LGB-bundles}{FinallyTheConnection}
 

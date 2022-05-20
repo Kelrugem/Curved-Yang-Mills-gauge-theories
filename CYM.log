@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  19 MAY 2022 22:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  20 MAY 2022 23:29
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1310,14 +1310,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 3261--3262
 
  []
 
-[58] [59] [60] [61] [62] (CYM.bbl
+[58] [59] [60] [61] [62] [63] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-) [63] [64]
-Overfull \hbox (2.20065pt too wide) in paragraph at lines 3927--3945
+) [64] [65]
+Overfull \hbox (2.20065pt too wide) in paragraph at lines 3964--3982
 \OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/
 10.95 )$ \T1/lmr/m/n/10.95 as an el-e-ment of $\OT1/lmr/m/n/10.95 
 [](\OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.95 ; [](\OML/lmm/m/it/10.95 V\OT1/lmr/m
@@ -1329,15 +1329,18 @@ mm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/10.95
 /n/10.95 ))$
  []
 
-[65] [66] [67] [68] [69] [70] (CYM.aux)
+[66] [67] [68] [69] [70] (CYM.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34228 strings out of 478907
- 714630 string characters out of 2851891
- 1201336 words of memory out of 3000000
- 51192 multiletter control sequences out of 15000+600000
+ 34231 strings out of 478907
+ 714697 string characters out of 2851891
+ 1201420 words of memory out of 3000000
+ 51194 multiletter control sequences out of 15000+600000
  503247 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1377,9 +1380,9 @@ s/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
 /kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (72 pages, 913484 bytes).
+Output written on CYM.pdf (72 pages, 918795 bytes).
 PDF statistics:
- 1261 PDF objects out of 1440 (max. 8388607)
- 287 named destinations out of 1000 (max. 500000)
+ 1263 PDF objects out of 1440 (max. 8388607)
+ 288 named destinations out of 1000 (max. 500000)
  301 words of extra memory for PDF output out of 10000 (max. 10000000)
 
