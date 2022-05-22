@@ -2210,6 +2210,76 @@ This can be quickly shown by recalling Rem.\ \ref{rem:RecoveringofClassicalMCFor
 where $\mu_\mathcal{G}$ is defined as in Def.\ \ref{def:MCFormOnLGBs}, and $\mu_{\mathcal{G}}$ restricts to the Maurer-Cartan form of $\mathcal{G}_x$ ($x \in M$) on each fibre of $\mathcal{G}$; especially, $\mu_\mathcal{G}: \mathrm{V}\mathcal{G} \to \mathcal{g}$ is a fibre-wise isomorphism (since $\mathrm{D}_gL_{g^{-1}}$ is an isomorphism). Hence, as described in Subsection \ref{BasicNotations}, $\mu_\mathcal{G}$ as an element of $\Gamma(\mathrm{V}^*\mathcal{G} \otimes \pi^*\mathcal{G})$, \textit{i.e.}\ a vector bundle morphism $\mathrm{V}\mathcal{G} \to \pi^*\mathcal{g}$ (linearity of $\mu_G$ is clear), is a vector bundle isomorphism. This finishes the proof.
 \end{proof}
 
+\subsection{Exponential map of LGBs}
+
+By Remark \ref{rem:AbstractNotationForLeftInvarianceVf} it is clear that we have a natural exponential map, just given by the fibre-wise exponential. If one is interested into a general exponential map, then see \cite[\S 3.6, page 132ff.]{mackenzieGeneralTheory}. However, since our situation is much simpler, we quickly finish this discussion just making use of the already existing exponential map in each fibre; a straightforward generalization on results as provided in \cite[\S 1.7, page 55ff.]{Hamilton}.
+
+\begin{definitions}{Exponential map, \newline \cite[\S 3.6, second part of Ex.\ 3.6.2, page 133f.]{mackenzieGeneralTheory}}{ExpOfLGB}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{g} \to M$ its LAB. Then we define the \textbf{exponential map $\exp: \mathcal{g} \to \mathcal{G}$} by
+\bas
+\exp(X) &\coloneqq \e^X \coloneqq \exp_{\mathcal{G}_x}(X)
+\eas
+for all $x \in M$ and $X \in \mathcal{g}_x$, where $\exp_{\mathcal{G}_x}$ is the exponential map of the Lie group $\mathcal{G}_x$ as \textit{e.g.}\ provided in \cite[\S 1.7, Def.\ 1.7.6, page 57]{Hamilton}. Its extension to sections, also denoted by $\exp: \Gamma(\mathcal{g}) \to \Gamma(\mathcal{G})$, is canonically given by
+\bas
+\mleft.\exp(\nu)\mright|_x
+&\coloneqq
+\exp(\nu_x)
+\eas
+for all $x \in M$ and $\nu \in \Gamma(\mathcal{g})$.
+
+Usually, the LGB is given by context, otherwise we will denote the exponential map by $\exp_{\mathcal{G}}$ instead.
+\end{definitions}
+
+The exponential map is smooth because it describes the flow of left-invariant vector fields as it also happens for Lie groups; see for example \cite[Prop.\ 1.7.12, page 58]{Hamilton} for the Lie group statement. Also recall Cor.\ \ref{cor:LeftInvVfToLAB}, we denote left-invariant vector fields by $X_\nu$ where $\nu \in \Gamma(\mathcal{g})$ due to 1:1 correspondence of $L(\mathcal{G})$ and $\Gamma(\mathcal{g})$.
+
+\begin{corollaries}{The exponential map as flow of $L(\mathcal{G})$, \newline \cite[discussion at the beginning of \S 3.6, Prop.\ 3.6.1 and its discussion afterwards; page 132f.]{mackenzieGeneralTheory}}{ExpAsFlow}
+Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{g} \to M$ its LAB. Then the flow of a left-invariant vector field $X_\nu \in L(\mathcal{G})$ ($\nu \in \Gamma(\mathcal{g})$) is a complete flow $\phi: \mathbb{R} \times \mathcal{G} \to \mathcal{G}$ given by
+\bas
+\phi(t, g)
+&=
+g \cdot \e^{t \nu_{\pi(g)}}
+\eas
+for all $t \in \mathbb{R}$ and $g \in \mathcal{G}$. Especially, the map
+\bas
+\mathbb{R} \times M &\to \mathcal{G},\\
+(t, x) &\mapsto \e^{t\nu_x}
+\eas
+is smooth.
+%, where we understand smoothness of $\exp: \Gamma(\mathcal{g}) \to \Gamma(\mathcal{G})$ as the smoothness of 
+%\bas
+%M &\to \mathcal{G},\\
+%g &\mapsto \e^{}
+%\eas
+\end{corollaries}
+
+\begin{proof}
+\leavevmode\newline
+As mentioned in Remark \ref{rem:AbstractNotationForLeftInvarianceVf}, $X_\nu$ is a vertical vector field so that $\mleft.X_\nu\mright|_{\mathcal{G}_x}$ is a left-invariant vector field of the Lie group $\mathcal{G}_x$ for all $x \in M$. $\mleft.X_\nu\mright|_{\mathcal{G}_x}$ is the left-invariant vector field in $\mathcal{G}_x$ related to $\nu_x \in \mathcal{g}_x$ by Cor.\ \ref{cor:LeftInvVfToLAB}, and the flow $\phi_x$ of $\mleft.X_\nu\mright|_{\mathcal{G}_x}$ is well-known, as \textit{e.g.}\ in \cite[\S 1.7, Prop.\ 1.7.12, page 58]{Hamilton}, that is,
+\bas
+\mathbb{R} \times \mathcal{G}_x &\to \mathcal{G}_x,\\
+(t, g) &\mapsto \phi_x(t, g) = g \cdot \exp_{\mathcal{G}_x}\mleft(t \nu_x\mright),
+\eas
+where $\exp_{\mathcal{G}_x}$ is the exponential map of $\mathcal{G}_x$. Since this works for all fibres $\mathcal{G}_x$ and by Def.\ \ref{def:ExpOfLGB} we get that the flow $\phi$ of $X_\nu$ is complete and given by
+\bas
+\phi(t, g)
+&=
+g \cdot \e^{t\nu_{\pi(g)}}
+\eas
+for all $t \in \mathbb{R}$ and $g \in \mathcal{G}$. We also have
+\bas
+\e^{t \nu_x}
+&=
+e_x \cdot \e^{t \nu_{\pi\mleft(e_x\mright)}}
+=
+\phi\mleft(t, e_x\mright)
+\eas
+for all $t \in \mathbb{R}$ and $x \in M$, such that smoothness of $(t, x) \mapsto \e^{t\nu_x}$ follows as composition of smooth maps.
+\end{proof}
+
+\begin{remarks}{Simplifying notation related to the exponential map}{SimplyExpNotation}
+
+\end{remarks}
+
 \subsection{LABs of pullback LGBs}
 
 We are going to define LGB representations and corresponding LAB representations. Since group representation are a special form of actions, we will have something similar in the case of LGB representations. Since actions are defined as maps on a pullback of an LGB $\mathcal{G}$, which is also an LGB by Cor.\ \ref{cor:PullbackLGB}, we expect that the corresponding LAB representation is related to the LAB of the pullback of $\mathcal{G}$. It is natural to think of this LAB as the pullback of $\mathcal{g}$, which is also an LAB by Cor.\ \ref{cor:PullBackLABIsLAB}:
@@ -2277,8 +2347,6 @@ for all $p \in N$.
 \leavevmode\newline
 Again by our notes in Subsection \ref{BasicNotations}, we can view $F$ as a base-preserving LGB morphism $F: \mathcal{H} \to f^*\mathcal{G}$, since $f^*\mathcal{G}$ is an LGB whose structure is naturally inherited by $\mathcal{G}$ as given in Cor.\ \ref{cor:PullbackLGB}; similarly for its LAB by Cor.\ \ref{cor:PullBackLABIsLAB}. Thus, it is fibre-wise a Lie group morphism, and its tangent map restricted to the identity section, $\mathrm{D}_eF$, gives fibre-wise a Lie algebra morphism. Thus, $\mathrm{D}_e F: \mathcal{h} \to f^*\mathcal{g}$ is an LAB morphism (using Cor.\ \ref{cor:LABOfPullbackLGBIsPullbackLAB}), and can be seen as an LAB morphism $\mathcal{h} \to \mathcal{g}$ over $f$. Alternatively, it is straightforward and trivial to show it directly.
 \end{proof}
-
-\textbf{Add 1-parameter subgroups, which are sections of LGB at each time.}
 
 \section{LGB actions, part II}
 
@@ -3783,7 +3851,7 @@ by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry beh
 As we have seen, we need a slight adjustment of the vertical Maurer-Cartan as presented in Def.\ \ref{def:MCFormOnLGBs}.
 
 \begin{definitions}{Total Maurer-Cartan form}{TotMCFormOnLGB}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$, where we denote with $\pi^{\mathrm{vert}}: \mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$ the canonical projection onto its vertical bundle. Then we define the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}} \in \Omega^1\mleft(\mathcal{G}; \pi^*\mathcal{g}\mright)$ of $\mathcal{G}$} as the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$, \textit{i.e.}\
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$, where we denote with $\pi^{\mathrm{vert}}: \mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$ the corresponding projection onto its vertical bundle. Then we define the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}} \in \Omega^1\mleft(\mathcal{G}; \pi^*\mathcal{g}\mright)$ of $\mathcal{G}$} as the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$, \textit{i.e.}\
 \bas
 \mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)_g(Y)
 &\coloneqq
@@ -3794,10 +3862,10 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\ma
 for all $g \in G$ and $Y \in \mathrm{T}_g\mathcal{G}$.
 \end{definitions}
 
-\textbf{Besser: Darboux offiziell definieren und zeigen dass MC Term tatsächlich darauf zurückzuführen ist und direkt etwas mit dem Nabla auf LAB zu tun hat}
+The Maurer-Cartan form is important for gauge transformations because it induces a derivative, wich we also need now.
 
-\begin{remarks}{Maurer-Cartan form as the generalization of derivative}{MCFormAGeneralizationOfDerivative}
-If $G$ is a Lie group and $\mathfrak{g}$ its Lie algebra, then there is actually some stance that the typical Maurer-Cartan form $\mu_G \in \Omega^1(G; \mathfrak{g})$ describes \textit{the} generalization of the total derivative of smooth maps $M \to \mathbb{R}^n$, given by the \textbf{Darboux derivative $\Delta$} as given in \cite[\S 5.1, page 182ff.]{mackenzieGeneralTheory}. For a smooth section $\sigma: M \to G$ of the trivial LGB over $M$, this is $\Delta \sigma \in \Omega^1(M; \mathfrak{g})$ given by
+\begin{remarks}{Maurer-Cartan form inducing a natural derivative: Part I}{MCFormAGeneralizationOfDerivative}
+If $G$ is a Lie group and $\mathfrak{g}$ its Lie algebra, then there is actually some stance that the typical Maurer-Cartan form $\mu_G \in \Omega^1(G; \mathfrak{g})$ describes \textit{the} generalization of the total derivative of smooth maps $M \to \mathbb{R}^n$ $(n \in \mathbb{N})$, given by the \textbf{Darboux derivative $\Delta$} as given in \cite[\S 5.1, page 182ff.]{mackenzieGeneralTheory}. For a smooth section $\sigma: M \to G$ of the trivial LGB over $M$, this is $\Delta \sigma \in \Omega^1(M; \mathfrak{g})$ given by
 \bas
 \Delta \sigma
 &\coloneqq
@@ -3809,18 +3877,43 @@ that is,
 &=
 \mathrm{D}_{\sigma_x}L_{\sigma_x^{-1}}\bigl( \mathrm{D}_x \sigma(X) \bigr)
 \eas
-for all $p \in M$ and $X \in \mathrm{T}_p M$. For $G = \mathbb{R}^n$ one usually shows that $\mathrm{D}\sigma$ is the actual total derivative (Jacobian) by making use of $\mathrm{T}\mathbb{R}^n \cong \mathbb{R}^n \times \mathbb{R}^n$; however, if one views the triviality of $\mathrm{T}\mathbb{R}^n$ as the trivialization of general $\mathrm{T}G$ as given by $G \times \mathfrak{g}$, then it is more natural to think of the total derivative as $\mathrm{D}\sigma$ followed by $\mathrm{D}_{\sigma_x}L_{\sigma_x^{-1}}$ in order to receive information about the essential Lie algebra element. Then the classical total derivative of $\mathbb{R}^n$-valued maps is actually more natural generalized by the Darboux derivative.
+for all $p \in M$ and $X \in \mathrm{T}_p M$. For $G = \mathbb{R}^n$ one usually shows that $\mathrm{D}\sigma$ is the actual total derivative (Jacobian) by making use of $\mathrm{T}\mathbb{R}^n \cong \mathbb{R}^n \times \mathbb{R}^n$; however, if one views the triviality of $\mathrm{T}\mathbb{R}^n$ as the trivialization of general $\mathrm{T}G$ as given by $G \times \mathfrak{g}$, then it is more natural to think of the total derivative as $\mathrm{D}\sigma$ followed by $\mathrm{D}_{\sigma_x}L_{\sigma_x^{-1}}$ in order to receive information about the essential Lie algebra element. Then the classical total derivative of $\mathbb{R}^n$-valued maps is actually more naturally given by the Darboux derivative.
+\end{remarks}
 
-We now have a similar behaviour here but related to arbitrary connections on $\mathbb{R}^n$ (as a trivial bundle over $M$). For $\sigma \in \Gamma(\mathcal{G})$ define
+We now have a similar behaviour in our case but related to arbitrary connections on $\mathbb{R}^n$ (as a trivial bundle over $M$).
+
+\begin{definitions}{Darboux derivative}{DarbouxDerivativeOnLGBs}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$.
+For $\sigma \in \Gamma(\mathcal{G})$ define the \textbf{Darboux derivative $\Delta \sigma \in \Omega^1(M; \mathcal{g})$}
 \bas
 \Delta \sigma
 &=
 \sigma^! \mu_{\mathcal{G}}^{\mathrm{tot}}
 =
-\mleft(\sigma^* \mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma
-\in
-\Omega^1(M; \mathcal{g})
+\mleft(\sigma^* \mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma.
 \eas
+\end{definitions}
+
+\begin{remarks}{Maurer-Cartan form inducing a natural derivative: Part II}{MCAsDerivativePartII}
+We have now something similar to Remark \ref{rem:MCFormAGeneralizationOfDerivative}. Let $\mathcal{G} = M \times \mathbb{R}^n$ ($n \in \mathbb{N}$) be the trivial abelian LGB, and $\nabla$ a vector bundle connection on $M \times \mathbb{R}^n$, for which we have the associated projection onto the vertical bundle $\pi^{\mathrm{vert}}:\mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$. For $\sigma \in \Gamma(\mathcal{G})$ we then have
+\bas
+\nabla_{X_x} \sigma
+&=
+\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)
+\eas
+for all $x \in M$ and $X_x \in \mathrm{T}_pM$, by making use of $\sigma^*\mathrm{V}\mathcal{G} \cong M \times \mathbb{R}^n$ as vector bundles such that the right hand side has again values in $\mathcal{G}$ due to "enough triviality" and equals the left hand side. Again one could use the isomorphism as given in Cor.\ \ref{cor:TLGBAsLGB}. This is also more natural in the sense of that one wants that $\nabla_{X_x} \sigma$ is a section over $M$; $M$ can be viewed as the image of the neutral section $e$ (the zero vector here), so that $\nabla_{X_x} \sigma$ should have values in $e^*\mathrm{V}\mathcal{G} = \mathcal{g}$. Henceforth one could say it is more natural to "pull $\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)$ back" to $\mathcal{g}$ by left-translation in order to define $\nabla_{X_x} \sigma$, \textit{i.e.}\
+\bas
+\mathrm{D}_{\sigma_x} L_{\sigma_x^{-1}} \Bigl(
+	\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)
+\Bigr)
+&=
+\mleft.\mleft( \sigma^*\mu_{\mathcal{G}} \circ \sigma^*\pi^{\mathrm{vert}} \mright)\mright|_x
+\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright) \bigr)
+\\
+&=
+\mleft.(\Delta \sigma)\mright|_x(X_x).
+\eas
+Thus, as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} one may say that $\Delta \sigma$ is \textit{the} generalization of vector bundle connections to general LGBs $\mathcal{G}$.
 \end{remarks}
 
 \begin{definitions}{Ehresmann connection on principal LGB-bundles}{FinallyTheConnection}
