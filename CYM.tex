@@ -2277,7 +2277,26 @@ for all $t \in \mathbb{R}$ and $x \in M$, such that smoothness of $(t, x) \mapst
 \end{proof}
 
 \begin{remarks}{Simplifying notation related to the exponential map}{SimplyExpNotation}
+Due to Def.\ \ref{def:ExpOfLGB} we recover a lot of the typical properties of the exponential map as in \cite[\S 1.7, Prop.\ 1.7.9, page 57]{Hamilton}, if we understand these properties point-wise. Recall Remark \ref{rem:SectionMultiplication}, then for example
+\bas
+\e^{(t + s) \nu}
+&=
+\e^{t\nu} \cdot \e^{s\nu}
+\eas
+for all $t, s \in \mathbb{R}$ and $\nu \in \Gamma(\mathcal{g})$. As in \cite[\S 3.6, discussion after Prop.\ 3.6.1, page 133]{mackenzieGeneralTheory}, we say that $\mathbb{R} \ni t \mapsto \e^{t\nu}$ is smooth in the sense of the second statement of Cor.\ \ref{cor:ExpAsFlow}, and by construction we have
+\bas
+\nu_x
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \e^{t\nu_x}
+\eas
+for all $x\in M$, so that we also write
+\bas
+\nu
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \e^{t\nu}.
+\eas
 
+Since all of this is rather natural, we will make use of that without further mention.
 \end{remarks}
 
 \subsection{LABs of pullback LGBs}
@@ -3601,7 +3620,7 @@ and
 &=
 \mathrm{D}_p r_g (X)
 \eas
-by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry behind Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} will be compatible with the one of Eq.\ \eqref{SymmetryOfTheVerticalBundle} on the vertical bundle.
+by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry behind Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} will be compatible with the one of Eq.\ \eqref{SymmetryOfTheVerticalBundle} on the vertical bundle. Let us first study the new arising term in Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} via the \textit{Darboux derivative}.
 
 \begin{figure}
 \begin{minipage}[]{0.5\textwidth} 
@@ -3846,7 +3865,7 @@ by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry beh
 %\mathrm{D}_{((x, g), \sigma_x)}\Phi(X, Y).
 %\eas
 
-\subsection{Generalized connection 1-forms on principal bundles}
+\subsection{Darboux derivative on LGBs}
 
 As we have seen, we need a slight adjustment of the vertical Maurer-Cartan as presented in Def.\ \ref{def:MCFormOnLGBs}.
 
@@ -3861,6 +3880,35 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\ma
 \eas
 for all $g \in G$ and $Y \in \mathrm{T}_g\mathcal{G}$.
 \end{definitions}
+
+\begin{remarks}{Total Maurer-Cartan form just typical form on trivial LGBs}{TrivialLGBsAndTheirMCForm}
+Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\mathrm{pr}_1}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \mathrm{pr}_1^*\mathrm{T}M$. Its LAB $\mathcal{g}$ is also trivial $M \times \mathfrak{g}$, and we have several identities (recall Cor.\ \ref{cor:TLGBAsLGB})
+\bas
+\mathrm{T}\mathcal{G}
+&\cong
+\mathrm{pr}_1^*\mathrm{T}M \oplus \mathrm{pr}_2^*\mathrm{T}G
+\cong
+\mathrm{pr}_1^*\mathrm{T}M \oplus \mathfrak{g}
+\cong
+\mathrm{pr}_1^*\mathrm{T}M \oplus \pi^*\mathcal{g}
+=
+\mathrm{H}\mathcal{G} \oplus \mathrm{V}\mathcal{G},
+\eas
+where $\mathrm{pr}_2: M \times G \to G$ is the projection onto the second component,
+and $\pi^{\mathrm{vert}}$ is then equivalent to $\mathrm{Dpr}_2$. So, we get
+\bas
+\mu_{\mathcal{G}}^{\mathrm{tot}}
+&=
+\mathrm{pr}_2^!\mu_G,
+\eas
+where $\mu_G$ is the Maurer-Cartan form of $G$, and where we made use of that for $(x, g) \in M \times G$ we have
+\bas
+L_{(x, g)}\bigl( (x, q) \bigr)
+&=
+\bigl(x, L_g(q)\bigr)
+\eas
+for all $(x, q) \in M \times G$.
+\end{remarks}
 
 The Maurer-Cartan form is important for gauge transformations because it induces a derivative, wich we also need now.
 
@@ -3901,7 +3949,7 @@ We have now something similar to Remark \ref{rem:MCFormAGeneralizationOfDerivati
 &=
 \mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)
 \eas
-for all $x \in M$ and $X_x \in \mathrm{T}_pM$, by making use of $\sigma^*\mathrm{V}\mathcal{G} \cong M \times \mathbb{R}^n$ as vector bundles such that the right hand side has again values in $\mathcal{G}$ due to "enough triviality" and equals the left hand side. Again one could use the isomorphism as given in Cor.\ \ref{cor:TLGBAsLGB}. This is also more natural in the sense of that one wants that $\nabla_{X_x} \sigma$ is a section over $M$; $M$ can be viewed as the image of the neutral section $e$ (the zero vector here), so that $\nabla_{X_x} \sigma$ should have values in $e^*\mathrm{V}\mathcal{G} = \mathcal{g}$. Henceforth one could say it is more natural to "pull $\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)$ back" to $\mathcal{g}$ by left-translation in order to define $\nabla_{X_x} \sigma$, \textit{i.e.}\
+for all $x \in M$ and $X_x \in \mathrm{T}_xM$, by making use of $\sigma^*\mathrm{V}\mathcal{G} \cong M \times \mathbb{R}^n$ as vector bundles such that the right hand side has again values in $\mathcal{G}$ due to "enough triviality" and equals the left hand side. Again one could use the isomorphism as given in Cor.\ \ref{cor:TLGBAsLGB}. This is also more natural in the sense of that one wants that $\nabla_{X_x} \sigma$ is a section over $M$; $M$ can be viewed as the image of the neutral section $e$ (the zero vector here), so that $\nabla_{X_x} \sigma$ should have values in $e^*\mathrm{V}\mathcal{G} = \mathcal{g}$. Henceforth one could say it is more natural to "pull $\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)$ back" to $\mathcal{g}$ by left-translation in order to define $\nabla_{X_x} \sigma$, \textit{i.e.}\
 \bas
 \mathrm{D}_{\sigma_x} L_{\sigma_x^{-1}} \Bigl(
 	\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)
@@ -3915,6 +3963,52 @@ for all $x \in M$ and $X_x \in \mathrm{T}_pM$, by making use of $\sigma^*\mathrm
 \eas
 Thus, as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} one may say that $\Delta \sigma$ is \textit{the} generalization of vector bundle connections to general LGBs $\mathcal{G}$.
 \end{remarks}
+
+\begin{remarks}{Canonical flat Darboux derivative}{DarbouxOnCanonFlat}
+Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\pi}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \pi^*\mathrm{T}M$. Its LAB $\mathcal{g}$ is also trivial $M \times \mathfrak{g}$, and by using Cor.\ \ref{cor:TLGBAsLGB} we get
+\ba\label{trivialLGBSplittingWithCanonFLat}
+\mathrm{T}\mathcal{G}
+&\cong
+\pi^*\mathrm{T}M \oplus \mathfrak{g}
+\cong
+\pi^*\mathrm{T}M \oplus \pi^*\mathcal{g}
+=
+\mathrm{H}\mathcal{G} \oplus \mathrm{V}\mathcal{G},
+\ea
+and for a constant section $\sigma \in \Gamma(\mathcal{G})$, \textit{i.e.}\ $\sigma_x = (x, g)$ for all $x \in M$ ($g \in G$), we have
+\bas
+\mathrm{D}_x\sigma(X)
+&=
+(X, 0)
+\eas
+for all $x \in M$ and $X \in \mathrm{T}_xM$. $\pi^{\mathrm{vert}}$ is obviously the projection onto the second component in Eq.\ \eqref{trivialLGBSplittingWithCanonFLat}, so that we get $\sigma^*\pi^{\mathrm{vert}} \circ \mathrm{D}\sigma = 0$ as expected. Therefore in total
+\bas
+\Delta \sigma
+&=
+\mleft(\sigma^* \mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma
+=
+\sigma^*\mu_{\mathcal{G}} \circ \sigma^*\pi^{\mathrm{vert}} \circ \mathrm{D}\sigma
+=
+0.
+\eas
+In sense of Remark \ref{rem:MCAsDerivativePartII} it makes sense to say that \textbf{$\sigma$ is parallel w.r.t.\ $\Delta$}. Thus, we then speak of the \textbf{canonical flat Darboux derivative}, and constant sections are its parallel sections.
+\end{remarks}
+
+We can actually rewrite some important equations now.
+
+\begin{remarks}{Darboux derivative in the infinitesimal LGB action}{DarbouxInActionInfinit}
+Recall Thm.\ \ref{thm:DiffOfLGBAction}; keeping the same notation as in this theorem, we can now write
+\ba
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_pr_\sigma(X)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_{\sigma_x} \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}.
+\ea
+\end{remarks}
+
+In fact, the Darboux derivative naturally induces a connection on $\mathcal{g}$ as LAB of $\mathcal{G}$. One may have expected that since $\mathrm{H}\mathcal{G}$ should infinitesimally induce a horizontal distribution on $\mathcal{g}$.
+
+\subsection{Generalized connection 1-forms on principal bundles}
 
 \begin{definitions}{Ehresmann connection on principal LGB-bundles}{FinallyTheConnection}
 
