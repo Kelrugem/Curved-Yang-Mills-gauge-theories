@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  23 MAY 2022 23:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  24 MAY 2022 23:22
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1306,18 +1306,18 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38]
 [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53]
 [54] [55] [56] [57] [58] [59] [60]
-Underfull \hbox (badness 10000) in paragraph at lines 3348--3349
+Underfull \hbox (badness 10000) in paragraph at lines 3352--3353
 
  []
 
-[61] [62] [63] [64] [65] [66] [67] (CYM.bbl
+[61] [62] [63] [64] [65] [66] [67] [68] [69] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-[68]) [69]
-Overfull \hbox (2.20065pt too wide) in paragraph at lines 4151--4169
+) [70] [71]
+Overfull \hbox (2.20065pt too wide) in paragraph at lines 4251--4269
 \OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/
 10.95 )$ \T1/lmr/m/n/10.95 as an el-e-ment of $\OT1/lmr/m/n/10.95 
 [](\OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.95 ; [](\OML/lmm/m/it/10.95 V\OT1/lmr/m
@@ -1329,15 +1329,15 @@ mm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/10.95
 /n/10.95 ))$
  []
 
-[70] [71] [72] [73] [74] [75] (CYM.aux)
+[72] [73] [74] [75] [76] (CYM.aux)
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34273 strings out of 478907
- 715343 string characters out of 2851891
- 1199234 words of memory out of 3000000
- 51219 multiletter control sequences out of 15000+600000
+ 34279 strings out of 478907
+ 715450 string characters out of 2851891
+ 1207506 words of memory out of 3000000
+ 51224 multiletter control sequences out of 15000+600000
  503247 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1377,9 +1377,9 @@ s/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
 /kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (77 pages, 947928 bytes).
+Output written on CYM.pdf (78 pages, 954183 bytes).
 PDF statistics:
- 1335 PDF objects out of 1440 (max. 8388607)
- 305 named destinations out of 1000 (max. 500000)
+ 1346 PDF objects out of 1440 (max. 8388607)
+ 306 named destinations out of 1000 (max. 500000)
  317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

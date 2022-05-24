@@ -2064,6 +2064,8 @@ for all $x \in M$, where we used that $\mathcal{G}_x$ is isomorphic to $G$ as a 
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and denote with $e$ the identity section of $\mathcal{G}$. Then we define the \textbf{LAB $\mathcal{g}$ of $\mathcal{G}$} as the vector bundle $e^*\mathrm{V}\mathcal{G}$.
 \end{definitions}
 
+In the following $\mathcal{g}$ will usually denote the LAB of $\mathcal{G}$, even if we only introduced $\mathcal{G}$.
+
 \subsection{Vertical Maurer-Cartan form of LGBs}
 
 As one may expect, the last result gives hints about the tangent bundle structure of $\mathcal{G}$; this can be shown with the Maurer-Cartan form on LGBs, which we will call vertical Maurer-Cartan form. It will be clear later why we choose to add this adjective; however, as a first argument recall Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs}, especially the last paragraph.
@@ -2230,7 +2232,7 @@ for all $x \in M$ and $\nu \in \Gamma(\mathcal{g})$.
 Usually, the LGB is given by context, otherwise we will denote the exponential map by $\exp_{\mathcal{G}}$ instead.
 \end{definitions}
 
-The exponential map is smooth because it describes the flow of left-invariant vector fields as it also happens for Lie groups; see for example \cite[Prop.\ 1.7.12, page 58]{Hamilton} for the Lie group statement. Also recall Cor.\ \ref{cor:LeftInvVfToLAB}, we denote left-invariant vector fields by $X_\nu$ where $\nu \in \Gamma(\mathcal{g})$ due to 1:1 correspondence of $L(\mathcal{G})$ and $\Gamma(\mathcal{g})$.
+The exponential map is well-defined, especially it is smooth because it describes the flow of left-invariant vector fields as it also happens for Lie groups; see for example \cite[Prop.\ 1.7.12, page 58]{Hamilton} for the Lie group statement. Also recall Cor.\ \ref{cor:LeftInvVfToLAB}, we denote left-invariant vector fields by $X_\nu$ where $\nu \in \Gamma(\mathcal{g})$ due to 1:1 correspondence of $L(\mathcal{G})$ and $\Gamma(\mathcal{g})$.
 
 \begin{corollaries}{The exponential map as flow of $L(\mathcal{G})$, \newline \cite[discussion at the beginning of \S 3.6, Prop.\ 3.6.1 and its discussion afterwards; page 132f.]{mackenzieGeneralTheory}}{ExpAsFlow}
 Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{g} \to M$ its LAB. Then the flow of a left-invariant vector field $X_\nu \in L(\mathcal{G})$ ($\nu \in \Gamma(\mathcal{g})$) is a complete flow $\phi: \mathbb{R} \times \mathcal{G} \to \mathcal{G}$ given by
@@ -3322,7 +3324,9 @@ Let $F \to M$ be a fibre bundle over a smooth manifold $M$. Then a \textbf{horiz
 For $p \in M$ the fibre is denoted by $\mathrm{H}_p F$, which we may call a \textbf{horizontal tangent space}.
 \end{definitions}
 
-As usual for gauge theory we will understand connections as horizontal distributions with a certain symmetry along the fibres to assure that connection forms have a relationship to a form defined on the spacetime/basis itself.\footnote{Recall that connection 1-forms on principal bundles (in the classical gauge theory) can be viewed as a 1-form on the spacetime with values in the Atiyah bundle. We usually also want that the connection acting on a section $X$, denoted by $\nabla X$ in the case of vector bundles, still has values in that vector bundle as a bundle over the spacetime/basis and not over its tangent bundle, but this may be the case without further symmetry of the horizontal distribution.} In order to do so this symmetry has to be similar to the symmetry carried in the vertical structure; recall Def.\ \ref{def:FundVecs} and its remark \ref{rem:FundVecsNotations}. The following is a straightforward generalization of what one knows in the typical formulation of gauge theory, see \textit{e.g.}\ \cite[\S 5.1, part 2 to 4 of Prop.\ 5.1.3, page 258f]{Hamilton}.
+As usual for gauge theory we will understand connections as horizontal distributions with a certain symmetry along the fibres in order to assure a certain behaviour of the gauge transformation of what physicists call minimal coupling; in mathematical words, in order to assure to be able to define a connection on associated vector bundles.
+%to assure that connection forms have a relationship to a form defined on the spacetime/basis itself.\footnote{Recall that connection 1-forms on principal bundles (in the classical gauge theory) can be viewed as a 1-form on the spacetime with values in the Atiyah bundle. We usually also want that the connection acting on a section $X$, denoted by $\nabla X$ in the case of vector bundles, still has values in that vector bundle as a bundle over the spacetime/basis and not over its tangent bundle, but this may be the case without further symmetry of the horizontal distribution.}
+To do so this symmetry has to be similar to the symmetry carried in the vertical structure; recall Def.\ \ref{def:FundVecs} and its remark \ref{rem:FundVecsNotations}. The following is a straightforward generalization of what one knows in the typical formulation of gauge theory, see \textit{e.g.}\ \cite[\S 5.1, part 2 to 4 of Prop.\ 5.1.3, page 258f]{Hamilton}.
 
 \begin{corollaries}{The natural invariance of the vertical bundle of $\mathcal{P}$}{VerticalBundleOfPrincIsNearlyAsUsual}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, $\mathcal{g}$ its LAB, and $\mathcal{P}\stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Then
@@ -3874,7 +3878,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\ma
 \bas
 \mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)_g(Y)
 &\coloneqq
-\mleft(\mu_\mathcal{G} \circ \pi^{\mathrm{vert}}\mright)_g(Y)
+\mleft.\mleft(\mu_\mathcal{G} \circ \pi^{\mathrm{vert}}\mright)\mright|_g(Y)
 =
 \mleft( \mathrm{D}_g L_{g^{-1}} \mright)\mleft(\pi^{\mathrm{vert}}(Y)\mright)
 \eas
@@ -3890,24 +3894,65 @@ Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \colone
 \cong
 \mathrm{pr}_1^*\mathrm{T}M \oplus \mathfrak{g}
 \cong
-\mathrm{pr}_1^*\mathrm{T}M \oplus \pi^*\mathcal{g}
+\mathrm{pr}_1^*\mathrm{T}M \oplus \mathrm{pr}_1^*\mathcal{g}
 =
 \mathrm{H}\mathcal{G} \oplus \mathrm{V}\mathcal{G},
 \eas
 where $\mathrm{pr}_2: M \times G \to G$ is the projection onto the second component,
-and $\pi^{\mathrm{vert}}$ is then equivalent to $\mathrm{Dpr}_2$. So, we get
+and $\pi^{\mathrm{vert}}$ is then equivalent to $\mathrm{Dpr}_2 \in \Omega^1\mleft(\mathcal{G}; \mathrm{pr}_2^*\mathrm{T}G\mright)$. We also have the typical projection properties
 \bas
-\mu_{\mathcal{G}}^{\mathrm{tot}}
-&=
-\mathrm{pr}_2^!\mu_G,
+\mathrm{Dpr}_1 \circ \mathrm{Dpr}_2 &= 0,&
+\mathrm{Dpr}_2 \circ \mathrm{Dpr}_2 &= \mathrm{Dpr}_2,
 \eas
-where $\mu_G$ is the Maurer-Cartan form of $G$, and where we made use of that for $(x, g) \in M \times G$ we have
+and for $(x, g) \in M \times G$
 \bas
 L_{(x, g)}\bigl( (x, q) \bigr)
 &=
 \bigl(x, L_g(q)\bigr)
 \eas
-for all $(x, q) \in M \times G$.
+for all $(x, q) \in M \times G$, where the left-tanslation on the right hand side is the one in $G$. Thence,
+\bas
+\mathrm{D}_{(x, g)} L_{(x, g)^{-1}}
+&=
+\mleft(
+	\mathrm{D}_{(x,g)}\mathrm{pr}_1, \mathrm{D}_{\mathrm{pr}_2(x, g)}L_{\mathrm{pr}_2\mleft(x, g^{-1}\mright)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+\mright)
+\\
+&=
+\mleft(
+	\mathrm{D}_{(x,g)}\mathrm{pr}_1, 
+	\mleft( \mu_G \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+\mright),
+%\\
+%&=
+%\mleft(
+	%\mathrm{Dpr}_1, 
+	%\mathrm{Dpr}_2^!\mu_G
+%\mright),
+\eas
+where $\mu_G$ is the Maurer-Cartan form of $G$. Altogether we get
+\bas
+\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{(x, g)}
+&=
+\mathrm{D}_{(x, g)} L_{(x, g)^{-1}} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+\\
+&=
+\mleft(
+	\mathrm{D}_{(x,g)}\mathrm{pr}_1, 
+	\mleft( \mu_G \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+\mright)
+	\circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+\\
+&=
+\mleft(
+	0, 
+	\mleft( \mu_G \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+\mright)
+\\
+&=
+\mleft.\mathrm{pr}_2^!\mu_G\mright|_{(x, g)},
+\eas
+where $\mu_G$ is the Maurer-Cartan form of $G$. In general we played around a bit with the isomorphisms provided at the beginning of this remark; it can be \textit{e.g.}\ useful to think of the value of an element of $\mathrm{T}G$ as an element of $\mathrm{pr}_2^*\mathrm{T}G$: In the first line we view $\mathrm{Dpr}_2$ as a \textbf{base-preserving} morphism $\mathrm{T}\mathcal{G} \to \mathrm{pr}_2^*\mathrm{T}G \subset \mathrm{T}\mathcal{G}$, while later on as a morphism $\mathrm{T}\mathcal{G} \to \mathrm{T}G$ \textbf{over the base map $\mathrm{pr}_2$}. Since all of this is straightforward, such kind of stuff should have been clear by context.
 \end{remarks}
 
 The Maurer-Cartan form is important for gauge transformations because it induces a derivative, wich we also need now.
@@ -3965,23 +4010,15 @@ Thus, as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} one may say that 
 \end{remarks}
 
 \begin{remarks}{Canonical flat Darboux derivative}{DarbouxOnCanonFlat}
-Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\pi}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \pi^*\mathrm{T}M$. Its LAB $\mathcal{g}$ is also trivial $M \times \mathfrak{g}$, and by using Cor.\ \ref{cor:TLGBAsLGB} we get
-\ba\label{trivialLGBSplittingWithCanonFLat}
-\mathrm{T}\mathcal{G}
-&\cong
-\pi^*\mathrm{T}M \oplus \mathfrak{g}
-\cong
-\pi^*\mathrm{T}M \oplus \pi^*\mathcal{g}
-=
-\mathrm{H}\mathcal{G} \oplus \mathrm{V}\mathcal{G},
-\ea
-and for a constant section $\sigma \in \Gamma(\mathcal{G})$, \textit{i.e.}\ $\sigma_x = (x, g)$ for all $x \in M$ ($g \in G$), we have
+Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\mathrm{pr}_1}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \mathrm{pr}_1^*\mathrm{T}M$; also recall Remark \ref{rem:TrivialLGBsAndTheirMCForm} and its notation, especially $\pi^{\mathrm{vert}} = \mathrm{Dpr}_2$ with $\mathrm{pr}_2: M \times G \to G$ the projection onto the second component.
+
+For a constant section $\sigma \in \Gamma(\mathcal{G})$, \textit{i.e.}\ $\sigma_x = (x, g)$ for all $x \in M$ ($g \in G$), we have
 \bas
 \mathrm{D}_x\sigma(X)
 &=
 (X, 0)
 \eas
-for all $x \in M$ and $X \in \mathrm{T}_xM$. $\pi^{\mathrm{vert}}$ is obviously the projection onto the second component in Eq.\ \eqref{trivialLGBSplittingWithCanonFLat}, so that we get $\sigma^*\pi^{\mathrm{vert}} \circ \mathrm{D}\sigma = 0$ as expected. Therefore in total
+for all $x \in M$ and $X \in \mathrm{T}_xM$. So that we get $\sigma^*\pi^{\mathrm{vert}} \circ \mathrm{D}\sigma = 0$ as expected. Therefore in total
 \bas
 \Delta \sigma
 &=
@@ -3992,21 +4029,84 @@ for all $x \in M$ and $X \in \mathrm{T}_xM$. $\pi^{\mathrm{vert}}$ is obviously 
 0.
 \eas
 In sense of Remark \ref{rem:MCAsDerivativePartII} it makes sense to say that \textbf{$\sigma$ is parallel w.r.t.\ $\Delta$}. Thus, we then speak of the \textbf{canonical flat Darboux derivative}, and constant sections are its parallel sections.
+
+As mentioned in Subsection \ref{BasicNotations}, we can view general sections $\sigma \in \Gamma(\mathcal{G})$ (not necessarily constant) equivalently as a smooth map $\mathrm{pr}_2 \circ \sigma: M \to G$, denoted by $\widetilde{\sigma}$ for bookkeeping reasons. By Remark \ref{rem:TrivialLGBsAndTheirMCForm} we have
+\bas
+\Delta \sigma
+&=
+\mleft(\sigma^* \mathrm{pr}_2^!\mu_G \mright) \circ \mathrm{D}\sigma
+=
+\mleft( \mleft( \mathrm{pr}_2 \circ \sigma \mright)^*\mu_G \mright) \circ \mathrm{D}\mleft( \mathrm{pr}_2 \circ \sigma \mright)
+=
+\Delta \widetilde{\sigma},
+\eas
+where $\Delta$ on the right hand side is the "classical" Darboux derivative as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} related to $\mu_G$. This emphasizes why we can speak of a canonical flat derivative due to the fact that $\mu_G$ is flat (Maurer-Cartan equation).
 \end{remarks}
 
 We can actually rewrite some important equations now.
 
 \begin{remarks}{Darboux derivative in the infinitesimal LGB action}{DarbouxInActionInfinit}
-Recall Thm.\ \ref{thm:DiffOfLGBAction}; keeping the same notation as in this theorem, we can now write
-\ba
+Recall Thm.\ \ref{thm:DiffOfLGBAction}; keeping the same notation as in this theorem, we checked several times that $Y - \mathrm{D}_{x}\sigma (\omega)$ is vertical, and thus we can now write
+\bas
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
 \mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_{\sigma_x} \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}.
-\ea
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_{g} \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
+\\
+&=
+\mathrm{D}_pr_\sigma(X)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}}\mright)_{g} \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
+\\
+&=
+\mathrm{D}_pr_\sigma(X)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}}\mright)_{g} (Y)}}\mright|_{p \cdot g}
+	- \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}}\mright)_{\sigma_x} \bigl( \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
+\\
+&=
+\mathrm{D}_pr_\sigma(X)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g} (Y)}}\mright|_{p \cdot g}
+	- \mleft.{\oversortoftilde{ \mleft.(\Delta \sigma)\mright|_x (\omega)}}\mright|_{p \cdot g}.
+\eas
+If $\mathcal{G}$ is a trivial LGB, then this emphasizes again that we recover the typical Leibniz rule by choosing a constant section $\sigma$, using Remarks \ref{rem:TrivialLGBsAndTheirMCForm} and \ref{rem:DarbouxOnCanonFlat}.
+\end{remarks}
+
+\begin{remarks}{Idea behind the notion of connection on principal bundles using the Darboux derivative}{DefOfConnectionIdeaWithDarboux}
+Recall the notation and discussion around the terms in Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} which will be important for our definition of a connection on principal LGB-bundles. The terms in Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} can be similarly rewritten to
+\bas
+\mathrm{D}_pr_\sigma\mleft( 
+	X 
+\mright)
+	- \mleft.{\oversortoftilde{
+		\bigl(\mleft(\Delta\sigma\mright)_x \circ \mathrm{D}_p\pi\bigr) (X)
+	}}\mright|_{p \cdot g}
+&=
+\mathrm{D}_pr_\sigma\mleft( 
+	X 
+\mright)
+	- \mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
+	}}\mright|_{p \cdot g}.
+\eas
+We will use this form for the definition of the principal bundle connection. As in Remark \ref{rem:DarbouxInActionInfinit}, if $\mathcal{G}$ is trivial and $\sigma$ a constant section corresponding to a Lie group element $g$, then these terms are just
+\bas
+\mathrm{D}_p r_g (X),
+\eas
+making use of Ex.\ \ref{ex:TrivialLGBAction}.
 \end{remarks}
 
 In fact, the Darboux derivative naturally induces a connection on $\mathcal{g}$ as LAB of $\mathcal{G}$. One may have expected that since $\mathrm{H}\mathcal{G}$ should infinitesimally induce a horizontal distribution on $\mathcal{g}$.
+
+\begin{propositions}{LGB connection induces LAB connection}{FinallyTheNablaInduction}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we define
+\ba
+\nabla_X \nu
+&\coloneqq
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
+	\mleft(\Delta \e^{t \nu}\mright)(X)
+\Bigr)
+\ea
+for all $X \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathcal{g})$, where $t \in \mathbb{R}$.
+\end{propositions}
 
 \subsection{Generalized connection 1-forms on principal bundles}
 
