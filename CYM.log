@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  24 MAY 2022 23:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  25 MAY 2022 20:23
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1316,8 +1316,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--8
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-) [70] [71]
-Overfull \hbox (2.20065pt too wide) in paragraph at lines 4251--4269
+[70]) [71] [72]
+Overfull \hbox (2.20065pt too wide) in paragraph at lines 4278--4296
 \OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/
 10.95 )$ \T1/lmr/m/n/10.95 as an el-e-ment of $\OT1/lmr/m/n/10.95 
 [](\OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.95 ; [](\OML/lmm/m/it/10.95 V\OT1/lmr/m
@@ -1329,15 +1329,15 @@ mm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/10.95
 /n/10.95 ))$
  []
 
-[72] [73] [74] [75] [76] (CYM.aux)
+[73] [74] [75] [76] [77] (CYM.aux)
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34279 strings out of 478907
- 715450 string characters out of 2851891
- 1207506 words of memory out of 3000000
- 51224 multiletter control sequences out of 15000+600000
+ 34282 strings out of 478907
+ 715504 string characters out of 2851891
+ 1206560 words of memory out of 3000000
+ 51227 multiletter control sequences out of 15000+600000
  503247 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1377,9 +1377,9 @@ s/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
 /kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (78 pages, 954183 bytes).
+Output written on CYM.pdf (79 pages, 958238 bytes).
 PDF statistics:
- 1346 PDF objects out of 1440 (max. 8388607)
+ 1352 PDF objects out of 1440 (max. 8388607)
  306 named destinations out of 1000 (max. 500000)
  317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

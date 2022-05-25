@@ -2086,7 +2086,7 @@ Observe that
 \bas
 \mathrm{D}_g L_{g^{-1}}: \mathrm{V}_g\mathcal{G} &\to \mathrm{V}_{e_x}\mathcal{G} \cong \mleft( \pi^*\mathcal{g} \mright)_g
 \eas
-where $x \coloneqq \pi(g)$ and $e_x$ is the neutral element of $\mathcal{G}_x$. Smoothness follows similarly to the smoothness of left-invariant vector fields, that is, denote with $\mu$ the multiplication $\mathcal{G} * \mathcal{G} \to \mathcal{G}$ and recall the arguments and the notation in the proof of Cor.\ \ref{cor:LeftInvVfToLAB}. We have
+where $x \coloneqq \pi(g)$ and $e_x$ is the neutral element of $\mathcal{G}_x$. Smoothness follows similarly to the smoothness of left-invariant vector fields, that is, denote with $\Phi$ the multiplication $\mathcal{G} * \mathcal{G} \to \mathcal{G}$ and recall the arguments and the notation in the proof of Cor.\ \ref{cor:LeftInvVfToLAB}. We have
 \bas
 &\mathrm{T}\mleft(\mathcal{G} * \mathcal{G}\mright)\\
 &=
@@ -2102,7 +2102,7 @@ and thus
 \eas
 where $0$ is the zero vector field, $v \in \mathrm{V}_g\mathcal{G}$ and $g \in \mathcal{G}$. Therefore we can calculate
 \bas
-\mathrm{D}_{\mleft(g^{-1}, g \mright)}\mu(0_{g^{-1}}, v)
+\mathrm{D}_{\mleft(g^{-1}, g \mright)}\Phi\mleft(0_{g^{-1}}, v\mright)
 &=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\mleft(g^{-1} \cdot \gamma \mright)
 =
@@ -2114,13 +2114,13 @@ where $0$ is the zero vector field, $v \in \mathrm{V}_g\mathcal{G}$ and $g \in \
 \eas
 where $\gamma: I \to \mathcal{G}_{x}$ ($I$ an open interval containing 0, and $x \coloneqq \pi(g)$) is a curve with $\gamma(0)= g$ and $\mathrm{d}/\mathrm{d}t|_{t=0} \gamma = v$. Denote with $0^{-1}$ the vector field on $\mathcal{G}$ given by $g \mapsto 0_{g^{-1}}$ and with $\iota_{0^{-1}}$ the contraction with $0^{-1}$, that is,
 \bas
-\mleft.\mleft(\iota_{0^{-1}}\mathrm{D}\mu\mright)\mright|_g
+\mleft.\mleft(\iota_{0^{-1}}\mathrm{D}\Phi\mright)\mright|_g
 &\coloneqq
-\mathrm{D}_{\mleft( g^{-1}, g \mright)}\mu\mleft( 0_{g^{-1}}, \cdot \mright)
+\mathrm{D}_{\mleft( g^{-1}, g \mright)}\Phi\mleft( 0_{g^{-1}}, \cdot \mright)
 =
 \Bigl[
 	\mathrm{V}_g\mathcal{G} \ni v \mapsto 
-	\mathrm{D}_{\mleft( g^{-1}, g \mright)}\mu\mleft( 0_{g^{-1}}, v \mright)
+	\mathrm{D}_{\mleft( g^{-1}, g \mright)}\Phi\mleft( 0_{g^{-1}}, v \mright)
 \Bigr]
 =
 \mu_\mathcal{G}
@@ -2129,10 +2129,10 @@ for all $g \in \mathcal{G}$, using the structure of $\mathrm{T}(\mathcal{G} *\ma
 \bas
 \mu_{\mathcal{G}}
 &=
-\iota_{0^{-1}}\mathrm{D}\mu 
+\iota_{0^{-1}}\mathrm{D}\Phi 
 \in \Gamma(V^*\mathcal{G} \otimes \pi^*\mathcal{g}),
 \eas
-using the smoothness of all involved parts, especially that $\mu$ is smooth, hence also $\mathrm{D}\mu$ is smooth as an element of $\Omega^1(\mathcal{G}*\mathcal{G}; \mu^*\mathcal{G})$.
+using the smoothness of all involved parts, especially that $\Phi$ is smooth, hence also $\mathrm{D}\Phi$ is smooth as an element of $\Omega^1(\mathcal{G}*\mathcal{G}; \Phi^*\mathcal{G})$.
 \end{proof}
 
 \begin{definitions}{Vertical Maurer-Cartan form of LGBs, \newline \cite[generalization of Def.\ 3.5.2, page 148]{Hamilton}}{MCFormOnLGBs}
@@ -2212,7 +2212,7 @@ This can be quickly shown by recalling Rem.\ \ref{rem:RecoveringofClassicalMCFor
 where $\mu_\mathcal{G}$ is defined as in Def.\ \ref{def:MCFormOnLGBs}, and $\mu_{\mathcal{G}}$ restricts to the Maurer-Cartan form of $\mathcal{G}_x$ ($x \in M$) on each fibre of $\mathcal{G}$; especially, $\mu_\mathcal{G}: \mathrm{V}\mathcal{G} \to \mathcal{g}$ is a fibre-wise isomorphism (since $\mathrm{D}_gL_{g^{-1}}$ is an isomorphism). Hence, as described in Subsection \ref{BasicNotations}, $\mu_\mathcal{G}$ as an element of $\Gamma(\mathrm{V}^*\mathcal{G} \otimes \pi^*\mathcal{G})$, \textit{i.e.}\ a vector bundle morphism $\mathrm{V}\mathcal{G} \to \pi^*\mathcal{g}$ (linearity of $\mu_G$ is clear), is a vector bundle isomorphism. This finishes the proof.
 \end{proof}
 
-\subsection{Exponential map of LGBs}
+\subsection{Exponential map of LGBs}\label{ExponentialMapSubsection}
 
 By Remark \ref{rem:AbstractNotationForLeftInvarianceVf} it is clear that we have a natural exponential map, just given by the fibre-wise exponential. If one is interested into a general exponential map, then see \cite[\S 3.6, page 132ff.]{mackenzieGeneralTheory}. However, since our situation is much simpler, we quickly finish this discussion just making use of the already existing exponential map in each fibre; a straightforward generalization on results as provided in \cite[\S 1.7, page 55ff.]{Hamilton}.
 
@@ -3885,6 +3885,8 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\ma
 for all $g \in G$ and $Y \in \mathrm{T}_g\mathcal{G}$.
 \end{definitions}
 
+This is clearly well-defined by construction; also recall our discussion of the vertical Maurer-Cartan form, especially Cor.\ \ref{cor:VertMCVormIsWellDefined}.
+
 \begin{remarks}{Total Maurer-Cartan form just typical form on trivial LGBs}{TrivialLGBsAndTheirMCForm}
 Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\mathrm{pr}_1}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \mathrm{pr}_1^*\mathrm{T}M$. Its LAB $\mathcal{g}$ is also trivial $M \times \mathfrak{g}$, and we have several identities (recall Cor.\ \ref{cor:TLGBAsLGB})
 \bas
@@ -4094,19 +4096,44 @@ We will use this form for the definition of the principal bundle connection. As 
 making use of Ex.\ \ref{ex:TrivialLGBAction}.
 \end{remarks}
 
-In fact, the Darboux derivative naturally induces a connection on $\mathcal{g}$ as LAB of $\mathcal{G}$. One may have expected that since $\mathrm{H}\mathcal{G}$ should infinitesimally induce a horizontal distribution on $\mathcal{g}$.
+In fact, the Darboux derivative naturally induces a connection on $\mathcal{g}$ as LAB of $\mathcal{G}$. One may have expected that since $\mathrm{H}\mathcal{G}$ should infinitesimally induce a horizontal distribution on $\mathcal{g}$; recall the exponential map introduced in Subsection \ref{ExponentialMapSubsection}.
 
 \begin{propositions}{LGB connection induces LAB connection}{FinallyTheNablaInduction}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we define
-\ba
-\nabla_X \nu
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then the map $\nabla^{\mathcal{G}}: \Gamma(\mathcal{g}) \to \Omega^1(M; \mathcal{g})$, $\nu \mapsto \nabla^{\mathcal{G}}\nu$ denoted as an element of $\Omega^1(M; \mathcal{g})$ by $X \mapsto \nabla^{\mathcal{G}}_X \nu$, defined by
+\bas
+\mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x
 &\coloneqq
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
-	\mleft(\Delta \e^{t \nu}\mright)(X)
-\Bigr)
-\ea
-for all $X \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathcal{g})$, where $t \in \mathbb{R}$.
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu}\mright)_x (X) \Bigr)
+\eas
+for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, where $t \in \mathbb{R}$, is a vector bundle connection on $\mathcal{g}$.
 \end{propositions}
+
+\begin{proof}
+\leavevmode\newline
+First of all, it is well-defined because of $\Delta \e^{t\nu} \in \Omega^1(M; \mathcal{g})$ such that $\mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \in \mathcal{g}_x$ as the velocity of a curve in the vector space $\mathcal{g}_x$. In fact
+\bas
+\nabla^{\mathcal{G}} \nu
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Delta\e^{t\nu},
+\eas
+where $[t \mapsto \Delta \exp(t \nu)]$ is a smooth curve in the vector space $\Omega^1(M; \mathcal{g})$, so that $\nabla^{\mathcal{G}} \nu\in \Omega^1(M; \mathcal{g})$. Thus, smoothness is clear and the tensorial behaviour w.r.t.\ $X$. 
+\bas
+\Delta \sigma
+&=
+\mleft(\sigma^* \mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma
+\eas
+$\mu_{\mathcal{G}}^{\mathrm{tot}}$ a section of $\mathrm{T}^*\mathcal{G} \times \pi^*\mathcal{g} \to \mathcal{G}$, then $\sigma^*\mu_{\mathcal{G}}^{\mathrm{tot}} = \mu_{\mathcal{G}}^{\mathrm{tot}} \circ \sigma$
+
+Now let $\mu \in \Gamma(\mathcal{g})$ and $\alpha, \beta \in \mathbb{R}$, then we can derive
+\bas
+\mleft( \Delta \e^{t (\alpha \nu + \beta \mu)} \mright)_x
+\eas
+and so
+\bas
+\mleft.\nabla^{\mathcal{G}}(\alpha \nu + \beta \mu)\mright|_x
+&=
+\eas
+\end{proof}
 
 \subsection{Generalized connection 1-forms on principal bundles}
 
