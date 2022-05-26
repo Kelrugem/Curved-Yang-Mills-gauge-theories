@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  25 MAY 2022 20:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  26 MAY 2022 22:35
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1317,7 +1317,7 @@ ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
 [70]) [71] [72]
-Overfull \hbox (2.20065pt too wide) in paragraph at lines 4278--4296
+Overfull \hbox (2.20065pt too wide) in paragraph at lines 4290--4308
 \OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/
 10.95 )$ \T1/lmr/m/n/10.95 as an el-e-ment of $\OT1/lmr/m/n/10.95 
 [](\OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.95 ; [](\OML/lmm/m/it/10.95 V\OT1/lmr/m
@@ -1377,7 +1377,7 @@ s/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
 /kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (79 pages, 958238 bytes).
+Output written on CYM.pdf (79 pages, 958853 bytes).
 PDF statistics:
  1352 PDF objects out of 1440 (max. 8388607)
  306 named destinations out of 1000 (max. 500000)
