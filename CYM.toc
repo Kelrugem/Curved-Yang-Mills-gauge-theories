@@ -28,13 +28,13 @@
 \contentsline {subsubsection}{\numberline {7.2.1}Idea and motivation}{61}{subsubsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.3}Darboux derivative on LGBs}{65}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}Generalized connection 1-forms on principal bundles}{70}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Gauge transformations}{70}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Generalized curvature/field strength}{70}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Generalized covariant derivative/minimal coupling}{70}{subsection.7.7}%
-\contentsline {section}{\numberline {8}Curved Yang-Mills gauge theory}{70}{section.8}%
-\contentsline {section}{\numberline {9}Conclusion}{70}{section.9}%
-\contentsline {section}{\nonumberline List of References}{71}{section*.3}%
-\contentsline {section}{\numberline {A}Other Interpretations of the compatibility conditions}{71}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Minimal coupling}{71}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Axiomatic Yang-Mills gauge theories}{77}{subsection.A.2}%
+\contentsline {subsection}{\numberline {7.5}Gauge transformations}{73}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Generalized curvature/field strength}{73}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Generalized covariant derivative/minimal coupling}{73}{subsection.7.7}%
+\contentsline {section}{\numberline {8}Curved Yang-Mills gauge theory}{73}{section.8}%
+\contentsline {section}{\numberline {9}Conclusion}{73}{section.9}%
+\contentsline {section}{\nonumberline List of References}{73}{section*.3}%
+\contentsline {section}{\numberline {A}Other Interpretations of the compatibility conditions}{73}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Minimal coupling}{73}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Axiomatic Yang-Mills gauge theories}{79}{subsection.A.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

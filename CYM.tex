@@ -415,6 +415,14 @@ No. 1, Sec. 4, Roosevelt Rd., Taipei City 106, Taiwan Room 503, Cosmology Buildi
 	%\Phi^*\mleft( F\mleft( \nu_1, \dotsc, \nu_l \mright) \mright)
 %\eas
 %for all $\nu_1 \in \Gamma(E_1), \dotsc, \nu_l \in \Gamma(E_l)$, using that pullbacks of sections generate the sections of a pullback bundle. 
+	\item For $V \to M$ a vector bundle over $M$ do not confuse the pull-back of sections with the pull-back of forms $\omega \in \Omega^l(M; V)$ ($l \in \mathbb{N}_0$), here denoted by $f^!\omega$, which is an element of $\Gamma\left( \mleft(\bigwedge_{m=1}^{l} \mathrm{T}^*M \mright) \otimes f^*V \right) \cong \Omega^l(M; f^*V)$, and not of $\Gamma\left( \mleft(\bigotimes_{m=1}^{l} \mleft(f^*\mathrm{T}N\mright)^*\mright) \otimes f^*V \right)$ like $f^*\omega$. 
+	%$f^!\omega$ is defined by
+%\ba
+%\mleft.\mleft(f^!\omega\mright)(Y_1, \dots, Y_l)\mright|_p
+%&\coloneqq
+%\omega_{f(p)}\mleft(\mathrm{D}_pf\mleft(\mleft.Y_1\mright|_p\mright), \dots, \mathrm{D}_pf\mleft(\mleft.Y_l\mright|_p\mright)\mright)
+%\ea
+%for all $p \in M$ and $Y_1, \dots, Y_l \in \mathfrak{X}(M)$.
 	\item Let $F \stackrel{\pi_F}{\to} M$ and $G \stackrel{\pi_G}{\to} N$ be two fibre bundles over smooth manifolds $M$ and $N$, and let $\phi: N \to M$ be a smooth map. Furthermore, let us assume we have a morphism $\Phi: G \to F$ of fibre bundles over $\phi$, that is, $\Phi$ is a smooth map such that the following diagram commutes
 	\begin{center}
 		\begin{tikzcd}
@@ -442,13 +450,11 @@ In total, $\widetilde{\Phi}$ is a base-preserving morphism if and only if $\Phi$
 One can extend all of this similarly for more specific types of morphisms like vector bundle-morphisms.
 
 Most of the time we will not mention this 1:1 correspondence explicitly, it should be clear by context. Hence, we will also denote $\widetilde{\Phi}$ by $\Phi$. In fact, we usually calculate with $\widetilde{\Phi}$, while $\Phi$ and its diagram may only arise to give an illustration about the geometry.
-	%
-	%In general we also make use of that sections of $\Phi^*E$ can be viewed as sections of $E$ along $\Phi$, where $E \stackrel{\pi}{\to} N$ is any vector bundle over $N$. Let $\mu \in \Gamma(\Phi^*E)$, then it has the form $\mu_p = (p, v_p)$ for all $p \in M$, where $v_p \in E_{\Phi(p)}$, the fibre of $E$ at $\Phi(p)$; and a section $\nu$ of $E$ along $\Phi$ is a smooth map $M \to E$ such that $\pi(\nu) \coloneqq \pi \circ \nu = \Phi$. Then on one hand $\mathrm{pr}_2 \circ \mu$ is a section along $\Phi$, where $\mathrm{pr}_2$ is the projection onto the second component, and on the other hand $M \ni p \mapsto (p, \nu_p)$ defines an element of $\Gamma(\Phi^*E)$. With that one can show that there is a 1:1 correspondence of $\Gamma(\Phi^*E)$ with sections along $\Phi$. We do not necessarily mention it when we make use of that identification, it should be clear by the context.
 \end{itemize}
 
 \subsection{Assumed background knowledge}
 
-It is highly recommended to have basic knowledge about differential geometry and gauge theory as presented in \cite[especially Chapter 1 to 5]{Hamilton}; however, sometimes we will still give explicit references to help with more technical details. It can be useful to have knowledge about Lie algebra and Lie group bundles, and even Lie algebroids and Lie groupoids, but we will introduce their basic notions such that it is not necessarily needed to have knowledge about these upfront.
+It is highly recommended to have basic knowledge about differential geometry and gauge theory as presented in \cite[especially Chapter 1 to 5]{Hamilton}, and we will follow the style and labeling as in \cite{Hamilton} when we generalize certain notions; however, sometimes we will still give explicit references to help with more technical details. It can be useful to have knowledge about Lie algebra and Lie group bundles, and even Lie algebroids and Lie groupoids, but we will introduce their basic notions such that it is not necessarily needed to have knowledge about these upfront.
 
 We also often give references about Lie group bundles (LGBs), but the given references are often about Lie groupoids. If the reader has no knowledge about Lie groupoids, then it is important to know that LGBs are a special example of Lie groupoids; Lie groupoids carry "two projections", called \textbf{source} and \textbf{target}. An LGB is a special example of a Lie groupoid whose source equals the target.\footnote{But not every Lie groupoid with equal source and target is an LGB, they're in general bundles of Lie groups which is not completely the same; this nuance will not be important here.} If you look into such a reference, then the source and target are often denoted by $\alpha$ and $\beta$, or by $s$ and $t$; simply put both to be the same and identify these with our bundle projection which we often denote by $\pi$. In that way it should be possible to read the references without the need to know Lie groupoids. However, we try to re-prove the needed statements such that these types of references could be avoided by the reader.
 
@@ -2290,6 +2296,8 @@ for all $t, s \in \mathbb{R}$ and $\nu \in \Gamma(\mathcal{g})$. As in \cite[\S 
 \nu_x
 &=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \e^{t\nu_x}
+\coloneqq
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft[ t \mapsto \e^{t\nu_x} \mright]
 \eas
 for all $x\in M$, so that we also write
 \bas
@@ -3086,7 +3094,7 @@ g &\mapsto s_x \cdot g,
 \eas
 thence, as expected is is the orbit map $\Phi_{s_x}$ through $s_x$ which is a $\mathcal{G}_x$-equivariant diffeomorphism by Remark \ref{rem:LGBPrincDefDiscussion}. So, $\Phi_s$ is fibre-wise bijective and therefore bijective as a whole since it is base-preserving.
 
-Now we want to use the inverse function theorem to show that its inverse is also smooth. Once we know that the tangent map/total derivative $\mathrm{D}_g\Phi_s: \mathrm{T}_g \mathcal{G} \to \mathrm{T}_{s_{x} \cdot g}\mathcal{P}$ is an isomorphism of vector spaces for all $g \in \mathcal{G}|_U$, then we know by the inverse function theorem that $\Phi_s^{-1}$ is smooth. Hence, we will now show that $\mathrm{D}_g\Phi_s$ is injective, then it has to bijective by dimensional reasons so that we are done. This differential is given by Thm.\ \ref{thm:DiffOfLGBAction}, making use of Eq.\ \eqref{RewritingLocalTrivOfPrinc},
+Now we want to use the inverse function theorem to show that its inverse is also smooth. Once we know that the tangent map/total derivative $\mathrm{D}_g\Phi_s: \mathrm{T}_g \mathcal{G} \to \mathrm{T}_{s_{x} \cdot g}\mathcal{P}$ is an isomorphism of vector spaces for all $g \in \mathcal{G}|_U$, then we know by the inverse function theorem that $\Phi_s^{-1}$ is smooth. Hence, we will now show that $\mathrm{D}_g\Phi_s$ is injective, then it has to bijective by dimensional reasons ($\mathrm{dim}(\mathcal{G}) = \mathrm{dim}(\mathcal{P})$) so that we are done. This differential is given by Thm.\ \ref{thm:DiffOfLGBAction}, making use of Eq.\ \eqref{RewritingLocalTrivOfPrinc},
 \bas
 \mathrm{D}_g \Phi_s (Y)
 &=
@@ -3163,7 +3171,7 @@ and $\mathrm{D}\sigma$ is a splitting/section of this sequence
 so that we have $\sigma^*\mathrm{T}\mathcal{G} \cong \mathrm{Im}(\mathrm{D}\sigma) \oplus \sigma^*\mathrm{V}\mathcal{G}$.\footnote{$\sigma$ is actually an embedding, and thus $\mathrm{Im}(\mathrm{D}\sigma)$ is a well-defined subbundle isomorphic to $\mathrm{T}M$.} Furthermore, again due to Eq.\ \eqref{DsigmaIsASPlitting}, we have $\mathrm{Im}(\mathrm{D}_x\sigma) \cong \mathrm{T}_xM$ as vector spaces by $Y^h \mapsto \mathrm{D}_g\pi_{\mathcal{G}}\mleft(Y^h\mright) = \mathrm{D}_g\pi_{\mathcal{G}}(Y) = \omega$ since $Y^v$ is vertical. Hence, we can view $\mathrm{D}_g\Phi_s$ as a map
 \bas
 \mathrm{T}_xM \oplus \mathrm{V}_g \mathcal{G} &\to \mathrm{T}_{s_{x} \cdot g}\mathcal{P},\\
-\mleft(\omega, Y^v\mright) &\mapsto
+\mleft(\omega,~ Y^v\mright) &\mapsto
 \mathrm{D}_x \mleft( r_\sigma \circ s \mright)(\omega)
 	+ \mleft.\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y^v \bigr) }\mright|_{s_x \cdot g}.
 \eas
@@ -3189,9 +3197,9 @@ and we identify $\mathrm{Im}\bigl( \mathrm{D}_x(r_\sigma\circ s) \bigr) \cong \m
 &\to 
 \mathrm{T}_x M \oplus \mathrm{V}_{s_x \cdot g} \mathcal{P},
 \\
-\mleft(\omega, Y^v\mright) &\mapsto
+\mleft(\omega, ~Y^v\mright) &\mapsto
 \mleft(
-	\omega,
+	\omega,~
 	\mleft.\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y^v \bigr) }\mright|_{s_x \cdot g}
 \mright).
 \eas
@@ -3989,13 +3997,25 @@ For $\sigma \in \Gamma(\mathcal{G})$ define the \textbf{Darboux derivative $\Del
 \eas
 \end{definitions}
 
+\begin{remark}\label{RemarkABoutDarbouxNotationWRTPullback}
+\leavevmode\newline
+The notation with the pullback $\sigma^*$ is only needed if one wants to view $\Delta \sigma$ as a $C^\infty(M)$-linear map $\mathfrak{X}(M) \to \Gamma(\mathcal{g})$; in this case it is a composition of base-preserving vector bundle morphisms $\mathrm{D}\sigma: \mathrm{T}M \to \sigma^*\mathrm{T}\mathcal{G}$ and $\sigma^*\mu_{\mathcal{G}}^{\mathrm{tot}}: \sigma^*\mathrm{T}\mathcal{G} \to \sigma^*\pi^*\mathcal{g} \cong \mathcal{g}$ which can be extended to sections, where $\pi$ is the projection of $\mathcal{G}$. 
+
+Of course one can view $\Delta \sigma$ as a map $\mathrm{T}M \to \mathcal{g}$ which one can also write as the composition of $\mathrm{D}\sigma: \mathrm{T}M \to \mathrm{T}\mathcal{G}$ and $\mu_{\mathcal{G}}^{\mathrm{tot}}: \mathrm{T}\mathcal{G} \to \mathcal{g}$, that is,
+\bas
+\Delta \sigma
+&=
+\mu_{\mathcal{G}}^{\mathrm{tot}} \circ \mathrm{D}\sigma.
+\eas
+\end{remark}
+
 \begin{remarks}{Maurer-Cartan form inducing a natural derivative: Part II}{MCAsDerivativePartII}
 We have now something similar to Remark \ref{rem:MCFormAGeneralizationOfDerivative}. Let $\mathcal{G} = M \times \mathbb{R}^n$ ($n \in \mathbb{N}$) be the trivial abelian LGB, and $\nabla$ a vector bundle connection on $M \times \mathbb{R}^n$, for which we have the associated projection onto the vertical bundle $\pi^{\mathrm{vert}}:\mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$. For $\sigma \in \Gamma(\mathcal{G})$ we then have
-\bas
+\ba\label{NablaByProjection}
 \nabla_{X_x} \sigma
 &=
 \mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)
-\eas
+\ea
 for all $x \in M$ and $X_x \in \mathrm{T}_xM$, by making use of $\sigma^*\mathrm{V}\mathcal{G} \cong M \times \mathbb{R}^n$ as vector bundles such that the right hand side has again values in $\mathcal{G}$ due to "enough triviality" and equals the left hand side. Again one could use the isomorphism as given in Cor.\ \ref{cor:TLGBAsLGB}. This is also more natural in the sense of that one wants that $\nabla_{X_x} \sigma$ is a section over $M$; $M$ can be viewed as the image of the neutral section $e$ (the zero vector here), so that $\nabla_{X_x} \sigma$ should have values in $e^*\mathrm{V}\mathcal{G} = \mathcal{g}$. Henceforth one could say it is more natural to "pull $\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)$ back" to $\mathcal{g}$ by left-translation in order to define $\nabla_{X_x} \sigma$, \textit{i.e.}\
 \bas
 \mathrm{D}_{\sigma_x} L_{\sigma_x^{-1}} \Bigl(
@@ -4008,7 +4028,7 @@ for all $x \in M$ and $X_x \in \mathrm{T}_xM$, by making use of $\sigma^*\mathrm
 &=
 \mleft.(\Delta \sigma)\mright|_x(X_x).
 \eas
-Thus, as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} one may say that $\Delta \sigma$ is \textit{the} generalization of vector bundle connections to general LGBs $\mathcal{G}$.
+Thus, as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} one may say that $\Delta \sigma$ is \textit{the} generalization of vector bundle connections to general LGBs $\mathcal{G}$. Furthermore, this argument is not based on a given (local) trivialization to handle the arising pullback in Eq.\ \eqref{NablaByProjection}.
 \end{remarks}
 
 \begin{remarks}{Canonical flat Darboux derivative}{DarbouxOnCanonFlat}
@@ -4096,6 +4116,7 @@ We will use this form for the definition of the principal bundle connection. As 
 making use of Ex.\ \ref{ex:TrivialLGBAction}.
 \end{remarks}
 
+\textbf{The following may be wrong without further conditions on the connection of the LGB; hence, proof postponed. Check!}
 In fact, the Darboux derivative naturally induces a connection on $\mathcal{g}$ as LAB of $\mathcal{G}$. One may have expected that since $\mathrm{H}\mathcal{G}$ should infinitesimally induce a horizontal distribution on $\mathcal{g}$; recall the exponential map introduced in Subsection \ref{ExponentialMapSubsection}.
 
 \begin{propositions}{LGB connection induces LAB connection}{FinallyTheNablaInduction}
@@ -4116,41 +4137,131 @@ First of all, it is well-defined because of $\Delta \e^{t\nu} \in \Omega^1(M; \m
 &=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Delta\e^{t\nu},
 \eas
-where $[t \mapsto \Delta \exp(t \nu)]$ is a smooth curve in the vector space $\Omega^1(M; \mathcal{g})$, so that $\nabla^{\mathcal{G}} \nu\in \Omega^1(M; \mathcal{g})$. Thus, smoothness is clear and the tensorial behaviour w.r.t.\ $X$.  
+where $[t \mapsto \Delta \exp(t \nu)]$ is a smooth curve in the vector space $\Omega^1(M; \mathcal{g})$, so that $\nabla^{\mathcal{G}} \nu\in \Omega^1(M; \mathcal{g})$. Thus, smoothness is clear and the tensorial behaviour w.r.t.\ $X$. We also have
 \bas
-\Delta \sigma
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu} \mright)_x(X) \Bigr)
 &=
-\mleft(\sigma^* \mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma
-\eas
-$\mu_{\mathcal{G}}^{\mathrm{tot}}$ a section of $\mathrm{T}^*\mathcal{G} \times \pi^*\mathcal{g} \to \mathcal{G}$, then $\sigma^*\mu_{\mathcal{G}}^{\mathrm{tot}} = \mu_{\mathcal{G}}^{\mathrm{tot}} \circ \sigma$
-
-$\mu_{\mathcal{G}}^{\mathrm{tot}}: \mathcal{G} \times_{\mathcal{G}} \mathrm{T}\mathcal{G} \to \pi^*\mathcal{g}$, then
-\bas
-\Delta \sigma
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \circ \mathrm{D}_x\e^{t\nu} \mright) (X) \Bigr)
+\\
 &=
-\mu_{\mathcal{G}}^{\mathrm{tot}} \circ (\sigma, \mathrm{D}\sigma)
-\eas
-\bas
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Delta\e^{t\nu_x}
+\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mathrm{D}_x\e^{t\nu}  (X) \Bigr)\mright)
+\\
 &=
-\mathrm{D}_{(e_x, \mathrm{D}_xe)}\mu_{\mathcal{G}}^{\mathrm{tot}} \circ (\nu_x, \mathrm{D}_x \nu )
+\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \mathrm{D}_x\nu (X) \bigr)
 \eas
-
-Now let $\mu \in \Gamma(\mathcal{g})$ and $\alpha, \beta \in \mathbb{R}$, then we can derive
-\bas
-\mleft( \Delta \e^{t (\alpha \nu + \beta \mu)} \mright)_x
-\eas
-and so
-\bas
-\mleft.\nabla^{\mathcal{G}}(\alpha \nu + \beta \mu)\mright|_x
-&=
-\eas
+for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. Also recall $\mathcal{g} = e^*\mathrm{V}\mathcal{G} \cong \mleft.\mathrm{V}\mathcal{G}\mright|_{e(M)} \subset \mleft.\mathrm{T}\mathcal{G}\mright|_{e(M)}$, thus, $\mathrm{D}_x\nu (X) \in \mathrm{T}_{\nu_x}\mathcal{g} $
 \end{proof}
 
 \subsection{Generalized connection 1-forms on principal bundles}
 
-\begin{definitions}{Ehresmann connection on principal LGB-bundles}{FinallyTheConnection}
+As also stated in \cite[\S 5.1, Prop.\ 5.1.5, page 260]{Hamilton}, for a given horizontal distribution $\mathrm{H}\mathcal{P}$ of a principal $\mathcal{G}$-bundle $\mathcal{P} \stackrel{\pi}{\to} M$ over a smooth manifold $M$ we have by construction that
+\bas
+\mleft.\mathrm{D}_p \pi\mright|_{\mathrm{H}_p\mathcal{P}}: \mathrm{H}_p\mathcal{P} \to \mathrm{T}_xM
+\eas
+is a vector space isomorphism for all $x \in M$ and $p \in \mathcal{P}_x$. Using that, one has some sort of identification between the horizontal tangent spaces; we want to provide another identification in the sense of Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}. Hence, the following is needed.
 
+\begin{propositions}{The right-pushforward and the Darboux derivative giving rise to an isomorphism}{IsomorphismRightPushAndDarboux}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal distributions $\mathrm{H}\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ on $\mathcal{G}$ and $\mathcal{P}$, respectively. Furthermore, define a map $\rho_p$ by
+\ba
+\mathrm{T}_p\mathcal{P} &\to \mathrm{T}_{p \cdot g}\mathcal{P}, \nonumber \\
+X &\mapsto 
+\mathrm{D}_pr_\sigma\mleft( 
+	X 
+\mright)
+	- \mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
+	}}\mright|_{p \cdot g}
+\ea
+for all $(p, g) \in \mathcal{P} * \mathcal{G}$, where $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$ ($x \coloneqq \pi(p)$). Then $\rho_p$ is a vector space isomorphism, and $\mathrm{H}_p\mathcal{P}$ is isomorphic to a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$ via $\rho_p$ (this complement is not necessarily $\mathrm{H}_{p \cdot g}\mathcal{P}$).
+\end{propositions}
+
+\begin{proof}
+\leavevmode\newline
+$\rho_p$ is clearly linear by construction. Let us now show that $\rho_p$ is injective, then it is also bijective by dimensional reasons. By Remark \ref{SmoothnessOfACtionTranslations} we know that $r_\sigma$ is a diffeomorphism, and thus $\mathrm{D}_pr_\sigma: \mathrm{T}_p\mathcal{P} \to \mathrm{T}_{p \cdot g}\mathcal{P}$ is a vector space isomorphism. Restricted onto the vertical subspace $\mathrm{V}_p\mathcal{P}$ we have by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}
+\bas
+\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{V}_p\mathcal{P}}
+&=
+\mathrm{D}_pr_g:\mathrm{V}_p\mathcal{P} \to \mathrm{V}_{p\cdot g}\mathcal{P},
+\eas
+which is a vector space isomorphism by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} and dimensional reasons. We rewrite $\mathrm{D}_pr_\sigma$ as
+\bas
+\mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P} &\to \mathrm{T}_{p \cdot g}\mathcal{P},\\
+\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright) &\mapsto 
+\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright)
+	+ \mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright).
+\eas
+By dimensional reasons and due to the bijectivity of $\mathrm{D}_pr_\sigma$ and $\mathrm{D}_pr_g$ the image $\mathrm{Im}\mleft( \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}} \mright)$ of $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ has to be a complement subspace of $\mathrm{V}_{p \cdot g}\mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$; $\mathrm{Im}\mleft( \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}} \mright)$ is not necessarily equal to $\mathrm{H}_{p \cdot g}\mathcal{P}$ in general but of the same dimension, especially of the same dimension as $\mathrm{H}_p \mathcal{P}$. Thus, $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ is a vector space isomorphism onto its image which is complementary to $\mathrm{V}_{p\cdot g}\mathcal{P}$. Furthermore, observe
+\bas
+\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
+&=
+\mleft. \mleft( \Delta\sigma \mright) \mright|_x \mleft( \mathrm{D}_p\pi \mleft( X^{\mathrm{H}} + X^{\mathrm{V}} \mright) \mright)
+=
+\mleft. \mleft( \Delta\sigma \mright) \mright|_x \mleft( \mathrm{D}_p\pi \mleft( X^{\mathrm{H}} \mright) \mright)
+=
+\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( X^{\mathrm{H}} \mright),
+\eas
+using that the vertical subbundle is given by the kernel of $\mathrm{D}\pi$, and
+where we split $X = X^{\mathrm{H}} + X^{\mathrm{V}}$ for all $X\in\mathrm{T}_p\mathcal{P} = \mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P}$.
+
+Hence, we get in total that $\rho_p$ is equivalent to
+\bas
+\mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P} 
+&\to 
+\mathrm{Im}\mleft( \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}} \mright) \oplus \mathrm{V}_{p \cdot g}\mathcal{P},\\
+\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright) 
+&\mapsto 
+\mleft(
+	\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright),~
+		\mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright)
+		- \mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( X^{\mathrm{H}} \mright)
+	}}\mright|_{p \cdot g}
+\mright).
+\eas
+Let $\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright)$ be now in the kernel of $\rho_p$, then $X^{\mathrm{H}} = 0$ by the bijectivity of $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ onto its image. The second component of $\rho_p$ is then just $\mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright)$; again by the bijectivity of $\mathrm{D}_pr_g: \mathrm{V}_p\mathcal{P} \to \mathrm{V}_{p\cdot g}\mathcal{P}$ we also get $X^{\mathrm{V}}=0$. Thus, $\rho_p$ is injective and therefore bijective. It is then clear that $\mleft.\rho_p\mright|_{\mathrm{H}_p\mathcal{P}}$, given by
+\bas
+\mathrm{H}_p\mathcal{P} 
+&\to 
+\mathrm{Im}\mleft( \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}} \mright) \oplus \mathrm{V}_{p \cdot g}\mathcal{P},\\
+X^{\mathrm{H}}
+&\mapsto 
+\mleft(
+	\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright),~
+		- \mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( X^{\mathrm{H}} \mright)
+	}}\mright|_{p \cdot g}
+\mright),
+\eas
+is also an isomorphism onto its image; its image is complementary to $\mathrm{V}_{p\cdot g}\mathcal{P}$ because its intersection with $\mathrm{V}_{p \cdot g}\mathcal{P}$ would require that
+\bas
+\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright)
+&=
+0,
+\eas
+which implies that $X^{\mathrm{H}} = 0$ due to the fact that $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ is a vector space isomorphism onto its image, as we discussed before. But then
+\bas
+\mleft.\rho_p\mright|_{\mathrm{H}_p\mathcal{P}}(0)
+&=
+0,
+\eas
+which implies that the image of $\mleft.\rho_p\mright|_{\mathrm{H}_p\mathcal{P}}$ is the complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$. This finishes the proof.
+\end{proof}
+
+Hence, the following definition makes sense, especially if thinking about what we discussed for Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}.
+
+\begin{definitions}{Ehresmann connection on principal LGB-bundles}{FinallyTheConnection}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal distributions $\mathrm{H}\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ on $\mathcal{G}$ and $\mathcal{P}$, respectively. We call $\mathrm{H}\mathcal{P}$ an \textbf{Ehresmann connection} or a \textbf{connection on $\mathcal{P}$} if
+\bas
+\mathrm{D}_pr_\sigma\mleft( 
+	\mathrm{H}_p\mathcal{P} 
+\mright)
+	- \mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( \mathrm{H}_p\mathcal{P} \mright)
+	}}\mright|_{p \cdot g}
+&=
+\mathrm{H}_{p\cdot g}\mathcal{P}
+\eas
+for all $p \in \mathcal{P}_x$ and $g \in \mathcal{G}_x$ ($x \coloneqq \pi(p)$), where $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$.
 \end{definitions}
 
 \subsection{Gauge transformations}
