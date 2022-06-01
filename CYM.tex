@@ -3507,7 +3507,7 @@ for all $p \in \mathcal{P}$ and $g \in G$. Recall that a connection has a 1:1 co
 &=
 \mleft.\mleft( \mathrm{PT}_\alpha^{\mathcal{P}} \mright)^{-1}\mright|_t,\label{PTProp2}
 \ea
-especially parallel transport is a diffeomorphism between the fibres, where $\alpha^\prime$ is just another similarly defined base curve with $\alpha^\prime(0)= \alpha(t)$, $\alpha*\alpha^\prime$ their concatenation ($\alpha$ coming first and with a suitable parametrization such that $\alpha*\alpha^\prime: [0, t] \to M$), and $\alpha^-$ denotes $\alpha$ traversed backwards. The second equation could also be replaced with the condition that the parallel transport along a constant curve is the identity. Moreover, Eq.\ \eqref{ClassicalSymmetryOfHorizontalDistr} integrates to
+especially parallel transport is a diffeomorphism between the fibres, where $\alpha^\prime$ is just another similarly defined base curve with $\alpha^\prime(0)= \alpha(t)$, $\alpha*\alpha^\prime$ their concatenation ($\alpha$ coming first and with a suitable parametrization such that $\alpha*\alpha^\prime: [0, t] \to M$), and $\alpha^-$ denotes $\alpha$ traversed backwards. Moreover, Eq.\ \eqref{ClassicalSymmetryOfHorizontalDistr} integrates to
 \ba\label{ClassicalSymmetryofPTs}
 \mleft.\mathrm{PT}_\alpha^{\mathcal{P}}(p \cdot g)\mright|_t
 &=
@@ -4068,7 +4068,7 @@ where $\Delta$ on the right hand side is the "classical" Darboux derivative as i
 We can actually rewrite some important equations now.
 
 \begin{remarks}{Darboux derivative in the infinitesimal LGB action}{DarbouxInActionInfinit}
-Recall Thm.\ \ref{thm:DiffOfLGBAction}; keeping the same notation as in this theorem, we checked several times that $Y - \mathrm{D}_{x}\sigma (\omega)$ is vertical, and thus we can now write
+Recall Thm.\ \ref{thm:DiffOfLGBAction}; keeping the same notation as in this theorem but denoting the projection of $\mathcal{P}$ by $\pi$, we checked several times that $Y - \mathrm{D}_{x}\sigma (\omega)$ is vertical, and thus we can now write
 \bas
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
@@ -4087,7 +4087,12 @@ Recall Thm.\ \ref{thm:DiffOfLGBAction}; keeping the same notation as in this the
 &=
 \mathrm{D}_pr_\sigma(X)
 	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g} (Y)}}\mright|_{p \cdot g}
-	- \mleft.{\oversortoftilde{ \mleft.(\Delta \sigma)\mright|_x (\omega)}}\mright|_{p \cdot g}.
+	- \mleft.{\oversortoftilde{ \mleft.(\Delta \sigma)\mright|_x (\omega)}}\mright|_{p \cdot g}
+\\
+&=
+\mathrm{D}_pr_\sigma(X)
+	- \mleft.{\oversortoftilde{ \mleft.\mleft(\pi^!\Delta \sigma\mright)\mright|_p (X)}}\mright|_{p \cdot g}
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g} (Y)}}\mright|_{p \cdot g}
 \eas
 If $\mathcal{G}$ is a trivial LGB, then this emphasizes again that we recover the typical Leibniz rule by choosing a constant section $\sigma$, using Remarks \ref{rem:TrivialLGBsAndTheirMCForm} and \ref{rem:DarbouxOnCanonFlat}.
 \end{remarks}
@@ -4158,26 +4163,52 @@ As also stated in \cite[\S 5.1, Prop.\ 5.1.5, page 260]{Hamilton}, for a given h
 \bas
 \mleft.\mathrm{D}_p \pi\mright|_{\mathrm{H}_p\mathcal{P}}: \mathrm{H}_p\mathcal{P} \to \mathrm{T}_xM
 \eas
-is a vector space isomorphism for all $x \in M$ and $p \in \mathcal{P}_x$. Using that, one has some sort of identification between the horizontal tangent spaces; we want to provide another identification in the sense of Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}. Hence, the following is needed.
+is a vector space isomorphism for all $x \in M$ and $p \in \mathcal{P}_x$. Using that, one has some sort of identification between the horizontal tangent spaces; we want to provide another identification in the sense of Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}. Hence, the following definition and proposition are needed.
 
-\begin{propositions}{The right-pushforward and the Darboux derivative giving rise to an isomorphism}{IsomorphismRightPushAndDarboux}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal distributions $\mathrm{H}\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ on $\mathcal{G}$ and $\mathcal{P}$, respectively. Furthermore, define a map $\rho_p$ by
-\ba
-\mathrm{T}_p\mathcal{P} &\to \mathrm{T}_{p \cdot g}\mathcal{P}, \nonumber \\
-X &\mapsto 
+\begin{definitions}{Modified pushforward via right-translation}{WeModTheRIghtPush}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. Then we define the \textbf{modified right pushforward $\mathcal{r}_{g*}$ (through $g \in \mathcal{G}$)} as a map $\mathrm{T}\mathcal{P} \to \mathrm{T}\mathcal{P}$ (a calligraphic r as font) by
+\bas
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
 	- \mleft.{\oversortoftilde{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	}}\mright|_{p \cdot g}
-\ea
-for all $(p, g) \in \mathcal{P} * \mathcal{G}$, where $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$ ($x \coloneqq \pi(p)$). Then $\rho_p$ is a vector space isomorphism, and $\mathrm{H}_p\mathcal{P}$ is isomorphic to a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$ via $\rho_p$ (this complement is not necessarily $\mathrm{H}_{p \cdot g}\mathcal{P}$).
+\eas
+for all $(p, g) \in \mathcal{P} * \mathcal{G}$ and $X \in \mathrm{T}_p \mathcal{P}$, where $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$ ($x \coloneqq \pi(p)$).
+\end{definitions}
+
+\begin{remarks}{Restriction onto vertical bundle gives typical right pushforward}{ModRightPushOnVertic}
+It is trivial to check that we have
+\bas
+\mathcal{r}_{g*}(X)
+&=
+r_{g*}(X)
+\coloneqq
+\mathrm{D}_pr_g(X)
+\eas
+for all $X \in \mathrm{V}_p\mathcal{P}$; we actually have proven this directly after Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}
+\end{remarks}
+
+\begin{propositions}{The right-pushforward as well-defined isomorphism}{IsomorphismRightPushAndDarboux}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal a distribution $\mathrm{H}\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ on $\mathcal{G}$ and $\mathcal{P}$, respectively. Then the modified right pushforward $\mathcal{r}_{g*}$ is independent of the choice of the local section $\sigma$ as in Def.\ \ref{def:WeModTheRIghtPush}, and it is an automorphism of $\mathrm{T}\mathcal{P}$ over $r_g$. 
+
+Furthermore, if we also have a horizontal distribution $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, then $\mathrm{H}_p\mathcal{P}$ is isomorphic to a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$ via $\mathcal{r}_{g*}$ (this complement is not necessarily $\mathrm{H}_{p \cdot g}\mathcal{P}$) for all $(p, g) \in \mathcal{P}* \mathcal{G}$.
 \end{propositions}
 
 \begin{proof}
 \leavevmode\newline
-$\rho_p$ is clearly linear by construction. Let us now show that $\rho_p$ is injective, then it is also bijective by dimensional reasons. By Remark \ref{SmoothnessOfACtionTranslations} we know that $r_\sigma$ is a diffeomorphism, and thus $\mathrm{D}_pr_\sigma: \mathrm{T}_p\mathcal{P} \to \mathrm{T}_{p \cdot g}\mathcal{P}$ is a vector space isomorphism. Restricted onto the vertical subspace $\mathrm{V}_p\mathcal{P}$ we have by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}
+In the following we have $(p, g) \in \mathcal{P} * \mathcal{G}$, $X \in \mathrm{T}_p \mathcal{P}$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$ ($x \coloneqq \pi(p)$).
+
+$\bullet$ By Remark \ref{rem:DarbouxInActionInfinit} we can derive
+\bas
+\mathrm{D}_{(p, g)}\Phi(X,0)
+&=
+\mathcal{r}_{g*}(X),
+\eas
+so that the independency of $\mathcal{r}_{g*}$ w.r.t.\ the choice of $\sigma$ follows, where $\Phi$ is the right $\mathcal{G}$-action on $\mathcal{P}$ as a map $\mathcal{P}*\mathcal{G} \to \mathcal{P}$.
+
+$\bullet$ $\mathcal{r}_{g*}$ is clearly linear by construction. Let us now show fibre-wise that $\mathcal{r}_{g*}$ is injective, then it is also bijective by dimensional reasons. By Remark \ref{SmoothnessOfACtionTranslations} we know that $r_\sigma$ is a diffeomorphism, and thus $\mathrm{D}_pr_\sigma: \mathrm{T}_p\mathcal{P} \to \mathrm{T}_{p \cdot g}\mathcal{P}$ is a vector space isomorphism. Restricted onto the vertical subspace $\mathrm{V}_p\mathcal{P}$ we have by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}
 \bas
 \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{V}_p\mathcal{P}}
 &=
@@ -4203,7 +4234,7 @@ By dimensional reasons and due to the bijectivity of $\mathrm{D}_pr_\sigma$ and 
 using that the vertical subbundle is given by the kernel of $\mathrm{D}\pi$, and
 where we split $X = X^{\mathrm{H}} + X^{\mathrm{V}}$ for all $X\in\mathrm{T}_p\mathcal{P} = \mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P}$.
 
-Hence, we get in total that $\rho_p$ is equivalent to
+Hence, we get in total that $\mathcal{r}_{g*}$ at $p$ is equivalent to
 \bas
 \mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P} 
 &\to 
@@ -4218,7 +4249,9 @@ Hence, we get in total that $\rho_p$ is equivalent to
 	}}\mright|_{p \cdot g}
 \mright).
 \eas
-Let $\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright)$ be now in the kernel of $\rho_p$, then $X^{\mathrm{H}} = 0$ by the bijectivity of $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ onto its image. The second component of $\rho_p$ is then just $\mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright)$; again by the bijectivity of $\mathrm{D}_pr_g: \mathrm{V}_p\mathcal{P} \to \mathrm{V}_{p\cdot g}\mathcal{P}$ we also get $X^{\mathrm{V}}=0$. Thus, $\rho_p$ is injective and therefore bijective. It is then clear that $\mleft.\rho_p\mright|_{\mathrm{H}_p\mathcal{P}}$, given by
+Let $\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright)$ be now in the kernel of $\mathcal{r}_{g*}$, then $X^{\mathrm{H}} = 0$ by the bijectivity of $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ onto its image. The second component of $\mathcal{r}_{g*}$ is then just $\mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright)$; again by the bijectivity of $\mathrm{D}_pr_g: \mathrm{V}_p\mathcal{P} \to \mathrm{V}_{p\cdot g}\mathcal{P}$ we also get $X^{\mathrm{V}}=0$. Thus, $\mathcal{r}_{g*}$ is injective and therefore defines vector space isomorphisms $\mathrm{T}_p\mathcal{P} \to \mathrm{T}_{p \cdot g}\mathcal{P}$. It follows that $\mathcal{r}_{g*}$ is an automorphism of $\mathrm{T}\mathcal{P}$ over $r_g$.
+
+$\bullet$ It is then clear that $\mleft.\mathcal{r}_{g*}\mright|_{\mathrm{H}_p\mathcal{P}}$, given by
 \bas
 \mathrm{H}_p\mathcal{P} 
 &\to 
@@ -4240,11 +4273,11 @@ is also an isomorphism onto its image; its image is complementary to $\mathrm{V}
 \eas
 which implies that $X^{\mathrm{H}} = 0$ due to the fact that $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ is a vector space isomorphism onto its image, as we discussed before. But then
 \bas
-\mleft.\rho_p\mright|_{\mathrm{H}_p\mathcal{P}}(0)
+\mleft.\mathcal{r}_{g*}\mright|_{\mathrm{H}_p\mathcal{P}}(0)
 &=
 0,
 \eas
-which implies that the image of $\mleft.\rho_p\mright|_{\mathrm{H}_p\mathcal{P}}$ is the complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$. This finishes the proof.
+which implies that the image of $\mleft.\mathcal{r}_{g*}\mright|_{\mathrm{H}_p\mathcal{P}}$ is a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$. This finishes the proof.
 \end{proof}
 
 Hence, the following definition makes sense, especially if thinking about what we discussed for Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}.
@@ -4252,12 +4285,7 @@ Hence, the following definition makes sense, especially if thinking about what w
 \begin{definitions}{Ehresmann connection on principal LGB-bundles}{FinallyTheConnection}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal distributions $\mathrm{H}\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ on $\mathcal{G}$ and $\mathcal{P}$, respectively. We call $\mathrm{H}\mathcal{P}$ an \textbf{Ehresmann connection} or a \textbf{connection on $\mathcal{P}$} if
 \bas
-\mathrm{D}_pr_\sigma\mleft( 
-	\mathrm{H}_p\mathcal{P} 
-\mright)
-	- \mleft.{\oversortoftilde{
-		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( \mathrm{H}_p\mathcal{P} \mright)
-	}}\mright|_{p \cdot g}
+\mathcal{r}_{g*}\mleft( \mathrm{H}_p\mathcal{P} \mright)
 &=
 \mathrm{H}_{p\cdot g}\mathcal{P}
 \eas
