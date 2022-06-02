@@ -2945,7 +2945,7 @@ $G$-principal bundles themselves are $\mathcal{G} \coloneqq M \times G$-principa
 We often refer to principal bundles related to trivial LGBs as \textbf{pre-classical principal bundles}. We will later clarify why "pre-classical" as adjective instead of "classical"; however, at this point both adjectives are permutable.
 \end{examples}
 
-\begin{examples}{The "trivial" $\mathcal{G}$-principal bundle}{TrivialPrincAsLGB}
+\begin{examples}{The "trivial" principal $\mathcal{G}$-bundle}{TrivialPrincAsLGB}
 $\mathcal{G}$ itself is a $\mathcal{G}$-principal bundle, equipped with its canonical right-action inherited by its multiplication $\mathcal{G}*\mathcal{G} \to \mathcal{G}$. The principal bundle atlas then just consists of the identity map $\mathds{1}_{\mathcal{G}}$.
 
 By Ex.\ \ref{ex:TheCLassicalPrincAsEx}, it may be natural to call this the \textbf{trivial $\mathcal{G}$-principal bundle} even if $\mathcal{G}$ itself might not be trivial. It will be clearer later why one may choose to do so.
@@ -2953,7 +2953,7 @@ By Ex.\ \ref{ex:TheCLassicalPrincAsEx}, it may be natural to call this the \text
 The remarkable property is that this example shows that we are going to define a gauge theory for which LGBs themselves are allowed as principal bundles. One might have wondered why classical gauge theory uses pre-classical principal bundles instead of LGBs, especially including non-trivial LGBs, because LGBs could be viewed as a more natural choice due to the fact that they are an analogue to how vector bundles are the "bundle-construction" of vector spaces. The problems described in Subsection \ref{TheBigMotivationBehindEverything} show why it was easier to choose pre-classical principal bundles, since these avoid the difficulties regarding the definition of a connection; however, we are going to solve these problems in such a way that one can either use LGBs or pre-classical bundles or even something more general.
 \end{examples}
 
-Our main example will be the inner bundle of a pre-classical principal bundle, recall Ex.\ \ref{ex:InnerLGBs}. To explain the "triviality" of the previous example we need to introduce morphisms of principal bundles.
+Our main example will be the inner bundle of a pre-classical principal bundle, recall Ex.\ \ref{ex:InnerLGBs}. To explain the "triviality" of Ex.\ \ref{ex:TrivialPrincAsLGB} we need to introduce morphisms of principal bundles.
 
 \subsubsection{Morphism of principal LGB-bundles}
 
@@ -4163,50 +4163,47 @@ As also stated in \cite[\S 5.1, Prop.\ 5.1.5, page 260]{Hamilton}, for a given h
 \bas
 \mleft.\mathrm{D}_p \pi\mright|_{\mathrm{H}_p\mathcal{P}}: \mathrm{H}_p\mathcal{P} \to \mathrm{T}_xM
 \eas
-is a vector space isomorphism for all $x \in M$ and $p \in \mathcal{P}_x$. Using that, one has some sort of identification between the horizontal tangent spaces; we want to provide another identification in the sense of Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}. Hence, the following definition and proposition are needed.
+is a vector space isomorphism for all $x \in M$ and $p \in \mathcal{P}_x$; similarly for $\mathcal{G}$ itself. Using that, one has some sort of identification between the horizontal tangent spaces; we want to provide another identification in the sense of Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}. Hence, the following proposition and definition are needed.
 
-\begin{definitions}{Modified pushforward via right-translation}{WeModTheRIghtPush}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. Then we define the \textbf{modified right pushforward $\mathcal{r}_{g*}$ (through $g \in \mathcal{G}$)} as a map $\mathrm{T}\mathcal{P} \to \mathrm{T}\mathcal{P}$ (a calligraphic r as font) by
+\begin{propositions}{The right-pushforward modified by the Darboux derivative is a well-defined isomorphism}{IsomorphismRightPushAndDarboux}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal a distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. Furthermore, for $g \in \mathcal{G}_x$ ($x \in M$) define the map
 \bas
+\mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x} &\to \mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x},\\
+X 
+&\mapsto 
+\mathcal{r}_{g*}(X) 
+\coloneqq
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
 	- \mleft.{\oversortoftilde{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
-	}}\mright|_{p \cdot g}
+	}}\mright|_{p \cdot g},
 \eas
-for all $(p, g) \in \mathcal{P} * \mathcal{G}$ and $X \in \mathrm{T}_p \mathcal{P}$, where $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$ ($x \coloneqq \pi(p)$).
-\end{definitions}
+where $p \in \mathcal{P}_x$, $X \in \mathrm{T}_p \mathcal{P}$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$. Then $\mathcal{r}_{g*}$ is independent of the choice of the local section $\sigma$, and it is a vector bundle automorphism over the right-translation $r_g$. 
 
-\begin{remarks}{Restriction onto vertical bundle gives typical right pushforward}{ModRightPushOnVertic}
-It is trivial to check that we have
-\bas
-\mathcal{r}_{g*}(X)
-&=
-r_{g*}(X)
-\coloneqq
-\mathrm{D}_pr_g(X)
-\eas
-for all $X \in \mathrm{V}_p\mathcal{P}$; we actually have proven this directly after Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}
-\end{remarks}
-
-\begin{propositions}{The right-pushforward as well-defined isomorphism}{IsomorphismRightPushAndDarboux}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal a distribution $\mathrm{H}\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ on $\mathcal{G}$ and $\mathcal{P}$, respectively. Then the modified right pushforward $\mathcal{r}_{g*}$ is independent of the choice of the local section $\sigma$ as in Def.\ \ref{def:WeModTheRIghtPush}, and it is an automorphism of $\mathrm{T}\mathcal{P}$ over $r_g$. 
-
-Furthermore, if we also have a horizontal distribution $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, then $\mathrm{H}_p\mathcal{P}$ is isomorphic to a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$ via $\mathcal{r}_{g*}$ (this complement is not necessarily $\mathrm{H}_{p \cdot g}\mathcal{P}$) for all $(p, g) \in \mathcal{P}* \mathcal{G}$.
+Furthermore, if we also have a horizontal distribution $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, then $\mathrm{H}_p\mathcal{P}$ is isomorphic to a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$ via $\mathcal{r}_{g*}$ (this complement is not necessarily $\mathrm{H}_{p \cdot g}\mathcal{P}$).
 \end{propositions}
 
 \begin{proof}
 \leavevmode\newline
 In the following we have $(p, g) \in \mathcal{P} * \mathcal{G}$, $X \in \mathrm{T}_p \mathcal{P}$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$ ($x \coloneqq \pi(p)$).
 
-$\bullet$ By Remark \ref{rem:DarbouxInActionInfinit} we can derive
+$\bullet$ Let $\pi_{\mathcal{G}}$ be the projection of $\mathcal{G}$, then as mentioned before Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} there is a unique $Y \in \mathrm{H}_g\mathcal{G}$ with
 \bas
-\mathrm{D}_{(p, g)}\Phi(X,0)
+\mathrm{D}_g\pi_{\mathcal{G}}(Y)
+&=
+\mathrm{D}_p\pi(X)
+\in
+\mathrm{T}_x M.
+\eas
+By Remark \ref{rem:DarbouxInActionInfinit} we can derive
+\bas
+\mathrm{D}_{(p, g)}\Phi(X,Y)
 &=
 \mathcal{r}_{g*}(X),
 \eas
-so that the independency of $\mathcal{r}_{g*}$ w.r.t.\ the choice of $\sigma$ follows, where $\Phi$ is the right $\mathcal{G}$-action on $\mathcal{P}$ as a map $\mathcal{P}*\mathcal{G} \to \mathcal{P}$.
+where we made use of that $Y$ is horizontal in $\mathcal{G}$ so that $\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g(Y) = 0$, and where $\Phi$ denotes the right $\mathcal{G}$-action on $\mathcal{P}$ as a map $\mathcal{P}*\mathcal{G} \to \mathcal{P}$. Therefore the independence of $\mathcal{r}_{g*}$ w.r.t.\ the choice of $\sigma$ follows.
 
 $\bullet$ $\mathcal{r}_{g*}$ is clearly linear by construction. Let us now show fibre-wise that $\mathcal{r}_{g*}$ is injective, then it is also bijective by dimensional reasons. By Remark \ref{SmoothnessOfACtionTranslations} we know that $r_\sigma$ is a diffeomorphism, and thus $\mathrm{D}_pr_\sigma: \mathrm{T}_p\mathcal{P} \to \mathrm{T}_{p \cdot g}\mathcal{P}$ is a vector space isomorphism. Restricted onto the vertical subspace $\mathrm{V}_p\mathcal{P}$ we have by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}
 \bas
@@ -4249,7 +4246,7 @@ Hence, we get in total that $\mathcal{r}_{g*}$ at $p$ is equivalent to
 	}}\mright|_{p \cdot g}
 \mright).
 \eas
-Let $\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright)$ be now in the kernel of $\mathcal{r}_{g*}$, then $X^{\mathrm{H}} = 0$ by the bijectivity of $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ onto its image. The second component of $\mathcal{r}_{g*}$ is then just $\mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright)$; again by the bijectivity of $\mathrm{D}_pr_g: \mathrm{V}_p\mathcal{P} \to \mathrm{V}_{p\cdot g}\mathcal{P}$ we also get $X^{\mathrm{V}}=0$. Thus, $\mathcal{r}_{g*}$ is injective and therefore defines vector space isomorphisms $\mathrm{T}_p\mathcal{P} \to \mathrm{T}_{p \cdot g}\mathcal{P}$. It follows that $\mathcal{r}_{g*}$ is an automorphism of $\mathrm{T}\mathcal{P}$ over $r_g$.
+Let $\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright)$ be now in the kernel of $\mathcal{r}_{g*}$, then $X^{\mathrm{H}} = 0$ by the bijectivity of $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ onto its image. The second component of $\mathcal{r}_{g*}$ is then just $\mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright)$; again by the bijectivity of $\mathrm{D}_pr_g: \mathrm{V}_p\mathcal{P} \to \mathrm{V}_{p\cdot g}\mathcal{P}$ we also get $X^{\mathrm{V}}=0$. Thus, $\mathcal{r}_{g*}$ is injective and therefore defines vector space isomorphisms $\mathrm{T}_p\mathcal{P} \to \mathrm{T}_{p \cdot g}\mathcal{P}$. It follows that $\mathcal{r}_{g*}$ is an automorphism of $\mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x}$ over $r_g$.
 
 $\bullet$ It is then clear that $\mleft.\mathcal{r}_{g*}\mright|_{\mathrm{H}_p\mathcal{P}}$, given by
 \bas
@@ -4280,6 +4277,53 @@ which implies that $X^{\mathrm{H}} = 0$ due to the fact that $\mleft.\mathrm{D}_
 which implies that the image of $\mleft.\mathcal{r}_{g*}\mright|_{\mathrm{H}_p\mathcal{P}}$ is a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$. This finishes the proof.
 \end{proof}
 
+Hence, we formally define:
+
+\begin{definitions}{Modified pushforward via right-translation}{WeModTheRIghtPush}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. Then we define the \textbf{modified right pushforward\footnote{The font of $\mathcal{r}$ is a calligraphic r.} $\mathcal{r}_{g*}$ (with $g \in \mathcal{G}_x$, $x \in M$)} as the vector bundle isomorphism $\mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x} \to \mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x}$ over $r_g$ as given in Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} by
+\bas
+\mathcal{r}_{g*}(X)
+&\coloneqq
+\mathrm{D}_pr_\sigma\mleft( 
+	X 
+\mright)
+	- \mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
+	}}\mright|_{p \cdot g}
+\eas
+for all $p \in \mathcal{P}_x$ and $X \in \mathrm{T}_p \mathcal{P}$, where $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$.
+
+Similarly, for a (local) section $\sigma$ of $\mathcal{G}$ we define the \textbf{modified right pushforward $\mathcal{r}_{\sigma*}$ with $\sigma$} as a (local) map $\mathrm{T}\mathcal{P} \to \mathrm{T}\mathcal{P}$ by
+\bas
+\mathcal{r}_{\sigma*}(X)
+&\coloneqq
+\mathrm{D}_pr_\sigma\mleft( 
+	X 
+\mright)
+	- \mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
+	}}\mright|_{p \cdot \sigma_{\pi(p)}}
+\eas
+for all $X \in \mathrm{T}_p \mathcal{P}$ ($p \in \mathcal{P}$).
+\end{definitions}
+
+\begin{remarks}{Restriction onto vertical bundle gives typical right pushforward}{ModRightPushOnVertic}
+It is trivial to check that we have
+\bas
+\mathcal{r}_{g*}(X)
+&=
+r_{g*}(X)
+\coloneqq
+\mathrm{D}_pr_g(X)
+\eas
+for all $X \in \mathrm{V}_p\mathcal{P}$; we actually have proven this directly after Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}. As also pinpointed in Remark \ref{rem:DefOfConnectionIdeaWithDarboux}, if $\mathcal{G}$ is a trivial LGB equipped with its canonical flat connection and $\sigma$ a constant section, then it is easy to see that $\mathcal{r}_{\sigma*} = \mathcal{r}_{g*} = r_{g*}$, where $r_g$ has to be understood as the right-translation of the canonical Lie group action inherited by $\mathcal{G}$ in the sense of Ex.\ \ref{ex:TrivialLGBAction}.
+\end{remarks}
+
+\begin{remark}
+\leavevmode\newline
+Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} also extends to $\mathcal{r}_{\sigma*}$, that is $\mathcal{r}_{\sigma*}$ is a (local) automorphism of $\mathrm{T}\mathcal{P}$ over $r_\sigma$.
+\end{remark}
+
 Hence, the following definition makes sense, especially if thinking about what we discussed for Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}.
 
 \begin{definitions}{Ehresmann connection on principal LGB-bundles}{FinallyTheConnection}
@@ -4289,8 +4333,25 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 &=
 \mathrm{H}_{p\cdot g}\mathcal{P}
 \eas
-for all $p \in \mathcal{P}_x$ and $g \in \mathcal{G}_x$ ($x \coloneqq \pi(p)$), where $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$.
+for all $p \in \mathcal{P}_x$ and $g \in \mathcal{G}_x$ ($x \coloneqq \pi(p)$).
 \end{definitions}
+
+\begin{remark}
+\leavevmode\newline
+There is also a definition of connections on such and more general principal bundles in \cite[\S 5.7, paragraph before Prop.\ 5.38, page 148]{GroupoidBasedPrincipalBundles}. However, this reference provides a different type of definition; translated to our situation, it is based on assuming that $\mathcal{G}$ is defined over another base manifold $N$. In order to define the LGB action on $\mathcal{P}$ this reference introduces a moment map $\mu: \mathcal{P} \to N$ so that the action of an element $\mathcal{G}_y$ ($y \in N$) is defined on $\mu^{-1}(\{y\})$, especially the infinitesimal action $r_g$ of a fixed LGB element $g$ acts on tangent vectors of $\mu^{-1}(\{y\})$, not necessarily on the vertical structure of $\mathcal{P}$. Hence, in order to circumvent the problem we discussed in Subsubsection \ref{TheBigMotivationBehindEverything}, the reference's definition of a connection is then based on assuming that the "fibres" $\mu^{-1}(\{y\})$ are complementary to the vertical structure of $\mathcal{P}$, so these fibres' tangent spaces define a horizontal distribution while the infinitesimal action $r_g$ now acts well-defined on the horizontal structure. Henceforth, the reference does not need to look at using sections $\sigma$ and their actions.
+
+However, this is not a suitable definition for us, because our moment map is the projection of $\mathcal{P}$ itself such that $r_g$ acts on the vertical structure. The reference's definition is rather restrictive, while our definition works for all principal $\mathcal{G}$-bundles by fixing a connection on $\mathcal{G}$.
+\end{remark}
+
+Let us discuss several examples.
+
+\begin{examples}{Recovering of the classical definition}{OurConnectionIsReallyMoreGeneral}
+As we already discussed several times, especially recall Remark \ref{rem:ModRightPushOnVertic} and Ex.\ \ref{ex:TheCLassicalPrincAsEx}, we recover the typical definition of a connection on a principal bundle if $\mathcal{P}$ is a pre-classical principal bundle.
+\end{examples}
+
+\begin{examples}{Associated LGBs}{AssociatedLGBsAndTheirCanonicalConnection}
+Recall Def.\ \ref{def:AssociatedLGB}, and recall that LGBs themselves are principal bundles as in Ex.\ \ref{ex:TrivialPrincAsLGB}.
+\end{examples}
 
 \subsection{Gauge transformations}
 
