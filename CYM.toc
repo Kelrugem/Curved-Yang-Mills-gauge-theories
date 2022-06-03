@@ -8,33 +8,33 @@
 \contentsline {subsection}{\numberline {3.2}Associated Lie group bundles}{5}{subsection.3.2}%
 \contentsline {section}{\numberline {4}LGB actions, part I}{11}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Definition}{11}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Examples of LGB actions}{17}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Lie algebra bundles (LABs)}{24}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Definition}{24}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}From LGBs to LABs}{27}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Vertical Maurer-Cartan form of LGBs}{34}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Exponential map of LGBs}{36}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}LABs of pullback LGBs}{38}{subsection.5.5}%
-\contentsline {section}{\numberline {6}LGB actions, part II}{40}{section.6}%
-\contentsline {subsection}{\numberline {6.1}LGB and LAB representations}{40}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Fundamental vector fields}{42}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Differential of smooth LGB actions}{43}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Connections and curvature on LGB principal bundles}{48}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Principal bundles with structural LGB}{48}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Definition}{48}{subsubsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.2}Examples}{50}{subsubsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.3}Morphism of principal LGB-bundles}{51}{subsubsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.2}Generalized distributions and connections}{60}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}Idea and motivation}{61}{subsubsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.3}Darboux derivative on LGBs}{64}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Generalized connection 1-forms on principal bundles}{70}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Gauge transformations}{75}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Generalized curvature/field strength}{75}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Generalized covariant derivative/minimal coupling}{75}{subsection.7.7}%
-\contentsline {section}{\numberline {8}Curved Yang-Mills gauge theory}{75}{section.8}%
-\contentsline {section}{\numberline {9}Conclusion}{75}{section.9}%
-\contentsline {section}{\nonumberline List of References}{75}{section*.3}%
-\contentsline {section}{\numberline {A}Other Interpretations of the compatibility conditions}{75}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Minimal coupling}{75}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Axiomatic Yang-Mills gauge theories}{81}{subsection.A.2}%
+\contentsline {subsection}{\numberline {4.2}Examples of LGB actions}{18}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Lie algebra bundles (LABs)}{25}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Definition}{25}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}From LGBs to LABs}{28}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Vertical Maurer-Cartan form of LGBs}{35}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Exponential map of LGBs}{37}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}LABs of pullback LGBs}{39}{subsection.5.5}%
+\contentsline {section}{\numberline {6}LGB actions, part II}{41}{section.6}%
+\contentsline {subsection}{\numberline {6.1}LGB and LAB representations}{41}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Fundamental vector fields}{43}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Differential of smooth LGB actions}{44}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Connections and curvature on LGB principal bundles}{49}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Principal bundles with structural LGB}{49}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Definition}{49}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Examples}{51}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Morphism of principal LGB-bundles}{52}{subsubsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.2}Generalized distributions and connections}{61}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Idea and motivation}{62}{subsubsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.3}Darboux derivative on LGBs}{65}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Generalized connection 1-forms on principal bundles}{71}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Gauge transformations}{77}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Generalized curvature/field strength}{77}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Generalized covariant derivative/minimal coupling}{77}{subsection.7.7}%
+\contentsline {section}{\numberline {8}Curved Yang-Mills gauge theory}{77}{section.8}%
+\contentsline {section}{\numberline {9}Conclusion}{77}{section.9}%
+\contentsline {section}{\nonumberline List of References}{77}{section*.3}%
+\contentsline {section}{\numberline {A}Other Interpretations of the compatibility conditions}{77}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Minimal coupling}{77}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Axiomatic Yang-Mills gauge theories}{83}{subsection.A.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

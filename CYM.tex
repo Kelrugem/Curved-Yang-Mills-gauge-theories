@@ -716,6 +716,17 @@ Then we have $e^{\mathcal{H}}_x = e^{\mathcal{H}}_{x^\prime}$ due to that $F$ is
 Since $\pi_{\mathcal{H}} \circ F^{-1}$ is smooth and $\pi_{\mathcal{G}}$ is a smooth surjective submersion, it follows that $f^{-1}$ is smooth; this is a well-known fact for right-compositions with surjective submersions, see \textit{e.g.}\ \cite[\S 3.7.2, Lemma 3.7.5, page 153]{Hamilton}. We can conclude that $f$ is a diffeomorphism. Observe that we also concluded that $F^{-1}$ is an LGB isomorphism, too.
 \end{remark}
 
+Similar to the case of Lie groups, \textit{the} example of an LGB are the automorphisms of a vector bundle.
+
+\begin{examples}{Automorphisms of a vector bundle,\newline \cite[\S 1.1, special situation of Ex.\ 1.1.12, page 8]{mackenzieGeneralTheory}}{AutOfVectorBundleAnLGB}
+Let $V\to M$ be a vector bundle and $\mathrm{Aut}(V) \to M$ its bundle of fibre-wise automorphisms (not to be confused with the sections of $\mathrm{Aut}(V)$ which are the base-preserving automorphisms of $V$). Denote with $W$ the structural vector space of $V$, then $\mathrm{Aut}(V)$ is an LGB with structural Lie group $\mathrm{Aut}(W)$. It is clear that each fibre of $\mathrm{Aut}(V)$ is a Lie group, and the LGB atlas is directly inherited by a vector bundle atlas $\mleft\{ \mleft( U_i, L_i \mright) \mright\}_{i \in I}$ of $V$, where we use a similar notation as for LGB atlases, especially we have vector bundle trivializations $L_{i}: \mleft.V\mright|_{U_i} \to U_i \times W$. Then define an LGB atlas over the same open covering $\mleft( U_i \mright)_i$ by
+\bas
+\mleft. \mathrm{Aut}(V) \mright|_{U_i} &\to U_i \times \mathrm{Aut}(W),\\
+T &\mapsto L_i \circ T \circ L_i^{-1},
+\eas
+and $U_i \times \mathrm{Aut}(W)$ acts canonically on $U_i \times W$ in a fibre-wise sense. Then it is trivial to check that these give local trivializations such that $\mathrm{Aut}(V)$ carries the structure as an LGB.
+\end{examples}
+
 \subsection{Associated Lie group bundles}
 
 For another important example recall that there is the notion of associated fibre bundles; following and stating the results of \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$, a smooth manifold $N$ and a smooth left $G$-action $\Psi$ given by
@@ -1705,6 +1716,12 @@ In fact, as also argued in \cite[\S 16.2, Example 2, page 114; but speaking in t
 %We actually have a similar smooth extension for LGB's algebra. See our discussion of LGB actions later, especially Ex.\ \ref{ex:LGBActingOnItself}.
 \end{remarks}
 
+Endomorphisms of a vector bundle are of course another important example of LABs.
+
+\begin{examples}{Endomorphisms of a vector bundle, \cite[\S 3.3, part of Ex.\ 3.3.4]{mackenzieGeneralTheory}}{EndVAnLAB}
+Let $V \to M$ be a vector bundle, and denote with $\mathrm{End}(V) \to M$ its bundle of fibre-wise endomorphisms (its sections are the base-preserving bundle endomorphisms of $V$). This is clearly an LAB whose field of Lie brackets is given by the commutator.
+\end{examples}
+
 We have the notion of structure constants on all fibres, such that we get now structure functions after fixing a frame.\footnote{However, observe that $\Gamma(\mathcal{g})$ is an infinite-dimensional Lie algebra, such that there is still a notion structure constants, but an inconvenient one due to that these constants are in general not finitely many.}
 
 \begin{definitions}{Structure functions, \cite[\S 16.5, page 119]{DaSilva}}{StructureFunctons}
@@ -2072,6 +2089,10 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and denote with $e
 
 In the following $\mathcal{g}$ will usually denote the LAB of $\mathcal{G}$, even if we only introduced $\mathcal{G}$.
 
+\begin{examples}{Endomorphisms of a vector bundle as LAB of fibre-wise automorphisms}{EndosAreLABOfAutos}
+Recall Ex.\ \ref{ex:AutOfVectorBundleAnLGB} and \ref{ex:EndVAnLAB}. For a vector bundle $V \to M$ one can show that the LAB of $\mathrm{Aut}(V)$ is given by $\mathrm{End}(V)$; the proof is precisely as for the automorphisms and endomorphisms of a vector space as in \cite[\S 1.5.4, page 45ff.]{Hamilton}, just canonically extended to a bundle language. 
+\end{examples}
+
 \subsection{Vertical Maurer-Cartan form of LGBs}
 
 As one may expect, the last result gives hints about the tangent bundle structure of $\mathcal{G}$; this can be shown with the Maurer-Cartan form on LGBs, which we will call vertical Maurer-Cartan form. It will be clear later why we choose to add this adjective; however, as a first argument recall Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs}, especially the last paragraph.
@@ -2413,9 +2434,9 @@ Thence, linearity of $\Psi$ is well-defined. In fact, observe that $\mathcal{G} 
 	V \arrow{r}{p} & M
 	\end{tikzcd}
 \end{center}
-the horizontal arrows describe the vector bundle structure (viewing $\mathcal{G} * V$ as the vector bundle $\pi^*V$), and the vertical ones the LGB structure (viewing $\mathcal{G} * V$ as the LGB $p^*\mathcal{G}$); $\mathrm{pr}_i$ ($i \in \{1,2\}$) is the projection onto the $i$-th component.
+the horizontal arrows describe the vector bundle structure (viewing $\mathcal{G} * V$ as the vector bundle $\pi^*V$), and the vertical ones the LGB structure (viewing $\mathcal{G} * V$ as the LGB $p^*\mathcal{G}$), where $\mathrm{pr}_i$ ($i \in \{1,2\}$) are the projections onto the $i$-th component.
 
-Last but not least, by fixing a base point $x \in M$ we clearly have the typical notion of a $\mathcal{G}_x$-representation on $V_x$.
+Last but not least, by fixing a base point $x \in M$ we clearly have the typical notion of a $\mathcal{G}_x$-representation on $V_x$. Equivalently, we could therefore obviously define LGB representations as a base-preserving LGB morphism $\Psi: \mathcal{G} \to \mathrm{Aut}(V)$ as it is actually done in the definition's reference.
 \end{remarks}
 
 Infinitesimally, we have LAB actions and representations; recall Cor.\ \ref{cor:PullBackLABIsLAB}.
@@ -2942,7 +2963,7 @@ Let us provide examples of such principal bundles.
 \begin{examples}{The "pre-classical" principal bundle}{TheCLassicalPrincAsEx}
 $G$-principal bundles themselves are $\mathcal{G} \coloneqq M \times G$-principal bundles. Recall Ex.\ \ref{ex:TrivialLGBAction}, the LGB action of a trivial LGB $\mathcal{G} \cong M \times G$ is equivalent to a $G$-action, the right-translation with an element $g \in G$ is then either the right-translation of the corresponding constant section in $\mathcal{G}$or the right-translation with $(x, g)$ pointwise; this action is clearly simply transitive. The $\mathcal{G}$-principal bundle atlas is then inherited by the existing $G$-principal bundle atlas.
 
-We often refer to principal bundles related to trivial LGBs as \textbf{pre-classical principal bundles}. We will later clarify why "pre-classical" as adjective instead of "classical"; however, at this point both adjectives are permutable.
+We often refer to principal bundles related to trivial LGBs as \textbf{pre-classical principal bundles}, or, as usual, principal $G$-bundle. We will later clarify why "pre-classical" as adjective instead of "classical"; however, at this point both adjectives are permutable.
 \end{examples}
 
 \begin{examples}{The "trivial" principal $\mathcal{G}$-bundle}{TrivialPrincAsLGB}
@@ -4346,12 +4367,57 @@ However, this is not a suitable definition for us, because our moment map is the
 Let us discuss several examples.
 
 \begin{examples}{Recovering of the classical definition}{OurConnectionIsReallyMoreGeneral}
-As we already discussed several times, especially recall Remark \ref{rem:ModRightPushOnVertic} and Ex.\ \ref{ex:TheCLassicalPrincAsEx}, we recover the typical definition of a connection on a principal bundle if $\mathcal{P}$ is a pre-classical principal bundle.
+As we already discussed several times, especially recall Remark \ref{rem:ModRightPushOnVertic} and Ex.\ \ref{ex:TheCLassicalPrincAsEx}, we recover the typical definition of a connection on a principal bundle if $\mathcal{P}$ is a pre-classical principal bundle. We call such a connection a \textbf{pre-classical connection}.
 \end{examples}
 
 \begin{examples}{Associated LGBs}{AssociatedLGBsAndTheirCanonicalConnection}
-Recall Def.\ \ref{def:AssociatedLGB}, and recall that LGBs themselves are principal bundles as in Ex.\ \ref{ex:TrivialPrincAsLGB}.
+Recall Def.\ \ref{def:AssociatedLGB}, and recall that LGBs themselves are principal bundles as in Ex.\ \ref{ex:TrivialPrincAsLGB}. That is, let $G, H$ be Lie groups, $P \to M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then we have the LGB associated to the principal bundle $P$ and the representation $\psi$ on $H$
+\begin{center}
+	\begin{tikzcd}
+	H \arrow{r}& \mathcal{H} \coloneqq P \times_\psi H \arrow{d} \\
+	& M
+	\end{tikzcd}
+\end{center}
+Fix a typical pre-classical connection on $P$; as also introduced in Subsubsection \ref{TheBigMotivationBehindEverything} we have an associated parallel transport $\mathrm{PT}_\alpha^\mathcal{P}: \mathcal{P}_x \to \Gamma(\alpha^*\mathcal{P})$ along a curve $\alpha: [0, t] \to M$ ($t > 0$), where $\alpha(0) \eqqcolon x$. As proven in \cite[\S 5.9, Thm.\ 5.9.1, page 289f.]{Hamilton}, we have a canonical well-defined parallel transport $\mathrm{PT}_\alpha^\mathcal{H}: \mathcal{H}_x \to \Gamma(\alpha^*\mathcal{H})$ given by
+\bas
+\mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
+&=
+\mleft[ \mathrm{PT}_\alpha^\mathcal{P}(p), h \mright]
+\eas
+for all $[p, h] \in \mathcal{H}_x$. This has a 1:1 correspondence to a horizontal distribution $\mathrm{H}\mathcal{H}$ on $\mathcal{H}$. Observe that we have
+\bas
+\mathrm{PT}_\alpha^\mathcal{H}\Bigl( [p, h] \cdot \mleft[ p, h^\prime \mright] \Bigr)
+&=
+\mathrm{PT}_\alpha^\mathcal{H}\Bigl( \mleft[ p, h h^\prime \mright] \Bigr)
+\\
+&=
+\mleft[ \mathrm{PT}_\alpha^\mathcal{P}(p), h h^\prime \mright]
+\\
+&=
+\mleft[ \mathrm{PT}_\alpha^\mathcal{P}(p), h \mright]
+	\cdot \mleft[ \mathrm{PT}_\alpha^\mathcal{P}(p), h^\prime \mright]
+\\
+&=
+\mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
+	\cdot \mathrm{PT}_\alpha^\mathcal{H}\Bigl( \mleft[p, h^\prime\mright] \Bigr)
+\eas
+for all $[p, h], \mleft[ p, h^\prime \mright] \in \mathcal{H}_x$. Now recall that the whole motivation behind Def.\ \ref{def:FinallyTheConnection} comes from Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} (also recall Remark \ref{rem:DefOfConnectionIdeaWithDarboux}) which itself stems from Eq.\ \eqref{PTHomomNEw}. We see that that Eq.\ \eqref{PTHomomNEw} is satisfied here, and thus Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} follows, \textit{i.e.}\
+\bas
+\mathcal{r}_{\mleft[ p, h^\prime \mright]*}(X)
+&\in
+\mathrm{H}_{[p,h] \cdot \mleft[ p, h^\prime \mright]}\mathcal{H}
+\eas
+for all $X \in \mathrm{H}_{[p,h]}\mathcal{H}$.
+By Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} and dimensional reasons (horizontal subspaces are of the same dimension) it follows immediately that $\mathrm{H}\mathcal{H}$ is an (Ehresmann) connection on $\mathcal{H}$ in sense of Def.\ \ref{def:FinallyTheConnection}.
+
+We call such connections on LGBs associated to a pre-classical principal bundle an \textbf{associated connection}.
 \end{examples}
+
+As expected, we have a corresponding connection 1-form.
+
+\begin{definitions}{Connection 1-forms on principal LGB-bundles}{GaugeBosonsOnLGBPrincies}
+
+\end{definitions}
 
 \subsection{Gauge transformations}
 
