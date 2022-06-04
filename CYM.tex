@@ -722,8 +722,9 @@ Similar to the case of Lie groups, \textit{the} example of an LGB are the automo
 Let $V\to M$ be a vector bundle and $\mathrm{Aut}(V) \to M$ its bundle of fibre-wise automorphisms (not to be confused with the sections of $\mathrm{Aut}(V)$ which are the base-preserving automorphisms of $V$). Denote with $W$ the structural vector space of $V$, then $\mathrm{Aut}(V)$ is an LGB with structural Lie group $\mathrm{Aut}(W)$. It is clear that each fibre of $\mathrm{Aut}(V)$ is a Lie group, and the LGB atlas is directly inherited by a vector bundle atlas $\mleft\{ \mleft( U_i, L_i \mright) \mright\}_{i \in I}$ of $V$, where we use a similar notation as for LGB atlases, especially we have vector bundle trivializations $L_{i}: \mleft.V\mright|_{U_i} \to U_i \times W$. Then define an LGB atlas over the same open covering $\mleft( U_i \mright)_i$ by
 \bas
 \mleft. \mathrm{Aut}(V) \mright|_{U_i} &\to U_i \times \mathrm{Aut}(W),\\
-T &\mapsto L_i \circ T \circ L_i^{-1},
+T &\mapsto \mleft.L_{i} \circ T \circ L_{i}^{-1}\mright|_{\{x\} \times W},
 \eas
+where $T \in \mleft.\mathrm{Aut}(V)\mright|_x = \mathrm{Aut}(V_x)$,
 and $U_i \times \mathrm{Aut}(W)$ acts canonically on $U_i \times W$ in a fibre-wise sense. Then it is trivial to check that these give local trivializations such that $\mathrm{Aut}(V)$ carries the structure as an LGB.
 \end{examples}
 
@@ -2330,6 +2331,8 @@ for all $x\in M$, so that we also write
 Since all of this is rather natural, we will make use of that without further mention.
 \end{remarks}
 
+This discussion also highlights that one could understand the infinite-dimensional Lie algebra $\Gamma(\mathcal{g})$ as the Lie algebra of the infinite-dimensional Lie group $\Gamma(\mathcal{G})$; thus, one could construct the LABs of LGBs by starting in that fashion, and then $\mathcal{g}$ is constructed by making use of the 1:1 correspondence of vector bundles and locally free sheaf of modules of constant rank.
+
 \subsection{LABs of pullback LGBs}
 
 We are going to define LGB representations and corresponding LAB representations. Since group representation are a special form of actions, we will have something similar in the case of LGB representations. Since actions are defined as maps on a pullback of an LGB $\mathcal{G}$, which is also an LGB by Cor.\ \ref{cor:PullbackLGB}, we expect that the corresponding LAB representation is related to the LAB of the pullback of $\mathcal{G}$. It is natural to think of this LAB as the pullback of $\mathcal{g}$, which is also an LAB by Cor.\ \ref{cor:PullBackLABIsLAB}:
@@ -2407,20 +2410,21 @@ Finally, we come to the last part of the \textit{basics} for LGBs and their noti
 As usual, representations are a special type of group action, with an infinitesimal analogue. 
 %The approach in \cite[\S 1.7, page 43ff.]{mackenzieGeneralTheory} defines an LGB representation by a map which restricts to a typical representation on each fibre of the LGB. However, in alignment with the previous approach we want to keep the fibre-wise behaviour as a remark while the definition itself emphasizes the global structure. For this it will now be important that we have shown that the pullback of an LGB is again an LGB; recall Cor.\ \ref{cor:PullbackLGB}.
 
-\begin{definitions}{LGB representations, \newline\cite[\S 1.7, special situation of Def.\ 1.7.1, page 43]{mackenzieGeneralTheory}}{LGBRep}
+\begin{definitions}{LGB representations, \newline\cite[\S 1.7, special situation of the remark before Def.\ 1.7.1, page 43]{mackenzieGeneralTheory}}{LGBRep}
 Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold, $V \stackrel{p}{\to} M$ be a vector bundle, and assume that we have a left $\mathcal{G}$-action on $V$, $\Psi: \mathcal{G}*V \coloneqq p^*\mathcal{G}\to V$. Then we say that $\Psi$ is a \textbf{$\mathcal{G}$-representation on $V$} if it is linear, that is,
 \bas
-\Psi\bigl( (g, \alpha v ) \bigr)
+\Psi(g, \alpha v )
 &=
-\alpha \Psi\bigl( (g, v) \bigr),\\
-\Psi\bigl( (g, v + w) \bigr)
+\alpha \Psi(g, v),\\
+\Psi(g, v + w)
 &=
-\Psi\bigl( (g, v) \bigr) + \Psi\bigl( (g, w ) \bigr)
+\Psi(g, v) + \Psi(g, w )
 \eas
 for all $\alpha \in \mathbb{R}$, and $(g, v), (g, w) \in \mathcal{G}*V$. In alignment with previous notations we may also write $\Psi(g, v) = \Psi_g(v)$, or $\Psi(g, v) = g \cdot v$.
 \end{definitions}
 
-\begin{remarks}{Well-definedness and fibrewise a typical representation}{FibreIsTypicalRep}
+\begin{remark}
+\leavevmode\newline
 Observe that $(g, v) \in \mathcal{G}*V$ means that $p(v) = \pi(g)$, same for $(g, w)$. Hence, given a base point in $x\in M$, the pairs $(g, v)$ in $\mathcal{G}*V|_{p^{-1}(\{x\})}$ are given by elements $g \in \mathcal{G}_x$ and $v \in V_x$. By Def.\ \ref{def:LiegroupACtion} we also have 
 \bas
 p\bigl(\Psi(g, v)\bigr)
@@ -2435,9 +2439,62 @@ Thence, linearity of $\Psi$ is well-defined. In fact, observe that $\mathcal{G} 
 	\end{tikzcd}
 \end{center}
 the horizontal arrows describe the vector bundle structure (viewing $\mathcal{G} * V$ as the vector bundle $\pi^*V$), and the vertical ones the LGB structure (viewing $\mathcal{G} * V$ as the LGB $p^*\mathcal{G}$), where $\mathrm{pr}_i$ ($i \in \{1,2\}$) are the projections onto the $i$-th component.
+\end{remark}
 
-Last but not least, by fixing a base point $x \in M$ we clearly have the typical notion of a $\mathcal{G}_x$-representation on $V_x$. Equivalently, we could therefore obviously define LGB representations as a base-preserving LGB morphism $\Psi: \mathcal{G} \to \mathrm{Aut}(V)$ as it is actually done in the definition's reference.
-\end{remarks}
+By fixing a base point $x \in M$ we clearly have the typical notion of a $\mathcal{G}_x$-representation on $V_x$. Equivalently, we could therefore obviously define LGB representations as a base-preserving LGB morphism $\Psi: \mathcal{G} \to \mathrm{Aut}(V)$ as also in \cite[\S 1.7, Def.\ 1.7.1, page 43]{mackenzieGeneralTheory}.
+
+\begin{corollaries}{LGB representations as LGB morphisms, \newline \cite[\S 1.7, Prop.\ 1.7.2, page 43]{mackenzieGeneralTheory}}{LGBRepAsLGBMorph}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold, $V \to M$ be a vector bundle. Then every $\mathcal{G}$-representation $\Psi: \mathcal{G} * V \to V$ is equivalent to a base-preserving LGB morphism $\widetilde{\Psi}: \mathcal{G} \to \mathrm{Aut}(V)$, related by
+\bas
+\Psi(g, v)
+&=
+\widetilde{\Psi}(g)(v)
+\eas
+for all $g \in \mathcal{G}_x$ ($x \in M$) and $v \in V_x$.
+\end{corollaries}
+
+\begin{remark}
+\leavevmode\newline
+We will usually denote both interpretations with the same notation.
+\end{remark}
+
+\begin{proof}[Proof of Cor.\ \ref{cor:LGBRepAsLGBMorph}]
+\leavevmode\newline
+This is an immediate consequence of Def.\ \ref{def:LGBRep} and \ref{def:LiegroupACtion}. $\Psi$ is smooth if and only if $\widetilde{\Psi}$ is smooth; this is due to the fact that the LGB atlas of $\mathrm{Aut}(V)$ is inherited by an atlas of $V$ as constructed in Ex.\ \ref{ex:AutOfVectorBundleAnLGB}, and due to that $\mathcal{G} * V$ is an embedded submanifold of $\mathcal{G} \times V$.
+\end{proof}
+
+\begin{examples}{Recovering Lie group representations on vector spaces}{LGRepsOnVecs}
+Similarly as to Ex.\ \ref{ex:TrivialLGBAction}, if $\mathcal{G} = M \times G$ is a trivial LGB over $M$, $G$ its structural Lie group, and $V = M \times W$ a trivial vector bundle with structural vector space $W$, then $\Psi$ is equivalent to a $G$-representation on $W$. Backwards, every Lie group representation gives a representation of trivial LGBs on trivial vector bundles.
+\end{examples}
+
+Also recall Ex.\ \ref{ex:AutOfVectorBundleAnLGB}: We can now similarly construct another LGB needed for the adjoint representation.
+
+\begin{examples}{Another LGB example: Automorphisms of LABs, \newline \cite[\S 1.7, special situation of Ex.\ 1.7.12, page 46]{mackenzieGeneralTheory}}{AutosOfLABsAsLGB}
+Let $\mathcal{g}$ be an LAB over the smooth manifold $M$. We denote with $\mathrm{Aut}(\mathcal{g}) \to M$ the bundle of fibre-wise Lie algebra automorphisms of $\mathcal{g}$, where the sections of $\mathrm{Aut}(\mathcal{g})$ are the base-preserving LAB automorphisms of $\mathcal{g}$. As in Ex.\ \ref{ex:AutOfVectorBundleAnLGB} one can show $\mathrm{Aut}(\mathcal{g})$ is an LGB by using LAB trivializations of $\mathcal{g}$ instead of vector bundle trivializations.
+
+The notation of $\mathrm{Aut}(\mathcal{g})$ may be confusing with the notation as for vector bundles. We usually refer to this LAB automorphism when speaking of LABs and state it explicitly if we just mean the vector bundle version.
+\end{examples}
+
+For the next major example of an LGB representation recall Def.\ \ref{def:LeftRightTranslationConjugation}.
+ %and Cor.\ \ref{cor:LGBToLABHomomorphis}. 
+
+\begin{examples}{Adjoint representation, \newline \cite[\S 3.5, special situation of Prop.\ 3.5.20, page 131]{mackenzieGeneralTheory}}{LGBAdjointRep}
+For $g \in \mathcal{G}_x$ ($x \in M$) we have the conjugation $c_g$ which is a $\mathcal{G}_x$-automorphism. In the usual way we define the \textbf{adjoint representation of $\mathcal{G}$} as a base-preserving LGB morphism $\mathcal{G} \to \mathrm{Aut}(\mathcal{g})$ by
+\bas
+\mathrm{Ad}_g &\coloneqq \mathrm{D}_{e_x} c_g
+\eas
+for all $g \in \mathcal{G}_x$ ($x \in M$). By construction $\mathrm{Ad}_g \in \mathrm{Aut}(\mathcal{g}_x) = \mleft.\mathrm{Aut}(\mathcal{g})\mright|_x$ so that the adjoint representation is well-defined. Due to the fact that $c_{gq} = c_{g} \circ c_q$ for all $g, q\in \mathcal{G}_x$ and $c_g(e_x) = e_x$ we have
+\bas
+\mathrm{Ad}_{gq}
+&=
+\mathrm{D}_{e_x}\mleft( c_g \circ c_q \mright)
+=
+\mathrm{D}_{e_x} c_g \circ \mathrm{D}_{e_x} c_q
+=
+\mathrm{Ad}_{g} \circ \mathrm{Ad}_{q}.
+\eas
+Smoothness can be shown similarly to the proof in \cite[\S 2.1, Thm.\ 2.1.45, page 101f.]{Hamilton}
+\end{examples}
 
 Infinitesimally, we have LAB actions and representations; recall Cor.\ \ref{cor:PullBackLABIsLAB}.
 
@@ -3239,7 +3296,7 @@ Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} shows that the choice of a
 
 We want to use this now in order to study a certain pullback of principal bundles. For this we need to introduce general pullbacks of principal bundles; also recall again Cor.\ \ref{cor:PullbackLGB}.
 
-\begin{corollaries}{Pullbacks of $\mathcal{G}$-principal bundles are principal bundles}{PullBacksArePrincToo}
+\begin{corollaries}{Pullbacks of principal LGB-bundles are principal LGB-bundles}{PullBacksArePrincToo}
 Let $M, N$ be smooth manifolds, $f: N \to M$ a smooth map, $\mathcal{G} \to M$ an LGB, and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Then there is a unique (up to isomorphisms) principal $f^*\mathcal{G}$-bundle structure on $f^*\mathcal{P}$ such that the projection $\pi_2: f^*\mathcal{P} \to \mathcal{P}$ onto the second factor is a principal bundle morphism (over $f$) w.r.t.\ the projection $\pi_2^{\mathcal{G}}: f^*\mathcal{G} \to \mathcal{G}$ onto the second factor as LGB morphism and such that $\pi_2|_x: (f^*\mathcal{P})_x \to \mathcal{P}_{f(x)}$ is a $\mathcal{G}_x$-equivariant diffeomorphism w.r.t.\ the LGB isomorphism $\mleft.\pi_2^{\mathcal{G}}\mright|_x$.
 %
 %$f^*\mathcal{P}$ is the \textbf{pullback principal bundle of $\mathcal{P}$ (under $f$)}.
