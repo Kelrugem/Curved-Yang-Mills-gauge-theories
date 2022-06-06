@@ -450,6 +450,13 @@ In total, $\widetilde{\Phi}$ is a base-preserving morphism if and only if $\Phi$
 One can extend all of this similarly for more specific types of morphisms like vector bundle-morphisms.
 
 Most of the time we will not mention this 1:1 correspondence explicitly, it should be clear by context. Hence, we will also denote $\widetilde{\Phi}$ by $\Phi$. In fact, we usually calculate with $\widetilde{\Phi}$, while $\Phi$ and its diagram may only arise to give an illustration about the geometry.
+
+\item When we differentiate maps $\gamma$ depending on just one parameter $t \in \mathbb{R}$, then we may write
+\bas
+\frac{\mathrm{d}}{\mathrm{d}t} \gamma(t)
+&\coloneqq
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t} [t \mapsto \gamma]\mright|_t.
+\eas
 \end{itemize}
 
 \subsection{Assumed background knowledge}
@@ -1320,6 +1327,8 @@ U \times G \times G &\to U \times G,\\
 (x, g, q) &\mapsto (x, gq).
 \eas
 We will also call the $\mathcal{G}$-action on itself the \textbf{multiplication in $\mathcal{G}$}.
+
+Similarly one can argue that the \textbf{inverse map} $\mathcal{G} \to \mathcal{G}$, $g \mapsto g^{-1}$, is smooth, too.
 \end{examples}
 
 \begin{examples}{Trivial action, \cite[\S 1.6, special situation of Ex.\ 1.6.3, page 35]{mackenzieGeneralTheory}}{TrivialAction}
@@ -2483,7 +2492,9 @@ For $g \in \mathcal{G}_x$ ($x \in M$) we have the conjugation $c_g$ which is a $
 \bas
 \mathrm{Ad}_g &\coloneqq \mathrm{D}_{e_x} c_g
 \eas
-for all $g \in \mathcal{G}_x$ ($x \in M$). By construction $\mathrm{Ad}_g \in \mathrm{Aut}(\mathcal{g}_x) = \mleft.\mathrm{Aut}(\mathcal{g})\mright|_x$ so that the adjoint representation is well-defined. Due to the fact that $c_{gq} = c_{g} \circ c_q$ for all $g, q\in \mathcal{G}_x$ and $c_g(e_x) = e_x$ we have
+for all $g \in \mathcal{G}_x$ ($x \in M$). 
+
+That this is a $\mathcal{G}$-representation on $\mathcal{g}$ follows by the following proof: By construction $\mathrm{Ad}_g \in \mathrm{Aut}(\mathcal{g}_x) = \mleft.\mathrm{Aut}(\mathcal{g})\mright|_x$ so that the adjoint representation is well-defined. As in the Lie group case, due to the fact that $c_{gq} = c_{g} \circ c_q$ for all $g, q\in \mathcal{G}_x$ and $c_g(e_x) = e_x$ we have
 \bas
 \mathrm{Ad}_{gq}
 &=
@@ -2493,7 +2504,39 @@ for all $g \in \mathcal{G}_x$ ($x \in M$). By construction $\mathrm{Ad}_g \in \m
 =
 \mathrm{Ad}_{g} \circ \mathrm{Ad}_{q}.
 \eas
-Smoothness can be shown similarly to the proof in \cite[\S 2.1, Thm.\ 2.1.45, page 101f.]{Hamilton}
+However, smoothness has to be shown in a bit more generalized way than the proof in \cite[\S 2.1, Thm.\ 2.1.45, page 101f.]{Hamilton}, that is, we equivalently view $\mathrm{Ad}$ as a linear left action $\mathcal{G} * \mathcal{g} \to \mathcal{g}$ as in Def.\ \ref{def:LGBRep} given by
+\bas
+\mathrm{Ad}(g,\nu) &= \mathrm{Ad}_g(\nu)= \mathrm{D}_{e_x}c_g(\nu)
+\eas
+for all $g \in \mathcal{G}_x$ and $\nu \in \mathcal{g}_x$. Similarly we can view the conjugation as a smooth map\footnote{In fact it is obviously a smooth left $\mathcal{G}$-action on itself, and one could generalize Def.\ \ref{def:LieGroupActingOnLieGroup} and derive a similar statement as Cor.\ \ref{cor:LGBRepAsLGBMorph} related to the LGB of fibre-wise $\mathcal{G}$-automorphisms.}
+\bas
+\mathcal{G}*\mathcal{G} &\to \mathcal{G},\\
+(g,h) &\mapsto c(g, h) \coloneqq c_g(h) = g h g^{-1},
+\eas
+making use of Ex.\ \ref{ex:LGBActingOnItself} to derive smoothness as composition of smooth maps.
+Observe that $(0_g, \nu) \in \mathrm{T}_{(g, e)}(\mathcal{G} * \mathcal{G})$ because $\nu \in \mathcal{g}_x \cong \mathrm{V}_{e_x}\mathcal{G}$ is vertical, where $0_g$ is the zero vector of $\mathrm{T}_g\mathcal{G}$; see also Lemma \ref{lem:PullbackFibreBundleItsTangentSp} later for a general statement about bundles like $\mathrm{T}(\mathcal{G} * \mathcal{G})$, or alternatively recall the proof of Cor.\ \ref{cor:VertMCVormIsWellDefined}. Especially, take a curve $\gamma: I \to \mathcal{G}_x$ ($I$ an open interval of $\mathbb{R}$ containing 0) with $\gamma(0) = e_x$ and $\mathrm{d}/\mathrm{d}t|_{t=0}\gamma = \nu$, then
+\bas
+\mathrm{D}_{(g,e_x)}c(0_g, \nu)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} c\mleft( g, \gamma \mright)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} c_g\mleft( \gamma \mright)
+=
+\mathrm{D}_{e_x}c_g(\nu)
+=
+\mathrm{Ad}(g, \nu).
+\eas
+Thus, $\mathrm{Ad}$ is the following composition of maps
+\ba\label{AdjointAsCompOfSmoothMaps}
+\mathcal{G} * \mathcal{g} &\to \mathrm{T}(\mathcal{G} * \mathcal{G}) \to \mathcal{g},\nonumber\\
+\Bigl(g, \mleft(e_{\pi(\nu)}, \nu\mright) \Bigr) &\mapsto \Bigl(\mleft(g, e_{\pi(\nu)}\mright), (0_g, \nu)\Bigr) \mapsto \mathrm{D}_{\mleft(g,e_{\pi(\nu)}\mright)}c\mleft(0_g, \nu\mright),
+\ea
+where $\pi$ denotes the projection of $\mathcal{g} \to M$, and for the first arrow we were carefully denoting the base points in the first component of tangent vectors. The second arrow is smooth because $c$ is smooth. The first arrow is also smooth: The map
+\ba\label{FirstArrowOfAdAsCompOfSmoothmaps}
+\mathcal{G} \times \mathcal{g} &\to \mathrm{T}(\mathcal{G} \times \mathcal{G}),\nonumber\\
+\Bigl(g, \mleft(e_{\pi(\nu)}, \nu\mright) \Bigr) &\mapsto \Bigl(\mleft(g, e_{\pi(\nu)}\mright), (0_g, \nu)\Bigr),
+\ea
+is clearly smooth, and so also its restriction onto $\mathcal{G} * \mathcal{g} = \pi^*\mathcal{G}$ as embedded submanifold of $\mathcal{G} \times \mathcal{g}$. Similarly, $\mathcal{G} * \mathcal{G}$ is an embedded submanifold of $\mathcal{G} \times \mathcal{G}$, and it is therefore well-known by using submanifold charts that then $\mathrm{T}(\mathcal{G} * \mathcal{G})$ is a submanifold of $\mathrm{T}(\mathcal{G} \times \mathcal{G})|_{\mathcal{G} * \mathcal{G}}$, which is itself a submanifold of $\mathrm{T}(\mathcal{G} \times \mathcal{G})$ (see \textit{e.g.}\ \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}). Thence, the restriction of the domain of definition and image of \eqref{FirstArrowOfAdAsCompOfSmoothmaps} is smooth, and this is precisely the first arrow of \eqref{AdjointAsCompOfSmoothMaps}. Finally it follows that $\mathrm{Ad}$ is smooth and therefore a $\mathcal{G}$-representation on $\mathcal{g}$.
 \end{examples}
 
 Infinitesimally, we have LAB actions and representations; recall Cor.\ \ref{cor:PullBackLABIsLAB}.
