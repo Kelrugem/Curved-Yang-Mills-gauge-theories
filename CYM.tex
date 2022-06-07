@@ -353,8 +353,8 @@
 %\thispagestyle{empty}
 
 \author{Simon-Raphael Fischer\footnote{Email: \href{mailto:sfischer@ncts.tw}{sfischer@ncts.tw}; ORCiD: \href{https://orcid.org/0000-0002-5859-2825}{0000-0002-5859-2825}} }
-\title{Curved Yang-Mills gauge theories} 
-\subtitle{Infinitesimal and integrated gauge theory}
+\title{Integrating curved Yang-Mills gauge theories} 
+\subtitle{Gauge theories related to principal bundles equipped with Lie group bundle actions}
 \date{\today} 
 \maketitle
 \thispagestyle{empty}
@@ -2392,22 +2392,23 @@ With this we can quickly show the following familiar result.
 \begin{corollaries}{Differentials of LGB morphisms are LAB morphisms, \newline \cite[\S 3.5, section about morphisms, page 124f.]{mackenzieGeneralTheory}}{LGBToLABHomomorphis}
 Let $\mathcal{H} \to N$ and $\mathcal{G} \to M$ be two LGBs over two smooth manifolds $N$ and $M$, and we denote with $\mathcal{h}$ and $\mathcal{g}$ the LABs of $\mathcal{H}$ and $\mathcal{G}$, respectively. Furthermore, assume that we have an LGB morphism $F: \mathcal{H} \to \mathcal{G}$ over a smooth map $f: N \to M$. Then
 \bas
-\mathrm{D}_e F: \mathcal{h} &\to \mathcal{g}
+\mleft.\mathrm{D} F\mright|_{\mathcal{h}}: \mathcal{h} &\to \mathcal{g}
 \eas
-is an LAB morphism over $f$, where $e$ is the identity section of $\mathcal{H}$, that is,
-\bas
-\mathrm{D}_eF|_p
-&\coloneqq
-\mleft.\bigl(\mathrm{D}F|_{e_N}\bigr)\mright|_p
-=
-\mathrm{D}_{e_p}F: \mathcal{h}_p \to \mathcal{g}_{f(p)}
-\eas
-for all $p \in N$.
+is an LAB morphism over $f$.
+%, where $e$ is the identity section of $\mathcal{H}$, that is,
+%\bas
+%\mathrm{D}_eF|_p
+%&\coloneqq
+%\mleft.\bigl(\mathrm{D}F|_{e_N}\bigr)\mright|_p
+%=
+%\mathrm{D}_{e_p}F: \mathcal{h}_p \to \mathcal{g}_{f(p)}
+%\eas
+%for all $p \in N$.
 \end{corollaries}
 
 \begin{proof}
 \leavevmode\newline
-Again by our notes in Subsection \ref{BasicNotations}, we can view $F$ as a base-preserving LGB morphism $F: \mathcal{H} \to f^*\mathcal{G}$, since $f^*\mathcal{G}$ is an LGB whose structure is naturally inherited by $\mathcal{G}$ as given in Cor.\ \ref{cor:PullbackLGB}; similarly for its LAB by Cor.\ \ref{cor:PullBackLABIsLAB}. Thus, it is fibre-wise a Lie group morphism, and its tangent map restricted to the identity section, $\mathrm{D}_eF$, gives fibre-wise a Lie algebra morphism. Thus, $\mathrm{D}_e F: \mathcal{h} \to f^*\mathcal{g}$ is an LAB morphism (using Cor.\ \ref{cor:LABOfPullbackLGBIsPullbackLAB}), and can be seen as an LAB morphism $\mathcal{h} \to \mathcal{g}$ over $f$. Alternatively, it is straightforward and trivial to show it directly.
+Again by our notes in Subsection \ref{BasicNotations}, we can view $F$ as a base-preserving LGB morphism $F: \mathcal{H} \to f^*\mathcal{G}$, since $f^*\mathcal{G}$ is an LGB whose structure is naturally inherited by $\mathcal{G}$ as given in Cor.\ \ref{cor:PullbackLGB}; similarly for its LAB by Cor.\ \ref{cor:PullBackLABIsLAB}. Thus, it is fibre-wise a Lie group morphism, and its tangent map restricted to $\mathcal{h} = e^*\mathrm{V}\mathcal{H}$ ($e$ the identity section of $\mathcal{H}$) gives therefore fibre-wise a Lie algebra morphism. Thus, $\mleft.\mathrm{D} F\mright|_{\mathcal{h}}: \mathcal{h} \to f^*\mathcal{g}$ is an LAB morphism (using Cor.\ \ref{cor:LABOfPullbackLGBIsPullbackLAB}), and can be seen as an LAB morphism $\mathcal{h} \to \mathcal{g}$ over $f$. Alternatively, it is straightforward and trivial to show it directly.
 \end{proof}
 
 \section{LGB actions, part II}
@@ -2504,39 +2505,49 @@ That this is a $\mathcal{G}$-representation on $\mathcal{g}$ follows by the foll
 =
 \mathrm{Ad}_{g} \circ \mathrm{Ad}_{q}.
 \eas
-However, smoothness has to be shown in a bit more generalized way than the proof in \cite[\S 2.1, Thm.\ 2.1.45, page 101f.]{Hamilton}, that is, we equivalently view $\mathrm{Ad}$ as a linear left action $\mathcal{G} * \mathcal{g} \to \mathcal{g}$ as in Def.\ \ref{def:LGBRep} given by
+Smoothness could either be shown in a bit more generalized way than the proof in \cite[\S 2.1, Thm.\ 2.1.45, page 101f.]{Hamilton}, but that would be a bit tedious; instead let us use the already-known smoothness of the adjoint representation in each fibre. Fix an open subset $U$ of $M$ such that $\mathcal{G}$ and $\mathcal{g}$ are trivial, that is, $\mathcal{G}|_U \cong U \times G$ and $\mathcal{g}|_U \cong U \times \mathfrak{g}$ as LGB and LAB, respectively, where $G$ is the structural Lie group with its Lie algebra $\mathfrak{g}$. Then also clearly $\mathrm{Aut}(\mathcal{g})|_U \cong U \times \mathrm{Aut}(\mathfrak{g})$ as LGBs. By construction we then have w.r.t.\ these trivializations
 \bas
-\mathrm{Ad}(g,\nu) &= \mathrm{Ad}_g(\nu)= \mathrm{D}_{e_x}c_g(\nu)
-\eas
-for all $g \in \mathcal{G}_x$ and $\nu \in \mathcal{g}_x$. Similarly we can view the conjugation as a smooth map\footnote{In fact it is obviously a smooth left $\mathcal{G}$-action on itself, and one could generalize Def.\ \ref{def:LieGroupActingOnLieGroup} and derive a similar statement as Cor.\ \ref{cor:LGBRepAsLGBMorph} related to the LGB of fibre-wise $\mathcal{G}$-automorphisms.}
-\bas
-\mathcal{G}*\mathcal{G} &\to \mathcal{G},\\
-(g,h) &\mapsto c(g, h) \coloneqq c_g(h) = g h g^{-1},
-\eas
-making use of Ex.\ \ref{ex:LGBActingOnItself} to derive smoothness as composition of smooth maps.
-Observe that $(0_g, \nu) \in \mathrm{T}_{(g, e)}(\mathcal{G} * \mathcal{G})$ because $\nu \in \mathcal{g}_x \cong \mathrm{V}_{e_x}\mathcal{G}$ is vertical, where $0_g$ is the zero vector of $\mathrm{T}_g\mathcal{G}$; see also Lemma \ref{lem:PullbackFibreBundleItsTangentSp} later for a general statement about bundles like $\mathrm{T}(\mathcal{G} * \mathcal{G})$, or alternatively recall the proof of Cor.\ \ref{cor:VertMCVormIsWellDefined}. Especially, take a curve $\gamma: I \to \mathcal{G}_x$ ($I$ an open interval of $\mathbb{R}$ containing 0) with $\gamma(0) = e_x$ and $\mathrm{d}/\mathrm{d}t|_{t=0}\gamma = \nu$, then
-\bas
-\mathrm{D}_{(g,e_x)}c(0_g, \nu)
-&=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} c\mleft( g, \gamma \mright)
+\mathrm{Ad}_{(x, g)} 
+&= 
+\Bigl( x, \mathrm{D}_{e_G} c^G_g \Bigr)
 =
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} c_g\mleft( \gamma \mright)
-=
-\mathrm{D}_{e_x}c_g(\nu)
-=
-\mathrm{Ad}(g, \nu).
+\Bigl( x, \mathrm{Ad}^G_g \Bigr)
 \eas
-Thus, $\mathrm{Ad}$ is the following composition of maps
-\ba\label{AdjointAsCompOfSmoothMaps}
-\mathcal{G} * \mathcal{g} &\to \mathrm{T}(\mathcal{G} * \mathcal{G}) \to \mathcal{g},\nonumber\\
-\Bigl(g, \mleft(e_{\pi(\nu)}, \nu\mright) \Bigr) &\mapsto \Bigl(\mleft(g, e_{\pi(\nu)}\mright), (0_g, \nu)\Bigr) \mapsto \mathrm{D}_{\mleft(g,e_{\pi(\nu)}\mright)}c\mleft(0_g, \nu\mright),
-\ea
-where $\pi$ denotes the projection of $\mathcal{g} \to M$, and for the first arrow we were carefully denoting the base points in the first component of tangent vectors. The second arrow is smooth because $c$ is smooth. The first arrow is also smooth: The map
-\ba\label{FirstArrowOfAdAsCompOfSmoothmaps}
-\mathcal{G} \times \mathcal{g} &\to \mathrm{T}(\mathcal{G} \times \mathcal{G}),\nonumber\\
-\Bigl(g, \mleft(e_{\pi(\nu)}, \nu\mright) \Bigr) &\mapsto \Bigl(\mleft(g, e_{\pi(\nu)}\mright), (0_g, \nu)\Bigr),
-\ea
-is clearly smooth, and so also its restriction onto $\mathcal{G} * \mathcal{g} = \pi^*\mathcal{G}$ as embedded submanifold of $\mathcal{G} \times \mathcal{g}$. Similarly, $\mathcal{G} * \mathcal{G}$ is an embedded submanifold of $\mathcal{G} \times \mathcal{G}$, and it is therefore well-known by using submanifold charts that then $\mathrm{T}(\mathcal{G} * \mathcal{G})$ is a submanifold of $\mathrm{T}(\mathcal{G} \times \mathcal{G})|_{\mathcal{G} * \mathcal{G}}$, which is itself a submanifold of $\mathrm{T}(\mathcal{G} \times \mathcal{G})$ (see \textit{e.g.}\ \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}). Thence, the restriction of the domain of definition and image of \eqref{FirstArrowOfAdAsCompOfSmoothmaps} is smooth, and this is precisely the first arrow of \eqref{AdjointAsCompOfSmoothMaps}. Finally it follows that $\mathrm{Ad}$ is smooth and therefore a $\mathcal{G}$-representation on $\mathcal{g}$.
+for all $(x, g) \in U \times G$, where $\mathrm{Ad}^G_g: G \to \mathrm{Aut}(\mathfrak{g})$ is the adjoint representation of $G$ on $\mathfrak{g}$. Smoothness now follows trivially by the canonical manifold structure of product manifolds and the smoothness of $\mathrm{Ad}^G$.
+%\eas
+%However, smoothness has to be shown in a bit more generalized way than the proof in \cite[\S 2.1, Thm.\ 2.1.45, page 101f.]{Hamilton}, that is, we equivalently view $\mathrm{Ad}$ as a linear left action $\mathcal{G} * \mathcal{g} \to \mathcal{g}$ as in Def.\ \ref{def:LGBRep} given by
+%\bas
+%\mathrm{Ad}(g,\nu) &= \mathrm{Ad}_g(\nu)= \mathrm{D}_{e_x}c_g(\nu)
+%\eas
+%for all $g \in \mathcal{G}_x$ and $\nu \in \mathcal{g}_x$. Similarly we can view the conjugation as a smooth map\footnote{In fact it is obviously a smooth left $\mathcal{G}$-action on itself, and one could generalize Def.\ \ref{def:LieGroupActingOnLieGroup} and derive a similar statement as Cor.\ \ref{cor:LGBRepAsLGBMorph} related to the LGB of fibre-wise $\mathcal{G}$-automorphisms.}
+%\bas
+%\mathcal{G}*\mathcal{G} &\to \mathcal{G},\\
+%(g,h) &\mapsto c(g, h) \coloneqq c_g(h) = g h g^{-1},
+%\eas
+%making use of Ex.\ \ref{ex:LGBActingOnItself} to derive smoothness as composition of smooth maps.
+%Observe that $(0_g, \nu) \in \mathrm{T}_{(g, e)}(\mathcal{G} * \mathcal{G})$ because $\nu \in \mathcal{g}_x \cong \mathrm{V}_{e_x}\mathcal{G}$ is vertical, where $0_g$ is the zero vector of $\mathrm{T}_g\mathcal{G}$; see also Lemma \ref{lem:PullbackFibreBundleItsTangentSp} later for a general statement about bundles like $\mathrm{T}(\mathcal{G} * \mathcal{G})$, or alternatively recall the proof of Cor.\ \ref{cor:VertMCVormIsWellDefined}. Especially, take a curve $\gamma: I \to \mathcal{G}_x$ ($I$ an open interval of $\mathbb{R}$ containing 0) with $\gamma(0) = e_x$ and $\mathrm{d}/\mathrm{d}t|_{t=0}\gamma = \nu$, then
+%\bas
+%\mathrm{D}_{(g,e_x)}c(0_g, \nu)
+%&=
+%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} c\mleft( g, \gamma \mright)
+%=
+%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} c_g\mleft( \gamma \mright)
+%=
+%\mathrm{D}_{e_x}c_g(\nu)
+%=
+%\mathrm{Ad}(g, \nu).
+%\eas
+%Thus, $\mathrm{Ad}$ is the following composition of maps
+%\ba\label{AdjointAsCompOfSmoothMaps}
+%\mathcal{G} * \mathcal{g} &\to \mathrm{T}(\mathcal{G} * \mathcal{G}) \to \mathcal{g},\nonumber\\
+%\Bigl(g, \mleft(e_{\pi(\nu)}, \nu\mright) \Bigr) &\mapsto \Bigl(\mleft(g, e_{\pi(\nu)}\mright), (0_g, \nu)\Bigr) \mapsto \mathrm{D}_{\mleft(g,e_{\pi(\nu)}\mright)}c\mleft(0_g, \nu\mright),
+%\ea
+%where $\pi$ denotes the projection of $\mathcal{g} \to M$, and for the first arrow we were carefully denoting the base points in the first component of tangent vectors. The second arrow is smooth because $c$ is smooth. The first arrow is also smooth: The map
+%\ba\label{FirstArrowOfAdAsCompOfSmoothmaps}
+%\mathcal{G} \times \mathcal{g} &\to \mathrm{T}(\mathcal{G} \times \mathcal{G}),\nonumber\\
+%\Bigl(g, \mleft(e_{\pi(\nu)}, \nu\mright) \Bigr) &\mapsto \Bigl(\mleft(g, e_{\pi(\nu)}\mright), (0_g, \nu)\Bigr),
+%\ea
+%is clearly smooth, and so also its restriction onto $\mathcal{G} * \mathcal{g} = \pi^*\mathcal{G}$ as embedded submanifold of $\mathcal{G} \times \mathcal{g}$. Similarly, $\mathcal{G} * \mathcal{G}$ is an embedded submanifold of $\mathcal{G} \times \mathcal{G}$, and it is therefore well-known by using submanifold charts that then $\mathrm{T}(\mathcal{G} * \mathcal{G})$ is a submanifold of $\mathrm{T}(\mathcal{G} \times \mathcal{G})|_{\mathcal{G} * \mathcal{G}}$, which is itself a submanifold of $\mathrm{T}(\mathcal{G} \times \mathcal{G})$ (see \textit{e.g.}\ \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}). Thence, the restriction of the domain of definition and image of \eqref{FirstArrowOfAdAsCompOfSmoothmaps} is smooth, and this is precisely the first arrow of \eqref{AdjointAsCompOfSmoothMaps}. Finally it follows that $\mathrm{Ad}$ is smooth and therefore a $\mathcal{G}$-representation on $\mathcal{g}$.
 \end{examples}
 
 Infinitesimally, we have LAB actions and representations; recall Cor.\ \ref{cor:PullBackLABIsLAB}.
@@ -2709,7 +2720,7 @@ and
 &\hspace{1cm}
 	+ \mathrm{D}_{e_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{D}_xe(\omega) \bigr),
 \ea
-where $\tau$ is any additional (local) section of $f$\footnote{That is, $f \circ \tau = \mathds{1}_M$ (locally).} with $\tau_x = p$.
+where $\tau$ is any additional (local) section\footnote{That is, $f \circ \tau = \mathds{1}_M$ (locally).} of $f$ with $\tau_x = p$.
 \end{theorems}
 
 \begin{remark}
@@ -4418,14 +4429,16 @@ Similarly, for a (local) section $\sigma$ of $\mathcal{G}$ we define the \textbf
 \bas
 \mathcal{r}_{\sigma*}(X)
 &\coloneqq
+r_{\sigma_x*}(X)
+=
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
 	- \mleft.{\oversortoftilde{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
-	}}\mright|_{p \cdot \sigma_{\pi(p)}}
+	}}\mright|_{p \cdot \sigma_{x}}
 \eas
-for all $X \in \mathrm{T}_p \mathcal{P}$ ($p \in \mathcal{P}$).
+for all $X \in \mathrm{T}_p \mathcal{P}$ ($p \in \mathcal{P}_x$).
 \end{definitions}
 
 \begin{remarks}{Restriction onto vertical bundle gives typical right pushforward}{ModRightPushOnVertic}
@@ -4440,15 +4453,15 @@ r_{g*}(X)
 for all $X \in \mathrm{V}_p\mathcal{P}$; we actually have proven this directly after Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}. As also pinpointed in Remark \ref{rem:DefOfConnectionIdeaWithDarboux}, if $\mathcal{G}$ is a trivial LGB equipped with its canonical flat connection and $\sigma$ a constant section, then it is easy to see that $\mathcal{r}_{\sigma*} = \mathcal{r}_{g*} = r_{g*}$, where $r_g$ has to be understood as the right-translation of the canonical Lie group action inherited by $\mathcal{G}$ in the sense of Ex.\ \ref{ex:TrivialLGBAction}.
 \end{remarks}
 
-\begin{remark}
+\begin{remark}\label{RSigmaAnAuto}
 \leavevmode\newline
-Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} also extends to $\mathcal{r}_{\sigma*}$, that is $\mathcal{r}_{\sigma*}$ is a (local) automorphism of $\mathrm{T}\mathcal{P}$ over $r_\sigma$.
+Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} trivially extends to $\mathcal{r}_{\sigma*}$, that is $\mathcal{r}_{\sigma*}$ is a (local) automorphism of $\mathrm{T}\mathcal{P}$ over $r_\sigma$.
 \end{remark}
 
 Hence, the following definition makes sense, especially if thinking about what we discussed for Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}.
 
 \begin{definitions}{Ehresmann connection on principal LGB-bundles}{FinallyTheConnection}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal distributions $\mathrm{H}\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ on $\mathcal{G}$ and $\mathcal{P}$, respectively. We call $\mathrm{H}\mathcal{P}$ an \textbf{Ehresmann connection} or a \textbf{connection on $\mathcal{P}$} if
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal distributions $\mathrm{H}\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ on $\mathcal{G}$ and $\mathcal{P}$, respectively. We call $\mathrm{H}\mathcal{P}$ an \textbf{Ehresmann connection} or a \textbf{connection on $\mathcal{P}$} if it is \textbf{right-invariant}, \textit{i.e.}\
 \bas
 \mathcal{r}_{g*}\mleft( \mathrm{H}_p\mathcal{P} \mright)
 &=
@@ -4513,11 +4526,55 @@ By Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} and dimensional reasons (hor
 We call such connections on LGBs associated to a pre-classical principal bundle an \textbf{associated connection}.
 \end{examples}
 
-As expected, we have a corresponding connection 1-form.
+As expected, we have a corresponding connection 1-form; also recall Ex.\ \ref{ex:LGBAdjointRep} and the isomorphism for $\mathrm{V}\mathcal{P}$ in Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}. For this we need to formally define the pullback of 1-forms with respect to the modified right-pushforward.
+
+\begin{definitions}{The pullback of forms }{PullbackOfFormsViaModRight}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. For $\omega \in \Omega^k(\mathcal{P}; \pi^*\mathcal{g})$ ($k \in \mathbb{N}_0$) we define the \textbf{pullback via the modified right pushforward $\mathcal{r}_g^!\mleft(\mleft.\omega\mright|_{\mathcal{P}_x}\mright)$ (with $g\in\mathcal{G}_x$, over $\mathcal{P}_x$, $x \in M$)} as an element of $\Gamma \mleft( \mleft.\mathrm{T}^*\mathcal{P}\mright|_{\mathcal{P}_x} \otimes \mathcal{g}_x \mright)$ by
+\bas
+\mleft.\mleft(\mathcal{r}_g^!\mleft(\mleft.\omega\mright|_{\mathcal{P}_x}\mright)\mright)\mright|_p \mleft( Y_1, \dotsc, Y_k\mright)
+&\coloneqq
+\omega_{p \cdot g} \bigl( \mathcal{r}_{g*}(Y_1), \dotsc, \mathcal{r}_{g*}(Y_k)\bigr)
+\eas
+for all $p \in \mathcal{P}_x$ and $Y_1, \dotsc, Y_k \in \mathrm{T}_p\mathcal{P}$. Similarly we define \textbf{$r^!_{\sigma}\omega$ with a (local) section $\sigma \in \Gamma(\mathcal{G})$} as an element of $\Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ by 
+\bas
+\mleft.\mleft(\mathcal{r}_\sigma^!\omega\mright)\mright|_p \mleft( Y_1, \dotsc, Y_k\mright)
+&\coloneqq
+\mleft.\mleft(\mathcal{r}_{\sigma_x}^!\mleft(\mleft.\omega\mright|_{\mathcal{P}_x}\mright)\mright)\mright|_p \mleft( Y_1, \dotsc, Y_k\mright)
+=
+\mleft.\mleft(r_\sigma^*\omega\mright)\mright|_{p} \bigl( \mathcal{r}_{\sigma*}(Y_1), \dotsc, \mathcal{r}_{\sigma*}(Y_k)\bigr)
+\eas
+for all $p \in \mathcal{P}_x$ and $Y_1, \dotsc, Y_k \in \mathrm{T}_p\mathcal{P}$.
+\end{definitions}
+
+\begin{remark}
+\leavevmode\newline
+By Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} (and Remark \ref{RSigmaAnAuto})
+\end{remark}
 
 \begin{definitions}{Connection 1-forms on principal LGB-bundles}{GaugeBosonsOnLGBPrincies}
-
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. A \textbf{connection 1-form} on $\mathcal{P}$ is a 1-form $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ satisfying:
+\begin{itemize}
+	\item \textbf{($\mathcal{G}$-equivariance)}
+		\bas 
+			\mleft(\mathcal{r}_g^! \mleft(\mleft.A\mright|_{\mathcal{P}_x}\mright)\mright)_p
+			&=
+			\mleft(p,\mathrm{Ad}_{g^{-1}}\mright) \circ A_p
+		\eas
+	for all $(p, g) \in \mathcal{P} * \mathcal{G}$.
+	\item \textbf{(Identity on $\mathrm{V}\mathcal{P}$)}
+	\bas
+	A\mleft(\widetilde{\nu}\mright)
+	&=
+	\pi^*\nu
+	\eas
+	for all (local) $\nu \in \Gamma(\mathcal{g})$.
+\end{itemize}
 \end{definitions}
+
+\begin{remark}
+\leavevmode\newline
+A note about the notation on the right hand side of the $\mathcal{G}$-equivariance's definition: $A$ has values in $\pi^*\mathcal{g}$, while $\mathrm{Ad}_g$ is an element of $\mathrm{Aut}(\mathcal{g})$
+\end{remark}
 
 \subsection{Gauge transformations}
 
