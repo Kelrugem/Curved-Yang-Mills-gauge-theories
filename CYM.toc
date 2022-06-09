@@ -19,22 +19,22 @@
 \contentsline {subsection}{\numberline {6.1}LGB and LAB representations}{41}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Fundamental vector fields}{45}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Differential of smooth LGB actions}{46}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Connections and curvature on LGB principal bundles}{51}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Principal bundles with structural LGB}{51}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Definition}{51}{subsubsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.2}Examples}{53}{subsubsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.3}Morphism of principal LGB-bundles}{54}{subsubsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.2}Generalized distributions and connections}{62}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}Idea and motivation}{64}{subsubsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.3}Darboux derivative on LGBs}{67}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Generalized connection 1-forms on principal bundles}{73}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Gauge transformations}{80}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Generalized curvature/field strength}{80}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Generalized covariant derivative/minimal coupling}{80}{subsection.7.7}%
-\contentsline {section}{\numberline {8}Curved Yang-Mills gauge theory}{80}{section.8}%
-\contentsline {section}{\numberline {9}Conclusion}{80}{section.9}%
-\contentsline {section}{\nonumberline List of References}{80}{section*.3}%
-\contentsline {section}{\numberline {A}Other Interpretations of the compatibility conditions}{81}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Minimal coupling}{81}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Axiomatic Yang-Mills gauge theories}{87}{subsection.A.2}%
+\contentsline {section}{\numberline {7}Connections and curvature on LGB principal bundles}{52}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Principal bundles with structural LGB}{52}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Definition}{52}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Examples}{54}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Morphism of principal LGB-bundles}{55}{subsubsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.2}Generalized distributions and connections}{63}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Idea and motivation}{65}{subsubsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.3}Darboux derivative on LGBs}{68}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Generalized connection 1-forms on principal bundles}{74}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Gauge transformations}{81}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Generalized curvature/field strength}{81}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Generalized covariant derivative/minimal coupling}{81}{subsection.7.7}%
+\contentsline {section}{\numberline {8}Curved Yang-Mills gauge theory}{81}{section.8}%
+\contentsline {section}{\numberline {9}Conclusion}{81}{section.9}%
+\contentsline {section}{\nonumberline List of References}{81}{section*.3}%
+\contentsline {section}{\numberline {A}Other Interpretations of the compatibility conditions}{82}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Minimal coupling}{82}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Axiomatic Yang-Mills gauge theories}{88}{subsection.A.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
