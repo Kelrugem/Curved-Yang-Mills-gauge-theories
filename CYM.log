@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  9 JUN 2022 23:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  11 JUN 2022 01:44
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1305,25 +1305,25 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38]
 [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53]
-[54] [55] [56] [57] [58] [59] [60] [61] [62] [63]
-Underfull \hbox (badness 10000) in paragraph at lines 3533--3534
+[54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65]
+Underfull \hbox (badness 10000) in paragraph at lines 3624--3625
 
  []
 
-[64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
-[79] [80]
-Underfull \hbox (badness 10000) in paragraph at lines 4665--4666
+[66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80]
+[81]
+Underfull \hbox (badness 10000) in paragraph at lines 4756--4757
 
  []
 
-(CYM.bbl
+[82] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-[81]) [82]
-Overfull \hbox (2.20065pt too wide) in paragraph at lines 4805--4823
+) [83] [84]
+Overfull \hbox (2.20065pt too wide) in paragraph at lines 4896--4914
 \OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/
 10.95 )$ \T1/lmr/m/n/10.95 as an el-e-ment of $\OT1/lmr/m/n/10.95 
 [](\OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.95 ; [](\OML/lmm/m/it/10.95 V\OT1/lmr/m
@@ -1335,7 +1335,7 @@ mm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/10.95
 /n/10.95 ))$
  []
 
-[83] [84] [85] [86] [87] [88] (CYM.aux)
+[85] [86] [87] [88] [89] (CYM.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -1343,10 +1343,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34393 strings out of 478907
- 717611 string characters out of 2851891
- 1205618 words of memory out of 3000000
- 51300 multiletter control sequences out of 15000+600000
+ 34401 strings out of 478907
+ 717747 string characters out of 2851891
+ 1209882 words of memory out of 3000000
+ 51304 multiletter control sequences out of 15000+600000
  511573 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1388,9 +1388,9 @@ ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/User
 s/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
 
-Output written on CYM.pdf (90 pages, 1033128 bytes).
+Output written on CYM.pdf (91 pages, 1046048 bytes).
 PDF statistics:
- 1499 PDF objects out of 1728 (max. 8388607)
- 342 named destinations out of 1000 (max. 500000)
+ 1524 PDF objects out of 1728 (max. 8388607)
+ 346 named destinations out of 1000 (max. 500000)
  317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

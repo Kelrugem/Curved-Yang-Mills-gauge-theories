@@ -1179,8 +1179,8 @@ f^*\mathcal{G} &\to N,\\
 satisfying the following properties:
 \ba\label{InvarianceOffUnderGAction}
 f(p \cdot g) &= \pi(g),\\
-(p \cdot g) \cdot h &= p \cdot (gh),\\
-p \cdot e_{f(p)} &= p
+(p \cdot g) \cdot h &= p \cdot (gh),\label{ActionAssociative}\\
+p \cdot e_{f(p)} &= p\label{ActionNeutralElement}
 \ea
 for all $p \in N$ and $g, h \in \mathcal{G}_{f(p)}$, where $e_{f(p)}$ is the neutral element of $\mathcal{G}_{f(p)}$.
 \newline
@@ -2422,7 +2422,7 @@ As usual, representations are a special type of group action, with an infinitesi
 %The approach in \cite[\S 1.7, page 43ff.]{mackenzieGeneralTheory} defines an LGB representation by a map which restricts to a typical representation on each fibre of the LGB. However, in alignment with the previous approach we want to keep the fibre-wise behaviour as a remark while the definition itself emphasizes the global structure. For this it will now be important that we have shown that the pullback of an LGB is again an LGB; recall Cor.\ \ref{cor:PullbackLGB}.
 
 \begin{definitions}{LGB representations, \newline\cite[\S 1.7, special situation of the remark before Def.\ 1.7.1, page 43]{mackenzieGeneralTheory}}{LGBRep}
-Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold, $V \stackrel{p}{\to} M$ be a vector bundle, and assume that we have a left $\mathcal{G}$-action on $V$, $\Psi: \mathcal{G}*V \coloneqq p^*\mathcal{G}\to V$. Then we say that $\Psi$ is a \textbf{$\mathcal{G}$-representation on $V$} if it is linear, that is,
+Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$, $V \stackrel{p}{\to} M$ be a vector bundle, and assume that we have a left $\mathcal{G}$-action on $V$, $\Psi: \mathcal{G}*V \coloneqq p^*\mathcal{G}\to V$. Then we say that $\Psi$ is a \textbf{$\mathcal{G}$-representation on $V$} if it is linear, that is,
 \bas
 \Psi(g, \alpha v )
 &=
@@ -2455,7 +2455,7 @@ the horizontal arrows describe the vector bundle structure (viewing $\mathcal{G}
 By fixing a base point $x \in M$ we clearly have the typical notion of a $\mathcal{G}_x$-representation on $V_x$. Equivalently, we could therefore obviously define LGB representations as a base-preserving LGB morphism $\Psi: \mathcal{G} \to \mathrm{Aut}(V)$ as also in \cite[\S 1.7, Def.\ 1.7.1, page 43]{mackenzieGeneralTheory}.
 
 \begin{corollaries}{LGB representations as LGB morphisms, \newline \cite[\S 1.7, Prop.\ 1.7.2, page 43]{mackenzieGeneralTheory}}{LGBRepAsLGBMorph}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold, $V \to M$ be a vector bundle. Then every $\mathcal{G}$-representation $\Psi: \mathcal{G} * V \to V$ is equivalent to a base-preserving LGB morphism $\widetilde{\Psi}: \mathcal{G} \to \mathrm{Aut}(V)$, related by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, $V \to M$ be a vector bundle. Then every $\mathcal{G}$-representation $\Psi: \mathcal{G} * V \to V$ is equivalent to a base-preserving LGB morphism $\widetilde{\Psi}: \mathcal{G} \to \mathrm{Aut}(V)$, related by
 \bas
 \Psi(g, v)
 &=
@@ -2553,7 +2553,7 @@ for all $(x, g) \in U \times G$, where $\mathrm{Ad}^G_g: G \to \mathrm{Aut}(\mat
 
 Infinitesimally, we have LAB actions and representations; recall Cor.\ \ref{cor:PullBackLABIsLAB}.
 
-\begin{definitions}{LAB actions, \newline \cite[\S 4.1, simplified version of Def.\ 4.1.1, page 149]{mackenzieGeneralTheory}}{LABACtions}
+\begin{definitions}{LAB actions, \newline \cite[\S 4.1, reformulated version for LABs of Def.\ 4.1.1, page 149]{mackenzieGeneralTheory}}{LABACtions}
 Let $M, N$ be smooth manifolds, $\mathcal{g} \stackrel{\pi}{\to} M$ an LAB, and $f: N \to M$ a smooth map. Then a \textbf{$\mathcal{g}$-action on $N$} is a base-preserving vector bundle morphism 
 \bas
 f^*\mathcal{g} &\to \mathrm{T}N,\\
@@ -2591,8 +2591,15 @@ Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over 
 \bas
 \rho
 &\coloneqq
-\mleft.\mathrm{D}\Phi\mright|_{f^*\mathcal{g}}.
+\mleft.\mathrm{D}\Phi\mright|_{f^*\mathcal{g}},
 \eas
+\textit{i.e.}\
+\bas
+\rho(\eta)
+&=
+\mathrm{D}_{\mleft(p, e_{f(p)}\mright)}\Phi(\eta)
+\eas
+for all $\eta \in (f^*\mathcal{g})_p$ ($p\in N$).
 \end{lemmata}
 
 \begin{proof}
@@ -2605,7 +2612,13 @@ Observe that we have
 \in
 \mathrm{T}_p N
 \eas
-for all $(p, \nu) \in f^*\mathcal{g}$, and thus describes a vector bundle morphism $f^*\mathcal{g} \to \mathrm{T}N$. By Eq.\ \eqref{InvarianceOffUnderGAction} we have
+for all $(p, \nu) \in f^*\mathcal{g}$, and thus describes a base-preserving vector bundle morphism $f^*\mathcal{g} \to \mathrm{T}N$. We can rewrite Eq.\ \eqref{InvarianceOffUnderGAction} to
+\bas
+f \circ \Phi
+&=
+\pi \circ \mathrm{pr}_2,
+\eas
+where $\mathrm{pr}_2^{f^*\mathcal{G}}$ is the projection onto the second factor in $f^*\mathcal{G}\subset N \times \mathcal{G}$. Thence, we have
 \bas
 \mathrm{D}f \circ \rho
 &=
@@ -2613,16 +2626,94 @@ for all $(p, \nu) \in f^*\mathcal{g}$, and thus describes a vector bundle morphi
 =
 \mleft.\mathrm{D}(f \circ \Phi)\mright|_{f^*\mathcal{g}}
 =
-\mleft.\mathrm{D}\mleft(f^*\pi\mright)\mright|_{f^*\mathcal{g}}
+\mleft.\mleft(\mathrm{D}\pi \circ \mathrm{Dpr}_2^{f*\mathcal{G}}\mright)\mright|_{f^*\mathcal{g}}
+=
+\mleft.\mathrm{D}\pi\mright|_{\mathcal{g}} \circ \mathrm{pr}_2^{f^*\mathcal{g}}
 = 0,
 \eas
-making use of that $f^*\mathcal{g}$ is generated by $\mathcal{g}$ and that $\mathcal{g}$ consists of vertical vectors.
+making use of that $\mathcal{g}$ consists of vertical vectors, and where $\mathrm{pr}_2^{f^*\mathcal{g}}$ is the projection onto the second factor in $f^*\mathcal{g} \subset N \times \mathcal{g}$.
+
+The proof of Eq.\ \eqref{ActionLieAlgebroidButNonTrivial} is as straightforward as usual, as a quick argument for the experienced reader observe that Eq.\ \eqref{ActionNeutralElement} and \eqref{ActionAssociative} imply that $\Phi$ induces a Lie group homomorphism $\Gamma(\mathcal{G}) \to \mathrm{Diff}(M)$ ($\mathrm{Diff}$ the group of diffeomorphisms) so that we have the desired Lie algebra homomorphism on an infinitesimal scale.\footnote{We use the notion of sections to avoid the possible lack of smooth structure on the preimages of $f$.} Let $\mu, \nu \in \Gamma(\mathcal{g})$, then we know that 
+\bas
+\bigl[ \mathrm{D}\Phi(f^*\mu), \mathrm{D}\Phi(f^*\nu) \bigr]
+&=
+\mathrm{D}\Phi\mleft(
+	\mleft[ f^*\mu, f^*\nu \mright]_{f^*\mathcal{g}}
+\mright),
+\eas
+if we can show that $\mathrm{D}\Phi(f^*\mu)$ and $\mathrm{D}\Phi(f^*\nu)$ are $\Phi$-related to $f^*\mu$ and $f^*\nu$, respectively; this is a common procedure, see for example \cite[\S A.1, Prop.\ A.1.49, page 615]{Hamilton}. That is, we need to show now that
+\ba\label{PhiRelatedSections}
+\mleft.\mathrm{D}\Phi(f^*\mu)\mright|_{\Phi(p, g) = p \cdot g}
+&\stackrel{!}{=}
+\mathrm{D}_{(p, g)}\Phi\mleft( \mleft.\mleft(f^*\mu\mright)\mright|_{(p,g)} \mright)
+\ea
+for all $(p, g) \in N*\mathcal{G}$, similarly for $\nu$; here we understand the LABs of LGBs as left-invariant vector fields as in Cor.\ \ref{cor:LeftInvVfToLAB}. Observe that we have in general for $\eta \in \Gamma(f^*\mathcal{g})$
+\bas
+\mleft.\mathrm{D}\phi(\eta)\mright|_{p\cdot g}
+&=
+\mathrm{D}_{(p\cdot g, e_x)}\Phi\mleft( \eta_{(p \cdot g, e_x)} \mright)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\Phi \mleft( p \cdot g, \e^{t \xi_{p \cdot g}} \mright)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\mleft( p \cdot g \e^{t \xi_{p \cdot g}} \mright)
+\eas
+for all $(p, g) \in N* \mathcal{G}$ and $t \in \mathbb{R}$,
+where we write in general $\eta_{(p, e_x)} = \mleft(p, \xi_{p}\mright)$ with $\xi_{p} \in \mathcal{g}_x$ ($x \coloneqq f(p)$), and the exponential $\e$ is the one of $\mathcal{G}$. But we also have similarly
+\bas
+\mathrm{D}_{(p,g)}\Phi\bigl(\underbrace{\eta_{(p, g)}}_{\mathclap{ = \mathrm{D}_{(p, e_x)}L_{(p, g)}\mleft( \eta_{(p, e_x)} \mright) }} \bigr)
+&=
+\mathrm{D}_{(p, e_x)}\mleft( \Phi \circ L_{(p, g)} \mright)\mleft( p, \xi_p \mright)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Phi\mleft(
+	p, g \e^{t \xi_p}
+\mright)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft(
+	p \cdot g \e^{t \xi_p}
+\mright),
+\eas
+where $L$ is the left-multiplication in $f^*\mathcal{G}$. So, in order to achieve Eq.\ \eqref{PhiRelatedSections} we now set $\eta = f^*\mu$. That is,
+$
+\eta_{(p, e_x)}
+=
+\mleft( p, \mu_{f(p)} \mright),
+$
+therefore $\xi_p = \mu_{f(p)}$,
+and due to Eq.\ \eqref{InvarianceOffUnderGAction} and Rem.\ \ref{rem:ActionAndPullbackLGBs} we derive $\xi_p = \xi_{p\cdot g}$. In total, we see that Eq.\ \eqref{PhiRelatedSections} is satisfied.
+
+Finally, as argued earlier, we can prove
+\bas
+\bigl[ \mathrm{D}\Phi(f^*\mu), \mathrm{D}\Phi(f^*\nu) \bigr]
+&=
+\mathrm{D}\Phi\mleft(
+	\mleft[ f^*\mu, f^*\nu \mright]_{f^*\mathcal{g}}
+\mright)
+=
+\mathrm{D}\Phi\mleft( f^*\mleft(
+	\mleft[ \mu, \nu \mright]_{\mathcal{g}}
+\mright) \mright),
+\eas
+making use of that the field of Lie brackets of $f^*\mathcal{g}$ is the $f$-pullback of $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ as a section. This finishes the proof.
 \end{proof}
 
-We will later see the canonical example given by fundamental vector fields. Using this we can define LAB representations.
+\begin{remarks}{Variants of the LAB action as Lie algebra homomorphism}{LABHomomorpInActionVariants}
+It is clear that one has a local version of Eq.\ \eqref{ActionLieAlgebroidButNonTrivial}. In fact, as one sees in the proof of Lemma \ref{lem:LGBInduceLABAction}, the argument for Eq.\ \eqref{ActionLieAlgebroidButNonTrivial} works pointwise in $M$, so, we may have a homomorphism of Lie algebras
+\bas
+\mathcal{g}_{x} &\to \Gamma\mleft(\mleft.\mathrm{T}N\mright|_{f^{-1}(\{x\})}\mright),\\
+\nu &\mapsto \mleft[ f^{-1}(\{x\}) \ni p \mapsto \rho(p, \nu) \mright]
+\eas
+for all $x \in M$. Due to a possible lack of manifold structure on $f^{-1}(\{x\})$ we did not restrict to $x\in M$ to avoid technical difficulties. However, $f$ will be the projection of a bundle later, and in that case the fibre $f^{-1}(\{x\})$ is an embedded submanifold of $N$. As argued in Remark \ref{rem:LocalLGBAction}, the $\mathcal{G}$-action is a $\mathcal{G}_x$-action restricted on $f^{-1}(\{x\})$. By what we know about Lie group actions we immediately know that we have the aforementioned Lie algebra homomorphism, and so also Eq.\ \eqref{ActionLieAlgebroidButNonTrivial}. Furthermore, the LAB action has then also values in the vertical bundle by Eq.\ \eqref{LABActionAlongFibres}.
+\end{remarks}
+
+An important example will be fundamental vector fields which we will introduce later. Another example are LAB representations induced by LGB representations.
 
 \begin{definitions}{LAB representations, \cite[\S 3.3, Def.\ 3.3.13, page 107]{mackenzieGeneralTheory}}{LABReps}
-
+Let $\mathcal{g} \stackrel{\pi}{\to} M$ be an LAB over a smooth manifold $M$, $V \stackrel{p}{\to} M$ be a vector bundle, and assume that we have a $\mathcal{g}$-action on $V$, $\psi: p^*\mathcal{g} \to \mathrm{T}V$. Then we say that $\psi$ is a \textbf{$\mathcal{g}$-representation on $V$} if it has values in the set of linear vector fields on $V$, that ist,
+\bas
+\psi(\nu)_{\alpha v + \beta w}
+&=
+\alpha 
+\eas
 \end{definitions}
 
 \subsection{Fundamental vector fields}
