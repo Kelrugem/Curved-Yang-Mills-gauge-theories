@@ -5,44 +5,46 @@ Reallocating 'name_of_file' (item size: 1) to 10 items.
 Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Database file #1: Literatur.bib
-You've used 5 entries,
+Warning--empty school in MyThesis
+You've used 6 entries,
             1791 wiz_defined-function locations,
-            485 strings with 4438 characters,
-and the built_in function-call counts, 910 in all, are:
-= -- 79
-> -- 35
+            492 strings with 4613 characters,
+and the built_in function-call counts, 1044 in all, are:
+= -- 92
+> -- 39
 < -- 2
-+ -- 14
-- -- 9
-* -- 44
-:= -- 156
-add.period$ -- 19
-call.type$ -- 5
++ -- 16
+- -- 10
+* -- 52
+:= -- 182
+add.period$ -- 23
+call.type$ -- 6
 change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 47
-empty$ -- 94
-format.name$ -- 9
-if$ -- 205
+cite$ -- 7
+duplicate$ -- 54
+empty$ -- 105
+format.name$ -- 10
+if$ -- 231
 int.to.chr$ -- 0
-int.to.str$ -- 5
+int.to.str$ -- 6
 missing$ -- 8
-newline$ -- 32
-num.names$ -- 5
-pop$ -- 17
+newline$ -- 38
+num.names$ -- 6
+pop$ -- 19
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 17
+skip$ -- 19
 stack$ -- 0
 substring$ -- 15
-swap$ -- 7
+swap$ -- 8
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 6
-width$ -- 6
-write$ -- 64
+warning$ -- 1
+while$ -- 7
+width$ -- 7
+write$ -- 76
+(There was 1 warning)

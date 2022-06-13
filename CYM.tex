@@ -1191,7 +1191,7 @@ N * \mathcal{G}
 &\coloneqq
 f^*\mathcal{G},
 \ea
-such that the action's notation has the typical shape $N * \mathcal{G} \to N$; one may also write $N * \mathcal{G} = N \times_M \mathcal{G}$. For left actions similarly $\mathcal{G} * N \to N$. 
+such that the action's notation has the typical shape $N * \mathcal{G} \to N$; one may also write $N * \mathcal{G} = N \times_M \mathcal{G}$. For left actions similarly $\mathcal{G} * N \to N$; even though $\mathcal{G} * N$ is the same pullback LGB as for right-actions, we also change the order of notation in this case, that is, $(g, p) \in \mathcal{G} * N$ reads $g \in \mathcal{G}_{f(p)}$ and $p \in N$. 
 \end{definitions}
 
 \begin{remarks}{Relation to the structure of the canonical pullback Lie group bundle over $N$}{ActionAndPullbackLGBs}
@@ -2697,24 +2697,45 @@ making use of that the field of Lie brackets of $f^*\mathcal{g}$ is the $f$-pull
 \end{proof}
 
 \begin{remarks}{Variants of the LAB action as Lie algebra homomorphism}{LABHomomorpInActionVariants}
-It is clear that one has a local version of Eq.\ \eqref{ActionLieAlgebroidButNonTrivial}. In fact, as one sees in the proof of Lemma \ref{lem:LGBInduceLABAction}, the argument for Eq.\ \eqref{ActionLieAlgebroidButNonTrivial} works pointwise in $M$, so, we may have a homomorphism of Lie algebras
+It is clear that one has a local version of Eq.\ \eqref{ActionLieAlgebroidButNonTrivial}. In fact, as one sees in the proof of Lemma \ref{lem:LGBInduceLABAction}, the argument for Eq.\ \eqref{ActionLieAlgebroidButNonTrivial} works pointwise in $M$, so, one may also think of a homomorphism of Lie algebras
 \bas
-\mathcal{g}_{x} &\to \Gamma\mleft(\mleft.\mathrm{T}N\mright|_{f^{-1}(\{x\})}\mright),\\
+\mathcal{g}_{x} &\to \mathfrak{X}\mleft( f^{-1}(\{x\}) \mright),\\
 \nu &\mapsto \mleft[ f^{-1}(\{x\}) \ni p \mapsto \rho(p, \nu) \mright]
 \eas
-for all $x \in M$. Due to a possible lack of manifold structure on $f^{-1}(\{x\})$ we did not restrict to $x\in M$ to avoid technical difficulties. However, $f$ will be the projection of a bundle later, and in that case the fibre $f^{-1}(\{x\})$ is an embedded submanifold of $N$. As argued in Remark \ref{rem:LocalLGBAction}, the $\mathcal{G}$-action is a $\mathcal{G}_x$-action restricted on $f^{-1}(\{x\})$. By what we know about Lie group actions we immediately know that we have the aforementioned Lie algebra homomorphism, and so also Eq.\ \eqref{ActionLieAlgebroidButNonTrivial}. Furthermore, the LAB action has then also values in the vertical bundle by Eq.\ \eqref{LABActionAlongFibres}.
+for all $x \in M$, where we also used Eq.\ \eqref{LABActionAlongFibres}; that is, we expect that an LAB action is equivalent to a fibre-wise Lie algebra action. Due to a possible lack of manifold structure on $f^{-1}(\{x\})$ we did not restrict to $x\in M$ to avoid technical difficulties. However, $f$ will be the projection of a bundle later, and in that case the fibre $f^{-1}(\{x\})$ is an embedded submanifold of $N$. As argued in Remark \ref{rem:LocalLGBAction}, the $\mathcal{G}$-action is a $\mathcal{G}_x$-action restricted on $f^{-1}(\{x\})$. By what we know about Lie group actions we immediately know that we have the aforementioned Lie algebra homomorphism, and so also Eq.\ \eqref{ActionLieAlgebroidButNonTrivial}, in total a fibre-wise Lie algebra action.
 \end{remarks}
 
-An important example will be fundamental vector fields which we will introduce later. Another example are LAB representations induced by LGB representations.
+An important example will be fundamental vector fields which we will introduce later. Another example are LAB representations induced by LGB representations; hence let us introduce LAB representations. We will introduce them in a reverted order than the LGB representations, that is, first defining them as certain LAB morphisms, and then trivially concluding a relation to LAB actions; for the following recall Ex.\ \ref{ex:EndVAnLAB}.
 
 \begin{definitions}{LAB representations, \cite[\S 3.3, Def.\ 3.3.13, page 107]{mackenzieGeneralTheory}}{LABReps}
-Let $\mathcal{g} \stackrel{\pi}{\to} M$ be an LAB over a smooth manifold $M$, $V \stackrel{p}{\to} M$ be a vector bundle, and assume that we have a $\mathcal{g}$-action on $V$, $\psi: p^*\mathcal{g} \to \mathrm{T}V$. Then we say that $\psi$ is a \textbf{$\mathcal{g}$-representation on $V$} if it has values in the set of linear vector fields on $V$, that ist,
-\bas
-\psi(\nu)_{\alpha v + \beta w}
-&=
-\alpha 
-\eas
+Let $\mathcal{g} \to M$ be an LAB over a smooth manifold $M$, and $V \to M$ be a vector bundle. A \textbf{$\mathcal{g}$-representation on $V$} is an LAB morphism $\psi: \mathcal{g} \to \mathrm{End}(V)$.
 \end{definitions}
+
+\begin{corollaries}{LAB representations are specific LAB actions, \newline \cite[\S 4.1, special consequence of Prop.\ 4.1.7 but we do not assume integrability of the LAB, page 153]{mackenzieGeneralTheory}}{LABRepsAreLABActions}
+Let $\mathcal{g} \to M$ be an LAB over a smooth manifold $M$, $V \stackrel{p}{\to} M$ be a vector bundle, and $\psi: \mathcal{g} \to \mathrm{End}(V)$ a $\mathcal{g}$-representation on $V$. Then $\psi$ defines an LAB action $\widetilde{\psi}: p^*\mathcal{g} \to \mathrm{T}V$ by
+\bas
+\widetilde{\psi}(v, \nu)
+&\coloneqq
+-\psi(\nu)(v)
+\eas
+for all $(v, \nu) \in p^*\mathcal{g}$, where one makes use of the identification $\mathrm{T}_vV_x = \mathrm{V}_vV \cong V_x$ ($x \coloneqq p(v)$), so that $V_x \subset \mathrm{T}_vV$.
+\end{corollaries}
+
+\begin{remark}
+\leavevmode\newline
+In fact, similar to LGBs we could have defined LAB representations as a certain type of LAB action with values in certain \textit{linear vector fields}. However, it would exceed this work to introduce these vector fields; start with \cite[\S 3.4, page 110]{mackenzieGeneralTheory} for more elaborated details on how to do this.
+
+As for LGB representations and linear actions, we denote both, LAB representation and its associated sense of action, in the same fashion.
+\end{remark}
+
+This is a known relationship in the case of Lie algebra representations on vector spaces and their associated actions; usually this is proven by assuming a Lie group representation, however, one can show it without assuming integrability of the Lie algebra action. See for example \cite[\S 2.1, proof of Prop.\ 2.1.16, page 22]{MyThesis}. Hence, we will just show that the proof of Cor.\ \ref{cor:LABRepsAreLABActions} breaks down to proving it for Lie algebras acting on vector spaces and refer to the reference for the remaining part of the proof.
+
+\begin{proof}[Proof of Cor.\ \ref{cor:LABRepsAreLABActions}]
+\leavevmode\newline
+By construction we have that $\widetilde{\psi}$ has values in the vertical bundle $\mathrm{V}V$ of $V$, hence Eq.\ \eqref{LABActionAlongFibres} follows. 
+%Making use of $\mathrm{V}_vV \cong V_x$ for all $v\in V_x$ ($x \in M$), it is clear that $p^*V \cong \mathrm{V}V$ as vector bundles.
+As argued in Rem.\ \ref{rem:LABHomomorpInActionVariants}, since $\mathcal{g}$ acts via a representation on a bundle $V$ now, $\widetilde{\psi}: p^*\mathcal{g} \to \mathrm{V}V$ will be an LAB action 
+\end{proof}
 
 \subsection{Fundamental vector fields}
 
