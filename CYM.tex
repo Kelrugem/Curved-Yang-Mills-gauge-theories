@@ -2489,7 +2489,7 @@ The notation of $\mathrm{Aut}(\mathcal{g})$ may be confusing with the notation a
 For the next major example of an LGB representation recall Def.\ \ref{def:LeftRightTranslationConjugation}.
  %and Cor.\ \ref{cor:LGBToLABHomomorphis}. 
 
-\begin{examples}{Adjoint representation, \newline \cite[\S 3.5, special situation of Prop.\ 3.5.20, page 131]{mackenzieGeneralTheory}}{LGBAdjointRep}
+\begin{examples}{Adjoint LGB representation, \newline \cite[\S 3.5, special situation of Prop.\ 3.5.20, page 131]{mackenzieGeneralTheory}}{LGBAdjointRep}
 For $g \in \mathcal{G}_x$ ($x \in M$) we have the conjugation $c_g$ which is a $\mathcal{G}_x$-automorphism. In the usual way we define the \textbf{adjoint representation of $\mathcal{G}$} as a base-preserving LGB morphism $\mathcal{G} \to \mathrm{Aut}(\mathcal{g})$ by
 \bas
 \mathrm{Ad}_g &\coloneqq \mathrm{D}_{e_x} c_g
@@ -2587,7 +2587,7 @@ For the readers familiar with Lie algebroids, especially action Lie algebroid st
 As for Lie group and algebra actions, an LGB action induces an LAB action.
 
 \begin{lemmata}{LGB actions induce LAB actions, \newline \cite[\S 4.1, special situation of Thm.\ 4.1.6, page 152]{mackenzieGeneralTheory}}{LGBInduceLABAction}
-Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then any right (or left) $\mathcal{G}$-action $\Phi: N * \mathcal{G} = f^*\mathcal{G} \to N$ on $N$ induces a $\mathcal{g}$-action $\rho$ on $N$ by 
+Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then any right $\mathcal{G}$-action $\Phi: N * \mathcal{G} = f^*\mathcal{G} \to N$ on $N$ induces a $\mathcal{g}$-action $\rho$ on $N$ by 
 \bas
 \rho
 &\coloneqq
@@ -2602,9 +2602,24 @@ Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over 
 for all $\eta \in (f^*\mathcal{g})_p$ ($p\in N$).
 \end{lemmata}
 
-\begin{proof}
+\begin{remark}\label{LeftActionsAndTheirSignProblem}
 \leavevmode\newline
-Observe that we have
+Similarly to the discussion as in \cite[\S 3.4, page 141ff.]{Hamilton}, one can show the same for left actions, but one has to use the multiplication with the inverse, that is, 
+\bas
+\rho
+&\coloneqq
+\mleft.\mathrm{D}\Phi^\prime\mright|_{f^*\mathcal{g}},
+\eas
+where
+\bas
+\Phi^\prime: \mathcal{G} * N &\to N,\\
+(g, p) &\mapsto g^{-1} \cdot p.
+\eas
+\end{remark}
+
+\begin{proof}[Proof of Lemma \ref{lem:LGBInduceLABAction}]
+\leavevmode\newline
+We generalize the proof as provided in \cite[\S 3.4, proof of Prop.\ 3.4.4, page 144f.]{Hamilton}. Observe that we have
 \bas
 \rho(p, \nu)
 &=
@@ -2657,8 +2672,8 @@ for all $(p, g) \in N*\mathcal{G}$, similarly for $\nu$; here we understand the 
 =
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\mleft( p \cdot g \e^{t \xi_{p \cdot g}} \mright)
 \eas
-for all $(p, g) \in N* \mathcal{G}$ and $t \in \mathbb{R}$,
-where we write in general $\eta_{(p, e_x)} = \mleft(p, \xi_{p}\mright)$ with $\xi_{p} \in \mathcal{g}_x$ ($x \coloneqq f(p)$), and the exponential $\e$ is the one of $\mathcal{G}$. But we also have similarly
+for all $(p, g) \in N* \mathcal{G}$,
+where $t \in \mathbb{R}$ and we write in general $\eta_{(p, e_x)} = \mleft(p, \xi_{p}\mright)$ with $\xi_{p} \in \mathcal{g}_x$ ($x \coloneqq f(p)$), and the exponential $\e$ is the one of $\mathcal{G}$. But we also have similarly
 \bas
 \mathrm{D}_{(p,g)}\Phi\bigl(\underbrace{\eta_{(p, g)}}_{\mathclap{ = \mathrm{D}_{(p, e_x)}L_{(p, g)}\mleft( \eta_{(p, e_x)} \mright) }} \bigr)
 &=
@@ -2702,7 +2717,7 @@ It is clear that one has a local version of Eq.\ \eqref{ActionLieAlgebroidButNon
 \mathcal{g}_{x} &\to \mathfrak{X}\mleft( f^{-1}(\{x\}) \mright),\\
 \nu &\mapsto \mleft[ f^{-1}(\{x\}) \ni p \mapsto \rho(p, \nu) \mright]
 \eas
-for all $x \in M$, where we also used Eq.\ \eqref{LABActionAlongFibres}; that is, we expect that an LAB action is equivalent to a fibre-wise Lie algebra action. Due to a possible lack of manifold structure on $f^{-1}(\{x\})$ we did not restrict to $x\in M$ to avoid technical difficulties. However, $f$ will be the projection of a bundle later, and in that case the fibre $f^{-1}(\{x\})$ is an embedded submanifold of $N$. As argued in Remark \ref{rem:LocalLGBAction}, the $\mathcal{G}$-action is a $\mathcal{G}_x$-action restricted on $f^{-1}(\{x\})$. By what we know about Lie group actions we immediately know that we have the aforementioned Lie algebra homomorphism, and so also Eq.\ \eqref{ActionLieAlgebroidButNonTrivial}, in total a fibre-wise Lie algebra action.
+for all $x \in M$, where we also used Eq.\ \eqref{LABActionAlongFibres}; that is, we expect that an LAB action is fibre-wise a Lie algebra action. Due to a possible lack of manifold structure on $f^{-1}(\{x\})$ we did not restrict to $x\in M$ to avoid technical difficulties. However, $f$ will be the projection of a bundle later, and in that case the fibre $f^{-1}(\{x\})$ is an embedded submanifold of $N$. As argued in Remark \ref{rem:LocalLGBAction}, the $\mathcal{G}$-action is a $\mathcal{G}_x$-action restricted on $f^{-1}(\{x\})$. By what we know about Lie group actions we immediately know that we have the aforementioned Lie algebra homomorphism, and so also Eq.\ \eqref{ActionLieAlgebroidButNonTrivial}, in total a vector bundle morphism $f^*\mathcal{g} \to \mathrm{T}N$ which gives fibre-wise over $x$ rise to a Lie algebra action.
 \end{remarks}
 
 An important example will be fundamental vector fields which we will introduce later. Another example are LAB representations induced by LGB representations; hence let us introduce LAB representations. We will introduce them in a reverted order than the LGB representations, that is, first defining them as certain LAB morphisms, and then trivially concluding a relation to LAB actions; for the following recall Ex.\ \ref{ex:EndVAnLAB}.
@@ -2728,20 +2743,48 @@ In fact, similar to LGBs we could have defined LAB representations as a certain 
 As for LGB representations and linear actions, we denote both, LAB representation and its associated sense of action, in the same fashion.
 \end{remark}
 
-This is a known relationship in the case of Lie algebra representations on vector spaces and their associated actions; usually this is proven by assuming a Lie group representation, however, one can show it without assuming integrability of the Lie algebra action. See for example \cite[\S 2.1, proof of Prop.\ 2.1.16, page 22]{MyThesis}. Hence, we will just show that the proof of Cor.\ \ref{cor:LABRepsAreLABActions} breaks down to proving it for Lie algebras acting on vector spaces and refer to the reference for the remaining part of the proof.
+This is a known relationship in the case of Lie algebra representations on vector spaces and their associated actions; usually this is proven by assuming a Lie group representation, however, one can show it without assuming integrability of the Lie algebra action. See for example \cite[\S 2.1, proof of Prop.\ 2.1.16, page 22]{MyThesis}. Hence, we will just show that the proof of Cor.\ \ref{cor:LABRepsAreLABActions} breaks down to proving it for Lie algebras acting on vector spaces and refer to this reference for the remaining part of the proof.
 
 \begin{proof}[Proof of Cor.\ \ref{cor:LABRepsAreLABActions}]
 \leavevmode\newline
 By construction we have that $\widetilde{\psi}$ has values in the vertical bundle $\mathrm{V}V$ of $V$, hence Eq.\ \eqref{LABActionAlongFibres} follows. 
-%Making use of $\mathrm{V}_vV \cong V_x$ for all $v\in V_x$ ($x \in M$), it is clear that $p^*V \cong \mathrm{V}V$ as vector bundles.
-As argued in Rem.\ \ref{rem:LABHomomorpInActionVariants}, since $\mathcal{g}$ acts via a representation on a bundle $V$ now, $\widetilde{\psi}: p^*\mathcal{g} \to \mathrm{V}V$ will be an LAB action 
+Making use of $\mathrm{V}_vV \cong V_x$ for all $v\in V_x$ ($x \in M$), it is clear that $p^*V \cong \mathrm{V}V$ as vector bundles, and so it is trivial to see that $\widetilde{\psi}$ as a map $p^*\mathcal{g} \to p^*V$ is a smooth and base-preserving vector bundle morphism due to that $\psi$ is a smooth map with values in $\mathrm{End}(V)$ (making again use of that $p^*\mathcal{g}$ is an embedded submanifold of $V \times \mathcal{g}$, similarly for $p^*V$ as embedded submanifold of $V \times V$).
+
+As argued in Rem.\ \ref{rem:LABHomomorpInActionVariants}, since $\mathcal{g}$ acts via a representation on a bundle $V$, $\widetilde{\psi}: p^*\mathcal{g} \to \mathrm{V}V$ will be an LAB action, if it induces a Lie algebra action over each base point $x \in M$ via
+\bas
+\mathcal{g}_x &\to \mathfrak{X}(V_x),\\
+\nu &\mapsto \mleft[ V_x \ni v \mapsto \widetilde{\psi}\mleft(v, \nu\mright) \mright].
+\eas
+Since $\psi$ is just a $\mathcal{g}_x$-representation on $V_x$ over $x$ we know by \cite[\S 2.1, proof of Prop.\ 2.1.16, page 22]{MyThesis} that $\psi$ indeed gives rise to a $\mathcal{g}_x$-action on $V_x$ by
+\bas
+\widetilde{\psi}\mleft(v, \nu\mright)
+&=
+- \psi(\nu)(v)
+\eas
+for all $v \in V_x$ and $\nu \in \mathcal{g}_x$, which is precisely the form of $\widetilde{\psi}$. Thus, $\widetilde{\psi}$ is an LAB action.
 \end{proof}
+
+Usually statements like Cor.\ \ref{cor:LABRepsAreLABActions} are proven by assuming integrability: LGB representations as linear actions $V*\mathcal{G} \to V$ and as LGB morphisms $\mathcal{G} \to \mathrm{Aut}(V)$ are the same by Cor.\ \ref{cor:LGBRepAsLGBMorph}; the former induces LAB actions $p^*\mathcal{g} \to \mathrm{T}V$ by Lemma \ref{lem:LGBInduceLABAction}, and in the same manner the latter implies LAB morphisms $\mathcal{g} \to \mathrm{End}(V)$ by Cor.\ \ref{cor:LGBToLABHomomorphis}. Thence, LAB representations can be viewed as certain LAB actions. 
+
+The adjoint representation is an important example inherited by an LGB representation; this example will conclude this subsection.
+
+\begin{examples}{Adjoint LAB representations, \newline \cite[\S 3.3, special situation of Ex.\ 3.3.15, page 108]{mackenzieGeneralTheory}}{LABAdjointRep}
+Let us assume the same situation as in Ex.\ \ref{ex:LGBAdjointRep}, especially we have the adjoint representation of the LGB $\mathcal{G}\to M$, $\mathrm{Ad}: \mathcal{G} \to \mathrm{Aut}(\mathcal{g})$. As discussed earlier, its infinitesimal version is a $\mathcal{g}$-representation on itself, the \textbf{adjoint representation $\mathrm{ad}$ of $\mathcal{g}$}. By construction,
+\bas
+\mathrm{ad}_\nu(\mu)
+&\coloneqq
+\mathrm{ad}(\nu)(\mu)
+=
+\mleft[ \nu, \mu \mright]_{\mathcal{g}_x}
+\eas
+for all $\nu, \mu \in \mathcal{g}_x$ ($x\in M$).
+\end{examples}
 
 \subsection{Fundamental vector fields}
 
-\textbf{Maybe introduce as LAB action}
+The LAB actions inherited by LGB actions are actually so important that they have a separate label; we are following \cite[\S 3.4, generalization of Def.\ 3.4.1, page 143]{Hamilton} for the labeling:
 
-\begin{definitions}{Fundamental vector fields, \newline \cite[\S 3.4, generalization of Def.\ 3.4.1, page 143]{Hamilton}}{FundVecs}
+\begin{definitions}{Fundamental vector fields}{FundVecs}
 Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \to M$ an LGB over $M$, $f: N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, $N * \mathcal{G} \to N$. For $\nu \in \Gamma(\mathcal{g})$ we define its induced \textbf{fundamental vector field $\widetilde{\nu}$} as an element of $\mathfrak{X}(N)$ by
 \bas
 \widetilde{\nu}_p
@@ -2764,6 +2807,32 @@ g &\mapsto g^{-1} \cdot p.
 \eas
 \end{definitions}
 
+\begin{remarks}{Map to fundamental vector fields an LAB action}{FundVecsAreLABActions}
+As anticipated, this is related to the LAB action coming from the right $\mathcal{G}$-action $\Phi: N*\mathcal{G} \to N$. The following can also be shown for left actions in a similar manner by recalling Rem.\ \ref{LeftActionsAndTheirSignProblem}.
+
+By Lemma \ref{lem:LGBInduceLABAction} we have an LAB action $\rho: f^*\mathcal{g} \to \mathrm{T}N$ given by $\mleft.\rho \coloneqq \mathrm{D}\Phi\mright|_{f^*\mathcal{g}}$. We have
+\bas
+\rho(p, \nu)
+&=
+\mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0} \Phi\mleft( p, \e^{t\nu} \mright)
+=
+\mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0} \mleft( p \cdot \e^{t\nu} \mright)
+=
+\mathrm{D}_{e_{f(p)}}\Phi_p(\nu)
+\eas
+for all $(p, \nu) \in f^*\mathcal{g}$, where $t \in \mathbb{R}$, $\e$ is the exponential map of $\mathcal{G}$, and $e_{f(p)}$ the neutral element of $\mathcal{G}_{f(p)}$. Thus, the map to fundamental vector fields
+\bas
+\Gamma(\mathcal{g}) &\mapsto \mathfrak{X}(N),\\
+\nu &\mapsto \widetilde{\nu},
+\eas
+is equivalent to the map
+\bas
+\Gamma(\mathcal{g}) &\to \mathfrak{X}(N),\\
+\nu &\mapsto \rho\mleft( f^*\nu \mright)
+\eas
+induced by $\rho$ as in Def.\ \ref{def:LABACtions}, which also implies that the map to the fundamental vector fields is a homomorphism of Lie algebras.
+\end{remarks}
+
 \begin{remarks}{Notation}{FundVecsNotations}
 Again, point-wise this is just the typical definition of a fundamental vector field at $x \coloneqq f(p)$ with respect to $\nu_x \in \mathcal{g}_x$ (except that $f^{-1}(\{x\})$ may not be a manifold). Hence, one has also a point-wise definition which we will also denote similarly by $\widetilde{\nu_x}$. If $f^{-1}(\{x\})$ is not a manifold, then $\mleft.\widetilde{\nu_x}\mright|_p$ is just a formal notation, and it only defines an element of $\mathrm{T}_pN$ which may not be related to a vector field on $f^{-1}(\{x\})$, not even to a vector field on $N$ if $\nu_x$ does not formally come from a fixed section of $\mathcal{g}$.
 
@@ -2775,17 +2844,6 @@ For long expressions we use the following different font
 \eas
 instead of $\widetilde{\nu}$.
 \end{remarks}
-
-\begin{remarks}{Map to fundamental vector fields an LAB action}{FundVecsAreLABActions}
-As expected 
-\end{remarks}
-
-%
-%\subsection{Maurer-Cartan form of LGBs}
-%
-%We discussed the vertical Maurer-Cartan form, the form that is just defined on vertical tangent vectors. However, we can extend the vertical form to a form defined on the whole tangent space of an LGB by using an Ehresmann connection.
-
-\textbf{Adding typical stuff about fundamental vector fields, like Prop 3.4.4 in Hamilton; and smoothness}
 
 \subsection{Differential of smooth LGB actions}
 
