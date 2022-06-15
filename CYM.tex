@@ -2807,6 +2807,18 @@ g &\mapsto g^{-1} \cdot p.
 \eas
 \end{definitions}
 
+\begin{remarks}{Notation}{FundVecsNotations}
+Again, point-wise over $x \coloneqq f(p)$ this is just the typical definition of a fundamental vector field with respect to $\nu_x \in \mathcal{g}_x$ (except that $f^{-1}(\{x\})$ may not be a manifold). Hence, one has also a point-wise definition which we will also denote similarly by $\widetilde{\nu_x}$. If $f^{-1}(\{x\})$ is not a manifold, then $\mleft.\widetilde{\nu_x}\mright|_p$ is just a formal notation, and it only defines an element of $\mathrm{T}_pN$ which may not be related to a vector field on $f^{-1}(\{x\})$, not even to a vector field on $N$ if $\nu_x$ does not formally come from a fixed section of $\mathcal{g}$.
+
+However, if $f$ is \textit{e.g.}\ the projection of a bundle, then we have a $\mathcal{G}$-action on the fibre $f^{-1}(\{x\})$ as manifold, and therefore $\widetilde{\nu}|_{f^{-1}(\{x\})}$ and $\widetilde{\nu_x}$ give rise to a vector field on $f^{-1}(\{x\})$. In other words, fundamental vector fields are vertical vector fields as expected and fibre-wise fundamental vector fields coming from a Lie group action.
+
+For long expressions we use the following different font 
+\bas
+\oversortoftilde{\nu}
+\eas
+instead of $\widetilde{\nu}$.
+\end{remarks}
+
 \begin{remarks}{Map to fundamental vector fields an LAB action}{FundVecsAreLABActions}
 As anticipated, this is related to the LAB action coming from the right $\mathcal{G}$-action $\Phi: N*\mathcal{G} \to N$. The following can also be shown for left actions in a similar manner by recalling Rem.\ \ref{LeftActionsAndTheirSignProblem}.
 
@@ -2819,6 +2831,8 @@ By Lemma \ref{lem:LGBInduceLABAction} we have an LAB action $\rho: f^*\mathcal{g
 \mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0} \mleft( p \cdot \e^{t\nu} \mright)
 =
 \mathrm{D}_{e_{f(p)}}\Phi_p(\nu)
+=
+\widetilde{\nu}_p
 \eas
 for all $(p, \nu) \in f^*\mathcal{g}$, where $t \in \mathbb{R}$, $\e$ is the exponential map of $\mathcal{G}$, and $e_{f(p)}$ the neutral element of $\mathcal{G}_{f(p)}$. Thus, the map to fundamental vector fields
 \bas
@@ -2830,19 +2844,7 @@ is equivalent to the map
 \Gamma(\mathcal{g}) &\to \mathfrak{X}(N),\\
 \nu &\mapsto \rho\mleft( f^*\nu \mright)
 \eas
-induced by $\rho$ as in Def.\ \ref{def:LABACtions}, which also implies that the map to the fundamental vector fields is a homomorphism of Lie algebras.
-\end{remarks}
-
-\begin{remarks}{Notation}{FundVecsNotations}
-Again, point-wise this is just the typical definition of a fundamental vector field at $x \coloneqq f(p)$ with respect to $\nu_x \in \mathcal{g}_x$ (except that $f^{-1}(\{x\})$ may not be a manifold). Hence, one has also a point-wise definition which we will also denote similarly by $\widetilde{\nu_x}$. If $f^{-1}(\{x\})$ is not a manifold, then $\mleft.\widetilde{\nu_x}\mright|_p$ is just a formal notation, and it only defines an element of $\mathrm{T}_pN$ which may not be related to a vector field on $f^{-1}(\{x\})$, not even to a vector field on $N$ if $\nu_x$ does not formally come from a fixed section of $\mathcal{g}$.
-
-However, if $f$ is \textit{e.g.}\ the projection of a bundle, then we have a $\mathcal{G}$-action on the fibre $f^{-1}(\{x\})$ as manifold, and therefore $\widetilde{v}|_{f^{-1}(\{x\})}$ and $\widetilde{\nu_x}$ give rise to a vector field on $f^{-1}(\{x\})$. In other words, fundamental vector fields are vertical vector fields as expected.
-
-For long expressions we use the following different font 
-\bas
-\oversortoftilde{\nu}
-\eas
-instead of $\widetilde{\nu}$.
+induced by $\rho$ as in Def.\ \ref{def:LABACtions}, which also implies that the map to the fundamental vector fields is a homomorphism of Lie algebras. Last but not least, by Def.\ \ref{def:LABACtions} it follows that fundamental vector fields are in the kernel of $\mathrm{D}f$.
 \end{remarks}
 
 \subsection{Differential of smooth LGB actions}
@@ -3693,15 +3695,33 @@ for all $(p, g) \in \mathcal{P} * \mathcal{G}$, and we have an isomorphism of ve
 \pi^*\mathcal{g}
 \ea
 given by
-\bas
-\pi^*\mathcal{g} &\to \mathrm{V}\mathcal{P},\\
-(p, \nu) &\mapsto \widetilde{\nu}_p.
-\eas
+\ba
+\pi^*\mathcal{g} &\to \mathrm{V}\mathcal{P},\nonumber\\
+(p, \nu) &\mapsto \widetilde{\nu}_p.\label{FundVecAsMapIsIsom}
+\ea
 \end{corollaries}
 
 \begin{proof}
 \leavevmode\newline
-
+Recall Rem.\ \ref{rem:LGBPrincDefDiscussion} for this proof. By definition it is clear that each fibre $\mathcal{P}_x$ ($x \in M$) is a principal $\mathcal{G}_x$-bundle over $\{x\}$ whose $\mathcal{G}_x$-action is the $\mathcal{G}$-action restricted to $x$, and thus we know
+\bas
+\mathrm{D}_pr_g\mleft(\mathrm{V}_p\mathcal{P}_x\mright)
+=
+\mathrm{V}_{p\cdot g} \mathcal{P}_x
+\eas
+for all $p \in \mathcal{P}_x$ and $g \in \mathcal{G}_x$; see \textit{e.g.}\ \cite[\S 5.1, fourth part of Prop.\ 5.1.3, page 258f.]{Hamilton}\ for such statements about principal Lie group bundles. Due to that $\mathcal{P}_x$ is a bundle over a point, we have $\mathrm{V}\mathcal{P}_x = \mathrm{T}\mathcal{P}_x = \mleft.\mathrm{V}\mathcal{P}\mright|_{\mathcal{P}_x}$. Thus,
+\bas
+\mathrm{D}_pr_g\mleft(\mathrm{V}_p\mathcal{P}\mright)
+=
+\mathrm{V}_{p\cdot g} \mathcal{P}.
+\eas
+Due to the fact that the $\mathcal{G}$-action is simply transitive we can derive that its induced $\mathcal{g}$-action $\rho$ is a vector bundle isomorphism: By Rem.\ \ref{rem:FundVecsAreLABActions} this LAB action $\rho$ is precisely \eqref{FundVecAsMapIsIsom} and $\rho$ has values in $\mathrm{V}\mathcal{P}$ by Eq.\ \eqref{LABActionAlongFibres}. We know that the orbit maps $\Phi_p: \mathcal{G}_x \to \mathcal{P}_x$ through $p \in \mathcal{P}_x$ are $\mathcal{G}_x$-equivariant diffeomorphisms, so that $\mathrm{D}_{e_x}\Phi_p: \mathcal{g}_x \to \mathrm{V}_p\mathcal{P}$ is a vector space isomorphism. But we also have
+\bas
+\rho(p, \nu)
+&=
+\mathrm{D}_{e_x}\Phi_p(\nu)
+\eas
+for all $\nu\in \mathcal{g}_x$, and therefore $\rho$ is fibre-wise an isomorphism of vector spaces such that it is an isomorphism of vector bundles.
 \end{proof}
 
 By this result, we would like to have Eq.\ \eqref{SymmetryOfTheVerticalBundle} also for a chosen horizontal distribution. However, its formulation leads to certain problems which we now want to discuss.
