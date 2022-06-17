@@ -4259,7 +4259,7 @@ for all $g \in G$ and $Y \in \mathrm{T}_g\mathcal{G}$.
 This is clearly well-defined by construction; also recall our discussion of the vertical Maurer-Cartan form, especially Cor.\ \ref{cor:VertMCVormIsWellDefined}.
 
 \begin{remarks}{Total Maurer-Cartan form just typical form on trivial LGBs}{TrivialLGBsAndTheirMCForm}
-Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\mathrm{pr}_1}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \mathrm{pr}_1^*\mathrm{T}M$. Its LAB $\mathcal{g}$ is also trivial $M \times \mathfrak{g}$, and we have several identities (recall Cor.\ \ref{cor:TLGBAsLGB})
+Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\mathrm{pr}_1}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \mathrm{pr}_1^*\mathrm{T}M$, where $\mathrm{pr}_1$ is the projection onto the first component in $M \times G$. Its LAB $\mathcal{g}$ is also trivial $M \times \mathfrak{g}$, and we have several identities (recall Cor.\ \ref{cor:TLGBAsLGB})
 \bas
 \mathrm{T}\mathcal{G}
 &\cong
@@ -4284,6 +4284,14 @@ L_{(x, g)}\bigl( (x, q) \bigr)
 \bigl(x, L_g(q)\bigr)
 \eas
 for all $(x, q) \in M \times G$, where the left-tanslation on the right hand side is the one in $G$. Thence,
+\bas
+L_{(x, g)}
+&=
+\mleft(
+	\mathrm{pr}_1, L_{\mathrm{pr_2}(x. g)} \circ \mathrm{pr}_2
+\mright),
+\eas
+and hence
 \bas
 \mathrm{D}_{(x, g)} L_{(x, g)^{-1}}
 &=
