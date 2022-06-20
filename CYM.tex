@@ -4577,18 +4577,17 @@ Then the addition and scalar multiplication with $\lambda \in \mathbb{R}$ for $\
 &\coloneqq
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} (\lambda X),
 \eas
-where the addition of curves is well-defined because of $\pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y$ which implies $\pi_{\mathrm{T}M}(X+Y)= \pi_{\mathrm{T}M}(X) = \pi_{\mathrm{T}M}(Y)$; so, one can take the sum of the curves and
+where the addition of curves is well-defined because of $\pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y$ which implies $\pi_{\mathrm{T}M}\circ (X+Y)= \pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y$; so, one can take the sum of the curves and
 \bas
 \mathrm{D}\pi_{\mathrm{T}M}(\xi \RPlus \eta)
 &=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \underbrace{\pi_{\mathrm{T}M} (X+Y)}_{= \pi(X)} \bigr)
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \underbrace{\pi_{\mathrm{T}M} \circ (X+Y)}_{= \pi_{\mathrm{T}M}\circ X} \bigr)
 =
 \mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi)
 =
 \omega.
 \eas
-In other words, those operations come from interpreting tangent vectors as equivalence classes of curves, assuming there are representatives of the classes sharing the same base path ($\pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y$) with which one can do those operations.
-It is trivial to show that we have a double vector bundle. The operations of the linear structure in $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ is still denoted in the same manner as usual, and by definition one also gets
+The operations of the linear structure in $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ is still denoted in the same manner as usual, and by definition one also gets
 \bas
 \pi_{\mathrm{TT}M}(\xi \RPlus \eta)
 &=
@@ -4599,37 +4598,72 @@ It is trivial to show that we have a double vector bundle. The operations of the
 &=
 \lambda ~ \pi_{\mathrm{TT}M}(\xi).
 \eas
+So, in total we have a smooth map $\alpha: I^2 = I \times I \to M$ satisfying
 
-As we already did frequently, a tangent vector $\xi \in \mathrm{T}_X\mathrm{T}M$ at $X \in \mathrm{T}_pM$ ($p \in M$) can be written as
-\bas
-\xi
-&=
-\underbrace{\mathrm{D}_X\pi_{\mathrm{T}M}(\xi)}_{\eqqcolon \omega}
-	+ \underbrace{\xi - \mathrm{D}_X\pi_{\mathrm{T}M}(\xi)}_{\eqqcolon \xi^v}
-=
-\omega
-	+ \xi^v,
-\eas
-where $\xi^v$ is a vertical vector of $\mathrm{T}M \stackrel{\pi_{\mathrm{T}M}}{\to} M$, and by definition $\omega \in \mathrm{T}_pM$. For another tangent vector $\eta \in \mathrm{T}_Y\mathrm{T}M$ ($Y \in \mathrm{T}_pM$) with $\mathrm{D}_Y\pi_{\mathrm{T}M}(\eta) = \omega$, \textit{i.e.}\ $\eta \in \mleft(\mathrm{D}\pi_{\mathrm{T}M}\mright)^{-1}(\{\omega\})$, we introduce a similar notation, and we define the addition\ $\RPlus$\ and scalar multiplication $\boldsymbol{\cdot}$ of $\mathrm{D}\pi_{\mathrm{T}M}: \mathrm{TT}M \to \mathrm{T}M$ by
-\bas
-\xi \RPlus \eta
-&\coloneqq
-\omega
-	+ \xi^v + \eta^v,\\
-\alpha \boldsymbol{\cdot} \xi
-&\coloneqq
-\omega
-	+ \alpha \xi^v
-\eas
-for all $\alpha \in \mathbb{R}$, that is, an affine (and prolonged along the fibres of $\mathrm{T}M$) vertical structure. In total, we have a double vector bundle
-
+%As we already did frequently, a tangent vector $\xi \in \mathrm{T}_X\mathrm{T}M$ at $X \in \mathrm{T}_pM$ ($p \in M$) can be written as
+%\bas
+%\xi
+%&=
+%\underbrace{\mathrm{D}_X\pi_{\mathrm{T}M}(\xi)}_{\eqqcolon \omega}
+	%+ \underbrace{\xi - \mathrm{D}_X\pi_{\mathrm{T}M}(\xi)}_{\eqqcolon \xi^v}
+%=
+%\omega
+	%+ \xi^v,
+%\eas
+%where $\xi^v$ is a vertical vector of $\mathrm{T}M \stackrel{\pi_{\mathrm{T}M}}{\to} M$, and by definition $\omega \in \mathrm{T}_pM$. For another tangent vector $\eta \in \mathrm{T}_Y\mathrm{T}M$ ($Y \in \mathrm{T}_pM$) with $\mathrm{D}_Y\pi_{\mathrm{T}M}(\eta) = \omega$, \textit{i.e.}\ $\eta \in \mleft(\mathrm{D}\pi_{\mathrm{T}M}\mright)^{-1}(\{\omega\})$, we introduce a similar notation, and we define the addition\ $\RPlus$\ and scalar multiplication $\boldsymbol{\cdot}$ of $\mathrm{D}\pi_{\mathrm{T}M}: \mathrm{TT}M \to \mathrm{T}M$ by
+%\bas
+%\xi \RPlus \eta
+%&\coloneqq
+%\omega
+	%+ \xi^v + \eta^v,\\
+%\alpha \boldsymbol{\cdot} \xi
+%&\coloneqq
+%\omega
+	%+ \alpha \xi^v
+%\eas
+%for all $\alpha \in \mathbb{R}$, that is, an affine (and prolonged along the fibres of $\mathrm{T}M$) vertical structure. 
+In total, we have a double vector bundle given by the following commuting diagram
 \begin{center}
 	\begin{tikzcd}
 		 \mathrm{TT}M \arrow{r}{\mathrm{D}\pi_{\mathrm{T}M}} \arrow{d}{\pi_{\mathrm{TT}M}} & \mathrm{T}M \arrow{d}{\pi_{\mathrm{T}M}} \\
 		\mathrm{T}M \arrow[r, "\pi_{\mathrm{T}M}"]& M
 	\end{tikzcd}
 \end{center} 
-\textit{i.e.}\ each horizontal and vertical line is a vector bundle so that the horizontal and vertical scalar multiplications on $\mathrm{TT}M$ commute; see \textit{e.g.}~\cite[\S 3ff.]{Highervectorbundles}\ for a definition on double vector bundles in general.
+\textit{i.e.}\ each horizontal and vertical line is a vector bundle so that the horizontal and vertical scalar multiplications on $\mathrm{TT}M$ commute; see \textit{e.g.}~\cite[\S 3ff.]{Highervectorbundles}\ or \cite[\S 9.1, page 340ff.]{mackenzieGeneralTheory}\ for a definition on double vector bundles in general.
+
+Now observe that the flow $X$ of $\xi$ has values in $\mathrm{T}M$, that is, for all $t \in I$ we have a curve $\alpha_t: I \to M$ (w.l.o.g.\ defined on the same interval as $X$), $s \mapsto \alpha(s)$, so that 
+\bas
+\alpha_t(0) &= \pi_{\mathrm{T}M}\bigl( X(t) \bigr),\\
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha_t &= X(t),
+\eas
+and the first equation implies
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha_t(0)
+&=
+\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi)
+=
+\omega.
+\eas
+So, in total we have for all $\xi \in \mathrm{T}\mathrm{T}M$ a smooth map $\alpha: I^2 = I \times I \to M$, $(t, s) \mapsto \alpha_t(s)$, such that
+\bas
+\alpha(0,0) &= p = \mleft(\pi_{\mathrm{T}M} \circ \pi_{\mathrm{TT}M}\mright)(\xi) 
+= \mleft(\pi_{\mathrm{T}M} \circ \mathrm{D}\pi_{\mathrm{T}M}\mright)(\xi),
+\eas
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha(t,0)
+&=
+\omega
+=
+\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi),&
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha(0,s) 
+&= 
+X_0
+=
+\pi_{\mathrm{TT}M}(\xi),
+\eas
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha &= \xi.
+\eas
 
 \begin{remarks}{Revisit: Schwarz's Theorem}{SchwarzThmInDiffGeo}
 
