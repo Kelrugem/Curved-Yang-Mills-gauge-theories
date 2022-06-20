@@ -4506,7 +4506,7 @@ for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, wher
 
 In order to prove this we need to apply Schwarz's Theorem in order to switch $\Delta$ with $\mathrm{d}/\mathrm{d}t$. To do this rigorously we need to quickly introduce the canonical involution on double tangent bundles as also introduced in \cite[\S 9.6, page 363]{mackenzieGeneralTheory}.
 
-For a smooth manifold $M$ we denote the projection of its tangent bundle by $\pi_{\mathrm{T}M}: \mathrm{T}M \to M$; similarly we have the projection of the \textbf{double tangent bundle $\pi_{\mathrm{TT}M}: \mathrm{TT}M \to \mathrm{T}M$}, the tangent bundle of $\mathrm{T}M$. However, there is also $\mathrm{D}\pi_{\mathrm{T}M}: \mathrm{TT}M \to \mathrm{T}M$, and in fact there is another vector bundle structure on $\mathrm{TT}M$ rendering $\mathrm{D}\pi_{\mathrm{T}M}$ a projection; see \textit{e.g.}\ \cite[\S 3.4 \textit{et seq.}; page 110ff.]{mackenzieGeneralTheory}, however we will not need the explicit structure which is why we are not going to introduce this vector bundle structure explicitly, we just give a very rough sketch:
+For a smooth manifold $M$ we denote the projection of its tangent bundle by $\pi_{\mathrm{T}M}: \mathrm{T}M \to M$; similarly we have the projection of the \textbf{double tangent bundle $\pi_{\mathrm{TT}M}: \mathrm{TT}M \to \mathrm{T}M$}, the tangent bundle of $\mathrm{T}M$. However, there is also $\mathrm{D}\pi_{\mathrm{T}M}: \mathrm{TT}M \to \mathrm{T}M$, and in fact there is another vector bundle structure on $\mathrm{TT}M$ rendering $\mathrm{D}\pi_{\mathrm{T}M}$ a projection; see \textit{e.g.}\ \cite[\S 3.4 \textit{et seq.}; page 110ff.]{mackenzieGeneralTheory}. Let us give a very rough sketch:
 
 Let $\xi, \eta \in \mathrm{TT}M$ with 
 \bas
@@ -4548,54 +4548,56 @@ such that
 \bas
 \pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y,
 \eas
-because the condition on $\xi$ and $\eta$ imply on the base paths $\pi \circ f, \pi \circ h: I \to N$ that
+because the condition on $\xi$ and $\eta$ imply on the base paths $\pi_{\mathrm{T}M} \circ X, \pi_{\mathrm{T}M} \circ Y: I \to M$ that
 \bas
-(\pi\circ f)(0)
+(\pi_{\mathrm{T}M}\circ X)(0)
 &=
 p
 =
-(\pi \circ h)(0),
+(\pi_{\mathrm{T}M} \circ Y)(0),
 \\
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \pi \circ f \bigr)
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \pi_{\mathrm{T}M} \circ X \bigr)
 &=
-\mathrm{D}_{\pi_{\mathrm{T}V}(\xi)}(\xi)
+\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi)
 =
-\mathrm{D}_{\pi_{\mathrm{T}V}(\eta)}(\eta)
+\omega
 =
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \pi \circ h \bigr).
+\mathrm{D}_{Y_0}\pi_{\mathrm{T}M}(\eta)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \pi_{\mathrm{T}M} \circ Y \bigr).
 \eas
 %So, one takes one base path satisfying those, and then $f$ and $h$ are the lifts this base path, which is possible because $\xi$ and $\eta$ just differ along the vertical structures (base points in same fibre, and sharing the same projection under $\mathrm{D}\pi$).
-Then the addition and scalar multiplication with $\lambda \in \mathbb{R}$ for $\mathrm{T}V \stackrel{\mathrm{D}\pi}{\to} \mathrm{T}N$ is defined by
+Then the addition and scalar multiplication with $\lambda \in \mathbb{R}$ for $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ is defined by
 \bas
 \xi \RPlus \eta
 &\coloneqq
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} (f + h),
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} (X + Y),
 \\
 \lambda \boldsymbol{\cdot} \xi
 &\coloneqq
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} (\lambda h),
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} (\lambda X),
 \eas
-where the addition of curves is well-defined because of $\pi \circ f = \pi \circ h$ which implies $\pi(f+h)= \pi(f) = \pi(h)$; so, one can take the sum of the curves and
+where the addition of curves is well-defined because of $\pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y$ which implies $\pi_{\mathrm{T}M}(X+Y)= \pi_{\mathrm{T}M}(X) = \pi_{\mathrm{T}M}(Y)$; so, one can take the sum of the curves and
 \bas
-\mathrm{D}\pi(\xi \RPlus \eta)
+\mathrm{D}\pi_{\mathrm{T}M}(\xi \RPlus \eta)
 &=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \underbrace{\pi (f+h)}_{= \pi(f)} \bigr)
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \underbrace{\pi_{\mathrm{T}M} (X+Y)}_{= \pi(X)} \bigr)
 =
-\mathrm{D}\pi(\xi)
+\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi)
 =
-v.
+\omega.
 \eas
-In other words, those operations come from interpreting tangent vectors as equivalence classes of curves, assuming there are representatives of the classes sharing the same base path ($\pi \circ f = \pi \circ h$) with which one can do those operations.
-It is trivial to show that we have a double vector bundle. The operations of the linear structure in $\mathrm{T}V \stackrel{\pi_{\mathrm{T}V}}{\to} V$ is still denoted in the same manner as usual, and by definition one also gets
+In other words, those operations come from interpreting tangent vectors as equivalence classes of curves, assuming there are representatives of the classes sharing the same base path ($\pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y$) with which one can do those operations.
+It is trivial to show that we have a double vector bundle. The operations of the linear structure in $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ is still denoted in the same manner as usual, and by definition one also gets
 \bas
-\pi_{\mathrm{T}V}(\xi \RPlus \eta)
+\pi_{\mathrm{TT}M}(\xi \RPlus \eta)
 &=
-\pi_{\mathrm{T}V}(\xi)
-	+ \pi_{\mathrm{T}V}(\eta),
+\pi_{\mathrm{TT}M}(\xi)
+	+ \pi_{\mathrm{TT}M}(\eta),
 \\
-\pi_{\mathrm{T}V}(\lambda \boldsymbol{\cdot} \xi)
+\pi_{\mathrm{TT}M}(\lambda \boldsymbol{\cdot} \xi)
 &=
-\lambda ~ \pi_{\mathrm{T}V}(\xi).
+\lambda ~ \pi_{\mathrm{TT}M}(\xi).
 \eas
 
 As we already did frequently, a tangent vector $\xi \in \mathrm{T}_X\mathrm{T}M$ at $X \in \mathrm{T}_pM$ ($p \in M$) can be written as
