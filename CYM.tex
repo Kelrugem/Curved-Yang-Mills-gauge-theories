@@ -4663,7 +4663,7 @@ X_0
 \bas
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha &= \xi.
 \eas
-As for tangent vectors, the class of all such $\alpha$ uniquely describes $\xi$.
+As for tangent vectors, the class $[\alpha]$ of all such $\alpha$ uniquely describes $\xi$, in fact giving rise to an equivalence relation so that $[\alpha]$ is an equivalence class.
 
 In the context of Schwarz's Theorem one may find it natural to define the \textbf{canonical involution (or flip) on $\mathrm{TT}M$} as a map $S: \mathrm{TT}M \to \mathrm{TT}M$ by
 \ba
@@ -4671,7 +4671,32 @@ S(\xi)
 &\coloneqq
 \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha.
 \ea
-By \cite[\S 9.6, Thm.\ 9.6.1, page 363]{mackenzieGeneralTheory} one has that $S$ is an isomorphism of double vector bundles with certain "special" properties; we will not need the general definition of these. What we need of this, is that $J$ is a base-preserving vector bundle isomorphism as both maps, from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa.
+By \cite[\S 9.6, Thm.\ 9.6.1, page 363]{mackenzieGeneralTheory} one has that $S$ is an isomorphism of double vector bundles with certain "special" properties; we will not need the general definition of these. What we need of this, is that $J$ is a base-preserving vector bundle isomorphism as both maps, from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa:
+
+W.l.o.g.\ we can put $J = I$ for simplicity. By construction, the equivalence class $[\beta]$ of $S(\xi)$ is represented by $\beta: I^2 \to M$ given by $\beta(t, s) \coloneqq \alpha(s,t)$ with 
+\bas
+\beta(0,0) &= p,
+\\
+\mathrm{D}\pi_{\mathrm{T}M}\bigl( S(\xi) \bigr) 
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \beta(t, 0)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha(0, t)
+=
+\pi_{\mathrm{TT}M}(\xi),
+\\
+\pi_{\mathrm{TT}M}\bigl(S(\xi)\bigr)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \beta(0, s)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha(s, 0)
+=
+\mathrm{D}\pi_{\mathrm{T}M}(\xi),
+\\
+S(\xi)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \beta.
+\eas
 
 \begin{remarks}{Revisit: Schwarz's Theorem}{SchwarzThmInDiffGeo}
 
