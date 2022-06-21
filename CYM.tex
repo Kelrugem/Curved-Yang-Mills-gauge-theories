@@ -4504,7 +4504,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\ma
 for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, where $t \in \mathbb{R}$, is a vector bundle connection on $\mathcal{g}$.
 \end{propositions}
 
-In order to prove this we need to apply Schwarz's Theorem in order to switch $\Delta$ with $\mathrm{d}/\mathrm{d}t$. To do this rigorously we need to quickly introduce the canonical involution on double tangent bundles as also introduced in \cite[\S 9.6, page 363]{mackenzieGeneralTheory}.
+In order to prove this we need to apply Schwarz's Theorem in order to switch $\Delta$ with $\mathrm{d}/\mathrm{d}t$. To do this rigorously we need to introduce the canonical involution on double tangent bundles as introduced in \cite[\S 9.6, page 363]{mackenzieGeneralTheory}.
 
 For a smooth manifold $M$ we denote the projection of its tangent bundle by $\pi_{\mathrm{T}M}: \mathrm{T}M \to M$; similarly we have the projection of the \textbf{double tangent bundle $\pi_{\mathrm{TT}M}: \mathrm{TT}M \to \mathrm{T}M$}, the tangent bundle of $\mathrm{T}M$. However, there is also $\mathrm{D}\pi_{\mathrm{T}M}: \mathrm{TT}M \to \mathrm{T}M$, and in fact there is another vector bundle structure on $\mathrm{TT}M$ rendering $\mathrm{D}\pi_{\mathrm{T}M}$ a projection; see \textit{e.g.}\ \cite[\S 3.4 \textit{et seq.}; page 110ff.]{mackenzieGeneralTheory}. Let us give a very rough sketch:
 
@@ -4598,7 +4598,6 @@ The operations of the linear structure in $\mathrm{TT}M \stackrel{\pi_{\mathrm{T
 &=
 \lambda ~ \pi_{\mathrm{TT}M}(\xi).
 \eas
-So, in total we have a smooth map $\alpha: I^2 = I \times I \to M$ satisfying
 
 %As we already did frequently, a tangent vector $\xi \in \mathrm{T}_X\mathrm{T}M$ at $X \in \mathrm{T}_pM$ ($p \in M$) can be written as
 %\bas
@@ -4631,7 +4630,7 @@ In total, we have a double vector bundle given by the following commuting diagra
 \end{center} 
 \textit{i.e.}\ each horizontal and vertical line is a vector bundle so that the horizontal and vertical scalar multiplications on $\mathrm{TT}M$ commute; see \textit{e.g.}~\cite[\S 3ff.]{Highervectorbundles}\ or \cite[\S 9.1, page 340ff.]{mackenzieGeneralTheory}\ for a definition on double vector bundles in general.
 
-Now observe that the flow $X$ of $\xi$ has values in $\mathrm{T}M$, that is, for all $t \in I$ we have a curve $\alpha_t: I \to M$ (w.l.o.g.\ defined on the same interval as $X$), $s \mapsto \alpha(s)$, so that 
+Now observe that the flow $X$ of $\xi$ has values in $\mathrm{T}M$, that is, for all $t \in I$ we have a curve $\alpha_t: J \to M$ ($J$ another open interval containing 0), $s \mapsto \alpha_t(s)$, so that 
 \bas
 \alpha_t(0) &= \pi_{\mathrm{T}M}\bigl( X(t) \bigr),\\
 \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha_t &= X(t),
@@ -4644,7 +4643,7 @@ and the first equation implies
 =
 \omega.
 \eas
-So, in total we have for all $\xi \in \mathrm{T}\mathrm{T}M$ a smooth map $\alpha: I^2 = I \times I \to M$, $(t, s) \mapsto \alpha_t(s)$, such that
+So, in total we have for all $\xi \in \mathrm{T}\mathrm{T}M$ a smooth map $\alpha: I \times J \to M$, $(t, s) \mapsto \alpha(t,s) = \alpha_t(s)$, such that
 \bas
 \alpha(0,0) &= p = \mleft(\pi_{\mathrm{T}M} \circ \pi_{\mathrm{TT}M}\mright)(\xi) 
 = \mleft(\pi_{\mathrm{T}M} \circ \mathrm{D}\pi_{\mathrm{T}M}\mright)(\xi),
@@ -4664,6 +4663,15 @@ X_0
 \bas
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha &= \xi.
 \eas
+As for tangent vectors, the class of all such $\alpha$ uniquely describes $\xi$.
+
+In the context of Schwarz's Theorem one may find it natural to define the \textbf{canonical involution (or flip) on $\mathrm{TT}M$} as a map $S: \mathrm{TT}M \to \mathrm{TT}M$ by
+\ba
+S(\xi)
+&\coloneqq
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha.
+\ea
+By \cite[\S 9.6, Thm.\ 9.6.1, page 363]{mackenzieGeneralTheory} one has that $S$ is an isomorphism of double vector bundles with certain "special" properties; we will not need the general definition of these. What we need of this, is that $J$ is a base-preserving vector bundle isomorphism as both maps, from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa.
 
 \begin{remarks}{Revisit: Schwarz's Theorem}{SchwarzThmInDiffGeo}
 
