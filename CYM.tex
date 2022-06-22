@@ -4671,7 +4671,7 @@ S(\xi)
 &\coloneqq
 \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha.
 \ea
-By \cite[\S 9.6, Thm.\ 9.6.1, page 363]{mackenzieGeneralTheory} one has that $S$ is an isomorphism of double vector bundles with certain "special" properties; we will not need the general definition of these. What we need of this, is that $J$ is a base-preserving vector bundle isomorphism as both maps, from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa:
+By \cite[\S 9.6, Thm.\ 9.6.1, page 363]{mackenzieGeneralTheory} one has that $S$ is an isomorphism of double vector bundles with certain "special" properties; we will not need the general definition of these. What we need of this, is that $J$ is a base-preserving vector bundle isomorphism as both maps, from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa. Let us prove this, by starting with showing the well-definedness of $S$:
 
 W.l.o.g.\ we can put $J = I$ for simplicity. By construction, the equivalence class $[\beta]$ of $S(\xi)$ is represented by $\beta: I^2 \to M$ given by $\beta(t, s) \coloneqq \alpha(s,t)$ with 
 \bas
@@ -4683,7 +4683,9 @@ W.l.o.g.\ we can put $J = I$ for simplicity. By construction, the equivalence cl
 =
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha(0, t)
 =
-\pi_{\mathrm{TT}M}(\xi),
+\pi_{\mathrm{TT}M}(\xi)
+= 
+X_0,
 \\
 \pi_{\mathrm{TT}M}\bigl(S(\xi)\bigr)
 &=
@@ -4691,12 +4693,60 @@ W.l.o.g.\ we can put $J = I$ for simplicity. By construction, the equivalence cl
 =
 \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha(s, 0)
 =
-\mathrm{D}\pi_{\mathrm{T}M}(\xi),
+\mathrm{D}\pi_{\mathrm{T}M}(\xi)
+=
+\omega,
 \\
 S(\xi)
 &=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \beta.
 \eas
+With this, we can express $S(\xi)$ in coordinates: Fix local coordinates $\mleft(x^i\mright)_i$ on $M$, then $\mleft(\pi_{\mathrm{T}M}^*x^i\mright)_i$ and $\mleft(\mathrm{d}x^i\mright)_i$ are local coordinates on $\mathrm{T}M$. Then by chain rule
+\bas
+\xi\mleft(\pi_{\mathrm{T}M}^*x^i\mright)
+&=
+\xi\mleft(x^i \circ \pi_{\mathrm{T}M} \mright)
+=
+\mathrm{d}_p x^i\bigl( \mathrm{D}\pi_{\mathrm{T}M}(\xi) \bigr)
+=
+\omega^i,
+\eas
+and
+\bas
+\xi\mleft( \mathrm{d}x^i \mright)
+&=
+\mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha \mright) \mleft( \mathrm{d}x^i \mright)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \underbrace{\mleft(
+	\mathrm{d}x^i \circ \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha
+\mright)}
+	_{= \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha \mright)\mleft( x^i \mright)}
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i,
+\eas
+thus we have in total
+\bas
+\xi
+&=
+\omega^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{X_0}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{X_0}.
+\eas
+Similarly we can proceed with $S(\xi)$ and then apply the "classical" Schwarz' Theorem on the derivatives of $\alpha^i$ (recall the properties of $\beta$), so that we get 
+\bas
+S(\xi)
+&=
+X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \beta^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
+\\
+&=
+X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
+\\
+&=
+X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}.
+\eas
+It is now clear that $S(\xi)$ is independent of the choice of $\alpha$ and just depends on $[\alpha]$. Furthermore, due to what we have shown for $\beta$, it is also clear that $S$ is a base-preserving map either from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ or vice versa
 
 \begin{remarks}{Revisit: Schwarz's Theorem}{SchwarzThmInDiffGeo}
 
