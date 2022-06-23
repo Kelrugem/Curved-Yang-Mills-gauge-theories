@@ -4666,7 +4666,7 @@ X_0
 As for tangent vectors, the class $[\alpha]$ of all such $\alpha$ uniquely describes $\xi$, in fact giving rise to an equivalence relation so that $[\alpha]$ is an equivalence class.
 
 In the context of Schwarz's Theorem one may find it natural to define the \textbf{canonical involution (or flip) on $\mathrm{TT}M$} as a map $S: \mathrm{TT}M \to \mathrm{TT}M$ by
-\ba
+\ba\label{definitionOfFlipMap}
 S(\xi)
 &\coloneqq
 \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha.
@@ -4791,7 +4791,43 @@ X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mri
 This finishes the proof about that the canonical involution/flip $S$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$, and similarly vice versa. We also write $S \eqqcolon S_M$ to give an accentuation on $M$. This isomorphism is basically now Schwarz's Theorem:
 
 \begin{remarks}{Revisit: Schwarz's Theorem}{SchwarzThmInDiffGeo}
-
+By definition we have 
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha
+&=
+S_M\mleft(
+	\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha 
+\mright)
+\eas
+for all smooth $\alpha: I \times J \to M$, where $I$ and $J$ are open intervals containing 0. Similarly this extends to smooths maps $F: M \to N$, so let $\xi = [\alpha] \in \mathrm{TT}M$, and then we calculate for $\mathrm{DD}F: \mathrm{TT}M \to \mathrm{TT}N$ that
+\bas
+\mathrm{DD}F(\xi)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} ( F \circ \alpha )
+\\
+&=
+S_N \mleft(
+	\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} ( F \circ \alpha )
+\mright)
+\\
+&=
+S_N \mleft(
+	\mathrm{DD}F \bigl(
+	S_M(\xi)
+	\bigr)
+\mright)
+\\
+&=
+\mleft( S_N \circ \mathrm{DD}F \circ S_M \mright)(\xi).
+\eas
+If one wants to denote the base points, then recall our discussion before Def.\ \eqref{definitionOfFlipMap} and observe
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} ( F \circ \alpha )
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft( \mathrm{D}_{\alpha(t, 0)} F \circ \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0}\alpha \mright)
+\\
+&=
+\eas
 \end{remarks}
 
 \begin{proof}[Proof of Prop.\ \ref{prop:FinallyTheNablaInduction}]
