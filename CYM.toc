@@ -27,13 +27,13 @@
 \contentsline {subsection}{\numberline {7.2}Generalized distributions and connections}{66}{subsection.7.2}%
 \contentsline {subsubsection}{\numberline {7.2.1}Idea and motivation}{68}{subsubsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.3}Darboux derivative on LGBs}{71}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Generalized connection 1-forms on principal bundles}{80}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.4}Generalized connection 1-forms on principal bundles}{81}{subsection.7.4}%
 \contentsline {subsection}{\numberline {7.5}Gauge transformations}{88}{subsection.7.5}%
 \contentsline {subsection}{\numberline {7.6}Generalized curvature/field strength}{88}{subsection.7.6}%
 \contentsline {subsection}{\numberline {7.7}Generalized covariant derivative/minimal coupling}{88}{subsection.7.7}%
 \contentsline {section}{\numberline {8}Curved Yang-Mills gauge theory}{88}{section.8}%
 \contentsline {section}{\numberline {9}Conclusion}{88}{section.9}%
-\contentsline {section}{\nonumberline List of References}{88}{section*.3}%
+\contentsline {section}{\nonumberline List of References}{89}{section*.3}%
 \contentsline {section}{\numberline {A}Other Interpretations of the compatibility conditions}{89}{appendix.A}%
 \contentsline {subsection}{\numberline {A.1}Minimal coupling}{89}{subsection.A.1}%
 \contentsline {subsection}{\numberline {A.2}Axiomatic Yang-Mills gauge theories}{95}{subsection.A.2}%

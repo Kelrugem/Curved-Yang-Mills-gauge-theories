@@ -4671,7 +4671,7 @@ S(\xi)
 &\coloneqq
 \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha.
 \ea
-By \cite[\S 9.6, Thm.\ 9.6.1, page 363]{mackenzieGeneralTheory} one has that $S$ is an isomorphism of double vector bundles with certain "special" properties; we will not need the general definition of these. What we need of this, is that $J$ is a base-preserving vector bundle isomorphism as both maps, from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa. Let us prove this, by starting with showing the well-definedness of $S$:
+By \cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory} one has that $S$ is an isomorphism of double vector bundles with certain "special" properties; we will not need the general definition of these. What we need of this, is that $S$ is a base-preserving vector bundle isomorphism as both maps, from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa. Let us prove this, by starting with showing the well-definedness of $S$:
 
 W.l.o.g.\ we can put $J = I$ for simplicity. By construction, the equivalence class $[\beta]$ of $S(\xi)$ is represented by $\beta: I^2 \to M$ given by $\beta(t, s) \coloneqq \alpha(s,t)$ with 
 \bas
@@ -4746,7 +4746,49 @@ X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mri
 X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
 	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}.
 \eas
-It is now clear that $S(\xi)$ is independent of the choice of $\alpha$ and just depends on $[\alpha]$. Furthermore, due to what we have shown for $\beta$, it is also clear that $S$ is a base-preserving map either from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ or vice versa
+It is now clear that $S(\xi)$ is independent of the choice of $\alpha$ and just depends on $[\alpha]$. Furthermore, due to what we have shown for $\beta$, it is also clear that $S$ is a base-preserving map either from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ or vice versa. Let $[\gamma] \in \mathrm{TT}M$, then by the same calculation as for the properties of $\beta$ we have $S([\tau]) = [\gamma]$, where $\tau(t, s) \coloneqq \gamma(s, t)$; thence, surjectivity of $S$ follows. Similarly, again by the properties of $\beta(t, s)$ above, if we have $S([\alpha]) = S\mleft( \mleft[ \alpha^\prime \mright] \mright)$, then we clearly get $[\alpha] = [\alpha^\prime]$, and hence injectivity.
+
+It is only left to show that we have linearity for $S$ as a map from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa. For this we use the derived coordinate expressions. Let $\eta \in \mathrm{TT}M$ be defined as before with associated area function $\gamma$ such that $\eta = [\gamma]$. Then one can derive by using what we have shown in the discussion about $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ as vector bundle that
+\bas
+\lambda \boldsymbol{\cdot} \xi \RPlus \kappa \boldsymbol{\cdot} \eta
+&=
+\omega^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\lambda X_0+\kappa Y_0}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft(\lambda \alpha^i + \kappa \gamma^i\mright)\mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\lambda X_0+ \kappa Y_0}
+\eas
+for all $\lambda, \kappa \in \mathbb{R}$,
+and so
+\bas
+S(\lambda \boldsymbol{\cdot} \xi \RPlus \kappa \boldsymbol{\cdot} \eta)
+&=
+\mleft( \lambda X_0^i + \kappa Y_0^i \mright) \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft(\lambda \alpha^i + \kappa \gamma^i\mright) \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
+\\
+&=
+\lambda S(\xi) + \kappa S(\eta).
+\eas
+In the same fashion, let $\zeta = [\delta] \in \mathrm{T}_{X_0}\mathrm{T}M$ with $\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\zeta) = \varphi$, then $\lambda \xi + \kappa \zeta$ is just the typical sum of tangent vectors and we get
+\bas
+S(\lambda \xi + \kappa \zeta)
+&=
+X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\lambda \omega + \kappa \varphi}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft(\lambda\alpha^i + \kappa\delta^i \mright) \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\lambda \omega + \kappa \varphi}
+\\
+&=
+\lambda \boldsymbol{\cdot} \mleft(
+X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
+\mright)
+\\
+&\hspace{1cm}\RPlus
+\kappa \boldsymbol{\cdot} \mleft(
+X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\varphi}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \delta^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\varphi}
+\mright)
+\\
+&=
+\lambda \boldsymbol{\cdot} S(\xi) \RPlus \kappa \boldsymbol{\cdot} S(\zeta).
+\eas
+This finishes the proof about that the canonical involution/flip $S$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$, and similarly vice versa. We also write $S \eqqcolon S_M$ to give an accentuation on $M$. This isomorphism is basically now Schwarz's Theorem:
 
 \begin{remarks}{Revisit: Schwarz's Theorem}{SchwarzThmInDiffGeo}
 

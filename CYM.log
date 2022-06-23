@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.17)  22 JUN 2022 16:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.17)  23 JUN 2022 16:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1216,12 +1216,12 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 4579.
 
-[77] [78] [79] [80] [81] [82] [83] [84] [85] [86]
-Underfull \hbox (badness 10000) in paragraph at lines 5110--5111
+[77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87]
+Underfull \hbox (badness 10000) in paragraph at lines 5152--5153
 
  []
 
-[87] (CYM.bbl
+[88] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
@@ -1233,8 +1233,8 @@ Underfull \hbox (badness 2556) in paragraph at lines 41--45
 om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
  []
 
-) [88] [89]
-Overfull \hbox (2.20065pt too wide) in paragraph at lines 5250--5268
+) [89] [90]
+Overfull \hbox (2.20065pt too wide) in paragraph at lines 5292--5310
 \OML/lmm/m/it/10.95 ^^Z[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/
 n/10.95 )$ \T1/lmr/m/n/10.95 as an el-e-ment of $\OT1/lmr/m/n/10.95 
 [](\OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.95 ; [](\OML/lmm/m/it/10.95 V\OT1/lmr/m
@@ -1246,9 +1246,12 @@ n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^ \OML
 /n/10.95 ))$
  []
 
-[90] [91] [92] [93] [94] [95] (CYM.aux)
+[91] [92] [93] [94] [95] (CYM.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -1290,7 +1293,7 @@ msy9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program
 Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/M
 iKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/ncts/AppData/Roa
 ming/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (97 pages, 1085713 bytes).
+Output written on CYM.pdf (97 pages, 1090179 bytes).
 PDF statistics:
  1600 PDF objects out of 1728 (max. 8388607)
  361 named destinations out of 1000 (max. 500000)
