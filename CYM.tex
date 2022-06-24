@@ -4504,331 +4504,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\ma
 for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, where $t \in \mathbb{R}$, is a vector bundle connection on $\mathcal{g}$.
 \end{propositions}
 
-In order to prove this we need to apply Schwarz's Theorem in order to switch $\Delta$ with $\mathrm{d}/\mathrm{d}t$. To do this rigorously we need to introduce the canonical involution on double tangent bundles as introduced in \cite[\S 9.6, page 363]{mackenzieGeneralTheory}.
-
-For a smooth manifold $M$ we denote the projection of its tangent bundle by $\pi_{\mathrm{T}M}: \mathrm{T}M \to M$; similarly we have the projection of the \textbf{double tangent bundle $\pi_{\mathrm{TT}M}: \mathrm{TT}M \to \mathrm{T}M$}, the tangent bundle of $\mathrm{T}M$. However, there is also $\mathrm{D}\pi_{\mathrm{T}M}: \mathrm{TT}M \to \mathrm{T}M$, and in fact there is another vector bundle structure on $\mathrm{TT}M$ rendering $\mathrm{D}\pi_{\mathrm{T}M}$ a projection; see \textit{e.g.}\ \cite[\S 3.4 \textit{et seq.}; page 110ff.]{mackenzieGeneralTheory}. Let us give a very rough sketch:
-
-Let $\xi, \eta \in \mathrm{TT}M$ with 
-\bas
-\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi)
-&=
-\mathrm{D}_{Y_0}\pi_{\mathrm{T}M}(\eta)
-\eqqcolon
-\omega,
-\eas
-where $X_0 \coloneqq \pi_{\mathrm{TT}M}(\xi)$ and $Y_0 \coloneqq \pi_{\mathrm{TT}M}(\eta)$,
-and due to the fact that $\mathrm{D}\pi_{\mathrm{T}M}$ is a vector bundle morphism over $\pi_{\mathrm{T}M}$ we get
-\bas
-p
-&= 
-\pi_{\mathrm{T}M} (X_0)
-=
-\pi_{\mathrm{T}M}(Y_0),
-\eas
-where $\pi_{\mathrm{T}M}(\omega) \eqqcolon p$.
-Thus, one can take curves $X,Y: I \to \mathrm{T}M$ ($I \subset \mathbb{R}$ an open interval around 0) with
-\bas
-X(0)
-&=
-X_0,
-&
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} X
-&=
-\xi,
-\\
-Y(0)
-&=
-Y_0,
-&
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} Y
-&=
-\eta,
-\eas
-such that
-\bas
-\pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y,
-\eas
-because the condition on $\xi$ and $\eta$ imply on the base paths $\pi_{\mathrm{T}M} \circ X, \pi_{\mathrm{T}M} \circ Y: I \to M$ that
-\bas
-(\pi_{\mathrm{T}M}\circ X)(0)
-&=
-p
-=
-(\pi_{\mathrm{T}M} \circ Y)(0),
-\\
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \pi_{\mathrm{T}M} \circ X \bigr)
-&=
-\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi)
-=
-\omega
-=
-\mathrm{D}_{Y_0}\pi_{\mathrm{T}M}(\eta)
-=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \pi_{\mathrm{T}M} \circ Y \bigr).
-\eas
-%So, one takes one base path satisfying those, and then $f$ and $h$ are the lifts this base path, which is possible because $\xi$ and $\eta$ just differ along the vertical structures (base points in same fibre, and sharing the same projection under $\mathrm{D}\pi$).
-Then the addition and scalar multiplication with $\lambda \in \mathbb{R}$ for $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ is defined by
-\bas
-\xi \RPlus \eta
-&\coloneqq
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} (X + Y),
-\\
-\lambda \boldsymbol{\cdot} \xi
-&\coloneqq
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} (\lambda X),
-\eas
-where the addition of curves is well-defined because of $\pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y$ which implies $\pi_{\mathrm{T}M}\circ (X+Y)= \pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y$; so, one can take the sum of the curves and
-\bas
-\mathrm{D}\pi_{\mathrm{T}M}(\xi \RPlus \eta)
-&=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \underbrace{\pi_{\mathrm{T}M} \circ (X+Y)}_{= \pi_{\mathrm{T}M}\circ X} \bigr)
-=
-\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi)
-=
-\omega.
-\eas
-The operations of the linear structure in $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ is still denoted in the same manner as usual, and by definition one also gets
-\bas
-\pi_{\mathrm{TT}M}(\xi \RPlus \eta)
-&=
-\pi_{\mathrm{TT}M}(\xi)
-	+ \pi_{\mathrm{TT}M}(\eta),
-\\
-\pi_{\mathrm{TT}M}(\lambda \boldsymbol{\cdot} \xi)
-&=
-\lambda ~ \pi_{\mathrm{TT}M}(\xi).
-\eas
-
-%As we already did frequently, a tangent vector $\xi \in \mathrm{T}_X\mathrm{T}M$ at $X \in \mathrm{T}_pM$ ($p \in M$) can be written as
-%\bas
-%\xi
-%&=
-%\underbrace{\mathrm{D}_X\pi_{\mathrm{T}M}(\xi)}_{\eqqcolon \omega}
-	%+ \underbrace{\xi - \mathrm{D}_X\pi_{\mathrm{T}M}(\xi)}_{\eqqcolon \xi^v}
-%=
-%\omega
-	%+ \xi^v,
-%\eas
-%where $\xi^v$ is a vertical vector of $\mathrm{T}M \stackrel{\pi_{\mathrm{T}M}}{\to} M$, and by definition $\omega \in \mathrm{T}_pM$. For another tangent vector $\eta \in \mathrm{T}_Y\mathrm{T}M$ ($Y \in \mathrm{T}_pM$) with $\mathrm{D}_Y\pi_{\mathrm{T}M}(\eta) = \omega$, \textit{i.e.}\ $\eta \in \mleft(\mathrm{D}\pi_{\mathrm{T}M}\mright)^{-1}(\{\omega\})$, we introduce a similar notation, and we define the addition\ $\RPlus$\ and scalar multiplication $\boldsymbol{\cdot}$ of $\mathrm{D}\pi_{\mathrm{T}M}: \mathrm{TT}M \to \mathrm{T}M$ by
-%\bas
-%\xi \RPlus \eta
-%&\coloneqq
-%\omega
-	%+ \xi^v + \eta^v,\\
-%\alpha \boldsymbol{\cdot} \xi
-%&\coloneqq
-%\omega
-	%+ \alpha \xi^v
-%\eas
-%for all $\alpha \in \mathbb{R}$, that is, an affine (and prolonged along the fibres of $\mathrm{T}M$) vertical structure. 
-In total, we have a double vector bundle given by the following commuting diagram
-\begin{center}
-	\begin{tikzcd}
-		 \mathrm{TT}M \arrow{r}{\mathrm{D}\pi_{\mathrm{T}M}} \arrow{d}{\pi_{\mathrm{TT}M}} & \mathrm{T}M \arrow{d}{\pi_{\mathrm{T}M}} \\
-		\mathrm{T}M \arrow[r, "\pi_{\mathrm{T}M}"]& M
-	\end{tikzcd}
-\end{center} 
-\textit{i.e.}\ each horizontal and vertical line is a vector bundle so that the horizontal and vertical scalar multiplications on $\mathrm{TT}M$ commute; see \textit{e.g.}~\cite[\S 3ff.]{Highervectorbundles}\ or \cite[\S 9.1, page 340ff.]{mackenzieGeneralTheory}\ for a definition on double vector bundles in general.
-
-Now observe that the flow $X$ of $\xi$ has values in $\mathrm{T}M$, that is, for all $t \in I$ we have a curve $\alpha_t: J \to M$ ($J$ another open interval containing 0), $s \mapsto \alpha_t(s)$, so that 
-\bas
-\alpha_t(0) &= \pi_{\mathrm{T}M}\bigl( X(t) \bigr),\\
-\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha_t &= X(t),
-\eas
-and the first equation implies
-\bas
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha_t(0)
-&=
-\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi)
-=
-\omega.
-\eas
-So, in total we have for all $\xi \in \mathrm{T}\mathrm{T}M$ a smooth map $\alpha: I \times J \to M$, $(t, s) \mapsto \alpha(t,s) = \alpha_t(s)$, such that
-\bas
-\alpha(0,0) &= p = \mleft(\pi_{\mathrm{T}M} \circ \pi_{\mathrm{TT}M}\mright)(\xi) 
-= \mleft(\pi_{\mathrm{T}M} \circ \mathrm{D}\pi_{\mathrm{T}M}\mright)(\xi),
-\eas
-\bas
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha(t,0)
-&=
-\omega
-=
-\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi),&
-\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha(0,s) 
-&= 
-X_0
-=
-\pi_{\mathrm{TT}M}(\xi),
-\eas
-\bas
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha &= \xi.
-\eas
-As for tangent vectors, the class $[\alpha]$ of all such $\alpha$ uniquely describes $\xi$, in fact giving rise to an equivalence relation so that $[\alpha]$ is an equivalence class.
-
-In the context of Schwarz's Theorem one may find it natural to define the \textbf{canonical involution (or flip) on $\mathrm{TT}M$} as a map $S: \mathrm{TT}M \to \mathrm{TT}M$ by
-\ba\label{definitionOfFlipMap}
-S(\xi)
-&\coloneqq
-\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha.
-\ea
-By \cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory} one has that $S$ is an isomorphism of double vector bundles with certain "special" properties; we will not need the general definition of these. What we need of this, is that $S$ is a base-preserving vector bundle isomorphism as both maps, from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa. Let us prove this, by starting with showing the well-definedness of $S$:
-
-W.l.o.g.\ we can put $J = I$ for simplicity. By construction, the equivalence class $[\beta]$ of $S(\xi)$ is represented by $\beta: I^2 \to M$ given by $\beta(t, s) \coloneqq \alpha(s,t)$ with 
-\bas
-\beta(0,0) &= p,
-\\
-\mathrm{D}\pi_{\mathrm{T}M}\bigl( S(\xi) \bigr) 
-&=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \beta(t, 0)
-=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha(0, t)
-=
-\pi_{\mathrm{TT}M}(\xi)
-= 
-X_0,
-\\
-\pi_{\mathrm{TT}M}\bigl(S(\xi)\bigr)
-&=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \beta(0, s)
-=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha(s, 0)
-=
-\mathrm{D}\pi_{\mathrm{T}M}(\xi)
-=
-\omega,
-\\
-S(\xi)
-&=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \beta.
-\eas
-With this, we can express $S(\xi)$ in coordinates: Fix local coordinates $\mleft(x^i\mright)_i$ on $M$, then $\mleft(\pi_{\mathrm{T}M}^*x^i\mright)_i$ and $\mleft(\mathrm{d}x^i\mright)_i$ are local coordinates on $\mathrm{T}M$. Then by chain rule
-\bas
-\xi\mleft(\pi_{\mathrm{T}M}^*x^i\mright)
-&=
-\xi\mleft(x^i \circ \pi_{\mathrm{T}M} \mright)
-=
-\mathrm{d}_p x^i\bigl( \mathrm{D}\pi_{\mathrm{T}M}(\xi) \bigr)
-=
-\omega^i,
-\eas
-and
-\bas
-\xi\mleft( \mathrm{d}x^i \mright)
-&=
-\mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha \mright) \mleft( \mathrm{d}x^i \mright)
-=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \underbrace{\mleft(
-	\mathrm{d}x^i \circ \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha
-\mright)}
-	_{= \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha \mright)\mleft( x^i \mright)}
-=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i,
-\eas
-thus we have in total
-\bas
-\xi
-&=
-\omega^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{X_0}
-	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{X_0}.
-\eas
-Similarly we can proceed with $S(\xi)$ and then apply the "classical" Schwarz' Theorem on the derivatives of $\alpha^i$ (recall the properties of $\beta$), so that we get 
-\bas
-S(\xi)
-&=
-X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
-	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \beta^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
-\\
-&=
-X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
-	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
-\\
-&=
-X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
-	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}.
-\eas
-It is now clear that $S(\xi)$ is independent of the choice of $\alpha$ and just depends on $[\alpha]$. Furthermore, due to what we have shown for $\beta$, it is also clear that $S$ is a base-preserving map either from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ or vice versa. Let $[\gamma] \in \mathrm{TT}M$, then by the same calculation as for the properties of $\beta$ we have $S([\tau]) = [\gamma]$, where $\tau(t, s) \coloneqq \gamma(s, t)$; thence, surjectivity of $S$ follows. Similarly, again by the properties of $\beta(t, s)$ above, if we have $S([\alpha]) = S\mleft( \mleft[ \alpha^\prime \mright] \mright)$, then we clearly get $[\alpha] = [\alpha^\prime]$, and hence injectivity.
-
-It is only left to show that we have linearity for $S$ as a map from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa. For this we use the derived coordinate expressions. Let $\eta \in \mathrm{TT}M$ be defined as before with associated area function $\gamma$ such that $\eta = [\gamma]$. Then one can derive by using what we have shown in the discussion about $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ as vector bundle that
-\bas
-\lambda \boldsymbol{\cdot} \xi \RPlus \kappa \boldsymbol{\cdot} \eta
-&=
-\omega^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\lambda X_0+\kappa Y_0}
-	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft(\lambda \alpha^i + \kappa \gamma^i\mright)\mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\lambda X_0+ \kappa Y_0}
-\eas
-for all $\lambda, \kappa \in \mathbb{R}$,
-and so
-\bas
-S(\lambda \boldsymbol{\cdot} \xi \RPlus \kappa \boldsymbol{\cdot} \eta)
-&=
-\mleft( \lambda X_0^i + \kappa Y_0^i \mright) \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
-	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft(\lambda \alpha^i + \kappa \gamma^i\mright) \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
-\\
-&=
-\lambda S(\xi) + \kappa S(\eta).
-\eas
-In the same fashion, let $\zeta = [\delta] \in \mathrm{T}_{X_0}\mathrm{T}M$ with $\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\zeta) = \varphi$, then $\lambda \xi + \kappa \zeta$ is just the typical sum of tangent vectors and we get
-\bas
-S(\lambda \xi + \kappa \zeta)
-&=
-X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\lambda \omega + \kappa \varphi}
-	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft(\lambda\alpha^i + \kappa\delta^i \mright) \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\lambda \omega + \kappa \varphi}
-\\
-&=
-\lambda \boldsymbol{\cdot} \mleft(
-X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
-	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
-\mright)
-\\
-&\hspace{1cm}\RPlus
-\kappa \boldsymbol{\cdot} \mleft(
-X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\varphi}
-	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \delta^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\varphi}
-\mright)
-\\
-&=
-\lambda \boldsymbol{\cdot} S(\xi) \RPlus \kappa \boldsymbol{\cdot} S(\zeta).
-\eas
-This finishes the proof about that the canonical involution/flip $S$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$, and similarly vice versa. We also write $S \eqqcolon S_M$ to give an accentuation on $M$. This isomorphism is basically now Schwarz's Theorem:
-
-\begin{remarks}{Revisit: Schwarz's Theorem}{SchwarzThmInDiffGeo}
-By definition we have 
-\bas
-\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha
-&=
-S_M\mleft(
-	\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha 
-\mright)
-\eas
-for all smooth $\alpha: I \times J \to M$, where $I$ and $J$ are open intervals containing 0. Similarly this extends to smooths maps $F: M \to N$, so let $\xi = [\alpha] \in \mathrm{TT}M$, and then we calculate for $\mathrm{DD}F: \mathrm{TT}M \to \mathrm{TT}N$ that
-\bas
-\mathrm{DD}F(\xi)
-&=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} ( F \circ \alpha )
-\\
-&=
-S_N \mleft(
-	\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} ( F \circ \alpha )
-\mright)
-\\
-&=
-S_N \mleft(
-	\mathrm{DD}F \bigl(
-	S_M(\xi)
-	\bigr)
-\mright)
-\\
-&=
-\mleft( S_N \circ \mathrm{DD}F \circ S_M \mright)(\xi).
-\eas
-If one wants to denote the base points, then recall our discussion before Def.\ \eqref{definitionOfFlipMap} and observe
-\bas
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} ( F \circ \alpha )
-&=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft( \mathrm{D}_{\alpha(t, 0)} F \circ \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0}\alpha \mright)
-\\
-&=
-\eas
-\end{remarks}
+In order to prove this we need to apply Schwarz's Theorem in order to switch $\Delta$ with $\mathrm{d}/\mathrm{d}t$. To do this rigorously we need to introduce the canonical involution/flip on double tangent bundles; since this does not completely fit into this paper's subject and may be already known by the reader, you can learn about the double tangent bundle and its flip map in Appendix \ref{DoubleTangentFlip} if needed.
 
 \begin{proof}[Proof of Prop.\ \ref{prop:FinallyTheNablaInduction}]
 \leavevmode\newline
@@ -4848,9 +4524,9 @@ where $[t \mapsto \Delta \exp(t \nu)]$ is a smooth curve in the vector space $\O
 \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mathrm{D}_x\e^{t\nu}  (X) \Bigr)\mright)
 \\
 &=
-\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \mathrm{D}_x\nu (X) \bigr)
+\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \Bigl( S_{\mathcal{G}} \bigl( \mathrm{D}_x\nu (X) \bigr) \Bigr)
 \eas
-for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. Also recall $\mathcal{g} = e^*\mathrm{V}\mathcal{G} \cong \mleft.\mathrm{V}\mathcal{G}\mright|_{e(M)} \subset \mleft.\mathrm{T}\mathcal{G}\mright|_{e(M)}$, thus, $\mathrm{D}_x\nu (X) \in \mathrm{T}_{\nu_x}\mathcal{g} $
+for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the canonical flip map of $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. Also recall $\mathcal{g} = e^*\mathrm{V}\mathcal{G} \cong \mleft.\mathrm{V}\mathcal{G}\mright|_{e(M)} \subset \mleft.\mathrm{T}\mathcal{G}\mright|_{e(M)}$, thus, $\mathrm{D}_x\nu (X) \in \mathrm{T}_{\nu_x}\mathcal{g} $
 \end{proof}
 
 \subsection{Generalized connection 1-forms on principal bundles}
@@ -5228,6 +4904,373 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \bibliographystyle{unsrt}
 
 %\newpage\thispagestyle{empty}\hspace{1em}\newpage
+
+\section{Double tangent bundle and its canonical flip map}\label{DoubleTangentFlip}
+
+We will follow \cite[\S 9.6, page 363]{mackenzieGeneralTheory}. For a smooth manifold $M$ we denote the projection of its tangent bundle by $\pi_{\mathrm{T}M}: \mathrm{T}M \to M$; similarly we have the projection of the \textbf{double tangent bundle $\pi_{\mathrm{TT}M}: \mathrm{TT}M \to \mathrm{T}M$}, the tangent bundle of $\mathrm{T}M$. However, there is also $\mathrm{D}\pi_{\mathrm{T}M}: \mathrm{TT}M \to \mathrm{T}M$, and in fact there is another vector bundle structure on $\mathrm{TT}M$ rendering $\mathrm{D}\pi_{\mathrm{T}M}$ a projection; see \textit{e.g.}\ \cite[\S 3.4 \textit{et seq.}; page 110ff.]{mackenzieGeneralTheory}. Let us give a very rough sketch:
+
+Let $\xi, \eta \in \mathrm{TT}M$ with 
+\bas
+\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi)
+&=
+\mathrm{D}_{Y_0}\pi_{\mathrm{T}M}(\eta)
+\eqqcolon
+\omega,
+\eas
+where $X_0 \coloneqq \pi_{\mathrm{TT}M}(\xi)$ and $Y_0 \coloneqq \pi_{\mathrm{TT}M}(\eta)$,
+and due to the fact that $\mathrm{D}\pi_{\mathrm{T}M}$ is a vector bundle morphism over $\pi_{\mathrm{T}M}$ we get
+\bas
+p
+&= 
+\pi_{\mathrm{T}M} (X_0)
+=
+\pi_{\mathrm{T}M}(Y_0),
+\eas
+where $\pi_{\mathrm{T}M}(\omega) \eqqcolon p$.
+Thus, one can take curves $X,Y: I \to \mathrm{T}M$ ($I \subset \mathbb{R}$ an open interval around 0) with
+\bas
+X(0)
+&=
+X_0,
+&
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} X
+&=
+\xi,
+\\
+Y(0)
+&=
+Y_0,
+&
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} Y
+&=
+\eta,
+\eas
+such that
+\bas
+\pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y,
+\eas
+because the condition on $\xi$ and $\eta$ imply on the base paths $\pi_{\mathrm{T}M} \circ X, \pi_{\mathrm{T}M} \circ Y: I \to M$ that
+\bas
+(\pi_{\mathrm{T}M}\circ X)(0)
+&=
+p
+=
+(\pi_{\mathrm{T}M} \circ Y)(0),
+\\
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \pi_{\mathrm{T}M} \circ X \bigr)
+&=
+\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi)
+=
+\omega
+=
+\mathrm{D}_{Y_0}\pi_{\mathrm{T}M}(\eta)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \pi_{\mathrm{T}M} \circ Y \bigr).
+\eas
+%So, one takes one base path satisfying those, and then $f$ and $h$ are the lifts this base path, which is possible because $\xi$ and $\eta$ just differ along the vertical structures (base points in same fibre, and sharing the same projection under $\mathrm{D}\pi$).
+Then the addition and scalar multiplication with $\lambda \in \mathbb{R}$ for $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ is defined by
+\bas
+\xi \RPlus \eta
+&\coloneqq
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} (X + Y),
+\\
+\lambda \boldsymbol{\cdot} \xi
+&\coloneqq
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} (\lambda X),
+\eas
+where the addition of curves is well-defined because of $\pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y$ which implies $\pi_{\mathrm{T}M}\circ (X+Y)= \pi_{\mathrm{T}M} \circ X = \pi_{\mathrm{T}M} \circ Y$; so, one can take the sum of the curves and
+\bas
+\mathrm{D}\pi_{\mathrm{T}M}(\xi \RPlus \eta)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( \underbrace{\pi_{\mathrm{T}M} \circ (X+Y)}_{= \pi_{\mathrm{T}M}\circ X} \bigr)
+=
+\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi)
+=
+\omega.
+\eas
+The operations of the linear structure in $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ is still denoted in the same manner as usual, and by definition one also gets
+\bas
+\pi_{\mathrm{TT}M}(\xi \RPlus \eta)
+&=
+\pi_{\mathrm{TT}M}(\xi)
+	+ \pi_{\mathrm{TT}M}(\eta),
+\\
+\pi_{\mathrm{TT}M}(\lambda \boldsymbol{\cdot} \xi)
+&=
+\lambda ~ \pi_{\mathrm{TT}M}(\xi).
+\eas
+
+%As we already did frequently, a tangent vector $\xi \in \mathrm{T}_X\mathrm{T}M$ at $X \in \mathrm{T}_pM$ ($p \in M$) can be written as
+%\bas
+%\xi
+%&=
+%\underbrace{\mathrm{D}_X\pi_{\mathrm{T}M}(\xi)}_{\eqqcolon \omega}
+	%+ \underbrace{\xi - \mathrm{D}_X\pi_{\mathrm{T}M}(\xi)}_{\eqqcolon \xi^v}
+%=
+%\omega
+	%+ \xi^v,
+%\eas
+%where $\xi^v$ is a vertical vector of $\mathrm{T}M \stackrel{\pi_{\mathrm{T}M}}{\to} M$, and by definition $\omega \in \mathrm{T}_pM$. For another tangent vector $\eta \in \mathrm{T}_Y\mathrm{T}M$ ($Y \in \mathrm{T}_pM$) with $\mathrm{D}_Y\pi_{\mathrm{T}M}(\eta) = \omega$, \textit{i.e.}\ $\eta \in \mleft(\mathrm{D}\pi_{\mathrm{T}M}\mright)^{-1}(\{\omega\})$, we introduce a similar notation, and we define the addition\ $\RPlus$\ and scalar multiplication $\boldsymbol{\cdot}$ of $\mathrm{D}\pi_{\mathrm{T}M}: \mathrm{TT}M \to \mathrm{T}M$ by
+%\bas
+%\xi \RPlus \eta
+%&\coloneqq
+%\omega
+	%+ \xi^v + \eta^v,\\
+%\alpha \boldsymbol{\cdot} \xi
+%&\coloneqq
+%\omega
+	%+ \alpha \xi^v
+%\eas
+%for all $\alpha \in \mathbb{R}$, that is, an affine (and prolonged along the fibres of $\mathrm{T}M$) vertical structure. 
+In total, we have a double vector bundle given by the following commuting diagram
+\begin{center}
+	\begin{tikzcd}
+		 \mathrm{TT}M \arrow{r}{\mathrm{D}\pi_{\mathrm{T}M}} \arrow{d}{\pi_{\mathrm{TT}M}} & \mathrm{T}M \arrow{d}{\pi_{\mathrm{T}M}} \\
+		\mathrm{T}M \arrow[r, "\pi_{\mathrm{T}M}"]& M
+	\end{tikzcd}
+\end{center} 
+\textit{i.e.}\ each horizontal and vertical line is a vector bundle so that the horizontal and vertical scalar multiplications on $\mathrm{TT}M$ commute; see \textit{e.g.}~\cite[\S 3ff.]{Highervectorbundles}\ or \cite[\S 9.1, page 340ff.]{mackenzieGeneralTheory}\ for a definition on double vector bundles in general.
+
+Now observe that the flow $X$ of $\xi$ has values in $\mathrm{T}M$, that is, for all $t \in I$ we have a curve $\alpha_t: J \to M$ ($J$ another open interval containing 0), $s \mapsto \alpha_t(s)$, so that 
+\bas
+\alpha_t(0) &= \pi_{\mathrm{T}M}\bigl( X(t) \bigr),\\
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha_t &= X(t),
+\eas
+and the first equation implies
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha_t(0)
+&=
+\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi)
+=
+\omega.
+\eas
+So, in total we have for all $\xi \in \mathrm{T}\mathrm{T}M$ a smooth map $\alpha: I \times J \to M$, $(t, s) \mapsto \alpha(t,s) = \alpha_t(s)$, such that
+\bas
+\alpha(0,0) &= p = \mleft(\pi_{\mathrm{T}M} \circ \pi_{\mathrm{TT}M}\mright)(\xi) 
+= \mleft(\pi_{\mathrm{T}M} \circ \mathrm{D}\pi_{\mathrm{T}M}\mright)(\xi),
+\eas
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha(t,0)
+&=
+\omega
+=
+\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\xi),&
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha(0,s) 
+&= 
+X_0
+=
+\pi_{\mathrm{TT}M}(\xi),
+\eas
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha &= \xi.
+\eas
+As for tangent vectors, the class $[\alpha]$ of all such $\alpha$ uniquely describes $\xi$, in fact giving rise to an equivalence relation so that $[\alpha]$ is an equivalence class.
+
+In the context of Schwarz's Theorem one may find it natural to define the \textbf{canonical involution (or flip) on $\mathrm{TT}M$} as a map $S: \mathrm{TT}M \to \mathrm{TT}M$ by
+\ba\label{definitionOfFlipMap}
+S(\xi)
+&\coloneqq
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha.
+\ea
+By \cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory} one has that $S$ is an isomorphism of double vector bundles with certain "special" properties; we will not need the general definition of these. What we need of this, is that $S$ is a base-preserving vector bundle isomorphism as both maps, from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa. Let us prove this, by starting with showing the well-definedness of $S$:
+
+W.l.o.g.\ we can put $J = I$ for simplicity. By construction, the equivalence class $[\beta]$ of $S(\xi)$ is represented by $\beta: I^2 \to M$ given by $\beta(t, s) \coloneqq \alpha(s,t)$ with 
+\bas
+\beta(0,0) &= p,
+\\
+\mathrm{D}\pi_{\mathrm{T}M}\bigl( S(\xi) \bigr) 
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \beta(t, 0)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha(0, t)
+=
+\pi_{\mathrm{TT}M}(\xi)
+= 
+X_0,
+\\
+\pi_{\mathrm{TT}M}\bigl(S(\xi)\bigr)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \beta(0, s)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha(s, 0)
+=
+\mathrm{D}\pi_{\mathrm{T}M}(\xi)
+=
+\omega,
+\\
+S(\xi)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \beta.
+\eas
+With this, we can express $S(\xi)$ in coordinates: Fix local coordinates $\mleft(x^i\mright)_i$ on $M$, then $\mleft(\pi_{\mathrm{T}M}^*x^i\mright)_i$ and $\mleft(\mathrm{d}x^i\mright)_i$ are local coordinates on $\mathrm{T}M$. Then by chain rule
+\bas
+\xi\mleft(\pi_{\mathrm{T}M}^*x^i\mright)
+&=
+\xi\mleft(x^i \circ \pi_{\mathrm{T}M} \mright)
+=
+\mathrm{d}_p x^i\bigl( \mathrm{D}\pi_{\mathrm{T}M}(\xi) \bigr)
+=
+\omega^i,
+\eas
+and
+\bas
+\xi\mleft( \mathrm{d}x^i \mright)
+&=
+\mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha \mright) \mleft( \mathrm{d}x^i \mright)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \underbrace{\mleft(
+	\mathrm{d}x^i \circ \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha
+\mright)}
+	_{= \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha \mright)\mleft( x^i \mright)}
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i,
+\eas
+thus we have in total
+\bas
+\xi
+&=
+\omega^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{X_0}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{X_0}.
+\eas
+Similarly we can proceed with $S(\xi)$ and then apply the "classical" Schwarz' Theorem on the derivatives of $\alpha^i$ (recall the properties of $\beta$), so that we get 
+\bas
+S(\xi)
+&=
+X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \beta^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
+\\
+&=
+X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
+\\
+&=
+X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}.
+\eas
+It is now clear that $S(\xi)$ is independent of the choice of $\alpha$ and just depends on $[\alpha]$. Furthermore, due to what we have shown for $\beta$, it is also clear that $S$ is a base-preserving map either from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ or vice versa. Let $[\gamma] \in \mathrm{TT}M$, then by the same calculation as for the properties of $\beta$ we have $S([\tau]) = [\gamma]$, where $\tau(t, s) \coloneqq \gamma(s, t)$; thence, surjectivity of $S$ follows. Similarly, again by the properties of $\beta(t, s)$ above, if we have $S([\alpha]) = S\mleft( \mleft[ \alpha^\prime \mright] \mright)$, then we clearly get $[\alpha] = [\alpha^\prime]$, and hence injectivity. Alternatively, bijectivity follows by $S\circ S = \mathds{1}_{\mathrm{TT}M}$.
+
+It is only left to show that we have linearity for $S$ as a map from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa. For this we use the derived coordinate expressions. Let $\eta \in \mathrm{TT}M$ be defined as before with associated area function $\gamma$ such that $\eta = [\gamma]$. Then one can derive by using what we have shown in the discussion about $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ as vector bundle that
+\bas
+\lambda \boldsymbol{\cdot} \xi \RPlus \kappa \boldsymbol{\cdot} \eta
+&=
+\omega^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\lambda X_0+\kappa Y_0}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft(\lambda \alpha^i + \kappa \gamma^i\mright)\mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\lambda X_0+ \kappa Y_0}
+\eas
+for all $\lambda, \kappa \in \mathbb{R}$,
+and so
+\bas
+S(\lambda \boldsymbol{\cdot} \xi \RPlus \kappa \boldsymbol{\cdot} \eta)
+&=
+\mleft( \lambda X_0^i + \kappa Y_0^i \mright) \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft(\lambda \alpha^i + \kappa \gamma^i\mright) \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
+\\
+&=
+\lambda S(\xi) + \kappa S(\eta).
+\eas
+In the same fashion, let $\zeta = [\delta] \in \mathrm{T}_{X_0}\mathrm{T}M$ with $\mathrm{D}_{X_0}\pi_{\mathrm{T}M}(\zeta) = \varphi$, then $\lambda \xi + \kappa \zeta$ is just the typical sum of tangent vectors and we get
+\bas
+S(\lambda \xi + \kappa \zeta)
+&=
+X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\lambda \omega + \kappa \varphi}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft(\lambda\alpha^i + \kappa\delta^i \mright) \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\lambda \omega + \kappa \varphi}
+\\
+&=
+\lambda \boldsymbol{\cdot} \mleft(
+X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
+\mright)
+\\
+&\hspace{1cm}\RPlus
+\kappa \boldsymbol{\cdot} \mleft(
+X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\varphi}
+	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \delta^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\varphi}
+\mright)
+\\
+&=
+\lambda \boldsymbol{\cdot} S(\xi) \RPlus \kappa \boldsymbol{\cdot} S(\zeta).
+\eas
+This finishes the proof about that the canonical involution/flip $S$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$, and similarly vice versa. We also write $S \eqqcolon S_M$ to give an accentuation on $M$. This isomorphism is basically now Schwarz's Theorem:
+
+\begin{remarks}{Revisit: Schwarz's Theorem}{SchwarzThmInDiffGeo}
+By definition we have 
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha
+&=
+S_M\mleft(
+	\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha 
+\mright)
+\eas
+for all smooth $\alpha: I \times J \to M$, where $I$ and $J$ are open intervals containing 0. Similarly this extends to smooths maps $F: M \to N$, so let $\xi = [\alpha] \in \mathrm{TT}M$, and then we calculate for $\mathrm{DD}F: \mathrm{TT}M \to \mathrm{TT}N$ that
+\bas
+\mathrm{DD}F(\xi)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} ( F \circ \alpha )
+\\
+&=
+S_N \mleft(
+	\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} ( F \circ \alpha )
+\mright)
+\\
+&=
+S_N \mleft(
+	\mathrm{DD}F \bigl(
+	S_M(\xi)
+	\bigr)
+\mright)
+\\
+&=
+\mleft( S_N \circ \mathrm{DD}F \circ S_M \mright)(\xi).
+\eas
+Since the canonical involutions are clearly self-inverse, we can also write
+\bas
+S_N \circ \mathrm{DD}F
+&=
+\mathrm{DD}F \circ S_M.
+\eas
+For a notation with base points in $M$, consider a special case with $M = M_1 \times M_2$, so that $\mathrm{T}M \cong \pi^*_1\mathrm{T}M_1 \oplus \pi^*_2\mathrm{T}M_2$, where $\pi_i: M_1 \times M_2 \to M_i$ ($i \in \{1, 2\}$) are the projections onto the $i$-th component. Then let $p_i \in M_i$, $Y_i \in \mathrm{T}_{p_i}M_i$ and $\xi \coloneqq \mleft( Y_1, Y_2 \mright)$. Denoting with $\gamma_1: I \to M_1$ and $\gamma_2: J \to M_2$ the curves with velocities $Y_1$ and $Y_2$ at 0, respectively, and so $\alpha(t, s) = \mleft( \gamma_1(s), \gamma_2(t) \mright)$; then we define $\mathrm{D}_{p_1} F(Y_1)$ as a map
+\bas
+M_2 &\to \mathrm{T}N,\\
+p_2 &\mapsto
+\mleft.\mathrm{D}_{p_1} F(Y_1)\mright|_{p_2}
+= 
+\mathrm{D}_{(p_1, p_2)} F\mleft(Y_1, 0_{p_2}\mright),
+\eas
+where $0_{p_2}$ is the zero tangent vector at $\mathrm{T}_{p_2}M_2$,
+in a similar fashion for $\mathrm{D}_{p_2} F(Y_2)$. Then
+\bas
+\mathrm{D}_{p_2} \bigl(\mathrm{D}_{p_1} F(Y_1) \bigr) (Y_2)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} 
+	\mathrm{D}_{\mleft(p_1, \gamma_2(t) \mright)} F\mleft(Y_1, 0_{\gamma_2(t)}\mright) 
+\\
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} 
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \bigl( F\circ \alpha(t, s) \bigr)
+\\
+&=
+\mathrm{DD}F(\xi),
+\eas
+similarly
+\bas
+\mathrm{D}_{p_1} \bigl(\mathrm{D}_{p_2} F(Y_2) \bigr) (Y_1)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} 
+	\mathrm{D}_{\mleft(\gamma_1(s), p_2 \mright)} F\mleft( 0_{\gamma_1(s)}, Y_2 \mright) 
+\\
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} 
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \bigl( F\circ \alpha(t, s) \bigr)
+\\
+&=
+S_N\bigl(\mathrm{DD}F(\xi)\bigr),
+\eas
+in total
+\bas
+\mathrm{D}_{p_1} \bigl(\mathrm{D}_{p_2} F(Y_2) \bigr) (Y_1)
+&=
+S_N\Bigl(\mathrm{D}_{p_2} \bigl(\mathrm{D}_{p_1} F(Y_1) \bigr) (Y_2)\Bigr).
+\eas
+\end{remarks}
 
 \section{Other Interpretations of the compatibility conditions}
 
