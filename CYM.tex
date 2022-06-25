@@ -405,9 +405,11 @@ No. 1, Sec. 4, Roosevelt Rd., Taipei City 106, Taiwan Room 503, Cosmology Buildi
 
 \section{Introduction}
 
-\subsection{Basic notations}\label{BasicNotations}
+\subsection{Basic notations and remarks}\label{BasicNotations}
 
 \begin{itemize}
+	\item The appendix serves for providing extra information or background knowledge which did not fit in the flow of this paper's text. We will sometimes refer to the appendix, but the experienced reader may be able to ignore the appendix. 
+	\item In the main text we usually repeat and reintroduce needed objects for the statements (like "\textbf{Let $M$ be a manifold [...]}" in every statement) (almost) allowing to just read the statements without having read the text introducing it, while the appendix is written as a continuous text which has to be read as a whole in order to understand the essential statements.
 	\item With $f^*F$ we denote the pullback/pull-back of the fibre bundles $F \to M$ under a smooth map $f: N \to M$. Similarly we denote the pullbacks of sections of a fibre bundle.
 	%We will also have sections $F$ as an element of $\Gamma\left( \left(\bigotimes_{m=1}^{l} E_m^*\right) \otimes E_{l+1} \right)$, where $E_1, \dots E_{l+1}$ ($l \in \mathbb{N}$) are real vector bundles of finite rank over $N$. Those pull-back as section, denoted by $\Phi^*F$, we will view as an element of $\Gamma\left( \mleft(\bigotimes_{m=1}^{l} \mleft(\Phi^*E_m\mright)^*\mright) \otimes \Phi^*E_{l+1} \right)$, and it is essentially given by
 %\bas
@@ -4524,7 +4526,7 @@ where $[t \mapsto \Delta \exp(t \nu)]$ is a smooth curve in the vector space $\O
 \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mathrm{D}_x\e^{t\nu}  (X) \Bigr)\mright)
 \\
 &=
-\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \Bigl( S_{\mathcal{G}} \bigl( \mathrm{D}_x\nu (X) \bigr) \Bigr)
+\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \Bigl( S_{\mathcal{G}} \bigl( \mathrm{D}_x\nu (X) \bigr) \Bigr) 
 \eas
 for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. 
 \end{proof}
@@ -5200,7 +5202,7 @@ S_M\mleft(
 	\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha 
 \mright)
 \eas
-for all smooth $\alpha: I \times J \to M$, where $I$ and $J$ are open intervals containing 0. Similarly this extends to smooths maps $F: M \to N$, so let $\xi = [\alpha] \in \mathrm{TT}M$, and then we calculate for $\mathrm{DD}F: \mathrm{TT}M \to \mathrm{TT}N$ that
+for all smooth $\alpha: I \times J \to M$, where $I$ and $J$ are open intervals containing 0. Similarly this extends to smooths maps $F: M \to N$, where $N$ is another smooth manifold. So let $\xi = [\alpha] \in \mathrm{TT}M$, and then we calculate for $\mathrm{DD}F: \mathrm{TT}M \to \mathrm{TT}N$ that
 \bas
 \mathrm{DD}F(\xi)
 &=
@@ -5227,7 +5229,7 @@ S_N \circ \mathrm{DD}F
 &=
 \mathrm{DD}F \circ S_M.
 \eas
-For a notation with base points in $M$, consider a special case with $M = M_1 \times M_2$, so that $\mathrm{T}M \cong \pi^*_1\mathrm{T}M_1 \oplus \pi^*_2\mathrm{T}M_2$, where $\pi_i: M_1 \times M_2 \to M_i$ ($i \in \{1, 2\}$) are the projections onto the $i$-th component. Then let $p_i \in M_i$, $Y_i \in \mathrm{T}_{p_i}M_i$ and $\xi \coloneqq \mleft( Y_1, Y_2 \mright)$. Denoting with $\gamma_1: I \to M_1$ and $\gamma_2: J \to M_2$ the curves with velocities $Y_1$ and $Y_2$ at 0, respectively, and so $\alpha(t, s) = \mleft( \gamma_1(s), \gamma_2(t) \mright)$; then we define $\mathrm{D}_{p_1} F(Y_1)$ as a map
+For a notation with base points in $M$, consider a special case with $M = M_1 \times M_2$, where $M_i$ ($i \in \{1, 2\}$) are smooth manifolds. Thus, $\mathrm{T}M \cong \pi^*_1\mathrm{T}M_1 \oplus \pi^*_2\mathrm{T}M_2$, where $\pi_i: M_1 \times M_2 \to M_i$ are the projections onto the $i$-th component. Then let $p_i \in M_i$, $Y_i \in \mathrm{T}_{p_i}M_i$ and $\xi \coloneqq \mleft( Y_1, Y_2 \mright)$. Denoting with $\gamma_1: I \to M_1$ and $\gamma_2: J \to M_2$ the curves with velocities $Y_1$ and $Y_2$ at 0, respectively, and so $\alpha(t, s) = \mleft( \gamma_1(s), \gamma_2(t) \mright)$; then we define $\mathrm{D}_{p_1} F(Y_1)$ as a map
 \bas
 M_2 &\to \mathrm{T}N,\\
 p_2 &\mapsto
@@ -5270,6 +5272,24 @@ in total
 &=
 S_N\Bigl(\mathrm{D}_{p_2} \bigl(\mathrm{D}_{p_1} F(Y_1) \bigr) (Y_2)\Bigr).
 \eas
+\end{remarks}
+
+In fact, using the canonical flip/involution, we can construct and state other properties which can be useful for calculations related to second derivatives. 
+
+\begin{remarks}{Tangent lift, \cite[\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{TangentLifts}
+Let $X \in \mathfrak{X}(M)$, then its total derivative is a map $\mathrm{D}X: \mathrm{T}M \to \mathrm{TT}M$ satisfying
+\bas
+\mathrm{D}\pi_{\mathrm{T}M} \circ \mathrm{D}X
+&=
+\mathrm{D}\underbrace{\mleft( \pi_{\mathrm{T}M} \circ X \mright)}_{= \mathds{1}_M}
+=
+\mathds{1}_{\mathrm{T}M},
+\eas
+so that $\mathrm{D}X$ is a section of $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} M$. Due to the fact that $S = S_M$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{T}M}}{\to} M$ (and vice versa), we have a vector field $X_T \in \mathfrak{X}(\mathrm{T}M)$ given by
+\bas
+X_T &\coloneqq S \circ \mathrm{D}X,
+\eas
+called the \textbf{tangent lift of $X$}.
 \end{remarks}
 
 \section{Other Interpretations of the compatibility conditions}
