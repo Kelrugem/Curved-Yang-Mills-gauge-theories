@@ -5025,12 +5025,12 @@ The operations of the linear structure in $\mathrm{TT}M \stackrel{\pi_{\mathrm{T
 %\eas
 %for all $\alpha \in \mathbb{R}$, that is, an affine (and prolonged along the fibres of $\mathrm{T}M$) vertical structure. 
 In total, we have a double vector bundle given by the following commuting diagram
-\begin{center}
+\be\label{DoubleTangentAsDiagram}
 	\begin{tikzcd}
 		 \mathrm{TT}M \arrow{r}{\mathrm{D}\pi_{\mathrm{T}M}} \arrow{d}{\pi_{\mathrm{TT}M}} & \mathrm{T}M \arrow{d}{\pi_{\mathrm{T}M}} \\
 		\mathrm{T}M \arrow[r, "\pi_{\mathrm{T}M}"]& M
 	\end{tikzcd}
-\end{center} 
+\ee
 \textit{i.e.}\ each horizontal and vertical line is a vector bundle so that the horizontal and vertical scalar multiplications on $\mathrm{TT}M$ commute; see \textit{e.g.}~\cite[\S 3ff.]{Highervectorbundles}\ or \cite[\S 9.1, page 340ff.]{mackenzieGeneralTheory}\ for a definition on double vector bundles in general.
 
 Now observe that the flow $X$ of $\xi$ has values in $\mathrm{T}M$, that is, for all $t \in I$ we have a curve $\alpha_t: J \to M$ ($J$ another open interval containing 0), $s \mapsto \alpha_t(s)$, so that 
@@ -5128,14 +5128,14 @@ and
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i,
 \eas
 thus we have in total
-\bas
+\ba\label{CoordinateExpressionOfTTM}
 \xi
 &=
 \omega^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{X_0}
 	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{X_0}.
-\eas
+\ea
 Similarly we can proceed with $S(\xi)$ and then apply the "classical" Schwarz' Theorem on the derivatives of $\alpha^i$ (recall the properties of $\beta$), so that we get 
-\bas
+\ba\label{CoordinateExprOfFlippy}
 S(\xi)
 &=
 X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
@@ -5148,7 +5148,7 @@ X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mri
 &=
 X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
 	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}.
-\eas
+\ea
 It is now clear that $S(\xi)$ is independent of the choice of $\alpha$ and just depends on $[\alpha]$. Furthermore, due to what we have shown for $\beta$, it is also clear that $S$ is a base-preserving map either from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ or vice versa. Let $[\gamma] \in \mathrm{TT}M$, then by the same calculation as for the properties of $\beta$ we have $S([\tau]) = [\gamma]$, where $\tau(t, s) \coloneqq \gamma(s, t)$; thence, surjectivity of $S$ follows. Similarly, again by the properties of $\beta(t, s)$ above, if we have $S([\alpha]) = S\mleft( \mleft[ \alpha^\prime \mright] \mright)$, then we clearly get $[\alpha] = [\alpha^\prime]$, and hence injectivity. Alternatively, bijectivity follows by $S\circ S = \mathds{1}_{\mathrm{TT}M}$.
 
 It is only left to show that we have linearity for $S$ as a map from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa. For this we use the derived coordinate expressions. Let $\eta \in \mathrm{TT}M$ be defined as before with associated area function $\gamma$ such that $\eta = [\gamma]$. Then one can derive by using what we have shown in the discussion about $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ as vector bundle that
@@ -5191,7 +5191,14 @@ X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mri
 &=
 \lambda \boldsymbol{\cdot} S(\xi) \RPlus \kappa \boldsymbol{\cdot} S(\zeta).
 \eas
-This finishes the proof about that the canonical involution/flip $S$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$, and similarly vice versa. We also write $S \eqqcolon S_M$ to give an accentuation on $M$. This isomorphism is basically now Schwarz's Theorem:
+
+This finishes the proof, so we have:
+
+\begin{remarks}{The canonical involution/flip map an isomorphism, \newline\cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}}{CanonicalInvolutionAnIsom}
+The canonical involution/flip $S$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$, and similarly vice versa. We also write $S \eqqcolon S_M$ to give an accentuation on $M$.
+\end{remarks}
+
+This isomorphism is basically now Schwarz's Theorem:
 
 \begin{remarks}{Revisit: Schwarz's Theorem}{SchwarzThmInDiffGeo}
 By definition we have 
@@ -5290,6 +5297,37 @@ so that $\mathrm{D}X$ is a section of $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\ma
 X_T &\coloneqq S \circ \mathrm{D}X,
 \eas
 called the \textbf{tangent lift of $X$}.
+\end{remarks}
+
+\begin{remarks}{Total derivatives of tangent bundle morphisms linear with respect to prolonged vertical structure}{TotalDerivativesAreLinearWithRTOtherLinearStructure}
+Consider a vector bundle morphism $L: \mathrm{T}M \to \mathrm{T}N$, where $N$ is another smooth manifold. Then for $\xi, \eta \in \mathrm{TT}M$ with their approximating curves $X$ and $Y$, respectively, as previously, then
+\bas
+\mathrm{D}L\mleft(\lambda \boldsymbol{\cdot} \xi \RPlus \kappa \boldsymbol{\cdot} \eta\mright)
+&=
+\mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0} \bigl( 
+	L(\lambda X +\kappa Y)
+\bigr)
+\\
+&=
+\mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0} \bigl( 
+	\lambda L(X) +\kappa L(Y)
+\bigr)
+\\
+&=
+\lambda \boldsymbol{\cdot} \mathrm{D}L(X) \RPlus \kappa \mathrm{D}L(Y)
+\eas
+for all $\lambda, \kappa \in \mathbb{R}$. Hence we achieve linearity with respect to both vector bundle structures of $\mathrm{TT}M$.
+\end{remarks}
+
+\begin{remarks}{Alignment of both vector bundle structures on $\mathrm{TT}M$ on the restricted vertical bundle, \newline \cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}}{BothLinearStructuresTheSameOnTheVerticalBundle}
+By definition, the vertical bundle $\mathrm{VT}M$ of $\mathrm{T}M$ is a subbundle of $\mathrm{TT}M$. The zero section of $\mathrm{T}M$ is a natural embedding of $M$ into $\mathrm{T}M$; this embedded submanifold will also be by $\widetilde{M}$. Then Diagram \eqref{DoubleTangentAsDiagram} restricts onto
+\begin{center}
+	\begin{tikzcd}
+		 \mathrm{VT}M|_{\widetilde{M}} \arrow{r}{\mathrm{D}\pi_{\mathrm{T}M}} \arrow{d}{\pi_{\mathrm{TT}M}} & \widetilde{M} \arrow{d}{\cong} \\
+		\widetilde{M} \arrow[r, "\cong"]& M
+	\end{tikzcd}
+\end{center} 
+and $S=S_M$ does not only restrict onto that, $S$ is actually the identity on $\mathrm{VT}M|_M$. This follows simply by the coordinate expressions Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy} (recall the involved notation). $\xi \in \mathrm{VT}M|_{\widetilde{M}}$ is in the kernel of both projections, $\mathrm{D}\pi_{\mathrm{T}M}$ and $\pi_{\mathrm{TT}M}$, thus $\omega = X_0 = 0 \in \mathrm{T}_pM$, therefore $S(\xi) = \xi$ by Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy}. By Remark \ref{rem:CanonicalInvolutionAnIsom} the addition $\RPlus$ and scalar multiplication $\boldsymbol{\cdot}$ align with the typical addition $+$ and scalar multiplication $\cdot$, respectively, of $\mathrm{TT}M$ as tangent bundle.
 \end{remarks}
 
 \section{Other Interpretations of the compatibility conditions}
