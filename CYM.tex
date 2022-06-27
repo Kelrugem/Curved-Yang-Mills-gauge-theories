@@ -1522,7 +1522,7 @@ Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group 
 \sAut(P) &\to \Gamma\bigl( c_G(P) \bigr),\\
 f &\mapsto q_f
 \eas
-where $g_f \in \Gamma\bigl( c_G(P) \bigr)$ is defined by
+where $q_f \in \Gamma\bigl( c_G(P) \bigr)$ is defined by
 \bas
 \mleft.q_f\mright|_x
 &\coloneqq
@@ -4497,26 +4497,27 @@ making use of Ex.\ \ref{ex:TrivialLGBAction}.
 In fact, the Darboux derivative naturally induces a connection on $\mathcal{g}$ as LAB of $\mathcal{G}$. One may have expected that since $\mathrm{H}\mathcal{G}$ should infinitesimally induce a horizontal distribution on $\mathcal{g}$; recall the exponential map introduced in Subsection \ref{ExponentialMapSubsection}.
 
 \begin{propositions}{LGB connection induces LAB connection}{FinallyTheNablaInduction}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then the map $\nabla^{\mathcal{G}}: \Gamma(\mathcal{g}) \to \Omega^1(M; \mathcal{g})$, $\nu \mapsto \nabla^{\mathcal{G}}\nu$ denoted as an element of $\Omega^1(M; \mathcal{g})$ by $X \mapsto \nabla^{\mathcal{G}}_X \nu$, defined by
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then the map $\nabla^{\mathcal{G}}: \Gamma(\mathcal{g}) \to \Omega^1(M; \mathcal{g})$, $\nu \mapsto \nabla^{\mathcal{G}}\nu$ denoted as an element of $\Omega^1(M; \mathcal{g})$ by $X \mapsto \nabla^{\mathcal{G}}_X \nu$, defined by
 \bas
 \mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x
 &\coloneqq
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu}\mright)_x (X) \Bigr)
 \eas
-for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, where $t \in \mathbb{R}$, is a vector bundle connection on $\mathcal{g}$.
+for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, is a vector bundle connection on $\mathcal{g}$, where $t \in \mathbb{R}$.
 \end{propositions}
 
 In order to prove this we need to apply Schwarz's Theorem in order to switch $\Delta$ with $\mathrm{d}/\mathrm{d}t$. To do this rigorously we need to introduce the canonical involution/flip on double tangent bundles; since this does not completely fit into this paper's subject and may be already known by the reader, you can learn about the double tangent bundle and its flip map in Appendix \ref{DoubleTangentFlip} if needed.
 
 \begin{proof}[Proof of Prop.\ \ref{prop:FinallyTheNablaInduction}]
 \leavevmode\newline
-First of all, it is well-defined because of $\Delta \e^{t\nu} \in \Omega^1(M; \mathcal{g})$ such that $\mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \in \mathcal{g}_x$ as the velocity of a curve in the vector space $\mathcal{g}_x$. In fact
-\bas
-\nabla^{\mathcal{G}} \nu
-&=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Delta\e^{t\nu},
-\eas
-where $[t \mapsto \Delta \exp(t \nu)]$ is a smooth curve in the vector space $\Omega^1(M; \mathcal{g})$, so that $\nabla^{\mathcal{G}} \nu\in \Omega^1(M; \mathcal{g})$. Thus, smoothness is clear and the tensorial behaviour w.r.t.\ $X$. We also have
+Similar to Diagram \eqref{DoubleTangentAsDiagram} we have the double vector bundle
+\begin{center}
+	\begin{tikzcd}
+		 \mathrm{TT}\mathcal{G} \arrow{r}{\mathrm{D}\pi_{\mathrm{T}\mathcal{G}}} \arrow{d}{\pi_{\mathrm{TT}\mathcal{G}}} & \mathrm{T}\mathcal{G} \arrow{d}{\pi_{\mathrm{T}\mathcal{G}}} \\
+		\mathrm{T}\mathcal{G} \arrow[r, "\pi_{\mathrm{T}\mathcal{G}}"]& \mathcal{G}
+	\end{tikzcd}
+\end{center}
+We also have
 \bas
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu} \mright)_x(X) \Bigr)
 &=
@@ -4528,7 +4529,33 @@ where $[t \mapsto \Delta \exp(t \nu)]$ is a smooth curve in the vector space $\O
 &=
 \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \Bigl( S_{\mathcal{G}} \bigl( \mathrm{D}_x\nu (X) \bigr) \Bigr) 
 \eas
-for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. 
+for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. Thence, 
+%omitting the base points in the differentials for readability,
+\bas
+\mathrm{D}\pi_{\mathrm{T}\mathcal{G}}\mleft( \mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \mright)
+&=
+\mathrm{D}_{\mathrm{D}_x e(X)}\underbrace{\mleft( \pi_{\mathrm{T}\mathcal{G}} \circ \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)}
+	_{= e \circ \pi_{\mathcal{G}} \circ \pi_{\mathrm{T}\mathcal{G}} } 
+\Bigl( S_{\mathcal{G}} \bigl( \mathrm{D}_x\nu (X) \bigr) \Bigr)
+\\
+&=
+\mleft(\mathrm{D}_xe \circ \mathrm{D}_{e_x}\pi_{\mathcal{G}} \circ \pi_{\mathrm{TT}\mathcal{G}}\mright) \bigl( \mathrm{D}_x\nu (X) \bigr)
+\\
+&=
+\mleft(\mathrm{D}_xe \circ \mathrm{D}_{e_x}\pi_{\mathcal{G}}\mright) \mleft( \nu_x \mright)
+\\
+&=
+0
+\eas
+viewing $S_{\mathcal{G}}$ as a base-preserving isomorphism from $\pi_{\mathrm{TT}G}: \mathrm{TT}\mathcal{G} \to \mathrm{T}\mathcal{G}$ to $\mathrm{D}\pi_{\mathrm{T}\mathcal{G}}: \mathrm{TT}\mathcal{G} \to \mathrm{T}\mathcal{G}$, and using that $\mathcal{g} = e^*\mathrm{V}\mathcal{G}$.
+
+First of all, it is well-defined because of $\Delta \e^{t\nu} \in \Omega^1(M; \mathcal{g})$ such that $\mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \in \mathcal{g}_x$ as the velocity of a curve in the vector space $\mathcal{g}_x$. In fact
+\bas
+\nabla^{\mathcal{G}} \nu
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Delta\e^{t\nu},
+\eas
+where $[t \mapsto \Delta \exp(t \nu)]$ is a smooth curve in the vector space $\Omega^1(M; \mathcal{g})$, so that $\nabla^{\mathcal{G}} \nu\in \Omega^1(M; \mathcal{g})$. Thus, smoothness is clear and the tensorial behaviour w.r.t.\ $X$. 
 \end{proof}
 
 \subsection{Generalized connection 1-forms on principal bundles}
