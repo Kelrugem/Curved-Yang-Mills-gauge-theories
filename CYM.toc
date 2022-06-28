@@ -27,7 +27,7 @@
 \contentsline {subsection}{\numberline {7.2}Generalized distributions and connections}{67}{subsection.7.2}%
 \contentsline {subsubsection}{\numberline {7.2.1}Idea and motivation}{69}{subsubsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.3}Darboux derivative on LGBs}{72}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Generalized connection 1-forms on principal bundles}{78}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.4}Generalized connection 1-forms on principal bundles}{79}{subsection.7.4}%
 \contentsline {subsection}{\numberline {7.5}Gauge transformations}{86}{subsection.7.5}%
 \contentsline {subsection}{\numberline {7.6}Generalized curvature/field strength}{86}{subsection.7.6}%
 \contentsline {subsection}{\numberline {7.7}Generalized covariant derivative/minimal coupling}{86}{subsection.7.7}%
