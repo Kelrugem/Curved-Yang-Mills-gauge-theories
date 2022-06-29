@@ -4494,16 +4494,18 @@ We will use this form for the definition of the principal bundle connection. As 
 making use of Ex.\ \ref{ex:TrivialLGBAction}.
 \end{remarks}
 
-In fact, the Darboux derivative naturally induces a connection on $\mathcal{g}$ as LAB of $\mathcal{G}$. One may have expected that since $\mathrm{H}\mathcal{G}$ should infinitesimally induce a horizontal distribution on $\mathcal{g}$; recall the exponential map introduced in Subsection \ref{ExponentialMapSubsection}.
+In fact, the Darboux derivative naturally induces a connection on $\mathcal{g}$ as LAB of $\mathcal{G}$. One may have expected that since $\mathrm{H}\mathcal{G}$ should infinitesimally induce a horizontal distribution on $\mathcal{g}$; recall the exponential map introduced in Subsection \ref{ExponentialMapSubsection}. Also recall that by definition of vertical bundles we have for the LAB $\mathcal{g} \stackrel{\pi_{\mathcal{g}}}{\to} M$ that $\mathrm{V}\mathcal{g} \cong \pi_{\mathcal{g}}^*\mathcal{g}$, making use of that LABs are vector bundles; in the following we will use the natural projection onto the second component of $\pi_{\mathcal{g}}^*\mathcal{g}$, denoted by $\mathrm{pr}_2: \mathrm{V}\mathcal{g} \to \mathcal{g}$.
 
 \begin{propositions}{LGB connection induces LAB connection}{FinallyTheNablaInduction}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then the map $\nabla^{\mathcal{G}}: \Gamma(\mathcal{g}) \to \Omega^1(M; \mathcal{g})$, $\nu \mapsto \nabla^{\mathcal{G}}\nu$ denoted as an element of $\Omega^1(M; \mathcal{g})$ by $X \mapsto \nabla^{\mathcal{G}}_X \nu$, defined by
 \bas
 \mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x
 &\coloneqq
+\mathrm{pr}_2 \mleft(
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu}\mright)_x (X) \Bigr)
+\mright)
 \eas
-for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, is a vector bundle connection on $\mathcal{g}$, where $t \in \mathbb{R}$.
+for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, is a vector bundle connection on $\mathcal{g}$, where $t \in \mathbb{R}$, and $\mathrm{pr}_2: \mathrm{V}\mathcal{g} \to \mathcal{g}$ is the projection onto the second component of $\mathrm{V}\mathcal{g}$ naturally viewed as pullback bundle.
 \end{propositions}
 
 In order to prove this we need to apply Schwarz's Theorem in order to switch $\Delta$ with $\mathrm{d}/\mathrm{d}t$. To do this rigorously we need to introduce the canonical involution/flip on double tangent bundles; since this does not completely fit into this paper's subject and may be already known by the reader, you can learn about the double tangent bundle and its flip map in Appendix \ref{DoubleTangentFlip} if needed.
@@ -4512,33 +4514,39 @@ In order to prove this we need to apply Schwarz's Theorem in order to switch $\D
 
 \begin{proof}[Proof of Prop.\ \ref{prop:FinallyTheNablaInduction}]
 \leavevmode\newline
-First of all, it is well-defined because of $\Delta \e^{t\nu} \in \Omega^1(M; \mathcal{g})$ such that $\mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \in \mathcal{g}_x$ as the velocity of a curve in the vector space $\mathcal{g}_x$. In fact
-\bas
-\nabla^{\mathcal{G}} \nu
-&=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Delta\e^{t\nu},
-\eas
-where $[t \mapsto \Delta \exp(t \nu)]$ is a smooth curve in the vector space $\Omega^1(M; \mathcal{g})$, so that $\nabla^{\mathcal{G}} \nu\in \Omega^1(M; \mathcal{g})$. Thus, smoothness is clear and the tensorial behaviour w.r.t.\ $X$. 
-
-Similar to Diagram \eqref{DoubleTangentAsDiagram} we have the double vector bundle
-\begin{center}
+%First of all, it is well-defined because of $\Delta \e^{t\nu} \in \Omega^1(M; \mathcal{g})$ such that $\mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \in \mathcal{g}_x$ as the velocity of a curve in the vector space $\mathcal{g}_x$. In fact
+%\bas
+%\nabla^{\mathcal{G}} \nu
+%&=
+%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Delta\e^{t\nu},
+%\eas
+%where $[t \mapsto \Delta \exp(t \nu)]$ is a smooth curve in the vector space $\Omega^1(M; \mathcal{g})$, so that $\nabla^{\mathcal{G}} \nu\in \Omega^1(M; \mathcal{g})$. Thus, smoothness is clear and the tensorial behaviour w.r.t.\ $X$. 
+%
+Let us begin with well-definedness. Similar to Diagram \eqref{DoubleTangentAsDiagram} we have the double vector bundle
+\be\label{DiagramForNablaConn}
 	\begin{tikzcd}
 		 \mathrm{TT}\mathcal{G} \arrow{r}{\mathrm{D}\pi_{\mathrm{T}\mathcal{G}}} \arrow{d}{\pi_{\mathrm{TT}\mathcal{G}}} & \mathrm{T}\mathcal{G} \arrow{d}{\pi_{\mathrm{T}\mathcal{G}}} \\
 		\mathrm{T}\mathcal{G} \arrow[r, "\pi_{\mathrm{T}\mathcal{G}}"]& \mathcal{G}
 	\end{tikzcd}
-\end{center}
+\ee
 We also have
-\bas
+\ba\label{EqForNablaConnectionWithFlip}
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu} \mright)_x(X) \Bigr)
 &=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \circ \mathrm{D}_x\e^{t\nu} \mright) (X) \Bigr)
+\nonumber
 \\
 &=
 \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mathrm{D}_x\e^{t\nu}  (X) \Bigr)\mright)
+\nonumber
 \\
 &=
 \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \Bigl( S_{\mathcal{G}} \bigl( \mathrm{D}_x\nu (X) \bigr) \Bigr) 
-\eas
+\\
+&\in
+\mathrm{T}_{\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \mathrm{D}_xe(X) \mright) }\mathcal{g}
+\nonumber
+\ea
 for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. Thence, 
 %omitting the base points in the differentials for readability,
 \bas
@@ -4558,26 +4566,58 @@ for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of
 0 \in \mathrm{T}_{e_x}\mathcal{G}
 \eas
 viewing $S_{\mathcal{G}}$ as a base-preserving isomorphism from $\pi_{\mathrm{TT}G}: \mathrm{TT}\mathcal{G} \to \mathrm{T}\mathcal{G}$ to $\mathrm{D}\pi_{\mathrm{T}\mathcal{G}}: \mathrm{TT}\mathcal{G} \to \mathrm{T}\mathcal{G}$, and using that $\mathcal{g} = e^*\mathrm{V}\mathcal{G}$.
-The projection of $\mathcal{g}\to M$ is canonically the restriction of $\pi_{\mathrm{T}\mathcal{G}}$, hence we can conclude that $\mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \in \mathrm{V}\mathcal{g}$
-
-Furthermore, due to the assumption that $e$ is a parallel section we know that $\mu_{\mathcal{G}}^{\mathrm{tot}}\bigl( \mathrm{D}_x e(X) \bigr) = 0$, thus,
+The projection of $\mathcal{g}\to M$ is canonically the restriction of $\pi_{\mathrm{T}\mathcal{G}}$, hence we can conclude that
 \bas
-\pi_{\mathrm{TT}\mathcal{G}}\mleft( \mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \mright)
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu} \mright)_x(X) \Bigr)
+&\in
+\mathrm{V}_{\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \mathrm{D}_xe(X) \mright) }\mathcal{g},
+\eas
+and so we can conclude that $\mathrm{pr}_2: \mathrm{V}\mathcal{g} \to \mathcal{g}$ is defined on this; in total $\nabla^{\mathcal{G}}\nu$ is well-defined. By Eq.\ \eqref{EqForNablaConnectionWithFlip} we also trivially know that 
+\bas
+\pi_{\mathrm{TT}\mathcal{G}}\mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu} \mright)_x(X) \Bigr) \mright)
 &=
-0.
+\mu_{\mathcal{G}}^{\mathrm{tot}}\bigl( \mathrm{D}_x e(X) \bigr)
+\in
+\mathcal{g}_x,
 \eas
-We can conclude that 
+using that $\mathrm{T}\mathcal{g}$ is naturally an embedded submanifold of $\mathrm{TT}\mathcal{G}$ whose projection is the corresponding restriction of $\pi_{\mathrm{TT}\mathcal{G}}$. Viewing $\mathrm{V}\mathcal{g}$ naturally as the pullback of $\mathcal{g}$ along its projection we can therefore write
 \bas
-\mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x
-&\in
-\mathrm{V}_{e_x}\mathrm{T}\mathcal{G},
+\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \Bigl( S_{\mathcal{G}} \bigl( \mathrm{D}_x\nu (X) \bigr) \Bigr) 
+&\stackrel{ \text{Eq.\ \eqref{EqForNablaConnectionWithFlip}} }{=}
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu} \mright)_x(X) \Bigr)
+=
+\mleft(
+	\mu_{\mathcal{G}}^{\mathrm{tot}}\bigl( \mathrm{D}_x e(X) \bigr),
+	\mleft.\nabla^{\mathcal{G}}_X \nu \mright|_x
+\mright).
 \eas
-where we make use of the beginning of Remark \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle}, that is we have a canonical embedding of $\mathcal{G}$ into $\mathrm{T}\mathcal{G}$; additionally, via the neutral element section $e$ of $\mathcal{G}$, we have a canonical embedding of $M$ into $\mathcal{G}$ and thus into $\mathrm{T}\mathcal{G}$. Despite the notation in Remark \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle}, we will still denote the embedded manifold $M$ simply as $M$. Therefore
-\bas
-\nabla^{\mathcal{G}} \nu
-&\in
-\mleft.\mathrm{V}\mathrm{T}\mathcal{G}\mright|_{M}
-\eas
+In order to understand whether $\nabla^{\mathcal{G}}$ is a vector bundle connection we are hence interested into the restriction of Diagram \eqref{DiagramForNablaConn} onto
+\begin{center}
+	\begin{tikzcd}
+		 \mathrm{V}\mathcal{g} \arrow{r}{\mathrm{D}\pi_{\mathrm{T}\mathcal{G}}} \arrow{d}{\pi_{\mathrm{TT}\mathcal{G}}} & \widetilde{M} \arrow{d}{\cong} \\
+		\mathcal{g} \arrow[r, "\pi_{\mathrm{T}\mathcal{G}}"]& M
+	\end{tikzcd}
+\end{center}
+where $M$ is canonically embedded into $\mathcal{G}$ by $e$, and $\widetilde{M}$ is the further canonical embedding of this (the image of $e$) into $\mathrm{T}\mathcal{G}$ by the zero section. As in Appendix \ref{DoubleTangentFlip}, the addition of vectors and the scalar multiplication of the left vertical arrow is denoted as usual, while the one of the upper horizontal arrow will be denoted by $\RPlus$ and $\boldsymbol{\cdot}$, respectively.
+%
+%Furthermore, due to the assumption that $e$ is a parallel section we know that $\mu_{\mathcal{G}}^{\mathrm{tot}}\bigl( \mathrm{D}_x e(X) \bigr) = 0$, thus,
+%\bas
+%\pi_{\mathrm{TT}\mathcal{G}}\mleft( \mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \mright)
+%&=
+%0.
+%\eas
+%We can conclude that 
+%\bas
+%\mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x
+%&\in
+%\mathrm{V}_{e_x}\mathrm{T}\mathcal{G},
+%\eas
+%where we make use of the beginning of Remark \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle}, that is we have a canonical embedding of $\mathcal{G}$ into $\mathrm{T}\mathcal{G}$; additionally, via the neutral element section $e$ of $\mathcal{G}$, we have a canonical embedding of $M$ into $\mathcal{G}$ and thus into $\mathrm{T}\mathcal{G}$. Despite the notation in Remark \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle}, we will still denote the embedded manifold $M$ simply as $M$. Therefore
+%\bas
+%\nabla^{\mathcal{G}} \nu
+%&\in
+%\mleft.\mathrm{V}\mathrm{T}\mathcal{G}\mright|_{M}
+%\eas
 \end{proof}
 
 \subsection{Generalized connection 1-forms on principal bundles}

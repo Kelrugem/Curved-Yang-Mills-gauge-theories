@@ -33,9 +33,9 @@
 \contentsline {subsection}{\numberline {7.7}Generalized covariant derivative/minimal coupling}{86}{subsection.7.7}%
 \contentsline {section}{\numberline {8}Curved Yang-Mills gauge theory}{86}{section.8}%
 \contentsline {section}{\numberline {9}Conclusion}{86}{section.9}%
-\contentsline {section}{\nonumberline List of References}{86}{section*.3}%
+\contentsline {section}{\nonumberline List of References}{87}{section*.3}%
 \contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{87}{appendix.A}%
-\contentsline {section}{\numberline {B}Other Interpretations of the compatibility conditions}{93}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Minimal coupling}{93}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Axiomatic Yang-Mills gauge theories}{99}{subsection.B.2}%
+\contentsline {section}{\numberline {B}Other Interpretations of the compatibility conditions}{94}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Minimal coupling}{94}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Axiomatic Yang-Mills gauge theories}{100}{subsection.B.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

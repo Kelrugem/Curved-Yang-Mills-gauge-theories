@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.17)  28 JUN 2022 16:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.17)  29 JUN 2022 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1212,8 +1212,13 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
 [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56]
 [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71]
-[72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85]
-Underfull \hbox (badness 10000) in paragraph at lines 4915--4916
+[72] [73] [74] [75] [76] [77] [78]
+
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+(Font)              using `U/stmry/m/n' instead on input line 4601.
+
+[79] [80] [81] [82] [83] [84] [85]
+Underfull \hbox (badness 10000) in paragraph at lines 4955--4956
 
  []
 
@@ -1229,13 +1234,8 @@ Underfull \hbox (badness 2556) in paragraph at lines 41--45
 om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
  []
 
-)
-
-LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 5031.
-
-[87] [88] [89] [90] [91] [92] [93] [94]
-Overfull \hbox (2.20065pt too wide) in paragraph at lines 5478--5496
+) [87] [88] [89] [90] [91] [92] [93] [94] [95]
+Overfull \hbox (2.20065pt too wide) in paragraph at lines 5518--5536
 \OML/lmm/m/it/10.95 ^^Z[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/
 n/10.95 )$ \T1/lmr/m/n/10.95 as an el-e-ment of $\OT1/lmr/m/n/10.95 
 [](\OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.95 ; [](\OML/lmm/m/it/10.95 V\OT1/lmr/m
@@ -1247,7 +1247,7 @@ n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^ \OML
 /n/10.95 ))$
  []
 
-[95] [96] [97] [98] [99] (CYM.aux)
+[96] [97] [98] [99] [100] (CYM.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1255,15 +1255,15 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 35584 strings out of 478354
- 750621 string characters out of 2846936
- 1190965 words of memory out of 3000000
- 52986 multiletter control sequences out of 15000+600000
+ 35635 strings out of 478354
+ 751860 string characters out of 2846936
+ 1195075 words of memory out of 3000000
+ 53034 multiletter control sequences out of 15000+600000
  588204 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,106p,10627b,1299s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/M
-iKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/
+{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTe
+X/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/
 lm-mathit.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program
  Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
@@ -1291,9 +1291,9 @@ msy9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program
 Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/M
 iKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/ncts/AppData/Roa
 ming/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (101 pages, 1111675 bytes).
+Output written on CYM.pdf (102 pages, 1116565 bytes).
 PDF statistics:
- 1647 PDF objects out of 1728 (max. 8388607)
- 376 named destinations out of 1000 (max. 500000)
+ 1663 PDF objects out of 1728 (max. 8388607)
+ 379 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
