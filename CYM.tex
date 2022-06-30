@@ -4542,22 +4542,26 @@ We also have
 \\
 &=
 \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \Bigl( S_{\mathcal{G}} \bigl( \mathrm{D}_x\nu (X) \bigr) \Bigr) 
+\nonumber
+\\
+&=
+\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T (X) \bigr) 
 \\
 &\in
 \mathrm{T}_{\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \mathrm{D}_xe(X) \mright) }\mathcal{g}
 \nonumber
 \ea
-for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. Thence, 
+for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. We also introduced the notation $\nu_T$ similar to Remark \ref{rem:TangentLifts} for simplicity; in fact $\nu_T$ is a vector field on $\mathrm{T}\mathcal{G}$ only defined over $\mathrm{T}M$ which is canonically embedded into $\mathrm{T}\mathcal{G}$ by the zero section while $M$ is embedded into $\mathcal{G}$ by $e$. Thence, 
 %omitting the base points in the differentials for readability,
 \bas
 \mathrm{D}\pi_{\mathrm{T}\mathcal{G}}\mleft( \mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \mright)
 &=
 \mathrm{D}_{\mathrm{D}_x e(X)}\underbrace{\mleft( \pi_{\mathrm{T}\mathcal{G}} \circ \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)}
 	_{= e \circ \pi_{\mathcal{G}} \circ \pi_{\mathrm{T}\mathcal{G}} } 
-\Bigl( S_{\mathcal{G}} \bigl( \mathrm{D}_x\nu (X) \bigr) \Bigr)
-\\
-&=
-\mleft(\mathrm{D}_xe \circ \mathrm{D}_{e_x}\pi_{\mathcal{G}} \circ \pi_{\mathrm{TT}\mathcal{G}}\mright) \bigl( \mathrm{D}_x\nu (X) \bigr)
+ \bigl( \nu_T (X) \bigr)
+%\\
+%&=
+%\mleft(\mathrm{D}_xe \circ \mathrm{D}_{e_x}\pi_{\mathcal{G}} \circ \pi_{\mathrm{TT}\mathcal{G}}\mright) \bigl( \mathrm{D}_x\nu (X) \bigr)
 \\
 &=
 \mleft(\mathrm{D}_xe \circ \mathrm{D}_{e_x}\pi_{\mathcal{G}}\mright) \mleft( \nu_x \mright)
@@ -4582,15 +4586,16 @@ and so we can conclude that $\mathrm{pr}_2: \mathrm{V}\mathcal{g} \to \mathcal{g
 \eas
 using that $\mathrm{T}\mathcal{g}$ is naturally an embedded submanifold of $\mathrm{TT}\mathcal{G}$ whose projection is the corresponding restriction of $\pi_{\mathrm{TT}\mathcal{G}}$. Viewing $\mathrm{V}\mathcal{g}$ naturally as the pullback of $\mathcal{g}$ along its projection we can therefore write
 \bas
-\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \Bigl( S_{\mathcal{G}} \bigl( \mathrm{D}_x\nu (X) \bigr) \Bigr) 
+\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T (X) \bigr)  
 &\stackrel{ \text{Eq.\ \eqref{EqForNablaConnectionWithFlip}} }{=}
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu} \mright)_x(X) \Bigr)
 =
 \mleft(
 	\mu_{\mathcal{G}}^{\mathrm{tot}}\bigl( \mathrm{D}_x e(X) \bigr),
 	\mleft.\nabla^{\mathcal{G}}_X \nu \mright|_x
-\mright).
+\mright),
 \eas
+so that smoothness of $\nabla^{\mathcal{G}} \nu$ follows.
 In order to understand whether $\nabla^{\mathcal{G}}$ is a vector bundle connection we are hence interested into the restriction of Diagram \eqref{DiagramForNablaConn} onto
 \begin{center}
 	\begin{tikzcd}
@@ -4602,9 +4607,29 @@ where $M$ is canonically embedded into $\mathcal{G}$ by $e$, and $\widetilde{M}$
 \bas
 \mleft.\nabla^{\mathcal{G}}_{\lambda X + \kappa Y} \nu \mright|_x
 &=
-\mathrm{pr}_2\biggl(\mathrm{D}_{\mathrm{D}_x e(\lambda X + \kappa Y)}\mu_{\mathcal{G}}^{\mathrm{tot}} \Bigl( S_{\mathcal{G}} \bigl( \mathrm{D}_x\nu (\lambda X + \kappa Y) \bigr) \Bigr) \biggr)
+\mathrm{pr}_2\Bigl(\mathrm{D}_{\mathrm{D}_x e(\lambda X + \kappa Y)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T (\lambda X + \kappa Y) \bigr) \Bigr)
+\\
+&=
+\mathrm{pr}_2\Bigl(\mathrm{D}_{\mathrm{D}_x e(\lambda X + \kappa Y)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( 
+	\lambda \boldsymbol{\cdot} \nu_T ( X )
+	\RPlus \kappa \boldsymbol{\cdot} \nu_T (Y) 
+\bigr) \Bigr)
+\\
+&=
+\mathrm{pr}_2\Bigl(
+	\lambda \boldsymbol{\cdot} \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T(X) \bigr)
+	\RPlus \kappa \boldsymbol{\cdot} \mathrm{D}_{\mathrm{D}_x e(Y)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T(Y) \bigr)
+\Bigr)
+\\
+&=
+\lambda ~ \mathrm{pr}_2\Bigl( \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T(X) \bigr) \Bigr)
+	+ \kappa ~ \mathrm{pr}_2 \Bigl(\mathrm{D}_{\mathrm{D}_x e(Y)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T(Y) \bigr) \Bigr)
+\\
+&=
+\lambda ~ \mleft.\nabla^{\mathcal{G}}_{X} \nu \mright|_x
+	+ \kappa ~ \mleft.\nabla^{\mathcal{G}}_{Y} \nu \mright|_x
 \eas
-for all $\lambda, \kappa \in \mathbb{R}$, using Remark \ref{rem:TotalDerivativesAreLinearWithRTOtherLinearStructure} and \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle}.
+for all $\lambda, \kappa \in \mathbb{R}$, using Remark \ref{rem:TangentLifts}, \ref{rem:TotalDerivativesAreLinearWithRTOtherLinearStructure} and \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle}.
 \end{proof}
 
 \subsection{Generalized connection 1-forms on principal bundles}
@@ -5216,10 +5241,12 @@ S(\xi)
 &=
 X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
 	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \beta^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
+\nonumber
 \\
 &=
 X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
 	+ \mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha^i \mright) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\omega}
+\nonumber
 \\
 &=
 X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\omega}
@@ -5372,7 +5399,60 @@ so that $\mathrm{D}X$ is a section of $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\ma
 \bas
 X_T &\coloneqq S \circ \mathrm{D}X,
 \eas
-called the \textbf{tangent lift of $X$}.
+called the \textbf{tangent lift of $X$}. We then also have
+\bas
+\mathrm{D}\pi_{\mathrm{T}M} \circ X_T
+&=
+\pi_{\mathrm{TT}M}\circ \mathrm{D}X
+=
+X,
+\eas
+thus the label as lift. We also have linearity properties (sort of) and a Leibniz rule, that is, we clearly get
+\bas
+X_T\mleft( \lambda Y + \kappa Z \mright)
+&=
+\lambda \boldsymbol{\cdot} X_T\mleft(Y\mright)
+	\RPlus \kappa \boldsymbol{\cdot} X_T\mleft(Z\mright).
+\eas
+for all $Y, Z \in \mathrm{T}_p M$ and $\kappa, \lambda \in \mathbb{R}$, and we also have something similar w.r.t.\ $X$: Recall Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy}, including their notation w.r.t.\ to local coordinates $\mleft( x^i \mright)_{i}$. That is, by definition of $\mathrm{D}X$ we can derive
+\bas
+\mathrm{D}_pX(Y)
+&=
+Y^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{X_p}
+	+ Y^j \frac{\partial X^i}{\partial x^j} \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{X_p},
+\eas
+thus,
+\bas
+\mathrm{D}_p(\kappa X + \lambda W)(Y)
+&=
+Y^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\lambda X_p + \kappa W_p}
+	+ Y^j \frac{\partial \mleft( \lambda X^i + \kappa W^i \mright)}{\partial x^j} \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\lambda X_p + \kappa W_p}
+\\
+&=
+\lambda \boldsymbol{\cdot} \mathrm{D}_p X(Y) \RPlus \kappa \boldsymbol{\cdot} \mathrm{D}_p W(Y)
+\eas
+for all $X, W \in \mathfrak{X}(M)$ and $\lambda, \kappa \in \mathbb{R}$, and 
+\bas
+\mathrm{D}_p(f X)(Y)
+&=
+Y^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{f(p)X_p}
+	+ f(p) ~ Y^j \frac{\partial X^i}{\partial x^j} \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{f(p)X_p}
+	+ Y^j X^i \frac{\partial f}{\partial x^j} \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{f(p)X_p}
+\eas
+for all $f \in C^\infty(M)$. Therefore
+\bas
+(\lambda X + \kappa W)_T
+&=
+\lambda X_T + \kappa W_T,
+\eas
+and
+\bas
+(fX)_T(Y)
+&=
+f(p) ~ X^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{Y}
+	+ fY^j \frac{\partial X^i}{\partial x^j} \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{Y}
+	+ Y(f) ~ X^i \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{Y}
+\eas
 \end{remarks}
 
 \begin{remarks}{Total derivatives of tangent bundle morphisms linear with respect to prolonged vertical structure}{TotalDerivativesAreLinearWithRTOtherLinearStructure}
@@ -5390,9 +5470,14 @@ Consider a vector bundle morphism $L: \mathrm{T}M \to \mathrm{T}N$, where $N$ is
 \bigr)
 \\
 &=
-\lambda \boldsymbol{\cdot} \mathrm{D}L(X) \RPlus \kappa \mathrm{D}L(Y)
+\lambda \boldsymbol{\cdot} \mathrm{D}L(\xi) \RPlus \kappa \boldsymbol{\cdot} \mathrm{D}L(\eta)
 \eas
-for all $\lambda, \kappa \in \mathbb{R}$. Hence we achieve linearity with respect to both vector bundle structures of $\mathrm{TT}M$.
+for all $\lambda, \kappa \in \mathbb{R}$. Hence we achieve linearity with respect to both vector bundle structures of $\mathrm{TT}M$. If we denote the base points as before, then this reads
+\bas
+\mathrm{D}_{\lambda X_0 + \kappa Y_0}L\mleft(\lambda \boldsymbol{\cdot} \xi \RPlus \kappa \boldsymbol{\cdot} \eta\mright)
+&=
+\lambda \boldsymbol{\cdot} \mathrm{D}_{X_0}L(\xi) \RPlus \kappa \boldsymbol{\cdot} \mathrm{D}_{Y_0}L(\eta).
+\eas
 \end{remarks}
 
 \begin{remarks}{Alignment of both vector bundle structures on $\mathrm{TT}M$ on the restricted vertical bundle}{BothLinearStructuresTheSameOnTheVerticalBundle}
