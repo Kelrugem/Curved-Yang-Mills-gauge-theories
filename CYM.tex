@@ -5386,75 +5386,6 @@ S_N\Bigl(\mathrm{D}_{p_2} \bigl(\mathrm{D}_{p_1} F(Y_1) \bigr) (Y_2)\Bigr).
 
 In fact, using the canonical flip/involution, we can construct and state other properties which can be useful for calculations related to second derivatives. 
 
-\begin{remarks}{Tangent lift, \cite[\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{TangentLifts}
-Let $X \in \mathfrak{X}(M)$, then its total derivative is a map $\mathrm{D}X: \mathrm{T}M \to \mathrm{TT}M$ satisfying
-\bas
-\mathrm{D}\pi_{\mathrm{T}M} \circ \mathrm{D}X
-&=
-\mathrm{D}\underbrace{\mleft( \pi_{\mathrm{T}M} \circ X \mright)}_{= \mathds{1}_M}
-=
-\mathds{1}_{\mathrm{T}M},
-\eas
-so that $\mathrm{D}X$ is a section of $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} M$. Due to the fact that $S = S_M$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{T}M}}{\to} M$ (and vice versa), we have a vector field $X_T \in \mathfrak{X}(\mathrm{T}M)$ given by
-\bas
-X_T &\coloneqq S \circ \mathrm{D}X,
-\eas
-called the \textbf{tangent lift of $X$}. We then also have
-\bas
-\mathrm{D}\pi_{\mathrm{T}M} \circ X_T
-&=
-\pi_{\mathrm{TT}M}\circ \mathrm{D}X
-=
-X,
-\eas
-thus the label as lift. We also have linearity properties (sort of) and a Leibniz rule, that is, we clearly get
-\bas
-X_T\mleft( \lambda Y + \kappa Z \mright)
-&=
-\lambda \boldsymbol{\cdot} X_T\mleft(Y\mright)
-	\RPlus \kappa \boldsymbol{\cdot} X_T\mleft(Z\mright).
-\eas
-for all $Y, Z \in \mathrm{T}_p M$ and $\kappa, \lambda \in \mathbb{R}$, and we also have something similar w.r.t.\ $X$: Recall Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy}, including their notation w.r.t.\ to local coordinates $\mleft( x^i \mright)_{i}$. That is, by definition of $\mathrm{D}X$ we can derive
-\bas
-\mathrm{D}_pX(Y)
-&=
-Y^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{X_p}
-	+ Y^j \frac{\partial X^i}{\partial x^j} \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{X_p},
-\eas
-thus,
-\bas
-\mathrm{D}_p(\kappa X + \lambda W)(Y)
-&=
-Y^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\lambda X_p + \kappa W_p}
-	+ Y^j \frac{\partial \mleft( \lambda X^i + \kappa W^i \mright)}{\partial x^j} \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\lambda X_p + \kappa W_p}
-\\
-&=
-\lambda \boldsymbol{\cdot} \mathrm{D}_p X(Y) \RPlus \kappa \boldsymbol{\cdot} \mathrm{D}_p W(Y)
-\eas
-for all $X, W \in \mathfrak{X}(M)$ and $\lambda, \kappa \in \mathbb{R}$, and 
-\bas
-\mathrm{D}_p(f X)(Y)
-&=
-Y^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{f(p)X_p}
-	+ f(p) ~ Y^j \frac{\partial X^i}{\partial x^j} \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{f(p)X_p}
-	+ Y^j X^i \frac{\partial f}{\partial x^j} \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{f(p)X_p}
-\eas
-for all $f \in C^\infty(M)$. Therefore
-\bas
-(\lambda X + \kappa W)_T
-&=
-\lambda X_T + \kappa W_T,
-\eas
-and
-\bas
-(fX)_T(Y)
-&=
-f(p) ~ X^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{Y}
-	+ fY^j \frac{\partial X^i}{\partial x^j} \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{Y}
-	+ Y(f) ~ X^i \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{Y}
-\eas
-\end{remarks}
-
 \begin{remarks}{Total derivatives of tangent bundle morphisms linear with respect to prolonged vertical structure}{TotalDerivativesAreLinearWithRTOtherLinearStructure}
 Consider a vector bundle morphism $L: \mathrm{T}M \to \mathrm{T}N$, where $N$ is another smooth manifold. Then for $\xi, \eta \in \mathrm{TT}M$ with their approximating curves $X$ and $Y$, respectively, as previously, then
 \bas
@@ -5533,6 +5464,85 @@ $
 \lambda ~ \mathrm{pr}_2(\xi) + \kappa ~ \mathrm{pr}_2(\zeta),
 $
 and so both linear structures on $\mathrm{VT}M$ align under $\mathrm{pr}_2$.
+\end{remarks}
+
+\begin{remarks}{Tangent lift, \cite[\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{TangentLifts}
+Let $X \in \mathfrak{X}(M)$, then its total derivative is a map $\mathrm{D}X: \mathrm{T}M \to \mathrm{TT}M$ satisfying
+\bas
+\mathrm{D}\pi_{\mathrm{T}M} \circ \mathrm{D}X
+&=
+\mathrm{D}\underbrace{\mleft( \pi_{\mathrm{T}M} \circ X \mright)}_{= \mathds{1}_M}
+=
+\mathds{1}_{\mathrm{T}M},
+\eas
+so that $\mathrm{D}X$ is a section of $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} M$. Due to the fact that $S = S_M$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{T}M}}{\to} M$ (and vice versa), we have a vector field $X_T \in \mathfrak{X}(\mathrm{T}M)$ given by
+\bas
+X_T &\coloneqq S \circ \mathrm{D}X,
+\eas
+called the \textbf{tangent lift of $X$}. We then also have
+\bas
+\mathrm{D}\pi_{\mathrm{T}M} \circ X_T
+&=
+\pi_{\mathrm{TT}M}\circ \mathrm{D}X
+=
+X,
+\eas
+thus the label as lift. We also have linearity properties (sort of) and a Leibniz rule, that is, we clearly get
+\bas
+X_T\mleft( \lambda Y + \kappa Z \mright)
+&=
+\lambda \boldsymbol{\cdot} X_T\mleft(Y\mright)
+	\RPlus \kappa \boldsymbol{\cdot} X_T\mleft(Z\mright).
+\eas
+for all $Y, Z \in \mathrm{T}_p M$ and $\kappa, \lambda \in \mathbb{R}$, and we also have something similar w.r.t.\ $X$: Recall Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy}, including their notation w.r.t.\ to local coordinates $\mleft( x^i \mright)_{i}$. That is, by definition of $\mathrm{D}X$ we can derive
+\bas
+\mathrm{D}_pX(Y)
+&=
+Y^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{X_p}
+	+ Y^j \mleft.\frac{\partial X^i}{\partial x^j}\mright|_p \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{X_p},
+\eas
+thus,
+\bas
+\mathrm{D}_p(\kappa X + \lambda W)(Y)
+&=
+Y^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\lambda X_p + \kappa W_p}
+	+ Y^j \mleft.\frac{\partial \mleft( \lambda X^i + \kappa W^i \mright)}{\partial x^j}\mright|_p \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{\lambda X_p + \kappa W_p}
+\\
+&=
+\lambda \boldsymbol{\cdot} \mathrm{D}_p X(Y) \RPlus \kappa \boldsymbol{\cdot} \mathrm{D}_p W(Y)
+\eas
+for all $X, W \in \mathfrak{X}(M)$ and $\lambda, \kappa \in \mathbb{R}$, and 
+\ba\label{TotalDerivativeOfTMWithLeibniz}
+&\mathrm{D}_p(f X)(Y)
+\nonumber
+\\
+&=
+Y^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{f(p)X_p}
+	+ f(p) ~ Y^j \mleft.\frac{\partial X^i}{\partial x^j}\mright|_p \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{f(p)X_p}
+	+ Y^j X^i(p) \mleft.\frac{\partial f}{\partial x^j}\mright|_p \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{f(p)X_p}
+\nonumber
+\\
+&=
+f(p) \boldsymbol{\cdot} \mathrm{D}_p(X)(Y)
+	+ Y(f) ~ X^i(p) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{f(p)X_p}
+\ea
+for all $f \in C^\infty(M)$. Therefore
+\bas
+(\lambda X + \kappa W)_T
+&=
+\lambda X_T + \kappa W_T,
+\eas
+and
+\bas
+(fX)_T
+&=
+f X_T
+	\RPlus \mathrm{d}f \boldsymbol{\cdot} \mleft(
+		f X^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{0}
+		+ X^i \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{0}
+	\mright)
+\eas
+where we viewed the last summand in Eq.\ \eqref{TotalDerivativeOfTMWithLeibniz} as a separate vector which is clearly vertical, so that its image under $S$ is a tangent vector along the zero vector field $0$. Recalling that the vertical bundle of $\mathrm{T}M$ is canonically isomorphic to $\pi_{\mathrm{T}M}^*\mathrm{T}M$ and that $\mathrm{T}M$ is embedded into $\mathrm{TT}M$ via the zero section, one can think of the last term as $\mathrm{d}f \boldsymbol{\cdot} X$.
 \end{remarks}
 
 \section{Other Interpretations of the compatibility conditions}
