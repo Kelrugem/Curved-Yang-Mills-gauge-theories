@@ -4629,7 +4629,12 @@ where $M$ is canonically embedded into $\mathcal{G}$ by $e$, and $\widetilde{M}$
 \lambda ~ \mleft.\nabla^{\mathcal{G}}_{X} \nu \mright|_x
 	+ \kappa ~ \mleft.\nabla^{\mathcal{G}}_{Y} \nu \mright|_x
 \eas
-for all $\lambda, \kappa \in \mathbb{R}$, using Remark \ref{rem:TangentLifts}, \ref{rem:TotalDerivativesAreLinearWithRTOtherLinearStructure} and \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle}.
+for all $\lambda, \kappa \in \mathbb{R}$, using Remark \ref{rem:TotalDerivativesAreLinearWithRTOtherLinearStructure}, \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle} and \ref{rem:TangentLifts}. By these remarks we also derive for another section $\mu \in \Gamma(\mathcal{g})$
+\bas
+\mleft.\nabla^{\mathcal{G}}_{X} (\lambda \nu + \kappa \mu) \mright|_x
+&=
+\mathrm{pr}_2\Bigl(\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( (\lambda \nu + \kappa \mu)_T (X) \bigr) \Bigr)
+\eas
 \end{proof}
 
 \subsection{Generalized connection 1-forms on principal bundles}
@@ -5520,11 +5525,11 @@ for all $X, W \in \mathfrak{X}(M)$ and $\lambda, \kappa \in \mathbb{R}$, and
 Y^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{f(p)X_p}
 	+ f(p) ~ Y^j \mleft.\frac{\partial X^i}{\partial x^j}\mright|_p \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{f(p)X_p}
 	+ Y^j X^i(p) \mleft.\frac{\partial f}{\partial x^j}\mright|_p \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{f(p)X_p}
-\nonumber
-\\
-&=
-f(p) \boldsymbol{\cdot} \mathrm{D}_p(X)(Y)
-	+ Y(f) ~ X^i(p) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{f(p)X_p}
+%\nonumber
+%\\
+%&=
+%f(p) \boldsymbol{\cdot} \mathrm{D}_p(X)(Y)
+	%+ Y(f) ~ X^i(p) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{f(p)X_p}
 \ea
 for all $f \in C^\infty(M)$. Therefore
 \bas
@@ -5532,17 +5537,27 @@ for all $f \in C^\infty(M)$. Therefore
 &=
 \lambda X_T + \kappa W_T,
 \eas
-and
+and by Eq.\ \eqref{CoordinateExprOfFlippy}
+\bas
+(fX)_T(Y)
+&=
+f(p)~ X^i_p \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{Y}
+	+ f(p) ~ Y^j \mleft.\frac{\partial X^i}{\partial x^j}\mright|_p \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{Y}
+	+ Y(f) ~ X^i(p) \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{Y}
+\eas
+so
 \bas
 (fX)_T
 &=
-f X_T
-	\RPlus \mathrm{d}f \boldsymbol{\cdot} \mleft(
-		f X^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{0}
-		+ X^i \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{0}
-	\mright)
+f ~ X_T
+	+ \mathrm{d}f \otimes X^i \frac{\partial}{\partial (\mathrm{d}x^i)}.
+	%\RPlus \mathrm{d}f \boldsymbol{\cdot} \mleft(
+		%f X^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{0}
+		%+ X^i \mleft.\frac{\partial}{\partial \mleft(\mathrm{d}x^i\mright)}\mright|_{0}
+	%\mright)
 \eas
-where we viewed the last summand in Eq.\ \eqref{TotalDerivativeOfTMWithLeibniz} as a separate vector which is clearly vertical, so that its image under $S$ is a tangent vector along the zero vector field $0$. Recalling that the vertical bundle of $\mathrm{T}M$ is canonically isomorphic to $\pi_{\mathrm{T}M}^*\mathrm{T}M$ and that $\mathrm{T}M$ is embedded into $\mathrm{TT}M$ via the zero section, one can think of the last term as $\mathrm{d}f \boldsymbol{\cdot} X$.
+%where we viewed the last summand in Eq.\ \eqref{TotalDerivativeOfTMWithLeibniz} as a separate vector which is clearly vertical, so that its image under $S$ is a tangent vector along the zero vector field $0$. 
+Similar to Remark \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle}, the vertical bundle of $\mathrm{T}M$ is canonically isomorphic to $\pi_{\mathrm{T}M}^*\mathrm{T}M$, one can think of the second term as $\mathrm{d}f \otimes \pi^*_{\mathrm{T}M}X$.
 \end{remarks}
 
 \section{Other Interpretations of the compatibility conditions}
