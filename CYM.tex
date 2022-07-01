@@ -4551,7 +4551,9 @@ We also have
 \mathrm{T}_{\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \mathrm{D}_xe(X) \mright) }\mathcal{g}
 \nonumber
 \ea
-for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. We also introduced the notation $\nu_T$ similar to Remark \ref{rem:TangentLifts} for simplicity; in fact $\nu_T$ is a vector field on $\mathrm{T}\mathcal{G}$ only defined over $\mathrm{T}M$ which is canonically embedded into $\mathrm{T}\mathcal{G}$ by the zero section while $M$ is embedded into $\mathcal{G}$ by $e$. Thence, 
+for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. We also introduced the notation $\nu_T$ similar to Remark \ref{rem:TangentLifts} for simplicity; in fact $\nu_T$ is a vector field on $\mathrm{T}\mathcal{G}$ only defined over $\mathrm{T}M$ which is canonically embedded into $\mathrm{T}\mathcal{G}$ by the zero section while $M$ is embedded into $\mathcal{G}$ by $e$. We will work with these embeddings into $\mathrm{T}\mathcal{G}$, not necessarily representing that in the notation, that is, $X$ can also mean its embedding $\mathrm{D}_x e(X)$ into $\mathrm{T}\mathcal{G}$
+
+We get
 %omitting the base points in the differentials for readability,
 \bas
 \mathrm{D}\pi_{\mathrm{T}\mathcal{G}}\mleft( \mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \mright)
@@ -4633,8 +4635,36 @@ for all $\lambda, \kappa \in \mathbb{R}$, using Remark \ref{rem:TotalDerivatives
 \bas
 \mleft.\nabla^{\mathcal{G}}_{X} (\lambda \nu + \kappa \mu) \mright|_x
 &=
-\mathrm{pr}_2\Bigl(\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( (\lambda \nu + \kappa \mu)_T (X) \bigr) \Bigr)
+\mathrm{pr}_2\Bigl(\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \underbrace{(\lambda \nu + \kappa \mu)_T}_{\mathclap{ = \lambda \nu_T + \kappa \mu_T }} (X) \bigr) \Bigr)
+\\
+&=
+\lambda~ \mathrm{pr}_2\Bigl(
+	\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( 
+		\nu_T (X) 
+	\bigr) 
+\Bigr)
+	+ \kappa~ \mathrm{pr}_2\Bigl(
+	\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( 
+		\mu_T (X) 
+	\bigr) 
+\Bigr)
+\\
+&=
+\lambda \mleft.\nabla^{\mathcal{G}}_{X} \nu \mright|_x
+	+ \kappa \mleft.\nabla^{\mathcal{G}}_{X} \mu \mright|_x,
 \eas
+and
+\bas
+\mleft.\nabla^{\mathcal{G}}_{X} (f \nu) \mright|_x
+\eas
+for all $f \in C^\infty(M)$, where $\mleft( \xi^a \mright)_a$ are fibre coordinates of $\mathcal{g}$ so that we can write $\bigl($$\mleft( x^i \mright)_i$ coordinates on $M$$\bigr)$
+\bas
+\mathrm{D}_x \nu (X)
+&=
+\bigl(\mathrm{D}_xe(X)\bigr)^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mright|_{\nu_x}
+	+ X^i \mleft.\frac{\partial \nu^a}{\partial x^i}\mright|_x \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\nu_x}
+\eas
+where $\mathrm{T}\mathcal{g}$ is canonically embedded into $\mathrm{TT}\mathcal{G}$
 \end{proof}
 
 \subsection{Generalized connection 1-forms on principal bundles}
