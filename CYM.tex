@@ -4257,8 +4257,8 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\ma
 \eas
 for all $g \in G$ and $Y \in \mathrm{T}_g\mathcal{G}$.
 \end{definitions}
-
-By definition it is clear that $\mleft.\mu^{\mathrm{tot}}_{\mathcal{G}}\mright|_{\mathcal{g}}$ is the identity on $\mathcal{g}$.
+%
+%By definition it is clear that $\mleft.\mu^{\mathrm{tot}}_{\mathcal{G}}\mright|_{\mathcal{g}}$ is the identity on $\mathcal{g}$.
 
 This is clearly well-defined by construction; also recall our discussion of the vertical Maurer-Cartan form, especially Cor.\ \ref{cor:VertMCVormIsWellDefined}.
 
@@ -4683,17 +4683,59 @@ for all $f \in C^\infty(M)$, where $\mleft( \xi^a \mright)_a$ are fibre coordina
 %X^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}\mathcal{G}}^*x^i\mright)}\mright|_{\nu_x}
 	%+ X^i \mleft.\frac{\partial \nu^a}{\partial x^i}\mright|_x \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\nu_x}
 %\eas
-and where $\mathrm{T}\mathcal{g}$ is canonically embedded into $\mathrm{TT}\mathcal{G}$ which is why the evaluation is rigorously spoken at $\mathrm{D}_x e(X)$ and not $X$; but one may omit this notation for the sake of simplicity. As fibre coordinates of $\mathcal{g}$, there are curves $\gamma^a: I \to \mathcal{g}$ ($I$ an open interval containing 0) with 
-\bas
-\gamma^a(0) &= e_a,&
-\mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0} \gamma^a &= \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)},
-\eas
-where $\mleft( e_a \mright)_a$ is a local frame of $\mathcal{g}$ dual to $\xi^a$. Recall that the total Maurer-Cartan form acts as identity on $\mathcal{g}$, then
+and where $\mathrm{T}\mathcal{g}$ is canonically embedded into $\mathrm{TT}\mathcal{G}$ which is why the evaluation is rigorously spoken at $\mathrm{D}_x e(X)$ and not $X$; but one may omit this notation for the sake of simplicity. It was well-defined to use the linearity of $\mathrm{pr}_2$, since we know by what we have shown earlier that both, $\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( (f\nu)_T (X) \bigr)$ and $\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( f \nu_T (X) \bigr) = f ~ \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T (X) \bigr)$, are elements of $\mathrm{V}\mathcal{g}$. Thence, 
 \bas
 \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \mleft( \nu^a \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)} \mright)
-&=
-\mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0}
 \eas
+is vertical, too.
+
+%As fibre coordinates of $\mathcal{g}$, there are curves $\gamma^a: I \to \mathcal{g}$ ($I$ an open interval containing 0) with 
+%\bas
+%\gamma^a(0) &= e_a,&
+%\mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0} \gamma^a &= \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)},
+%\eas
+%where $\mleft( e_a \mright)_a$ is a local frame of $\mathcal{g}$ dual to $\xi^a$. 
+By definition, $\mu_{\mathcal{G}}^{\mathrm{tot}}$ acts as identity on $\mathcal{g} = e^*\mathrm{V}\mathcal{G}$, and so $\mathrm{D}\mu_{\mathcal{G}}^{\mathrm{tot}}$ is the identity on $\mathrm{T}\mathcal{g}$. Making use of the aforementioned isomorphism $\mathrm{V}\mathcal{g} \cong \pi^*_{\mathrm{T}\mathcal{G}}\mathcal{g}$, we can also write similar as in Remark \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle}
+\bas
+\mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)}
+&\cong
+\mleft(
+	\mathrm{D}_x e(X), e_a
+\mright),
+\eas
+where $\mleft(e_a\mright)_a$ is a local frame of $\mathcal{g}$ dual to $\xi^a$. Thus, 
+\bas
+\mathrm{pr}_2\mleft( \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)}\mright)
+&=
+e_a.
+\eas
+Combining everything, we derive
+\bas
+\mathrm{pr}_2\mleft(
+	\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \mleft( \nu^a \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)} \mright)
+\mright)
+&=
+\mathrm{pr}_2\mleft(
+	\nu^a \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)}
+\mright)
+=
+\nu^a e_a
+=
+\nu,
+\eas
+thus, finally,
+\bas
+\mleft.\nabla^{\mathcal{G}}_{X} (f \nu) \mright|_x
+&=
+f(x) ~ \mleft.\nabla^{\mathcal{G}}_{X} (f \nu) \mright|_x
+	+ X(f) ~ \nu.
+\eas
+This finishes the proof.
+%\bas
+%\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \mleft( \nu^a \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)} \mright)
+%&=
+%\mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0}
+%\eas
 \end{proof}
 
 \subsection{Generalized connection 1-forms on principal bundles}
