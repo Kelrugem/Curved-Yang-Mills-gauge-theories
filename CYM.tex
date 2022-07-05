@@ -3667,6 +3667,10 @@ By Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}, a gauge corresponds to
 
 \subsection{Generalized distributions and connections}
 
+\begin{remarks}{References for connections on principal LGB-bundles}{AnotherPreprintWork}
+It is important to mention beforehand that there is another great paper,\footnote{At the time of this writing a preprint.} \cite{OtherPreprintAboutConnection}, which also discusses the notion of connections on principal LGB-bundles. When I wrote this subsection about the connection, I was not aware of this preprint so that there will be some shared results which I found independently of the other authors. This will be obvious due to the fact that our approach is different. Both, this and the other paper, lead to the same sense of connection (based on the same idea of the behaviour of the parallel transport), but are explicitly not directly the same formulation. More like equivalent definitions of the same object, two sides of the same coin, so that it should be worth it to read both research works. \cite{OtherPreprintAboutConnection} sole purpose was in defining connections, while we want to discuss this sense of connection in the context of Yang-Mills gauge theory, also pinpointing what happens for Yang-Mills-Higgs gauge theories. Hence, our approach will be different, we will use sections of the LGB to formulate connections, simplifying certain explicit formulas; while \cite{OtherPreprintAboutConnection} avoids using sections and rather uses formulations just looking on the vertical parts of a vector or by rephrasing the notions via the total derivative of the LGB action. Another example of difference is that we are also introducing a generalisation of the Darboux derivative and phrasing important formulas with this derivative. Furthermore, we are not going to fix a specific connection on $\mathcal{G}$ for the principal bundle's connection (other than a horizontal distribution), while \cite{OtherPreprintAboutConnection} did fix a more specific type of connection on $\mathcal{G}$, and our curvature will be different and more general as already pointed out in research like \cite{CurvedYMH} and \cite{MyThesis}.
+\end{remarks}
+
 Finally, let us now define the gauge theory, starting with horizontal distributions. For readability, we start with a very easy toy model which should help in understanding the general definitions. We expect a basic understanding of horizontal distributions and their relationship to what we call connections (on principal and vector bundles). The bare-bones start with horizontal distributions.
 
 \begin{definitions}{Horizontal distribution, \newline \cite[\S 5.1.2, Def.\ 5.1.6, page 260; without the symmetry along right-translations here]{Hamilton}}{EhresmannConnectionBasics}
@@ -3974,7 +3978,7 @@ so that the canonical projection $\pi^{\mathrm{vert}, \mathcal{G}}: \mathrm{T}\m
 		\mathrm{D}_p (\sigma \circ \pi)(X)
 	\bigr).
 \eas
-It may not surprise that $\mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G}}$ is by construction actually \textit{the} connection 1-form on $\mathcal{G}$ corresponding to $\mathrm{H}\mathcal{G}$, therefore we will denote $\mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G}}$ as the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ of $\mathcal{G}$}. Hence we get in total
+It may not surprise that $\mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G}}$ is by construction actually \textit{the} connection 1-form on $\mathcal{G}$ corresponding to $\mathrm{H}\mathcal{G}$, therefore we will denote $\mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G}}$ as the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ of $\mathcal{G}$}. Hence we get in total (see also Figure 1)
 \ba\label{OiTHatIsHowWeFormulateHorizSymmetry}
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
@@ -3987,7 +3991,7 @@ It may not surprise that $\mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G
 &\in
 \mathrm{H}_{p \cdot g}\mathcal{P}
 \ea
-for all $X \in \mathrm{H}_p\mathcal{P}$, and we would like. This is independent of the chosen section $\sigma$ because Thm.\ \ref{thm:DiffOfLGBAction} is, and thence gives the fundamental formula for the following sections. Last but not least, our starting point was Eq.\ \eqref{SymmetryOfTheVerticalBundle}; there is no contradiction between the approaches of Eq.\ \eqref{SymmetryOfTheVerticalBundle} and \eqref{OiTHatIsHowWeFormulateHorizSymmetry}. If $X$ is a vertical vector, then
+for all $X \in \mathrm{H}_p\mathcal{P}$, and we would like. We are going to prove that this is independent of the chosen section $\sigma$, and thence this gives the fundamental formula for the following sections. Last but not least, our starting point was Eq.\ \eqref{SymmetryOfTheVerticalBundle}; there is no contradiction between the approaches of Eq.\ \eqref{SymmetryOfTheVerticalBundle} and \eqref{OiTHatIsHowWeFormulateHorizSymmetry}. If $X$ is a vertical vector, then
 \bas
 \mathrm{D}_p\pi(X) &= 0,
 \eas
@@ -4242,7 +4246,7 @@ by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry beh
 %\mathrm{D}_{((x, g), \sigma_x)}\Phi(X, Y).
 %\eas
 
-\subsection{Darboux derivative on LGBs}
+\subsubsection{Darboux derivative on LGBs}
 
 As we have seen, we need a slight adjustment of the vertical Maurer-Cartan as presented in Def.\ \ref{def:MCFormOnLGBs}.
 
@@ -4496,7 +4500,7 @@ We will use this form for the definition of the principal bundle connection. As 
 making use of Ex.\ \ref{ex:TrivialLGBAction}.
 \end{remarks}
 
-In fact, the Darboux derivative naturally induces a connection on $\mathcal{g}$ as LAB of $\mathcal{G}$. One may have expected that since $\mathrm{H}\mathcal{G}$ should infinitesimally induce a horizontal distribution on $\mathcal{g}$; recall the exponential map introduced in Subsection \ref{ExponentialMapSubsection}. Also recall that by definition of vertical bundles we have for the LAB $\mathcal{g} \stackrel{\pi_{\mathcal{g}}}{\to} M$ that $\mathrm{V}\mathcal{g} \cong \pi_{\mathcal{g}}^*\mathcal{g}$, making use of that LABs are vector bundles; in the following we will use the natural projection onto the second component of $\pi_{\mathcal{g}}^*\mathcal{g}$, denoted by $\mathrm{pr}_2: \mathrm{V}\mathcal{g} \to \mathcal{g}$.
+In fact, the Darboux derivative naturally induces a connection on $\mathcal{g}$ as LAB of $\mathcal{G}$. One may have expected that since $\mathrm{H}\mathcal{G}$ should infinitesimally induce a horizontal distribution on $\mathcal{g}$; recall the exponential map introduced in Subsection \ref{ExponentialMapSubsection}. Also recall that by definition of vertical bundles we have for the LAB $\mathcal{g} \stackrel{\pi_{\mathcal{g}}}{\to} M$ that we have for the vertical bundle that $\mathrm{V}\mathcal{g} \cong \pi_{\mathcal{g}}^*\mathcal{g}$, making use of that LABs are vector bundles; in the following we will use the natural projection onto the second component of $\pi_{\mathcal{g}}^*\mathcal{g}$ but now defined on $\mathrm{V}\mathcal{g}$, denoted by $\mathrm{pr}_2: \mathrm{V}\mathcal{g} \to \mathcal{g}$.
 
 \begin{propositions}{LGB connection induces LAB connection}{FinallyTheNablaInduction}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then the map $\nabla^{\mathcal{G}}: \Gamma(\mathcal{g}) \to \Omega^1(M; \mathcal{g})$, $\nu \mapsto \nabla^{\mathcal{G}}\nu$ denoted as an element of $\Omega^1(M; \mathcal{g})$ by $X \mapsto \nabla^{\mathcal{G}}_X \nu$, defined by
@@ -4553,9 +4557,9 @@ We also have
 \mathrm{T}_{\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \mathrm{D}_xe(X) \mright) }\mathcal{g}
 \nonumber
 \ea
-for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. We also introduced the notation $\nu_T$ similar to Remark \ref{rem:TangentLifts} for simplicity; in fact $\nu_T$ is a vector field on $\mathrm{T}\mathcal{G}$ only defined over $\mathrm{T}M$ which is canonically embedded into $\mathrm{T}\mathcal{G}$ by the zero section while $M$ is embedded into $\mathcal{G}$ by $e$. We will work with these embeddings into $\mathrm{T}\mathcal{G}$, not necessarily representing that in the notation, that is, $X$ can also mean its embedding $\mathrm{D}_x e(X)$ into $\mathrm{T}\mathcal{G}$
+for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. We also introduced the notation $\nu_T$ similar to Remark \ref{rem:TangentLifts} for simplicity; in fact $\nu_T$ is a vector field on $\mathrm{T}\mathcal{G}$ only defined over $\mathrm{T}M$ which is canonically embedded into $\mathrm{T}\mathcal{G}$ by the zero section while $M$ is embedded into $\mathcal{G}$ by $e$. Similarly we naturally embed $\mathrm{T}\mathcal{g}$ into $\mathrm{TT}\mathcal{G}$. In total, we will work with these embeddings now so that everything is embedded into $\mathrm{TT}\mathcal{G}$ as the "total space"; hence, you will see $e$ and its total derivative $\mathrm{D}e$ acting as an embedding several times.
 
-We get
+We get by Eq.\ \eqref{DiagramForNablaConn}
 %omitting the base points in the differentials for readability,
 \bas
 \mathrm{D}\pi_{\mathrm{T}\mathcal{G}}\mleft( \mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \mright)
@@ -4580,15 +4584,15 @@ The projection of $\mathcal{g}\to M$ is canonically the restriction of $\pi_{\ma
 &\in
 \mathrm{V}_{\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \mathrm{D}_xe(X) \mright) }\mathcal{g},
 \eas
-and so we can conclude that $\mathrm{pr}_2: \mathrm{V}\mathcal{g} \to \mathcal{g}$ is defined on this; in total $\nabla^{\mathcal{G}}\nu$ is well-defined. By Eq.\ \eqref{EqForNablaConnectionWithFlip} we also trivially know that 
+and so we can derive that $\mathrm{pr}_2: \mathrm{V}\mathcal{g} \to \mathcal{g}$ is defined on this; in total $\nabla^{\mathcal{G}}\nu$ is well-defined. By Eq.\ \eqref{EqForNablaConnectionWithFlip} we also trivially know that 
 \bas
 \pi_{\mathrm{TT}\mathcal{G}}\mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu} \mright)_x(X) \Bigr) \mright)
 &=
 \mu_{\mathcal{G}}^{\mathrm{tot}}\bigl( \mathrm{D}_x e(X) \bigr)
 \in
-\mathcal{g}_x,
+\mathcal{g}_x.
 \eas
-using that $\mathrm{T}\mathcal{g}$ is naturally an embedded submanifold of $\mathrm{TT}\mathcal{G}$ whose projection is the corresponding restriction of $\pi_{\mathrm{TT}\mathcal{G}}$. Viewing $\mathrm{V}\mathcal{g}$ naturally as the pullback of $\mathcal{g}$ along its projection we can therefore write
+Viewing $\mathrm{V}\mathcal{g}$ naturally as the pullback of $\mathcal{g}$ along its projection we can therefore write
 \bas
 \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T (X) \bigr)  
 &\stackrel{ \text{Eq.\ \eqref{EqForNablaConnectionWithFlip}} }{=}
@@ -4675,7 +4679,7 @@ f(x) ~ \mleft.\nabla^{\mathcal{G}}_{X} (f \nu) \mright|_x
 	\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \mleft( \nu^a \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)} \mright)
 \mright)
 \eas
-for all $f \in C^\infty(M)$, where $\mleft( \xi^a \mright)_a$ are fibre coordinates of $\mathcal{g}$,
+for all $f \in C^\infty(M)$, where $\mleft( \xi^a \mright)_a$ are fibre coordinates of $\mathcal{g}$.
 %so that we can write $\bigl($$\mleft( x^i \mright)_i$ coordinates on $M$$\bigr)$
 %\bas
 %\mathrm{D}_x \nu (X)
@@ -4683,7 +4687,7 @@ for all $f \in C^\infty(M)$, where $\mleft( \xi^a \mright)_a$ are fibre coordina
 %X^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}\mathcal{G}}^*x^i\mright)}\mright|_{\nu_x}
 	%+ X^i \mleft.\frac{\partial \nu^a}{\partial x^i}\mright|_x \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\nu_x}
 %\eas
-and where $\mathrm{T}\mathcal{g}$ is canonically embedded into $\mathrm{TT}\mathcal{G}$ which is why the evaluation is rigorously spoken at $\mathrm{D}_x e(X)$ and not $X$; but one may omit this notation for the sake of simplicity. It was well-defined to use the linearity of $\mathrm{pr}_2$, since we know by what we have shown earlier that both, $\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( (f\nu)_T (X) \bigr)$ and $\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( f \nu_T (X) \bigr) = f ~ \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T (X) \bigr)$, are elements of $\mathrm{V}\mathcal{g}$. Thence, 
+It was well-defined to use the linearity of $\mathrm{pr}_2$, since we know by what we have shown earlier that both, $\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( (f\nu)_T (X) \bigr)$ and $\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( f \nu_T (X) \bigr) = f ~ \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T (X) \bigr)$, are elements of $\mathrm{V}\mathcal{g}$. Thence, 
 \bas
 \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \mleft( \nu^a \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)} \mright)
 \eas
@@ -4695,7 +4699,7 @@ is vertical, too.
 %\mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0} \gamma^a &= \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)},
 %\eas
 %where $\mleft( e_a \mright)_a$ is a local frame of $\mathcal{g}$ dual to $\xi^a$. 
-By definition, $\mu_{\mathcal{G}}^{\mathrm{tot}}$ acts as identity on $\mathcal{g} = e^*\mathrm{V}\mathcal{G}$, and so $\mathrm{D}\mu_{\mathcal{G}}^{\mathrm{tot}}$ is the identity on $\mathrm{T}\mathcal{g}$. Making use of the aforementioned isomorphism $\mathrm{V}\mathcal{g} \cong \pi^*_{\mathrm{T}\mathcal{G}}\mathcal{g}$, we can also write similar as in Remark \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle}
+Making use of the aforementioned isomorphism $\mathrm{V}\mathcal{g} \cong \pi^*_{\mathrm{T}\mathcal{G}}\mathcal{g}$, we can write similar as in Remark \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle}
 \bas
 \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)}
 &\cong
@@ -4709,7 +4713,7 @@ where $\mleft(e_a\mright)_a$ is a local frame of $\mathcal{g}$ dual to $\xi^a$. 
 &=
 e_a.
 \eas
-Combining everything, we derive
+By definition, $\mu_{\mathcal{G}}^{\mathrm{tot}}$ acts as identity on $\mathcal{g} = e^*\mathrm{V}\mathcal{G}$, and so $\mathrm{D}\mu_{\mathcal{G}}^{\mathrm{tot}}$ is the identity on $\mathrm{T}\mathcal{g}$. Thus, we derive
 \bas
 \mathrm{pr}_2\mleft(
 	\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \mleft( \nu^a \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)} \mright)
@@ -4738,7 +4742,17 @@ This finishes the proof.
 %\eas
 \end{proof}
 
-\subsection{Generalized connection 1-forms on principal bundles}
+\begin{definitions}{LGB connection on its LAB}{ConnectionOnLAB}
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we call the vector bundle connection $\nabla^{\mathcal{G}}$ on $\mathcal{g}$ of Prop.\ \ref{prop:FinallyTheNablaInduction}, shortly denoted by
+\bas
+\nabla^{\mathcal{G}} \nu
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Delta \e^{t \nu}
+\eas
+for all $\nu \in \Gamma(\mathcal{g})$, the \textbf{$\mathcal{G}$-connection (on its LAB $\mathcal{g}$)}.
+\end{definitions}
+
+\subsubsection{Generalized connection 1-forms on principal bundles}
 
 As also stated in \cite[\S 5.1, Prop.\ 5.1.5, page 260]{Hamilton}, for a given horizontal distribution $\mathrm{H}\mathcal{P}$ of a principal $\mathcal{G}$-bundle $\mathcal{P} \stackrel{\pi}{\to} M$ over a smooth manifold $M$ we have by construction that
 \bas
@@ -4763,7 +4777,7 @@ X
 \eas
 where $p \in \mathcal{P}_x$, $X \in \mathrm{T}_p \mathcal{P}$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$. Then $\mathcal{r}_{g*}$ is independent of the choice of the local section $\sigma$, and it is a vector bundle automorphism over the right-translation $r_g$. 
 
-Furthermore, if we also have a horizontal distribution $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, then $\mathrm{H}_p\mathcal{P}$ is isomorphic to a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$ via $\mathcal{r}_{g*}$ (this complement is not necessarily $\mathrm{H}_{p \cdot g}\mathcal{P}$).
+Furthermore, if we also have a horizontal distribution $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, then $\mathrm{H}_p\mathcal{P}$ is isomorphic via $\mathcal{r}_{g*}$ to a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$ (this complement is not necessarily $\mathrm{H}_{p \cdot g}\mathcal{P}$).
 \end{propositions}
 
 \begin{proof}
@@ -4929,7 +4943,7 @@ However, this is not a suitable definition for us, because our moment map is the
 Let us discuss several examples.
 
 \begin{examples}{Recovering of the classical definition}{OurConnectionIsReallyMoreGeneral}
-As we already discussed several times, especially recall Remark \ref{rem:ModRightPushOnVertic} and Ex.\ \ref{ex:TheCLassicalPrincAsEx}, we recover the typical definition of a connection on a principal bundle if $\mathcal{P}$ is a pre-classical principal bundle. We call such a connection a \textbf{pre-classical connection}.
+As we already discussed several times, especially recall Remark \ref{rem:ModRightPushOnVertic} and Ex.\ \ref{ex:TheCLassicalPrincAsEx}, we recover the typical definition of a connection on a principal bundle if $\mathcal{P}$ is a pre-classical principal bundle and if the trivial LGB $\mathcal{G}$ is equipped with its canonical flat connection $\mathrm{H}\mathcal{G}$. We call such a connection a \textbf{pre-classical connection}.
 \end{examples}
 
 \begin{examples}{Associated LGBs}{AssociatedLGBsAndTheirCanonicalConnection}
@@ -4984,7 +4998,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 &\coloneqq
 \omega_{p \cdot g} \bigl( \mathcal{r}_{g*}(Y_1), \dotsc, \mathcal{r}_{g*}(Y_k)\bigr)
 \eas
-for all $p \in \mathcal{P}_x$ and $Y_1, \dotsc, Y_k \in \mathrm{T}_p\mathcal{P}$. Similarly we define \textbf{$r^!_{\sigma}\omega$ with a (local) section $\sigma \in \Gamma(\mathcal{G})$} as an element of $\Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ by 
+for all $p \in \mathcal{P}_x$ and $Y_1, \dotsc, Y_k \in \mathrm{T}_p\mathcal{P}$. Similarly we define the \textbf{pullback via the modified right-pushforward $r^!_{\sigma}\omega$ with a (local) section $\sigma \in \Gamma(\mathcal{G})$} as an element of $\Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ by 
 \bas
 \mleft.\mleft(\mathcal{r}_\sigma^!\omega\mright)\mright|_p \mleft( Y_1, \dotsc, Y_k\mright)
 &\coloneqq
@@ -5036,7 +5050,7 @@ A note about the notation on the right hand side of the $\mathcal{G}$-equivarian
 &=
 \mleft(\pi^*\mathrm{Ad}_{\sigma^{-1}} \mright) \bigl(A(X)\bigr)
 \eas
-for all $X \in\mathfrak{X}(\mathcal{P})$. $A(X)$ is a section of $\pi^*\mathcal{g}$, while $\mathrm{Ad}_{\sigma^{-1}}$ is an element of $\Gamma(\mathrm{Aut}(\mathcal{g}))$. The pullback LGB $\pi^*\mathrm{Aut}(\mathcal{g})$ acts canonically on $\pi^*\mathcal{g}$, in fact trivially $\pi^*\mathrm{Aut}(\mathcal{g}) \cong \mathrm{Aut}\mleft(\pi^*\mathcal{g}\mright)$. Hence, formally the pullback on the right hand side, also in order to assure that the right hand side has again values in $\pi^*\mathcal{g}$.
+for all $X \in\mathfrak{X}(\mathcal{P})$. $A(X)$ is a section of $\pi^*\mathcal{g}$, while $\mathrm{Ad}_{\sigma^{-1}}$ is an element of $\Gamma(\mathrm{Aut}(\mathcal{g}))$. The pullback LGB $\pi^*\mathrm{Aut}(\mathcal{g})$ acts canonically on $\pi^*\mathcal{g}$, in fact trivially $\pi^*\mathrm{Aut}(\mathcal{g}) \cong \mathrm{Aut}\mleft(\pi^*\mathcal{g}\mright)$. Hence, formally the pullback of $\mathrm{Ad}_{\sigma^{-1}}$ as a section of $\Gamma(\mathrm{Aut}(\mathcal{g}))$ on the right hand side, also in order to assure that the right hand side has again values in $\pi^*\mathcal{g}$.
 
 The modified $\mathcal{G}$-equivariance could equivalently be defined as 
 \bas
@@ -5044,7 +5058,7 @@ The modified $\mathcal{G}$-equivariance could equivalently be defined as
 	&=
 	\mleft(p, \mathrm{Ad}_{g^{-1}}\mright) \circ A_p
 \eas
-for all $(p, g) \in \mathcal{P} * \mathcal{G}$, using a fixed element of $\mathcal{G}$ instead. However, we decided against it due to the overall shape of this equation, the right hand side's shape is due to the same reason as in the previous paragraph; although one may argue to omit the notation of pullbacks for simplicity, especially if recalling the the notion of sections along maps as in Subsection \ref{BasicNotations}.
+for all $(p, g) \in \mathcal{P} * \mathcal{G}$, using a fixed element of $\mathcal{G}$ instead. However, we decided against it due to the overall shape of this equation. The right hand side's shape is due to the same reason as in the previous paragraph; although one may argue to omit the notation of pullbacks for simplicity, especially if recalling the notion of sections along maps as in Subsection \ref{BasicNotations}. Also recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback} for why we usually decide to use pullback notations.
 \end{remark}
 
 Finally, we identify (Ehresmann) connections and connection 1-forms on principal LGB-bundles; for this recall Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}.
@@ -5054,11 +5068,11 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \begin{itemize}
 	\item Let $\mathrm{H}\mathcal{P}$ be an Ehresmann connection on $\mathcal{P}$. Then $\mathrm{H}\mathcal{P}$ defines a connection 1-form $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ by
 	\bas
-	A_p\bigl( \widetilde{\nu}_p + X_p \bigr)
+	A_p\bigl( \widetilde{v}_p + X_p \bigr)
 	&=
-	(p, \nu)
+	(p, v)
 	\eas
-	for all $p \in \mathcal{P}_x$ ($x \in M$), $\nu \in \mathcal{g}_x$ and $X \in \mathrm{H}_p\mathcal{P}$.
+	for all $p \in \mathcal{P}_x$ ($x \in M$), $v \in \mathcal{g}_x$ and $X \in \mathrm{H}_p\mathcal{P}$.
 	\item Let $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then $A$ defines an Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$ by
 	\bas
 	\mathrm{H}_p\mathcal{P}
@@ -5071,12 +5085,23 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 
 \begin{proof}
 \leavevmode\newline
-
+The proof is very similar to the proof of "typical connections", as \textit{e.g.}\ provided in \cite[\S 5.2, Thm.\ 5.2.2, page 262]{Hamilton}.
+\indent $\bullet$ For the first bullet point we need to show that Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is satisfied, and the identity behaviour on $\mathrm{V}\mathcal{P}$ quickly follows by definition: We have
+\bas
+\mleft.A\mleft( \widetilde{\nu} \mright)\mright|_{p}
+&=
+A_p\mleft( \widetilde{\nu}_p \mright)
+=
+(p, \nu_x)
+=
+\mleft.\mleft(\pi^*\nu\mright)\mright|_p
+\eas
+for all $\nu \in \Gamma(\mathcal{g})$ for all $p \in \mathcal{P}_x$ ($x \in M$). Therefore it is only left to show the $\mathcal{G}$-equivariance. As mentioned in Remark \ref{rem:FundVecsNotations}, for $v\in \mathcal{g}_x$ the vector field $\widetilde{v}$ on $\mathcal{P}_x$ is a fundamental vector field coming from the $\mathcal{G}_x$-action on $\mathcal{P}_x$.
 \end{proof}
 
-\subsection{Gauge transformations}
-
 \subsection{Generalized curvature/field strength}
+
+\subsection{Gauge transformations}
 
 \subsection{Generalized covariant derivative/minimal coupling}
 
@@ -5549,7 +5574,7 @@ using the notation of Eq.\ \eqref{CoordinateExpressionOfTTM} (especially $X_0 \i
 \bas
 \lambda \boldsymbol{\cdot} \xi
 	\RPlus \kappa \boldsymbol{\cdot} \eta
-&=
+&\cong
 \mleft( 
 	\lambda X_0 + \kappa Y_0,
 	\mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft(\lambda \alpha^i + \kappa \beta^i \mright) \mright) \mleft.\frac{\partial}{\partial x^i}\mright|_{p}
