@@ -4909,9 +4909,9 @@ It is trivial to check that we have
 \bas
 \mathcal{r}_{g*}(X)
 &=
-r_{g*}(X)
-\coloneqq
 \mathrm{D}_pr_g(X)
+\eqqcolon
+r_{g*}(X)
 \eas
 for all $X \in \mathrm{V}_p\mathcal{P}$; we actually have proven this directly after Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}. As also pinpointed in Remark \ref{rem:DefOfConnectionIdeaWithDarboux}, if $\mathcal{G}$ is a trivial LGB equipped with its canonical flat connection and $\sigma$ a constant section, then it is easy to see that $\mathcal{r}_{\sigma*} = \mathcal{r}_{g*} = r_{g*}$, where $r_g$ has to be understood as the right-translation of the canonical Lie group action inherited by $\mathcal{G}$ in the sense of Ex.\ \ref{ex:TrivialLGBAction}.
 \end{remarks}
@@ -5086,7 +5086,8 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \begin{proof}
 \leavevmode\newline
 The proof is very similar to the proof of "typical connections", as \textit{e.g.}\ provided in \cite[\S 5.2, Thm.\ 5.2.2, page 262]{Hamilton}.
-\indent $\bullet$ For the first bullet point we need to show that Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is satisfied, and the identity behaviour on $\mathrm{V}\mathcal{P}$ quickly follows by definition: We have
+
+$\bullet$ For the first bullet point we need to show that Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is satisfied, and the identity behaviour on $\mathrm{V}\mathcal{P}$ quickly follows by definition: We have
 \bas
 \mleft.A\mleft( \widetilde{\nu} \mright)\mright|_{p}
 &=
@@ -5096,7 +5097,28 @@ A_p\mleft( \widetilde{\nu}_p \mright)
 =
 \mleft.\mleft(\pi^*\nu\mright)\mright|_p
 \eas
-for all $\nu \in \Gamma(\mathcal{g})$ for all $p \in \mathcal{P}_x$ ($x \in M$). Therefore it is only left to show the $\mathcal{G}$-equivariance. As mentioned in Remark \ref{rem:FundVecsNotations}, for $v\in \mathcal{g}_x$ the vector field $\widetilde{v}$ on $\mathcal{P}_x$ is a fundamental vector field coming from the $\mathcal{G}_x$-action on $\mathcal{P}_x$.
+for all $\nu \in \Gamma(\mathcal{g})$ and $p \in \mathcal{P}_x$ ($x \in M$). Therefore it is only left to show the $\mathcal{G}$-equivariance. As mentioned in Remark \ref{rem:FundVecsNotations}, for $v\in \mathcal{g}_x$ the vector field $\widetilde{v}$ on $\mathcal{P}_x$ is a fundamental vector field coming from the $\mathcal{G}_x$-action on $\mathcal{P}_x$. Hence, we know by \cite[\S 3.4, Prop.\ 3.4.6, page 145f.]{Hamilton} that
+\bas
+\mathcal{r}_{g*}\mleft( \widetilde{v} \mright)
+&=
+r_{g*}\mleft( \widetilde{v} \mright)
+=
+\oversortoftilde{\mathrm{Ad}_{g^{-1}}(v)}
+\eas
+for all $g \in \mathcal{G}_x$, also using Remark \ref{rem:ModRightPushOnVertic}. Thus,
+\bas
+\mleft.\mleft(\mathcal{r}^!_\sigma A\mright)\mright|_p\bigl( \widetilde{v}_p + X_p \bigr)
+&=
+A_{p \cdot \sigma_x}\bigl( 
+	\underbrace{\mathcal{r}_{\sigma_x*}\mleft(\widetilde{v}_p\mright)}
+		_{= \mleft. \mathcal{r}_{\sigma_x*}\mleft( \widetilde{v} \mright) \mright|_{p \cdot  \sigma_x}}
+	+ \underbrace{\mathcal{r}_{\sigma_x*}(X_p) }_{\in \mathrm{H}_{p \cdot \sigma_x}\mathcal{P}}
+\bigr)
+\\
+&=
+\mleft( p \cdot \sigma_x, \mathrm{Ad}_{\sigma_x^{-1}}(v) \mright)
+\eas
+for all $p \in \mathcal{P}_x$, $\sigma \in \Gamma(\mathcal{G})$, $v \in \mathcal{g}_x$ and $X_p \in \mathrm{H}_p\mathcal{P}$
 \end{proof}
 
 \subsection{Generalized curvature/field strength}
