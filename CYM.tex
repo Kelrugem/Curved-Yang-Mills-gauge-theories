@@ -68,6 +68,7 @@
   \braceld\leaders\vrule \@height\ht\z@ \@depth\z@\hfill\braceru$}
 \makeatother
 \DeclareMathOperator{\sAut}{\mathKel{A\mkern-5.5mu u\mkern-4mu t\mkern-1.5mu}}
+\DeclareMathOperator{\sAd}{\mathKel{A\mkern-5.5mu d}}
 \DeclareMathOperator{\saut}{\mathKel{a\mkern-4.5mu u\mkern-4mu t\mkern-1.5mu}}
 \DeclareMathOperator{\sEnd}{\mathKel{E\mkern-4mu n\mkern-4.5mu d\mkern-1mu}}
 
@@ -3668,7 +3669,7 @@ By Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}, a gauge corresponds to
 \subsection{Generalized distributions and connections}
 
 \begin{remarks}{References for connections on principal LGB-bundles}{AnotherPreprintWork}
-It is important to mention beforehand that there is another great paper,\footnote{At the time of this writing a preprint.} \cite{OtherPreprintAboutConnection}, which also discusses the notion of connections on principal LGB-bundles. When I wrote this subsection about the connection, I was not aware of this preprint so that there will be some shared results which I found independently of the other authors. This will be obvious due to the fact that our approach is different. Both, this and the other paper, lead to the same sense of connection (based on the same idea of the behaviour of the parallel transport), but are explicitly not directly the same formulation. More like equivalent definitions of the same object, two sides of the same coin, so that it should be worth it to read both research works. \cite{OtherPreprintAboutConnection} sole purpose was in defining connections, while we want to discuss this sense of connection in the context of Yang-Mills gauge theory, also pinpointing what happens for Yang-Mills-Higgs gauge theories. Hence, our approach will be different, we will use sections of the LGB to formulate connections, simplifying certain explicit formulas; while \cite{OtherPreprintAboutConnection} avoids using sections and rather uses formulations just looking on the vertical parts of a vector or by rephrasing the notions via the total derivative of the LGB action. Another example of difference is that we are also introducing a generalisation of the Darboux derivative and phrasing important formulas with this derivative. Furthermore, we are not going to fix a specific connection on $\mathcal{G}$ for the principal bundle's connection (other than a horizontal distribution), while \cite{OtherPreprintAboutConnection} did fix a more specific type of connection on $\mathcal{G}$, and our curvature will be different and more general as already pointed out in research like \cite{CurvedYMH} and \cite{MyThesis}.
+It is important to mention beforehand that there is another great paper, \cite{OtherPreprintAboutConnection}, which also discusses the notion of connections on principal LGB-bundles. When I wrote this subsection about the connection, I was not aware of this preprint so that there will be some shared results which I found independently of the other authors. This will be obvious due to the fact that our approach is different. Both, this and the other paper, lead to the same sense of connection (based on the same idea of the behaviour of the parallel transport), but are explicitly not directly the same formulation. More like equivalent definitions of the same object, two sides of the same coin, so that it should be worth it to read both research works. \cite{OtherPreprintAboutConnection} sole purpose was in defining connections, while we want to discuss this sense of connection in the context of Yang-Mills gauge theory, also pinpointing what happens for Yang-Mills-Higgs gauge theories. Hence, our approach will be different, we will use sections of the LGB to formulate connections, simplifying certain explicit formulas; while \cite{OtherPreprintAboutConnection} avoids using sections and rather uses formulations just looking on the vertical parts of a vector or by rephrasing the notions via the total derivative of the LGB action. Another example of difference is that we are also introducing a generalisation of the Darboux derivative and phrasing important formulas with this derivative. Furthermore, we are not going to fix a specific connection on $\mathcal{G}$ for the principal bundle's connection (other than a horizontal distribution), while \cite{OtherPreprintAboutConnection} did fix a more specific type of connection on $\mathcal{G}$, and our curvature will be different and more general as already pointed out in research like \cite{CurvedYMH} and \cite{MyThesis}.
 \end{remarks}
 
 Finally, let us now define the gauge theory, starting with horizontal distributions. For readability, we start with a very easy toy model which should help in understanding the general definitions. We expect a basic understanding of horizontal distributions and their relationship to what we call connections (on principal and vector bundles). The bare-bones start with horizontal distributions.
@@ -4754,7 +4755,7 @@ for all $\nu \in \Gamma(\mathcal{g})$, the \textbf{$\mathcal{G}$-connection (on 
 
 \subsubsection{First step towards towards associated bundles}
 
-In order to provide a concise definition of connection 1-forms on principal bundles, we will need to introduce some canonical form of action which will be obviously related to the action needed for an analogue to the notion of associated bundles related to typical principal bundles. However, we will neither discuss nor introduce associated bundles. The following action can be seen as another canonical action on the pullback of a principal bundle, but coming from $\mathcal{G}$ itself instead of its pullback, if $\mathcal{G}$ acts on the manifold one makes a pullback to.
+In order to provide a concise definition of connection 1-forms on principal bundles, we will need to introduce some canonical form of action which will be obviously related to the action needed for an analogue to the notion of associated bundles related to typical principal bundles. However, we will neither discuss nor introduce a more general notion of associated bundles in this paper; so, there will be just the "first step". The following action can be seen as another canonical action on the pullback of a principal bundle, but coming from $\mathcal{G}$ itself instead of its pullback, if $\mathcal{G}$ acts on the manifold one makes a pullback to.
 
 \begin{propositions}{Canonical LGB action on pullback vector bundles over principal LGB-bundles}{CanonicalLGBActionForAssociatedBundles}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Furthermore let $N$ be another smooth manifold and $f: N \to M$ a smooth map on which $\mathcal{G}$ acts on the left as in Def.\ \ref{def:LiegroupACtion}. Then on the pullback manifold $\mathcal{P} \times_M N \coloneqq f^*\mathcal{P}$, whose pairs of points are now reordered as in
@@ -4795,13 +4796,45 @@ so that Eq.\ \eqref{InvarianceOffUnderGAction} is satisfied. By construction we 
 \mleft(\mathcal{P} \times_M N\mright) * \mathcal{G} &\to (\mathcal{P} * \mathcal{G}) \times (\mathcal{G} * N) \to \mathcal{P} \times_M N,\\
 (p, x, g) &\mapsto \bigl( (p, g), (g, x) \bigr) \mapsto \mleft( p \cdot g, g^{-1} \cdot x \mright).
 \eas
-The first arrow is clearly smooth, and the second arrow is just the restriction of the smooth diagonal action,
+The first arrow is clearly an embedding, and the second arrow is just the restriction of the smooth diagonal action,
 \bas
 (\mathcal{P} * \mathcal{G}) \times (\mathcal{G} * N) &\to \mathcal{P} \times N,\\
 \bigl( (p, g), (q, p) \bigr) &\mapsto \mleft( p \cdot g, q^{-1} \cdot p \mright),
 \eas
 onto an embedded submanifold, and for its image make use of that $\mathcal{P} \times_M N$ is an embedded submanifold of $\mathcal{P} \times N$, as we already did several times for pullback bundles.
+
+Associativity follows simply by
+\bas
+\bigl((p, x) \cdot g \bigr) \cdot q
+&=
+\mleft( p \cdot g, g^{-1} \cdot x \mright) \cdot q
+=
+\mleft( p \cdot gq, (gq)^{-1} \cdot x \mright)
+=
+\mleft( p, x \mright) \cdot (gq)
+\eas
+for all $g, q \in \mathcal{G}_x$ ($x \coloneqq \pi(p) = f(x)$); it is trivial to check that $\mleft( p, x \mright) \cdot e_x = (p, x)$.
 \end{proof}
+
+As mentioned in Remark \ref{rem:ItIsAPrincipalAction}, constructions of quotients related to the LGB action may be possible here. Thus, using the last proposition, one should be able to construct associated bundles in this more general setting. We mainly need this proposition for the following example.
+
+\begin{examples}{Adjoint action on the vertical bundle of $\mathcal{P}$}{AdjointACtionOnVP}
+Recall the adjoint representation of $\mathcal{G}$ on its LAB $\mathcal{g} \stackrel{\pi_{\mathcal{g}}}{\to} M$, Ex.\ \ref{ex:LGBAdjointRep}. Using the notation of Prop.\ \ref{prop:CanonicalLGBActionForAssociatedBundles} we have a right $\mathcal{G}$-action on $\mathcal{P} \times_M \mathcal{g} = \{(p, v) \in \mathcal{P} \times \mathcal{g} ~ | ~ \pi(p) = \pi_{\mathcal{g}}(v) \}$ given by
+\bas
+(p, v) \cdot g
+&=
+\mleft( p \cdot g, \mathrm{Ad}_{g^{-1}}(v) \mright)
+\eas
+for all $p \in \mathcal{P}_x$ ($x \in M$), $v \in \mathcal{g}_x$ and $g \in \mathcal{G}_x$. Observe that $\mathcal{P} \times_M \mathcal{g} = \pi^*\mathcal{g}$ which is isomorphic to $\mathrm{V}\mathcal{P}$ by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}. We will denote this action shortly by
+\bas
+\sAd_{g^{-1}}(p, v)
+&\coloneqq
+(p,v) \cdot g,
+\eas
+the \textbf{adjoint representation of $\mathcal{G}$ on $\mathrm{V}\mathcal{P}$}; not to be confused with the adjoint representation of $\pi^*\mathcal{G}$ on $\pi^*\mathcal{g}$. In fact, it is trivial to check that $\sAd: \mathcal{G} \to \mathrm{Aut}(\pi^*\mathcal{g})$, $g \mapsto \sAd_{g}$, is a $\mathcal{G}$-representation on $\mathcal{P} \times_M \mathcal{g} = \pi^*\mathcal{g} \cong \mathrm{V}\mathcal{P}$ in the sense of Cor.\ \ref{cor:LGBRepAsLGBMorph}.
+\end{examples}
+
+Let us finally define connections on principal bundles.
 
 \subsubsection{Generalized connection 1-forms on principal bundles}
 
@@ -5071,7 +5104,7 @@ By Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} (and Remark \ref{RSigmaAnAut
 for all $p \in \mathcal{P}_x$ and $Y_1, \dotsc, Y_k \in \mathfrak{X}(\mathcal{P})$. Observe that we have $\mathcal{r}_{\sigma*}(Y_l) \in \Gamma\mleft(r_\sigma^*\mathrm{T}\mathcal{P}\mright)$ ($l \in \{1, \dotsc, k\}$) and $r_\sigma^*\omega \in \Gamma\mleft( \Lambda^k r_\sigma^*\mathrm{T}\mathcal{P} \otimes \pi^*\mathcal{g} \mright)$, using $r_\sigma^*\pi^*\mathcal{g} \cong (\pi \circ r_\sigma)^*\mathcal{g} = \pi^*\mathcal{g}$, such that the right hand side is well-defined.
 \end{remark}
 
-For the following definition recall Ex.\ \ref{ex:LGBAdjointRep} and the isomorphism for $\mathrm{V}\mathcal{P}$ in Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}.
+For the following definition recall Ex.\ \ref{ex:LGBAdjointRep} and the isomorphism for $\mathrm{V}\mathcal{P}$ in Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}; also recall the adjoint $\mathcal{G}$-representation on $\mathrm{V}\mathcal{P}$, Ex.\ \ref{ex:AdjointACtionOnVP}.
 
 \begin{definitions}{Connection 1-forms on principal LGB-bundles}{GaugeBosonsOnLGBPrincies}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a fixed horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. A \textbf{connection 1-form} on $\mathcal{P}$ is a 1-form $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ satisfying:
@@ -5080,7 +5113,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 		\bas 
 			\mathcal{r}_\sigma^! A
 			&=
-			\mleft(\pi^*\mathrm{Ad}_{\sigma^{-1}} \mright) ( A )
+			\sAd_{\sigma^{-1}} \circ A
 		\eas
 	for all (local) $\sigma \in \Gamma(\mathcal{G})$.
 	\item \textbf{(Identity on $\mathrm{V}\mathcal{P}$)}
@@ -5095,21 +5128,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 
 \begin{remark}
 \leavevmode\newline
-A note about the notation on the right hand side of the $\mathcal{G}$-equivariance's definition: This definition has to be read as
-\bas
-\mleft(\mathcal{r}_\sigma^! A\mright)(X)
-&=
-\mleft(\pi^*\mathrm{Ad}_{\sigma^{-1}} \mright) \bigl(A(X)\bigr)
-\eas
-for all $X \in\mathfrak{X}(\mathcal{P})$. $A(X)$ is a section of $\pi^*\mathcal{g}$, while $\mathrm{Ad}_{\sigma^{-1}}$ is an element of $\Gamma(\mathrm{Aut}(\mathcal{g}))$. The pullback LGB $\pi^*\mathrm{Aut}(\mathcal{g})$ acts canonically on $\pi^*\mathcal{g}$, in fact trivially $\pi^*\mathrm{Aut}(\mathcal{g}) \cong \mathrm{Aut}\mleft(\pi^*\mathcal{g}\mright)$. Hence, formally the pullback of $\mathrm{Ad}_{\sigma^{-1}}$ as a section of $\Gamma(\mathrm{Aut}(\mathcal{g}))$ on the right hand side, also in order to assure that the right hand side has again values in $\pi^*\mathcal{g}$.
-
-The modified $\mathcal{G}$-equivariance could equivalently be defined as 
-\bas
-	\mleft(\mathcal{r}_g^! \mleft(\mleft.A\mright|_{\mathcal{P}_x}\mright)\mright)_p
-	&=
-	\mleft(p, \mathrm{Ad}_{g^{-1}}\mright) \circ A_p
-\eas
-for all $(p, g) \in \mathcal{P} * \mathcal{G}$, using a fixed element of $\mathcal{G}$ instead. However, we decided against it due to the overall shape of this equation. The right hand side's shape is due to the same reason as in the previous paragraph; although one may argue to omit the notation of pullbacks for simplicity, especially if recalling the notion of sections along maps as in Subsection \ref{BasicNotations}. Also recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback} for why we usually decide to use pullback notations.
+Due to the fact that we formulated the $\mathcal{G}$-equivariance using Ex.\ \ref{ex:AdjointACtionOnVP}, one may be able to show an analogue of the 1:1 correspondence of typical (pre-classical) connection 1-forms to connection reforms and splittings of the Atiyah sequence; that is, a generalization of \cite[\S 3.2, page 90 ff.]{mackenzieGeneralTheory}.
 \end{remark}
 
 Finally, we identify (Ehresmann) connections and connection 1-forms on principal LGB-bundles; for this recall Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}.
@@ -5170,12 +5189,15 @@ A_{p \cdot \sigma_x}\bigl(
 \mleft( p \cdot \sigma_x, \mathrm{Ad}_{\sigma_x^{-1}}(v) \mright)
 \\
 &=
-\mleft( p \cdot \sigma_x, \mathrm{Ad}_{\sigma_x^{-1}} \mright)
-	\mleft( p \cdot \sigma_x, v \mright)
+\sAd_{\sigma_x^{-1}}(p, v)
 \\
 &=
+\sAd_{\sigma_x^{-1}}\mleft(A_p\bigl( \widetilde{v}_p + X_p \bigr)\mright)
+\\
+&=
+\mleft.\mleft(\sAd_{\sigma^{-1}} \circ A\mright)\mright|_p \bigl( \widetilde{v}_p + X_p \bigr)
 \eas
-for all $p \in \mathcal{P}_x$, $\sigma \in \Gamma(\mathcal{G})$, $v \in \mathcal{g}_x$ and $X_p \in \mathrm{H}_p\mathcal{P}$
+for all $p \in \mathcal{P}_x$, $\sigma \in \Gamma(\mathcal{G})$, $v \in \mathcal{g}_x$ and $X_p \in \mathrm{H}_p\mathcal{P}$.
 \end{proof}
 
 \subsection{Gauge transformations}
