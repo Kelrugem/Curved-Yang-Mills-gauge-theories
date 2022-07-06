@@ -4757,51 +4757,17 @@ for all $\nu \in \Gamma(\mathcal{g})$, the \textbf{$\mathcal{G}$-connection (on 
 In order to provide a concise definition of connection 1-forms on principal bundles, we will need to introduce some canonical form of action which will be obviously related to the action needed for an analogue to the notion of associated bundles related to typical principal bundles. However, we will neither discuss nor introduce associated bundles. The following action can be seen as another canonical action on the pullback of a principal bundle, but coming from $\mathcal{G}$ itself instead of its pullback, if $\mathcal{G}$ acts on the manifold one makes a pullback to.
 
 \begin{propositions}{Canonical LGB action on pullback vector bundles over principal LGB-bundles}{CanonicalLGBActionForAssociatedBundles}
-Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Furthermore let $N$ be another smooth manifold and $f: N \to M$ a smooth map on which $\mathcal{G}$ acts on the left as in Def.\ \ref{def:LiegroupACtion}. Then on the pullback manifold $\mathcal{P} \times_M N \coloneqq f^*\mathcal{P}$, whose pairs of points are now reordered as in
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Furthermore let $N$ be another smooth manifold and $f: N \to M$ a smooth map on which $\mathcal{G}$ acts on the left as in Def.\ \ref{def:LiegroupACtion}. Then we have a right $\mathcal{G}$-action on the pullback manifold $\mathcal{P} \times_M N \coloneqq f^*\mathcal{P}$, now reordered as in
 \bas
 \mathcal{P} \times_M N
 &\coloneqq
 \left\{
-	(p, x) \in \mathcal{P} \times N
+	(p, x)
 	~\middle|~
 	\pi(p) = f(x)
 \right\},
 \eas
-we have a right $\mathcal{G}$-action given by
-\bas
-\mleft(\mathcal{P} \times_M N\mright) * \mathcal{G} &\to \mathcal{P} \times_M N,\\
-(p, x, g) &\mapsto (p, x) \cdot g \coloneqq \mleft( p \cdot g, g^{-1} \cdot x \mright)
-\eas
-where $\mleft(\mathcal{P} \times_M N\mright) * \mathcal{G}$ is given as pullback of $\mathcal{G}$ w.r.t.\ the map $\widetilde{\pi}: \mathcal{P} \times_M N \to M$, $(p,x) = \pi(p)$.
 \end{propositions}
-
-\begin{proof}
-\leavevmode\newline
-By Def.\ \ref{def:LiegroupACtion} it is clear that this action is well-defined, due to 
-\bas
-\pi(p\cdot g) = \pi_{\mathcal{G}}(g) = f\mleft( g^{-1} \cdot x \mright)
-\eas
-for all $(p,x,g) \in \mleft(\mathcal{P} \times_M N\mright) * \mathcal{G}$,
-and this also implies
-\bas
-\widetilde{\pi}\bigl( (p, x) \cdot g \bigr)
-&=
-\pi(p\cdot g)
-=
-\pi_{\mathcal{G}}(g),
-\eas
-so that Eq.\ \eqref{InvarianceOffUnderGAction} is satisfied. By construction we also have a smooth action, since it is the composition of maps
-\bas
-\mleft(\mathcal{P} \times_M N\mright) * \mathcal{G} &\to (\mathcal{P} * \mathcal{G}) \times (\mathcal{G} * N) \to \mathcal{P} \times_M N,\\
-(p, x, g) &\mapsto \bigl( (p, g), (g, x) \bigr) \mapsto \mleft( p \cdot g, g^{-1} \cdot x \mright).
-\eas
-The first arrow is clearly smooth, and the second arrow is just the restriction of the smooth diagonal action,
-\bas
-(\mathcal{P} * \mathcal{G}) \times (\mathcal{G} * N) &\to \mathcal{P} \times N,\\
-\bigl( (p, g), (q, p) \bigr) &\mapsto \mleft( p \cdot g, q^{-1} \cdot p \mright),
-\eas
-onto an embedded submanifold, and for its image make use of that $\mathcal{P} \times_M N$ is an embedded submanifold of $\mathcal{P} \times N$, as we already did several times for pullback bundles.
-\end{proof}
 
 \subsubsection{Generalized connection 1-forms on principal bundles}
 
