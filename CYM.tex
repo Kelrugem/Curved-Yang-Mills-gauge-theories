@@ -5292,7 +5292,7 @@ for all (local) $\sigma \in \Gamma(\mathcal{G})$, where $x \coloneqq \pi(p)$. Th
 Let us now look at how gauge transformations of $A$ look like in this setting; for this recall the definition of gauge transformations in Def.\ \ref{def:MorphOfPrincBundles}. As in Remark \ref{rem:ClassGaugeTrafosAndcgPMulti} we expect a relationship between gauge transformations and certain LGB valued maps. For the following also recall Ex.\ \ref{ex:ConjugationActionForTheGeneralInnerGroupBundle}.
 
 \begin{definitions}{LGB-valued conjugation maps}{GaugeTrafosLGBMaps}
-Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Then we define the group \textbf{$C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ of $\mathcal{G}$-valued conjugation maps} as a set by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Then we define the group \textbf{$C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ of $\mathcal{G}$-valued conjugation maps} as a set by
 \bas
 C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}
 &=
@@ -5309,8 +5309,42 @@ Its group structure is inherited by the point-wise group structure of $\Gamma(\p
 \end{definitions}
 
 \begin{remarks}{Group structure on $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$}{GroupStructureOnCInftPGG}
-It is trivial to check that $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is indeed a subgroup of $\Gamma(\pi^*\mathcal{G})$
+It is trivial to check that $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is indeed a subgroup of $\Gamma(\pi^*\mathcal{G})$.
 \end{remarks}
+
+$C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ canonically acts on $\mathcal{P}$ on the right via the given $\mathcal{G}$-action: Let $\sigma \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$, then we define
+\bas
+p \cdot \sigma_p
+&\coloneqq
+p \cdot \mathrm{pr}_2\mleft( \sigma_p \mright)
+\eas
+for all $p \in \mathcal{P}$, where $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. In essence, we drop the notation of $\mathrm{pr}_2$, as if we view $\sigma$ as a map $\mathcal{P} \to \mathcal{G}$ of fibre bundles over $\pi$; recall Subsection \ref{BasicNotations}.
+
+As in the case of typical/pre-classical principal bundles, we have the following statement.
+
+\begin{propositions}{Gauge transformations as $\mathcal{G}$-valued conjugation maps}{GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Then there is a well-defined group isomorphism of gauge transformations and $\mathcal{G}$-valued conjugation maps given by
+\bas
+\sAut(\mathcal{P}) &\to C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}},\\
+H &\mapsto \sigma^H,
+\eas
+where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined by
+\bas
+H(p) &= p \cdot \sigma^H_p
+\eas
+for all $p \in \mathcal{P}$.
+\end{propositions}
+
+\begin{proof}
+\leavevmode\newline
+This result can be proven similarly as for Lie group based principal bundles. First of all, due to the fact that $H$ is base-preserving we know that $H(p)$ is in the same fibre as $p$, and due to that the $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive there is a unique element of $\mathcal{G}$, denoted by $\sigma^H_p$, such that
+\bas
+H(p)
+&=
+p \cdot \sigma_p^H.
+\eas
+By definitions, if we fix a point $x \in M$, then $H_x$ is an element of $\sAut(\mathcal{P}_x)$, where $\mathcal{P}_x$ is viewed as principal $\mathcal{G}_x$-bundle. Elements of $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ restricted to $\mathcal{P}_x$ are precisely the elements of $C^\infty(\mathcal{P}_x; \mathcal{G}_x)^{\mathcal{G}_x}$
+\end{proof}
 
 \subsection{Generalized curvature/field strength}
 
