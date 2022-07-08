@@ -4816,13 +4816,13 @@ Associativity follows simply by
 for all $g, q \in \mathcal{G}_x$ ($x \coloneqq \pi(p) = f(x)$); it is trivial to check that $\mleft( p, x \mright) \cdot e_x = (p, x)$.
 \end{proof}
 
-As mentioned in Remark \ref{rem:ItIsAPrincipalAction}, constructions of quotients related to the LGB action may be possible here. Thus, using the last proposition, one should be able to construct associated bundles in this more general setting. We mainly need this proposition for the following example.
+As mentioned in Remark \ref{rem:ItIsAPrincipalAction}, constructions of quotients related to the LGB action may be possible here. Thus, using the last proposition, one should be able to construct associated bundles in this more general setting. We mainly need this proposition for the following examples.
 
 \begin{examples}{Adjoint action on the vertical bundle of $\mathcal{P}$}{AdjointACtionOnVP}
 Recall the adjoint representation of $\mathcal{G}$ on its LAB $\mathcal{g} \stackrel{\pi_{\mathcal{g}}}{\to} M$, Ex.\ \ref{ex:LGBAdjointRep}. Using the notation of Prop.\ \ref{prop:CanonicalLGBActionForAssociatedBundles} we have a right $\mathcal{G}$-action on $\mathcal{P} \times_M \mathcal{g} = \{(p, v) \in \mathcal{P} \times \mathcal{g} ~ | ~ \pi(p) = \pi_{\mathcal{g}}(v) \}$ given by
 \bas
 (p, v) \cdot g
-&=
+&\coloneqq
 \mleft( p \cdot g, \mathrm{Ad}_{g^{-1}}(v) \mright)
 \eas
 for all $p \in \mathcal{P}_x$ ($x \in M$), $v \in \mathcal{g}_x$ and $g \in \mathcal{G}_x$. Observe that $\mathcal{P} \times_M \mathcal{g} = \pi^*\mathcal{g}$ which is isomorphic to $\mathrm{V}\mathcal{P}$ by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}. We will denote this action shortly by
@@ -4832,6 +4832,35 @@ for all $p \in \mathcal{P}_x$ ($x \in M$), $v \in \mathcal{g}_x$ and $g \in \mat
 (p,v) \cdot g,
 \eas
 the \textbf{adjoint representation of $\mathcal{G}$ on $\mathrm{V}\mathcal{P}$}; not to be confused with the adjoint representation of $\pi^*\mathcal{G}$ on $\pi^*\mathcal{g}$. In fact, it is trivial to check that $\sAd: \mathcal{G} \to \mathrm{Aut}(\pi^*\mathcal{g})$, $g \mapsto \sAd_{g}$, is a $\mathcal{G}$-representation on $\mathcal{P} \times_M \mathcal{g} = \pi^*\mathcal{g} \cong \mathrm{V}\mathcal{P}$ in the sense of Cor.\ \ref{cor:LGBRepAsLGBMorph}.
+
+The quotient of $\mathcal{P} \times_M \mathcal{g}$ w.r.t.\ this group action should lead to a structure which is the generalization of the adjoint bundle in typical formulations of gauge theory.
+\end{examples}
+
+Similarly, we can define the conjugation action on its integrated bundle; recall the conjugation defined in Def.\ \ref{def:LeftRightTranslationConjugation}. Especially observe that the conjugation defines a left $\mathcal{G}$-action on itself by
+\bas
+\mathcal{G} * \mathcal{G} &\to \mathcal{G},\\
+(g,q) &\mapsto c_g(q) = g q g^{-1}.
+\eas
+
+\begin{examples}{Conjugation action over $\mathcal{P}$}{ConjugationActionForTheGeneralInnerGroupBundle}
+Let us look at $\mathcal{P} \times_M \mathcal{G} \cong \pi^*\mathcal{G}$. Then we have a right $\mathcal{G}$-action on $\mathcal{P} \times_M \mathcal{G}$ given by
+\bas
+(p, q) \cdot g
+&\coloneqq
+\mleft( p \cdot g, c_{g^{-1}}(q) \mright)
+=
+\mleft( p \cdot g, g^{-1} q g \mright)
+\eas
+for all $p \in \mathcal{P}_x$ ($x \in M$), and $q,g \in \mathcal{G}_x$.
+We will denote this also by
+\bas
+\mathcal{c}_{g^{-1}}(p, q)
+\coloneqq
+(p, g) \cdot g,
+\eas
+the \textbf{conjugation of $\mathcal{G}$ on the integral of $\mathrm{V}\mathcal{P}$}.
+
+Taking a quotient of $\mathcal{P} \times_M \mathcal{G}$ over this action should lead to a generalization of inner group bundles as introduced in Ex.\ \ref{ex:InnerLGBs}.
 \end{examples}
 
 Let us finally define connections on principal bundles.
@@ -5136,11 +5165,11 @@ $\bullet$ The $\mathcal{G}$-equivariance reads point-wise for $g \coloneqq \sigm
 &=
 \mleft(
 	p \cdot g, 
-	\mathrm{Ad}_{g^{-1}}\bigl( A_p(X) \bigr)
+	\mathrm{Ad}_{g^{-1}}\mleft( \hat{A}_p(X) \mright)
 \mright)
 \eas
 for all $p \in \mathcal{P}_x$ and $X \in \mathrm{T}_p\mathcal{P}$,
-where we wrote $A_p = (p, A_p)$ with $A_p \in \Gamma\mleft( \mathrm{T}^*_p\mathcal{P} \otimes \mathcal{g}_x \mright)$, and $\mathrm{Ad}$ is the adjoint representation of $\mathcal{G}$. In the typical formulation of gauge theory the base point component is usually omitted due to that $\mathcal{g}$ is then trivial and so also $\mathrm{V}\mathcal{P} \cong \pi^*\mathcal{g}$.
+where we wrote $A_p = \mleft(p, \hat{A}_p\mright)$ with $\hat{A}_p \in \Gamma\mleft( \mathrm{T}^*_p\mathcal{P} \otimes \mathcal{g}_x \mright)$, and $\mathrm{Ad}$ is the adjoint representation of $\mathcal{G}$. In the typical formulation of gauge theory the base point component is usually omitted due to that $\mathcal{g}$ is then trivial and so also $\mathrm{V}\mathcal{P} \cong \pi^*\mathcal{g}$.
 \end{remark}
 
 Finally, we identify (Ehresmann) connections and connection 1-forms on principal LGB-bundles in the typical way; for this recall Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}.
@@ -5260,7 +5289,28 @@ for all (local) $\sigma \in \Gamma(\mathcal{G})$, where $x \coloneqq \pi(p)$. Th
 
 \subsection{Gauge transformations}
 
-Let us now look at how gauge transformations of $A$ look like in this setting; for this recall the definition of gauge transformations in Def.\ \ref{def:MorphOfPrincBundles}.
+Let us now look at how gauge transformations of $A$ look like in this setting; for this recall the definition of gauge transformations in Def.\ \ref{def:MorphOfPrincBundles}. As in Remark \ref{rem:ClassGaugeTrafosAndcgPMulti} we expect a relationship between gauge transformations and certain LGB valued maps. For the following also recall Ex.\ \ref{ex:ConjugationActionForTheGeneralInnerGroupBundle}.
+
+\begin{definitions}{LGB-valued conjugation maps}{GaugeTrafosLGBMaps}
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Then we define the group \textbf{$C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ of $\mathcal{G}$-valued conjugation maps} as a set by
+\bas
+C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}
+&=
+\bigl\{
+	\sigma \in \Gamma(\pi^*\mathcal{G})
+	~\big|~
+	\sigma_{p \cdot g}
+	=
+	\mathcal{c}_{g^{-1}}( \sigma_p )
+	\text{ for all } (p, g) \in \mathcal{P}*\mathcal{G}
+\bigr\}.
+\eas
+Its group structure is inherited by the point-wise group structure of $\Gamma(\pi^*\mathcal{G})$; recall Cor.\ \ref{cor:PullbackLGB}.
+\end{definitions}
+
+\begin{remarks}{Group structure on $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$}{GroupStructureOnCInftPGG}
+It is trivial to check that $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is indeed a subgroup of $\Gamma(\pi^*\mathcal{G})$
+\end{remarks}
 
 \subsection{Generalized curvature/field strength}
 
