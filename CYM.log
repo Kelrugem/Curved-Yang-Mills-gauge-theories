@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  9 JUL 2022 01:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  10 JUL 2022 22:09
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1255,7 +1255,7 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 {C:/Users/kelru/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (CYM.toc [2]
 Overfull \hbox (1.09496pt too wide) detected at line 39
- []\T1/lmss/bx/n/10.95 103
+ []\T1/lmss/bx/n/10.95 104
  []
 
 )
@@ -1328,7 +1328,7 @@ om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
  []
 
 ) [95] [96] [97] [98] [99] [100] [101] [102] [103] [104]
-Overfull \hbox (2.20065pt too wide) in paragraph at lines 6030--6048
+Overfull \hbox (2.20065pt too wide) in paragraph at lines 6046--6064
 \OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/
 10.95 )$ \T1/lmr/m/n/10.95 as an el-e-ment of $\OT1/lmr/m/n/10.95 
 [](\OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.95 ; [](\OML/lmm/m/it/10.95 V\OT1/lmr/m
@@ -1340,21 +1340,18 @@ mm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/10.95
 /n/10.95 ))$
  []
 
-[105] [106] [107] [108] [109] (CYM.aux)
+[105] [106] [107] [108] [109] [110] (CYM.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34760 strings out of 478907
- 725628 string characters out of 2851891
- 1214185 words of memory out of 3000000
- 51601 multiletter control sequences out of 15000+600000
+ 34759 strings out of 478907
+ 725602 string characters out of 2851891
+ 1216186 words of memory out of 3000000
+ 51599 multiletter control sequences out of 15000+600000
  522375 words of font info for 151 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1397,9 +1394,9 @@ ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Use
 rs/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb
 >
-Output written on CYM.pdf (111 pages, 1172642 bytes).
+Output written on CYM.pdf (112 pages, 1174007 bytes).
 PDF statistics:
- 1768 PDF objects out of 2073 (max. 8388607)
- 401 named destinations out of 1000 (max. 500000)
+ 1775 PDF objects out of 2073 (max. 8388607)
+ 402 named destinations out of 1000 (max. 500000)
  333 words of extra memory for PDF output out of 10000 (max. 10000000)
 

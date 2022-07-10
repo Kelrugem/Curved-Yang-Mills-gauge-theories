@@ -3419,7 +3419,7 @@ The latter about the typical trivialization is also stated in \cite[\S 5.7, four
 
 \begin{proof}[Proof of Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}]
 \leavevmode\newline
-The proof is similar to the "classical" statement as \textit{e.g.}\ given in \cite[\S 4.2, proof of Lemma 4.2.7, page 210ff.]{Hamilton}, but generalized since we have to treat a possible non-triviality of $\mathcal{G}|_U$. As already discussed, $\Phi_s$ is well-defined because of $\pi_{\mathcal{P}} \circ s = \mathds{1}_{U}$ such that $\mleft(s_{\pi_{\mathcal{G}}(g)}, g\mright) \in \mathcal{P}*\mathcal{G}$. Let us denote with $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{G}$ the right $\mathcal{G}$-action $(p, g) \mapsto p \cdot g$ on $\mathcal{P}$, then
+The proof is similar to the "classical" statement as \textit{e.g.}\ given in \cite[\S 4.2, proof of Lemma 4.2.7, page 210ff.]{Hamilton}, but generalized since we have to treat a possible non-triviality of $\mathcal{G}|_U$. As already discussed, the orbit map $\Phi_s$ is well-defined because of $\pi_{\mathcal{P}} \circ s = \mathds{1}_{U}$ such that $\mleft(s_{\pi_{\mathcal{G}}(g)}, g\mright) \in \mathcal{P}*\mathcal{G}$. Let us denote with $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{G}$ the right $\mathcal{G}$-action $(p, g) \mapsto p \cdot g$ on $\mathcal{P}$, then
 \ba\label{RewritingLocalTrivOfPrinc}
 \Phi_s(g)
 &=
@@ -3427,7 +3427,7 @@ The proof is similar to the "classical" statement as \textit{e.g.}\ given in \ci
 =
 \bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathds{1}_{\mathcal{G}} \mright) \bigr) (g,g).
 \ea
-Thence, $\Phi_s$ is clearly a smooth map as the composition of smooth maps; the second map $\mleft( \pi_{\mathcal{G}}^*s, \mathds{1}_{\mathcal{G}} \mright): \mathcal{G} \times \mathcal{G} \to \mathcal{G}$ is given by $(g, q) \mapsto \mleft( s_{\pi_{\mathcal{G}(g)}} , g \mright)$ and is clearly smooth if restricted to the diagonal as embedded submanifold. By Def.\ \ref{def:LiegroupACtion} we have
+Thence, $\Phi_s$ is clearly a smooth map as the composition of smooth maps; the second map $\mleft( \pi_{\mathcal{G}}^*s, \mathds{1}_{\mathcal{G}} \mright): \mathcal{G} \times \mathcal{G} \to \mathcal{G}$ is given by $(g, q) \mapsto \mleft( s_{\pi_{\mathcal{G}(g)}} , q \mright)$ and is clearly smooth if restricted to the diagonal as embedded submanifold. By Def.\ \ref{def:LiegroupACtion} we have
 \bas
 \mleft( \pi_{\mathcal{P}} \circ \Phi_s \mright)(g)
 &=
@@ -5343,6 +5343,22 @@ H(p)
 &=
 p \cdot \sigma_p^H.
 \eas
+$p \mapsto \sigma_p^H$ is smooth due to Remark \ref{rem:LGBPrincDefDiscussion}: We can write
+\bas
+H(p) &= \Phi_p \mleft( \sigma_p^H \mright),
+\eas
+where $\Phi_p: \mathcal{G}_x \to \mathcal{P}_x$ is the orbit through $p \in \mathcal{P}_x$ ($x \in M$). By Remark \ref{rem:LGBPrincDefDiscussion} $\Phi_p$ is a $\mathcal{G}_x$-equivariant diffeomorphism, especially invertible, so that
+\bas
+\sigma_p^H = \mleft( \Phi_p \mright)^{-1}\bigl( H(p) \bigr).
+\eas
+As we already argued several times, $\mathcal{P}* \mathcal{G} = \pi^*\mathcal{G}$ is an embedded submanifold of $\mathcal{P} \times \mathcal{G}$, and thus $\Phi_p$ is smooth in $p$, if it is point-wise in $\mathcal{G}$ smooth. That is, its smoothness comes from the smoothness of the right $\mathcal{G}$-action $\Phi$ on $\mathcal{P}$, and the derivative of $\Phi_p$ in $p$ along a tangent vector $X \in \mathrm{T}_p\mathcal{P}$ is determined by the following, using Thm.\ \ref{thm:DiffOfLGBAction},
+\bas
+\mathrm{D}_{(p, g)}\Phi\bigl(X, \mathrm{D}_x\sigma(\omega)\bigr)
+&=
+\mathrm{D}_pr_\sigma(X)
+\eas
+for all $(p, g) \in \mathcal{P} * \mathcal{G}$, where $x \coloneqq \pi(p)$, $\omega \coloneqq \mathrm{D}\pi(X)$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$; the tangent vector $Y$ as denoted in Thm.\ \ref{thm:DiffOfLGBAction} can be chosen in an arbitrary way, as long as $(X, Y) \in \mathrm{T}(\mathcal{P}* \mathcal{G})$. Thus, smoothness of $\Phi_p$ in $p$ can also 
+
 By definitions, if we fix a point $x \in M$, then $H_x$ is an element of $\sAut(\mathcal{P}_x)$, where $\mathcal{P}_x$ is viewed as principal $\mathcal{G}_x$-bundle. Elements of $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ restricted to $\mathcal{P}_x$ are precisely the elements of $C^\infty(\mathcal{P}_x; \mathcal{G}_x)^{\mathcal{G}_x}$
 \end{proof}
 
