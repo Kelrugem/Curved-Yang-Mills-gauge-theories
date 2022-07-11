@@ -3612,7 +3612,7 @@ Let $M, N$ be smooth manifolds, $f: N \to M$ a smooth map, $\mathcal{G} \to M$ a
 We will refer to this structure often without further mention.
 \end{definitions}
 
-We can make a pullback with the projection of the principal bundle $\mathcal{P} \stackrel{\pi}{\to} M$ itself to show that $\mathcal{P}*\mathcal{G}$ is not only $\pi^*\mathcal{G}$ by definition but also $\pi^*\mathcal{P}$. For this recall Ex.\ \ref{ex:TrivialPrincAsLGB}, \textit{i.e.}\ LGBs are "trivially" also principal bundles, hence we know that $\mathcal{P} * \mathcal{G}$ is a principal $\pi^*\mathcal{G}$-bundle.
+We can actually show that $\mathcal{P}*\mathcal{G}$ is not only $\pi^*\mathcal{G}$ by definition but it is also isomorphic to $\pi^*\mathcal{P}$. For this recall Ex.\ \ref{ex:TrivialPrincAsLGB}, \textit{i.e.}\ LGBs are "trivially" also principal bundles, hence we know that $\mathcal{P} * \mathcal{G}$ is a principal $\pi^*\mathcal{G}$-bundle.
 
 \begin{corollaries}{$\mathcal{P}*\mathcal{G}$ is the pullback of $\mathcal{P}$ along its projection}{ProductSpaceIsPItself}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Then we have a base-preserving principal bundle isomorphism 
@@ -5347,8 +5347,8 @@ p \cdot \sigma_p^H
 =
 p \cdot \mathrm{pr}_2\mleft(\sigma_p^H\mright),
 \eas
-where $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component.
-Let us first show smoothness of $p \mapsto \sigma_p^H$; recall first Remark \ref{rem:LGBPrincDefDiscussion}: We can write
+where $\mathrm{pr}_2: \mathcal{P}*\mathcal{G} = \pi^*\mathcal{G} \to \mathcal{G}$ is the smooth projection onto the second component.
+Let us first show smoothness of $p \mapsto \sigma_p^H$: We can write
 \bas
 H(p) &= \Phi_p \mleft( \sigma_p^H \mright),
 \eas
@@ -5361,7 +5361,7 @@ Let us define the map
 \pi^*\mathcal{P} &\to \mathcal{G},\\
 \mleft( p, p^\prime \mright) &\mapsto \Phi^{-1}\mleft( p, p^\prime \mright) \coloneqq \mleft( \Phi_p \mright)^{-1}\mleft( p^\prime \mright)
 \eas
-which is a map over $\pi$ by construction. If we can show smoothness of $\Phi^{-1}$, then smoothness of $\sigma^H$ follows due to smoothness of $H$ and
+which is a map over $\pi$ by construction. If we can show smoothness of $\Phi^{-1}$, then smoothness of $\sigma^H$ follows additionally due to smoothness of $H$ and
 \bas
 \sigma_p^H
 &=
@@ -5371,14 +5371,36 @@ which is a map over $\pi$ by construction. If we can show smoothness of $\Phi^{-
 =
 \Bigl( p, \Phi^{-1}\bigl(p, H(p) \bigr) \Bigr).
 \eas
-
-As we already argued several times, $\mathcal{P}* \mathcal{G} = \pi^*\mathcal{G}$ is an embedded submanifold of $\mathcal{P} \times \mathcal{G}$, and thus $\Phi_p$ is smooth in $p$, if it is point-wise in $\mathcal{G}$ smooth. That is, its smoothness comes from the smoothness of the right $\mathcal{G}$-action $\Phi$ on $\mathcal{P}$, and the derivative of $\Phi_p$ in $p$ along a tangent vector $X \in \mathrm{T}_p\mathcal{P}$ is determined by the following, using Thm.\ \ref{thm:DiffOfLGBAction},
+Observe that we have
 \bas
-\mathrm{D}_{(p, g)}\Phi\bigl(X, \mathrm{D}_x\sigma(\omega)\bigr)
+\mathrm{pr}_2(p, g)
+=
+g
 &=
-\mathrm{D}_pr_\sigma(X)
+\mleft( \Phi_p \mright)^{-1}\bigl( \Phi_p(g) \bigr)
+=
+\Phi^{-1}\bigl( p, \Phi(p, g) \bigr)
 \eas
-for all $(p, g) \in \mathcal{P} * \mathcal{G}$, where $x \coloneqq \pi(p)$, $\omega \coloneqq \mathrm{D}\pi(X)$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$; the tangent vector $Y$ as denoted in Thm.\ \ref{thm:DiffOfLGBAction} can be chosen in an arbitrary way, as long as $(X, Y) \in \mathrm{T}(\mathcal{P}* \mathcal{G})$. Thus, smoothness of $\Phi_p$ in $p$ can also 
+for all $(p, g) \in \mathcal{P}*\mathcal{G}$, where $\Phi$ denotes the right $\mathcal{G}$-action on $\mathcal{P}$. The map
+\bas
+L: \mathcal{P}*\mathcal{G} &\to \pi^*\mathcal{P},\\
+(p, g) &\mapsto \bigl( p, \Phi(p, g) \bigr),
+\eas
+is a base-preserving principal bundle isomorphism (w.r.t.\ the LGB isomorphism given as the identity map on $\mathcal{P} * \mathcal{G}$), recall Cor.\ \ref{cor:ProductSpaceIsPItself} and Remark \ref{AlternativePrincBdlDef}. Thus, we have
+\bas
+\Phi^{-1}
+&=
+\mathrm{pr}_2 \circ L^{-1},
+\eas
+so $\Phi^{-1}$ is smooth, and therefore $\sigma^H$ is smooth, too.
+%
+%As we already argued several times, $\mathcal{P}* \mathcal{G} = \pi^*\mathcal{G}$ is an embedded submanifold of $\mathcal{P} \times \mathcal{G}$, and thus $\Phi_p$ is smooth in $p$, if it is point-wise in $\mathcal{G}$ smooth. That is, its smoothness comes from the smoothness of the right $\mathcal{G}$-action $\Phi$ on $\mathcal{P}$, and the derivative of $\Phi_p$ in $p$ along a tangent vector $X \in \mathrm{T}_p\mathcal{P}$ is determined by the following, using Thm.\ \ref{thm:DiffOfLGBAction},
+%\bas
+%\mathrm{D}_{(p, g)}\Phi\bigl(X, \mathrm{D}_x\sigma(\omega)\bigr)
+%&=
+%\mathrm{D}_pr_\sigma(X)
+%\eas
+%for all $(p, g) \in \mathcal{P} * \mathcal{G}$, where $x \coloneqq \pi(p)$, $\omega \coloneqq \mathrm{D}\pi(X)$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$; the tangent vector $Y$ as denoted in Thm.\ \ref{thm:DiffOfLGBAction} can be chosen in an arbitrary way, as long as $(X, Y) \in \mathrm{T}(\mathcal{P}* \mathcal{G})$. Thus, smoothness of $\Phi_p$ in $p$ can also 
 
 $\bullet$ By definitions, if we fix a point $x \in M$, then $H_x$ is an element of $\sAut(\mathcal{P}_x)$, where $\mathcal{P}_x$ is viewed as principal $\mathcal{G}_x$-bundle. Elements of $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ restricted to $\mathcal{P}_x$ are precisely the elements of $C^\infty(\mathcal{P}_x; \mathcal{G}_x)^{\mathcal{G}_x}$
 \end{proof}
