@@ -5337,20 +5337,41 @@ for all $p \in \mathcal{P}$.
 
 \begin{proof}
 \leavevmode\newline
-This result can be proven similarly as for Lie group based principal bundles. First of all, due to the fact that $H$ is base-preserving we know that $H(p)$ is in the same fibre as $p$, and due to that the $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive there is a unique element of $\mathcal{G}$, denoted by $\sigma^H_p$, such that
+This result can be proven similarly as for Lie group based principal bundles; however smoothness needs to be discussed a bit. 
+
+$\bullet$ First of all, due to the fact that $H$ is base-preserving we know that $H(p)$ is in the same fibre as $p$ ($p \in \mathcal{P}$), and due to that the $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive there is a unique element of $\mathcal{G}$, denoted by $\sigma^H_p$, such that
 \bas
 H(p)
 &=
-p \cdot \sigma_p^H.
+p \cdot \sigma_p^H
+=
+p \cdot \mathrm{pr}_2\mleft(\sigma_p^H\mright),
 \eas
-$p \mapsto \sigma_p^H$ is smooth due to Remark \ref{rem:LGBPrincDefDiscussion}: We can write
+where $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component.
+Let us first show smoothness of $p \mapsto \sigma_p^H$; recall first Remark \ref{rem:LGBPrincDefDiscussion}: We can write
 \bas
 H(p) &= \Phi_p \mleft( \sigma_p^H \mright),
 \eas
-where $\Phi_p: \mathcal{G}_x \to \mathcal{P}_x$ is the orbit through $p \in \mathcal{P}_x$ ($x \in M$). By Remark \ref{rem:LGBPrincDefDiscussion} $\Phi_p$ is a $\mathcal{G}_x$-equivariant diffeomorphism, especially invertible, so that
+where $\Phi_p: \mathcal{G}_x \to \mathcal{P}_x$ is the orbit through $p \in \mathcal{P}_x$ ($x \in M$). By Remark \ref{rem:LGBPrincDefDiscussion}, $\Phi_p$ is a $\mathcal{G}_x$-equivariant diffeomorphism, especially invertible, so that
 \bas
-\sigma_p^H = \mleft( \Phi_p \mright)^{-1}\bigl( H(p) \bigr).
+\mathrm{pr}_2\mleft(\sigma_p^H\mright) = \mleft( \Phi_p \mright)^{-1}\bigl( H(p) \bigr).
 \eas
+Let us define the map
+\bas
+\pi^*\mathcal{P} &\to \mathcal{G},\\
+\mleft( p, p^\prime \mright) &\mapsto \Phi^{-1}\mleft( p, p^\prime \mright) \coloneqq \mleft( \Phi_p \mright)^{-1}\mleft( p^\prime \mright)
+\eas
+which is a map over $\pi$ by construction. If we can show smoothness of $\Phi^{-1}$, then smoothness of $\sigma^H$ follows due to smoothness of $H$ and
+\bas
+\sigma_p^H
+&=
+\mleft( p, \mathrm{pr}_2\mleft(\sigma_p^H\mright) \mright)
+=
+\mleft( p, \mleft( \Phi_p \mright)^{-1}\bigl( H(p) \bigr) \mright)
+=
+\Bigl( p, \Phi^{-1}\bigl(p, H(p) \bigr) \Bigr).
+\eas
+
 As we already argued several times, $\mathcal{P}* \mathcal{G} = \pi^*\mathcal{G}$ is an embedded submanifold of $\mathcal{P} \times \mathcal{G}$, and thus $\Phi_p$ is smooth in $p$, if it is point-wise in $\mathcal{G}$ smooth. That is, its smoothness comes from the smoothness of the right $\mathcal{G}$-action $\Phi$ on $\mathcal{P}$, and the derivative of $\Phi_p$ in $p$ along a tangent vector $X \in \mathrm{T}_p\mathcal{P}$ is determined by the following, using Thm.\ \ref{thm:DiffOfLGBAction},
 \bas
 \mathrm{D}_{(p, g)}\Phi\bigl(X, \mathrm{D}_x\sigma(\omega)\bigr)
@@ -5359,7 +5380,7 @@ As we already argued several times, $\mathcal{P}* \mathcal{G} = \pi^*\mathcal{G}
 \eas
 for all $(p, g) \in \mathcal{P} * \mathcal{G}$, where $x \coloneqq \pi(p)$, $\omega \coloneqq \mathrm{D}\pi(X)$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$; the tangent vector $Y$ as denoted in Thm.\ \ref{thm:DiffOfLGBAction} can be chosen in an arbitrary way, as long as $(X, Y) \in \mathrm{T}(\mathcal{P}* \mathcal{G})$. Thus, smoothness of $\Phi_p$ in $p$ can also 
 
-By definitions, if we fix a point $x \in M$, then $H_x$ is an element of $\sAut(\mathcal{P}_x)$, where $\mathcal{P}_x$ is viewed as principal $\mathcal{G}_x$-bundle. Elements of $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ restricted to $\mathcal{P}_x$ are precisely the elements of $C^\infty(\mathcal{P}_x; \mathcal{G}_x)^{\mathcal{G}_x}$
+$\bullet$ By definitions, if we fix a point $x \in M$, then $H_x$ is an element of $\sAut(\mathcal{P}_x)$, where $\mathcal{P}_x$ is viewed as principal $\mathcal{G}_x$-bundle. Elements of $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ restricted to $\mathcal{P}_x$ are precisely the elements of $C^\infty(\mathcal{P}_x; \mathcal{G}_x)^{\mathcal{G}_x}$
 \end{proof}
 
 \subsection{Generalized curvature/field strength}
