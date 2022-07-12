@@ -5337,9 +5337,9 @@ for all $p \in \mathcal{P}$.
 
 \begin{proof}
 \leavevmode\newline
-This result can be proven similarly as for Lie group based principal bundles; however smoothness needs to be discussed a bit. 
+This result can be proven similarly as for Lie group based principal bundles; however smoothness needs to be discussed a bit. In the following we make use of that pullback manifolds like $\mathcal{P}*\mathcal{G}$ are embedded submanifolds of product manifolds like $\mathcal{P}\times\mathcal{G}$, we will not further mention it.
 
-$\bullet$ First of all, due to the fact that $H$ is base-preserving we know that $H(p)$ is in the same fibre as $p$ ($p \in \mathcal{P}$), and due to that the $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive there is a unique element of $\mathcal{G}$, denoted by $\sigma^H_p$, such that
+$\bullet$ First of all, due to the fact that $H$ is base-preserving we know that $H(p)$ is in the same fibre as $p$ ($p \in \mathcal{P}$), and due to that the $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive there is a unique element of $\pi^*\mathcal{G}|_p$, denoted by $\sigma^H_p$, such that
 \bas
 H(p)
 &=
@@ -5352,7 +5352,7 @@ Let us first show smoothness of $p \mapsto \sigma_p^H$: We can write
 \bas
 H(p) &= \Phi_p \mleft( \sigma_p^H \mright),
 \eas
-where $\Phi_p: \mathcal{G}_x \to \mathcal{P}_x$ is the orbit through $p \in \mathcal{P}_x$ ($x \in M$). By Remark \ref{rem:LGBPrincDefDiscussion}, $\Phi_p$ is a $\mathcal{G}_x$-equivariant diffeomorphism, especially invertible, so that
+where $\Phi_p: \mathcal{G}_x \to \mathcal{P}_x$ is the orbit map through $p \in \mathcal{P}_x$ ($x \in M$). By Remark \ref{rem:LGBPrincDefDiscussion}, $\Phi_p$ is a $\mathcal{G}_x$-equivariant diffeomorphism, especially invertible, so that
 \bas
 \mathrm{pr}_2\mleft(\sigma_p^H\mright) = \mleft( \Phi_p \mright)^{-1}\bigl( H(p) \bigr).
 \eas
@@ -5393,6 +5393,62 @@ is a base-preserving principal bundle isomorphism (w.r.t.\ the LGB isomorphism g
 \mathrm{pr}_2 \circ L^{-1},
 \eas
 so $\Phi^{-1}$ is smooth, and therefore $\sigma^H$ is smooth, too.
+
+$\bullet$ That $\sigma^H$ is an element of $C^\infty(\mathcal{P};\mathcal{G})^{\mathcal{G}}$ follows as usual:
+\bas
+(p \cdot g) \cdot \mathrm{pr}_2\mleft(\sigma^H_{p \cdot g}\mright)
+&=
+f(p \cdot g)
+=
+f(p) \cdot g
+=
+p \cdot \mleft(\mathrm{pr}_2\mleft(\sigma^H_p\mright) ~ g \mright)
+\eas
+for all $(p, g) \in \mathcal{P}*\mathcal{G}$,
+so that, by the simply transitivity of the action,
+\bas
+g ~ \mathrm{pr}_2\mleft(\sigma^H_{p \cdot g}\mright)
+&=
+\mathrm{pr}_2\mleft(\sigma^H_p\mright) ~ g,
+\eas
+and thus
+\bas
+\sigma^H_{p \cdot g}
+&=
+\Bigl( p \cdot g, \mathrm{pr}_2\mleft(\sigma^H_{p \cdot g}\mright) \Bigr)
+=
+\Bigl( p \cdot g, g^{-1} ~ \mathrm{pr}_2\mleft(\sigma^H_p\mright) ~ g \Bigr)
+=
+\mathcal{c}_{g^{-1}}\mleft( \sigma^H_p \mright).
+\eas
+Thus, $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$.
+
+$\bullet$ The inverse of $H \mapsto \sigma^H$ is clearly given by
+\bas
+C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}} &\to \sAut(\mathcal{P}),\\
+\sigma &\mapsto H^\sigma,
+\eas
+where 
+\bas
+H^\sigma(p)
+&\coloneqq
+p \cdot \sigma_p
+\eas
+for all $p \in \mathcal{P}$. Smoothness here is now obvious, and we have 
+\bas
+H^\sigma(p \cdot g)
+&=
+p \cdot g ~ \underbrace{\sigma_{p \cdot g}}_{\mathclap{ = \mathcal{c}_{g^{-1}}\mleft(\sigma_p\mright) }}
+=
+p \cdot g ~ \underbrace{\mathrm{pr}_2\mleft( \mathcal{c}_{g^{-1}}\mleft(\sigma_p\mright) \mright)}_{\mathclap{ = c_{g^{-1}}\mleft( \mathrm{pr}_2(\sigma_p) \mright) }}
+=
+p \cdot \mathrm{pr}_2\mleft( \sigma_p \mright) ~ g
+=
+p \cdot \sigma_p ~ g
+=
+H^\sigma(p) \cdot g
+\eas
+for all $(p, g) \in \mathcal{P} * \mathcal{G}$. This finishes the proof.
 %
 %As we already argued several times, $\mathcal{P}* \mathcal{G} = \pi^*\mathcal{G}$ is an embedded submanifold of $\mathcal{P} \times \mathcal{G}$, and thus $\Phi_p$ is smooth in $p$, if it is point-wise in $\mathcal{G}$ smooth. That is, its smoothness comes from the smoothness of the right $\mathcal{G}$-action $\Phi$ on $\mathcal{P}$, and the derivative of $\Phi_p$ in $p$ along a tangent vector $X \in \mathrm{T}_p\mathcal{P}$ is determined by the following, using Thm.\ \ref{thm:DiffOfLGBAction},
 %\bas
@@ -5401,8 +5457,6 @@ so $\Phi^{-1}$ is smooth, and therefore $\sigma^H$ is smooth, too.
 %\mathrm{D}_pr_\sigma(X)
 %\eas
 %for all $(p, g) \in \mathcal{P} * \mathcal{G}$, where $x \coloneqq \pi(p)$, $\omega \coloneqq \mathrm{D}\pi(X)$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$; the tangent vector $Y$ as denoted in Thm.\ \ref{thm:DiffOfLGBAction} can be chosen in an arbitrary way, as long as $(X, Y) \in \mathrm{T}(\mathcal{P}* \mathcal{G})$. Thus, smoothness of $\Phi_p$ in $p$ can also 
-
-$\bullet$ By definitions, if we fix a point $x \in M$, then $H_x$ is an element of $\sAut(\mathcal{P}_x)$, where $\mathcal{P}_x$ is viewed as principal $\mathcal{G}_x$-bundle. Elements of $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ restricted to $\mathcal{P}_x$ are precisely the elements of $C^\infty(\mathcal{P}_x; \mathcal{G}_x)^{\mathcal{G}_x}$
 \end{proof}
 
 \subsection{Generalized curvature/field strength}
