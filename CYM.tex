@@ -4252,7 +4252,7 @@ by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry beh
 As we have seen, we need a slight adjustment of the vertical Maurer-Cartan as presented in Def.\ \ref{def:MCFormOnLGBs}.
 
 \begin{definitions}{Total Maurer-Cartan form}{TotMCFormOnLGB}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$, where we denote with $\pi^{\mathrm{vert}}: \mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$ the corresponding projection onto its vertical bundle. Then we define the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}} \in \Omega^1\mleft(\mathcal{G}; \pi^*\mathcal{g}\mright)$ of $\mathcal{G}$} as the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$, \textit{i.e.}\
+Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$, where we denote with $\pi^{\mathrm{vert}}: \mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$ the corresponding projection onto its vertical bundle. Then we define the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}} \in \Omega^1\mleft(\mathcal{G}; \pi^*\mathcal{g}\mright)$ of $\mathcal{G}$} as the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$, \textit{i.e.}\
 \bas
 \mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)_g(Y)
 &\coloneqq
@@ -5448,7 +5448,7 @@ p \cdot \sigma_p ~ g
 =
 H^\sigma(p) \cdot g
 \eas
-for all $(p, g) \in \mathcal{P} * \mathcal{G}$. This finishes the proof.
+for all $(p, g) \in \mathcal{P} * \mathcal{G}$. Thus, $H^\sigma \in \sAut(\mathcal{P})$, and so this finishes the proof.
 %
 %As we already argued several times, $\mathcal{P}* \mathcal{G} = \pi^*\mathcal{G}$ is an embedded submanifold of $\mathcal{P} \times \mathcal{G}$, and thus $\Phi_p$ is smooth in $p$, if it is point-wise in $\mathcal{G}$ smooth. That is, its smoothness comes from the smoothness of the right $\mathcal{G}$-action $\Phi$ on $\mathcal{P}$, and the derivative of $\Phi_p$ in $p$ along a tangent vector $X \in \mathrm{T}_p\mathcal{P}$ is determined by the following, using Thm.\ \ref{thm:DiffOfLGBAction},
 %\bas
@@ -5457,6 +5457,31 @@ for all $(p, g) \in \mathcal{P} * \mathcal{G}$. This finishes the proof.
 %\mathrm{D}_pr_\sigma(X)
 %\eas
 %for all $(p, g) \in \mathcal{P} * \mathcal{G}$, where $x \coloneqq \pi(p)$, $\omega \coloneqq \mathrm{D}\pi(X)$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$; the tangent vector $Y$ as denoted in Thm.\ \ref{thm:DiffOfLGBAction} can be chosen in an arbitrary way, as long as $(X, Y) \in \mathrm{T}(\mathcal{P}* \mathcal{G})$. Thus, smoothness of $\Phi_p$ in $p$ can also 
+\end{proof}
+
+Using this, we can finally formulate the gauge transformations of connection 1-forms; for this recall Cor.\ \ref{cor:PullBacksArePrincToo} and the Darboux derivative, Def.\ \ref{def:DarbouxDerivativeOnLGBs}.
+
+\textbf{Mit PullbackDarboux umschreiben?}
+
+\begin{theorems}{Gauge transformations of connection 1-forms}{GaugeTrafoOfGaugeBoson}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. Then $H^!A$ is a connection 1-form on $f^*\mathcal{P}$ and we have
+\bas
+H^!A
+&=
+\sAd_{\sigma^H}(A) 
+	+ \Delta\mleft( \mathrm{pr}_2 \circ \sigma^H \mright),
+\eas
+where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ as in Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps}, and $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. If we view $\sigma^H$ as a map $\mathcal{P} \to \mathcal{G}$ over $\pi$ for the second summand as discussed in Subsubsection \ref{BasicNotations}, then we may also write shortly
+\bas
+H^!A
+&=
+\sAd_{\sigma^H}(A) 
+	+ \Delta\sigma^H.
+\eas
+\end{theorems}
+
+\begin{proof}
+\leavevmode\newline
 \end{proof}
 
 \subsection{Generalized curvature/field strength}
