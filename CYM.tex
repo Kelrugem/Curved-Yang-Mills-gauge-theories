@@ -411,6 +411,8 @@ No. 1, Sec. 4, Roosevelt Rd., Taipei City 106, Taiwan Room 503, Cosmology Buildi
 \begin{itemize}
 	\item The appendix serves for providing extra information or background knowledge which did not fit in the flow of this paper's text. We will sometimes refer to the appendix, but the experienced reader may be able to ignore the appendix. 
 	\item In the main text we usually repeat and reintroduce needed objects for the statements (like "\textbf{Let $M$ be a manifold [...]}" in every statement) (almost) allowing to just read the statements without having read the text introducing it, while the appendix is written as a continuous text which has to be read as a whole in order to understand the essential statements.
+	\item As usual, there will be definitions of certain objects depending on other elements, and for keeping notations simple we will not always explicitly denote all dependencies. It will be clear by context on which it is based on, that is for example, if we define an object $A$ using the notion of Lie algebra actions $\gamma$ and we write "Let $X$ be an object $A$", then it will be clear by context which Lie algebra action is going to be used, for example given in a previous sentence writing "Let $\gamma$ be a Lie algebra action".
+	\item Throughout this work we always use Einstein's sum convention if suitable.
 	\item With $f^*F$ we denote the pullback/pull-back of the fibre bundles $F \to M$ under a smooth map $f: N \to M$. Similarly we denote the pullbacks of sections of a fibre bundle.
 	%We will also have sections $F$ as an element of $\Gamma\left( \left(\bigotimes_{m=1}^{l} E_m^*\right) \otimes E_{l+1} \right)$, where $E_1, \dots E_{l+1}$ ($l \in \mathbb{N}$) are real vector bundles of finite rank over $N$. Those pull-back as section, denoted by $\Phi^*F$, we will view as an element of $\Gamma\left( \mleft(\bigotimes_{m=1}^{l} \mleft(\Phi^*E_m\mright)^*\mright) \otimes \Phi^*E_{l+1} \right)$, and it is essentially given by
 %\bas
@@ -455,7 +457,7 @@ One can extend all of this similarly for more specific types of morphisms like v
 
 Most of the time we will not mention this 1:1 correspondence explicitly, it should be clear by context. Hence, we will also denote $\widetilde{\Phi}$ by $\Phi$. In fact, we usually calculate with $\widetilde{\Phi}$, while $\Phi$ and its diagram may only arise to give an illustration about the geometry.
 
-\item When we differentiate maps $\gamma$ depending on just one parameter $t \in \mathbb{R}$, then we may write
+\item When we differentiate maps $\gamma$ depending on just one parameter $t \in \mathbb{R}$, then we may shortly write
 \bas
 \frac{\mathrm{d}}{\mathrm{d}t} \gamma(t)
 &\coloneqq
@@ -472,7 +474,7 @@ We also often give references about Lie group bundles (LGBs), but the given refe
 See also the previous subsection about notions we assume to be known.
 
 %\twocolumn
-\section{Basic definitions}\label{BasicDefinitions}
+%\section{Basic definitions}\label{BasicDefinitions}
 %
 %In the following, we denote with $V^*$ the dual of a vector bundle $V \to N$ over a smooth manifold $N$, and $\Phi^*V$ denotes the pull-back of $V$ by $\Phi: M \to N$, a smooth map from a smooth manifold $M$ to $N$. We have a similar notation for the pull-back of sections, especially we will have sections $F$ as an element of $\Gamma\left( \left(\bigotimes_{m=1}^{l} E_m^*\right) \otimes E_{l+1} \right)$, where $E_1, \dots, E_{l+1} \to N$ ($l \in \mathbb{N}$) are real vector bundles of finite rank over a smooth manifold $N$, and $\Gamma(\cdot)$ denotes the space of smooth sections. Then we view the pull-back $\Phi^*F$ as an element of $\Gamma\left( \mleft(\bigotimes_{m=1}^{l} \mleft(\Phi^*E_m\mright)^*\mright) \otimes \Phi^*E_{l+1} \right)$, and it is essentially given by
 %\bas
@@ -679,7 +681,7 @@ For $\mathcal{G}$ we have canonically a multiplication over $x$ given by
 \bas
 \mathcal{G}_x \times \mathcal{G}_x \to \mathcal{G}_x,
 \eas
-also clearly simply transitive. Observe, the second factor is not "constant", \textit{i.e.}\ we do not have $\mathcal{G}_x \times G \to \mathcal{G}_x$ in general. Hence, there is in general no well-defined product $\mathcal{G} \times \mathcal{G} \to \mathcal{G}$.
+also clearly simply transitive. Observe, the second factor is not "constant", \textit{i.e.}\ we do not have $\mathcal{G}_x \times G \to \mathcal{G}_x$ in general. Hence, there is in general no well-defined product $\mathcal{G} \times \mathcal{G} \to \mathcal{G}$ or $\mathcal{G} \times G \to \mathcal{G}$.
 \newline
 
 All of that is also resembled in the existence of sections. The existence of a section of $P$ has a 1:1 correspondence to trivializations of $P$, which is why $P$ in general only admits sections locally; see \textit{e.g.}\ \cite[\S 4.2, Thm.\ 4.2.19; page 219f.]{Hamilton}. $\mathcal{G}$ clearly admits always a global section, even if $\mathcal{G}$ is non-trivial; just take the section which assigns each base point the neutral element of its fibre.
@@ -687,14 +689,14 @@ All of that is also resembled in the existence of sections. The existence of a s
 
 If $M$ is a point we recover the notion of Lie groups, and, as usual, we have the notion of trivial LGBs:
 
-\begin{examples}{Trivial examples}{TrivialLGBundle}
-The \textbf{trivial LGB} is given as the product manifold $M \times G \to M$ with canonical multiplication $(x, g) \cdot (x, q) \coloneqq (x, gq)$, and we recover the notion of a Lie group in the case of $M = \{*\}$.
+\begin{examples}{Trivial LGB}{TrivialLGBundle}
+The \textbf{trivial LGB} is given as the product manifold $M \times G \to M$ with canonical multiplication $(x, g) \cdot (x, q) \coloneqq (x, gq)$.
 \end{examples}
 
-We are of course also interested into LGB bundle morphisms:
+We are also interested into LGB bundle morphisms:
 
 \begin{definitions}{LGB morphism, \newline \cite[\S 1.2, special situation of Def.\ 1.2.1 \& 1.2.3, page 12]{mackenzieGeneralTheory}}{LGB morphism}
-Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ and $\mathcal{H} \stackrel{\pi_{\mathcal{H}}}{\to} N$ be two LGBs over two smooth manifolds $M$ and $N$. An \textbf{LGB morphism} is a pair of smooth maps $F: \mathcal{H} \to \mathcal{G}$ and $f: N \to M$ such that
+Let $\mathcal{H} \stackrel{\pi_{\mathcal{H}}}{\to} N$ and $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be two LGBs over two smooth manifolds $N$ and $M$. An \textbf{LGB morphism $F$ over $f$} is a pair of smooth maps $F: \mathcal{H} \to \mathcal{G}$ and $f: N \to M$ such that
 \ba\label{FibreRelationOverf}
 \pi_{\mathcal{G}} \circ F &= f \circ \pi_{\mathcal{H}},\\
 F(gq) &= F(g) ~ F(q)\label{LGBHomomorph}
@@ -720,7 +722,7 @@ e^{\mathcal{G}}_{f(x^\prime)}
 =
 F\mleft(e^{\mathcal{H}}_{x^\prime}\mright).
 \eas
-Then we have $e^{\mathcal{H}}_x = e^{\mathcal{H}}_{x^\prime}$ due to that $F$ is bijective, and hence $x = x^\prime$. Therefore $f$ is bijective. Finally, $F^{-1}$ is by assumption also a diffeomorphism, Eq.\ \eqref{LGBHomomorph} clearly carries over, and Eq.\ \eqref{FibreRelationOverf} is clearly w.r.t.\ $f^{-1}$, that is
+Then we have $e^{\mathcal{H}}_x = e^{\mathcal{H}}_{x^\prime}$ due to that $F$ is bijective, and hence $x = x^\prime$. Therefore $f$ is bijective. Finally, $F^{-1}$ is by assumption also a diffeomorphism, Eq.\ \eqref{LGBHomomorph} clearly carries over, and Eq.\ \eqref{FibreRelationOverf} is w.r.t.\ $f^{-1}$, that is
 \bas
 \pi_{\mathcal{H}} \circ F^{-1} &= f^{-1} \circ \pi_{\mathcal{G}}.
 \eas
@@ -741,7 +743,7 @@ and $U_i \times \mathrm{Aut}(W)$ acts canonically on $U_i \times W$ in a fibre-w
 
 \subsection{Associated Lie group bundles}
 
-For another important example recall that there is the notion of associated fibre bundles; following and stating the results of \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$, a smooth manifold $N$ and a smooth left $G$-action $\Psi$ given by
+For another important example recall that there is the notion of associated fibre bundles; following and stating the results of \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$, $N$ a smooth manifold, and $\Psi$ a smooth left $G$-action denoted by
 \bas
 G \times N &\to N,\\
 (g, v) &\mapsto \Psi(g, v) \coloneqq g \cdot v.
@@ -758,7 +760,7 @@ and one can show that the quotient under this action, $P\times_\Psi N \coloneqq 
 		& M
 	\end{tikzcd}
 \end{center}
-such that the projection $P \times N \to P \times_\Psi N$ is a smooth surjective submersion,
+such that the map to the equivalence classes $P \times N \to P \times_\Psi N$ is a smooth surjective submersion,
 where the projection $\pi_{P\times_\Psi N}: P\times_\Psi N \to M$ is given by 
 \bas
 \pi_{P\times_\Psi N}\mleft( [p, v] \mright)
