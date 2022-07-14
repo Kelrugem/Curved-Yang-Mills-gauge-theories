@@ -4251,10 +4251,33 @@ by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry beh
 
 \subsubsection{Darboux derivative on LGBs}
 
-As we have seen, we need a slight adjustment of the vertical Maurer-Cartan as presented in Def.\ \ref{def:MCFormOnLGBs}. Furthermore, by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} we know that $\mathrm{V}\mathcal{P}$ is the pullback of $\mathcal{g}$. Since connections are projections onto the vertical bundle, we will put some remarks after some definitions in order to discuss the situation of pullback LGBs.
+By Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} we know that $\mathrm{V}\mathcal{P}$ is the pullback of $\mathcal{g}$. Since connections are projections onto the vertical bundle, we will put some remarks after some definitions in the following in order to discuss the situation of pullback LGBs. Hence let us start with a general remark about the pullback situation to which we will later refer in the other remarks regarding this situation.
+
+\begin{remarks}{Pullback LGBs and their connections}{GeneralPullBackLGBConnSituation}
+Let $\mathcal{G} \stackrel{\pi_\mathcal{G}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$, where we denote with $\pi^{\mathrm{vert}}: \mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$ the corresponding (base-preserving) projection onto its vertical bundle; we will view $\pi^{\mathrm{vert}}$ as an element of $\Omega^1(\mathcal{G}; \mathrm{V}\mathcal{G})$. Furthermore, let $f: N \to M$ be a smooth map from another smooth manifold $N$. By Lemma \ref{lem:PullbackFibreBundleItsTangentSp} we know that $\mathrm{T}(f^*\mathcal{G})$ consists of pairs of tangent vectors $(X, Y) \in \mathrm{T}_{(p, g)}(f^*\mathcal{G})$ ($(p, g) \in f^*\mathcal{G}$) with $X \in \mathrm{T}_pN$, $Y \in \mathrm{T}_g\mathcal{G}$ and
+\bas
+\mathrm{D}_pf(X) &= \mathrm{D}_g\pi_{\mathcal{G}}(Y).
+\eas
+In the following we denote with $\mathrm{pr}_i$ ($i \in \{1,2\}$) the projections onto the $i$-th component of $f^*\mathcal{G}$.
+
+The projection of $f^*\mathcal{G} \to N$ is $\mathrm{pr}_1$, thus $\mathrm{Dpr}_1(X, Y) = X$. The vertical bundle $\mathrm{V}(f^*\mathcal{G})$ as the kernel of $\mathrm{Dpr}_1$ then consists of pairs $(X = 0, Y)$, and therefore $\mathrm{D}_g\pi_{\mathcal{G}}(Y) = 0$ which implies $Y \in \mathrm{V}_g\mathcal{G}$. Thence,
+\bas
+\mathrm{V}\mleft( f^*\mathcal{G} \mright)
+&\cong
+\mathrm{pr}_2^*\mleft( \mathrm{V}\mathcal{G} \mright).
+\eas 
+It is then trivial to check that
+\bas
+\mathrm{pr}_2^!\pi^{\mathrm{vert}} &\in \Omega^1\bigl(f^*\mathcal{G}; \mathrm{pr}_2^*\mleft( \mathrm{V}\mathcal{G} \mright)\bigr)
+\eas
+is a projection onto $\mathrm{V}\mleft( f^*\mathcal{G} \mright)$, and gives therefore rise to a horizontal distribution on $f^*\mathcal{G}$, the \textbf{pullback connection on $f^*\mathcal{G}$}. 
+%We may just shortly write $\mathrm{pr}_2^!\pi^{\mathrm{vert}}$, meaning its canonical extension to $\mathrm{T}(f^*\mathcal{G}) \supset \mathrm{pr}_2^*\mathrm{T}\mathcal{G}$.
+\end{remarks}
+
+As we have seen, we need a slight adjustment of the vertical Maurer-Cartan as presented in Def.\ \ref{def:MCFormOnLGBs}.
 
 \begin{definitions}{Total Maurer-Cartan form}{TotMCFormOnLGB}
-Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$, where we denote with $\pi^{\mathrm{vert}}: \mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$ the corresponding projection onto its vertical bundle. Then we define the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}} \in \Omega^1\mleft(\mathcal{G}; \pi^*\mathcal{g}\mright)$ of $\mathcal{G}$} as the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$, \textit{i.e.}\
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$, where we denote with $\pi^{\mathrm{vert}}: \mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$ the corresponding projection onto its vertical bundle. Then we define the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}} \in \Omega^1\mleft(\mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)$ of $\mathcal{G}$} as the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$, \textit{i.e.}\
 \bas
 \mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)_g(Y)
 &\coloneqq
@@ -4264,6 +4287,10 @@ Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$, an
 \eas
 for all $g \in G$ and $Y \in \mathrm{T}_g\mathcal{G}$.
 \end{definitions}
+
+\begin{remarks}{Pullback situation}{PullbackTotMCForm}
+Let $f: N \to M$ be a smooth map from another smooth manifold $N$. 
+\end{remarks}
 %
 %By definition it is clear that $\mleft.\mu^{\mathrm{tot}}_{\mathcal{G}}\mright|_{\mathcal{g}}$ is the identity on $\mathcal{g}$.
 
