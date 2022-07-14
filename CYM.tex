@@ -4268,9 +4268,17 @@ The projection of $f^*\mathcal{G} \to N$ is $\mathrm{pr}_1$, thus $\mathrm{Dpr}_
 \eas 
 It is then trivial to check that
 \bas
-\mathrm{pr}_2^!\pi^{\mathrm{vert}} &\in \Omega^1\bigl(f^*\mathcal{G}; \mathrm{pr}_2^*\mleft( \mathrm{V}\mathcal{G} \mright)\bigr)
+\mathrm{pr}_2^!\pi^{\mathrm{vert}} 
+&\in 
+\Omega^1\bigl(f^*\mathcal{G}; \mathrm{pr}_2^*\mleft( \mathrm{V}\mathcal{G} \mright)\bigr)
+\cong
+\Omega^1\bigl(f^*\mathcal{G}; \mathrm{V}\mleft( f^*\mathcal{G} \mright)\bigr)
 \eas
-is a projection onto $\mathrm{V}\mleft( f^*\mathcal{G} \mright)$, and gives therefore rise to a horizontal distribution on $f^*\mathcal{G}$, the \textbf{pullback connection on $f^*\mathcal{G}$}. 
+is a projection onto $\mathrm{V}\mleft( f^*\mathcal{G} \mright)$, and gives therefore rise to a horizontal distribution on $f^*\mathcal{G}$, the \textbf{pullback connection on $f^*\mathcal{G}$}. Especially we have
+\bas
+\mathrm{Dpr}_1 \circ \mathrm{pr}_2^!\pi^{\mathrm{vert}} &= 0,&
+\mathrm{Dpr}_2 \circ \mathrm{pr}_2^!\pi^{\mathrm{vert}} &= \pi^{\mathrm{vert}}.
+\eas 
 %We may just shortly write $\mathrm{pr}_2^!\pi^{\mathrm{vert}}$, meaning its canonical extension to $\mathrm{T}(f^*\mathcal{G}) \supset \mathrm{pr}_2^*\mathrm{T}\mathcal{G}$.
 \end{remarks}
 
@@ -4287,14 +4295,69 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 \eas
 for all $g \in G$ and $Y \in \mathrm{T}_g\mathcal{G}$.
 \end{definitions}
-
-\begin{remarks}{Pullback situation}{PullbackTotMCForm}
-Let $f: N \to M$ be a smooth map from another smooth manifold $N$. 
-\end{remarks}
 %
 %By definition it is clear that $\mleft.\mu^{\mathrm{tot}}_{\mathcal{G}}\mright|_{\mathcal{g}}$ is the identity on $\mathcal{g}$.
 
 This is clearly well-defined by construction; also recall our discussion of the vertical Maurer-Cartan form, especially Cor.\ \ref{cor:VertMCVormIsWellDefined}.
+
+\begin{remarks}{Pullback situation}{PullbackTotMCForm}
+Given the situation as in Remark \ref{rem:GeneralPullBackLGBConnSituation}, then we have
+\bas
+L_{(x, g)}\bigl( (x, q) \bigr)
+&=
+\bigl(x, L_g(q)\bigr)
+\eas
+for all $(x, g), (x, q) \in f^*\mathcal{G}$, where the left-translation on the left and right hand side are the ones of $f^*\mathcal{G}$ and $\mathcal{G}$, respectively. Thence,
+\bas
+L_{(x, g)}
+&=
+\mleft(
+	\mathrm{pr}_1, L_{\mathrm{pr_2}(x. g)} \circ \mathrm{pr}_2
+\mright),
+\eas
+and hence, making use of that $f^*\mathcal{G}$ is an embedded submanifold of $N \times \mathcal{G}$,
+\bas
+\mathrm{D}_{(x, g)} L_{(x, g)^{-1}}
+&=
+\mleft(
+	\mathrm{D}_{(x,g)}\mathrm{pr}_1, \mathrm{D}_{\mathrm{pr}_2(x, g)}L_{\mathrm{pr}_2\mleft(x, g^{-1}\mright)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+\mright)
+\\
+&=
+\mleft(
+	\mathrm{D}_{(x,g)}\mathrm{pr}_1, 
+	\mleft( \mu_{\mathcal{G}} \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+\mright).
+%\\
+%&=
+%\mleft(
+	%\mathrm{Dpr}_1, 
+	%\mathrm{Dpr}_2^!\mu_G
+%\mright),
+\eas
+Altogether we get
+\bas
+\mleft(\mu_{f^*\mathcal{G}}^{\mathrm{tot}}\mright)_{(x, g)}
+&=
+\mathrm{D}_{(x, g)} L_{(x, g)^{-1}} \circ \mleft.\mathrm{pr}_2^!\pi^{\mathrm{vert}}\mright|_{(x, g)}
+\\
+&=
+\mleft(
+	\mathrm{D}_{(x,g)}\mathrm{pr}_1, 
+	\mleft( \mu_{\mathcal{G}} \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+\mright)
+	\circ \mleft.\mathrm{pr}_2^!\pi^{\mathrm{vert}}\mright|_{(x, g)}
+\\
+&=
+\mleft(
+	0, 
+	\mleft( \mu_G \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+\mright)
+\\
+&=
+\mleft.\mathrm{pr}_2^!\mu_G\mright|_{(x, g)}.
+\eas
+\end{remarks}
 
 \begin{remarks}{Total Maurer-Cartan form just typical form on trivial LGBs}{TrivialLGBsAndTheirMCForm}
 Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\mathrm{pr}_1}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \mathrm{pr}_1^*\mathrm{T}M$, where $\mathrm{pr}_1$ is the projection onto the first component in $M \times G$. Its LAB $\mathcal{g}$ is also trivial $M \times \mathfrak{g}$, and we have several identities (recall Cor.\ \ref{cor:TLGBAsLGB})
