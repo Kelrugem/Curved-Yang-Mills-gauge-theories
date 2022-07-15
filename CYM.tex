@@ -4276,8 +4276,9 @@ It is then trivial to check that
 \eas
 is a projection onto $\mathrm{V}\mleft( f^*\mathcal{G} \mright)$, and gives therefore rise to a horizontal distribution on $f^*\mathcal{G}$, the \textbf{pullback connection on $f^*\mathcal{G}$}. Especially we have
 \bas
-\mathrm{Dpr}_1 \circ \mathrm{pr}_2^!\pi^{\mathrm{vert}} &= 0,&
-\mathrm{Dpr}_2 \circ \mathrm{pr}_2^!\pi^{\mathrm{vert}} &= \pi^{\mathrm{vert}}.
+\mleft(\mathrm{Dpr}_1, \mathrm{Dpr}_2 \mright) \circ \underbrace{\mathrm{pr}_2^!\pi^{\mathrm{vert}}}_{\mathclap{ = \mathrm{pr}_2^*\pi^{\mathrm{vert}} \circ \mathrm{Dpr}_2 }}
+&= 
+\mleft( 0, \pi^{\mathrm{vert}} \circ \mathrm{Dpr}_2 \mright).
 \eas 
 %We may just shortly write $\mathrm{pr}_2^!\pi^{\mathrm{vert}}$, meaning its canonical extension to $\mathrm{T}(f^*\mathcal{G}) \supset \mathrm{pr}_2^*\mathrm{T}\mathcal{G}$.
 \end{remarks}
@@ -4315,19 +4316,22 @@ L_{(x, g)}
 	\mathrm{pr}_1, L_{\mathrm{pr_2}(x. g)} \circ \mathrm{pr}_2
 \mright),
 \eas
-and hence, making use of that $f^*\mathcal{G}$ is an embedded submanifold of $N \times \mathcal{G}$,
+and hence,
 \bas
 \mathrm{D}_{(x, g)} L_{(x, g)^{-1}}
 &=
+\mleft.
 \mleft(
 	\mathrm{D}_{(x,g)}\mathrm{pr}_1, \mathrm{D}_{\mathrm{pr}_2(x, g)}L_{\mathrm{pr}_2\mleft(x, g^{-1}\mright)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
 \mright)
+\mright|_{\mathrm{V}_{(x, g)}\mleft( f^*\mathcal{G} \mright)}
 \\
 &=
+\mleft.
 \mleft(
-	\mathrm{D}_{(x,g)}\mathrm{pr}_1, 
+	0, 
 	\mleft( \mu_{\mathcal{G}} \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
-\mright).
+\mright)\mright|_{\mathrm{V}_{(x, g)}\mleft( f^*\mathcal{G} \mright)},
 %\\
 %&=
 %\mleft(
@@ -4335,6 +4339,7 @@ and hence, making use of that $f^*\mathcal{G}$ is an embedded submanifold of $N 
 	%\mathrm{Dpr}_2^!\mu_G
 %\mright),
 \eas
+making use of that $f^*\mathcal{G}$ is an embedded submanifold of $N \times \mathcal{G}$ and that $L_{(x, g)}: \mleft(f^*\mathcal{G}\mright)_x \to \mleft(f^*\mathcal{G}\mright)_x$ so that $\mathrm{D}_{(x, g)}L_{(x, g)^{-1}}:\mathrm{V}_{(x, g)}\mleft( f^*\mathcal{G} \mright) \to \mathrm{V}_{(x, e_x)}\mleft( f^*\mathcal{G} \mright) = f^*\mathcal{g}_{(x, e_x)}$, where $e_x$ is the neutral element of $\mathcal{G}_x$.
 Altogether we get
 \bas
 \mleft(\mu_{f^*\mathcal{G}}^{\mathrm{tot}}\mright)_{(x, g)}
