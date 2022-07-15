@@ -4276,9 +4276,21 @@ It is then trivial to check that
 \eas
 is a projection onto $\mathrm{V}\mleft( f^*\mathcal{G} \mright)$, and gives therefore rise to a horizontal distribution on $f^*\mathcal{G}$, the \textbf{pullback connection on $f^*\mathcal{G}$}. Especially we have
 \bas
-\mleft(\mathrm{Dpr}_1, \mathrm{Dpr}_2 \mright) \circ \underbrace{\mathrm{pr}_2^!\pi^{\mathrm{vert}}}_{\mathclap{ = \mathrm{pr}_2^*\pi^{\mathrm{vert}} \circ \mathrm{Dpr}_2 }}
+\mleft(\mathrm{pr}_2^!\pi^{\mathrm{vert}}\mright)_{(p,g)}(X, Y)
+&=
+\mleft( 0, \pi^{\mathrm{vert}}_g(Y) \mright),
+%=
+%\mleft.\mleft( 0, \pi^{\mathrm{vert}} \circ \mathrm{Dpr}_2 \mright)\mright|_{(p,g)}(X, Y),
+\eas
+and thus
+\bas
+\mleft.\mleft(
+\mleft(\mathrm{Dpr}_1, \mathrm{Dpr}_2 \mright) \circ \mathrm{pr}_2^!\pi^{\mathrm{vert}}
+\mright)\mright|_{(p, g)}(X, Y)
 &= 
-\mleft( 0, \pi^{\mathrm{vert}} \circ \mathrm{Dpr}_2 \mright).
+\mleft( 0, \pi^{\mathrm{vert}}_g(Y) \mright)
+=
+\mleft(\mathrm{pr}_2^!\pi^{\mathrm{vert}}\mright)_{(p,g)}(X, Y).
 \eas 
 %We may just shortly write $\mathrm{pr}_2^!\pi^{\mathrm{vert}}$, meaning its canonical extension to $\mathrm{T}(f^*\mathcal{G}) \supset \mathrm{pr}_2^*\mathrm{T}\mathcal{G}$.
 \end{remarks}
@@ -4301,37 +4313,37 @@ for all $g \in G$ and $Y \in \mathrm{T}_g\mathcal{G}$.
 
 This is clearly well-defined by construction; also recall our discussion of the vertical Maurer-Cartan form, especially Cor.\ \ref{cor:VertMCVormIsWellDefined}.
 
-\begin{remarks}{Pullback situation}{PullbackTotMCForm}
+\begin{remarks}{Pullback situation: Part I}{PullbackTotMCForm}
 Given the situation as in Remark \ref{rem:GeneralPullBackLGBConnSituation}, then we have
 \bas
-L_{(x, g)}\bigl( (x, q) \bigr)
+L_{(p, g)}\bigl( (p, q) \bigr)
 &=
-\bigl(x, L_g(q)\bigr)
+\bigl(p, L_g(q)\bigr)
 \eas
-for all $(x, g), (x, q) \in f^*\mathcal{G}$, where the left-translation on the left and right hand side are the ones of $f^*\mathcal{G}$ and $\mathcal{G}$, respectively. Thence,
+for all $(p, g), (p, q) \in f^*\mathcal{G}$, where the left-translation on the left and right hand side are the ones of $f^*\mathcal{G}$ and $\mathcal{G}$, respectively. Thence,
 \bas
-L_{(x, g)}
+L_{(p, g)}
 &=
 \mleft(
-	\mathrm{pr}_1, L_{\mathrm{pr_2}(x. g)} \circ \mathrm{pr}_2
+	\mathrm{pr}_1, L_{\mathrm{pr_2}(p, g)} \circ \mathrm{pr}_2
 \mright),
 \eas
 and hence,
 \bas
-\mathrm{D}_{(x, g)} L_{(x, g)^{-1}}
+\mathrm{D}_{(p, g)} L_{(p, g)^{-1}}
 &=
 \mleft.
 \mleft(
-	\mathrm{D}_{(x,g)}\mathrm{pr}_1, \mathrm{D}_{\mathrm{pr}_2(x, g)}L_{\mathrm{pr}_2\mleft(x, g^{-1}\mright)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+	\mathrm{D}_{(p,g)}\mathrm{pr}_1, \mathrm{D}_{\mathrm{pr}_2(p, g)}L_{\mathrm{pr}_2\mleft(p, g^{-1}\mright)} \circ \mathrm{D}_{(p,g)}\mathrm{pr}_2
 \mright)
-\mright|_{\mathrm{V}_{(x, g)}\mleft( f^*\mathcal{G} \mright)}
+\mright|_{\mathrm{V}_{(p, g)}\mleft( f^*\mathcal{G} \mright)}
 \\
 &=
 \mleft.
 \mleft(
 	0, 
-	\mleft( \mu_{\mathcal{G}} \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
-\mright)\mright|_{\mathrm{V}_{(x, g)}\mleft( f^*\mathcal{G} \mright)},
+	\mleft( \mu_{\mathcal{G}} \mright)_{\mathrm{pr}_2(p, g)} \circ \mathrm{D}_{(p,g)}\mathrm{pr}_2
+\mright)\mright|_{\mathrm{V}_{(p, g)}\mleft( f^*\mathcal{G} \mright)},
 %\\
 %&=
 %\mleft(
@@ -4339,33 +4351,41 @@ and hence,
 	%\mathrm{Dpr}_2^!\mu_G
 %\mright),
 \eas
-making use of that $f^*\mathcal{G}$ is an embedded submanifold of $N \times \mathcal{G}$ and that $L_{(x, g)}: \mleft(f^*\mathcal{G}\mright)_x \to \mleft(f^*\mathcal{G}\mright)_x$ so that $\mathrm{D}_{(x, g)}L_{(x, g)^{-1}}:\mathrm{V}_{(x, g)}\mleft( f^*\mathcal{G} \mright) \to \mathrm{V}_{(x, e_x)}\mleft( f^*\mathcal{G} \mright) = f^*\mathcal{g}_{(x, e_x)}$, where $e_x$ is the neutral element of $\mathcal{G}_x$.
+making use of that 
+%$f^*\mathcal{G}$ is an embedded submanifold of $N \times \mathcal{G}$ and that 
+$L_{(p, g)}: \mleft(f^*\mathcal{G}\mright)_p \to \mleft(f^*\mathcal{G}\mright)_p$ so that $\mathrm{D}_{(p, g)}L_{(p, g)^{-1}}:\mathrm{V}_{(p, g)}\mleft( f^*\mathcal{G} \mright) \to \mathrm{V}_{(p, e_x)}\mleft( f^*\mathcal{G} \mright) = \mleft(f^*\mathcal{g}\mright)_{p}$, where $x \coloneqq f(p)$ and $e_x$ is the neutral element of $\mathcal{G}_x$.
 Altogether we get
 \bas
-\mleft(\mu_{f^*\mathcal{G}}^{\mathrm{tot}}\mright)_{(x, g)}
+\mleft(\mu_{f^*\mathcal{G}}^{\mathrm{tot}}\mright)_{(p, g)}
 &=
-\mathrm{D}_{(x, g)} L_{(x, g)^{-1}} \circ \mleft.\mathrm{pr}_2^!\pi^{\mathrm{vert}}\mright|_{(x, g)}
-\\
-&=
-\mleft(
-	\mathrm{D}_{(x,g)}\mathrm{pr}_1, 
-	\mleft( \mu_{\mathcal{G}} \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
-\mright)
-	\circ \mleft.\mathrm{pr}_2^!\pi^{\mathrm{vert}}\mright|_{(x, g)}
+\mathrm{D}_{(p, g)} L_{(p, g)^{-1}} \circ \mleft.\mathrm{pr}_2^!\pi^{\mathrm{vert}}\mright|_{(p, g)}
 \\
 &=
 \mleft(
 	0, 
-	\mleft( \mu_G \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+	\mleft( \mu_{\mathcal{G}} \mright)_{\mathrm{pr}_2(p, g)} \circ \mathrm{D}_{(p,g)}\mathrm{pr}_2
+\mright)
+	\circ \mleft.\mathrm{pr}_2^!\pi^{\mathrm{vert}}\mright|_{(p, g)}
+\\
+&=
+\mleft(
+	0, 
+	\mleft.\mleft( \mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}}\mright)\mright|_{\mathrm{pr}_2(p, g)} \circ \mathrm{D}_{(p,g)}\mathrm{pr}_2
 \mright)
 \\
 &=
-\mleft.\mathrm{pr}_2^!\mu_G\mright|_{(x, g)}.
+\mleft(
+	0, 
+	\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\mathrm{pr}_2(p, g)} \circ \mathrm{D}_{(p,g)}\mathrm{pr}_2
+\mright)
+\\
+&=
+\mleft.\mleft(\mathrm{pr}_2^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)\mright|_{(p, g)}.
 \eas
 \end{remarks}
 
 \begin{remarks}{Total Maurer-Cartan form just typical form on trivial LGBs}{TrivialLGBsAndTheirMCForm}
-Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\mathrm{pr}_1}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \mathrm{pr}_1^*\mathrm{T}M$, where $\mathrm{pr}_1$ is the projection onto the first component in $M \times G$. Its LAB $\mathcal{g}$ is also trivial $M \times \mathfrak{g}$, and we have several identities (recall Cor.\ \ref{cor:TLGBAsLGB})
+Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\mathrm{pr}_1}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \mathrm{pr}_1^*\mathrm{T}M$, where $\mathrm{pr}_1$ is the projection onto the first component in $M \times G$. Its LAB $\mathcal{g}$ is also a trivial bundle, $M \times \mathfrak{g}$, and we have several identities (recall Cor.\ \ref{cor:TLGBAsLGB})
 \bas
 \mathrm{T}\mathcal{G}
 &\cong
@@ -4378,71 +4398,81 @@ Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \colone
 \mathrm{H}\mathcal{G} \oplus \mathrm{V}\mathcal{G},
 \eas
 where $\mathrm{pr}_2: M \times G \to G$ is the projection onto the second component,
-and $\pi^{\mathrm{vert}}$ is then equivalent to $\mathrm{Dpr}_2 \in \Omega^1\mleft(\mathcal{G}; \mathrm{pr}_2^*\mathrm{T}G\mright)$. We also have the typical projection properties
+and $\pi^{\mathrm{vert}}$ is then equivalent to $\mathrm{Dpr}_2 \in \Omega^1\mleft(\mathcal{G}; \mathrm{pr}_2^*\mathrm{T}G\mright)$. 
+
+Now let us view $G$ as an LGB over a point $\{*\}$, then $\mathcal{G} = f^*G$, where $f: M \to \{*\}$. By Remark \ref{rem:PullbackTotMCForm} we then get
 \bas
-\mathrm{Dpr}_1 \circ \mathrm{Dpr}_2 &= 0,&
-\mathrm{Dpr}_2 \circ \mathrm{Dpr}_2 &= \mathrm{Dpr}_2,
+\mu^{\mathrm{tot}}_{\mathcal{G}}
+&=
+\mathrm{pr}_2^!\mu_G,
 \eas
-and for $(x, g) \in M \times G$
-\bas
-L_{(x, g)}\bigl( (x, q) \bigr)
-&=
-\bigl(x, L_g(q)\bigr)
-\eas
-for all $(x, q) \in M \times G$, where the left-tanslation on the right hand side is the one in $G$. Thence,
-\bas
-L_{(x, g)}
-&=
-\mleft(
-	\mathrm{pr}_1, L_{\mathrm{pr_2}(x. g)} \circ \mathrm{pr}_2
-\mright),
-\eas
-and hence
-\bas
-\mathrm{D}_{(x, g)} L_{(x, g)^{-1}}
-&=
-\mleft(
-	\mathrm{D}_{(x,g)}\mathrm{pr}_1, \mathrm{D}_{\mathrm{pr}_2(x, g)}L_{\mathrm{pr}_2\mleft(x, g^{-1}\mright)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
-\mright)
-\\
-&=
-\mleft(
-	\mathrm{D}_{(x,g)}\mathrm{pr}_1, 
-	\mleft( \mu_G \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
-\mright),
+where $\mu_G$ is the Maurer-Cartan form of $G$, making use of the uniqueness of $\pi^{\mathrm{vert}}$ for $G \to \{*\}$.
+%
+%We also have the typical projection properties
+%\bas
+%\mathrm{Dpr}_1 \circ \mathrm{Dpr}_2 &= 0,&
+%\mathrm{Dpr}_2 \circ \mathrm{Dpr}_2 &= \mathrm{Dpr}_2,
+%\eas
+%and for $(x, g) \in M \times G$
+%\bas
+%L_{(x, g)}\bigl( (x, q) \bigr)
+%&=
+%\bigl(x, L_g(q)\bigr)
+%\eas
+%for all $(x, q) \in M \times G$, where the left-tanslation on the right hand side is the one in $G$. Thence,
+%\bas
+%L_{(x, g)}
+%&=
+%\mleft(
+	%\mathrm{pr}_1, L_{\mathrm{pr_2}(x. g)} \circ \mathrm{pr}_2
+%\mright),
+%\eas
+%and hence
+%\bas
+%\mathrm{D}_{(x, g)} L_{(x, g)^{-1}}
+%&=
+%\mleft(
+	%\mathrm{D}_{(x,g)}\mathrm{pr}_1, \mathrm{D}_{\mathrm{pr}_2(x, g)}L_{\mathrm{pr}_2\mleft(x, g^{-1}\mright)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+%\mright)
 %\\
 %&=
 %\mleft(
-	%\mathrm{Dpr}_1, 
-	%\mathrm{Dpr}_2^!\mu_G
+	%\mathrm{D}_{(x,g)}\mathrm{pr}_1, 
+	%\mleft( \mu_G \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
 %\mright),
-\eas
-where $\mu_G$ is the Maurer-Cartan form of $G$. Altogether we get
-\bas
-\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{(x, g)}
-&=
-\mathrm{D}_{(x, g)} L_{(x, g)^{-1}} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
-\\
-&=
-\mleft(
-	\mathrm{D}_{(x,g)}\mathrm{pr}_1, 
-	\mleft( \mu_G \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
-\mright)
-	\circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
-\\
-&=
-\mleft(
-	0, 
-	\mleft( \mu_G \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
-\mright)
-\\
-&=
-\mleft.\mathrm{pr}_2^!\mu_G\mright|_{(x, g)},
-\eas
-where $\mu_G$ is the Maurer-Cartan form of $G$. In general we played around a bit with the isomorphisms provided at the beginning of this remark; it can be \textit{e.g.}\ useful to think of the value of an element of $\mathrm{T}G$ as an element of $\mathrm{pr}_2^*\mathrm{T}G$: In the first line we view $\mathrm{Dpr}_2$ as a \textbf{base-preserving} morphism $\mathrm{T}\mathcal{G} \to \mathrm{pr}_2^*\mathrm{T}G \subset \mathrm{T}\mathcal{G}$, while later on as a morphism $\mathrm{T}\mathcal{G} \to \mathrm{T}G$ \textbf{over the base map $\mathrm{pr}_2$}. Since all of this is straightforward, such kind of stuff should have been clear by context.
+%%\\
+%%&=
+%%\mleft(
+	%%\mathrm{Dpr}_1, 
+	%%\mathrm{Dpr}_2^!\mu_G
+%%\mright),
+%\eas
+%where $\mu_G$ is the Maurer-Cartan form of $G$. Altogether we get
+%\bas
+%\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{(x, g)}
+%&=
+%\mathrm{D}_{(x, g)} L_{(x, g)^{-1}} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+%\\
+%&=
+%\mleft(
+	%\mathrm{D}_{(x,g)}\mathrm{pr}_1, 
+	%\mleft( \mu_G \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+%\mright)
+	%\circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+%\\
+%&=
+%\mleft(
+	%0, 
+	%\mleft( \mu_G \mright)_{\mathrm{pr}_2(x, g)} \circ \mathrm{D}_{(x,g)}\mathrm{pr}_2
+%\mright)
+%\\
+%&=
+%\mleft.\mathrm{pr}_2^!\mu_G\mright|_{(x, g)},
+%\eas
+%where $\mu_G$ is the Maurer-Cartan form of $G$. In general we played around a bit with the isomorphisms provided at the beginning of this remark; it can be \textit{e.g.}\ useful to think of the value of an element of $\mathrm{T}G$ as an element of $\mathrm{pr}_2^*\mathrm{T}G$: In the first line we view $\mathrm{Dpr}_2$ as a \textbf{base-preserving} morphism $\mathrm{T}\mathcal{G} \to \mathrm{pr}_2^*\mathrm{T}G \subset \mathrm{T}\mathcal{G}$, while later on as a morphism $\mathrm{T}\mathcal{G} \to \mathrm{T}G$ \textbf{over the base map $\mathrm{pr}_2$}. Since all of this is straightforward, such kind of stuff should have been clear by context.
 \end{remarks}
 
-The Maurer-Cartan form is important for gauge transformations because it induces a derivative, wich we also need now.
+The Maurer-Cartan form is important for gauge transformations because it induces a derivative, which we also need now.
 
 \begin{remarks}{Maurer-Cartan form inducing a natural derivative: Part I}{MCFormAGeneralizationOfDerivative}
 If $G$ is a Lie group and $\mathfrak{g}$ its Lie algebra, then there is actually some stance that the typical Maurer-Cartan form $\mu_G \in \Omega^1(G; \mathfrak{g})$ describes \textit{the} generalization of the total derivative of smooth maps $M \to \mathbb{R}^n$ $(n \in \mathbb{N})$, given by the \textbf{Darboux derivative $\Delta$} as given in \cite[\S 5.1, page 182ff.]{mackenzieGeneralTheory}. For a smooth section $\sigma: M \to G$ of the trivial LGB over $M$, this is $\Delta \sigma \in \Omega^1(M; \mathfrak{g})$ given by
@@ -4487,6 +4517,10 @@ Of course one can view $\Delta \sigma$ as a map $\mathrm{T}M \to \mathcal{g}$ wh
 \mu_{\mathcal{G}}^{\mathrm{tot}} \circ \mathrm{D}\sigma.
 \eas
 \end{remark}
+
+\begin{remarks}{Pullback situation: Part II}{PullBackDarboux}
+Following Remark \ref{rem:PullbackTotMCForm}
+\end{remarks}
 
 \begin{remarks}{Maurer-Cartan form inducing a natural derivative: Part II}{MCAsDerivativePartII}
 We have now something similar to Remark \ref{rem:MCFormAGeneralizationOfDerivative}. Let $\mathcal{G} = M \times \mathbb{R}^n$ ($n \in \mathbb{N}$) be the trivial abelian LGB, and $\nabla$ a vector bundle connection on $M \times \mathbb{R}^n$, for which we have the associated projection onto the vertical bundle $\pi^{\mathrm{vert}}:\mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$. For $\sigma \in \Gamma(\mathcal{G})$ we then have
