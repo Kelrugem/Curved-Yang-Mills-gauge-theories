@@ -4398,15 +4398,15 @@ Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \colone
 \mathrm{H}\mathcal{G} \oplus \mathrm{V}\mathcal{G},
 \eas
 where $\mathrm{pr}_2: M \times G \to G$ is the projection onto the second component,
-and $\pi^{\mathrm{vert}}$ is then equivalent to $\mathrm{Dpr}_2 \in \Omega^1\mleft(\mathcal{G}; \mathrm{pr}_2^*\mathrm{T}G\mright)$. 
+and the projection onto the vertical bundle is then equivalent to $\mathrm{Dpr}_2 \in \Omega^1\mleft(\mathcal{G}; \mathrm{pr}_2^*\mathrm{T}G\mright)$. 
 
-Now let us view $G$ as an LGB over a point $\{*\}$, then $\mathcal{G} = f^*G$, where $f: M \to \{*\}$. By Remark \ref{rem:PullbackTotMCForm} we then get
+Now let us view $G$ as an LGB over a point $\{*\}$, then $\mathcal{G} = f^*G$, where $f: M \to \{*\}$. Making use of the uniqueness of $\pi^{\mathrm{vert}} = \mathds{1}_{\mathrm{T}G}$ for $G \to \{*\}$, we have for the pullback connection $\mathrm{pr}_2^!\pi^{\mathrm{vert}} = \mathrm{Dpr}_2$ which is precisely the projection for $\mathcal{G}$, and therefore we can use Remark \ref{rem:PullbackTotMCForm} to derive
 \bas
 \mu^{\mathrm{tot}}_{\mathcal{G}}
 &=
 \mathrm{pr}_2^!\mu_G,
 \eas
-where $\mu_G$ is the Maurer-Cartan form of $G$, making use of the uniqueness of $\pi^{\mathrm{vert}}$ for $G \to \{*\}$.
+where $\mu_G$ is the Maurer-Cartan form of $G$.
 %
 %We also have the typical projection properties
 %\bas
@@ -4518,66 +4518,6 @@ Of course one can view $\Delta \sigma$ as a map $\mathrm{T}M \to \mathcal{g}$ wh
 \eas
 \end{remark}
 
-\begin{remarks}{Pullback situation: Part II}{PullBackDarboux}
-Following Remark \ref{rem:PullbackTotMCForm}
-\end{remarks}
-
-\begin{remarks}{Maurer-Cartan form inducing a natural derivative: Part II}{MCAsDerivativePartII}
-We have now something similar to Remark \ref{rem:MCFormAGeneralizationOfDerivative}. Let $\mathcal{G} = M \times \mathbb{R}^n$ ($n \in \mathbb{N}$) be the trivial abelian LGB, and $\nabla$ a vector bundle connection on $M \times \mathbb{R}^n$, for which we have the associated projection onto the vertical bundle $\pi^{\mathrm{vert}}:\mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$. For $\sigma \in \Gamma(\mathcal{G})$ we then have
-\ba\label{NablaByProjection}
-\nabla_{X_x} \sigma
-&=
-\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)
-\ea
-for all $x \in M$ and $X_x \in \mathrm{T}_xM$, by making use of $\sigma^*\mathrm{V}\mathcal{G} \cong M \times \mathbb{R}^n$ as vector bundles such that the right hand side has again values in $\mathcal{G}$ due to "enough triviality" and equals the left hand side.\footnote{Strictly spoken, there is also a natural projection $\mathrm{V}\mathcal{G} \to \mathcal{g}$ involved which we omit for simplicity; recall Cor.\ \ref{cor:TLGBAsLGB}.} Again one could use the isomorphism as given in Cor.\ \ref{cor:TLGBAsLGB}. This is also more natural in the sense of that one wants that $\nabla_{X_x} \sigma$ is a section over $M$; $M$ can be viewed as the image of the neutral section $e$ (the zero vector here), so that $\nabla_{X_x} \sigma$ should have values in $e^*\mathrm{V}\mathcal{G} = \mathcal{g}$. Henceforth one could say it is more natural to "pull $\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)$ back" to $\mathcal{g}$ by left-translation in order to define $\nabla_{X_x} \sigma$, \textit{i.e.}\
-\bas
-\mathrm{D}_{\sigma_x} L_{\sigma_x^{-1}} \Bigl(
-	\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)
-\Bigr)
-&=
-\mleft.\mleft( \sigma^*\mu_{\mathcal{G}} \circ \sigma^*\pi^{\mathrm{vert}} \mright)\mright|_x
-\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright) \bigr)
-\\
-&=
-\mleft.(\Delta \sigma)\mright|_x(X_x).
-\eas
-Thus, as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} one may say that $\Delta \sigma$ is \textit{the} generalization of vector bundle connections to general LGBs $\mathcal{G}$. Furthermore, this argument is not based on a given (local) trivialization to handle the arising pullback in Eq.\ \eqref{NablaByProjection}.
-\end{remarks}
-
-\begin{remarks}{Canonical flat Darboux derivative}{DarbouxOnCanonFlat}
-Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\mathrm{pr}_1}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \mathrm{pr}_1^*\mathrm{T}M$; also recall Remark \ref{rem:TrivialLGBsAndTheirMCForm} and its notation, especially $\pi^{\mathrm{vert}} = \mathrm{Dpr}_2$ with $\mathrm{pr}_2: M \times G \to G$ the projection onto the second component.
-
-For a constant section $\sigma \in \Gamma(\mathcal{G})$, \textit{i.e.}\ $\sigma_x = (x, g)$ for all $x \in M$ ($g \in G$), we have
-\bas
-\mathrm{D}_x\sigma(X)
-&=
-(X, 0)
-\eas
-for all $x \in M$ and $X \in \mathrm{T}_xM$. So that we get $\sigma^*\pi^{\mathrm{vert}} \circ \mathrm{D}\sigma = 0$ as expected. Therefore in total
-\bas
-\Delta \sigma
-&=
-\mleft(\sigma^* \mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma
-=
-\sigma^*\mu_{\mathcal{G}} \circ \sigma^*\pi^{\mathrm{vert}} \circ \mathrm{D}\sigma
-=
-0.
-\eas
-In sense of Remark \ref{rem:MCAsDerivativePartII} it makes sense to say that \textbf{$\sigma$ is parallel w.r.t.\ $\Delta$}. Thus, we then speak of the \textbf{canonical flat Darboux derivative}, and constant sections are its parallel sections.
-
-As mentioned in Subsection \ref{BasicNotations}, we can view general sections $\sigma \in \Gamma(\mathcal{G})$ (not necessarily constant) equivalently as a smooth map $\mathrm{pr}_2 \circ \sigma: M \to G$, denoted by $\widetilde{\sigma}$ for bookkeeping reasons. By Remark \ref{rem:TrivialLGBsAndTheirMCForm} we have
-\bas
-\Delta \sigma
-&=
-\mleft(\sigma^* \mathrm{pr}_2^!\mu_G \mright) \circ \mathrm{D}\sigma
-=
-\mleft( \mleft( \mathrm{pr}_2 \circ \sigma \mright)^*\mu_G \mright) \circ \mathrm{D}\mleft( \mathrm{pr}_2 \circ \sigma \mright)
-=
-\Delta \widetilde{\sigma},
-\eas
-where $\Delta$ on the right hand side is the "classical" Darboux derivative as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} related to $\mu_G$. This emphasizes why we can speak of a canonical flat derivative due to the fact that $\mu_G$ is flat (Maurer-Cartan equation).
-\end{remarks}
-
 We can actually rewrite some important equations now.
 
 \begin{remarks}{Darboux derivative in the infinitesimal LGB action}{DarbouxInActionInfinit}
@@ -4632,6 +4572,129 @@ We will use this form for the definition of the principal bundle connection. As 
 \mathrm{D}_p r_g (X),
 \eas
 making use of Ex.\ \ref{ex:TrivialLGBAction}.
+\end{remarks}
+
+As a derivative we expect a Leibniz rule as for the classical Darboux derivative (see \cite[\S 5.1, Eq.\ 2, page 182]{mackenzieGeneralTheory}). However, we cannot make a general statement about that yet, as long as we do not fix a more specific type of connection on $\mathcal{G}$. We will come back to this later; at this point just be sure of that there is of course a certain Leibniz rule, simply due to that it generalizes the "classical" Darboux derivative.
+
+Let us now discuss the pullback situation for the Darboux derivative.
+
+\begin{remarks}{Pullback situation: Part II}{PullBackDarboux}
+Following Remark \ref{rem:PullbackTotMCForm} and its notation and results, we can calculate $\Delta^{f^*\mathcal{G}}\mleft( f^*\sigma \mright) \in \Omega^1(N; f^*\mathcal{g})$ for $\sigma \in \mathcal{G}$, first we write
+\bas
+\mleft.f^*\sigma\mright|_p
+&=
+\mleft( p, \sigma_{f(p)} \mright)
+\eas
+for all $p \in N$, and thus
+%\bas
+%\mathrm{D}_p\mleft( f^*\sigma \mright)(X)
+%&=
+%\mleft( X, \mathrm{D}_x\sigma\bigl( \mathrm{D}_pf(X) \bigr) \mright)
+%\eas
+%for all $X \in \mathrm{T}_pN$, where $x \coloneqq f(p)$. Then
+\bas
+\Delta^{f^*\mathcal{G}}\mleft( f^*\sigma \mright)
+&=
+%\mleft( \mleft( f^*\sigma \mright)^* \mu_{f^*\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\mleft( f^*\sigma \mright)
+\mleft( f^*\sigma \mright)^! \mu_{f^*\mathcal{G}}^{\mathrm{tot}}
+\\
+&=
+\mleft( f^*\sigma \mright)^! \mathrm{pr}_2^! \mu_{\mathcal{G}}^{\mathrm{tot}}
+\\
+&=
+\mleft( \mathrm{pr}_2\circ f^*\sigma \mright)^! \mu_{\mathcal{G}}^{\mathrm{tot}}
+\\
+&=
+\mleft( \sigma \circ f \mright)^!\mu_{\mathcal{G}}^{\mathrm{tot}}
+\\
+&=
+\mleft(\mleft( \sigma \circ f \mright)^*\mu_{\mathcal{G}}^{\mathrm{tot}} \mright)
+	\circ \mathrm{D}(\sigma\circ f)
+\\
+&=
+\underbrace{\mleft( f^* \sigma^*\mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ f^*\mleft(\mathrm{D}\sigma\mright)}_{= f^*\mleft( \mleft(\sigma^*\mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma \mright)} \circ ~\mathrm{D}f
+\\
+&=
+f^!\mleft(\mleft( \sigma^*\mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma\mright)
+\\
+&=
+f^!\mleft( \Delta^{\mathcal{G}} \sigma \mright),
+\eas
+where we rewrote the chain rule
+\bas
+\mathrm{D}(\sigma \circ f)
+&=
+f^*\mleft(\mathrm{D}\sigma\mright) \circ \mathrm{D}f,
+\eas
+but as in Remark \ref{RemarkABoutDarbouxNotationWRTPullback} one can decide to omit this notation. Such Darboux derivatives related to the pullback connection on $f^*\mathcal{G}$ we call the \textbf{pullback Darboux derivative}, and similar to the notation of pullback vector bundle connections we write
+\bas
+f^*\Delta^{\mathcal{G}}
+&\coloneqq
+\Delta^{f^*\mathcal{G}}.
+\eas
+\end{remarks}
+
+\begin{remarks}{Canonical flat Darboux derivative}{DarbouxOnCanonFlat}
+Given the situation as in Remark \ref{rem:TrivialLGBsAndTheirMCForm} we can use Remark \ref{rem:PullBackDarboux} to derive
+\bas
+\Delta^{\mathcal{G}}
+&=
+f^*\Delta^G,
+\eas
+where $\Delta^G$ on the right hand side is the "classical" Darboux derivative as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} related to $\mu_G$. This emphasizes why we can speak of a canonical flat derivative due to the fact that $\mu_G$ is flat (Maurer-Cartan equation).
+
+Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\mathrm{pr}_1}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \mathrm{pr}_1^*\mathrm{T}M$; also recall Remark \ref{rem:TrivialLGBsAndTheirMCForm} and its notation, especially $\pi^{\mathrm{vert}} = \mathrm{Dpr}_2$ with $\mathrm{pr}_2: M \times G \to G$ the projection onto the second component.
+
+For a constant section $\sigma \in \Gamma(\mathcal{G})$, \textit{i.e.}\ $\sigma_x = (x, g)$ for all $x \in M$ ($g \in G$), we have
+\bas
+\mathrm{D}_x\sigma(X)
+&=
+(X, 0)
+\eas
+for all $x \in M$ and $X \in \mathrm{T}_xM$. So that we get $\sigma^*\pi^{\mathrm{vert}} \circ \mathrm{D}\sigma = 0$ as expected. Therefore in total
+\bas
+\Delta \sigma
+&=
+\mleft(\sigma^* \mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma
+=
+\sigma^*\mu_{\mathcal{G}} \circ \sigma^*\pi^{\mathrm{vert}} \circ \mathrm{D}\sigma
+=
+0.
+\eas
+In sense of Remark \ref{rem:MCAsDerivativePartII} it makes sense to say that \textbf{$\sigma$ is parallel w.r.t.\ $\Delta$}. Thus, we then speak of the \textbf{canonical flat Darboux derivative}, and constant sections are its parallel sections.
+
+As mentioned in Subsection \ref{BasicNotations}, we can view general sections $\sigma \in \Gamma(\mathcal{G})$ (not necessarily constant) equivalently as a smooth map $\mathrm{pr}_2 \circ \sigma: M \to G$, denoted by $\widetilde{\sigma}$ for bookkeeping reasons. By Remark \ref{rem:TrivialLGBsAndTheirMCForm} we have
+\bas
+\Delta \sigma
+&=
+\mleft(\sigma^* \mathrm{pr}_2^!\mu_G \mright) \circ \mathrm{D}\sigma
+=
+\mleft( \mleft( \mathrm{pr}_2 \circ \sigma \mright)^*\mu_G \mright) \circ \mathrm{D}\mleft( \mathrm{pr}_2 \circ \sigma \mright)
+=
+\Delta \widetilde{\sigma},
+\eas
+\end{remarks}
+
+\begin{remarks}{Maurer-Cartan form inducing a natural derivative: Part II}{MCAsDerivativePartII}
+We have now something similar to Remark \ref{rem:MCFormAGeneralizationOfDerivative}. Let $\mathcal{G} = M \times \mathbb{R}^n$ ($n \in \mathbb{N}$) be the trivial abelian LGB, and $\nabla$ a vector bundle connection on $M \times \mathbb{R}^n$, for which we have the associated projection onto the vertical bundle $\pi^{\mathrm{vert}}:\mathrm{T}\mathcal{G} \to \mathrm{V}\mathcal{G}$. For $\sigma \in \Gamma(\mathcal{G})$ we then have
+\ba\label{NablaByProjection}
+\nabla_{X_x} \sigma
+&=
+\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)
+\ea
+for all $x \in M$ and $X_x \in \mathrm{T}_xM$, by making use of $\sigma^*\mathrm{V}\mathcal{G} \cong M \times \mathbb{R}^n$ as vector bundles such that the right hand side has again values in $\mathcal{G}$ due to "enough triviality" and equals the left hand side.\footnote{Strictly spoken, there is also a natural projection $\mathrm{V}\mathcal{G} \to \mathcal{g}$ involved which we omit for simplicity; recall Cor.\ \ref{cor:TLGBAsLGB}.} Again one could use the isomorphism as given in Cor.\ \ref{cor:TLGBAsLGB}. This is also more natural in the sense of that one wants that $\nabla_{X_x} \sigma$ is a section over $M$; $M$ can be viewed as the image of the neutral section $e$ (the zero vector here), so that $\nabla_{X_x} \sigma$ should have values in $e^*\mathrm{V}\mathcal{G} = \mathcal{g}$. Henceforth one could say it is more natural to "pull $\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)$ back" to $\mathcal{g}$ by left-translation in order to define $\nabla_{X_x} \sigma$, \textit{i.e.}\
+\bas
+\mathrm{D}_{\sigma_x} L_{\sigma_x^{-1}} \Bigl(
+	\mleft(\sigma^*\pi^{\mathrm{vert}}\mright)\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright)  \bigr)
+\Bigr)
+&=
+\mleft.\mleft( \sigma^*\mu_{\mathcal{G}} \circ \sigma^*\pi^{\mathrm{vert}} \mright)\mright|_x
+\bigl( \mathrm{D}_x \sigma\mleft( X_x \mright) \bigr)
+\\
+&=
+\mleft.(\Delta \sigma)\mright|_x(X_x).
+\eas
+Thus, as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} one may say that $\Delta \sigma$ is \textit{the} generalization of vector bundle connections to general LGBs $\mathcal{G}$. Furthermore, this argument is not based on a given (local) trivialization to handle the arising pullback in Eq.\ \eqref{NablaByProjection}.
 \end{remarks}
 
 In fact, the Darboux derivative naturally induces a connection on $\mathcal{g}$ as LAB of $\mathcal{G}$. One may have expected that since $\mathrm{H}\mathcal{G}$ should infinitesimally induce a horizontal distribution on $\mathcal{g}$; recall the exponential map introduced in Subsection \ref{ExponentialMapSubsection}. Also recall that by definition of vertical bundles we have for the LAB $\mathcal{g} \stackrel{\pi_{\mathcal{g}}}{\to} M$ that we have for the vertical bundle that $\mathrm{V}\mathcal{g} \cong \pi_{\mathcal{g}}^*\mathcal{g}$, making use of that LABs are vector bundles; in the following we will use the natural projection onto the second component of $\pi_{\mathcal{g}}^*\mathcal{g}$ but now defined on $\mathrm{V}\mathcal{g}$, denoted by $\mathrm{pr}_2: \mathrm{V}\mathcal{g} \to \mathcal{g}$.
@@ -5619,13 +5682,40 @@ H^!A
 
 \subsection{Generalized curvature/field strength}
 
+
+
+\begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we have
+\bas
+\Delta(\sigma \cdot \tau)
+&=
+\eas
+for all $\sigma, \tau \in \Gamma(\mathcal{G})$.
+\end{propositions}
+
+\begin{proof}
+\leavevmode\newline
+This will follow by Thm.\ \ref{thm:DiffOfLGBAction} and especially Remark \ref{rem:DarbouxInActionInfinit}; so denote with $\Phi$ the $\mathcal{G}$-multiplication, then
+\bas
+\mathrm{D}_x(\sigma \cdot \tau)(X)
+&=
+\mathrm{D}_{(\sigma_x, \tau_x)}\Phi \bigl( \mathrm{D}_x\sigma(X), \mathrm{D}_x \tau(X) \bigr)
+\\
+&=
+\mathrm{D}_{\sigma_x}R_\tau\bigl( \mathrm{D}_x\sigma(X) \bigr)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\tau_x} \bigl( \mathrm{D}_x \tau(X) \bigr)}}\mright|_{\sigma_x \cdot \tau_x}
+	- \mleft.{\oversortoftilde{ \mleft.(\Delta \tau)\mright|_x (X)}}\mright|_{\sigma_x \cdot \tau_x}
+\eas
+for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$.
+\end{proof}
+
 \subsection{Generalized covariant derivative/minimal coupling}
 
 \section{Curved Yang-Mills gauge theory}
 
 \section{Conclusion}
 
-\textbf{Also mention that the new connection is not necessarily equivalent to a classical connection even though the related gauge theories are.}
+\textbf{Also mention that the new connection is not necessarily equivalent to a classical connection even though the related gauge theories are. What does it imply on theories based on the sense of connections like general relativity?}
 
 \textbf{Acknowledgements:} I want to thank Siye Wu, Mark John David Hamilton and Alessandra Frabetti for their great help and support in making this paper.
 

@@ -26,16 +26,16 @@
 \contentsline {subsection}{\numberline {6.2}Generalized distributions and connections}{68}{subsection.6.2}%
 \contentsline {subsubsection}{\numberline {6.2.1}Idea and motivation}{70}{subsubsection.6.2.1}%
 \contentsline {subsubsection}{\numberline {6.2.2}Darboux derivative on LGBs}{73}{subsubsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3}First step towards towards associated bundles}{83}{subsubsection.6.2.3}%
-\contentsline {subsubsection}{\numberline {6.2.4}Generalized connection 1-forms on principal bundles}{85}{subsubsection.6.2.4}%
-\contentsline {subsection}{\numberline {6.3}Gauge transformations}{94}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Generalized curvature/field strength}{97}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Generalized covariant derivative/minimal coupling}{97}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{97}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{97}{section.8}%
-\contentsline {section}{\nonumberline List of References}{97}{section*.3}%
-\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{98}{appendix.A}%
-\contentsline {section}{\numberline {B}Other Interpretations of the compatibility conditions}{106}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Minimal coupling}{106}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Axiomatic Yang-Mills gauge theories}{112}{subsection.B.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}First step towards towards associated bundles}{84}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4}Generalized connection 1-forms on principal bundles}{86}{subsubsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.3}Gauge transformations}{95}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Generalized curvature/field strength}{98}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Generalized covariant derivative/minimal coupling}{98}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{98}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{98}{section.8}%
+\contentsline {section}{\nonumberline List of References}{99}{section*.3}%
+\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{99}{appendix.A}%
+\contentsline {section}{\numberline {B}Other Interpretations of the compatibility conditions}{108}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Minimal coupling}{108}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Axiomatic Yang-Mills gauge theories}{114}{subsection.B.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

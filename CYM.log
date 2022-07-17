@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  16 JUL 2022 03:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  17 JUL 2022 17:22
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1255,7 +1255,7 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 {C:/Users/kelru/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (CYM.toc [2]
 Overfull \hbox (1.09496pt too wide) detected at line 38
- []\T1/lmss/bx/n/10.95 106
+ []\T1/lmss/bx/n/10.95 108
  []
 
 )
@@ -1310,26 +1310,26 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39]
 [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54]
 [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69]
-[70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80]
+[70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 4748.
+(Font)              using `U/stmry/m/n' instead on input line 4811.
 
-[81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95]
-[96] (CYM.bbl
+[82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96]
+[97] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-[97]
+[98]
 Underfull \hbox (badness 1867) in paragraph at lines 53--57
 \T1/lmr/m/n/10.95 sym-plec-tic man-i-folds.  \T1/lmr/m/it/10.95 Jour-nal of Ge-
 om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
  []
 
-) [98] [99] [100] [101] [102] [103] [104] [105] [106] [107]
-Overfull \hbox (2.20065pt too wide) in paragraph at lines 6301--6319
+) [99] [100] [101] [102] [103] [104] [105] [106] [107] [108]
+Overfull \hbox (2.20065pt too wide) in paragraph at lines 6391--6409
 \OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/
 10.95 )$ \T1/lmr/m/n/10.95 as an el-e-ment of $\OT1/lmr/m/n/10.95 
 [](\OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.95 ; [](\OML/lmm/m/it/10.95 V\OT1/lmr/m
@@ -1341,7 +1341,7 @@ mm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/10.95
 /n/10.95 ))$
  []
 
-[108] [109] [110] [111] [112] (CYM.aux)
+[109] [110] [111] [112] [113] [114] (CYM.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1352,10 +1352,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34769 strings out of 478907
- 725793 string characters out of 2851891
- 1222325 words of memory out of 3000000
- 51604 multiletter control sequences out of 15000+600000
+ 34775 strings out of 478907
+ 725880 string characters out of 2851891
+ 1216460 words of memory out of 3000000
+ 51607 multiletter control sequences out of 15000+600000
  522375 words of font info for 151 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1398,9 +1398,9 @@ ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Use
 rs/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb
 >
-Output written on CYM.pdf (114 pages, 1187139 bytes).
+Output written on CYM.pdf (116 pages, 1193788 bytes).
 PDF statistics:
- 1792 PDF objects out of 2073 (max. 8388607)
- 407 named destinations out of 1000 (max. 500000)
+ 1809 PDF objects out of 2073 (max. 8388607)
+ 410 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
