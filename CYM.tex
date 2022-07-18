@@ -4597,25 +4597,32 @@ for all $p \in N$, and thus
 &=
 %\mleft( \mleft( f^*\sigma \mright)^* \mu_{f^*\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\mleft( f^*\sigma \mright)
 \mleft( f^*\sigma \mright)^! \mu_{f^*\mathcal{G}}^{\mathrm{tot}}
+\nonumber
 \\
 &=
 \mleft( f^*\sigma \mright)^! \mathrm{pr}_2^! \mu_{\mathcal{G}}^{\mathrm{tot}}
+\nonumber
 \\
 &=
 \mleft( \mathrm{pr}_2\circ f^*\sigma \mright)^! \mu_{\mathcal{G}}^{\mathrm{tot}}
+\nonumber
 \\
 &=
 \mleft( \sigma \circ f \mright)^!\mu_{\mathcal{G}}^{\mathrm{tot}}
+\nonumber
 \\
 &=
 \mleft(\mleft( \sigma \circ f \mright)^*\mu_{\mathcal{G}}^{\mathrm{tot}} \mright)
 	\circ \mathrm{D}(\sigma\circ f)
+\nonumber
 \\
 &=
 \underbrace{\mleft( f^* \sigma^*\mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ f^*\mleft(\mathrm{D}\sigma\mright)}_{= f^*\mleft( \mleft(\sigma^*\mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma \mright)} \circ ~\mathrm{D}f
+\nonumber
 \\
 &=
 f^!\mleft(\mleft( \sigma^*\mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma\mright)
+\nonumber
 \\
 &=
 f^!\mleft( \Delta^{\mathcal{G}} \sigma \mright),
@@ -4949,7 +4956,68 @@ Following Remark \ref{rem:PullBackDarboux} (see Remark \ref{rem:GeneralPullBackL
 =
 \mleft( p, \e_{\mathcal{G}}^{\nu_x} \mright)
 \eas
-for all $(p, \nu_x) \in \mleft(f^*\mathcal{g}\mright)_p$, where $x \coloneqq f(p)$ and so $\nu_x \in \mathcal{g}_x$, and where we made use of that $\mleft(f^*\mathcal{G}\mright)_p \cong \mathcal{G}_x$ as Lie groups via the projection onto the second component; recall Cor.\ \ref{cor:PullbackLGB}.
+for all $(p, \nu_x) \in \mleft(f^*\mathcal{g}\mright)_p$, where $x \coloneqq f(p)$ and so $\nu_x \in \mathcal{g}_x$, and where we made use of that $\mleft(f^*\mathcal{G}\mright)_p \cong \mathcal{G}_x$ as Lie groups via the projection $\mathrm{pr}_2$ onto the second component (recall Cor.\ \ref{cor:PullbackLGB}), that is, we have used the well-known relation
+\bas
+\mathrm{pr}_2\mleft( \exp_{\mleft(f^*\mathcal{G}\mright)_p}(p, \nu_x) \mright)
+&=
+\mleft(\exp_{\mathcal{G}_x} \circ~ \mathrm{D}_{(p, e_x)}\mathrm{pr}_2\mright)(p, \nu_x)
+=
+\exp_{\mathcal{G}_x}(\nu_x),
+\eas
+see \textit{e.g.}\ \cite[\S 1.7, Thm.\ 1.7.16, page 59]{Hamilton} for the general formula; then use that $\mathrm{pr}_2|_{\mleft( f^*\mathcal{G} \mright)_p}$ is bijective. Hence, we get
+\bas
+\e_{f^*\mathcal{G}}^{f^*\nu}
+&=
+f^*\mleft( \e_{\mathcal{G}}^\nu \mright)
+\eas
+for all $\nu \in \Gamma(\mathcal{g})$. Then observe, by using Eq.\ \eqref{PullBackDarbouxOnPullbackSections},
+\bas
+\mleft.\nabla^{f^*\mathcal{G}}_Y (f^*\nu)\mright|_p
+&\coloneqq
+\mathrm{pr}_2 \mleft(
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta^{f^*\mathcal{G}} \e_{f^*\mathcal{G}}^{t \cdot f^*\nu}\mright)_p (Y) \Bigr)
+\mright)
+\\
+&=
+\mathrm{pr}_2 \mleft(
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta^{f^*\mathcal{G}} \bigl( f^*\mleft( \e_{\mathcal{G}}^{t\nu} \mright) \bigr) \mright)_p (Y) \Bigr)
+\mright)
+\\
+&=
+\mathrm{pr}_2 \mleft(
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft( f^!\mleft( \Delta^{\mathcal{G}} \e_{\mathcal{G}}^{t\nu} \mright) \mright)_p (Y) \Bigr)
+\mright)
+\\
+&=
+\mathrm{pr}_2 \mleft(
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \biggl( p, 
+\mleft( \Delta^{\mathcal{G}} \e_{\mathcal{G}}^{t\nu} \mright)_{f(p)} \bigl( \mathrm{D}_pf(Y) \bigr) 
+\biggr)
+\mright)
+\\
+&=
+\mathrm{pr}_2 \mleft( 0,
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \biggl( 
+\mleft( \Delta^{\mathcal{G}} \e_{\mathcal{G}}^{t\nu} \mright)_{f(p)} \bigl( \mathrm{D}_pf(Y) \bigr) 
+\biggr)
+\mright)
+\\
+&=
+\mathrm{pr}_2 \mleft(
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \biggl( 
+\mleft( \Delta^{\mathcal{G}} \e_{\mathcal{G}}^{t\nu} \mright)_{f(p)} \bigl( \mathrm{D}_pf(Y) \bigr) 
+\biggr)
+\mright)
+\\
+&=
+\mleft.\nabla^{\mathcal{G}}_{\mathrm{D}_pf(Y)} \nu\mright|_{f(p)}
+\eas
+for all $\nu \in \Gamma(\mathcal{g})$, $p \in N$ and $Y \in \mathrm{T}_p N$. By the uniqueness of pullback vector bundle connections we therefore get
+\bas
+\nabla^{f^*\mathcal{G}}
+&=
+f^*\nabla^{\mathcal{G}}.
+\eas
 \end{remarks}
 
 \subsubsection{First step towards towards associated bundles}
@@ -5658,9 +5726,7 @@ for all $(p, g) \in \mathcal{P} * \mathcal{G}$. Thus, $H^\sigma \in \sAut(\mathc
 %for all $(p, g) \in \mathcal{P} * \mathcal{G}$, where $x \coloneqq \pi(p)$, $\omega \coloneqq \mathrm{D}\pi(X)$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$; the tangent vector $Y$ as denoted in Thm.\ \ref{thm:DiffOfLGBAction} can be chosen in an arbitrary way, as long as $(X, Y) \in \mathrm{T}(\mathcal{P}* \mathcal{G})$. Thus, smoothness of $\Phi_p$ in $p$ can also 
 \end{proof}
 
-Using this, we can finally formulate the gauge transformations of connection 1-forms; for this recall Cor.\ \ref{cor:PullBacksArePrincToo} and the Darboux derivative, Def.\ \ref{def:DarbouxDerivativeOnLGBs}.
-
-\textbf{Mit PullbackDarboux umschreiben?}
+Using this, we can finally formulate the gauge transformations of connection 1-forms; for this recall Cor.\ \ref{cor:PullBacksArePrincToo} and the Darboux derivative, Def.\ \ref{def:DarbouxDerivativeOnLGBs}. Also recall the pullback Darboux derivative, Remark \ref{rem:PullBackDarboux}.
 
 \begin{theorems}{Gauge transformations of connection 1-forms}{GaugeTrafoOfGaugeBoson}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. Then $H^!A$ is a connection 1-form on $f^*\mathcal{P}$ and we have
@@ -5668,15 +5734,9 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 H^!A
 &=
 \sAd_{\sigma^H}(A) 
-	+ \Delta\mleft( \mathrm{pr}_2 \circ \sigma^H \mright),
+	+ \mleft(\pi^*\Delta\mright)\mleft( \sigma^H \mright),
 \eas
-where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ as in Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps}, and $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. If we view $\sigma^H$ as a map $\mathcal{P} \to \mathcal{G}$ over $\pi$ for the second summand as discussed in Subsubsection \ref{BasicNotations}, then we may also write shortly
-\bas
-H^!A
-&=
-\sAd_{\sigma^H}(A) 
-	+ \Delta\sigma^H.
-\eas
+where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined as in Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps}.
 \end{theorems}
 
 \begin{proof}
