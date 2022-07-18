@@ -4579,7 +4579,7 @@ As a derivative we expect a Leibniz rule as for the classical Darboux derivative
 Let us now discuss the pullback situation for the Darboux derivative.
 
 \begin{remarks}{Pullback situation: Part II}{PullBackDarboux}
-Following Remark \ref{rem:PullbackTotMCForm} and its notation and results, we can calculate $\Delta^{f^*\mathcal{G}}\mleft( f^*\sigma \mright) \in \Omega^1(N; f^*\mathcal{g})$ for $\sigma \in \mathcal{G}$, first we write
+Following Remark \ref{rem:PullbackTotMCForm} and its notation and results (see Remark \ref{rem:GeneralPullBackLGBConnSituation} for the initial setup), we can calculate $\Delta^{f^*\mathcal{G}}\mleft( f^*\sigma \mright) \in \Omega^1(N; f^*\mathcal{g})$ for $\sigma \in \mathcal{G}$, first we write
 \bas
 \mleft.f^*\sigma\mright|_p
 &=
@@ -4592,7 +4592,7 @@ for all $p \in N$, and thus
 %\mleft( X, \mathrm{D}_x\sigma\bigl( \mathrm{D}_pf(X) \bigr) \mright)
 %\eas
 %for all $X \in \mathrm{T}_pN$, where $x \coloneqq f(p)$. Then
-\bas
+\ba\label{PullBackDarbouxOnPullbackSections}
 \Delta^{f^*\mathcal{G}}\mleft( f^*\sigma \mright)
 &=
 %\mleft( \mleft( f^*\sigma \mright)^* \mu_{f^*\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\mleft( f^*\sigma \mright)
@@ -4619,7 +4619,7 @@ f^!\mleft(\mleft( \sigma^*\mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathr
 \\
 &=
 f^!\mleft( \Delta^{\mathcal{G}} \sigma \mright),
-\eas
+\ea
 where we rewrote the chain rule
 \bas
 \mathrm{D}(\sigma \circ f)
@@ -4639,40 +4639,29 @@ Given the situation as in Remark \ref{rem:TrivialLGBsAndTheirMCForm} we can use 
 \bas
 \Delta^{\mathcal{G}}
 &=
-f^*\Delta^G,
+f^*\Delta^0,
 \eas
-where $\Delta^G$ on the right hand side is the "classical" Darboux derivative as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} related to $\mu_G$. This emphasizes why we can speak of a canonical flat derivative due to the fact that $\mu_G$ is flat (Maurer-Cartan equation).
-
-Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \coloneqq M \times G \stackrel{\mathrm{pr}_1}{\to} M$ be the trivial LGB equipped with its canonical flat connection $\mathrm{H}\mathcal{G} \coloneqq \mathrm{pr}_1^*\mathrm{T}M$; also recall Remark \ref{rem:TrivialLGBsAndTheirMCForm} and its notation, especially $\pi^{\mathrm{vert}} = \mathrm{Dpr}_2$ with $\mathrm{pr}_2: M \times G \to G$ the projection onto the second component.
-
-For a constant section $\sigma \in \Gamma(\mathcal{G})$, \textit{i.e.}\ $\sigma_x = (x, g)$ for all $x \in M$ ($g \in G$), we have
+where $\Delta^0$ on the right hand side is the Darboux derivative of the Lie group $G$ as a bundle over point. Trivially, $\Delta^0 g \equiv 0$ for all $g \in G$, and thus
 \bas
-\mathrm{D}_x\sigma(X)
+\Delta^{\mathcal{G}}(f^*g)
 &=
-(X, 0)
-\eas
-for all $x \in M$ and $X \in \mathrm{T}_xM$. So that we get $\sigma^*\pi^{\mathrm{vert}} \circ \mathrm{D}\sigma = 0$ as expected. Therefore in total
-\bas
-\Delta \sigma
-&=
-\mleft(\sigma^* \mu_{\mathcal{G}}^{\mathrm{tot}} \mright) \circ \mathrm{D}\sigma
+f^!\mleft( \Delta^0 g\mright)
 =
-\sigma^*\mu_{\mathcal{G}} \circ \sigma^*\pi^{\mathrm{vert}} \circ \mathrm{D}\sigma
-=
-0.
+0
 \eas
-In sense of Remark \ref{rem:MCAsDerivativePartII} it makes sense to say that \textbf{$\sigma$ is parallel w.r.t.\ $\Delta$}. Thus, we then speak of the \textbf{canonical flat Darboux derivative}, and constant sections are its parallel sections.
+for all $g \in G$ viewed as a section of $G \to \{0\}$, so $f^*g$ are the constant sections of $\mathcal{G}$. In sense of Remark \ref{rem:MCAsDerivativePartII} it makes sense to say that \textbf{$\sigma$ is parallel w.r.t.\ $\Delta$}. Since constant sections generate all sections of $\mathcal{G}$, we then speak of the \textbf{canonical flat Darboux derivative}, and constant sections are its parallel sections.
 
-As mentioned in Subsection \ref{BasicNotations}, we can view general sections $\sigma \in \Gamma(\mathcal{G})$ (not necessarily constant) equivalently as a smooth map $\mathrm{pr}_2 \circ \sigma: M \to G$, denoted by $\widetilde{\sigma}$ for bookkeeping reasons. By Remark \ref{rem:TrivialLGBsAndTheirMCForm} we have
+However, just because $\Delta^0$ is a zero map, does not mean that also $\Delta^{\mathcal{G}}$ is zero. On one hand because of a Leibniz rule which we will discuss later in more detail, and on the other hand, as mentioned in Subsection \ref{BasicNotations}, we can view general sections $\sigma \in \Gamma(\mathcal{G})$ (not necessarily constant) equivalently as a smooth map $\mathrm{pr}_2 \circ \sigma: M \to G$, denoted by $\widetilde{\sigma}$ for bookkeeping reasons. By Remark \ref{rem:TrivialLGBsAndTheirMCForm} we then get
 \bas
-\Delta \sigma
+\Delta^{\mathcal{G}} \sigma
 &=
-\mleft(\sigma^* \mathrm{pr}_2^!\mu_G \mright) \circ \mathrm{D}\sigma
+\sigma^! \mathrm{pr}_2^!\mu_G
 =
-\mleft( \mleft( \mathrm{pr}_2 \circ \sigma \mright)^*\mu_G \mright) \circ \mathrm{D}\mleft( \mathrm{pr}_2 \circ \sigma \mright)
+\mleft( \mathrm{pr}_2 \circ \sigma \mright)^!\mu_G
 =
-\Delta \widetilde{\sigma},
+\Delta^G \widetilde{\sigma}
 \eas
+for all $\sigma \in \Gamma(\mathcal{G})$, where $\Delta^G$ is the "classical" Darboux derivative as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} related to $\mu_G$. This emphasizes why we can speak of a canonical flat derivative due to the fact that $\mu_G$ is flat (Maurer-Cartan equation), and we may simply write $\Delta^{\mathcal{G}} = \Delta^G$.
 \end{remarks}
 
 \begin{remarks}{Maurer-Cartan form inducing a natural derivative: Part II}{MCAsDerivativePartII}
@@ -4948,6 +4937,20 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 \eas
 for all $\nu \in \Gamma(\mathcal{g})$, the \textbf{$\mathcal{G}$-connection (on its LAB $\mathcal{g}$)}.
 \end{definitions}
+
+\begin{remarks}{Pullback situation: Part III}{PullBackConnectionOfNablaG}
+Following Remark \ref{rem:PullBackDarboux} (see Remark \ref{rem:GeneralPullBackLGBConnSituation} for the initial setup) and all the involved notation we can again derive something related to the pullback LGB $f^*\mathcal{G}$. First of all, let us denote the exponential of $f^*\mathcal{G}$ and $\mathcal{G}$ by $\e_{f^*\mathcal{G}}$ and $\e_{\mathcal{G}}$, respectively, then we clearly have
+\bas
+\e_{f^*\mathcal{G}}^{(p, \nu_x)}
+&=
+\exp_{\mleft(f^*\mathcal{G}\mright)_p}(p, \nu_x)
+=
+\mleft( p, \exp_{\mathcal{G}_x}(\nu_x) \mright)
+=
+\mleft( p, \e_{\mathcal{G}}^{\nu_x} \mright)
+\eas
+for all $(p, \nu_x) \in \mleft(f^*\mathcal{g}\mright)_p$, where $x \coloneqq f(p)$ and so $\nu_x \in \mathcal{g}_x$, and where we made use of that $\mleft(f^*\mathcal{G}\mright)_p \cong \mathcal{G}_x$ as Lie groups via the projection onto the second component; recall Cor.\ \ref{cor:PullbackLGB}.
+\end{remarks}
 
 \subsubsection{First step towards towards associated bundles}
 
