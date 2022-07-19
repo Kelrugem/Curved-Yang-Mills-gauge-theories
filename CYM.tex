@@ -4970,40 +4970,40 @@ see \textit{e.g.}\ \cite[\S 1.7, Thm.\ 1.7.16, page 59]{Hamilton} for the genera
 &=
 f^*\mleft( \e_{\mathcal{G}}^\nu \mright)
 \eas
-for all $\nu \in \Gamma(\mathcal{g})$. Then observe, by using Eq.\ \eqref{PullBackDarbouxOnPullbackSections},
+for all $\nu \in \Gamma(\mathcal{g})$. Due to clatch of notation we relabel the projection $\mathrm{V}\mathcal{g} \to \mathcal{g}$ in Prop.\ \ref{prop:FinallyTheNablaInduction} to $\pi_2$, and then observe, by using Eq.\ \eqref{PullBackDarbouxOnPullbackSections},
 \bas
 \mleft.\nabla^{f^*\mathcal{G}}_Y (f^*\nu)\mright|_p
 &\coloneqq
-\mathrm{pr}_2 \mleft(
+\pi_2 \mleft(
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta^{f^*\mathcal{G}} \e_{f^*\mathcal{G}}^{t \cdot f^*\nu}\mright)_p (Y) \Bigr)
 \mright)
 \\
 &=
-\mathrm{pr}_2 \mleft(
+\pi_2 \mleft(
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta^{f^*\mathcal{G}} \bigl( f^*\mleft( \e_{\mathcal{G}}^{t\nu} \mright) \bigr) \mright)_p (Y) \Bigr)
 \mright)
 \\
 &=
-\mathrm{pr}_2 \mleft(
+\pi_2 \mleft(
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft( f^!\mleft( \Delta^{\mathcal{G}} \e_{\mathcal{G}}^{t\nu} \mright) \mright)_p (Y) \Bigr)
 \mright)
 \\
 &=
-\mathrm{pr}_2 \mleft(
+\pi_2 \mleft(
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \biggl( p, 
 \mleft( \Delta^{\mathcal{G}} \e_{\mathcal{G}}^{t\nu} \mright)_{f(p)} \bigl( \mathrm{D}_pf(Y) \bigr) 
 \biggr)
 \mright)
 \\
 &=
-\mathrm{pr}_2 \mleft( 0,
+\pi_2 \mleft( 0,
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \biggl( 
 \mleft( \Delta^{\mathcal{G}} \e_{\mathcal{G}}^{t\nu} \mright)_{f(p)} \bigl( \mathrm{D}_pf(Y) \bigr) 
 \biggr)
 \mright)
 \\
 &=
-\mathrm{pr}_2 \mleft(
+\pi_2 \mleft(
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \biggl( 
 \mleft( \Delta^{\mathcal{G}} \e_{\mathcal{G}}^{t\nu} \mright)_{f(p)} \bigl( \mathrm{D}_pf(Y) \bigr) 
 \biggr)
@@ -5729,7 +5729,7 @@ for all $(p, g) \in \mathcal{P} * \mathcal{G}$. Thus, $H^\sigma \in \sAut(\mathc
 Using this, we can finally formulate the gauge transformations of connection 1-forms; for this recall Cor.\ \ref{cor:PullBacksArePrincToo} and the Darboux derivative, Def.\ \ref{def:DarbouxDerivativeOnLGBs}. Also recall the pullback Darboux derivative, Remark \ref{rem:PullBackDarboux}.
 
 \begin{theorems}{Gauge transformations of connection 1-forms}{GaugeTrafoOfGaugeBoson}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. Then $H^!A$ is a connection 1-form on $f^*\mathcal{P}$ and we have
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. Then $H^!A$ is a connection 1-form on $\mathcal{P}$ and we have
 \bas
 H^!A
 &=
@@ -5741,11 +5741,10 @@ where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined
 
 \begin{proof}
 \leavevmode\newline
+First of all observe that $H^!A \in \Omega^1(\mathcal{P}; H^*\pi^*\mathcal{g})$, and trivially $H^*\pi^*\mathcal{g} \cong (\pi\circ H)^*\mathcal{g} = \pi^*\mathcal{g}$. We will make use of this in the following without further mentioning it.
 \end{proof}
 
 \subsection{Generalized curvature/field strength}
-
-
 
 \begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we have

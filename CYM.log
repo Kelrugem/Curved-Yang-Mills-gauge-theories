@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  19 JUL 2022 00:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  19 JUL 2022 21:56
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1324,7 +1324,7 @@ LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 [97] [98]
 
 Package tcolorbox Warning: Using nobreak failed. Try to enlarge `lines before b
-reak' or set page breaks manually on input line 5757.
+reak' or set page breaks manually on input line 5756.
 
 (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
@@ -1339,7 +1339,7 @@ om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
  []
 
 ) [100] [101] [102] [103] [104] [105] [106] [107] [108] [109]
-Overfull \hbox (2.20065pt too wide) in paragraph at lines 6454--6472
+Overfull \hbox (2.20065pt too wide) in paragraph at lines 6453--6471
 \OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/
 10.95 )$ \T1/lmr/m/n/10.95 as an el-e-ment of $\OT1/lmr/m/n/10.95 
 [](\OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.95 ; [](\OML/lmm/m/it/10.95 V\OT1/lmr/m
@@ -1359,10 +1359,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34779 strings out of 478907
- 725972 string characters out of 2851891
- 1214573 words of memory out of 3000000
- 51609 multiletter control sequences out of 15000+600000
+ 34781 strings out of 478907
+ 726006 string characters out of 2851891
+ 1214575 words of memory out of 3000000
+ 51611 multiletter control sequences out of 15000+600000
  522375 words of font info for 151 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1405,9 +1405,9 @@ ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Use
 rs/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb
 >
-Output written on CYM.pdf (116 pages, 1199184 bytes).
+Output written on CYM.pdf (116 pages, 1199385 bytes).
 PDF statistics:
- 1816 PDF objects out of 2073 (max. 8388607)
+ 1817 PDF objects out of 2073 (max. 8388607)
  412 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
