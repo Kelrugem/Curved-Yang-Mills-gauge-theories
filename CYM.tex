@@ -5729,7 +5729,7 @@ for all $(p, g) \in \mathcal{P} * \mathcal{G}$. Thus, $H^\sigma \in \sAut(\mathc
 Using this, we can finally formulate the gauge transformations of connection 1-forms; for this recall Cor.\ \ref{cor:PullBacksArePrincToo} and the Darboux derivative, Def.\ \ref{def:DarbouxDerivativeOnLGBs}. Also recall the pullback Darboux derivative, Remark \ref{rem:PullBackDarboux}.
 
 \begin{theorems}{Gauge transformations of connection 1-forms}{GaugeTrafoOfGaugeBoson}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. Then $H^!A$ is a connection 1-form on $\mathcal{P}$ and we have
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. We then have that $H^!A$ is a connection 1-form on $\mathcal{P}$ and
 \bas
 H^!A
 &=
@@ -5741,7 +5741,117 @@ where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined
 
 \begin{proof}
 \leavevmode\newline
-First of all observe that $H^!A \in \Omega^1(\mathcal{P}; H^*\pi^*\mathcal{g})$, and trivially $H^*\pi^*\mathcal{g} \cong (\pi\circ H)^*\mathcal{g} = \pi^*\mathcal{g}$. We will make use of this in the following without further mentioning it.
+First of all observe that $H^!A \in \Omega^1(\mathcal{P}; H^*\pi^*\mathcal{g})$, and trivially $H^*\pi^*\mathcal{g} \cong (\pi\circ H)^*\mathcal{g} = \pi^*\mathcal{g}$. We will make use of this in the following without further mentioning it. We then have
+\bas
+\mleft(\mathcal{r}_\sigma^!H^!A\mright)_p(X)
+&=
+\mleft( H^!A \mright)_{p \cdot \sigma_x}\bigl(
+	\mathcal{r}_{\sigma*}(X)
+\bigr)
+\\
+&=
+\mleft( H^!A \mright)_{p \cdot \sigma_x}\mleft(
+	\mathrm{D}_pr_\sigma\mleft( 
+	X 
+\mright)
+	- \mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
+	}}\mright|_{p \cdot \sigma_{x}}
+\mright)
+\\
+&=
+A_{H\mleft(p \cdot \sigma_x\mright)}\mleft( \mathrm{D}_{p \cdot \sigma_x}H\mleft(
+	\mathrm{D}_pr_\sigma\mleft( 
+	X 
+\mright)
+	- \mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
+	}}\mright|_{p \cdot \sigma_{x}}
+\mright)\mright)
+\eas
+for all (local) $\sigma \in \Gamma(\mathcal{G})$, $p \in \mathcal{P}_x$ ($x \in M$) and $X \in \mathrm{T}_p\mathcal{P}$. We also get by definition of $\sAut(\mathcal{P})$
+\bas
+H(p \cdot \sigma_x)
+&=
+H(p) \cdot \sigma_x,
+\eas
+that is,
+\bas
+H\circ r_\sigma
+&=
+r_\sigma \circ H
+\eas
+and thus
+\bas
+\mathrm{D}_{p\cdot \sigma_x}H \circ \mathrm{D}_p r_\sigma
+&=
+\mathrm{D}_p \mleft( H \circ r_\sigma \mright)
+=
+\mathrm{D}_p \mleft( r_\sigma \circ H \mright)
+=
+\mathrm{D}_{H(p)} r_\sigma \circ \mathrm{D}_pH.
+\eas
+Now also observe that
+\bas
+\mathrm{D}_p H \mleft( \widetilde{\nu}_p \mright)
+&=
+\mleft(\mathrm{D}_p H \circ \mathrm{D}_{e_x}\Phi_p\mright) (\nu)
+=
+\mathrm{D}_{e_x}\underbrace{\mleft(H \circ\Phi_p \mright)}_{\mathclap{ \mathcal{G}_x \ni g \mapsto H(p \cdot g) = H(p) \cdot g }} (\nu)
+=
+\mathrm{D}_{e_x} \Phi_{H(p)} (\nu)
+=
+\widetilde{\nu}_{H(p)}
+\eas
+for all $\nu \in \mathcal{g}_x$, where $\Phi_p$ is the orbit map through $p$, and due to that $H$ is base-preserving we derive
+\bas
+\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_{H(p)}\bigl(\mathrm{D}_pH(X)\bigr)
+&=
+\mleft( H^! \pi^! \Delta \sigma \mright)_p (X)
+=
+\mleft( (\pi \circ H)^! \Delta \sigma \mright)_p (X)
+=
+\mleft( \pi^! \Delta \sigma \mright)_p (X).
+\eas
+In total we get
+\bas
+\mleft(\mathcal{r}_\sigma^!H^!A\mright)_p(X)
+&=
+A_{H(p) \cdot \sigma_x}\mleft( 
+	\mathrm{D}_{H(p)}r_\sigma \bigl(\mathrm{D}_pH( X )\bigr)
+	- \mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_{H(p)}\bigl( \mathrm{D}_pH(X) \bigr)
+	}}\mright|_{H(p) \cdot \sigma_{x}}
+\mright)
+\\
+&=
+A_{H(p) \cdot \sigma_x}\mleft(
+	\mathcal{r}_{\sigma*}\bigl(\mathrm{D}_pH( X )\bigr)
+\mright)
+\\
+&=
+\mleft( \mathcal{r}_\sigma^!A \mright)_{H(p)}\bigl(\mathrm{D}_pH( X )\bigr)
+\\
+&=
+\mleft( \sAd_{\sigma^{-1}} \circ A \mright)_{H(p)}\bigl(\mathrm{D}_pH( X )\bigr)
+\\
+&=
+\mleft( H(p) \cdot \sigma_x, ~\mathrm{Ad}_{\sigma_x^{-1}}\mleft( \widehat{A}_{H(p)}\bigl(\mathrm{D}_pH( X )\bigr) \mright) \mright)
+\\
+&=
+\sAd_{\sigma^{-1}}
+\mleft( H(p), ~\widehat{A}_{H(p)}\bigl(\mathrm{D}_pH( X )\bigr) \mright)
+\\
+&=
+\sAd_{\sigma^{-1}}
+\mleft( \mleft(H^!A\mright)_p(X) \mright),
+\eas
+where we wrote $A = \mleft( p, \widehat{A}_p \mright)$ with $\widehat{A} \coloneqq \mathrm{pr}_2 \circ A$ ($\mathrm{pr}_2: \pi^*\mathcal{g} \to \mathcal{g}$ the projection onto the second component), and thus
+\bas
+\mathcal{r}_\sigma^!H^!A
+&=
+\sAd_{\sigma^{-1}}\circ~ H^!A.
+\eas
 \end{proof}
 
 \subsection{Generalized curvature/field strength}
