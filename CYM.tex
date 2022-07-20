@@ -5741,7 +5741,7 @@ where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined
 
 \begin{proof}
 \leavevmode\newline
-First of all observe that $H^!A \in \Omega^1(\mathcal{P}; H^*\pi^*\mathcal{g})$, and trivially $H^*\pi^*\mathcal{g} \cong (\pi\circ H)^*\mathcal{g} = \pi^*\mathcal{g}$. We will make use of this in the following without further mentioning it. We then have
+\indent $\bullet$ First of all observe that $H^!A \in \Omega^1(\mathcal{P}; H^*\pi^*\mathcal{g})$, and trivially $H^*\pi^*\mathcal{g} \cong (\pi\circ H)^*\mathcal{g} = \pi^*\mathcal{g}$. We will make use of this in the following without further mentioning it. We then have
 \bas
 \mleft(\mathcal{r}_\sigma^!H^!A\mright)_p(X)
 &=
@@ -5792,7 +5792,7 @@ and thus
 \mathrm{D}_{H(p)} r_\sigma \circ \mathrm{D}_pH.
 \eas
 Now also observe that
-\bas
+\ba\label{GaugeTrafoDiffOnFUndVect}
 \mathrm{D}_p H \mleft( \widetilde{\nu}_p \mright)
 &=
 \mleft(\mathrm{D}_p H \circ \mathrm{D}_{e_x}\Phi_p\mright) (\nu)
@@ -5802,7 +5802,7 @@ Now also observe that
 \mathrm{D}_{e_x} \Phi_{H(p)} (\nu)
 =
 \widetilde{\nu}_{H(p)}
-\eas
+\ea
 for all $\nu \in \mathcal{g}_x$, where $\Phi_p$ is the orbit map through $p$, and due to that $H$ is base-preserving we derive
 \bas
 \mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_{H(p)}\bigl(\mathrm{D}_pH(X)\bigr)
@@ -5852,6 +5852,35 @@ where we wrote $A = \mleft( p, \widehat{A}_p \mright)$ with $\widehat{A} \colone
 &=
 \sAd_{\sigma^{-1}}\circ~ H^!A.
 \eas
+By Eq.\ \eqref{GaugeTrafoDiffOnFUndVect} we also get $\mathrm{D}H(\widetilde{\nu}) = H^*\widetilde{\nu}$ for all (local) $\nu \in \Gamma(\mathcal{g})$ and thus
+\bas
+\mleft(H^!A\mright)\mleft( \widetilde{\nu} \mright)
+&=
+\mleft(H^*A\mright)\bigl( \mathrm{D}H\mleft( \widetilde{\nu} \mright) \bigr)
+=
+\mleft(H^*A\mright)\mleft( H^*\widetilde{\nu} \mright)
+=
+H^*\bigl( A\mleft( \widetilde{\pi}\mright) \bigr)
+=
+H^*\pi^*\nu
+=
+(\pi \circ H)^*\nu
+=
+\pi^*\nu.
+\eas
+Hence, $H^!A$ is a connection 1-form on $\mathcal{P}$.
+
+$\bullet$ For the last part recall Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps}, especially we have a unique $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ such that
+\bas
+H(p)
+&=
+p \cdot \sigma^H_p
+=
+\Phi\mleft(p, \sigma^H_p\mright)
+=
+\Bigl( \Phi \circ \mleft( \mathds{1}_{\mathcal{P}}, \sigma^H \mright) \Bigr)(p)
+\eas
+for all $p \in \mathcal{P}$, where $\Phi$ is the right $\mathcal{G}$-action on $\mathcal{P}$.
 \end{proof}
 
 \subsection{Generalized curvature/field strength}
