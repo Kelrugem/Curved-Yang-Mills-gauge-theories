@@ -5580,12 +5580,19 @@ It is trivial to check that $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ i
 \end{remarks}
 
 $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ canonically acts on $\mathcal{P}$ on the right via the given $\mathcal{G}$-action: Let $\sigma \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$, then we define
-\bas
+\ba\label{MultiWithPulli}
 p \cdot \sigma_p
 &\coloneqq
 p \cdot \mathrm{pr}_2\mleft( \sigma_p \mright)
+\ea
+for all $p \in \mathcal{P}$, where $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. In essence, we drop the notation of $\mathrm{pr}_2$, as if we view $\sigma$ as a map $\mathcal{P} \to \mathcal{G}$ of fibre bundles over $\pi$; recall Subsection \ref{BasicNotations}. If we denote the right $\mathcal{G}$-action on $\mathcal{P}$ by $\Phi$, then observe by $\sigma_p = (p, \mathrm{pr}_2(\sigma))$ that we could also write
+\bas
+p \cdot \sigma_p
+&=
+\Phi \bigl( p, \mathrm{pr}_2\mleft( \sigma_p \mright) \bigr)
+=
+\Phi\mleft( \sigma_p \mright).
 \eas
-for all $p \in \mathcal{P}$, where $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. In essence, we drop the notation of $\mathrm{pr}_2$, as if we view $\sigma$ as a map $\mathcal{P} \to \mathcal{G}$ of fibre bundles over $\pi$; recall Subsection \ref{BasicNotations}.
 
 As in the case of typical/pre-classical principal bundles, we have the following statement.
 
@@ -5733,10 +5740,10 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \bas
 H^!A
 &=
-\sAd_{\sigma^H}(A) 
-	+ \mleft(\pi^*\Delta\mright)\mleft( \sigma^H \mright),
+\sAd_{\mathrm{pr}_2\circ\sigma^H}(A) 
+	+ \mleft(\pi^*\Delta\mright)\sigma^H,
 \eas
-where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined as in Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps}.
+where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined as in Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} and $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component.
 \end{theorems}
 
 \begin{proof}
@@ -5876,11 +5883,58 @@ H(p)
 &=
 p \cdot \sigma^H_p
 =
-\Phi\mleft(p, \sigma^H_p\mright)
+p \cdot \mathrm{pr}_2\mleft(\sigma^H_p\mright)
 =
-\Bigl( \Phi \circ \mleft( \mathds{1}_{\mathcal{P}}, \sigma^H \mright) \Bigr)(p)
+\Phi\mleft(p, \mathrm{pr}_2\mleft(\sigma^H_p \mright)\mright)
+=
+\Bigl( \Phi \circ \mleft( \mathds{1}_{\mathcal{P}}, \mathrm{pr}_2\circ\sigma^H \mright) \Bigr)(p)
 \eas
-for all $p \in \mathcal{P}$, where $\Phi$ is the right $\mathcal{G}$-action on $\mathcal{P}$.
+for all $p \in \mathcal{P}_x$ ($x\in M$), where $\Phi$ is the right $\mathcal{G}$-action on $\mathcal{P}$, also recall Def.\ \ref{MultiWithPulli}, that is, now $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. Define $\widetilde{\sigma} \coloneqq \mathrm{pr}_2 \circ \sigma^H$, $\mathcal{P} \ni p \mapsto \widetilde{\sigma}_p \in \mathcal{G}$; by Remark \ref{rem:PullbackTotMCForm}, \ref{rem:PullBackDarboux} and Thm.\ \ref{thm:DiffOfLGBAction}, especially Remark \ref{rem:DarbouxInActionInfinit}, we can calculate
+\bas
+\mathrm{D}_p H(X)
+&=
+\mathrm{D}_{\mleft(p, \widetilde{\sigma}_p\mright)}\Phi \bigl( X, \mathrm{D}_p\widetilde{\sigma}(X) \bigr)
+\\
+&=
+\mathrm{D}_pr_\sigma(X)
+	- \mleft.{\oversortoftilde{ \mleft.\mleft(\pi^!\Delta \sigma\mright)\mright|_p (X)}}\mright|_{p \cdot \widetilde{\sigma}_p}
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\widetilde{\sigma}_p} \bigl(\mathrm{D}_p\widetilde{\sigma}(X) \bigr)}}\mright|_{p \cdot \widetilde{\sigma}_p}
+\\
+&=
+\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\mathrm{pr}_2\mleft(\sigma^H_p\mright)} \mleft(\mleft(\mathrm{D}_{\sigma^H_p}\mathrm{pr}_2 \circ \mathrm{D}_p\sigma^H\mright)(X) \mright)}}\mright|_{H(p)}
+\\
+&=
+\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+	+ \mleft.{\oversortoftilde{\mleft( \mathrm{pr}_2^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma^H_p} \mleft(\mathrm{D}_p\sigma^H(X) \mright)}}\mright|_{H(p)}
+\\
+&=
+\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\pi^*\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma^H_p} \mleft(\mathrm{D}_p\sigma^H(X) \mright)}}\mright|_{H(p)}
+\\
+&=
+\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+	+ \mleft.{\oversortoftilde{\Delta^{\pi^*\mathcal{G}}\sigma^H }}\mright|_{H(p)}
+\\
+&=
+\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+	+ \mleft.{\oversortoftilde{\mleft(\pi^*\Delta\mright)\sigma^H }}\mright|_{H(p)}
+\eas
+for all $X \in \mathrm{T}_p\mathcal{P}$, where $\sigma$ is a (local) section of $\mathcal{G}$ so that $\sigma_x = \widetilde{\sigma}_p = \mathrm{pr}_2\mleft( \sigma^H_p \mright)$. Then
+\bas
+\mleft(H^!A\mright)_p(X)
+&=
+A_{H(p)}\bigl( \mathrm{D}_pH(X) \bigr)
+\\
+&=
+A_{H(p)}\mleft( 
+	\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+	+ \mleft.{\oversortoftilde{\mleft(\pi^*\Delta\mright)\sigma^H }}\mright|_{H(p)}
+\mright)
+\\
+&=
+\sAd
+\eas
 \end{proof}
 
 \subsection{Generalized curvature/field strength}
