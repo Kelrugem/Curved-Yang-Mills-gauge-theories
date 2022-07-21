@@ -5437,6 +5437,19 @@ $\bullet$ The $\mathcal{G}$-equivariance reads point-wise for $g \coloneqq \sigm
 \eas
 for all $p \in \mathcal{P}_x$ and $X \in \mathrm{T}_p\mathcal{P}$,
 where we wrote $A_p = \mleft(p, \hat{A}_p\mright)$ with $\hat{A}_p \in \Gamma\mleft( \mathrm{T}^*_p\mathcal{P} \otimes \mathcal{g}_x \mright)$, and $\mathrm{Ad}$ is the adjoint representation of $\mathcal{G}$. In the typical formulation of gauge theory the base point component is usually omitted due to that $\mathcal{g}$ is then trivial and so also $\mathrm{V}\mathcal{P} \cong \pi^*\mathcal{g}$.
+
+The identity on $\mathrm{V}\mathcal{P}$ reads pointwise
+\bas
+A_p(\widetilde{v_p})
+&=
+(p, v_p)
+\eas
+for all $v_p \in \mathcal{g}_x$. For readability we may also omit the basepoint information and just write
+\bas
+A_p(\widetilde{v_p})
+&\equiv
+v_p.
+\eas
 \end{remark}
 
 Finally, we identify (Ehresmann) connections and connection 1-forms on principal LGB-bundles in the typical way; for this recall Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}.
@@ -5740,15 +5753,25 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \bas
 H^!A
 &=
-\sAd_{\mathrm{pr}_2\circ\sigma^H}(A) 
+\sAd_{\mathrm{pr}_2\circ\mleft(\sigma^H\mright)^{-1}}(A) 
 	+ \mleft(\pi^*\Delta\mright)\sigma^H,
 \eas
 where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined as in Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} and $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component.
+
+Similar to Def.\ \ref{MultiWithPulli} we may shortly just write 
+\bas
+H^!A
+&=
+\sAd_{\mleft(\sigma^H\mright)^{-1}}(A) 
+	+ \mleft(\pi^*\Delta\mright)\sigma^H.
+\eas
 \end{theorems}
 
 \begin{proof}
 \leavevmode\newline
-\indent $\bullet$ First of all observe that $H^!A \in \Omega^1(\mathcal{P}; H^*\pi^*\mathcal{g})$, and trivially $H^*\pi^*\mathcal{g} \cong (\pi\circ H)^*\mathcal{g} = \pi^*\mathcal{g}$. We will make use of this in the following without further mentioning it. We then have
+\indent $\bullet$ First of all observe that $H^!A \in \Omega^1(\mathcal{P}; H^*\pi^*\mathcal{g})$, and trivially $H^*\pi^*\mathcal{g} \cong (\pi\circ H)^*\mathcal{g} = \pi^*\mathcal{g}$. We will make use of this and similar isomorphisms in the following without further mentioning it. We will often not bookkeep the basepoint component in the following pairs and triples; so, everything has to be read in such a way that we have again values in the correct space. It would just be cumbersome to keep track of all these natural isomorphisms, and we decided for readability to avoid this bookkeeping most of the time.
+
+We then have
 \bas
 \mleft(\mathcal{r}_\sigma^!H^!A\mright)_p(X)
 &=
@@ -5853,7 +5876,7 @@ A_{H(p) \cdot \sigma_x}\mleft(
 \sAd_{\sigma^{-1}}
 \mleft( \mleft(H^!A\mright)_p(X) \mright),
 \eas
-where we wrote $A = \mleft( p, \widehat{A}_p \mright)$ with $\widehat{A} \coloneqq \mathrm{pr}_2 \circ A$ ($\mathrm{pr}_2: \pi^*\mathcal{g} \to \mathcal{g}$ the projection onto the second component), and thus
+where we wrote $A = \mleft( p, \widehat{A}_p \mright)$ with $\widehat{A} \coloneqq \pi_2 \circ A$ ($\pi_2 = \mathrm{D}\mathrm{pr}_2|_{\pi^*\mathcal{g}}: \pi^*\mathcal{g} \to \mathcal{g}$ the projection onto the second component), and thus
 \bas
 \mathcal{r}_\sigma^!H^!A
 &=
@@ -5914,13 +5937,15 @@ for all $p \in \mathcal{P}_x$ ($x\in M$), where $\Phi$ is the right $\mathcal{G}
 \\
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
-	+ \mleft.{\oversortoftilde{\Delta^{\pi^*\mathcal{G}}\sigma^H }}\mright|_{H(p)}
+	+ \mleft.{\oversortoftilde{ \mleft(\Delta^{\pi^*\mathcal{G}}\sigma^H\mright)_p(X) }}\mright|_{H(p)}
 \\
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
-	+ \mleft.{\oversortoftilde{\mleft(\pi^*\Delta\mright)\sigma^H }}\mright|_{H(p)}
+	+ \mleft.{\oversortoftilde{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
 \eas
-for all $X \in \mathrm{T}_p\mathcal{P}$, where $\sigma$ is a (local) section of $\mathcal{G}$ so that $\sigma_x = \widetilde{\sigma}_p = \mathrm{pr}_2\mleft( \sigma^H_p \mright)$. Then
+for all $X \in \mathrm{T}_p\mathcal{P}$, where $\sigma$ is a (local) section of $\mathcal{G}$ so that $\sigma_x = \widetilde{\sigma}_p = \mathrm{pr}_2\mleft( \sigma^H_p \mright)$.
+
+Then
 \bas
 \mleft(H^!A\mright)_p(X)
 &=
@@ -5929,12 +5954,41 @@ A_{H(p)}\bigl( \mathrm{D}_pH(X) \bigr)
 &=
 A_{H(p)}\mleft( 
 	\mathcal{r}_{\widetilde{\sigma}_p*}(X)
-	+ \mleft.{\oversortoftilde{\mleft(\pi^*\Delta\mright)\sigma^H }}\mright|_{H(p)}
+	+ \mleft.{\oversortoftilde{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
 \mright)
 \\
 &=
-\sAd
+A_{p \cdot \widetilde{\sigma}_p}\mleft( 
+	\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+\mright)
+	+ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X)
+\\
+&=
+\mleft(\mathcal{r}_{\widetilde{\sigma}_p}^!A\mright)_p(X)
+	+ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X)
+\\
+&=
+\sAd_{\widetilde{\sigma}_p^{-1}}\bigl(A_p(X)\bigr)
+	+ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X)
+\\
+&=
+\sAd_{\mathrm{pr}_2\mleft( \mleft(\sigma^H\mright)^{-1} \mright)}\bigl(A_p(X)\bigr)
+	+ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X),
 \eas
+which finishes the proof, where we used the trivial relation (alternatively recall Cor.\ \ref{cor:PullbackLGB})
+\bas
+\mleft(\mathrm{pr}_2\mleft( \sigma^H \mright)\mright)^{-1}
+&=
+\mathrm{pr}_2\mleft( \mleft(\sigma^H\mright)^{-1} \mright).
+\eas
+%where we used the previously-mentioned isomorphism $H^*\pi^*\mathcal{g} \cong \pi^*\mathcal{g}$ to write
+%\bas
+%A_{H(p)}\mleft( 
+	%\mleft.{\oversortoftilde{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
+%\mright)
+%&=
+%\mleft(  \mright)
+%\eas
 \end{proof}
 
 \subsection{Generalized curvature/field strength}
