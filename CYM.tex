@@ -6007,13 +6007,68 @@ s^!A.
 $A$ has values in $\pi^*\mathcal{g}$, and thus $A_s$ has values in $s^*\pi^*\mathcal{g} \cong (\pi \circ s)^*\mathcal{g} = \pi^*\mathcal{g}$.
 \end{remark}
 
-Gauge transformations now naturally arise in a change of the gauge $s$. So, let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$. Then there is a $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ such that
+Gauge transformations now naturally arise in a change of the gauge $s$. So, let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$. For two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$ there is then a unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ such that
 \bas
 s_i
 &=
-s_j \cdot \sigma_{ji}.
+s_j \cdot \sigma_{ji}
+=
+\Phi_{s_j} \circ \sigma_{ji}
 \eas
-Pointwise this is clear by the definition of principal bundles
+on $U_i \cap U_j$,
+where $\Phi_{s_j}$ is the orbit through $s_j$, especially recall Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}.
+The unique existence is clear by the definition of principal bundles, while the smoothness follows by Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} so that we can write $\sigma_{ji}$ as the composition of smooth maps
+\bas
+\sigma_{ji}
+&=
+\Phi^{-1}_{s_j} \circ s_i.
+\eas
+%Similarly, there is a unique $\sigma_i \in \Gamma\mleft(\mathcal{G}_{U_i}\mright)$ such that
+%\bas
+%p
+%&=
+%\mleft.s_i\mright|_{\pi(p)} \cdot \mleft.\sigma_i\mright|_p
+%\eas
+%for all $p \in \mathcal{P}_{U_i}$, that is, $\sigma_i \coloneqq \Phi^{-1}_{s_i}$.
+
+Instead of calculating directly how $A_{s_i}$ and $A_{s_j}$ are related we want to use Thm.\ \ref{thm:GaugeTrafoOfGaugeBoson}. For this observe the following proposition.
+
+\begin{propositions}{Change of gauge as a local bundle automorphism}{GaugeChangeAsBundleAutomorph}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
+
+Then the map $H_{ji}$ defined by
+\bas
+\mathcal{P}_{U_i \cap U_j} &\to \mathcal{P}_{U_i \cap U_j},\\
+p &\mapsto \mleft.s_i\mright|_{\pi(p)} \cdot \Phi_{s_j}^{-1}(p),
+\eas
+is an element of $\sAut\mleft( \mathcal{P}_{U_i \cap U_j} \mright)$,
+where $\Phi_{s_j}$ is the orbit map through $s_j$.
+
+In sense of Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} we also get
+\bas
+\sigma^{H_{ji}}
+&=
+\mathcal{c}_{\mleft(\Phi^{-1}_{s_j}\mright)^{-1}} \mleft( \pi^*\sigma_{ji} \mright)
+\eas
+for all $p \in \mathcal{P}_{U_i \cap U_j}$.
+\end{propositions}
+
+\begin{proof}
+\leavevmode\newline
+Recall Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}:
+We have $\mleft.s_i\mright|_{\pi(p)} \in \mathcal{P}_{\pi(p)}$ and $\Phi_{s_j}$ is base-preserving, and thus $\Phi_{s_j}^{-1}(p) \in \mathcal{G}_{\pi(p)}$, so that $H_{ji}$ is well-defined and also base-preserving because the right $\mathcal{G}$-action on $\mathcal{P}$ preserves the fibres.
+$H_{ji}$ is clearly smooth by construction. Finally, 
+\bas
+H_{ji}(p \cdot g)
+&=
+\mleft.s_i\mright|_{\pi(p\cdot g)} \cdot \Phi_{s_j}^{-1}(p \cdot g)
+=
+\mleft.s_i\mright|_{\pi(p)} \cdot \Phi_{s_j}^{-1}(p) \cdot g
+=
+H_{ji}(p) \cdot g
+\eas
+for all $(p, g) \in \mleft.\mleft( \mathcal{P} * \mathcal{G} \mright)\mright|_{U_i \cap U_j}$, thus, $H_{ji} \in \sAut\mleft( \mathcal{P}_{U_i \cap U_j} \mright)$.
+\end{proof}
 
 \begin{theorems}{Gauge transformations as a change of gauge in the local gauge field}{LocalGaugeTrafoChangeGauge}
 
