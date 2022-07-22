@@ -3560,7 +3560,7 @@ Y^v &\mapsto \mathrm{D}_g \Phi_{s_x}(Y^v).
 By Remark \ref{rem:LGBPrincDefDiscussion}, $\Phi_{s_x}$ is a $\mathcal{G}_x$-equivariant diffeomorphism $\mathcal{G}_x \to \mathcal{P}_x$, thence, $\mathrm{D}_g \Phi_{s_x}: \mathrm{T}_g \mathcal{G}_x = \mathrm{V}_g\mathcal{G} \to \mathrm{T}_{s_x \cdot g}\mathcal{P}_x = \mathrm{V}_{s_x \cdot g}\mathcal{P}_x$ is an isomorphism of vector spaces. Finally we can conclude that $\mathrm{D}_g \Phi_s$ is a linear isomorphism as the sum of two linear independent isomorphisms. As argued earlier, the inverse function theorem finishes now the proof.
 \end{proof}
 
-Usually, one likes to think about the choice of sections as a choice of a coordinate transformation as in \cite[\S 4.2, Remark 4.2.21, page 220]{Hamilton}. This is due to that the gauge theory usually corresponds to a formulation via a trivial LGB, which we will understand later, but already have an idea of by \textit{e.g.}\ Ex.\ \ref{ex:TrivialLGBAction} and \ref{ex:TheCLassicalPrincAsEx}. Then we have a local trivialization of $\mathcal{P}$ such that one usually thinks of a gauge as a choice of coordinate system.
+Usually, one likes to think about the choice of sections as a choice of a coordinate transformation as in \cite[\S 4.2, Remark 4.2.21, page 220]{Hamilton}. This is due to that the gauge theory usually corresponds to a formulation via a trivial LGB, which we will understand later, but already have an idea of by \textit{e.g.}\ Ex.\ \ref{ex:TrivialLGBAction} and \ref{ex:TheCLassicalPrincAsEx}. Then we have a local trivialization of $\mathcal{P}$ such that one usually thinks of the choice of a section as a choice of coordinate system.
 
 However, we now learned that on a more general scale this is not completely what is happening. The idea of LGBs and principal bundles are very similar; both are fibre bundles related to a Lie group and they carry an action which also restricts on each fibre. But the fibres of an LGB are Lie groups themselves, while the fibres of a principal bundle are "just" diffeomorphic to a Lie group in an equivariant way as outlined in Remark \ref{rem:LGBPrincDefDiscussion} and as given in their definition Def.\ \ref{def:PrinciBdleWithStruLGB}. One could view the fibres of $\mathcal{P}$ as having an "almost" Lie group structure, a Lie group structure without a designated neutral element. 
 
@@ -5403,7 +5403,7 @@ for all $p \in \mathcal{P}_x$ and $Y_1, \dotsc, Y_k \in \mathfrak{X}(\mathcal{P}
 For the following definition recall the adjoint $\mathcal{G}$-representation on $\mathrm{V}\mathcal{P}$, Ex.\ \ref{ex:AdjointACtionOnVP}, and the isomorphism for $\mathrm{V}\mathcal{P}$ in Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}.
 
 \begin{definitions}{Connection 1-forms on principal LGB-bundles}{GaugeBosonsOnLGBPrincies}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a fixed horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. A \textbf{connection 1-form} on $\mathcal{P}$ is a 1-form $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ satisfying:
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a fixed horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. A \textbf{connection 1-form} or \textbf{gauge field} on $\mathcal{P}$ is a 1-form $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ satisfying:
 \begin{itemize}
 	\item \textbf{($\mathcal{G}$-equivariance, but w.r.t.\ modified right-pushforward)}
 		\bas 
@@ -5749,7 +5749,7 @@ for all $(p, g) \in \mathcal{P} * \mathcal{G}$. Thus, $H^\sigma \in \sAut(\mathc
 Using this, we can finally formulate the gauge transformations of connection 1-forms; for this recall Cor.\ \ref{cor:PullBacksArePrincToo} and the Darboux derivative, Def.\ \ref{def:DarbouxDerivativeOnLGBs}. Also recall the pullback Darboux derivative, Remark \ref{rem:PullBackDarboux}.
 
 \begin{theorems}{Gauge transformations of connection 1-forms}{GaugeTrafoOfGaugeBoson}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. We then have that $H^!A$ is a connection 1-form on $\mathcal{P}$ and
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. We then have that $H^!A$ is a connection 1-form on $\mathcal{P}$ and
 \bas
 H^!A
 &=
@@ -5990,6 +5990,34 @@ which finishes the proof, where we used the trivial relation (alternatively reca
 %\mleft(  \mright)
 %\eas
 \end{proof}
+
+Of course there is also the sense of gauge transformation with respect to gauges as in typical gauge theory (see \textit{e.g.}\ \cite[\S 5.4, page 270ff.]{Hamilton}), recall Def.\ \ref{def:GaugesOfPrincipalBundles}.
+
+\begin{definitions}{Local gauge field}{LocalGaugeField}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we define the \textbf{local connection 1-form} of \textbf{local gauge field $A_s \in \Omega^1(U; \mathcal{g})$ (w.r.t.\ $s$)} by
+\bas
+A_s
+&\coloneqq
+s^!A.
+\eas
+\end{definitions}
+
+\begin{remark}
+\leavevmode\newline
+$A$ has values in $\pi^*\mathcal{g}$, and thus $A_s$ has values in $s^*\pi^*\mathcal{g} \cong (\pi \circ s)^*\mathcal{g} = \pi^*\mathcal{g}$.
+\end{remark}
+
+Gauge transformations now naturally arise in a change of the gauge $s$. So, let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$. Then there is a $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ such that
+\bas
+s_i
+&=
+s_j \cdot \sigma_{ji}.
+\eas
+Pointwise this is clear by the definition of principal bundles
+
+\begin{theorems}{Gauge transformations as a change of gauge in the local gauge field}{LocalGaugeTrafoChangeGauge}
+
+\end{theorems}
 
 \subsection{Generalized curvature/field strength}
 
