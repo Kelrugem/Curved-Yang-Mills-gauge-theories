@@ -3319,7 +3319,7 @@ for all $(p, h) \in \mathcal{P}^\prime * \mathcal{H} = \mleft(\pi^\prime\mright)
 
 We speak of a \textbf{principal bundle isomorphism (over $f$, w.r.t.\ $F$)} if $H$ is a diffeomorphism. 
 
-If $H$ is a base-preserving isomorphism $\mathcal{P} \to \mathcal{P}$ w.r.t.\ $F = \mathds{1}_{\mathcal{G}}$, then we say that $H$ is a \textbf{(global) gauge transformation} or \textbf{principal bundle automorphism}, and the set of all such automorphisms is denoted by $\sAut(\mathcal{P})$.
+If $H$ is a base-preserving isomorphism $\mathcal{P} \to \mathcal{P}$ w.r.t.\ $F = \mathds{1}_{\mathcal{G}}$, then we say that $H$ is a \textbf{(global) gauge transformation} or \textbf{principal bundle automorphism}, and the set of all such automorphisms is denoted by $\sAut(\mathcal{P})$. If $H$ is defined on an open subset of $M$, then we may also speak of a \textbf{local gauge transformation}.
 \end{definitions}
 %Following remark is wrong, an equivalent statement may be related to the quotient space
 %\begin{remarks}{Equivalent definition}{EquivalentDefinitionForPrincMorphisms}
@@ -6023,6 +6023,13 @@ The unique existence is clear by the definition of principal bundles, while the 
 &=
 \Phi^{-1}_{s_j} \circ s_i.
 \eas
+In the following we also introduce the notation
+\bas
+\mleft(\Phi^{-1}_{s_j}\mright)^{-1}(p)
+&\coloneqq
+\mleft(\Phi^{-1}_{s_j}(p)\mright)^{-1}
+\eas
+for all $p \in \mathcal{P}_{U_j}$, that is, $\Phi^{-1}_{s_j}$ is the inverse of the orbit map $\Phi_{s_j}$, but $(\cdot)^{-1}$ is the inverse of $\Phi^{-1}_{s_j}(p)$ as an element of $\mathcal{G}_{U_j}$.
 %Similarly, there is a unique $\sigma_i \in \Gamma\mleft(\mathcal{G}_{U_i}\mright)$ such that
 %\bas
 %p
@@ -6031,7 +6038,54 @@ The unique existence is clear by the definition of principal bundles, while the 
 %\eas
 %for all $p \in \mathcal{P}_{U_i}$, that is, $\sigma_i \coloneqq \Phi^{-1}_{s_i}$.
 
-Instead of calculating directly how $A_{s_i}$ and $A_{s_j}$ are related we want to use Thm.\ \ref{thm:GaugeTrafoOfGaugeBoson}. For this observe the following proposition.
+Instead of calculating directly how $A_{s_i}$ and $A_{s_j}$ are related we want to use Thm.\ \ref{thm:GaugeTrafoOfGaugeBoson}. For this it will be useful to understand that gauge transformations $\sAut(\mathcal{P})$ are locally isomorphic to the group of sections $\Gamma(\mathcal{G})$ via a gauge, analogously to the typical formulation of gauge theory as \textit{e.g.}\ illustrated in \cite[\S 5.3.2, page 268f.]{Hamilton}. While the isomorphism of $\sAut(\mathcal{P})$ to $C^\infty(\mathcal{P};\mathcal{G})^{\mathcal{G}} \subset \Gamma(\pi^*\mathcal{G})$ is global, the following isomorphism is in general only local.
+%
+%\begin{definitions}{Physical gauge transformation}{PhysicalGaugeTrafo}
+%Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. A \textbf{physical gauge transformation $\tau$} is an element of $\Gamma(\mathcal{G})$.
+%\end{definitions}
+
+\begin{propositions}{Gauge transformations and sections of the structural LGB}{}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Also let $s \in \Gamma\mleft(\mleft.\mathcal{P}\mright|_U\mright)$ be a gauge defined over some open subset $U$ of $M$. Then we have a group isomorphism given by
+\bas
+C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U} 
+&\to 
+\Gamma\mleft(\mathcal{G}_U\mright),
+\\
+\sigma &\mapsto s^*\sigma,
+\eas
+with inverse
+\bas
+\Gamma\mleft(\mathcal{G}_U\mright)
+&\to
+C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U},
+\\ 
+\tau &\mapsto \sigma^\tau,
+\eas
+where 
+\bas
+\sigma^\tau_p
+&\coloneqq
+\mleft(p, c_{\mleft(\Phi^{-1}_{s}(p)\mright)^{-1}} \mleft( \tau_{\pi(p)} \mright) \mright)
+=
+\mleft(p, \mleft(\Phi^{-1}_{s}(p)\mright)^{-1} ~ \tau_{\pi(p)} ~ \Phi^{-1}_{s}(p) \mright)
+\eas
+for all $p \in \mathcal{P}_U$,
+with $\Phi_s$ being the orbit map through $s$.
+\end{propositions}
+
+\begin{proof}
+\leavevmode\newline
+For $\sigma \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U} \subset \Gamma\mleft( \pi^*\mathcal{G}_{U} \mright)$ observe that $s^*\sigma$ is by construction a section of $\mathcal{G}_U$ due to using $s^*\pi^*\mathcal{G}_U \cong (\pi \circ s)^*\mathcal{G}_U = \pi^*\mathcal{G}_U$. For the supposed inverse we have similarly that $\sigma^\tau$ is a section of $\Gamma(\pi^*\mathcal{G}_U)$; then denote $x \coloneqq \pi(p)$ for $p \in \mathcal{P}$ and observe, using Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv},
+\bas
+\sigma_{p \cdot g}^\tau
+&=
+\mathcal{c}_{\mleft(\Phi^{-1}_{s}(p \cdot g)\mright)^{-1}} \mleft( p \cdot g, \tau_{\pi(p \cdot g)} \mright)
+\\
+&=
+\mathcal{c}_{g^{-1}\cdot\mleft(\Phi^{-1}_{s}(p)\mright)^{-1}} \mleft( p \cdot g, \tau_x \mright)
+\eas
+for all $(p, g) \in \mathcal{P}_U * \mathcal{G}_U$
+\end{proof}
 
 \begin{propositions}{Change of gauge as a local bundle automorphism}{GaugeChangeAsBundleAutomorph}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
