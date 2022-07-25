@@ -799,7 +799,7 @@ Observe that we have by the definition of group actions
 &=
 \psi_g \circ \psi_{g^\prime}
 \eas
-for all $g, g^\prime \in G$, viewing $\psi_g$ as a map $H \to H$. Therefore we can view the action $\psi$ as a homomorphism
+for all $g, g^\prime \in G$, viewing $\psi_g$ as a map $H \to H$. Therefore we can view the action $\psi$ as a group homomorphism
 \bas
 G &\to \mathrm{Aut}(H),
 \eas
@@ -809,7 +809,7 @@ where $\mathrm{Aut}(H)$ is the set of Lie group automorphisms. The similarity to
 This definition is of course also motivated by various references pointing out that Lie group representations define Lie group actions with extra properties; see for example \cite[\S 3, Ex.\ 3.4.2, page 143f.]{Hamilton}. In \cite[comments after Ex.\ 1.7.14, page 47]{mackenzieGeneralTheory} this definition is also called \textit{action by Lie group isomorphisms}.
 \end{remarks}
 
-With this we can discuss and define associated Lie group bundles; the following definition is clearly motivated by the definition of associated vector bundles as provided in \cite[\S 4, Thm.\ 4.7.2, page 239f.]{Hamilton}.
+With this we can discuss and define associated Lie group bundles; the following definition is clearly motivated by the definition of associated vector bundles as \textit{e.g.}\ provided in \cite[\S 4, Thm.\ 4.7.2, page 239f.]{Hamilton}.
 
 \begin{theorems}{Associated Lie group bundle as quotient}{AssociatedGroupBundlesHaveGroupStructure}
 Let $G, H$ be Lie groups, $P \stackrel{\pi_P}{\to} M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then $\mathcal{H} \coloneqq P \times_\psi H$ is an LGB 
@@ -836,7 +836,7 @@ for all $x \in M$, which are isomorphic to $H$ as Lie groups. The Lie group stru
 &\coloneqq
 \mleft[ p, hq \mright]
 \ea
-for all $h, q \in H$ and $p_x \in P_x$, where $\pi_P(p) = x$.
+for all $h, q \in H$ and $p \in P_x$ (that is, $\pi_P(p) = x$).
 \end{theorems}
 
 \begin{remarks}{Neutral and inverse elements}{NeutralAndInverseInAssocLGB}
@@ -900,15 +900,15 @@ which implies that Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-d
 
 $\bullet$ That the fibres $\mathcal{H}_x$ are isomorphic to $H$ as Lie groups for all $x \in M$ also quickly follows. Recall by our discussion before Def.\ \ref{def:LieGroupActingOnLieGroup} that the fibres are diffeormorphic to $H$ by $H \ni h \mapsto [p, h] \in \mathcal{H}_x$ for a fixed $p \in P_x$. By Def.\ \eqref{LiegroupStructureOnFibresofAssociated} it is clear that this map is a Lie group homomorphism and hence a Lie group isomorphism.
 
-$\bullet$ Let us now construct an LGB atlas for $\mathcal{H}$ by using a principal bundle atlas for $P$. That is, for some $U \subset M$ open and a trivialization $\varphi_U: P|_U \to U \times G$ we write
+$\bullet$ Let us now construct an LGB atlas for $\mathcal{H}$ by using a principal bundle atlas for $P$. That is, for some $U \subset M$ open and a local trivialization $\varphi_U: P_U \to U \times G$ of $P$ we write
 \bas
 \varphi_U(p)
 &=
 \bigl( \pi_P(p), \beta_U(p) \bigr)
 \eas
-for all $p \in P$, where $\beta_U: P|_U \to G$ is an equivariant map, \textit{i.e.}\ $\beta_U(p \cdot g) = \beta_U(p) ~ g$ for all $g \in G$. Then define $\phi_U$ as a map by 
+for all $p \in P$, where $\beta_U: P_U \to G$ is an equivariant map, \textit{i.e.}\ $\beta_U(p \cdot g) = \beta_U(p) ~ g$ for all $g \in G$. Then define $\phi_U$ as a map by 
 \bas
-\mathcal{H}|_U
+\mathcal{H}_U
 &\to
 U \times H,\\
 [p, h]
@@ -917,7 +917,7 @@ U \times H,\\
 	\pi_P(p), \psi_{\beta_U(p)} (h)
 \mright).
 \eas
-$\phi_U$ is well-defined: Let $\mleft[p^\prime, h^\prime\mright] \in \mathcal{H}|_U$ with $\mleft[p^\prime, h^\prime\mright] = \mleft[p, h\mright]$. Then there is a $g \in G$ such that
+$\phi_U$ is well-defined: Let $\mleft[p^\prime, h^\prime\mright] \in \mathcal{H}_U$ with $\mleft[p^\prime, h^\prime\mright] = \mleft[p, h\mright]$. Then there is a $g \in G$ such that
 \bas
 \mleft(p^\prime, h^\prime\mright)
 &=
@@ -943,7 +943,7 @@ which proves that $\phi_U$ is well-defined. Denote the projection onto equivalen
 &=
 L,
 \eas
-where $L_U: P|_U \times H \to U \times H$ is given by $L_U(p,h) \coloneqq \mleft( \pi_P(p), \psi_{\beta_U(p)} (h) \mright)$ for all $(p, h) \in P|_U \times H$. $L_U$ is clearly smooth and recall that $\varpi$ is a smooth surjective submersion, therefore $\phi_U$ is smooth; this is a well-known fact for right-compositions with surjective submersions, see \textit{e.g.}\ \cite[\S 3.7.2, Lemma 3.7.5, page 153]{Hamilton}. We define a candidate of the inverse $\phi_U^{-1}: U \times H \to \mathcal{H}|_U$ by
+where $L_U: P_U \times H \to U \times H$ is given by $L_U(p,h) \coloneqq \mleft( \pi_P(p), \psi_{\beta_U(p)} (h) \mright)$ for all $(p, h) \in P_U \times H$. $L_U$ is clearly smooth and recall that $\varpi$ is a smooth surjective submersion, therefore $\phi_U$ is smooth; this is a well-known fact for right-compositions with surjective submersions, see \textit{e.g.}\ \cite[\S 3.7.2, Lemma 3.7.5, page 153]{Hamilton}. We define a candidate of the inverse $\phi_U^{-1}: U \times H \to \mathcal{H}_U$ by
 \bas
 \phi_U^{-1}(x, h)
 &=
@@ -975,8 +975,8 @@ for all $x \in U$, and, also using again the equivariance of $\beta_U$,
 &=
 p \cdot \beta_U^{-1}(p)
 \eas
-for all $p \in P|_U$.
-Then
+for all $p \in P_U$.
+Then altogether
 \bas
 \mleft(\phi_U \circ \phi_U^{-1}\mright)(x, h)
 &=
@@ -1004,7 +1004,7 @@ for all $(x, h) \in U \times H$, and
 	p, h
 \mright]
 \eas
-for all $[p, h] \in \mathcal{H}|_U$. Thus, $\phi_U$ is bijective; additionally observe
+for all $[p, h] \in \mathcal{H}_U$. Thus, $\phi_U$ is bijective; additionally observe
 \bas
 \phi_U^{-1}(x, h)
 &=
