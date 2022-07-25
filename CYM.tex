@@ -743,7 +743,7 @@ and $U_i \times \mathrm{Aut}(W)$ acts canonically on $U_i \times W$ in a fibre-w
 
 \subsection{Associated Lie group bundles}
 
-For another important example recall that there is the notion of associated fibre bundles; following and stating the results of \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$, $N$ a smooth manifold, and $\Psi$ a smooth left $G$-action denoted by
+For another important example recall that there is the notion of associated fibre bundles; following and stating the results of \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$ over a smooth manifold $M$, $N$ another smooth manifold, and $\Psi$ a smooth left $G$-action denoted by
 \bas
 G \times N &\to N,\\
 (g, v) &\mapsto \Psi(g, v) \coloneqq g \cdot v.
@@ -760,14 +760,14 @@ and one can show that the quotient under this action, $P\times_\Psi N \coloneqq 
 		& M
 	\end{tikzcd}
 \end{center}
-such that the map to the equivalence classes $P \times N \to P \times_\Psi N$ is a smooth surjective submersion,
+such that the map to the equivalence classes $P \times N \to P \times_\Psi N$, $(p, v) \mapsto [p, v]$, is a smooth surjective submersion,
 where the projection $\pi_{P\times_\Psi N}: P\times_\Psi N \to M$ is given by 
 \bas
 \pi_{P\times_\Psi N}\mleft( [p, v] \mright)
 &\coloneqq
 \pi_P(p)
 \eas
-for all $[p, v] \in P\times_\Psi N$, denoting equivalence classes of $(p, v)$ by square brackets. For $x \in M$, the fibre $\mleft(P\times_\Psi N\mright)_x$ is given by $\mleft( P_x \times N  \mright) \Big/ G = P_x \times_\Psi N$, and the fibre is diffeomorphic to $N$ by $N \ni v \mapsto [p, v] \in \mleft(P\times_\Psi N\mright)_x$ for a fixed $p \in P_x$. We will frequently use this diffeomorphism in the following without further notice.
+for all $[p, v] \in P\times_\Psi N$. For $x \in M$, the fibre $\mleft(P\times_\Psi N\mright)_x$ is given by $\mleft( P_x \times N  \mright) \Big/ G = P_x \times_\Psi N$, and the fibre is diffeomorphic to $N$ by $N \ni v \mapsto [p, v] \in \mleft(P\times_\Psi N\mright)_x$ for a fixed $p \in P_x$. We will frequently use this diffeomorphism in the following without further notice.
 
 A very important example are of course associated vector bundles, related to $N$ being a vetor space. We need a similar concept for Lie groups.
 
