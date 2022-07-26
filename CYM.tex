@@ -5769,9 +5769,9 @@ H^!A
 
 \begin{proof}
 \leavevmode\newline
-\indent $\bullet$ First of all observe that $H^!A \in \Omega^1(\mathcal{P}; H^*\pi^*\mathcal{g})$, and trivially $H^*\pi^*\mathcal{g} \cong (\pi\circ H)^*\mathcal{g} = \pi^*\mathcal{g}$. We will make use of this and similar isomorphisms in the following without further mentioning it. We will often not bookkeep the basepoint component in the following pairs and triples; so, everything has to be read in such a way that we have again values in the correct space. It would just be cumbersome to keep track of all these natural isomorphisms, and we decided for readability to avoid this bookkeeping most of the time.
+First of all observe that $H^!A \in \Omega^1(\mathcal{P}; H^*\pi^*\mathcal{g})$, and trivially $H^*\pi^*\mathcal{g} \cong (\pi\circ H)^*\mathcal{g} = \pi^*\mathcal{g}$. We will make use of this and similar isomorphisms in the following without further mentioning it. We will often not bookkeep the basepoint component in the following pairs and triples; so, everything has to be read in such a way that we have again values in the correct space. It would just be cumbersome to keep track of all these natural isomorphisms, and we decided for readability to avoid this bookkeeping most of the time.
 
-We then have
+$\bullet$ We then have
 \bas
 \mleft(\mathcal{r}_\sigma^!H^!A\mright)_p(X)
 &=
@@ -6004,7 +6004,7 @@ s^!A.
 
 \begin{remark}
 \leavevmode\newline
-$A$ has values in $\pi^*\mathcal{g}$, and thus $A_s$ has values in $s^*\pi^*\mathcal{g} \cong (\pi \circ s)^*\mathcal{g} = \pi^*\mathcal{g}$.
+$A$ has values in $\pi^*\mathcal{g}$, and thus $A_s$ has values in $s^*\pi^*\mathcal{g} \cong (\pi \circ s)^*\mathcal{g} = \mathds{1}_U^*\mathcal{g} \cong \mathcal{g}$.
 \end{remark}
 
 Gauge transformations now naturally arise in a change of the gauge $s$. So, let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$. For two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$ there is then a unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ such that
@@ -6075,16 +6075,51 @@ with $\Phi_s$ being the orbit map through $s$.
 
 \begin{proof}
 \leavevmode\newline
-For $\sigma \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U} \subset \Gamma\mleft( \pi^*\mathcal{G}_{U} \mright)$ observe that $s^*\sigma$ is by construction a section of $\mathcal{G}_U$ due to using $s^*\pi^*\mathcal{G}_U \cong (\pi \circ s)^*\mathcal{G}_U = \pi^*\mathcal{G}_U$. For the supposed inverse we have similarly that $\sigma^\tau$ is a section of $\Gamma(\pi^*\mathcal{G}_U)$; then denote $x \coloneqq \pi(p)$ for $p \in \mathcal{P}$ and observe, using Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv},
+For $\sigma \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U} \subset \Gamma\mleft( \pi^*\mathcal{G}_{U} \mright)$ observe that $s^*\sigma$ is by construction a section of $\mathcal{G}_U$ due to using $s^*\pi^*\mathcal{G}_U \cong (\pi \circ s)^*\mathcal{G}_U = \mathds{1}_U^*\mathcal{G}_U \cong \mathcal{G}_U$; we will make use of these natural isomorphisms in the following without further mention, especially we will view pullback sections as sections along a map, essentially dropping the base point component here and there in order to avoid introducing extra symbols for needed isomorphisms (recall Subsection \ref{BasicNotations}). For the supposed inverse we have similarly that $\sigma^\tau$ is a section of $\Gamma(\pi^*\mathcal{G}_U)$; then observe, using Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv},
 \bas
 \sigma_{p \cdot g}^\tau
 &=
-\mathcal{c}_{\mleft(\Phi^{-1}_{s}(p \cdot g)\mright)^{-1}} \mleft( p \cdot g, \tau_{\pi(p \cdot g)} \mright)
+\mleft(p \cdot g, c_{\mleft(\Phi^{-1}_{s}(p \cdot g)\mright)^{-1}} \mleft( \tau_{\pi(p \cdot g)} \mright) \mright)
 \\
 &=
-\mathcal{c}_{g^{-1}\cdot\mleft(\Phi^{-1}_{s}(p)\mright)^{-1}} \mleft( p \cdot g, \tau_x \mright)
+\mleft(p \cdot g, c_{g^{-1} ~ \mleft(\Phi^{-1}_{s}(p)\mright)^{-1}} \mleft( \tau_{\pi(p)} \mright) \mright)
+\\
+&=
+\mleft(p \cdot g, \mleft(c_{g^{-1}} \circ c_{ \mleft(\Phi^{-1}_{s}(p)\mright)^{-1}} \mright) \mleft( \tau_{\pi(p)} \mright) \mright)
+\\
+&=
+\mathcal{c}_{g^{-1}}
+\mleft(p, c_{ \mleft(\Phi^{-1}_{s}(p)\mright)^{-1}} \mleft( \tau_{\pi(p)} \mright) \mright)
+\\
+&=
+\mathcal{c}_{g^{-1}}
+\mleft( \sigma^\tau_p \mright)
 \eas
-for all $(p, g) \in \mathcal{P}_U * \mathcal{G}_U$
+for all $(p, g) \in \mathcal{P}_U * \mathcal{G}_U$, thus, $\sigma^\tau \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U}$. Then first of all derive
+\bas
+\Phi^{-1}_{s} \circ s
+&=
+e|_U,
+\eas
+where $e$ is the section of the neutral element of $\mathcal{G}$; this is a direct implication of the definition of $\Phi_s$. Then
+\bas
+\mleft.s^*\sigma^\tau\mright|_x
+&=
+\sigma^\tau_{s_x}
+=
+c_{\mleft(\Phi^{-1}_{s}(s_x)\mright)^{-1}} \mleft( \tau_{\pi(s_x)} \mright)
+=
+c_{e_x}\mleft( \tau_x \mright)
+=
+\tau_x
+\eas
+for all $x \in M$ and $\tau \in \Gamma(\mathcal{G}_U)$, and
+\bas
+\sigma^{s^*\sigma}_p
+&=
+\mleft(p, c_{\mleft(\Phi^{-1}_{s}(p)\mright)^{-1}} \mleft( \mleft. s^*\sigma \mright|_{\pi(p)} \mright) \mright)
+\eas
+for all $p \in \mathcal{P}_U$ and $\sigma \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U}$
 \end{proof}
 
 \begin{propositions}{Change of gauge as a local bundle automorphism}{GaugeChangeAsBundleAutomorph}
