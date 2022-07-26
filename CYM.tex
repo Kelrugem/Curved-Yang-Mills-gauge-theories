@@ -6044,15 +6044,16 @@ Instead of calculating directly how $A_{s_i}$ and $A_{s_j}$ are related we want 
 %Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. A \textbf{physical gauge transformation $\tau$} is an element of $\Gamma(\mathcal{G})$.
 %\end{definitions}
 
-\begin{propositions}{Gauge transformations and sections of the structural LGB}{}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Also let $s \in \Gamma\mleft(\mleft.\mathcal{P}\mright|_U\mright)$ be a gauge defined over some open subset $U$ of $M$. Then we have a group isomorphism given by
+\begin{propositions}{Gauge transformations and sections of the structural LGB}{GaugeTrafosAsLGBSectionsLocal}
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Also let $s \in \Gamma\mleft(\mleft.\mathcal{P}\mright|_U\mright)$ be a gauge defined over some open subset $U$ of $M$. Then we have a group isomorphism given by
 \bas
 C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U} 
 &\to 
 \Gamma\mleft(\mathcal{G}_U\mright),
 \\
-\sigma &\mapsto s^*\sigma,
+\sigma &\mapsto \mathrm{pr}_2 \circ \sigma \circ s,
 \eas
+where $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component,
 with inverse
 \bas
 \Gamma\mleft(\mathcal{G}_U\mright)
@@ -6073,9 +6074,31 @@ for all $p \in \mathcal{P}_U$,
 with $\Phi_s$ being the orbit map through $s$.
 \end{propositions}
 
-\begin{proof}
+\begin{remarks}{Other notation}{OtherNotationForLGBSectionsAsGaugeTrafo}
+Due to the fact that $s^*\pi^*\mathcal{G}_U \cong (\pi \circ s)^*\mathcal{G}_U = \mathds{1}_U^*\mathcal{G}_U \cong \mathcal{G}_U$, and due to what we discussed in Subsection \ref{BasicNotations} about pullback sections, we could rewrite the first map to
+\bas
+C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U} 
+&\to 
+\Gamma\mleft(\mathcal{G}_U\mright),
+\\
+\sigma &\mapsto s^*\sigma.
+\eas
+\end{remarks}
+
+\begin{proof}[Proof of Prop.\ \ref{prop:GaugeTrafosAsLGBSectionsLocal}]
 \leavevmode\newline
-For $\sigma \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U} \subset \Gamma\mleft( \pi^*\mathcal{G}_{U} \mright)$ observe that $s^*\sigma$ is by construction a section of $\mathcal{G}_U$ due to using $s^*\pi^*\mathcal{G}_U \cong (\pi \circ s)^*\mathcal{G}_U = \mathds{1}_U^*\mathcal{G}_U \cong \mathcal{G}_U$; we will make use of these natural isomorphisms in the following without further mention, especially we will view pullback sections as sections along a map, essentially dropping the base point component here and there in order to avoid introducing extra symbols for needed isomorphisms (recall Subsection \ref{BasicNotations}). For the supposed inverse we have similarly that $\sigma^\tau$ is a section of $\Gamma(\pi^*\mathcal{G}_U)$; then observe, using Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv},
+For $\sigma \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U} \subset \Gamma\mleft( \pi^*\mathcal{G}_{U} \mright)$ observe that $\mathrm{pr}_2 \circ \sigma \circ s$ is by construction a section of $\mathcal{G}_U$ due to 
+\bas
+\pi_{\mathcal{G}} \circ \mathrm{pr}_2 \circ \sigma \circ s
+&=
+\pi \circ \mathrm{pr}_1 \circ \sigma \circ s
+=
+\pi \circ s
+=
+\mathds{1}_U,
+\eas
+where $\mathrm{pr}_1: \pi^*\mathcal{G} \to \mathcal{P}$ is the projection onto the first component.
+For the supposed inverse we have similarly that $\sigma^\tau$ is a section of $\Gamma(\pi^*\mathcal{G}_U)$ by construction; then observe, using Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv},
 \bas
 \sigma_{p \cdot g}^\tau
 &=
@@ -6095,17 +6118,22 @@ For $\sigma \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal
 \mathcal{c}_{g^{-1}}
 \mleft( \sigma^\tau_p \mright)
 \eas
-for all $(p, g) \in \mathcal{P}_U * \mathcal{G}_U$, thus, $\sigma^\tau \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U}$. Then first of all derive
+for all $(p, g) \in \mathcal{P}_U * \mathcal{G}_U$, thus, $\sigma^\tau \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U}$. Recall
+\bas
+p &= s_{\pi(p)} \cdot \Phi^{-1}_s(p)
+\eas 
+for all $p \in \mathcal{P}_U$,
+so that
 \bas
 \Phi^{-1}_{s} \circ s
 &=
 e|_U,
 \eas
-where $e$ is the section of the neutral element of $\mathcal{G}$; this is a direct implication of the definition of $\Phi_s$. Then
+where $e$ is the section of the neutral element of $\mathcal{G}$. Then
 \bas
-\mleft.s^*\sigma^\tau\mright|_x
+\mleft(\mathrm{pr_2} \circ \sigma^\tau\mright)(s_x)
 &=
-\sigma^\tau_{s_x}
+\mathrm{pr}_2\mleft(\sigma^\tau_{s_x}\mright)
 =
 c_{\mleft(\Phi^{-1}_{s}(s_x)\mright)^{-1}} \mleft( \tau_{\pi(s_x)} \mright)
 =
@@ -6113,17 +6141,46 @@ c_{e_x}\mleft( \tau_x \mright)
 =
 \tau_x
 \eas
-for all $x \in M$ and $\tau \in \Gamma(\mathcal{G}_U)$, and
+for all $x \in M$ and $\tau \in \Gamma(\mathcal{G}_U)$, and by Def.\ \ref{def:GaugeTrafosLGBMaps} and Ex.\ \ref{ex:ConjugationActionForTheGeneralInnerGroupBundle} we have
 \bas
-\sigma^{s^*\sigma}_p
+\sigma^{\mathrm{pr}_2 \circ \sigma \circ s}_p
 &=
-\mleft(p, c_{\mleft(\Phi^{-1}_{s}(p)\mright)^{-1}} \mleft( \mleft. s^*\sigma \mright|_{\pi(p)} \mright) \mright)
+\Biggl(p, \mleft(c_{\mleft(\Phi^{-1}_{s}(p)\mright)^{-1}} \circ \mathrm{pr}_2 \mright) \mleft(\sigma_{s_{\pi(p)}}\mright) \Biggr)
+\\
+&=
+\Biggl(p, \mleft(c_{\mleft(\Phi^{-1}_{s}(p)\mright)^{-1}} \circ \mathrm{pr}_2 \mright) \mleft(\sigma_{p \cdot \mleft( \Phi^{-1}_s(p) \mright)^{-1}}\mright) \Biggr)
+\\
+&=
+\Biggl(p, \mleft(c_{\mleft(\Phi^{-1}_{s}(p)\mright)^{-1}} \circ \mathrm{pr}_2 \circ \mathcal{c}_{\Phi^{-1}_{s}(p)} \mright) \mleft(\sigma_{p}\mright) \Biggr)
+\\
+&=
+\Biggl(p, \mleft(c_{\mleft(\Phi^{-1}_{s}(p)\mright)^{-1}} \circ c_{\Phi^{-1}_{s}(p)} \circ \mathrm{pr}_2 \mright) \mleft(\sigma_{p}\mright) \Biggr)
+\\
+&=
+\bigl( p, \mathrm{pr}_2 (\sigma_p) \bigr)
+\\
+&=
+\sigma_p
 \eas
-for all $p \in \mathcal{P}_U$ and $\sigma \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U}$
+for all $p \in \mathcal{P}_U$ and $\sigma \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U}$. Thus, $\sigma \mapsto \mathrm{pr}_2 \circ \sigma \circ s$ is bijective with inverse $\tau \mapsto \sigma^\tau$, and so it is only left to show that $\sigma \mapsto \mathrm{pr}_2 \circ \sigma \circ s$ is a group homomorphism. For $\sigma^\prime \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U}$ we have
+\bas
+\mleft.\sigma \sigma^\prime\mright|_p
+&=
+\mleft( p, \mathrm{pr}_2( \sigma_p) ~ \mathrm{pr}_2\mleft( \sigma^\prime_p \mright) \mright),
+\eas
+thus,
+\bas
+\mleft(\mathrm{pr}_2\circ \mleft( \sigma \sigma^\prime \mright) \circ s\mright)_x
+&=
+\mathrm{pr}_2\mleft( \sigma_{s_x}\mright) ~ \mathrm{pr}_2\mleft( \sigma^\prime_{s_x} \mright)
+=
+\mleft( \mleft( \mathrm{pr}_2 \circ \sigma \circ s \mright) \cdot \mleft( \mathrm{pr}_2 \circ \sigma^\prime \circ s \mright) \mright)_x
+\eas
+for all $x \in M$. This finishes the proof.
 \end{proof}
 
 \begin{propositions}{Change of gauge as a local bundle automorphism}{GaugeChangeAsBundleAutomorph}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
 
 Then the map $H_{ji}$ defined by
 \bas
@@ -6133,18 +6190,25 @@ p &\mapsto \mleft.s_i\mright|_{\pi(p)} \cdot \Phi_{s_j}^{-1}(p),
 is an element of $\sAut\mleft( \mathcal{P}_{U_i \cap U_j} \mright)$,
 where $\Phi_{s_j}$ is the orbit map through $s_j$.
 
-In sense of Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} we also get
+In sense of Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} we also get that $\sigma^{H_{ji}}$ is related to $\sigma_{ji}$ w.r.t.\ $s_j$ in sense of Prop.\ \ref{prop:GaugeTrafosAsLGBSectionsLocal}, that is,
 \bas
-\sigma^{H_{ji}}
+\sigma^{H_{ji}}_p
 &=
-\mathcal{c}_{\mleft(\Phi^{-1}_{s_j}\mright)^{-1}} \mleft( \pi^*\sigma_{ji} \mright)
+\mleft(p, c_{\mleft(\Phi^{-1}_{s_j}(p)\mright)^{-1}} \mleft( \mleft.\sigma_{ji}\mright|_{\pi(p)} \mright) \mright)
 \eas
-for all $p \in \mathcal{P}_{U_i \cap U_j}$.
+for all $p \in \mathcal{P}_{U_i \cap U_j}$, and
+\bas
+\sigma_{ji}
+&=
+\mathrm{pr}_2 \circ \sigma^{H_{ji}} \circ s_j,
+\eas
+where $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component.
 \end{propositions}
 
 \begin{proof}
 \leavevmode\newline
-Recall Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}:
+Recall Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} for the following proof.
+
 We have $\mleft.s_i\mright|_{\pi(p)} \in \mathcal{P}_{\pi(p)}$ and $\Phi_{s_j}$ is base-preserving, and thus $\Phi_{s_j}^{-1}(p) \in \mathcal{G}_{\pi(p)}$, so that $H_{ji}$ is well-defined and also base-preserving because the right $\mathcal{G}$-action on $\mathcal{P}$ preserves the fibres.
 $H_{ji}$ is clearly smooth by construction. Finally, 
 \bas
@@ -6156,7 +6220,7 @@ H_{ji}(p \cdot g)
 =
 H_{ji}(p) \cdot g
 \eas
-for all $(p, g) \in \mleft.\mleft( \mathcal{P} * \mathcal{G} \mright)\mright|_{U_i \cap U_j}$, thus, $H_{ji} \in \sAut\mleft( \mathcal{P}_{U_i \cap U_j} \mright)$.
+for all $(p, g) \in \mleft.\mleft( \mathcal{P} * \mathcal{G} \mright)\mright|_{U_i \cap U_j}$, thus, $H_{ji}$ is a principal bundle morphism.
 \end{proof}
 
 \begin{theorems}{Gauge transformations as a change of gauge in the local gauge field}{LocalGaugeTrafoChangeGauge}
