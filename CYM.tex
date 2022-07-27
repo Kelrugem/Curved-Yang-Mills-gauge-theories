@@ -4249,7 +4249,7 @@ by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry beh
 %\mathrm{D}_{((x, g), \sigma_x)}\Phi(X, Y).
 %\eas
 
-\subsubsection{Darboux derivative on LGBs}
+\subsubsection{Darboux derivative on LGBs}\label{DiscussingDarbouxDerivativeGeneral}
 
 By Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} we know that $\mathrm{V}\mathcal{P}$ is the pullback of $\mathcal{g}$. Since connections are projections onto the vertical bundle, we will put some remarks after some definitions in the following in order to discuss the situation of pullback LGBs. Hence let us start with a general remark about the pullback situation to which we will later refer in the other remarks regarding this situation.
 
@@ -5138,7 +5138,7 @@ As also stated in \cite[\S 5.1, Prop.\ 5.1.5, page 260]{Hamilton}, for a given h
 \bas
 \mleft.\mathrm{D}_p \pi\mright|_{\mathrm{H}_p\mathcal{P}}: \mathrm{H}_p\mathcal{P} \to \mathrm{T}_xM
 \eas
-is a vector space isomorphism for all $x \in M$ and $p \in \mathcal{P}_x$; similarly for $\mathcal{G}$ itself. Using that, one has some sort of identification between the horizontal tangent spaces; we want to provide another identification in the sense of Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}. Hence, the following proposition and definition are needed.
+is a vector space isomorphism for all $x \in M$ and $p \in \mathcal{P}_x$; similarly for $\mathcal{G}$ itself. Using that, one has some sort of identification between the horizontal tangent spaces; we want to provide another identification in the sense of Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}; especially recall the Darboux derivative introduced in Subsubsection \ref{DiscussingDarbouxDerivativeGeneral}. The following proposition and definition will be needed.
 
 \begin{propositions}{The right-pushforward modified by the Darboux derivative is a well-defined isomorphism}{IsomorphismRightPushAndDarboux}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal a distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. Furthermore, for $g \in \mathcal{G}_x$ ($x \in M$) define the map
@@ -5994,7 +5994,7 @@ which finishes the proof, where we used the trivial relation (alternatively reca
 Of course there is also the sense of gauge transformation with respect to gauges as in typical gauge theory (see \textit{e.g.}\ \cite[\S 5.4, page 270ff.]{Hamilton}), recall Def.\ \ref{def:GaugesOfPrincipalBundles}.
 
 \begin{definitions}{Local gauge field}{LocalGaugeField}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we define the \textbf{local connection 1-form} of \textbf{local gauge field $A_s \in \Omega^1(U; \mathcal{g})$ (w.r.t.\ $s$)} by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we define the \textbf{local connection 1-form} of \textbf{local gauge field $A_s \in \Omega^1\mleft(U; \mleft.\mathcal{g}\mright|_U\mright)$ (w.r.t.\ $s$)} by
 \bas
 A_s
 &\coloneqq
@@ -6335,6 +6335,35 @@ s_j^! H_{ji}^!A
 	+ \Delta \sigma_{ji}.
 \eas
 \end{proof}
+
+This allows us to finally show the first relation to the infinitesimal gauge theory developed by Alexei Kotov and Thomas Strobl.
+
+\begin{remarks}{Integrating curved Yang-Mills gauge theories}{IntegratingKotovStrobl}
+Let the situation be as in Thm.\ \ref{thm:LocalGaugeTrafoChangeGauge}, then set 
+\bas
+\sigma_{ji}
+&\coloneqq
+\e^{t \varepsilon}
+\eas
+for a $\varepsilon \in \Gamma\mleft( \mleft.\mathcal{g}\mright|_{U_i \cap U_j} \mright)$ and $t \in \mathbb{R}$. Then we define the \textbf{infinitesimal gauge transformation $\delta_\varepsilon A_{s_j}$ of $A$ along $\varepsilon$ (w.r.t.\ $s_j$)} as an element of $\Omega^1\mleft( U_i \cap U_j; \mleft.\mathcal{g}\mright|_{U_i \cap U_j} \mright)$ by
+\bas
+\delta_\varepsilon A_{s_j}
+&\coloneqq
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} A_{s_i}.
+\eas
+The corresponding derivative related to the adjoint representation can be calculated as usual, and for the corresponding term related to the Darboux derivative we use the vector bundle connection introduced in Def.\ \ref{def:ConnectionOnLAB}. Thus, we get\footnote{Rigorously, one has to define $\delta_\varepsilon A_{s_j}$ via the natural projection $\mathrm{V}\mathcal{g} \to \mathcal{g}$ as we did in Prop.\ \ref{prop:FinallyTheNablaInduction}.}
+\bas
+\delta_\varepsilon A_{s_j}
+&=
+\nabla^{\mathcal{G}} \varepsilon 
+	- \mleft[ \varepsilon, A_{s_j} \mright]_{\mathcal{g}}.
+\eas
+This is \textit{precisely} the infinitesimal gauge transformation developed by Alexei Kotov and Thomas Strobl, see \cite{CurvedYMH} for a concise summary or \cite{MyThesis} for an extended introduction. These references are for the very general situation using Lie algebroids, hence see alternatively \cite{My1stpaper} for this type of gauge theory restricted to Lie algebra bundles.
+
+Thus, we successfully integrated this definition of infinitesimal gauge transformations.
+\end{remarks}
+
+Alexei's and Thomas's theory also generalizes the curvature/field strength related to gauge theory. Hence, let us now turn to this notion.
 
 \subsection{Generalized curvature/field strength}
 
