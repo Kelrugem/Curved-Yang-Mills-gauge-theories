@@ -33,7 +33,7 @@
 \contentsline {subsection}{\numberline {6.5}Generalized covariant derivative/minimal coupling}{108}{subsection.6.5}%
 \contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{108}{section.7}%
 \contentsline {section}{\numberline {8}Conclusion}{108}{section.8}%
-\contentsline {section}{\nonumberline List of References}{108}{section*.3}%
+\contentsline {section}{\nonumberline List of References}{109}{section*.3}%
 \contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{109}{appendix.A}%
 \contentsline {section}{\numberline {B}Other Interpretations of the compatibility conditions}{118}{appendix.B}%
 \contentsline {subsection}{\numberline {B.1}Minimal coupling}{118}{subsection.B.1}%
