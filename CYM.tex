@@ -6369,6 +6369,37 @@ Alexei's and Thomas's theory also generalizes the curvature/field strength relat
 
 In the following we will introduce the curvature; in order to achieve gauge invariance later in the physical gauge theory, we will now need to assume certain what we will call \textbf{compatibility conditions} on the horizontal distribution of the structural LGB $\mathcal{G}$. Here in this work we will just present these compatibility conditions, and you will be able to see in the proofs why this leads to gauge invariance later. However, if you want to understand the following conditions coming from a point of view not knowing the solution beforehand, then either see \cite{CurvedYMH} or \cite{MyThesis}; the latter also provides a physical motivation using what I called the \textbf{field redefinitions} which naturally motivate the gauge theory presented here by transforming a classical gauge theory in such a way that the physics is preserved.
 
+\begin{definitions}{Yang-Mills connection}{YangMillsConnection}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is a \textbf{Yang-Mills connection (on $\mathcal{G}$)} if there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that the $\mathcal{G}$-connection $\nabla^{\mathcal{G}}$ on the associated LAB $\mathcal{g}$ with bracket $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ (recall Def.\ \ref{def:ConnectionOnLAB}) satisfies the \textbf{compatibility conditions}
+\bas
+\nabla^{\mathcal{G}}\mleft( \mleft[ \mu, \nu \mright]_{\mathcal{g}} \mright)
+&=
+\mleft[ \nabla^{\mathcal{G}} \mu, \nu \mright]_{\mathcal{g}}
+	+ \mleft[ \mu, \nabla^{\mathcal{G}} \nu \mright]_{\mathcal{g}},
+\\
+R_{\nabla^{\mathcal{G}}}(X, Y)\mu
+&=
+\mleft[ \zeta(X, Y), \mu \mright]_{\mathcal{g}}
+\eas
+for all $\mu, \nu \in \Gamma(\mathcal{g})$ and $X, Y \in \mathfrak{X}(M)$, where $R_{\nabla^{\mathcal{G}}}$ is the curvature of $\nabla^{\mathcal{G}}$. We then also call $\nabla^{\mathcal{G}}$ a Yang-Mills connection and denote it by $\nabla^{\mathrm{YM}}$.
+\end{definitions}
+
+\begin{remark}
+\leavevmode\newline
+As illustrated in \cite[\S 5.1]{MyThesis} and \cite{My1stpaper} such connections also arise in \cite[\S 7.2, page 271ff.]{mackenzieGeneralTheory}: There these connections are called \textbf{Lie derivation laws covering a coupling} due to the fact that these are important in the construction of "coupling" an LAB to a Lie algebroid via a Whitney sum in such a way that the outcome is again a Lie algebroid. There is a strong relationship of this study with the gauge theory we are going to define, however, we will not need this so that we will not repeat what has been discussed in \cite[\S 5.1]{MyThesis} and \cite{My1stpaper}. The relation to Mackenzie's study can be useful for the interested reader to understand the importance of these compatibility conditions. In my opinion, the compatibility conditions together with a trivial what Mackenzie calls the obstruction class (and an ad-invariant scalar product on the LAB) are needed to define Yang-Mills gauge theories from an axiomatic point of view. If the reader is interested into that, then I would appreciate an email so that I can send these details.
+\end{remark}
+
+Viewing the LGB $\mathcal{G}$ as a principal $\mathcal{G}$-bundle, one can show that Yang-Mills connections are a special type of Ehresmann connection.
+
+\begin{lemmata}{Yang-Mills connections as a special Ehresmann connection}{YangMillsConnAnEhresmann}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle.
+\end{lemmata}
+
+\begin{proof}
+\leavevmode\newline
+This can be quickly answered by recalling how the parallel transport behaves; recall 
+\end{proof}
+
 \begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we have
 \bas
