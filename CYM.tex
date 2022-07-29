@@ -2103,10 +2103,14 @@ for all $x \in M$, where we used that $\mathcal{G}_x$ is isomorphic to $G$ as a 
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and denote with $e$ the identity section of $\mathcal{G}$. Then we define the \textbf{LAB $\mathcal{g}$ of $\mathcal{G}$} as the vector bundle $e^*\mathrm{V}\mathcal{G}$.
 \end{definitions}
 
-In the following $\mathcal{g}$ will usually denote the LAB of $\mathcal{G}$, even if we only introduced $\mathcal{G}$.
+In the following $\mathcal{g}$ will usually denote the LAB of $\mathcal{G}$.
 
 \begin{examples}{Endomorphisms of a vector bundle as LAB of fibre-wise automorphisms}{EndosAreLABOfAutos}
 Recall Ex.\ \ref{ex:AutOfVectorBundleAnLGB} and \ref{ex:EndVAnLAB}. For a vector bundle $V \to M$ one can show that the LAB of $\mathrm{Aut}(V)$ is given by $\mathrm{End}(V)$; the proof is precisely as for the automorphisms and endomorphisms of a vector space as in \cite[\S 1.5.4, page 45ff.]{Hamilton}, just canonically extended to a bundle language. 
+\end{examples}
+
+\begin{examples}{Associated LAB}{AssociatedLABsFromAssocLGBs}
+
 \end{examples}
 
 \subsection{Vertical Maurer-Cartan form of LGBs}
@@ -5334,11 +5338,11 @@ Recall Def.\ \ref{def:AssociatedLGB}, and recall that LGBs themselves are princi
 	& M
 	\end{tikzcd}
 \end{center}
-Fix a typical pre-classical connection on $P$; as also introduced in Subsubsection \ref{TheBigMotivationBehindEverything} we have an associated parallel transport $\mathrm{PT}_\alpha^\mathcal{P}: \mathcal{P}_x \to \Gamma(\alpha^*\mathcal{P})$ along a curve $\alpha: [0, t] \to M$ ($t > 0$), where $\alpha(0) \eqqcolon x$. As proven in \cite[\S 5.9, Thm.\ 5.9.1, page 289f.]{Hamilton}, we have a canonical well-defined parallel transport $\mathrm{PT}_\alpha^\mathcal{H}: \mathcal{H}_x \to \Gamma(\alpha^*\mathcal{H})$ given by
+Fix a typical pre-classical connection on $P$; as also introduced in Subsubsection \ref{TheBigMotivationBehindEverything} we have an associated parallel transport $\mathrm{PT}_\alpha^P: P_x \to \Gamma(\alpha^*P)$ along a curve $\alpha: [0, t] \to M$ ($t > 0$), where $\alpha(0) \eqqcolon x$. As proven in \cite[\S 5.9, Thm.\ 5.9.1, page 289f.]{Hamilton}, we have a canonical well-defined parallel transport $\mathrm{PT}_\alpha^\mathcal{H}: \mathcal{H}_x \to \Gamma(\alpha^*\mathcal{H})$ given by
 \bas
 \mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
 &=
-\mleft[ \mathrm{PT}_\alpha^\mathcal{P}(p), h \mright]
+\mleft[ \mathrm{PT}_\alpha^P(p), h \mright]
 \eas
 for all $[p, h] \in \mathcal{H}_x$. This has a 1:1 correspondence to a horizontal distribution $\mathrm{H}\mathcal{H}$ on $\mathcal{H}$. Observe that we have
 \bas
@@ -5347,11 +5351,11 @@ for all $[p, h] \in \mathcal{H}_x$. This has a 1:1 correspondence to a horizonta
 \mathrm{PT}_\alpha^\mathcal{H}\Bigl( \mleft[ p, h h^\prime \mright] \Bigr)
 \\
 &=
-\mleft[ \mathrm{PT}_\alpha^\mathcal{P}(p), h h^\prime \mright]
+\mleft[ \mathrm{PT}_\alpha^P(p), h h^\prime \mright]
 \\
 &=
-\mleft[ \mathrm{PT}_\alpha^\mathcal{P}(p), h \mright]
-	\cdot \mleft[ \mathrm{PT}_\alpha^\mathcal{P}(p), h^\prime \mright]
+\mleft[ \mathrm{PT}_\alpha^P(p), h \mright]
+	\cdot \mleft[ \mathrm{PT}_\alpha^P(p), h^\prime \mright]
 \\
 &=
 \mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
@@ -6371,7 +6375,7 @@ In the following we will introduce the curvature; in order to achieve gauge inva
 
 \begin{definitions}{Yang-Mills connection}{YangMillsConnection}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is a \textbf{Yang-Mills connection (on $\mathcal{G}$)} if there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that the $\mathcal{G}$-connection $\nabla^{\mathcal{G}}$ on the associated LAB $\mathcal{g}$ with bracket $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ (recall Def.\ \ref{def:ConnectionOnLAB}) satisfies the \textbf{compatibility conditions}
-\bas
+\ba\label{CondSGleichNullLAB}
 \nabla^{\mathcal{G}}\mleft( \mleft[ \mu, \nu \mright]_{\mathcal{g}} \mright)
 &=
 \mleft[ \nabla^{\mathcal{G}} \mu, \nu \mright]_{\mathcal{g}}
@@ -6379,8 +6383,8 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\ma
 \\
 R_{\nabla^{\mathcal{G}}}(X, Y)\mu
 &=
-\mleft[ \zeta(X, Y), \mu \mright]_{\mathcal{g}}
-\eas
+\mleft[ \zeta(X, Y), \mu \mright]_{\mathcal{g}}\label{CondKruemmungmitBLAB}
+\ea
 for all $\mu, \nu \in \Gamma(\mathcal{g})$ and $X, Y \in \mathfrak{X}(M)$, where $R_{\nabla^{\mathcal{G}}}$ is the curvature of $\nabla^{\mathcal{G}}$. We then also call $\nabla^{\mathcal{G}}$ a Yang-Mills connection and denote it by $\nabla^{\mathrm{YM}}$.
 \end{definitions}
 
@@ -6392,13 +6396,51 @@ As illustrated in \cite[\S 5.1]{MyThesis} and \cite{My1stpaper} such connections
 Viewing the LGB $\mathcal{G}$ as a principal $\mathcal{G}$-bundle, one can show that Yang-Mills connections are a special type of Ehresmann connection.
 
 \begin{lemmata}{Yang-Mills connections as a special Ehresmann connection}{YangMillsConnAnEhresmann}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle.
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle if Eq.\ \eqref{CondSGleichNullLAB} is satisfied.
 \end{lemmata}
 
 \begin{proof}
 \leavevmode\newline
-This can be quickly answered by recalling how the parallel transport behaves; recall 
+This can be quickly answered by recalling how the parallel transport behaves; recall that Def.\ \ref{def:FinallyTheConnection} comes from Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} which itself stems from Eq.\ \eqref{PTHomomNEw}. Eq.\ \eqref{CondSGleichNullLAB} means that $\nabla^{\mathrm{YM}}$ is a Lie bracket derivation; integrated this means that the parallel transport $\mathrm{PT}^{\mathcal{G}}$ of $\mathcal{G}$ (omitting the notation of the involved curve) is a homomorphism, \textit{i.e.}\
+\bas
+\mathrm{PT}^{\mathcal{G}}(gq)
+&=
+\mathrm{PT}^{\mathcal{G}}(g) ~ \mathrm{PT}^{\mathcal{G}}(q)
+\eas
+for all $(g, q) \in \mathcal{G} * \mathcal{G}$. As a principal bundle, $\mathcal{G}$ equipped with its Yang-Mills connection satisfies Eq.\ \eqref{PTHomomNEw}, and thus $\mathrm{H}\mathcal{G}$ is an Ehresmann connection.
 \end{proof}
+
+\begin{examples}{Associated connections of inner group bundles are Yang-Mills connections}{OurVeryImportantExample}
+Recall Ex.\ \ref{ex:AssociatedLGBsAndTheirCanonicalConnection}, its setup and notation. We have discussed a canonical connection on associated LGBs $\mathcal{H} = P \times_\psi H$, called associated connection. Following the argument about parallel transports in the proof of Lemma \ref{lem:YangMillsConnAnEhresmann}, we know that the associated connection satisfies Eq.\ \eqref{CondSGleichNullLAB} due to the fact that the parallel transport of $\mathcal{H}$ is a homomorphism.
+
+Now we turn to Eq.\ \eqref{CondKruemmungmitBLAB}. As it is well-known, the curvature measures the holonomy, that is, the parallel transport over closed (contractible) curves. Together with Eq.\ \eqref{CondKruemmungmitBLAB}, the parallel transport over a closed (contractible) curve $\alpha$ should act as conjugation with some group element. Let us see whether this holds here; there is a unique $g \in G$ for $p \in P$ such that
+\bas
+\mathrm{PT}^{P}_\alpha(p)
+&=
+p \cdot g,
+\eas
+and thus for $[p, h] \in \mathcal{H}$
+\bas
+\mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
+&=
+\mleft[ p \cdot g, h \mright]
+=
+\mleft[ p, \psi_g(h) \mright].
+\eas
+Thus, if $\mathcal{H} = c_G(P)$, the inner group bundle of Ex.\ \ref{ex:InnerLGBs}, we get
+\bas
+\mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
+&=
+\mleft[ p, ghg^{-1} \mright]
+=
+\mleft[p, g\mright] \cdot
+\mleft[p, h\mright] \cdot
+\mleft[p, g^{-1}\mright],
+\eas
+the conjugation of $[p, h]$ with $[p, g]$ in $c_G(p)$. It follows that there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that Eq.\ \eqref{CondKruemmungmitBLAB} is satisfied. It follows that the associated connection of an inner group bundle is a Yang-Mills connection. 
+
+Alternatively one can prove this without using parallel transports by using the aforementioned relationship of the compatibility conditions with Mackenzie's study about extending Lie algebroids via LABs.
+\end{examples}
 
 \begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we have
@@ -7371,8 +7413,8 @@ using the definition of $P \times_{\mathrm{Ad}} \mathfrak{g}$. Equivalently,
 \mright)
 \eas
 
-\subsection{Axiomatic Yang-Mills gauge theories}
-
-Let us discuss where the compatibility conditions may arise from a certain axiomatic point of view.
+%\subsection{Axiomatic Yang-Mills gauge theories}
+%
+%Let us discuss where the compatibility conditions may arise from a certain axiomatic point of view.
 
 \end{document}
