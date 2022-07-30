@@ -741,7 +741,7 @@ where $T \in \mleft.\mathrm{Aut}(V)\mright|_x = \mathrm{Aut}(V_x)$,
 and $U_i \times \mathrm{Aut}(W)$ acts canonically on $U_i \times W$ in a fibre-wise sense. Then it is trivial to check that these give local trivializations such that $\mathrm{Aut}(V)$ carries the structure as an LGB.
 \end{examples}
 
-\subsection{Associated Lie group bundles}
+\subsection{Associated Lie group bundles}\label{AssocLGBsSubSection}
 
 For another important example recall that there is the notion of associated fibre bundles; following and stating the results of \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$ over a smooth manifold $M$, $N$ another smooth manifold, and $\Psi$ a smooth left $G$-action denoted by
 \bas
@@ -803,7 +803,7 @@ for all $g, g^\prime \in G$, viewing $\psi_g$ as a map $H \to H$. Therefore we c
 \bas
 G &\to \mathrm{Aut}(H),
 \eas
-where $\mathrm{Aut}(H)$ is the set of Lie group automorphisms. The similarity to Lie group representations on vector spaces is obvious, thence the name.
+where $\mathrm{Aut}(H)$ is the set of Lie group automorphisms. The similarity to Lie group representations on vector spaces is obvious, thence the name. In fact, these integrate Lie group representation: Observe that $\mathrm{D}_{e}\psi_g$ is a Lie algebra homomorphism $\mathfrak{h} \to \mathfrak{h}$ due to that $\psi_g$ is a Lie group homomorphism, where $\mathfrak{h}$ is the Lie algebra of $H$ and $e$ is the neutral element of $H$. $\mathrm{D}_{e}\psi_g$ is an automorphism because $\psi_g$ is, and thus $g \mapsto \mathrm{D}_e\psi_g$ is a $G$-representation on $\mathfrak{h}$.
 \newline
 
 This definition is of course also motivated by various references pointing out that Lie group representations define Lie group actions with extra properties; see for example \cite[\S 3, Ex.\ 3.4.2, page 143f.]{Hamilton}. In \cite[comments after Ex.\ 1.7.14, page 47]{mackenzieGeneralTheory} this definition is also called \textit{action by Lie group isomorphisms}.
@@ -2110,7 +2110,9 @@ Recall Ex.\ \ref{ex:AutOfVectorBundleAnLGB} and \ref{ex:EndVAnLAB}. For a vector
 \end{examples}
 
 \begin{examples}{Associated LAB}{AssociatedLABsFromAssocLGBs}
+We discussed associated LGBs in Subsection \ref{AssocLGBsSubSection}. So, let $G, H$ be Lie groups, $P \to M$ a (pre-classical) principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then we have the associated LGB $\mathcal{H} \coloneqq P \times_\psi H$.
 
+Also recall Remark \ref{rem:WhyRepresentation}, $\psi_* \coloneqq \mleft[ g \mapsto \mathrm{D}_e\psi_g \mright]$ is a $G$-representation on $\mathfrak{h}$, the Lie algebra of $H$. Hence, we also have the associated bundle $\mathcal{h} \coloneqq P \times_{\psi_*} \mathfrak{h}$
 \end{examples}
 
 \subsection{Vertical Maurer-Cartan form of LGBs}

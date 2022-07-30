@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  30 JUL 2022 02:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  30 JUL 2022 22:50
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1293,6 +1293,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 683--686
  []
 
 [3] [4] [5] [6]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 806
+.
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
 Underfull \hbox (badness 10000) in paragraph at lines 805--808
 
  []
@@ -1320,20 +1326,13 @@ Overfull \hbox (4.5506pt too wide) in paragraph at lines 1543--1548
 5 is then iso-mor-phic to $\OT1/lmr/m/n/10.95  [][]$
  []
 
-[23] [24]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 167
-3.
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-[25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39]
-[40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54]
-[55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69]
-[70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81]
+[23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37]
+[38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52]
+[53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67]
+[68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 4811.
+(Font)              using `U/stmry/m/n' instead on input line 4813.
 
 [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96]
 [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109]
@@ -1350,7 +1349,7 @@ om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
  []
 
 ) [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
-Overfull \hbox (2.20065pt too wide) in paragraph at lines 7149--7167
+Overfull \hbox (2.20065pt too wide) in paragraph at lines 7151--7169
 \OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/
 10.95 )$ \T1/lmr/m/n/10.95 as an el-e-ment of $\OT1/lmr/m/n/10.95 
 [](\OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.95 ; [](\OML/lmm/m/it/10.95 V\OT1/lmr/m
@@ -1370,10 +1369,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34838 strings out of 478907
- 726990 string characters out of 2851891
- 1216085 words of memory out of 3000000
- 51640 multiletter control sequences out of 15000+600000
+ 34835 strings out of 478907
+ 726941 string characters out of 2851891
+ 1216146 words of memory out of 3000000
+ 51637 multiletter control sequences out of 15000+600000
  522375 words of font info for 151 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1417,9 +1416,9 @@ ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/User
 s/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
 
-Output written on CYM.pdf (127 pages, 1266973 bytes).
+Output written on CYM.pdf (127 pages, 1268534 bytes).
 PDF statistics:
- 1948 PDF objects out of 2073 (max. 8388607)
+ 1950 PDF objects out of 2073 (max. 8388607)
  440 named destinations out of 1000 (max. 500000)
  317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
