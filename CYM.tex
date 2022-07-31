@@ -2112,7 +2112,23 @@ Recall Ex.\ \ref{ex:AutOfVectorBundleAnLGB} and \ref{ex:EndVAnLAB}. For a vector
 \begin{examples}{Associated LAB}{AssociatedLABsFromAssocLGBs}
 We discussed associated LGBs in Subsection \ref{AssocLGBsSubSection}. So, let $G, H$ be Lie groups, $P \to M$ a (pre-classical) principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then we have the associated LGB $\mathcal{H} \coloneqq P \times_\psi H$.
 
-Also recall Remark \ref{rem:WhyRepresentation}, $\psi_* \coloneqq \mleft[ g \mapsto \mathrm{D}_e\psi_g \mright]$ is a $G$-representation on $\mathfrak{h}$, the Lie algebra of $H$. Hence, we also have the associated bundle $\mathcal{h} \coloneqq P \times_{\psi_*} \mathfrak{h}$
+Also recall Remark \ref{rem:WhyRepresentation}, $\psi_* \coloneqq \mleft[ g \mapsto \mathrm{D}_{e_G}\psi_g \mright]$ is a $G$-representation on $\mathfrak{h}$, the Lie algebra of $H$, where $e_G$ is the neutral element of $G$. Hence, we also have the associated bundle $\mathcal{h} \coloneqq P \times_{\psi_*} \mathfrak{h}$.
+
+It is now natural to guess that $\mathcal{h}$ is the LAB of $\mathcal{H}$, and this is indeed the case, we will give a sketch; the proof's construction is similar to \cite[\S 3.1, Prop.\ 3.1.4, page 90]{mackenzieGeneralTheory}; also recall the short introduction of associated bundles at the beginning of Subsection \ref{AssocLGBsSubSection}. For $x \in M$ we have the fibre $\mathcal{H}_x = P_x \times_\psi H$ which is isomorphic to $H$ as a Lie group by $H \ni h \mapsto [p, h]$ for a fixed $p \in P_x$. Thus the complete flow of an LAB element of $\mathcal{H}$ (in the fibre over $x$) is equivalent to $[p, \gamma]$ where $\gamma: \mathbb{R} \to H$, $t \mapsto \e^{tX}$, for an $X\in \mathfrak{h}$. Thus, we can already conclude that the fibre of the LAB of $\mathcal{H}$ over $x$ is isomorphic to $\mathfrak{h} = \mathcal{h}_x$ as Lie algebra. By the definition of $\mathcal{H}$ we also have
+\bas
+[p, \gamma]
+&=
+\mleft[ p \cdot g, \psi_g \circ \gamma \mright]
+\eas
+for all $g\in G$. Denoting $[ \cdot, \cdot ] \eqqcolon \pi$ we get infinitesimally
+\bas
+\mathrm{D}_{\mleft(p, e_H\mright)}\pi\mleft( p, X \mright)
+&=
+\mathrm{D}_{\mleft(p \cdot g, e_H\mright)}\pi\bigl( p \cdot g, \mathrm{D}_e\psi_g(X) \bigr),
+\eas
+where $e_H$ is the neutral element of $H$. One can trivially check that this gives an equivalence relation on $P_x \times \mathfrak{h}$, precisely the one we need for $\mathcal{h}$. It finally follows that the LAB of $\mathcal{H}$ is given by $\mathcal{h}$.
+
+As a special example, the LAB of the inner group bundle $c_G(P)$, Ex.\ \ref{ex:InnerLGBs}, is the \textbf{adjoint bundle $\mathrm{ad}(P)$ of $P$}, $\mathrm{ad}(P) \coloneqq P \times_{\mathrm{Ad}} \mathfrak{g}$, where $\mathrm{Ad}$ is the adjoint representation of $G$. This is also a special example of the generalized Atiyah sequence (as both, a short exact sequence of Lie groupoids and algebroids) in \cite[\S 3.5, Def.\ 3.5.19, page 130]{mackenzieGeneralTheory}.
 \end{examples}
 
 \subsection{Vertical Maurer-Cartan form of LGBs}
@@ -6439,7 +6455,7 @@ Thus, if $\mathcal{H} = c_G(P)$, the inner group bundle of Ex.\ \ref{ex:InnerLGB
 \mleft[p, h\mright] \cdot
 \mleft[p, g^{-1}\mright],
 \eas
-the conjugation of $[p, h]$ with $[p, g]$ in $c_G(p)$. It follows that there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that Eq.\ \eqref{CondKruemmungmitBLAB} is satisfied. It follows that the associated connection of an inner group bundle is a Yang-Mills connection. 
+the conjugation of $[p, h]$ with $[p, g]$ in $c_G(p)$. It follows that there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that Eq.\ \eqref{CondKruemmungmitBLAB} is satisfied. This also implies that the associated connection of an inner group bundle is a Yang-Mills connection. 
 
 Alternatively one can prove this without using parallel transports by using the aforementioned relationship of the compatibility conditions with Mackenzie's study about extending Lie algebroids via LABs.
 \end{examples}
