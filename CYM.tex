@@ -2110,7 +2110,7 @@ Recall Ex.\ \ref{ex:AutOfVectorBundleAnLGB} and \ref{ex:EndVAnLAB}. For a vector
 \end{examples}
 
 \begin{examples}{Associated LAB}{AssociatedLABsFromAssocLGBs}
-We discussed associated LGBs in Subsection \ref{AssocLGBsSubSection}. So, let $G, H$ be Lie groups, $P \to M$ a (pre-classical) principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then we have the associated LGB $\mathcal{H} \coloneqq P \times_\psi H$.
+We discussed associated LGBs in Subsection \ref{AssocLGBsSubSection}. So, let $G, H$ be Lie groups, $P \to M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then we have the associated LGB $\mathcal{H} \coloneqq P \times_\psi H$.
 
 Also recall Remark \ref{rem:WhyRepresentation}, $\psi_* \coloneqq \mleft[ g \mapsto \mathrm{D}_{e_G}\psi_g \mright]$ is a $G$-representation on $\mathfrak{h}$, the Lie algebra of $H$, where $e_G$ is the neutral element of $G$. Hence, we also have the associated bundle $\mathcal{h} \coloneqq P \times_{\psi_*} \mathfrak{h}$.
 
@@ -3311,10 +3311,11 @@ There are several things in need to be discussed:
 
 Let us provide examples of such principal bundles.
 
-\begin{examples}{The "pre-classical" principal bundle}{TheCLassicalPrincAsEx}
-$G$-principal bundles themselves are $\mathcal{G} \coloneqq M \times G$-principal bundles. Recall Ex.\ \ref{ex:TrivialLGBAction}, the LGB action of a trivial LGB $\mathcal{G} \cong M \times G$ is equivalent to a $G$-action, the right-translation with an element $g \in G$ is then either the right-translation of the corresponding constant section in $\mathcal{G}$or the right-translation with $(x, g)$ pointwise; this action is clearly simply transitive. The $\mathcal{G}$-principal bundle atlas is then inherited by the existing $G$-principal bundle atlas.
+\begin{examples}{The "classical" principal bundle}{TheCLassicalPrincAsEx}
+$G$-principal bundles themselves are $\mathcal{G} \coloneqq M \times G$-principal bundles. Recall Ex.\ \ref{ex:TrivialLGBAction}, the LGB action of a trivial LGB $\mathcal{G} \cong M \times G$ is equivalent to a $G$-action, the right-translation with an element $g \in G$ is then either the right-translation of the corresponding constant section in $\mathcal{G}$ or the right-translation with $(x, g)$ pointwise; this action is clearly simply transitive. The $\mathcal{G}$-principal bundle atlas is then inherited by the existing $G$-principal bundle atlas.
 
-We often refer to principal bundles related to trivial LGBs as \textbf{pre-classical principal bundles}, or, as usual, principal $G$-bundle. We will later clarify why "pre-classical" as adjective instead of "classical"; however, at this point both adjectives are permutable.
+We often refer to principal bundles related to trivial LGBs as \textbf{typical} or \textbf{classical principal bundles}, or, as usual, principal $G$-bundle. 
+%We will later clarify why "pre-classical" as adjective instead of "classical"; however, at this point both adjectives are permutable.
 \end{examples}
 
 \begin{examples}{The "trivial" principal $\mathcal{G}$-bundle}{TrivialPrincAsLGB}
@@ -3322,10 +3323,10 @@ $\mathcal{G}$ itself is a $\mathcal{G}$-principal bundle, equipped with its cano
 
 By Ex.\ \ref{ex:TheCLassicalPrincAsEx}, it may be natural to call this the \textbf{trivial $\mathcal{G}$-principal bundle} even if $\mathcal{G}$ itself might not be trivial. It will be clearer later why one may choose to do so.
 
-The remarkable property is that this example shows that we are going to define a gauge theory for which LGBs themselves are allowed as principal bundles. One might have wondered why classical gauge theory uses pre-classical principal bundles instead of LGBs, especially including non-trivial LGBs, because LGBs could be viewed as a more natural choice due to the fact that they are an analogue to how vector bundles are the "bundle-construction" of vector spaces. The problems described in Subsection \ref{TheBigMotivationBehindEverything} show why it was easier to choose pre-classical principal bundles, since these avoid the difficulties regarding the definition of a connection; however, we are going to solve these problems in such a way that one can either use LGBs or pre-classical bundles or even something more general.
+The remarkable property is that this example shows that we are going to define a gauge theory for which LGBs themselves are allowed as principal bundles. One might have wondered why classical gauge theory uses classical principal bundles instead of LGBs, especially including non-trivial LGBs, because LGBs could be viewed as a more natural choice due to the fact that they are an analogue to how vector bundles are the "bundle-construction" of vector spaces. The problems described in Subsection \ref{TheBigMotivationBehindEverything} show why it was easier to choose classical principal bundles, since these avoid the difficulties regarding the definition of a connection; however, we are going to solve these problems in such a way that one can either use LGBs or classical bundles or even something more general.
 \end{examples}
 
-Our main example will be the inner bundle of a pre-classical principal bundle, recall Ex.\ \ref{ex:InnerLGBs}. To explain the "triviality" of Ex.\ \ref{ex:TrivialPrincAsLGB} we need to introduce morphisms of principal bundles.
+Our main example will be the inner bundle of a classical principal bundle, recall Ex.\ \ref{ex:InnerLGBs}. To explain the "triviality" of Ex.\ \ref{ex:TrivialPrincAsLGB} we need to introduce morphisms of principal bundles.
 
 \subsubsection{Morphism of principal LGB-bundles}
 
@@ -3420,7 +3421,7 @@ Thence, Def.\ \ref{def:MorphOfPrincBundles} is a valid definition for a principa
 
 $\bullet$ Finally, observe that we have locally an isomorphism of every principal bundle $\mathcal{P}$ to $\mathcal{G}$: Fix a principal bundle chart $\varphi: \mathcal{P}|_U \to \mathcal{G}|_U$ ($U$ some open subset of $M$). Then take $H \coloneqq \varphi$, $F \coloneqq \mathds{1}_{\mathcal{G}|_U}$ and $f \coloneqq \mathds{1}_U$; by the definition of a principal bundle chart this gives a principal bundle isomorphism. Therefore one could say that every principal bundle is locally "trivial" in the sense of being an LGB; recall Ex.\ \ref{ex:TrivialPrincAsLGB}. 
 
-Additionally using Remark \ref{rem:LGBPrincDefDiscussion} we have locally an isomorphism of $\mathcal{P}$ to a trivial LGB; keeping the same notation as in Remark \ref{rem:LGBPrincDefDiscussion}, choose $H \coloneqq \xi_i$, $F \coloneqq \phi_i$ and $f \coloneqq \mathds{1}_{U_i}$. Hence, locally every principal bundle is also pre-classical in the sense of Ex.\ \ref{ex:TheCLassicalPrincAsEx}.
+Additionally using Remark \ref{rem:LGBPrincDefDiscussion} we have locally an isomorphism of $\mathcal{P}$ to a trivial LGB; keeping the same notation as in Remark \ref{rem:LGBPrincDefDiscussion}, choose $H \coloneqq \xi_i$, $F \coloneqq \phi_i$ and $f \coloneqq \mathds{1}_{U_i}$. Hence, locally every principal bundle is also classical in the sense of Ex.\ \ref{ex:TheCLassicalPrincAsEx}.
 \end{remark}
 
 As expected, there is a natural isomorphism induced by local sections of $\mathcal{P}$, which are, however, no trivializations in general. In other words, by Remark \ref{rem:LGBPrincDefDiscussion} we know that orbit maps through the fibres of $\mathcal{P}$ are equivariant diffeomorphisms, we want to show the same for the orbit map through a section of $\mathcal{P}$.
@@ -3436,7 +3437,7 @@ is a base-preserving principal bundle isomorphism w.r.t.\ $\mathds{1}_{\mathcal{
 
 \begin{remark}
 \leavevmode\newline
-As in the typical formulation of gauge theory, we have an isomorphism induced by sections, but it is not necessarily a trivialization as fibre bundle, so that we do not necessarily also have a "pre-classical" bundle; it is a trivialization in the sense of Ex.\ \ref{ex:TrivialPrincAsLGB}. Due to the similarity with the "classical" statement, we therefore were speaking of the "trivial" principal bundle in Ex.\ \ref{ex:TrivialPrincAsLGB}. Of course, since every LGB is locally trivial, we can find a typical trivialization by taking a "local-enough" section.
+As in the typical formulation of gauge theory, we have an isomorphism induced by sections, but it is not necessarily a trivialization as fibre bundle, so that we do not necessarily also have a "classical" bundle; it is a trivialization in the sense of Ex.\ \ref{ex:TrivialPrincAsLGB}. Due to the similarity with the "classical" statement, we therefore were speaking of the "trivial" principal bundle in Ex.\ \ref{ex:TrivialPrincAsLGB}. Of course, since every LGB is locally trivial, we can find a typical trivialization by taking a "local-enough" section.
 
 The latter about the typical trivialization is also stated in \cite[\S 5.7, fourth part of Remark 5.34, page 145]{GroupoidBasedPrincipalBundles} for groupoid-based principal bundles.
 \end{remark}
@@ -3586,7 +3587,7 @@ Usually, one likes to think about the choice of sections as a choice of a coordi
 
 However, we now learned that on a more general scale this is not completely what is happening. The idea of LGBs and principal bundles are very similar; both are fibre bundles related to a Lie group and they carry an action which also restricts on each fibre. But the fibres of an LGB are Lie groups themselves, while the fibres of a principal bundle are "just" diffeomorphic to a Lie group in an equivariant way as outlined in Remark \ref{rem:LGBPrincDefDiscussion} and as given in their definition Def.\ \ref{def:PrinciBdleWithStruLGB}. One could view the fibres of $\mathcal{P}$ as having an "almost" Lie group structure, a Lie group structure without a designated neutral element. 
 
-Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} shows that the choice of a section of $\mathcal{P}$ is actually the choice of a designated neutral element, naturally inducing a Lie group structure in each fibre and thus an LGB structure, which may not be trivial. Aligning the more general definition of principal bundles with the definition of LGBs. For example set $\mathcal{P} = \mathcal{G} = c_G(P)$ as in Ex.\ \ref{ex:InnerLGBs}, where $P$ is a non-trivial pre-classical principal bundle and the underlying Lie group $G$ is non-abelian; such an LGB is likely non-trivial but always carries a global section. We will see such an example later.
+Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} shows that the choice of a section of $\mathcal{P}$ is actually the choice of a designated neutral element, naturally inducing a Lie group structure in each fibre and thus an LGB structure, which may not be trivial. Aligning the more general definition of principal bundles with the definition of LGBs. For example set $\mathcal{P} = \mathcal{G} = c_G(P)$ as in Ex.\ \ref{ex:InnerLGBs}, where $P$ is a non-trivial classical principal bundle and the underlying Lie group $G$ is non-abelian; such an LGB is likely non-trivial but always carries a global section. We will see such an example later.
 
 We want to use this now in order to study a certain pullback of principal bundles. For this we need to introduce general pullbacks of principal bundles; also recall again Cor.\ \ref{cor:PullbackLGB}.
 
@@ -3885,7 +3886,7 @@ However, as we have seen in Def.\ \ref{def:LRTranslations}, Rem.\ \ref{rem:Abstr
 
 But there are in general a plethora of sections with $\sigma_x= g$, thenceforth one expects that a definition of connections based on that may depend on the choice of sections and thus leading to conflicts once one looks at push-forwards with all possible $g \in \mathcal{G}$. Especially the tangential behaviour of the section's image (as an embedding of the base) may contribute to the push-forward; given a horizontal distribution, a horizontal vector may be still horizontal after a push-forward with one LGB section but not with respect to another LGB section. A similar problem may arise if we would work with local trivializations instead in order to use Ex.\ \ref{ex:TrivialLGBAction}. Thus, we need to adjust the typical definition of connections on principal bundles.
 
-In order to understand what has to be changed, let us revisit the "typical" situation, that is, let $\mathcal{P}$ be a pre-classical principal bundle as in Ex.\ \ref{ex:TheCLassicalPrincAsEx}, \textit{i.e.}\ $\mathcal{G} = M \times G$ is trivial with Lie group $G$. That is, the $\mathcal{G}$-action is equivalent to a $G$-action on $\mathcal{P}$ by Ex.\ \ref{ex:TrivialLGBAction}, a push-forward with $g \in G$ w.r.t.\ the latter action is equivalent to the push-forward with a constant section in $\mathcal{G}$ for which we may still simply write $g$.
+In order to understand what has to be changed, let us revisit the "typical" situation, that is, let $\mathcal{P}$ be a classical principal bundle as in Ex.\ \ref{ex:TheCLassicalPrincAsEx}, \textit{i.e.}\ $\mathcal{G} = M \times G$ is trivial with Lie group $G$. That is, the $\mathcal{G}$-action is equivalent to a $G$-action on $\mathcal{P}$ by Ex.\ \ref{ex:TrivialLGBAction}, a push-forward with $g \in G$ w.r.t.\ the latter action is equivalent to the push-forward with a constant section in $\mathcal{G}$ for which we may still simply write $g$.
 
 Equip $\mathcal{P}$ with a "typical" (Ehresmann) connection as in \cite[\S 5.1, Def.\ 5.1.6, page 260]{Hamilton}, that is, a horizontal distribution $\mathrm{H}\mathcal{P}$ of $\mathcal{P}$ with
 \ba\label{ClassicalSymmetryOfHorizontalDistr}
@@ -4099,7 +4100,7 @@ by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry beh
 	\end{tikzpicture}
 	\end{center}
 	\end{minipage}
-	Figure 1: Push-forward of a horizontal tangent vector $X$ with constant section (left) and general section(right), where $\mathcal{P}$ is a pre-classical principal bundle as in Ex.\ \ref{ex:TheCLassicalPrincAsEx} equipped with a "typical" connection $\mathrm{H}\mathcal{P}$ of principal $G$-bundles ($G$ the structural Lie group).
+	Figure 1: Push-forward of a horizontal tangent vector $X$ with constant section (left) and general section(right), where $\mathcal{P}$ is a classical principal bundle as in Ex.\ \ref{ex:TheCLassicalPrincAsEx} equipped with a "typical" connection $\mathrm{H}\mathcal{P}$ of principal $G$-bundles ($G$ the structural Lie group).
 \end{figure}
 
  %a very trivial LGB and an action thereof; we will omit discussions about smoothness in the following. We will now discuss the trivial LGB $\mathcal{G}$ given by
@@ -4967,6 +4968,10 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 for all $\nu \in \Gamma(\mathcal{g})$, the \textbf{$\mathcal{G}$-connection (on its LAB $\mathcal{g}$)}.
 \end{definitions}
 
+\begin{remarks}{Canonical flat $\mathcal{G}$-connection}{CanonicalFlatGConnection}
+If we again focus on trivial LGBs with their canonical flat connection as in Remark \ref{rem:TrivialLGBsAndTheirMCForm} and \ref{rem:DarbouxOnCanonFlat}, we can quickly derive that $\nabla^{\mathcal{G}}$ is then the canonical flat connection on the trivial LAB $\mathcal{g} = M \times \mathfrak{g}$ of $\mathcal{G} = M \times G$, $\mathfrak{g}$ the Lie algebra of the Lie group $G$.
+\end{remarks}
+
 \begin{remarks}{Pullback situation: Part III}{PullBackConnectionOfNablaG}
 Following Remark \ref{rem:PullBackDarboux} (see Remark \ref{rem:GeneralPullBackLGBConnSituation} for the initial setup) and all the involved notation we can again derive something related to the pullback LGB $f^*\mathcal{G}$. First of all, let us denote the exponential of $f^*\mathcal{G}$ and $\mathcal{G}$ by $\e_{f^*\mathcal{G}}$ and $\e_{\mathcal{G}}$, respectively, then we clearly have
 \bas
@@ -5345,7 +5350,7 @@ However, this is not a suitable definition for us, because our moment map is the
 Let us discuss several examples.
 
 \begin{examples}{Recovering of the classical definition}{OurConnectionIsReallyMoreGeneral}
-As we already discussed several times, especially recall Remark \ref{rem:ModRightPushOnVertic} and Ex.\ \ref{ex:TheCLassicalPrincAsEx}, we recover the typical definition of a connection on a principal bundle if $\mathcal{P}$ is a pre-classical principal bundle and if the trivial LGB $\mathcal{G}$ is equipped with its canonical flat connection $\mathrm{H}\mathcal{G}$. We call such a connection a \textbf{pre-classical connection}.
+As we already discussed several times, especially recall Remark \ref{rem:ModRightPushOnVertic} and Ex.\ \ref{ex:TheCLassicalPrincAsEx}, we recover the typical definition of a connection on a principal bundle if $\mathcal{P}$ is a classical principal bundle and if the trivial LGB $\mathcal{G}$ is equipped with its canonical flat connection $\mathrm{H}\mathcal{G}$. We call such a connection a \textbf{classical connection}.
 \end{examples}
 
 \begin{examples}{Associated LGBs}{AssociatedLGBsAndTheirCanonicalConnection}
@@ -5356,7 +5361,7 @@ Recall Def.\ \ref{def:AssociatedLGB}, and recall that LGBs themselves are princi
 	& M
 	\end{tikzcd}
 \end{center}
-Fix a typical pre-classical connection on $P$; as also introduced in Subsubsection \ref{TheBigMotivationBehindEverything} we have an associated parallel transport $\mathrm{PT}_\alpha^P: P_x \to \Gamma(\alpha^*P)$ along a curve $\alpha: [0, t] \to M$ ($t > 0$), where $\alpha(0) \eqqcolon x$. As proven in \cite[\S 5.9, Thm.\ 5.9.1, page 289f.]{Hamilton}, we have a canonical well-defined parallel transport $\mathrm{PT}_\alpha^\mathcal{H}: \mathcal{H}_x \to \Gamma(\alpha^*\mathcal{H})$ given by
+Fix a typical classical connection on $P$; as also introduced in Subsubsection \ref{TheBigMotivationBehindEverything} we have an associated parallel transport $\mathrm{PT}_\alpha^P: P_x \to \Gamma(\alpha^*P)$ along a curve $\alpha: [0, t] \to M$ ($t > 0$), where $\alpha(0) \eqqcolon x$. As proven in \cite[\S 5.9, Thm.\ 5.9.1, page 289f.]{Hamilton}, we have a canonical well-defined parallel transport $\mathrm{PT}_\alpha^\mathcal{H}: \mathcal{H}_x \to \Gamma(\alpha^*\mathcal{H})$ given by
 \bas
 \mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
 &=
@@ -5388,7 +5393,7 @@ for all $[p, h], \mleft[ p, h^\prime \mright] \in \mathcal{H}_x$. Now recall tha
 for all $X \in \mathrm{H}_{[p,h]}\mathcal{H}$.
 By Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} and dimensional reasons (horizontal subspaces are of the same dimension) it follows immediately that $\mathrm{H}\mathcal{H}$ is an (Ehresmann) connection on $\mathcal{H}$ in sense of Def.\ \ref{def:FinallyTheConnection}.
 
-We call such connections on LGBs associated to a pre-classical principal bundle an \textbf{associated connection}.
+We call such connections on LGBs associated to a classical principal bundle an \textbf{associated connection}.
 \end{examples}
 
 As expected, we have a corresponding connection 1-form. For this we need to formally define the pullback of 1-forms with respect to the modified right-pushforward.
@@ -5446,7 +5451,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 
 \begin{remark}
 \leavevmode\newline
-\indent $\bullet$ Due to the fact that we formulated the $\mathcal{G}$-equivariance using Ex.\ \ref{ex:AdjointACtionOnVP}, one may be able to show an analogue of the 1:1 correspondence of typical (pre-classical) connection 1-forms to connection reforms and splittings of the Atiyah sequence; that is, a generalization of \cite[\S 3.2, page 90 ff.]{mackenzieGeneralTheory}.
+\indent $\bullet$ Due to the fact that we formulated the $\mathcal{G}$-equivariance using Ex.\ \ref{ex:AdjointACtionOnVP}, one may be able to show an analogue of the 1:1 correspondence of typical (classical) connection 1-forms to connection reforms and splittings of the Atiyah sequence; that is, a generalization of \cite[\S 3.2, page 90 ff.]{mackenzieGeneralTheory}.
 
 $\bullet$ The $\mathcal{G}$-equivariance reads point-wise for $g \coloneqq \sigma_x$ ($x\in M$)
 \bas
@@ -5629,7 +5634,7 @@ p \cdot \sigma_p
 \Phi\mleft( \sigma_p \mright).
 \eas
 
-As in the case of typical/pre-classical principal bundles, we have the following statement.
+As in the case of typical/classical principal bundles, we have the following statement.
 
 \begin{propositions}{Gauge transformations as $\mathcal{G}$-valued conjugation maps}{GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Then there is a well-defined group isomorphism of gauge transformations and $\mathcal{G}$-valued conjugation maps given by
@@ -6432,7 +6437,11 @@ for all $(g, q) \in \mathcal{G} * \mathcal{G}$. As a principal bundle, $\mathcal
 Observe that the proof's argument implies that a parallel transported neutral element is again the neutral element of the corresponding final fibre. Thus, $M$ naturally embedded via $e$, the neutral element section, can be viewed as a horizontal leave of $\mathrm{H}\mathcal{G}$ in this case.
 \end{remarks}
 
-Let us provide a canonical example of Yang-Mills connections.
+Let us provide canonical examples of Yang-Mills connections.
+
+\begin{examples}{Classical Yang-Mills connection}{ClassicalYangMillsConnection}
+Let us look at a classical principal bundle $P$ with trivial LGB $\mathcal{G} = M \times G$, $G$ a Lie group; recall Ex.\ \ref{ex:TheCLassicalPrincAsEx} and \ref{ex:OurConnectionIsReallyMoreGeneral}. The canonical flat connection on $\mathcal{G}$
+\end{examples}
 
 \begin{examples}{Associated connections of inner group bundles are Yang-Mills connections}{OurVeryImportantExample}
 Recall Ex.\ \ref{ex:AssociatedLGBsAndTheirCanonicalConnection}, its setup and notation. We have discussed a canonical connection on associated LGBs $\mathcal{H} = P \times_\psi H$, called associated connection. Following the argument about parallel transports in the proof of Lemma \ref{lem:YangMillsConnAnEhresmann}, we know that the associated connection satisfies Eq.\ \eqref{CondSGleichNullLAB} due to the fact that the parallel transport of $\mathcal{H}$ is a homomorphism.
@@ -6485,7 +6494,7 @@ for all $X \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathrm{Ad}(P))$. It follows
 \eas
 for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal parallel transport inherited by $\mathrm{PT}^{c_G(P)}$, so that we can conclude that $\nabla^{\mathrm{YM}}$ corresponds to the Yang-Mills connection on $c_G(P)$ in sense of Def.\ \ref{def:ConnectionOnLAB}.
 
-This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical $G$-connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$.
+This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$. Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle.
 \end{examples}
 
 \begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
