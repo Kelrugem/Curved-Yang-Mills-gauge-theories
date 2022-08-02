@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {2.2}Associated Lie group bundles}{6}{subsection.2.2}%
 \contentsline {section}{\numberline {3}LGB actions, part I}{12}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Definition}{12}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Examples of LGB actions}{18}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Examples of LGB actions}{19}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Lie algebra bundles (LABs)}{25}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Definition}{25}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}From LGBs to LABs}{28}{subsection.4.2}%
@@ -30,11 +30,10 @@
 \contentsline {subsubsection}{\numberline {6.2.4}Generalized connection 1-forms on principal bundles}{88}{subsubsection.6.2.4}%
 \contentsline {subsection}{\numberline {6.3}Gauge transformations}{97}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Generalized curvature/field strength}{109}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Generalized covariant derivative/minimal coupling}{112}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{112}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{112}{section.8}%
-\contentsline {section}{\nonumberline List of References}{113}{section*.3}%
-\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{113}{appendix.A}%
-\contentsline {section}{\numberline {B}Other Interpretations of the compatibility conditions}{122}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Minimal coupling}{122}{subsection.B.1}%
+\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{114}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{114}{section.8}%
+\contentsline {section}{\nonumberline List of References}{114}{section*.3}%
+\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{115}{appendix.A}%
+\contentsline {section}{\numberline {B}Other Interpretations of the compatibility conditions}{123}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Minimal coupling}{123}{subsection.B.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

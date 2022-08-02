@@ -4968,9 +4968,21 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 for all $\nu \in \Gamma(\mathcal{g})$, the \textbf{$\mathcal{G}$-connection (on its LAB $\mathcal{g}$)}.
 \end{definitions}
 
-\begin{remarks}{Canonical flat $\mathcal{G}$-connection}{CanonicalFlatGConnection}
-If we again focus on trivial LGBs with their canonical flat connection as in Remark \ref{rem:TrivialLGBsAndTheirMCForm} and \ref{rem:DarbouxOnCanonFlat}, we can quickly derive that $\nabla^{\mathcal{G}}$ is then the canonical flat connection on the trivial LAB $\mathcal{g} = M \times \mathfrak{g}$ of $\mathcal{G} = M \times G$, $\mathfrak{g}$ the Lie algebra of the Lie group $G$.
-\end{remarks}
+\begin{examples}{Canonical flat $\mathcal{G}$-connection}{CanonicalFlatGConnection}
+If we again focus on trivial LGBs with their canonical flat connection as in Remark \ref{rem:TrivialLGBsAndTheirMCForm} and \ref{rem:DarbouxOnCanonFlat}, we can quickly derive that $\nabla^{\mathcal{G}}$ is then the canonical flat connection on the trivial LAB $\mathcal{g} = M \times \mathfrak{g}$ of $\mathcal{G} = M \times G$, $\mathfrak{g}$ the Lie algebra of the Lie group $G$. Let $\nu$ be a constant section of $\mathcal{g}$, then $\e^{t\nu}$ is a constant section of $\mathcal{G}$ for all $t \in \mathbb{R}$, so that by Remark \ref{rem:DarbouxOnCanonFlat}
+\bas
+\Delta^{\mathcal{G}} \e^{t\nu}
+&=
+0,
+\eas
+and thus
+\bas
+\nabla^{\mathcal{G}} \nu
+&=
+0
+\eas
+for all constant sections $\nu \in \Gamma(\mathcal{g})$. By the uniqueness of the canonical flat connection (w.r.t.\ a trivialisation) we conclude that $\nabla^{\mathcal{G}}$ is the canonical flat connection on $\mathcal{g} = M \times \mathfrak{g}$.
+\end{examples}
 
 \begin{remarks}{Pullback situation: Part III}{PullBackConnectionOfNablaG}
 Following Remark \ref{rem:PullBackDarboux} (see Remark \ref{rem:GeneralPullBackLGBConnSituation} for the initial setup) and all the involved notation we can again derive something related to the pullback LGB $f^*\mathcal{G}$. First of all, let us denote the exponential of $f^*\mathcal{G}$ and $\mathcal{G}$ by $\e_{f^*\mathcal{G}}$ and $\e_{\mathcal{G}}$, respectively, then we clearly have
@@ -5999,14 +6011,14 @@ A_{p \cdot \widetilde{\sigma}_p}\mleft(
 	+ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X)
 \\
 &=
-\sAd_{\mathrm{pr}_2\mleft( \mleft(\sigma^H\mright)^{-1} \mright)}\bigl(A_p(X)\bigr)
+\sAd_{\mathrm{pr}_2\mleft( \mleft(\sigma_p^H\mright)^{-1} \mright)}\bigl(A_p(X)\bigr)
 	+ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X),
 \eas
 which finishes the proof, where we used the trivial relation (alternatively recall Cor.\ \ref{cor:PullbackLGB})
 \bas
-\mleft(\mathrm{pr}_2\mleft( \sigma^H \mright)\mright)^{-1}
+\mleft(\mathrm{pr}_2\mleft( \sigma_p^H \mright)\mright)^{-1}
 &=
-\mathrm{pr}_2\mleft( \mleft(\sigma^H\mright)^{-1} \mright).
+\mathrm{pr}_2\mleft( \mleft(\sigma_p^H\mright)^{-1} \mright).
 \eas
 %where we used the previously-mentioned isomorphism $H^*\pi^*\mathcal{g} \cong \pi^*\mathcal{g}$ to write
 %\bas
@@ -6350,7 +6362,13 @@ s_j^!\mleft( {\sAd_{\mathrm{pr}_2\circ\mleft(\sigma^{H_{ji}}\mright)^{-1}}} \cir
 =
 {\mathrm{Ad}_{\mleft(\mathrm{pr}_2\circ\sigma^{H_{ji}}\circ s_j\mright)^{-1}}} \circ s_j^!A
 =
-{\mathrm{Ad}_{\sigma_{ji}^{-1}}} \circ A_{s_j}.
+{\mathrm{Ad}_{\sigma_{ji}^{-1}}} \circ A_{s_j},
+\eas
+where we used again the trivial relation (alternatively recall Cor.\ \ref{cor:PullbackLGB})
+\bas
+\mleft(\mathrm{pr}_2 \circ \sigma^{H_{ji}} \mright)^{-1}
+&=
+\mathrm{pr}_2 \circ \mleft(\sigma^{H_{ji}}\mright)^{-1}.
 \eas
 Altogether, concluding the proof with
 \bas
@@ -6409,11 +6427,17 @@ R_{\nabla^{\mathcal{G}}}(X, Y)\mu
 \mleft[ \zeta(X, Y), \mu \mright]_{\mathcal{g}}\label{CondKruemmungmitBLAB}
 \ea
 for all $\mu, \nu \in \Gamma(\mathcal{g})$ and $X, Y \in \mathfrak{X}(M)$, where $R_{\nabla^{\mathcal{G}}}$ is the curvature of $\nabla^{\mathcal{G}}$. We then also call $\nabla^{\mathcal{G}}$ a Yang-Mills connection and denote it by $\nabla^{\mathrm{YM}}$.
+
+In the following $\zeta$ is always such a 2-form as given here, and even though it is not uniquely given we will treat it as if it is fixed for a given $\nabla^{\mathrm{YM}}$. 
 \end{definitions}
 
 \begin{remark}\label{MackenziesStuffRelation}
 \leavevmode\newline
-As illustrated in \cite[\S 5.1]{MyThesis} and \cite{My1stpaper} such connections also arise in \cite[\S 7.2, page 271ff.]{mackenzieGeneralTheory}: There these connections are called \textbf{Lie derivation laws covering a coupling} due to the fact that these are important in the construction of "coupling" an LAB to a Lie algebroid via a Whitney sum in such a way that the outcome is again a Lie algebroid. There is a strong relationship of this study with the gauge theory we are going to define, however, we will not need this so that we will not repeat what has been discussed in \cite[\S 5.1]{MyThesis} and \cite{My1stpaper}. The relation to Mackenzie's study can be useful for the interested reader to understand the importance of these compatibility conditions. In my opinion, the compatibility conditions together with a trivial what Mackenzie calls the obstruction class (and an ad-invariant scalar product on the LAB) are needed to define Yang-Mills gauge theories from an axiomatic point of view. If the reader is interested into that, then I would appreciate an email so that I can send these details.
+As illustrated in \cite[\S 5.1]{MyThesis} and \cite{My1stpaper} such connections also arise in \cite[\S 7.2, page 271ff.]{mackenzieGeneralTheory}: There these connections are called \textbf{Lie derivation laws covering a coupling} due to the fact that these are important in the construction of "coupling" an LAB to a Lie algebroid via a Whitney sum in such a way that the outcome is again a Lie algebroid. There is a strong relationship of this study with the gauge theory we are going to define, however, we will not need this so that we will not repeat what has been discussed in \cite[\S 5.1]{MyThesis} and \cite{My1stpaper}. 
+
+One may want to write that $\mleft( \nabla^{\mathrm{YM}}, \zeta \mright)$ is a Yang-Mills connection, giving an emphasis on the non-uniqueness of $\zeta$. However, we are not going to do so, and the mentioned references and relations to Mackenzie's work actually show that there is just one object behind all of that describing this Yang-Mills connection and its relation to the following gauge theory. It would take too much time introducing all of this again; see the references.
+
+The relation to Mackenzie's study can be useful for the interested reader to understand the importance of these compatibility conditions, too. In my opinion, the compatibility conditions together with a trivial what Mackenzie calls the obstruction class (and an ad-invariant fibre metric on the LAB) are needed to define Yang-Mills gauge theories from an axiomatic point of view. If the reader is interested into that, then I would appreciate an email so that I can send these details.
 \end{remark}
 
 Viewing the LGB $\mathcal{G}$ as a principal $\mathcal{G}$-bundle, one can show that Yang-Mills connections are a special type of Ehresmann connection.
@@ -6439,8 +6463,14 @@ Observe that the proof's argument implies that a parallel transported neutral el
 
 Let us provide canonical examples of Yang-Mills connections.
 
-\begin{examples}{Classical Yang-Mills connection}{ClassicalYangMillsConnection}
-Let us look at a classical principal bundle $P$ with trivial LGB $\mathcal{G} = M \times G$, $G$ a Lie group; recall Ex.\ \ref{ex:TheCLassicalPrincAsEx} and \ref{ex:OurConnectionIsReallyMoreGeneral}. The canonical flat connection on $\mathcal{G}$
+\begin{examples}{(Pre-)Classical Yang-Mills connection}{ClassicalYangMillsConnection}
+Let us look at a classical principal bundle $P$ with trivial LGB $\mathcal{G} = M \times G$, $G$ a Lie group; recall Ex.\ \ref{ex:TheCLassicalPrincAsEx} and \ref{ex:OurConnectionIsReallyMoreGeneral}. The canonical flat connection on $\mathcal{G}$ induces the canonical flat connection $\nabla^{\mathcal{G}}$ on its LAB $\mathcal{g} = M \times \mathfrak{g}$, recall Ex.\ \ref{ex:CanonicalFlatGConnection}. Thus,
+\bas
+R_{\nabla^{\mathcal{G}}} &= 0
+\eas
+and so we can set $\zeta \equiv 0$. Using a frame of global sections, it is trivial to check that also Eq.\ \eqref{CondSGleichNullLAB} is satisfied. We then call $\nabla^{\mathrm{cYM}} = \nabla^{\mathcal{G}}$ a \textbf{classical Yang-Mills connection}.
+
+However, observe that $\zeta$ can be centre-valued while $\nabla^{\mathcal{G}}$ is still flat. In such an occasion we speak of a \textbf{pre-classical Yang-Mills connection}, denoted by $\nabla^{\mathrm{pYM}}$.
 \end{examples}
 
 \begin{examples}{Associated connections of inner group bundles are Yang-Mills connections}{OurVeryImportantExample}
@@ -6497,6 +6527,57 @@ for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal para
 This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$. Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle.
 \end{examples}
 
+Let us now introduce and discuss the field strength.
+
+\begin{definitions}{(Generalized) Field strength}{NewFieldStrength}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we define the \textbf{(generalized) field strength $F$} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
+\bas
+F
+&\coloneqq
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi^{\mathrm{H}\mathcal{G}}, \pi^{\mathrm{H}\mathcal{G}} \mright)
+	+ \pi^!\zeta,
+\eas
+where $\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}$ is the exterior covariant derivative related to the pullback connection $\pi^*\nabla^{\mathrm{YM}}$, and $\pi^{\mathrm{H}\mathcal{G}}: \mathrm{T}\mathcal{G} \to \mathrm{H}\mathcal{G}$ is the canonical projection onto the Yang-Mills connection $\mathrm{H}\mathcal{G}$. That is,
+\bas
+F
+&=
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \mleft( \pi^{\mathrm{H}\mathcal{G}}(X), \pi^{\mathrm{H}\mathcal{G}}(Y) \mright)
+	+ \mleft(\pi^*\zeta\mright) \bigl( \mathrm{D}\pi(X), \mathrm{D}\pi(Y) \bigr)
+\eas
+for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
+\end{definitions}
+
+Of course, we expect certain properties, naturally generalized by our previous discussion; especially recall all the discussion around the modified push-forward via right-translations $\mathcal{r}$, Def.\ \ref{def:WeModTheRIghtPush}.
+
+\begin{propositions}{Properties of the field strength}{NewFieldStrengthWithCoolProps}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
+\begin{itemize}
+	\item \textbf{(Form of type $\sAd$)}
+	\bas
+	\mathcal{r}_{\sigma}^!F
+	&=
+	\sAd_{\sigma^{-1}} \circ F
+	\eas
+	for all (local) $\sigma \in \Gamma(\mathcal{G})$.
+	\item \textbf{(Horizontal form)}
+	\newline
+	For $X, Y \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$) we have
+	\bas
+	F(X, Y)
+	&=
+	0
+	\eas
+	if either of $X$ and $Y$ is vertical.
+\end{itemize}
+\end{propositions}
+
+\begin{proof}
+\leavevmode\newline
+The second bullet point quickly follows by construction: The first summand of $F$ (recall Def.\ \ref{def:NewFieldStrength}) is clearly zero if either of $X$ and $Y$ is vertical; similar holds for the second summand because the vertical bundle is the kernel of $\mathrm{D}\pi$.
+
+Thence, let us focus on proving the first bullet point.
+\end{proof}
+
 \begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we have
 \bas
@@ -6522,7 +6603,7 @@ This will follow by Thm.\ \ref{thm:DiffOfLGBAction} and especially Remark \ref{r
 for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$.
 \end{proof}
 
-\subsection{Generalized covariant derivative/minimal coupling}
+%\subsection{Generalized covariant derivative/minimal coupling}
 
 \section{Curved Yang-Mills gauge theory}
 
