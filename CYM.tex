@@ -6547,7 +6547,34 @@ F
 for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
 \end{definitions}
 
-Of course, we expect certain properties, naturally generalized by our previous discussion; especially recall all the discussion around the modified push-forward via right-translations $\mathcal{r}$, Def.\ \ref{def:WeModTheRIghtPush}.
+Of course, we expect certain properties, naturally generalized by our previous discussion; however, in order to prove these we need to discuss the Darboux derivative w.r.t.\ Yang-Mills connections. Let us start with its Leibniz rule. 
+
+\begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we have
+\bas
+\Delta(\sigma \cdot \tau)
+&=
+\eas
+for all $\sigma, \tau \in \Gamma(\mathcal{G})$.
+\end{propositions}
+
+\begin{proof}
+\leavevmode\newline
+This will follow by Thm.\ \ref{thm:DiffOfLGBAction} and especially Remark \ref{rem:DarbouxInActionInfinit}; so denote with $\Phi$ the $\mathcal{G}$-multiplication, then
+\bas
+\mathrm{D}_x(\sigma \cdot \tau)(X)
+&=
+\mathrm{D}_{(\sigma_x, \tau_x)}\Phi \bigl( \mathrm{D}_x\sigma(X), \mathrm{D}_x \tau(X) \bigr)
+\\
+&=
+\mathrm{D}_{\sigma_x}R_\tau\bigl( \mathrm{D}_x\sigma(X) \bigr)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\tau_x} \bigl( \mathrm{D}_x \tau(X) \bigr)}}\mright|_{\sigma_x \cdot \tau_x}
+	- \mleft.{\oversortoftilde{ \mleft.(\Delta \tau)\mright|_x (X)}}\mright|_{\sigma_x \cdot \tau_x}
+\eas
+for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$.
+\end{proof}
+
+especially recall all the discussion around the modified push-forward via right-translations $\mathcal{r}$, Def.\ \ref{def:WeModTheRIghtPush}.
 
 \begin{propositions}{Properties of the field strength}{NewFieldStrengthWithCoolProps}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
@@ -6576,31 +6603,6 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 The second bullet point quickly follows by construction: The first summand of $F$ (recall Def.\ \ref{def:NewFieldStrength}) is clearly zero if either of $X$ and $Y$ is vertical; similar holds for the second summand because the vertical bundle is the kernel of $\mathrm{D}\pi$.
 
 Thence, let us focus on proving the first bullet point.
-\end{proof}
-
-\begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we have
-\bas
-\Delta(\sigma \cdot \tau)
-&=
-\eas
-for all $\sigma, \tau \in \Gamma(\mathcal{G})$.
-\end{propositions}
-
-\begin{proof}
-\leavevmode\newline
-This will follow by Thm.\ \ref{thm:DiffOfLGBAction} and especially Remark \ref{rem:DarbouxInActionInfinit}; so denote with $\Phi$ the $\mathcal{G}$-multiplication, then
-\bas
-\mathrm{D}_x(\sigma \cdot \tau)(X)
-&=
-\mathrm{D}_{(\sigma_x, \tau_x)}\Phi \bigl( \mathrm{D}_x\sigma(X), \mathrm{D}_x \tau(X) \bigr)
-\\
-&=
-\mathrm{D}_{\sigma_x}R_\tau\bigl( \mathrm{D}_x\sigma(X) \bigr)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\tau_x} \bigl( \mathrm{D}_x \tau(X) \bigr)}}\mright|_{\sigma_x \cdot \tau_x}
-	- \mleft.{\oversortoftilde{ \mleft.(\Delta \tau)\mright|_x (X)}}\mright|_{\sigma_x \cdot \tau_x}
-\eas
-for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$.
 \end{proof}
 
 %\subsection{Generalized covariant derivative/minimal coupling}
