@@ -463,6 +463,8 @@ Most of the time we will not mention this 1:1 correspondence explicitly, it shou
 &\coloneqq
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t} [t \mapsto \gamma]\mright|_t.
 \eas
+
+\item We will often have connections on a bundle, that is, a splitting into a horizontal and vertical bundle of its tangent bundle. When we write "Let $\pi$ be the projection onto the vertical/horizontal bundle", then this will be always w.r.t.\ to the fixed connection even though we are not explicitly mention it again.
 \end{itemize}
 
 \subsection{Assumed background knowledge}
@@ -6547,10 +6549,37 @@ F
 for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
 \end{definitions}
 
-Of course, we expect certain properties, naturally generalized by our previous discussion; however, in order to prove these we need to discuss the Darboux derivative w.r.t.\ Yang-Mills connections. Let us start with its Leibniz rule. 
+Of course, we expect certain properties, naturally generalized by our previous discussion; however, in order to prove these we need to discuss the Darboux derivative w.r.t.\ Yang-Mills connections. Let us start with an auxiliary result and then a Leibniz rule; especially recall all the discussion around the modified push-forward via right-translations $\mathcal{r}$, Def.\ \ref{def:WeModTheRIghtPush}.
+
+\begin{corollaries}{Commutation of modified push-forward and projections}{ModifiedRightPushyCommutesWithProj}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$ on $\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ an Ehresmann connection on $\mathcal{P}$; denote with $\pi_h$ and $\pi_v$ the associated projections on the horizontal and vertical bundle of $\mathcal{P}$, respectively. Then we have
+\bas
+\mathcal{r}_{g*} \circ \pi_h
+&=
+\pi_h \circ \mathcal{r}_{g*},\\
+\mathcal{r}_{g*} \circ \pi_v
+&=
+\pi_v \circ \mathcal{r}_{g*}
+\eas
+for all $g \in \mathcal{G}$.
+\end{corollaries}
+
+\begin{proof}
+\leavevmode\newline
+By Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} (also recall Remark \ref{rem:ModRightPushOnVertic}) and Def.\ \ref{def:FinallyTheConnection} we have
+\bas
+\mathcal{r}_{g*}\mleft(\mathrm{V}_p\mathcal{P}\mright)
+&=
+\mathrm{V}_{p\cdot g}\mathcal{P},\\
+\mathcal{r}_{g*}\mleft( \mathrm{H}_p\mathcal{P} \mright)
+&=
+\mathrm{H}_{p\cdot g}\mathcal{P},
+\eas
+thus, $\mathcal{r}_{g*}$ preserves the splitting $\mathrm{T}\mathcal{P} = \mathrm{H}\mathcal{P} \oplus \mathrm{V}\mathcal{P}$. This concludes the proof.
+\end{proof}
 
 \begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we have
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a Yang-Mills connection on $\mathcal{G}$. Then we have
 \bas
 \Delta(\sigma \cdot \tau)
 &=
@@ -6560,21 +6589,38 @@ for all $\sigma, \tau \in \Gamma(\mathcal{G})$.
 
 \begin{proof}
 \leavevmode\newline
-This will follow by Thm.\ \ref{thm:DiffOfLGBAction} and especially Remark \ref{rem:DarbouxInActionInfinit}; so denote with $\Phi$ the $\mathcal{G}$-multiplication, then
+ We have
 \bas
-\mathrm{D}_x(\sigma \cdot \tau)(X)
+\mathrm{D}_x\underbrace{(\sigma \tau)}_{\mathclap{ M \ni y \mapsto \sigma_x \tau_x = R_\tau(\sigma_x) }}(X)
 &=
-\mathrm{D}_{(\sigma_x, \tau_x)}\Phi \bigl( \mathrm{D}_x\sigma(X), \mathrm{D}_x \tau(X) \bigr)
+\mathrm{D}_x\mleft( R_\tau \circ \sigma \mright)(X)
 \\
 &=
-\mathrm{D}_{\sigma_x}R_\tau\bigl( \mathrm{D}_x\sigma(X) \bigr)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\tau_x} \bigl( \mathrm{D}_x \tau(X) \bigr)}}\mright|_{\sigma_x \cdot \tau_x}
-	- \mleft.{\oversortoftilde{ \mleft.(\Delta \tau)\mright|_x (X)}}\mright|_{\sigma_x \cdot \tau_x}
+\mathrm{D}_{\sigma_x}R_\tau \bigl( \mathrm{D}_x\sigma(X) \bigr)
+\\
+&=
+\mathcal{r}_{\tau_x*}\bigl( \mathrm{D}_x\sigma(X) \bigr)
+	+ \mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi_{\mathcal{G}}^!\Delta\tau \mright) \mright|_{\sigma_x}\bigl( \mathrm{D}_x\sigma(X) \bigr)
+	}}\mright|_{\sigma_x \cdot \tau_x}
+\\
+&=
+\mathcal{r}_{\tau_x*}\bigl( \mathrm{D}_x\sigma(X) \bigr)
+	+ \mleft.{\oversortoftilde{
+		\mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
+	}}\mright|_{\sigma_x \cdot \tau_x}
 \eas
-for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$.
+for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$, where we used that $\pi_{\mathcal{G}} \circ \sigma = \mathds{1}_M$. Viewing $\mathcal{G}$ as a principal $\mathcal{G}$-bundle we know by Lemma \ref{lem:YangMillsConnAnEhresmann} that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection so that we can apply Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj}. Together with recalling Def.\ \ref{def:FundVecs} we derive
+\bas
+\Delta(\sigma\tau)_x(X)
+&=
+\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma_x\tau_x}\bigl( \mathrm{D}_x(\sigma \tau)(X) \bigr)
+\\
+&=
+\mleft(\mathrm{D}_{\sigma_x\tau_x} L_{(\sigma_x\tau_x)^{-1}} \circ \pi_v \circ \mathrm{D}_x(\sigma\tau) \mright)(X)
+\eas
+where $\pi_v$ is the projection onto the vertical structure in $\mathcal{G}$.
 \end{proof}
-
-especially recall all the discussion around the modified push-forward via right-translations $\mathcal{r}$, Def.\ \ref{def:WeModTheRIghtPush}.
 
 \begin{propositions}{Properties of the field strength}{NewFieldStrengthWithCoolProps}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
