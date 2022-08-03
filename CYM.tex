@@ -6549,7 +6549,7 @@ F
 for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
 \end{definitions}
 
-Of course, we expect certain properties, naturally generalized by our previous discussion; however, in order to prove these we need to discuss the Darboux derivative w.r.t.\ Yang-Mills connections. Let us start with an auxiliary result and then a Leibniz rule; especially recall all the discussion around the modified push-forward via right-translations $\mathcal{r}$, Def.\ \ref{def:WeModTheRIghtPush}.
+Of course, we expect certain properties, naturally generalized by our previous discussion; however, in order to prove these we need to discuss the Darboux derivative w.r.t.\ Yang-Mills connections.\footnote{Many of the following properties can actually be showed w.r.t.\ every Ehresmann connection, not just the Yang-Mills ones.} Let us start with an auxiliary result and then a Leibniz rule; especially recall all the discussion around the modified push-forward via right-translations $\mathcal{r}$, Def.\ \ref{def:WeModTheRIghtPush}.
 
 \begin{corollaries}{Commutation of modified push-forward and projections}{ModifiedRightPushyCommutesWithProj}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$ on $\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ an Ehresmann connection on $\mathcal{P}$; denote with $\pi_h$ and $\pi_v$ the associated projections on the horizontal and vertical bundle of $\mathcal{P}$, respectively. Then we have
@@ -6581,8 +6581,16 @@ thus, $\mathcal{r}_{g*}$ preserves the splitting $\mathrm{T}\mathcal{P} = \mathr
 \begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a Yang-Mills connection on $\mathcal{G}$. Then we have
 \bas
-\Delta(\sigma \cdot \tau)
+\Delta(\sigma \tau)
 &=
+\mathrm{Ad}_{\tau^{-1}} \circ \Delta \sigma
+	+ \Delta\tau
+\eas
+and
+\bas
+\Delta\mleft(\sigma^{-1}\mright)
+&=
+- \mathrm{Ad}_{\sigma} \circ \Delta \sigma
 \eas
 for all $\sigma, \tau \in \Gamma(\mathcal{G})$.
 \end{propositions}
@@ -6618,8 +6626,57 @@ for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G
 \\
 &=
 \mleft(\mathrm{D}_{\sigma_x\tau_x} L_{(\sigma_x\tau_x)^{-1}} \circ \pi_v \circ \mathrm{D}_x(\sigma\tau) \mright)(X)
+\\
+&=
+\mleft(\mathrm{D}_{\sigma_x\tau_x} L_{\tau_x^{-1}\sigma_x^{-1}} \circ \mathcal{r}_{\tau_x*} \circ \pi_v \circ \mathrm{D}_x\sigma\mright)(X)
+	+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
+\\
+&=
+\mleft(\mathrm{D}_{\sigma_x\tau_x} L_{\tau_x^{-1}\sigma_x^{-1}} \circ \mathrm{D}_{\sigma_x}R_{\tau_x}
+\circ \pi_v \circ \mathrm{D}_x\sigma\mright)(X)
+	+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
+\\
+&=
+\Bigl(\mathrm{D}_{\sigma_x} 
+{\underbrace{\mleft( L_{\tau_x^{-1}\sigma_x^{-1}} \circ R_{\tau_x} \mright)}
+	_{\mathclap{ \mathcal{G} \ni g \mapsto c_{\tau_x^{-1}} \circ L_{\sigma_x^{-1}} }}}
+\circ \pi_v \circ \mathrm{D}_x\sigma\Bigr)(X)
+	+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
+\\
+&=
+\mleft(\mathrm{D}_{e_x} c_{\tau_x^{-1}} \circ \mathrm{D}_{\sigma_x}L_{\sigma_x^{-1}}
+\circ \pi_v \circ \mathrm{D}_x\sigma\mright)(X)
+	+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
+\\
+&=
+\mathrm{Ad}_{\tau_x^{-1}}\bigl( \mleft(\Delta\sigma\mright)_x(X) \bigr)
+	+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
 \eas
-where $\pi_v$ is the projection onto the vertical structure in $\mathcal{G}$.
+where $\pi_v$ is the projection onto the vertical structure in $\mathcal{G}$, $e_x$ the neutral element of $\mathcal{G}_x$, and using Remark \ref{rem:ModRightPushOnVertic}, \textit{i.e.} ${\mathcal{r}_{\tau_x*}} \circ \pi_v = r_{\tau_x*} \circ \pi_v$.
+
+Now recall Remark \ref{rem:baseManifoldHoriz}; Lemma \ref{lem:YangMillsConnAnEhresmann} implies for the neutral element section $e$ that
+\bas
+\Delta e
+&=
+0,
+\eas
+and therefore
+\bas
+0
+&=
+\Delta e
+=
+\Delta \mleft( \sigma \sigma^{-1} \mright)
+=
+\mathrm{Ad}_{\sigma} \circ \Delta \sigma
+	+ \Delta\mleft(\sigma^{-1}\mright),
+\eas
+thus, concluding the proof with
+\bas
+\Delta\mleft(\sigma^{-1}\mright)
+&=
+- \mathrm{Ad}_{\sigma} \circ \Delta \sigma.
+\eas
 \end{proof}
 
 \begin{propositions}{Properties of the field strength}{NewFieldStrengthWithCoolProps}
