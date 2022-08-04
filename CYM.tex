@@ -5300,9 +5300,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \bas
 \mathcal{r}_{g*}(X)
 &\coloneqq
-\mathrm{D}_pr_\sigma\mleft( 
-	X 
-\mright)
+\mathrm{D}_pr_\sigma\mleft( X \mright)
 	- \mleft.{\oversortoftilde{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	}}\mright|_{p \cdot g}
@@ -5313,11 +5311,9 @@ Similarly, for a (local) section $\sigma$ of $\mathcal{G}$ we define the \textbf
 \bas
 \mathcal{r}_{\sigma*}(X)
 &\coloneqq
-r_{\sigma_x*}(X)
+\mathcal{r}_{\sigma_x*}(X)
 =
-\mathrm{D}_pr_\sigma\mleft( 
-	X 
-\mright)
+\mathrm{D}_pr_\sigma\mleft( X \mright)
 	- \mleft.{\oversortoftilde{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	}}\mright|_{p \cdot \sigma_{x}}
@@ -6445,22 +6441,22 @@ The relation to Mackenzie's study can be useful for the interested reader to und
 Viewing the LGB $\mathcal{G}$ as a principal $\mathcal{G}$-bundle, one can show that Yang-Mills connections are a special type of Ehresmann connection.
 
 \begin{lemmata}{Yang-Mills connections as a special Ehresmann connection}{YangMillsConnAnEhresmann}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle if Eq.\ \eqref{CondSGleichNullLAB} is satisfied.
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle if and only if Eq.\ \eqref{CondSGleichNullLAB} is satisfied.
 \end{lemmata}
 
 \begin{proof}
 \leavevmode\newline
-This can be quickly answered by recalling how the parallel transport behaves; recall that Def.\ \ref{def:FinallyTheConnection} comes from Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} which itself stems from Eq.\ \eqref{PTHomomNEw}. Eq.\ \eqref{CondSGleichNullLAB} means that $\nabla^{\mathrm{YM}}$ is a Lie bracket derivation; integrated this means that the parallel transport $\mathrm{PT}^{\mathcal{G}}$ of $\mathcal{G}$ (omitting the notation of the involved curve) is a homomorphism, \textit{i.e.}\
+This can be quickly answered by recalling how the parallel transport behaves; recall that Def.\ \ref{def:FinallyTheConnection} comes from Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} which itself stems from Eq.\ \eqref{PTHomomNEw}. Starting with Eq.\ \eqref{CondSGleichNullLAB} means that $\nabla^{\mathcal{G}}$ is a Lie bracket derivation; integrated this means that the corresponding parallel transport $\mathrm{PT}^{\mathcal{G}}$ of $\mathcal{G}$ (omitting the notation of the involved curve) is a homomorphism, \textit{i.e.}\
 \bas
 \mathrm{PT}^{\mathcal{G}}(gq)
 &=
 \mathrm{PT}^{\mathcal{G}}(g) ~ \mathrm{PT}^{\mathcal{G}}(q)
 \eas
-for all $(g, q) \in \mathcal{G} * \mathcal{G}$. As a principal bundle, $\mathcal{G}$ equipped with its Yang-Mills connection satisfies Eq.\ \eqref{PTHomomNEw}, and thus $\mathrm{H}\mathcal{G}$ is an Ehresmann connection.
+for all $(g, q) \in \mathcal{G} * \mathcal{G}$. As a principal bundle, $\mathrm{H}\mathcal{G}$ therefore also satisfies Eq.\ \eqref{PTHomomNEw}, and thus $\mathrm{H}\mathcal{G}$ is an Ehresmann connection. The other direction is trivially following by Eq.\ \eqref{PTHomomNEw}.
 \end{proof}
 
 \begin{remarks}{Base manifold a horizontal leave}{baseManifoldHoriz}
-Observe that the proof's argument implies that a parallel transported neutral element is again the neutral element of the corresponding final fibre. Thus, $M$ naturally embedded via $e$, the neutral element section, can be viewed as a horizontal leave of $\mathrm{H}\mathcal{G}$ in this case.
+Observe that the proof's argument implies that a parallel transported neutral element is again the neutral element of the corresponding final fibre. Thus, $M$ naturally embedded via $e$, the neutral element section, can be viewed as a horizontal leave of $\mathrm{H}\mathcal{G}$ if $\mathrm{H}\mathcal{G}$ is an Ehresmann connection.
 \end{remarks}
 
 Let us provide canonical examples of Yang-Mills connections.
@@ -6536,20 +6532,22 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \bas
 F
 &\coloneqq
-\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi^{\mathrm{H}\mathcal{G}}, \pi^{\mathrm{H}\mathcal{G}} \mright)
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi^{\mathrm{H}\mathcal{P}}, \pi^{\mathrm{H}\mathcal{P}} \mright)
 	+ \pi^!\zeta,
 \eas
-where $\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}$ is the exterior covariant derivative related to the pullback connection $\pi^*\nabla^{\mathrm{YM}}$, and $\pi^{\mathrm{H}\mathcal{G}}: \mathrm{T}\mathcal{G} \to \mathrm{H}\mathcal{G}$ is the canonical projection onto the Yang-Mills connection $\mathrm{H}\mathcal{G}$. That is,
+where $\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}$ is the exterior covariant derivative related to the pullback connection $\pi^*\nabla^{\mathrm{YM}}$, and $\pi^{\mathrm{H}\mathcal{P}}: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ is the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$. That is,
 \bas
 F
 &=
-\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \mleft( \pi^{\mathrm{H}\mathcal{G}}(X), \pi^{\mathrm{H}\mathcal{G}}(Y) \mright)
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \mleft( \pi^{\mathrm{H}\mathcal{P}}(X), \pi^{\mathrm{H}\mathcal{P}}(Y) \mright)
 	+ \mleft(\pi^*\zeta\mright) \bigl( \mathrm{D}\pi(X), \mathrm{D}\pi(Y) \bigr)
 \eas
 for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
 \end{definitions}
 
-Of course, we expect certain properties, naturally generalized by our previous discussion; however, in order to prove these we need to discuss the Darboux derivative w.r.t.\ Yang-Mills connections.\footnote{Many of the following properties can actually be showed w.r.t.\ every Ehresmann connection, not just the Yang-Mills ones.} Let us start with an auxiliary result and then a Leibniz rule; especially recall all the discussion around the modified push-forward via right-translations $\mathcal{r}$, Def.\ \ref{def:WeModTheRIghtPush}.
+Of course, we expect certain properties, naturally generalized by our previous discussion; however, in order to prove these we need to discuss the Darboux derivative w.r.t.\ Yang-Mills connections.
+%\footnote{Many of the following properties can actually be showed w.r.t.\ every Ehresmann connection, not just the Yang-Mills ones.} 
+Let us start with an auxiliary result and then a Leibniz rule; especially recall all the discussion around the modified push-forward $\mathcal{r}$ via right-translations, Def.\ \ref{def:WeModTheRIghtPush}.
 
 \begin{corollaries}{Commutation of modified push-forward and projections}{ModifiedRightPushyCommutesWithProj}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$ on $\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ an Ehresmann connection on $\mathcal{P}$; denote with $\pi_h$ and $\pi_v$ the associated projections on the horizontal and vertical bundle of $\mathcal{P}$, respectively. Then we have
@@ -6563,6 +6561,20 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \t
 \eas
 for all $g \in \mathcal{G}$.
 \end{corollaries}
+
+\begin{remark}\label{RemOohThesePullbacksConfusOrNotToConfus}
+\leavevmode\newline
+This extends of course to (local) sections $\sigma \in \Gamma(\mathcal{G})$, and as discussed in Remark \ref{RemarkABoutDarbouxNotationWRTPullback} we can extend these equations to vector fields on $\mathcal{P}$ via pullbacks, that is,
+\bas
+\mathcal{r}_{\sigma*} \circ \pi_h
+&=
+r_\sigma^*\pi_h \circ \mathcal{r}_{\sigma*},\\
+\mathcal{r}_{\sigma*} \circ \pi_v
+&=
+r_\sigma^*\pi_v \circ \mathcal{r}_{\sigma*},
+\eas
+making use of that $\mathcal{r}_{\sigma*}$ is an isomorphism over $r_{\sigma*}$, recall Prop.\ \ref{prop:IsomorphismRightPushAndDarboux}.
+\end{remark}
 
 \begin{proof}
 \leavevmode\newline
@@ -6579,7 +6591,7 @@ thus, $\mathcal{r}_{g*}$ preserves the splitting $\mathrm{T}\mathcal{P} = \mathr
 \end{proof}
 
 \begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
-Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a Yang-Mills connection on $\mathcal{G}$. Then we have
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then we have
 \bas
 \Delta(\sigma \tau)
 &=
@@ -6595,7 +6607,12 @@ and
 for all $\sigma, \tau \in \Gamma(\mathcal{G})$.
 \end{propositions}
 
-\begin{proof}
+\begin{remark}
+\leavevmode\newline
+These are precisely the formulas one expects, see \textit{e.g.}\ \cite[\S 5.1, Eq.\ (2) and (3), page 182]{mackenzieGeneralTheory} for the "classical" case; beware that the reference uses right- instead of left-invariant vector fields to describe the Lie algebra, so that the referenced formulas look explicitly a bit different. Nevertheless, the similarity of the structure should be obvious.
+\end{remark}
+
+\begin{proof}[Proof of Prop.\ \ref{prop:DarbouxLeibnizRule}]
 \leavevmode\newline
  We have
 \bas
@@ -6618,7 +6635,7 @@ for all $\sigma, \tau \in \Gamma(\mathcal{G})$.
 		\mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
 	}}\mright|_{\sigma_x \cdot \tau_x}
 \eas
-for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$, where we used that $\pi_{\mathcal{G}} \circ \sigma = \mathds{1}_M$. Viewing $\mathcal{G}$ as a principal $\mathcal{G}$-bundle we know by Lemma \ref{lem:YangMillsConnAnEhresmann} that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection so that we can apply Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj}. Together with recalling Def.\ \ref{def:FundVecs} we derive
+for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$, where we used that $\pi_{\mathcal{G}} \circ \sigma = \mathds{1}_M$. Viewing $\mathcal{G}$ as a principal $\mathcal{G}$-bundle we can apply Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj}. Together with recalling Def.\ \ref{def:FundVecs} we derive
 \bas
 \Delta(\sigma\tau)_x(X)
 &=
@@ -6654,10 +6671,10 @@ for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G
 \eas
 where $\pi_v$ is the projection onto the vertical structure in $\mathcal{G}$, $e_x$ the neutral element of $\mathcal{G}_x$, and using Remark \ref{rem:ModRightPushOnVertic}, \textit{i.e.} ${\mathcal{r}_{\tau_x*}} \circ \pi_v = r_{\tau_x*} \circ \pi_v$.
 
-Now recall Remark \ref{rem:baseManifoldHoriz}; Lemma \ref{lem:YangMillsConnAnEhresmann} implies for the neutral element section $e$ that
+Now recall Remark \ref{rem:baseManifoldHoriz}; this implies for the neutral element section $e$ that
 \bas
 \Delta e
-&=
+&\equiv
 0,
 \eas
 and therefore
@@ -6705,7 +6722,77 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \leavevmode\newline
 The second bullet point quickly follows by construction: The first summand of $F$ (recall Def.\ \ref{def:NewFieldStrength}) is clearly zero if either of $X$ and $Y$ is vertical; similar holds for the second summand because the vertical bundle is the kernel of $\mathrm{D}\pi$.
 
-Thence, let us focus on proving the first bullet point.
+Thence, let us focus on proving the first bullet point, and denote with $\pi_h: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, so that we write
+\bas
+F
+&=
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi_h, \pi_h \mright)
+	+ \pi^!\zeta.
+\eas
+We have for $\sigma \in \Gamma(\mathcal{G})$
+\bas
+\mleft(\mathcal{r}_\sigma^!\pi^!\zeta\mright)_p(X, Y)
+&=
+\zeta_{x}\bigl(
+	\mathrm{D}_{p \cdot \sigma_x}\pi\mleft( \mathcal{r}_{\sigma_x*}(X) \mright),
+	\mathrm{D}_{p \cdot \sigma_x}\pi\mleft( \mathcal{r}_{\sigma_x*}(Y) \mright)
+\bigr),
+\\
+&=
+\zeta_{x}\bigl(
+	{\underbrace{\mathrm{D}_{p \cdot \sigma_x}\pi\mleft( \mathrm{D}_pr_\sigma\mleft( X \mright) \mright)}_{\mathclap{ = \mathrm{D}_p\mleft( \pi \circ r_\sigma \mright) = \mathrm{D}_p\pi }}},
+	\mathrm{D}_{p \cdot \sigma_x}\pi\mleft( \mathrm{D}_pr_\sigma\mleft( Y \mright) \mright)
+\bigr)
+\\
+&=
+\mleft(\pi^!\zeta\mright)_p(X, Y)
+\eas
+for all $p \in \mathcal{P}_x$ ($x \in M$) and $X, Y \in \mathrm{T}_p\mathcal{P}$, making use of that fundamental vector fields are in the kernel of $\mathrm{D}\pi$ so that $\mathrm{D}\pi \circ \mathcal{r}_{\sigma_x*} = \mathrm{D}\pi \circ r_{\sigma_x*}$. For the first term in the field strength use Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj} and Remark \ref{RemOohThesePullbacksConfusOrNotToConfus} so that
+\bas
+\mathcal{r}_\sigma^!\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi_h, \pi_h \mright)\mright)
+&=
+\mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \circ \mleft( r_\sigma^*\pi_h \circ \mathcal{r}_{\sigma*}, r_\sigma^*\pi_h \circ \mathcal{r}_{\sigma*} \mright)
+\\
+&=
+\mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \circ \mleft( \mathcal{r}_{\sigma*} \circ \pi_h, \mathcal{r}_{\sigma*} \circ \pi_h \mright)
+\\
+&=
+\mathcal{r}_\sigma^!\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \circ (\pi_h, \pi_h)
+%\mleft(\mathcal{r}_\sigma^!\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi_h, \pi_h \mright)\mright)\mright)_p(X, Y)
+%&=
+%\mleft(\mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \circ \mleft( r_\sigma^*\pi_h, r_\sigma^*\pi_h \mright)\mright)_p\bigl(\mathcal{r}_{\sigma*}(X), \mathcal{r}_{\sigma*}Y\bigr)
+%\\
+%&=
+%\mleft(\mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \circ \mleft( r_\sigma^*\pi_h \circ \mathcal{r}_{\sigma*}, r_\sigma^*\pi_h \circ \mathcal{r}_{\sigma*} \mright)\mright)_p(X, Y)
+%\\
+%&=
+%\mleft(\mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \circ \mleft( \mathcal{r}_{\sigma*} \circ \pi_h, \mathcal{r}_{\sigma*} \circ \pi_h \mright)\mright)_p(X, Y)
+%\\
+%&=
+%\mleft(\mathcal{r}_\sigma^!\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright)\mright)_p \bigl( \pi_h(X), \pi_h(Y) \bigr)
+%\\
+%&=
+%\mleft(\mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \circ \mleft( r_\sigma^*\pi_h, r_\sigma^*\pi_h \mright)\mright)
+%\mleft(
+%\mathrm{D}_pr_\sigma\mleft( X \mright)
+	%- \mleft.{\oversortoftilde{
+		%\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
+	%}}\mright|_{p \cdot \sigma_{x}}, 
+	%\mathcal{r}_{\sigma*}Y
+%\mright)
+\eas
+
+observe that we have 
+\bas
+r_{\sigma}^!\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \mright)
+&=
+\mathrm{d}^{r_{\sigma}^*\pi^*\nabla^{\mathrm{YM}}} \mleft( r_{\sigma}^!A \mright)
+=
+\mathrm{d}^{(\pi \circ r_{\sigma})^*\nabla^{\mathrm{YM}}} \mleft( r_{\sigma}^!A \mright)
+=
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} \mleft( r_{\sigma}^!A \mright),
+\eas
+whose first equality is a very straight-forward generalization of the commutation of pullbacks and de-Rham differentials; this is easy to check, but in case the reader is interested in a proof, then see either \cite[Appendix, Prop.\ A.1, Eq.\ (A.1)]{My1stpaper} or \cite[Appendix, Prop.\ A.1.1, Eq.\ (A.2)]{MyThesis}.
 \end{proof}
 
 %\subsection{Generalized covariant derivative/minimal coupling}
