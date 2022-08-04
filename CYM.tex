@@ -6545,9 +6545,31 @@ F
 for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
 \end{definitions}
 
-Of course, we expect certain properties, naturally generalized by our previous discussion; however, in order to prove these we need to discuss the Darboux derivative w.r.t.\ Yang-Mills connections.
-%\footnote{Many of the following properties can actually be showed w.r.t.\ every Ehresmann connection, not just the Yang-Mills ones.} 
-Let us start with an auxiliary result and then a Leibniz rule; especially recall all the discussion around the modified push-forward $\mathcal{r}$ via right-translations, Def.\ \ref{def:WeModTheRIghtPush}.
+Of course, we expect certain properties, naturally generalized by our previous discussion:
+
+\begin{propositions}{Properties of the field strength}{NewFieldStrengthWithCoolProps}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
+\begin{itemize}
+	\item \textbf{(Form of type $\sAd$)}
+	\bas
+	\mathcal{r}_{\sigma}^!F
+	&=
+	\sAd_{\sigma^{-1}} \circ F
+	\eas
+	for all (local) $\sigma \in \Gamma(\mathcal{G})$.
+	\item \textbf{(Horizontal form)}
+	\newline
+	For $X, Y \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$) we have
+	\bas
+	F(X, Y)
+	&=
+	0
+	\eas
+	if either of $X$ and $Y$ is vertical.
+\end{itemize}
+\end{propositions}
+
+However, despite the easy proof in the classical theory, the proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} will be rather involved. We will need several auxiliary result, also related to the Darboux derivative w.r.t.\ Yang-Mills connections. Especially also recall all the discussion around the modified push-forward $\mathcal{r}$ via right-translations, Def.\ \ref{def:WeModTheRIghtPush}.
 
 \begin{corollaries}{Commutation of modified push-forward and projections}{ModifiedRightPushyCommutesWithProj}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$ on $\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ an Ehresmann connection on $\mathcal{P}$; denote with $\pi_h$ and $\pi_v$ the associated projections on the horizontal and vertical bundle of $\mathcal{P}$, respectively. Then we have
@@ -6696,29 +6718,9 @@ thus, concluding the proof with
 \eas
 \end{proof}
 
-\begin{propositions}{Properties of the field strength}{NewFieldStrengthWithCoolProps}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
-\begin{itemize}
-	\item \textbf{(Form of type $\sAd$)}
-	\bas
-	\mathcal{r}_{\sigma}^!F
-	&=
-	\sAd_{\sigma^{-1}} \circ F
-	\eas
-	for all (local) $\sigma \in \Gamma(\mathcal{G})$.
-	\item \textbf{(Horizontal form)}
-	\newline
-	For $X, Y \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$) we have
-	\bas
-	F(X, Y)
-	&=
-	0
-	\eas
-	if either of $X$ and $Y$ is vertical.
-\end{itemize}
-\end{propositions}
+Now can finally prove Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}.
 
-\begin{proof}
+\begin{proof}[Proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}]
 \leavevmode\newline
 The second bullet point quickly follows by construction: The first summand of $F$ (recall Def.\ \ref{def:NewFieldStrength}) is clearly zero if either of $X$ and $Y$ is vertical; similar holds for the second summand because the vertical bundle is the kernel of $\mathrm{D}\pi$.
 
@@ -6757,7 +6759,7 @@ for all $p \in \mathcal{P}_x$ ($x \in M$) and $X, Y \in \mathrm{T}_p\mathcal{P}$
 \mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \circ \mleft( \mathcal{r}_{\sigma*} \circ \pi_h, \mathcal{r}_{\sigma*} \circ \pi_h \mright)
 \\
 &=
-\mathcal{r}_\sigma^!\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \circ (\pi_h, \pi_h)
+\mathcal{r}_\sigma^!\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \circ (\pi_h, \pi_h).
 %\mleft(\mathcal{r}_\sigma^!\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi_h, \pi_h \mright)\mright)\mright)_p(X, Y)
 %&=
 %\mleft(\mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \circ \mleft( r_\sigma^*\pi_h, r_\sigma^*\pi_h \mright)\mright)_p\bigl(\mathcal{r}_{\sigma*}(X), \mathcal{r}_{\sigma*}Y\bigr)
@@ -6781,8 +6783,15 @@ for all $p \in \mathcal{P}_x$ ($x \in M$) and $X, Y \in \mathrm{T}_p\mathcal{P}$
 	%\mathcal{r}_{\sigma*}Y
 %\mright)
 \eas
+Let us denote $X_h \coloneqq \pi_h(X)$ and $Y_h \coloneqq \pi_h(Y)$, and $X$ and $Y$ will now be elements of $\mathfrak{X}(\mathcal{P})$, and we rewrite
+\bas
+\mathcal{r}_{\sigma*}(X)
+&=
+\mathrm{D}r_{\sigma}(X)
+	- r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^* \Delta \sigma \mright) \bigl( \mathrm{D}\pi(X) \bigr) }}\mright).
+\eas
 
-observe that we have 
+Also observe that we have 
 \bas
 r_{\sigma}^!\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \mright)
 &=
@@ -6792,7 +6801,26 @@ r_{\sigma}^!\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \mright)
 =
 \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} \mleft( r_{\sigma}^!A \mright),
 \eas
-whose first equality is a very straight-forward generalization of the commutation of pullbacks and de-Rham differentials; this is easy to check, but in case the reader is interested in a proof, then see either \cite[Appendix, Prop.\ A.1, Eq.\ (A.1)]{My1stpaper} or \cite[Appendix, Prop.\ A.1.1, Eq.\ (A.2)]{MyThesis}.
+whose first equality is a very straight-forward generalization of the commutation of pullbacks and de-Rham differentials; this is easy to check, but in case the reader is interested in an explicit proof, then see either \cite[Appendix, Prop.\ A.1, Eq.\ (A.1)]{My1stpaper} or \cite[Appendix, Prop.\ A.1.1, Eq.\ (A.2)]{MyThesis}. Then
+\bas
+&\mleft(\mathcal{r}_\sigma^!\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \mright) \mleft(X_h, Y_h\mright)
+\\
+&=
+\mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) 
+	\bigl(\mathrm{D}r_\sigma(X_h), \mathrm{D}r_\sigma(Y_h)\bigr)
+\\
+&\hspace{1cm}
+	- \mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) 
+	\mleft(\mathrm{D}r_\sigma(X_h), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^* \Delta \sigma \mright) \bigl( \mathrm{D}\pi(Y_h) \bigr) }}\mright) \mright)
+\\
+&\hspace{1cm}
+	- \mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) 
+	\mleft(r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^* \Delta \sigma \mright) \bigl( \mathrm{D}\pi(X_h) \bigr) }}\mright), \mathrm{D}r_\sigma(Y_h) \mright)
+\\
+&\hspace{1cm}
+	+ \mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) 
+	\mleft(r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^* \Delta \sigma \mright) \bigl( \mathrm{D}\pi(X_h) \bigr) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^* \Delta \sigma \mright) \bigl( \mathrm{D}\pi(Y_h) \bigr) }}\mright) \mright).
+\eas
 \end{proof}
 
 %\subsection{Generalized covariant derivative/minimal coupling}
