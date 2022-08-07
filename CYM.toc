@@ -30,10 +30,10 @@
 \contentsline {subsubsection}{\numberline {6.2.4}Generalized connection 1-forms on principal bundles}{89}{subsubsection.6.2.4}%
 \contentsline {subsection}{\numberline {6.3}Gauge transformations}{97}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Generalized curvature/field strength}{109}{subsection.6.4}%
-\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{117}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{117}{section.8}%
-\contentsline {section}{\nonumberline List of References}{117}{section*.3}%
-\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{118}{appendix.A}%
-\contentsline {section}{\numberline {B}Other Interpretations of the compatibility conditions}{126}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Minimal coupling}{126}{subsection.B.1}%
+\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{118}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{118}{section.8}%
+\contentsline {section}{\nonumberline List of References}{118}{section*.3}%
+\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{119}{appendix.A}%
+\contentsline {section}{\numberline {B}Other Interpretations of the compatibility conditions}{127}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Minimal coupling}{127}{subsection.B.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

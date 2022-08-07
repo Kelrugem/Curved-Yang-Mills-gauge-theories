@@ -3825,7 +3825,7 @@ By this result, we would like to have Eq.\ \eqref{SymmetryOfTheVerticalBundle} a
 
 For $\mathcal{G} \to M$ an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle we fix a point $p \in \mathcal{P}_x$ ($x \in M$) and can multiply that with an element $g \in \mathcal{G}_x$. Infinitesimally, we are interested into how this multiplication by $g$ affects tangent vectors, especially non-vertical ones.
 
-However, as we have seen in Def.\ \ref{def:LRTranslations}, Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs} and Thm.\ \ref{thm:DiffOfLGBAction} (and its proof) the push-forward of horizontal vectors is not well-defined anymore on non-vertical vectors if one uses a fixed element of an LGB; $r_g$ is just a map $\mathcal{P}_x \to \mathcal{P}_x$. In order to study push-forwards of non-vertical vectors, we need information of the $\mathcal{G}$-action in an open neighbourhood $U$ around the fibres over $x$. Hence, we want to use an section $\sigma \in \Gamma(\mathcal{G}|_U)$ with $\sigma_x= g$ instead.
+However, as we have seen in Def.\ \ref{def:LRTranslations}, Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs} and Thm.\ \ref{thm:DiffOfLGBAction} (and its proof) the push-forward of horizontal vectors is not well-defined anymore on non-vertical vectors if one uses a fixed element of an LGB; $r_g$ is just a map $\mathcal{P}_x \to \mathcal{P}_x$. In order to study push-forwards of non-vertical vectors, we need information of the $\mathcal{G}$-action in an open neighbourhood $U$ around the fibres over $x$. Hence, we want to use a section $\sigma \in \Gamma(\mathcal{G}|_U)$ with $\sigma_x= g$ instead.
 
 \begin{center}
 \begin{tikzpicture}[scale=0.80]
@@ -6783,43 +6783,124 @@ for all $p \in \mathcal{P}_x$ ($x \in M$) and $X, Y \in \mathrm{T}_p\mathcal{P}$
 	%\mathcal{r}_{\sigma*}Y
 %\mright)
 \eas
-Let us denote $X_h \coloneqq \pi_h(X)$ and $Y_h \coloneqq \pi_h(Y)$, and $X$ and $Y$ will now be elements of $\mathfrak{X}(\mathcal{P})$, and we rewrite
+Let us denote $X^h \coloneqq \pi_h(X)$ and $Y^h \coloneqq \pi_h(Y)$, and $X$ and $Y$ will now be elements of $\mathfrak{X}(\mathcal{P})$, and we rewrite
 \bas
 \mathcal{r}_{\sigma*}(X)
 &=
 \mathrm{D}r_{\sigma}(X)
-	- r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^* \Delta \sigma \mright) \bigl( \mathrm{D}\pi(X) \bigr) }}\mright).
+	- r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) (X)}}\mright).
 \eas
+%
+%Also observe that we have 
+%\bas
+%r_{\sigma}^!\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \mright)
+%&=
+%\mathrm{d}^{r_{\sigma}^*\pi^*\nabla^{\mathrm{YM}}} \mleft( r_{\sigma}^!A \mright)
+%=
+%\mathrm{d}^{(\pi \circ r_{\sigma})^*\nabla^{\mathrm{YM}}} \mleft( r_{\sigma}^!A \mright)
+%=
+%\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} \mleft( r_{\sigma}^!A \mright),
+%\eas
+%whose first equality is a very straight-forward generalization of the commutation of pullbacks and de-Rham differentials; this is easy to check, but in case the reader is interested in an explicit proof, then see either \cite[Appendix, Prop.\ A.1, Eq.\ (A.1)]{My1stpaper} or \cite[Appendix, Prop.\ A.1.1, Eq.\ (A.2)]{MyThesis}. 
 
-Also observe that we have 
+Then make use of Def.\ \ref{def:FinallyTheConnection} and Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm} to show
 \bas
-r_{\sigma}^!\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \mright)
-&=
-\mathrm{d}^{r_{\sigma}^*\pi^*\nabla^{\mathrm{YM}}} \mleft( r_{\sigma}^!A \mright)
-=
-\mathrm{d}^{(\pi \circ r_{\sigma})^*\nabla^{\mathrm{YM}}} \mleft( r_{\sigma}^!A \mright)
-=
-\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} \mleft( r_{\sigma}^!A \mright),
+&
+r_\sigma^*\mleft(
+\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \mleft(\mathcal{r}_{\sigma*}\mleft(X^h\mright), \mathcal{r}_{\sigma*}\mleft(Y^h\mright)\mright)
+\mright)
+\\
+&\hspace{1cm}=
+r_\sigma^*\biggl(
+\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(X^h\mright)} {\underbrace{\mleft( (A \circ \mathcal{r}_{\sigma*})\mleft(Y^h\mright) \mright)}_{= 0}}
+\\
+&\hspace{2.5cm}
+	- \mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(Y^h\mright)} \mleft( (A \circ \mathcal{r}_{\sigma*})\mleft(X^h\mright) \mright)
+\\
+&\hspace{2.5cm}
+	- A\mleft( \mleft[ \mathcal{r}_{\sigma*}\mleft(X^h\mright), \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright] \mright)
+\biggr)
+\\
+&\hspace{1cm}=r_\sigma^*\biggl(
+	- A\mleft( \mleft[ \mathcal{r}_{\sigma*}\mleft(X^h\mright), \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright] \mright)
+\biggr)
+\\
+&\hspace{1cm}=r_\sigma^*\Biggl(
+- A\mleft(
+	\mleft[\mathrm{D}r_\sigma\mleft( X^h \mright), \mathrm{D}r_\sigma\mleft(Y^h\mright)\mright]
+\mright)
+\\
+&\hspace{2.5cm}
+	+ A\mleft(
+	\mleft[\mathrm{D}r_\sigma\mleft(X^h\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
+	\mright)
+\\
+&\hspace{2.5cm}
+	+ A\mleft(
+	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright) }}\mright), \mathrm{D}r_\sigma\mleft(X^h\mright) \mright]
+	\mright)
+\\
+&\hspace{2.5cm}
+	- A\mleft(
+	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright)\mleft(X^h \mright) }}\mright) \mright]
+	\mright)
+\Biggr).
 \eas
-whose first equality is a very straight-forward generalization of the commutation of pullbacks and de-Rham differentials; this is easy to check, but in case the reader is interested in an explicit proof, then see either \cite[Appendix, Prop.\ A.1, Eq.\ (A.1)]{My1stpaper} or \cite[Appendix, Prop.\ A.1.1, Eq.\ (A.2)]{MyThesis}. Then \textbf{Nutze hier aus, dass die Vektorfelder horizontal sind, dann fallen die ganzen Nablaterme weg und man hat einfach nur A([]), dann arbeite damit und revertiere das ggf.. Dann auch keine Ableitung vom Ad nötig}
+Let us look at each summand individually; for the first summand we use the very well-known fact (see \textit{e.g.}\ \cite[\S A.1.11, Cor.\ A.1.51, page 615]{Hamilton}) that
 \bas
-&\mleft(\mathcal{r}_\sigma^!\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \mright) \mleft(X_h, Y_h\mright)
-\\
+\mleft[\mathrm{D}r_\sigma\mleft( X^h \mright), \mathrm{D}r_\sigma\mleft(Y^h\mright)\mright]
 &=
-\mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) 
-	\bigl(\mathrm{D}r_\sigma(X_h), \mathrm{D}r_\sigma(Y_h)\bigr)
+\mathrm{D}r_\sigma\mleft(\mleft[ X^h, Y^h\mright]\mright),
+\eas
+making use of that $r_\sigma$ is an isomorphism, and thus we get for the first summand by using Def.\ \ref{def:GaugeBosonsOnLGBPrincies}
+\bas
+&r_\sigma^*\biggl(
+- A\mleft(
+	\mleft[\mathrm{D}r_\sigma\mleft( X^h \mright), \mathrm{D}r_\sigma\mleft(Y^h\mright)\mright]
+\mright)
+\biggr)
 \\
-&\hspace{1cm}
-	- \mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) 
-	\mleft(\mathrm{D}r_\sigma(X_h), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^* \Delta \sigma \mright) \bigl( \mathrm{D}\pi(Y_h) \bigr) }}\mright) \mright)
+&\hspace{1cm}=
+-\mleft( r_\sigma^*A \mright)\mleft( \mathcal{r}_{\sigma*} \mleft( \mleft[ X^h, Y^h\mright] \mright)\mright)
+	- \mleft( r_\sigma^* A \mright) \mleft( r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)}}\mright) \mright)
 \\
-&\hspace{1cm}
-	- \mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) 
-	\mleft(r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^* \Delta \sigma \mright) \bigl( \mathrm{D}\pi(X_h) \bigr) }}\mright), \mathrm{D}r_\sigma(Y_h) \mright)
+&\hspace{1cm}=
+-\mleft( \mathcal{r}_\sigma^!A \mright)\mleft( \mleft[ X^h, Y^h\mright] \mright)
+	- r_{\sigma}^*\mleft(\mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)\mright)
 \\
-&\hspace{1cm}
-	+ \mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) 
-	\mleft(r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^* \Delta \sigma \mright) \bigl( \mathrm{D}\pi(X_h) \bigr) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^* \Delta \sigma \mright) \bigl( \mathrm{D}\pi(Y_h) \bigr) }}\mright) \mright).
+&\hspace{1cm}=
+-\mleft( \sAd_{\sigma^{-1}} \circ A \mright)\mleft( \mleft[ X^h, Y^h\mright] \mright)
+	- r_{\sigma}^*\mleft(\mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)\mright)
+\\
+&\hspace{1cm}=
+\sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
+	- r_{\sigma}^*\mleft(\mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)\mright).
+\eas
+For the fourth summand recall that fundamental vector fields are fundamental vector fields along the fibres of $\mathcal{P}$; if we fix a base point $x \in M$, then each fibre $\mathcal{P}_x$ is an embedded submanifold of $\mathcal{P}$ onto which the Lie group $\mathcal{G}_x$ acts on the right. Thus, we know from Lie group action theory (see \textit{e.g.}\ \cite[\S 3.4, Prop.\ 3.4.4, page 144]{Hamilton}) that the Lie bracket of two fundamental vector fields over $\mathcal{P}_x$ is again a fundamental vector field over $\mathcal{P}_x$ given by
+\bas
+\mleft[ \widetilde{\mu}, \widetilde{\nu} \mright]
+&=
+\widetilde{\mleft[ \mu, \nu \mright]}_{\mathcal{g}_x}
+\eas
+for all $\mu, \nu \in \mathcal{g}_x$. This naturally extends to fundamental vector fields over $\mathcal{P}$, so that
+\bas
+\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
+&=
+r_\sigma^*\mleft(
+{\oversortoftilde{
+	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]
+}}
+\mright),
+\eas
+and therefore
+\bas
+- A\mleft(
+	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
+	\mright)
+&=
+- r_\sigma^*\mleft(
+	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]
+\mright)
 \eas
 \end{proof}
 
