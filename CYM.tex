@@ -7487,368 +7487,368 @@ f ~ X_T
 Similar to Remark \ref{rem:BothLinearStructuresTheSameOnTheVerticalBundle}, the vertical bundle of $\mathrm{T}M$ is canonically isomorphic to $\pi_{\mathrm{T}M}^*\mathrm{T}M$, one can think of the second term as $\mathrm{d}f \otimes \pi^*_{\mathrm{T}M}X$.
 \end{remarks}
 
-\section{Other Interpretations of the compatibility conditions}
-
-\subsection{Minimal coupling}
-
-Notation as in \cite{Hamilton}
-
-\begin{itemize}
-	\item $\widetilde{G}$ Lie group with Lie algebra $\mathfrak{g}$
-	\item $M$ smooth manifold (usually also a spacetime). An open subset of $M$ is usually denoted by $U$; typically small enough that "everything works out" (especially without further mentioning intersections of given open sets and so on)
-	\item $P \to M$ a principal bundle, a (local) gauge is usually denoted by $s$, an element of $\Gamma(P)$, sections of $P$
-	\item $V$ a vector space
-	\item $\rho$ a Lie group representation on $V$, $\rho_*$ the induced Lie algebra representation on $V$
-	\item $K \coloneqq P \times_\rho V$ the associated vector bundle induced by $P$ and $\rho$ on $V$. An element $\Phi$ of $K$ is denoted by by $[p, \phi]$ for $p \in P$ and $\phi \in V$, where $[ \cdot, \cdot]$ denotes the equivalence class with respect to the equivalence
-	\bas
-		(p, \phi) &\sim \mleft(p g, \rho\mleft( g^{-1} \mright) \cdot \phi \mright)
-	\eas
-	for all $g \in \widetilde{G}$; $pg$ denotes the canonical group action (from the right) $P \times \widetilde{G} \to P$ and $\cdot$ the action of $\mathrm{Aut}(V) \subset \mathrm{End}(V)$ on $V$.
-	\item Especially if fixing a local gauge $s: U \to P$ we can write for sections $\Phi \in \Gamma(K)$ locally 
-	\bas
-		\Phi|_U
-		&=
-		[s, \phi],
-	\eas
-	where $\phi: U \to V$, \textit{i.e.}\ a local section of the trivial vector bundle $M \times V \to M$.
-	\item We especially focus on $V = \mathfrak{g}$ and $\rho = \mathrm{Ad}$ the adjoint representation of $\widetilde{G}$ on $\mathfrak{g}$.
-\end{itemize}
-
-The field of gauge bosons $A$ is a connection on the principal bundle, \textit{i.e.}\ an element of $\Omega^1(P; \mathfrak{g})$ with
-
-\bas
-r_g^!A &= \mathrm{Ad}_{g^{-1}} (A) \coloneqq \mathrm{Ad}_{g^{-1}} \circ A, \\
-A\mleft( \widetilde{X} \mright) &= X
-\eas
-for all $g \in \widetilde{G}$ and $X \in \mathfrak{g}$, where $r_g^!$ is the pullback of forms via the right $\widetilde{G}$-multiplication on $P$, and $\widetilde{X}$ the fundamental vector field of $X$ on $P$. 
-
-Typically, a lot of the formalism of gauge theory comes from how to define the minimal coupling. So, let us look at this and reinvent it a bit. Usually the covariant derivative/minimal coupling $\nabla^A$ of $A$ and $\Phi \in \Gamma(K)$ is locally (w.r.t.\ to a gauge $s$) defined by
-\bas
-\nabla^A \Phi
-&\coloneqq
-\mleft[ s, \nabla^A \phi \mright],
-\eas
-where
-\ba\label{ClassicalMiniCoupling}
-\nabla^A \phi
-&\coloneqq
-\mathrm{d}\phi
-	+ \rho_*\mleft( A_s \mright) \cdot \phi,
-\ea
-where $A_s \coloneqq s^! A \in \Omega^1(U; \mathfrak{g})$ (local pullback as a form of $A$ via $s$) and $\mathrm{d} \phi \coloneqq \nabla^0 \phi$, $\nabla^0$ the canonical flat connection on $M \times V$.
-
-The explicit definition of the field strength $F$ of $A$ is then usually motivated by looking at the curvature $R_{\nabla^A}$ of $\nabla^A$, that is
-\bas
-\mleft.R_{\nabla^A}(\cdot, \cdot) \Phi\mright|_U
-&=
-\mleft[ s,
-	\rho_*(F_s) \cdot \phi
-\mright],
-\eas
-where 
-\bas
-F_s
-&\coloneqq
-\mathrm{d}A_s
-	+ \frac{1}{2} \mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}
-\eas
-is the typical local definition of $F_s \in \Omega^2(U; \mathfrak{g})$ with
-\bas
-\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}(X, Y)
-&=
-2 ~ \mleft[ A_s(X) , A_s(Y) \mright]_{\mathfrak{g}}
-\eas
-for all $X, Y \in \mathfrak{X}(U)$. (The notation $F_s$ is of course due to the fact that $F_s = s^!F$, where $F$ is the curvature of $A$. But I want to avoid that for now because of what we are about doing to do.) We shortly could denote this also as
-\ba\label{MotivOfFieldStrength}
-R_{\nabla^A} \phi
-&=
-\rho_*(F_s) \cdot \phi
-\ea
-
-%\section{Motivation}
-
-\textbf{Now:} One could question why using $\mathrm{d}\phi = \nabla^0 \phi$ in Eq.\ \eqref{ClassicalMiniCoupling}. Thence, let us assume that we have a general vector bundle connection $\widehat{\nabla}$ on the trivial vector bundle $M \times V \to M$. We are going to redefine $\nabla^A$ and $F$ locally w.r.t.\ a gauge $s$, then discuss how the gauge transformations have to look like to receive definitions independent of the chosen gauge $s$. This also means that the following discussion is now often local by fixing a gauge without further mentioning it.
-
-Let us first locally redefine $\nabla^A \phi$:
-\ba\label{NewMinimalCoupling}
-\nabla^A \phi
-&\coloneqq
-\widehat{\nabla} \phi
-	+ \rho_*(A_s) \cdot \phi.
-\ea
-Motivated by Eq.\ \eqref{MotivOfFieldStrength}, we want to identify the field strength with the curvature of $\nabla^A$. One can check that we have
-\ba\label{FirstStepTowardsNewFieldStrength}
-R_{\nabla^A}
-&=
-R_{\widehat{\nabla}}
-	+ \mathrm{d}^{\widehat{\nabla}} \bigl( \rho_*(A_s) \bigr)
-	+ \rho_*(A_s) \wedge \rho_*(A_s),
-\ea
-where $\mathrm{d}^{\widehat{\nabla}}$ is the exterior covariant derivative of $\widehat{\nabla}$ canonically extended to $\mathrm{End}(V)$, viewing $\rho_*(A_s)$ as an element of $\Omega^1(U; \mathrm{End}(V))$, and where $\rho_*(A_s) \wedge \rho_*(A_s)$ is an element of $\Omega^2(U; \mathrm{End}(V))$ given by
-\bas
-\bigl(\rho_*(A_s) \wedge \rho_*(A_s)\bigr)(X, Y)
-&\coloneqq
-\rho_*\bigl( A_s(X) \bigr) \circ \rho_*\bigl(A_s(Y)\bigr)
-	- \rho_*\bigl( A_s(Y) \bigr) \circ \rho_*\bigl(A_s(X)\bigr)
-\\
-&=
-\mleft[ \rho_*\bigl( A_s(X) \bigr), \rho_*\bigl( A_s(Y) \bigr) \mright]_{\mathrm{End}(V)}
-\\
-&=\rho_* \mleft(
-	\mleft[ A_s(X), A_s(Y) \mright]_{\mathfrak{g}}
-\mright)
-\\
-&=\rho_* \mleft(
-	\frac{1}{2}\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}
-\mright)(X,Y)
-\eas
-for all $X, Y \in \mathfrak{X}(U)$.
-
-In order to have a similar shape as in Eq.\ \eqref{MotivOfFieldStrength}, we now assume that $\widehat{\nabla}$ satisfies the following \textbf{compatibility conditions}:
-\begin{remarks}{Comaptibility conditions}{CompCondsSimple}
-\ba
-R_{\widehat{\nabla}} 
-&=
-\rho_*(\zeta),\label{ZetaCondition}\\
-\widehat{\nabla} \circ \rho_*
-&=
-\rho_* \circ \nabla\label{VanishingBasicCurvature}
-\ea
-for some $\zeta \in \Omega^2(M; \mathfrak{g})$ and $\nabla$ a vector bundle connection on the trivial vector bundle $M \times \mathfrak{g} \to M$.
-\end{remarks}
-
-If we want that Eq.\ \eqref{FirstStepTowardsNewFieldStrength} has a shape like Eq.\ \eqref{MotivOfFieldStrength}, it is obvious why we require \eqref{ZetaCondition}; \eqref{VanishingBasicCurvature} is needed for the second summand in Eq.\ \eqref{FirstStepTowardsNewFieldStrength}. Hence, let us study \eqref{VanishingBasicCurvature}, that is
-\bas
-\widehat{\nabla}\bigl( \rho_*(\nu) \bigr)
-&=
-\rho_*(\nabla \nu)
-\eas
-for all $\nu \in \Gamma(M \times \mathfrak{g})$,\footnote{Elements of $\mathfrak{g}$ are viewed as constant sections of $M \times \mathfrak{g}$.} especially $\widehat{\nabla}$ is again extended to $\mathrm{End}(V)$ on the left hand side. With this we get
-\bas
-\mathrm{d}^{\widehat{\nabla}} \bigl( \rho_*(A_s) \bigr)(X,Y)
-&=
-\widehat{\nabla}_X\bigl( \rho_*(A_s(Y)) \bigr)
-	- \widehat{\nabla}_Y\bigl( \rho_*(A_s(X)) \bigr)
-	- \rho_*\mleft( A_s\bigl([X, Y]\bigr) \mright)
-\\
-&=
-\rho_*\mleft(\nabla_X \bigl( A_s(Y) \bigr) \mright)
-	- \rho_*\mleft( \nabla_Y \bigl(A_s(X)\bigr) \mright)
-	- \rho_*\mleft( A_s\bigl([X, Y]\bigr) \mright)
-\\
-&=
-\rho_* \mleft(
-	\nabla_X \bigl( A_s(Y) \bigr)
-	- \nabla_Y \bigl(A_s(X)\bigr)
-	- A_s\bigl([X, Y]\bigr)
-\mright)
-\\
-&=
-\rho_*\mleft( \mathrm{d}^\nabla A_s \mright)(X,Y)
-\eas
-for all $X, Y \in \mathfrak{X}(U)$. Collecting everything, Eq.\ \eqref{FirstStepTowardsNewFieldStrength} has now the following form
-\bas
-R_{\nabla^A}
-&=
-\rho_*\mleft( \mathrm{d}^\nabla A_s + \frac{1}{2}\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}+ \zeta \mright).
-\eas
-So, we have a new form of the field strength, assuming that $\nabla$ and $\zeta$ satisfy the compatibility conditions in Remark \ref{rem:CompCondsSimple}. This is precisely the definition of the field strength as in the gauge theory of Thomas and Alexei, that is, we have a new field strength
-\bas
-G
-&\coloneqq
-\mathrm{d}^\nabla A_s + \frac{1}{2}\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}+ \zeta.
-\eas
-Furthermore, if we are interested into Yang-Mills gauge theories, then we'd have $K = P \times_{\mathrm{Ad}} \mathfrak{g}$ (the adjoint bundle), and so also $\rho_* = \mathrm{ad}$. In this case we can put $\widehat{\nabla} = \nabla$ and then the compatibility conditions in Remark \ref{rem:CompCondsSimple} read
-\bas
-R_\nabla
-&=
-\mathrm{ad}(\zeta),
-\\
-\nabla \circ \mathrm{ad}
-&=
-\mathrm{ad} \circ \nabla.
-\eas
-The second condition precisely gives after a short calculation
-\bas
-\nabla\mleft( \mleft[ \mu, \nu \mright]_{\mathfrak{g}} \mright)
-&=
-\mleft[ \nabla\mu, \nu \mright]_{\mathfrak{g}}
-	+ \mleft[ \mu, \nabla\nu \mright]_{\mathfrak{g}}
-\eas
-for all $\mu, \nu \in \Gamma(M \times \mathfrak{g})$, so, $\nabla$ has to be a Lie bracket derivation. So, in this case the compatibility conditions in Remark \ref{rem:CompCondsSimple} precisely reduce to the compatibility conditions of Alexei's and Thomas's theory! (in the case of Lie algebra bundles; the general theory is more general, formulated on general Lie algebroids)
-
-As a summary:
-
-\begin{remarks}{Summary}{FirstSummary}
-We have
-\ba
-R_\nabla
-&=
-\mathrm{ad}(\zeta),
-\\
-\nabla \circ \mathrm{ad}
-&=
-\mathrm{ad} \circ \nabla,
-\\
-G
-&=
-\mathrm{d}^\nabla A_s + \frac{1}{2}\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}+ \zeta.
-\ea
-\end{remarks}
-
-In fact, the compatibility conditions lead to a gauge invariant theory: Fix an $\mathrm{ad}$-invariant scalar product $\kappa$ on $\mathfrak{g}$; then define the Lagrangian by
-\ba
-\mathfrak{L}_{\mathrm{YM}}
-&\coloneqq
-- \frac{1}{2} \kappa\mleft( G \stackrel{\wedge}{,} *G \mright)
-\ea
-where $*$ is the Hodge star operator w.r.t.\ some spacetime metric. (In short, the typical definition, but replace $F$ with $G$) It is easier to look at the infinitesimal version of the gauge transformations, hence everything with respect to a gauge $s$ now.
-
-In order to derive a formula for these, let us again look at $\nabla^A$. Fix an $\varepsilon \in \Gamma(M \times \mathfrak{g})$, then the infinitesimal gauge transformation $\delta_\varepsilon \phi$ of $\phi \in \Gamma(M \times \mathfrak{g})$ is usually defined by
-\bas
-\delta_\varepsilon \phi
-&\coloneqq
-\rho_*(\varepsilon) \cdot \phi.
-\eas
-We fix the infinitesimal gauge trafo $\delta_\varepsilon A$ of $A$ by looking at the gauge trafo of $\nabla^A \phi$ via
-\bas
-\delta_\varepsilon \nabla^A \phi
-&=
-\mleft.\frac{\mathrm{d}}{\mathrm{dt}}\mright|_{t=0}\mleft( \nabla^{A + t\delta_\varepsilon A} \mleft( \phi + t \delta_\varepsilon \phi \mright) \mright)
-\\
-&=
-\underbrace{\widehat{\nabla} \mleft( \delta_\varepsilon \phi \mright)}
-	_{\mathclap{ = \mleft(\widehat{\nabla} \mleft( \rho_*(\varepsilon) \mright)\mright) \cdot \phi + \rho_*(\varepsilon) \cdot \widehat{\nabla} \phi }}
-	+ \rho_*\mleft( \delta_\varepsilon A_s \mright) \cdot \phi
-	+ \rho_*(A_s) \cdot \delta_\varepsilon \phi
-\\
-&=
-\bigl( \rho_*\mleft( \nabla \varepsilon + \delta_\varepsilon A_s \mright) + \rho_*(A_s) \cdot \rho_*(\varepsilon) \bigr) \cdot \phi
-	+ \rho_*(\varepsilon) \cdot \widehat{\nabla} \phi
-\eas
-using Remark \ref{rem:CompCondsSimple}. We want $\delta_\varepsilon \nabla^A \phi = \rho_*(\varepsilon) \cdot \nabla^A \phi$ which gives
-\bas
-\rho_*(\varepsilon) \cdot \nabla^A \phi
-&=
-\rho_*(\varepsilon) \cdot \widehat{\nabla} \phi
-	+ \rho_*(\varepsilon) \cdot \rho_*(A_s) \cdot \phi.
-\eas
-Imposing $\delta_\varepsilon \nabla^A \phi = \rho_*(\varepsilon) \cdot \nabla^A \phi$ we get
-\bas
-\rho_*\mleft(\delta_\varepsilon A_s + \nabla \varepsilon + \mleft[ A_s, \varepsilon \mright]_{\mathfrak{g}} \mright)
-&=
-0
-\eas
-using again that $\rho_*$ is a Lie algebra representation. If we require that this shall work for all $\rho_*$, we may say
-\ba\label{GaugeTrafoOfANew}
-\delta_\varepsilon A_s
-&\coloneqq
--\nabla \varepsilon
-	+ \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}}.
-\ea
-This is precisely the infinitesimal gauge trafo of $A$ as in the theory of Thomas and Alexei! Hence, we achieve infinitesimal gauge invariance of $\mathfrak{L}_{\mathrm{YM}}$. For completeness, let us check the gauge trafo of $G$ using Def.\ \eqref{GaugeTrafoOfANew} and Remark \ref{rem:FirstSummary}, it is very similar to the "classical" calculation due to Remark \ref{rem:FirstSummary} which is why I skip some straightforward calculations to keep it short,
-\bas
-\delta_\varepsilon G
-&=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}
-\mleft(
-	\mathrm{d}^\nabla (A_s + t\delta_\varepsilon A_s) + \frac{1}{2}\mleft[ A_s + t\delta_\varepsilon A_s \stackrel{\wedge}{,} A_s + t\delta_\varepsilon A_s \mright]_{\mathfrak{g}}+ \zeta
-\mright)
-\\
-&=
-\mathrm{d}^\nabla \mleft( -\nabla \varepsilon
-	+ \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright)
-		+ \mleft[ A_s \stackrel{\wedge}{,} -\nabla \varepsilon + \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
-\\
-&=
-\underbrace{- \mleft(\mathrm{d}^\nabla\mright)^2 \varepsilon}_{= - R_\nabla \varepsilon = \mleft[ \varepsilon, \zeta \mright]_{\mathfrak{g}}}
-	+ \mleft[ \nabla \varepsilon \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}
-	+ \mleft[ \varepsilon, \mathrm{d}^\nabla A_s \mright]_{\mathfrak{g}}
-	+ \underbrace{\mleft[ A_s \stackrel{\wedge}{,} -\nabla \varepsilon \mright]_{\mathfrak{g}}}_{= - \mleft[ \nabla \varepsilon \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}}
-	+ \mleft[ A_s \stackrel{\wedge}{,} \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
-\\
-&=
-\mleft[ \varepsilon,
-	\mathrm{d}^\nabla A_s + \zeta
-\mright]_{\mathfrak{g}}
-	+ \mleft[ A_s \stackrel{\wedge}{,} \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
-\eas
-and, using the Jacobi identity,
-\bas
-\mleft[ A_s \stackrel{\wedge}{,} \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}} (X,Y)
-&=
-\mleft[ A_s(X) , \mleft[ \varepsilon, A_s(Y) \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
-	- \mleft[ A_s(Y) , \mleft[ \varepsilon, A_s(X) \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
-\\
-&=
-\mleft[ \varepsilon, \mleft[ A_s(X), A_s(Y) \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
-\\
-&=
-\mleft[ \varepsilon, \frac{1}{2} \mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}} (X, Y)
-\eas
-for all $X, Y \in \mathfrak{X}(U)$. Altogether
-\bas
-\delta_\varepsilon G
-&=
-\mleft[ \varepsilon,
-	\mathrm{d}^\nabla A_s + \frac{1}{2} \mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}} + \zeta
-\mright]_{\mathfrak{g}}
-=
-\mleft[ \varepsilon, G
-\mright]_{\mathfrak{g}}.
-\eas
-Hence, the field strength transforms with the adjoin of $\varepsilon$; since $\kappa$ is $\mathrm{ad}$-invariant, we can derive that $\mathfrak{L}_{\mathrm{YM}}$ is invariant under the infinitesimal gauge trafo in Def.\ \eqref{GaugeTrafoOfANew}!
-
-Observe that by Remark \ref{rem:FirstSummary} that $\zeta$ can be non-trivial even if we still use $\nabla = \nabla^0$, the canonical flat connection on $M\times \mathfrak{g}$, even though this whole discussion started with allowing more general connections.
-
-If we minimise $\mathfrak{L}_{\mathrm{YM}}$, then one obvious way would be to search solutions with $G \equiv 0$ for an absolute minimum/maximum (because of the sign), doing so would result into that the classical Yang-Mills energy would have a bound which is non-zero. May this be an explanation for the mass gap? As shown in my thesis, every classical theory has a $\zeta$ after a field redefinition. Even though field redefinitions are an equivalence for the classical theories, one may argue that it does not describe an equivalence for the quantised theory, leading to a possible explanation of the mass gap? But that is just high hope right now :) 
-
-%\subsection{Integration}
-\textbf{Integration (probably no need for the following)}
-
-For an integrated version of Def.\ \eqref{GaugeTrafoOfANew} we need to discuss when the new "minimal coupling" of Def.\ \eqref{NewMinimalCoupling} behaves nicely under a change of the gauge $s$. That is, we now want to extend the new definition of $\nabla^A$ to a well-defined connection on $K = P \times_{\rho} V$, especially on the adjoint bundle $K = P \times_{\mathrm{Ad}} \mathfrak{g}$ in our case. (and later maybe generalise this to a $\widetilde{G}$-quotient of a general Lie algebra bundle over $P$)
-
-Let $s^\prime$ be another (local) gauge such that we have a unique smooth map $g: U \to G$ such that
-\bas
-s^\prime
-&=
-s g,
-\eas
-then we want for well-definedness
-\ba\label{WellDef}
-\nabla^A \Phi
-&=
-\mleft[ s, \nabla \phi + \mathrm{ad}(A_s) \cdot \phi \mright]
-\stackrel{!}{=}
-\mleft[ s^\prime, \nabla \phi^\prime + \mathrm{ad}(A_{s^\prime}) \cdot \phi^\prime \mright],
-\ea
-where we have $\Phi = [s, \phi] = [s^\prime, \phi^\prime]$, especially
-\bas
-\phi^\prime
-&=
-\mathrm{Ad}\mleft( g^{-1} \mright) \cdot \phi.
-\eas
-Since the new field strength $G$ still transforms via the adjoin under $\delta_\varepsilon$ (see above), we make the following ansatz
-\ba
-A_{s^\prime} 
-&=
-\mathrm{Ad}\mleft( g^{-1} \mright) \cdot A_s
-	+ \mu,
-\ea
-where $\mu \in \Omega^1(U; \mathfrak{g})$. Usually, $\mu = g^!\mu_{\widetilde{G}}$, the pullback as a form of the Maurer-Cartan-Form $\mu_{\widetilde{G}}$ on $\widetilde{G}$. One can then check with some short calculation that Eq.\ \eqref{WellDef} is equivalent to
-\bas
-\nabla\mleft( \mathrm{Ad}\mleft( g^{-1} \mright) \cdot \phi \mright)
-	+ \mathrm{ad}(\mu) \cdot \mathrm{Ad}\mleft( g^{-1} \mright) \cdot \phi
-&\stackrel{!}{=}
-\mathrm{Ad}\mleft( g^{-1} \mright) \cdot \nabla \phi
-\eas
-using the definition of $P \times_{\mathrm{Ad}} \mathfrak{g}$. Equivalently,
-\bas
-\mathrm{ad}(\mu)
-&=
-\mathrm{Ad}\mleft( g \mright) \circ \mleft(
-\mright)
-\eas
+%\section{Other Interpretations of the compatibility conditions}
+%
+%\subsection{Minimal coupling}
+%
+%Notation as in \cite{Hamilton}
+%
+%\begin{itemize}
+	%\item $\widetilde{G}$ Lie group with Lie algebra $\mathfrak{g}$
+	%\item $M$ smooth manifold (usually also a spacetime). An open subset of $M$ is usually denoted by $U$; typically small enough that "everything works out" (especially without further mentioning intersections of given open sets and so on)
+	%\item $P \to M$ a principal bundle, a (local) gauge is usually denoted by $s$, an element of $\Gamma(P)$, sections of $P$
+	%\item $V$ a vector space
+	%\item $\rho$ a Lie group representation on $V$, $\rho_*$ the induced Lie algebra representation on $V$
+	%\item $K \coloneqq P \times_\rho V$ the associated vector bundle induced by $P$ and $\rho$ on $V$. An element $\Phi$ of $K$ is denoted by by $[p, \phi]$ for $p \in P$ and $\phi \in V$, where $[ \cdot, \cdot]$ denotes the equivalence class with respect to the equivalence
+	%\bas
+		%(p, \phi) &\sim \mleft(p g, \rho\mleft( g^{-1} \mright) \cdot \phi \mright)
+	%\eas
+	%for all $g \in \widetilde{G}$; $pg$ denotes the canonical group action (from the right) $P \times \widetilde{G} \to P$ and $\cdot$ the action of $\mathrm{Aut}(V) \subset \mathrm{End}(V)$ on $V$.
+	%\item Especially if fixing a local gauge $s: U \to P$ we can write for sections $\Phi \in \Gamma(K)$ locally 
+	%\bas
+		%\Phi|_U
+		%&=
+		%[s, \phi],
+	%\eas
+	%where $\phi: U \to V$, \textit{i.e.}\ a local section of the trivial vector bundle $M \times V \to M$.
+	%\item We especially focus on $V = \mathfrak{g}$ and $\rho = \mathrm{Ad}$ the adjoint representation of $\widetilde{G}$ on $\mathfrak{g}$.
+%\end{itemize}
+%
+%The field of gauge bosons $A$ is a connection on the principal bundle, \textit{i.e.}\ an element of $\Omega^1(P; \mathfrak{g})$ with
+%
+%\bas
+%r_g^!A &= \mathrm{Ad}_{g^{-1}} (A) \coloneqq \mathrm{Ad}_{g^{-1}} \circ A, \\
+%A\mleft( \widetilde{X} \mright) &= X
+%\eas
+%for all $g \in \widetilde{G}$ and $X \in \mathfrak{g}$, where $r_g^!$ is the pullback of forms via the right $\widetilde{G}$-multiplication on $P$, and $\widetilde{X}$ the fundamental vector field of $X$ on $P$. 
+%
+%Typically, a lot of the formalism of gauge theory comes from how to define the minimal coupling. So, let us look at this and reinvent it a bit. Usually the covariant derivative/minimal coupling $\nabla^A$ of $A$ and $\Phi \in \Gamma(K)$ is locally (w.r.t.\ to a gauge $s$) defined by
+%\bas
+%\nabla^A \Phi
+%&\coloneqq
+%\mleft[ s, \nabla^A \phi \mright],
+%\eas
+%where
+%\ba\label{ClassicalMiniCoupling}
+%\nabla^A \phi
+%&\coloneqq
+%\mathrm{d}\phi
+	%+ \rho_*\mleft( A_s \mright) \cdot \phi,
+%\ea
+%where $A_s \coloneqq s^! A \in \Omega^1(U; \mathfrak{g})$ (local pullback as a form of $A$ via $s$) and $\mathrm{d} \phi \coloneqq \nabla^0 \phi$, $\nabla^0$ the canonical flat connection on $M \times V$.
+%
+%The explicit definition of the field strength $F$ of $A$ is then usually motivated by looking at the curvature $R_{\nabla^A}$ of $\nabla^A$, that is
+%\bas
+%\mleft.R_{\nabla^A}(\cdot, \cdot) \Phi\mright|_U
+%&=
+%\mleft[ s,
+	%\rho_*(F_s) \cdot \phi
+%\mright],
+%\eas
+%where 
+%\bas
+%F_s
+%&\coloneqq
+%\mathrm{d}A_s
+	%+ \frac{1}{2} \mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}
+%\eas
+%is the typical local definition of $F_s \in \Omega^2(U; \mathfrak{g})$ with
+%\bas
+%\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}(X, Y)
+%&=
+%2 ~ \mleft[ A_s(X) , A_s(Y) \mright]_{\mathfrak{g}}
+%\eas
+%for all $X, Y \in \mathfrak{X}(U)$. (The notation $F_s$ is of course due to the fact that $F_s = s^!F$, where $F$ is the curvature of $A$. But I want to avoid that for now because of what we are about doing to do.) We shortly could denote this also as
+%\ba\label{MotivOfFieldStrength}
+%R_{\nabla^A} \phi
+%&=
+%\rho_*(F_s) \cdot \phi
+%\ea
+%
+%%\section{Motivation}
+%
+%\textbf{Now:} One could question why using $\mathrm{d}\phi = \nabla^0 \phi$ in Eq.\ \eqref{ClassicalMiniCoupling}. Thence, let us assume that we have a general vector bundle connection $\widehat{\nabla}$ on the trivial vector bundle $M \times V \to M$. We are going to redefine $\nabla^A$ and $F$ locally w.r.t.\ a gauge $s$, then discuss how the gauge transformations have to look like to receive definitions independent of the chosen gauge $s$. This also means that the following discussion is now often local by fixing a gauge without further mentioning it.
+%
+%Let us first locally redefine $\nabla^A \phi$:
+%\ba\label{NewMinimalCoupling}
+%\nabla^A \phi
+%&\coloneqq
+%\widehat{\nabla} \phi
+	%+ \rho_*(A_s) \cdot \phi.
+%\ea
+%Motivated by Eq.\ \eqref{MotivOfFieldStrength}, we want to identify the field strength with the curvature of $\nabla^A$. One can check that we have
+%\ba\label{FirstStepTowardsNewFieldStrength}
+%R_{\nabla^A}
+%&=
+%R_{\widehat{\nabla}}
+	%+ \mathrm{d}^{\widehat{\nabla}} \bigl( \rho_*(A_s) \bigr)
+	%+ \rho_*(A_s) \wedge \rho_*(A_s),
+%\ea
+%where $\mathrm{d}^{\widehat{\nabla}}$ is the exterior covariant derivative of $\widehat{\nabla}$ canonically extended to $\mathrm{End}(V)$, viewing $\rho_*(A_s)$ as an element of $\Omega^1(U; \mathrm{End}(V))$, and where $\rho_*(A_s) \wedge \rho_*(A_s)$ is an element of $\Omega^2(U; \mathrm{End}(V))$ given by
+%\bas
+%\bigl(\rho_*(A_s) \wedge \rho_*(A_s)\bigr)(X, Y)
+%&\coloneqq
+%\rho_*\bigl( A_s(X) \bigr) \circ \rho_*\bigl(A_s(Y)\bigr)
+	%- \rho_*\bigl( A_s(Y) \bigr) \circ \rho_*\bigl(A_s(X)\bigr)
+%\\
+%&=
+%\mleft[ \rho_*\bigl( A_s(X) \bigr), \rho_*\bigl( A_s(Y) \bigr) \mright]_{\mathrm{End}(V)}
+%\\
+%&=\rho_* \mleft(
+	%\mleft[ A_s(X), A_s(Y) \mright]_{\mathfrak{g}}
+%\mright)
+%\\
+%&=\rho_* \mleft(
+	%\frac{1}{2}\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}
+%\mright)(X,Y)
+%\eas
+%for all $X, Y \in \mathfrak{X}(U)$.
+%
+%In order to have a similar shape as in Eq.\ \eqref{MotivOfFieldStrength}, we now assume that $\widehat{\nabla}$ satisfies the following \textbf{compatibility conditions}:
+%\begin{remarks}{Comaptibility conditions}{CompCondsSimple}
+%\ba
+%R_{\widehat{\nabla}} 
+%&=
+%\rho_*(\zeta),\label{ZetaCondition}\\
+%\widehat{\nabla} \circ \rho_*
+%&=
+%\rho_* \circ \nabla\label{VanishingBasicCurvature}
+%\ea
+%for some $\zeta \in \Omega^2(M; \mathfrak{g})$ and $\nabla$ a vector bundle connection on the trivial vector bundle $M \times \mathfrak{g} \to M$.
+%\end{remarks}
+%
+%If we want that Eq.\ \eqref{FirstStepTowardsNewFieldStrength} has a shape like Eq.\ \eqref{MotivOfFieldStrength}, it is obvious why we require \eqref{ZetaCondition}; \eqref{VanishingBasicCurvature} is needed for the second summand in Eq.\ \eqref{FirstStepTowardsNewFieldStrength}. Hence, let us study \eqref{VanishingBasicCurvature}, that is
+%\bas
+%\widehat{\nabla}\bigl( \rho_*(\nu) \bigr)
+%&=
+%\rho_*(\nabla \nu)
+%\eas
+%for all $\nu \in \Gamma(M \times \mathfrak{g})$,\footnote{Elements of $\mathfrak{g}$ are viewed as constant sections of $M \times \mathfrak{g}$.} especially $\widehat{\nabla}$ is again extended to $\mathrm{End}(V)$ on the left hand side. With this we get
+%\bas
+%\mathrm{d}^{\widehat{\nabla}} \bigl( \rho_*(A_s) \bigr)(X,Y)
+%&=
+%\widehat{\nabla}_X\bigl( \rho_*(A_s(Y)) \bigr)
+	%- \widehat{\nabla}_Y\bigl( \rho_*(A_s(X)) \bigr)
+	%- \rho_*\mleft( A_s\bigl([X, Y]\bigr) \mright)
+%\\
+%&=
+%\rho_*\mleft(\nabla_X \bigl( A_s(Y) \bigr) \mright)
+	%- \rho_*\mleft( \nabla_Y \bigl(A_s(X)\bigr) \mright)
+	%- \rho_*\mleft( A_s\bigl([X, Y]\bigr) \mright)
+%\\
+%&=
+%\rho_* \mleft(
+	%\nabla_X \bigl( A_s(Y) \bigr)
+	%- \nabla_Y \bigl(A_s(X)\bigr)
+	%- A_s\bigl([X, Y]\bigr)
+%\mright)
+%\\
+%&=
+%\rho_*\mleft( \mathrm{d}^\nabla A_s \mright)(X,Y)
+%\eas
+%for all $X, Y \in \mathfrak{X}(U)$. Collecting everything, Eq.\ \eqref{FirstStepTowardsNewFieldStrength} has now the following form
+%\bas
+%R_{\nabla^A}
+%&=
+%\rho_*\mleft( \mathrm{d}^\nabla A_s + \frac{1}{2}\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}+ \zeta \mright).
+%\eas
+%So, we have a new form of the field strength, assuming that $\nabla$ and $\zeta$ satisfy the compatibility conditions in Remark \ref{rem:CompCondsSimple}. This is precisely the definition of the field strength as in the gauge theory of Thomas and Alexei, that is, we have a new field strength
+%\bas
+%G
+%&\coloneqq
+%\mathrm{d}^\nabla A_s + \frac{1}{2}\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}+ \zeta.
+%\eas
+%Furthermore, if we are interested into Yang-Mills gauge theories, then we'd have $K = P \times_{\mathrm{Ad}} \mathfrak{g}$ (the adjoint bundle), and so also $\rho_* = \mathrm{ad}$. In this case we can put $\widehat{\nabla} = \nabla$ and then the compatibility conditions in Remark \ref{rem:CompCondsSimple} read
+%\bas
+%R_\nabla
+%&=
+%\mathrm{ad}(\zeta),
+%\\
+%\nabla \circ \mathrm{ad}
+%&=
+%\mathrm{ad} \circ \nabla.
+%\eas
+%The second condition precisely gives after a short calculation
+%\bas
+%\nabla\mleft( \mleft[ \mu, \nu \mright]_{\mathfrak{g}} \mright)
+%&=
+%\mleft[ \nabla\mu, \nu \mright]_{\mathfrak{g}}
+	%+ \mleft[ \mu, \nabla\nu \mright]_{\mathfrak{g}}
+%\eas
+%for all $\mu, \nu \in \Gamma(M \times \mathfrak{g})$, so, $\nabla$ has to be a Lie bracket derivation. So, in this case the compatibility conditions in Remark \ref{rem:CompCondsSimple} precisely reduce to the compatibility conditions of Alexei's and Thomas's theory! (in the case of Lie algebra bundles; the general theory is more general, formulated on general Lie algebroids)
+%
+%As a summary:
+%
+%\begin{remarks}{Summary}{FirstSummary}
+%We have
+%\ba
+%R_\nabla
+%&=
+%\mathrm{ad}(\zeta),
+%\\
+%\nabla \circ \mathrm{ad}
+%&=
+%\mathrm{ad} \circ \nabla,
+%\\
+%G
+%&=
+%\mathrm{d}^\nabla A_s + \frac{1}{2}\mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}+ \zeta.
+%\ea
+%\end{remarks}
+%
+%In fact, the compatibility conditions lead to a gauge invariant theory: Fix an $\mathrm{ad}$-invariant scalar product $\kappa$ on $\mathfrak{g}$; then define the Lagrangian by
+%\ba
+%\mathfrak{L}_{\mathrm{YM}}
+%&\coloneqq
+%- \frac{1}{2} \kappa\mleft( G \stackrel{\wedge}{,} *G \mright)
+%\ea
+%where $*$ is the Hodge star operator w.r.t.\ some spacetime metric. (In short, the typical definition, but replace $F$ with $G$) It is easier to look at the infinitesimal version of the gauge transformations, hence everything with respect to a gauge $s$ now.
+%
+%In order to derive a formula for these, let us again look at $\nabla^A$. Fix an $\varepsilon \in \Gamma(M \times \mathfrak{g})$, then the infinitesimal gauge transformation $\delta_\varepsilon \phi$ of $\phi \in \Gamma(M \times \mathfrak{g})$ is usually defined by
+%\bas
+%\delta_\varepsilon \phi
+%&\coloneqq
+%\rho_*(\varepsilon) \cdot \phi.
+%\eas
+%We fix the infinitesimal gauge trafo $\delta_\varepsilon A$ of $A$ by looking at the gauge trafo of $\nabla^A \phi$ via
+%\bas
+%\delta_\varepsilon \nabla^A \phi
+%&=
+%\mleft.\frac{\mathrm{d}}{\mathrm{dt}}\mright|_{t=0}\mleft( \nabla^{A + t\delta_\varepsilon A} \mleft( \phi + t \delta_\varepsilon \phi \mright) \mright)
+%\\
+%&=
+%\underbrace{\widehat{\nabla} \mleft( \delta_\varepsilon \phi \mright)}
+	%_{\mathclap{ = \mleft(\widehat{\nabla} \mleft( \rho_*(\varepsilon) \mright)\mright) \cdot \phi + \rho_*(\varepsilon) \cdot \widehat{\nabla} \phi }}
+	%+ \rho_*\mleft( \delta_\varepsilon A_s \mright) \cdot \phi
+	%+ \rho_*(A_s) \cdot \delta_\varepsilon \phi
+%\\
+%&=
+%\bigl( \rho_*\mleft( \nabla \varepsilon + \delta_\varepsilon A_s \mright) + \rho_*(A_s) \cdot \rho_*(\varepsilon) \bigr) \cdot \phi
+	%+ \rho_*(\varepsilon) \cdot \widehat{\nabla} \phi
+%\eas
+%using Remark \ref{rem:CompCondsSimple}. We want $\delta_\varepsilon \nabla^A \phi = \rho_*(\varepsilon) \cdot \nabla^A \phi$ which gives
+%\bas
+%\rho_*(\varepsilon) \cdot \nabla^A \phi
+%&=
+%\rho_*(\varepsilon) \cdot \widehat{\nabla} \phi
+	%+ \rho_*(\varepsilon) \cdot \rho_*(A_s) \cdot \phi.
+%\eas
+%Imposing $\delta_\varepsilon \nabla^A \phi = \rho_*(\varepsilon) \cdot \nabla^A \phi$ we get
+%\bas
+%\rho_*\mleft(\delta_\varepsilon A_s + \nabla \varepsilon + \mleft[ A_s, \varepsilon \mright]_{\mathfrak{g}} \mright)
+%&=
+%0
+%\eas
+%using again that $\rho_*$ is a Lie algebra representation. If we require that this shall work for all $\rho_*$, we may say
+%\ba\label{GaugeTrafoOfANew}
+%\delta_\varepsilon A_s
+%&\coloneqq
+%-\nabla \varepsilon
+	%+ \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}}.
+%\ea
+%This is precisely the infinitesimal gauge trafo of $A$ as in the theory of Thomas and Alexei! Hence, we achieve infinitesimal gauge invariance of $\mathfrak{L}_{\mathrm{YM}}$. For completeness, let us check the gauge trafo of $G$ using Def.\ \eqref{GaugeTrafoOfANew} and Remark \ref{rem:FirstSummary}, it is very similar to the "classical" calculation due to Remark \ref{rem:FirstSummary} which is why I skip some straightforward calculations to keep it short,
+%\bas
+%\delta_\varepsilon G
+%&=
+%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}
+%\mleft(
+	%\mathrm{d}^\nabla (A_s + t\delta_\varepsilon A_s) + \frac{1}{2}\mleft[ A_s + t\delta_\varepsilon A_s \stackrel{\wedge}{,} A_s + t\delta_\varepsilon A_s \mright]_{\mathfrak{g}}+ \zeta
+%\mright)
+%\\
+%&=
+%\mathrm{d}^\nabla \mleft( -\nabla \varepsilon
+	%+ \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright)
+		%+ \mleft[ A_s \stackrel{\wedge}{,} -\nabla \varepsilon + \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
+%\\
+%&=
+%\underbrace{- \mleft(\mathrm{d}^\nabla\mright)^2 \varepsilon}_{= - R_\nabla \varepsilon = \mleft[ \varepsilon, \zeta \mright]_{\mathfrak{g}}}
+	%+ \mleft[ \nabla \varepsilon \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}
+	%+ \mleft[ \varepsilon, \mathrm{d}^\nabla A_s \mright]_{\mathfrak{g}}
+	%+ \underbrace{\mleft[ A_s \stackrel{\wedge}{,} -\nabla \varepsilon \mright]_{\mathfrak{g}}}_{= - \mleft[ \nabla \varepsilon \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}}}
+	%+ \mleft[ A_s \stackrel{\wedge}{,} \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
+%\\
+%&=
+%\mleft[ \varepsilon,
+	%\mathrm{d}^\nabla A_s + \zeta
+%\mright]_{\mathfrak{g}}
+	%+ \mleft[ A_s \stackrel{\wedge}{,} \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
+%\eas
+%and, using the Jacobi identity,
+%\bas
+%\mleft[ A_s \stackrel{\wedge}{,} \mleft[ \varepsilon, A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}} (X,Y)
+%&=
+%\mleft[ A_s(X) , \mleft[ \varepsilon, A_s(Y) \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
+	%- \mleft[ A_s(Y) , \mleft[ \varepsilon, A_s(X) \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
+%\\
+%&=
+%\mleft[ \varepsilon, \mleft[ A_s(X), A_s(Y) \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}}
+%\\
+%&=
+%\mleft[ \varepsilon, \frac{1}{2} \mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}} \mright]_{\mathfrak{g}} (X, Y)
+%\eas
+%for all $X, Y \in \mathfrak{X}(U)$. Altogether
+%\bas
+%\delta_\varepsilon G
+%&=
+%\mleft[ \varepsilon,
+	%\mathrm{d}^\nabla A_s + \frac{1}{2} \mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathfrak{g}} + \zeta
+%\mright]_{\mathfrak{g}}
+%=
+%\mleft[ \varepsilon, G
+%\mright]_{\mathfrak{g}}.
+%\eas
+%Hence, the field strength transforms with the adjoin of $\varepsilon$; since $\kappa$ is $\mathrm{ad}$-invariant, we can derive that $\mathfrak{L}_{\mathrm{YM}}$ is invariant under the infinitesimal gauge trafo in Def.\ \eqref{GaugeTrafoOfANew}!
+%
+%Observe that by Remark \ref{rem:FirstSummary} that $\zeta$ can be non-trivial even if we still use $\nabla = \nabla^0$, the canonical flat connection on $M\times \mathfrak{g}$, even though this whole discussion started with allowing more general connections.
+%
+%If we minimise $\mathfrak{L}_{\mathrm{YM}}$, then one obvious way would be to search solutions with $G \equiv 0$ for an absolute minimum/maximum (because of the sign), doing so would result into that the classical Yang-Mills energy would have a bound which is non-zero. May this be an explanation for the mass gap? As shown in my thesis, every classical theory has a $\zeta$ after a field redefinition. Even though field redefinitions are an equivalence for the classical theories, one may argue that it does not describe an equivalence for the quantised theory, leading to a possible explanation of the mass gap? But that is just high hope right now :) 
+%
+%%\subsection{Integration}
+%\textbf{Integration (probably no need for the following)}
+%
+%For an integrated version of Def.\ \eqref{GaugeTrafoOfANew} we need to discuss when the new "minimal coupling" of Def.\ \eqref{NewMinimalCoupling} behaves nicely under a change of the gauge $s$. That is, we now want to extend the new definition of $\nabla^A$ to a well-defined connection on $K = P \times_{\rho} V$, especially on the adjoint bundle $K = P \times_{\mathrm{Ad}} \mathfrak{g}$ in our case. (and later maybe generalise this to a $\widetilde{G}$-quotient of a general Lie algebra bundle over $P$)
+%
+%Let $s^\prime$ be another (local) gauge such that we have a unique smooth map $g: U \to G$ such that
+%\bas
+%s^\prime
+%&=
+%s g,
+%\eas
+%then we want for well-definedness
+%\ba\label{WellDef}
+%\nabla^A \Phi
+%&=
+%\mleft[ s, \nabla \phi + \mathrm{ad}(A_s) \cdot \phi \mright]
+%\stackrel{!}{=}
+%\mleft[ s^\prime, \nabla \phi^\prime + \mathrm{ad}(A_{s^\prime}) \cdot \phi^\prime \mright],
+%\ea
+%where we have $\Phi = [s, \phi] = [s^\prime, \phi^\prime]$, especially
+%\bas
+%\phi^\prime
+%&=
+%\mathrm{Ad}\mleft( g^{-1} \mright) \cdot \phi.
+%\eas
+%Since the new field strength $G$ still transforms via the adjoin under $\delta_\varepsilon$ (see above), we make the following ansatz
+%\ba
+%A_{s^\prime} 
+%&=
+%\mathrm{Ad}\mleft( g^{-1} \mright) \cdot A_s
+	%+ \mu,
+%\ea
+%where $\mu \in \Omega^1(U; \mathfrak{g})$. Usually, $\mu = g^!\mu_{\widetilde{G}}$, the pullback as a form of the Maurer-Cartan-Form $\mu_{\widetilde{G}}$ on $\widetilde{G}$. One can then check with some short calculation that Eq.\ \eqref{WellDef} is equivalent to
+%\bas
+%\nabla\mleft( \mathrm{Ad}\mleft( g^{-1} \mright) \cdot \phi \mright)
+	%+ \mathrm{ad}(\mu) \cdot \mathrm{Ad}\mleft( g^{-1} \mright) \cdot \phi
+%&\stackrel{!}{=}
+%\mathrm{Ad}\mleft( g^{-1} \mright) \cdot \nabla \phi
+%\eas
+%using the definition of $P \times_{\mathrm{Ad}} \mathfrak{g}$. Equivalently,
+%\bas
+%\mathrm{ad}(\mu)
+%&=
+%\mathrm{Ad}\mleft( g \mright) \circ \mleft(
+%\mright)
+%\eas
 
 %\subsection{Axiomatic Yang-Mills gauge theories}
 %
