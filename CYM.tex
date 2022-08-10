@@ -6718,6 +6718,16 @@ thus, concluding the proof with
 \eas
 \end{proof}
 
+\begin{lemmata}{Lie bracket of vertical and horizontal vector}{BracketVertHor}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have
+\bas
+A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
+&=
+\mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu)
+\eas
+for all $\nu \in \Gamma(\mathcal{g})$ and horizontal vector fields $X \in \mathfrak{X}(\mathcal{P})$.
+\end{lemmata}
+
 Now can finally prove Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}.
 
 \begin{proof}[Proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}]
@@ -6804,48 +6814,56 @@ Let us denote $X^h \coloneqq \pi_h(X)$ and $Y^h \coloneqq \pi_h(Y)$, and $X$ and
 %whose first equality is a very straight-forward generalization of the commutation of pullbacks and de-Rham differentials; this is easy to check, but in case the reader is interested in an explicit proof, then see either \cite[Appendix, Prop.\ A.1, Eq.\ (A.1)]{My1stpaper} or \cite[Appendix, Prop.\ A.1.1, Eq.\ (A.2)]{MyThesis}. 
 
 Then make use of Def.\ \ref{def:FinallyTheConnection} and Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm} to show
-\bas
+\ba\label{TransformedClassicStrengthTerm}
 &
 r_\sigma^*\mleft(
 \mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \mleft(\mathcal{r}_{\sigma*}\mleft(X^h\mright), \mathcal{r}_{\sigma*}\mleft(Y^h\mright)\mright)
 \mright)
+\nonumber
 \\
 &\hspace{1cm}=
 r_\sigma^*\biggl(
 \mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(X^h\mright)} {\underbrace{\mleft( (A \circ \mathcal{r}_{\sigma*})\mleft(Y^h\mright) \mright)}_{= 0}}
+\nonumber
 \\
 &\hspace{2.5cm}
 	- \mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(Y^h\mright)} \mleft( (A \circ \mathcal{r}_{\sigma*})\mleft(X^h\mright) \mright)
+\nonumber
 \\
 &\hspace{2.5cm}
 	- A\mleft( \mleft[ \mathcal{r}_{\sigma*}\mleft(X^h\mright), \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright] \mright)
 \biggr)
+\nonumber
 \\
 &\hspace{1cm}=r_\sigma^*\biggl(
 	- A\mleft( \mleft[ \mathcal{r}_{\sigma*}\mleft(X^h\mright), \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright] \mright)
 \biggr)
+\nonumber
 \\
 &\hspace{1cm}=r_\sigma^*\Biggl(
 - A\mleft(
 	\mleft[\mathrm{D}r_\sigma\mleft( X^h \mright), \mathrm{D}r_\sigma\mleft(Y^h\mright)\mright]
 \mright)
+\nonumber
 \\
 &\hspace{2.5cm}
 	+ A\mleft(
 	\mleft[\mathrm{D}r_\sigma\mleft(X^h\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
 	\mright)
+\nonumber
 \\
 &\hspace{2.5cm}
 	+ A\mleft(
 	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright) }}\mright), \mathrm{D}r_\sigma\mleft(X^h\mright) \mright]
 	\mright)
+\nonumber
 \\
 &\hspace{2.5cm}
 	- A\mleft(
 	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright)\mleft(X^h \mright) }}\mright) \mright]
 	\mright)
 \Biggr).
-\eas
+\ea
 Let us look at each summand individually; for the first summand we use the very well-known fact (see \textit{e.g.}\ \cite[\S A.1.11, Cor.\ A.1.51, page 615]{Hamilton}) that
 \bas
 \mleft[\mathrm{D}r_\sigma\mleft( X^h \mright), \mathrm{D}r_\sigma\mleft(Y^h\mright)\mright]
@@ -6874,8 +6892,9 @@ making use of that $r_\sigma$ is an isomorphism, and thus we get for the first s
 \\
 &\hspace{1cm}=
 \sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
-	- r_{\sigma}^*\mleft(\mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)\mright).
+	- r_{\sigma}^*\mleft(\mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)\mright),
 \eas
+where we used a similar argument for the last equality as for the beginning of the calculation for Eq.\ \eqref{TransformedClassicStrengthTerm}.
 For the fourth summand recall that fundamental vector fields are fundamental vector fields along the fibres of $\mathcal{P}$; if we fix a base point $x \in M$, then each fibre $\mathcal{P}_x$ is an embedded submanifold of $\mathcal{P}$ onto which the Lie group $\mathcal{G}_x$ acts on the right. Thus, we know from Lie group action theory (see \textit{e.g.}\ \cite[\S 3.4, Prop.\ 3.4.4, page 144]{Hamilton}) that the Lie bracket of two fundamental vector fields over $\mathcal{P}_x$ is again a fundamental vector field over $\mathcal{P}_x$ given by
 \bas
 \mleft[ \widetilde{\mu}, \widetilde{\nu} \mright]
