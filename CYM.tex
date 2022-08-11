@@ -805,7 +805,7 @@ for all $g, g^\prime \in G$, viewing $\psi_g$ as a map $H \to H$. Therefore we c
 \bas
 G &\to \mathrm{Aut}(H),
 \eas
-where $\mathrm{Aut}(H)$ is the set of Lie group automorphisms. The similarity to Lie group representations on vector spaces is obvious, thence the name. In fact, these integrate Lie group representation: Observe that $\mathrm{D}_{e}\psi_g$ is a Lie algebra homomorphism $\mathfrak{h} \to \mathfrak{h}$ due to that $\psi_g$ is a Lie group homomorphism, where $\mathfrak{h}$ is the Lie algebra of $H$ and $e$ is the neutral element of $H$. $\mathrm{D}_{e}\psi_g$ is an automorphism because $\psi_g$ is, and thus $g \mapsto \mathrm{D}_e\psi_g$ is a $G$-representation on $\mathfrak{h}$.
+where $\mathrm{Aut}(H)$ is the set of Lie group automorphisms. The similarity to Lie group representations on vector spaces is obvious, thence the name. In fact, these integrate Lie group representations on Lie algebras: Observe that $\mathrm{D}_{e}\psi_g$ is a Lie algebra homomorphism $\mathfrak{h} \to \mathfrak{h}$ due to that $\psi_g$ is a Lie group homomorphism, where $\mathfrak{h}$ is the Lie algebra of $H$ and $e$ is the neutral element of $H$. $\mathrm{D}_{e}\psi_g$ is an automorphism because $\psi_g$ is, and it is a homomorphism in $g$ due to that $\psi_{gg^\prime} = \psi_g \circ \psi_{g^\prime}$ implies $\mathrm{D}_e\psi_{gg^\prime} = \mathrm{D}_e\psi_g \circ \mathrm{D}_e\psi_{g^\prime}$, and thus $g \mapsto \mathrm{D}_e\psi_g$ is a $G$-representation on $\mathfrak{h}$ with values in automorphisms of Lie algebras (not just vector spaces).
 \newline
 
 This definition is of course also motivated by various references pointing out that Lie group representations define Lie group actions with extra properties; see for example \cite[\S 3, Ex.\ 3.4.2, page 143f.]{Hamilton}. In \cite[comments after Ex.\ 1.7.14, page 47]{mackenzieGeneralTheory} this definition is also called \textit{action by Lie group isomorphisms}.
@@ -954,13 +954,13 @@ where $L_U: P_U \times H \to U \times H$ is given by $L_U(p,h) \coloneqq \mleft(
 for all $(x, h) \in U \times H$, where $e$ is the neutral element of $G$.
 By the definition of $\varphi_U$ we immediately get
 \bas
-\mleft( \varphi_U \circ \varphi^{-1}_U \mright)(x, e)
+(x, e)
 &=
+\mleft( \varphi_U \circ \varphi^{-1}_U \mright)(x, e)
+=
 \Bigl(
 	\pi_P\mleft( \varphi_U^{-1}(x, e) \mright), \beta_U\mleft( \varphi_U^{-1}(x, e) \mright)
-\Bigr)
-=
-(x, e),
+\Bigr),
 \eas
 for all $x \in U$, and, also using again the equivariance of $\beta_U$,
 \bas
