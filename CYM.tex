@@ -2962,7 +2962,7 @@ and
 &\hspace{1cm}
 	+ \mathrm{D}_{e_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{D}_xe(\omega) \bigr),
 \ea
-where $\tau$ is any additional (local) section\footnote{That is, $f \circ \tau = \mathds{1}_M$ (locally).} of $f$ with $\tau_x = p$.
+where $\tau$ is any (local) section\footnote{That is, $f \circ \tau = \mathds{1}_M$ (locally).} of $f$ with $\tau_x = p$.
 \end{theorems}
 
 \begin{remark}
@@ -3734,6 +3734,16 @@ given by
 (p, \nu) &\mapsto \widetilde{\nu}_p.\label{FundVecAsMapIsIsom}
 \ea
 \end{corollaries}
+
+\begin{remarks}{Extending the notation of fundamental vector fields}{FundVecNotationOnPullbackBundle}
+For $\mu \coloneqq (p, \nu)$ we may also write
+\bas
+\widetilde{\mu}_p
+&\coloneqq
+\widetilde{\nu}_p,
+\eas
+which simplifies the notation by avoiding to write elements or the values of sections of $\pi^*\mathcal{g}$ as a pair of elements as in $(p, \nu)$.
+\end{remarks}
 
 \begin{proof}
 \leavevmode\newline
@@ -4543,7 +4553,7 @@ Of course one can view $\Delta \sigma$ as a map $\mathrm{T}M \to \mathcal{g}$ wh
 \eas
 \end{remark}
 
-We can actually rewrite some important equations now.
+We can actually rewrite some important equations now; recall the notation introduced in Remark \ref{rem:FundVecNotationOnPullbackBundle}.
 
 \begin{remarks}{Darboux derivative in the infinitesimal LGB action}{DarbouxInActionInfinit}
 Recall Thm.\ \ref{thm:DiffOfLGBAction}; keeping the same notation as in this theorem but denoting the projection of $\mathcal{P}$ by $\pi$, we checked several times that $Y - \mathrm{D}_{x}\sigma (\omega)$ is vertical, and thus we can now write
@@ -4731,6 +4741,15 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 \eas
 for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, is a vector bundle connection on $\mathcal{g}$, where $t \in \mathbb{R}$, and $\mathrm{pr}_2: \mathrm{V}\mathcal{g} \to \mathcal{g}$ is the projection onto the second component of $\mathrm{V}\mathcal{g}$ naturally viewed as pullback bundle.
 \end{propositions}
+
+\begin{remark}\label{RemarkAboutPrTwoInDarbouxDerivative}
+\leavevmode\newline
+Usually, the notation of $\mathrm{pr}_2$ is usually omitted in such constructions due to the fact that 
+\bas
+t \mapsto \mleft(\Delta \e^{t \nu}\mright)_x (X)
+\eas
+is a curve with values in $\mathcal{g}_x$, a vector space, so that one canonically uses the identification of tangent spaces of vector spaces with itself to show that $\mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x \in \mathcal{g}_x$. We will keep $\mathrm{pr}_2$ for the proof for the sake of rigorousness, but we will drop it after this proposition for simplicity without further mention.
+\end{remark}
 
 In order to prove this we need to apply Schwarz's Theorem in order to switch $\Delta$ with $\mathrm{d}/\mathrm{d}t$. To do this rigorously we need to introduce the canonical involution/flip on double tangent bundles; since this does not completely fit into this paper's subject and may be already known by the reader, you can learn about the double tangent bundle and its flip map in Appendix \ref{DoubleTangentFlip} if needed.
 
@@ -5486,6 +5505,12 @@ for all $v_p \in \mathcal{g}_x$. For readability we may also omit the basepoint 
 A_p(\widetilde{v_p})
 &\equiv
 v_p.
+\eas
+Furthermore, recall the notation introduced in Remark \ref{rem:FundVecNotationOnPullbackBundle}, then for $\mu \coloneqq (p, v_p)$ we can therefore write
+\bas
+A_p\mleft( \widetilde{\mu}_p \mright)
+&=
+\mu.
 \eas
 \end{remark}
 
@@ -6718,6 +6743,8 @@ thus, concluding the proof with
 \eas
 \end{proof}
 
+We also need a generalization of statements as \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}.
+
 \begin{lemmata}{Lie bracket of vertical and horizontal vector}{BracketVertHor}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have
 \bas
@@ -6727,6 +6754,69 @@ A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
 \eas
 for all $\nu \in \Gamma(\mathcal{g})$ and horizontal vector fields $X \in \mathfrak{X}(\mathcal{P})$.
 \end{lemmata}
+
+\begin{proof}
+\leavevmode\newline
+First of all recall the very basic fact (see \textit{e.g.}\ \cite[\S A.1, Thm.\ A.1.46, page 615]{Hamilton}) that for two vector fields $X, Y \in \mathfrak{X}(\mathcal{P})$ we have\footnote{Rigorously, similarly to Prop.\ \ref{prop:FinallyTheNablaInduction} one has a projection involved, but as explained in Remark \ref{RemarkAboutPrTwoInDarbouxDerivative} we will omit notating this projection.}
+\bas
+\mleft[ X, Y \mright]_p
+&=
+-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}
+	\mathrm{D}_{\phi_t(p)}\phi_{-t} \mleft(X_{\phi_t(p)}\mright)
+\eas
+for all $p \in \mathcal{P}$, where $\phi_t$ is the local flow of $Y$ (with parameter $t$ in an open interval of $\mathbb{R}$ containing 0). Now let $X$ be a horizontal vector field and $Y = \widetilde{\nu}$. For $Y$ we know by Def.\ \ref{def:FundVecs} that
+\bas
+\widetilde{\nu}_p
+&=
+\mathrm{D}_{e_{x}}\Phi_p\mleft(\nu_{x}\mright)
+=
+\mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0}
+\mleft( p \cdot \e^{t\nu_x} \mright)
+\eas
+for all $p \in \mathcal{P}$, where $\Phi_p$ is the orbit map through $p$, $x \coloneqq \pi(p)$, and $e_{x}$ the neutral element of $\mathcal{G}_x$. Thus, 
+\bas
+\phi_t(p)
+&=
+p \cdot \e^{t\nu_x}
+=
+r_{\e^{t\nu}}(p),
+\eas
+and by rewriting in sense of Def.\ \ref{def:WeModTheRIghtPush} we achieve
+\bas
+\mleft[ X, \widetilde{\nu} \mright]_p
+&=
+-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}
+	\mathrm{D}_{p \cdot \e^{t\nu_x}}r_{\e^{-t\nu}} \mleft(X_{p \cdot \e^{t\nu_x}}\mright)
+\\
+&=
+- \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft(
+	\mathrm{D}_{p \cdot \e^{t\nu_x}}r_{\e^{-t\nu}} \mleft(X_{p \cdot \e^{t\nu_x}}\mright)
+	- \mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta \e^{-t\nu} \mright) \mright|_{p \cdot \e^{t\nu_x}}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)
+	}}\mright|_{p}
+\mright)
+\\
+&\hspace{1cm}
+- \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft(
+	\mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta \e^{-t\nu} \mright) \mright|_{p \cdot \e^{t\nu_x}}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)
+	}}\mright|_{p}
+\mright)
+\\
+&=
+- \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
+	\mathcal{r}_{\e^{-t\nu_x}*}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)
+\Bigr)
+\\
+&\hspace{1cm}
+- \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft(
+	\mleft.{\oversortoftilde{
+		\mleft. \mleft( \pi^!\Delta \e^{-t\nu} \mright) \mright|_{p \cdot \e^{t\nu_x}}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)
+	}}\mright|_{p}
+\mright).
+\eas
+The first summand, $t \mapsto \mathcal{r}_{\e^{-t\nu_x}*}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)$, is a curve with values in $\mathrm{H}_{p}\mathcal{P}$ due to the fact that $X$ is a horizontal vector field. Thus, the velocity of this curve at $t=0$ will also be an element of $\mathrm{H}_p\mathcal{P}$.
+\end{proof}
 
 Now can finally prove Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}.
 
@@ -6895,13 +6985,14 @@ making use of that $r_\sigma$ is an isomorphism, and thus we get for the first s
 	- r_{\sigma}^*\mleft(\mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)\mright),
 \eas
 where we used a similar argument for the last equality as for the beginning of the calculation for Eq.\ \eqref{TransformedClassicStrengthTerm}.
-For the fourth summand recall that fundamental vector fields are fundamental vector fields along the fibres of $\mathcal{P}$; if we fix a base point $x \in M$, then each fibre $\mathcal{P}_x$ is an embedded submanifold of $\mathcal{P}$ onto which the Lie group $\mathcal{G}_x$ acts on the right. Thus, we know from Lie group action theory (see \textit{e.g.}\ \cite[\S 3.4, Prop.\ 3.4.4, page 144]{Hamilton}) that the Lie bracket of two fundamental vector fields over $\mathcal{P}_x$ is again a fundamental vector field over $\mathcal{P}_x$ given by
-\bas
-\mleft[ \widetilde{\mu}, \widetilde{\nu} \mright]
-&=
-\widetilde{\mleft[ \mu, \nu \mright]}_{\mathcal{g}_x}
-\eas
-for all $\mu, \nu \in \mathcal{g}_x$. This naturally extends to fundamental vector fields over $\mathcal{P}$, so that
+We know by Remark \ref{rem:FundVecsAreLABActions} that the map to fundamental vector fields is a homomorphism of Lie algebras, so that
+%For the fourth summand recall that fundamental vector fields are fundamental vector fields along the fibres of $\mathcal{P}$; if we fix a base point $x \in M$, then each fibre $\mathcal{P}_x$ is an embedded submanifold of $\mathcal{P}$ onto which the Lie group $\mathcal{G}_x$ acts on the right. Thus, we know from Lie group action theory (see \textit{e.g.}\ \cite[\S 3.4, Prop.\ 3.4.4, page 144]{Hamilton}) that the Lie bracket of two fundamental vector fields over $\mathcal{P}_x$ is again a fundamental vector field over $\mathcal{P}_x$ given by
+%\bas
+%\mleft[ \widetilde{\mu}, \widetilde{\nu} \mright]
+%&=
+%\widetilde{\mleft[ \mu, \nu \mright]}_{\mathcal{g}_x}
+%\eas
+%for all $\mu, \nu \in \mathcal{g}_x$. This naturally extends to fundamental vector fields over $\mathcal{P}$, so that
 \bas
 \mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
 &=
