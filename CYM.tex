@@ -6745,19 +6745,28 @@ thus, concluding the proof with
 
 We also need a generalization of statements as \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}.
 
-\begin{lemmata}{Lie bracket of vertical and horizontal vector}{BracketVertHor}
+\begin{lemmata}{Lie bracket of horizontal and vertical vector}{BracketVertHor}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have
+\bas
+A\mleft( \mleft[ X, \widetilde{\nu} \mright] \mright)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
+		\mleft( \pi^! \Delta \e^{t\nu} \mright)\mleft(X\mright) \circ r_{\e^{-t\nu}}
+	\Bigr)
+\eas
+for all $\nu \in \Gamma(\mathcal{g})$ and horizontal vector fields $X \in \mathfrak{X}(\mathcal{P})$. If there is an $\omega \in \mathfrak{X}(M)$ such that $\mathrm{D}\pi(X) = \pi^*\omega$, then
 \bas
 A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
 &=
 \mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu)
+=
+\pi^*\mleft( \nabla^{\mathcal{G}}_\omega \nu \mright).
 \eas
-for all $\nu \in \Gamma(\mathcal{g})$ and horizontal vector fields $X \in \mathfrak{X}(\mathcal{P})$.
 \end{lemmata}
 
 \begin{proof}
 \leavevmode\newline
-First of all recall the very basic fact (see \textit{e.g.}\ \cite[\S A.1, Thm.\ A.1.46, page 615]{Hamilton}) that for two vector fields $X, Y \in \mathfrak{X}(\mathcal{P})$ we have\footnote{Rigorously, similarly to Prop.\ \ref{prop:FinallyTheNablaInduction} one has a projection involved, but as explained in Remark \ref{RemarkAboutPrTwoInDarbouxDerivative} we will omit notating this projection.}
+First of all recall the very basic fact (see \textit{e.g.}\ \cite[\S A.1, Thm.\ A.1.46, page 615]{Hamilton}) that for two vector fields $X, Y \in \mathfrak{X}(\mathcal{P})$ we have\footnote{Rigorously, similarly to Prop.\ \ref{prop:FinallyTheNablaInduction} one has a projection involved, but as explained in Remark \ref{RemarkAboutPrTwoInDarbouxDerivative} we will omit notating this projection; in the context of this proof we can allow ourselves to take the typical less rigorous approach for simplicity.}
 \bas
 \mleft[ X, Y \mright]_p
 &=
@@ -6815,10 +6824,75 @@ and by rewriting in sense of Def.\ \ref{def:WeModTheRIghtPush} we achieve
 	}}\mright|_{p}
 \mright).
 \eas
-The first summand, $t \mapsto \mathcal{r}_{\e^{-t\nu_x}*}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)$, is a curve with values in $\mathrm{H}_{p}\mathcal{P}$ due to the fact that $X$ is a horizontal vector field. Thus, the velocity of this curve at $t=0$ will also be an element of $\mathrm{H}_p\mathcal{P}$.
+The first summand, $t \mapsto \mathcal{r}_{\e^{-t\nu_x}*}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)$, is a curve with values in $\mathrm{H}_{p}\mathcal{P}$ due to the fact that $X$ is a horizontal vector field. Thus, the velocity of this curve at $t=0$ will also be an element of $\mathrm{H}_p\mathcal{P}$, and the first summand is therefore in the kernel of $A$. Similarly,
+\bas
+t &\mapsto \eta(t) \coloneqq
+\mleft. \mleft( \pi^!\Delta \e^{-t\nu} \mright) \mright|_{p \cdot \e^{t\nu_x}}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)
+=
+\mleft. \mleft( \Delta \e^{-t\nu} \mright) \mright|_{x}\mleft(\mathrm{D}_{p \cdot \e^{t\nu_x}}\pi \mleft(X_{p \cdot \e^{t\nu_x}}\mright)\mright)
+\eas
+is a curve with values in $\mathcal{g}_x$, and therefore its fundamental vector field at $p$ is a curve with values in $\mathrm{V}_p\mathcal{P}$. Hence, we can calculate in the sense of vector spaces to derive
+\bas
+- \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \widetilde{\eta(t)}_p
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mathrm{D}_{e_x}\Phi_p \bigl(\eta(-t)\bigr) \Bigr)
+=
+\mathrm{D}_{e_x}\Phi_p \mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \eta(-t)\mright)
+=
+\mleft.\oversortoftilde{\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \eta(-t)}\mright|_p
+\eas
+where we substituted $t \leftrightarrow -t$ after the first equality sign. In total we achieve
+\bas
+A_p\mleft( \mleft[ X, \widetilde{\nu} \mright]_p \mright)
+&=
+A_p\mleft( \mleft.\oversortoftilde{\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \eta(-t)}\mright|_p \mright)
+=
+\mleft( 
+	p,
+	\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
+		\mleft. \mleft( \Delta \e^{t\nu} \mright) \mright|_{x}\mleft(\mathrm{D}_{p \cdot \e^{-t\nu_x}}\pi \mleft(X_{p \cdot \e^{-t\nu_x}}\mright)\mright)
+	\Bigr)
+\mright),
+\eas
+and thus
+\bas
+A\mleft( \mleft[ X, \widetilde{\nu} \mright] \mright)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
+		\mleft( \pi^! \Delta \e^{t\nu} \mright)\mleft(X\mright) \circ r_{\e^{-t\nu}}
+	\Bigr).
+\eas
+If there is an $\omega \in \mathfrak{X}(M)$ such that $\mathrm{D}\pi(X) = \pi^*\omega$, then
+\bas
+A_p\mleft( \mleft[ X, \widetilde{\nu} \mright]_p \mright)
+&=
+\mleft( 
+	p,
+	\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
+		\mleft. \mleft( \Delta \e^{t\nu} \mright) \mright|_{x}\mleft(\omega_{x}\mright)
+	\Bigr)
+\mright),
+\eas
+and therefore by Def.\ \ref{def:ConnectionOnLAB}
+\bas
+A_p\mleft( \mleft[ X, \widetilde{\nu} \mright]_p \mright)
+&=
+\mleft( 
+	p,
+	\mleft.\nabla^{\mathcal{G}}_\omega \nu \mright|_x
+\mright)
+=
+\mleft. \pi^*\mleft( \nabla^{\mathcal{G}}_\omega \nu \mright) \mright|_p.
+\eas
+Concluding the proof, by the definition of pullback connections we could also write
+\bas
+A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
+&=
+\mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu).
+\eas
 \end{proof}
 
-Now can finally prove Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}.
+Now we can finally prove Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}.
 
 \begin{proof}[Proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}]
 \leavevmode\newline
@@ -7454,14 +7528,14 @@ for all $\lambda, \kappa \in \mathbb{R}$. Hence we achieve linearity with respec
 \end{remarks}
 
 \begin{remarks}{Alignment of both vector bundle structures on $\mathrm{TT}M$ on the restricted vertical bundle}{BothLinearStructuresTheSameOnTheVerticalBundle}
-By definition, the vertical bundle $\mathrm{VT}M$ of $\mathrm{T}M$ is a subbundle of $\mathrm{TT}M$. The zero section of $\mathrm{T}M$ is a natural embedding of $M$ into $\mathrm{T}M$; this embedded submanifold will also be by $\widetilde{M}$. Then Diagram \eqref{DoubleTangentAsDiagram} restricts onto
+By definition, the vertical bundle $\mathrm{VT}M$ of $\mathrm{T}M$ is a subbundle of $\mathrm{TT}M$. The zero section of $\mathrm{T}M$ is a natural embedding of $M$ into $\mathrm{T}M$; this embedded submanifold will be denoted by $\widetilde{M}$. Then Diagram \eqref{DoubleTangentAsDiagram} restricts onto
 \begin{center}
 	\begin{tikzcd}
 		 \mathrm{VT}M|_{\widetilde{M}} \arrow{r}{\mathrm{D}\pi_{\mathrm{T}M}} \arrow{d}{\pi_{\mathrm{TT}M}} & \widetilde{M} \arrow{d}{\cong} \\
 		\widetilde{M} \arrow[r, "\cong"]& M
 	\end{tikzcd}
 \end{center} 
-and $S=S_M$ does not only restrict onto that, $S$ is actually the identity on $\mathrm{VT}M|_M$, as also stated in \cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}. This follows simply by the coordinate expressions Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy} (recall the involved notation). $\xi \in \mathrm{VT}M|_{\widetilde{M}}$ is in the kernel of both projections, $\mathrm{D}\pi_{\mathrm{T}M}$ and $\pi_{\mathrm{TT}M}$, thus $\omega = X_0 = 0 \in \mathrm{T}_pM$, therefore $S(\xi) = \xi$ by Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy}. By Remark \ref{rem:CanonicalInvolutionAnIsom} the addition $\RPlus$ and scalar multiplication $\boldsymbol{\cdot}$ align with the typical addition $+$ and scalar multiplication $\cdot$, respectively, of $\mathrm{TT}M$ as tangent bundle.
+and $S=S_M$ does not only restrict onto that, $S$ is actually the identity on $\mathrm{VT}M|_{\widetilde{M}}$, as also stated in \cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}. This follows simply by the coordinate expressions Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy} (recall the involved notation). $\xi \in \mathrm{VT}M|_{\widetilde{M}}$ is in the kernel of both projections, $\mathrm{D}\pi_{\mathrm{T}M}$ and $\pi_{\mathrm{TT}M}$, thus $\omega = X_0 = 0 \in \mathrm{T}_pM$, therefore $S(\xi) = \xi$ by Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy}. By Remark \ref{rem:CanonicalInvolutionAnIsom} the addition $\RPlus$ and scalar multiplication $\boldsymbol{\cdot}$ align with the typical addition $+$ and scalar multiplication $\cdot$, respectively, of $\mathrm{TT}M$ as tangent bundle.
 
 Motivated by this, we can actually recover something similar for $\mathrm{VT}M$. In this case 
 \begin{center}
