@@ -6773,7 +6773,7 @@ First of all recall the very basic fact (see \textit{e.g.}\ \cite[\S A.1, Thm.\ 
 -\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}
 	\mathrm{D}_{\phi_t(p)}\phi_{-t} \mleft(X_{\phi_t(p)}\mright)
 \eas
-for all $p \in \mathcal{P}$, where $\phi_t$ is the local flow of $Y$ (with parameter $t$ in an open interval of $\mathbb{R}$ containing 0). Now let $X$ be a horizontal vector field and $Y = \widetilde{\nu}$. For $Y$ we know by Def.\ \ref{def:FundVecs} that
+for all $p \in \mathcal{P}$, where $\phi_t$ is the local flow of $Y$ (with parameter $t$ in an open interval of $\mathbb{R}$ containing 0). Now let $X$ be a horizontal vector field and $Y = \widetilde{\nu}$. For such a $Y$ we know by Def.\ \ref{def:FundVecs} that
 \bas
 \widetilde{\nu}_p
 &=
@@ -7076,7 +7076,7 @@ r_\sigma^*\mleft(
 }}
 \mright),
 \eas
-and therefore
+and therefore we can derive for the fourth term in Eq.\ \eqref{TransformedClassicStrengthTerm} that
 \bas
 - A\mleft(
 	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
@@ -7084,7 +7084,18 @@ and therefore
 &=
 - r_\sigma^*\mleft(
 	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]
-\mright)
+\mright).
+\eas
+For the second and third summands in Eq.\ \eqref{TransformedClassicStrengthTerm} we want to use Lemma \ref{lem:BracketVertHor}, and for this observe that
+\bas
+
+\eas
+and thus by Lemma \ref{lem:BracketVertHor}
+\bas
+A\mleft(
+	\mleft[\mathrm{D}r_\sigma\mleft(X^h\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
+	\mright)
+&=
 \eas
 \end{proof}
 
