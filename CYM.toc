@@ -32,6 +32,6 @@
 \contentsline {subsection}{\numberline {6.4}Generalized curvature/field strength}{110}{subsection.6.4}%
 \contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{121}{section.7}%
 \contentsline {section}{\numberline {8}Conclusion}{121}{section.8}%
-\contentsline {section}{\nonumberline List of References}{121}{section*.3}%
+\contentsline {section}{\nonumberline List of References}{122}{section*.3}%
 \contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{122}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

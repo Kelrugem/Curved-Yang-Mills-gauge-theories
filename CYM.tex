@@ -6761,6 +6761,13 @@ A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
 =
 \pi^*\mleft( \nabla^{\mathcal{G}}_\omega \nu \mright).
 \eas
+
+If $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, then we can conclude for all horizontal vector fields $X$ that
+\bas
+A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
+&=
+\mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu).
+\eas
 \end{lemmata}
 
 \begin{proof}
@@ -6884,6 +6891,32 @@ A_p\mleft( \mleft[ X, \widetilde{\nu} \mright]_p \mright)
 \mleft. \pi^*\mleft( \nabla^{\mathcal{G}}_\omega \nu \mright) \mright|_p.
 \eas
 Concluding the proof, by the definition of pullback connections we could also write
+\bas
+A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
+&=
+\mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu).
+\eas
+
+If $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, then recall Remark \ref{rem:baseManifoldHoriz}; this implies for the neutral element section $e$ that
+\bas
+\Delta e
+&\equiv
+0,
+\eas
+and, again, $t \mapsto \mleft( \Delta \e^{t\nu} \mright)_x$ and $t \mapsto \mathrm{D}_{p \cdot \e^{-t\nu_x}}\pi \mleft(X_{p \cdot \e^{-t\nu_x}}\mright)$ are curves with values in the vector spaces $\mathrm{T}^*_xM \otimes \mathcal{g}_x$ and $\mathrm{T}_xM$, respectively. Thus, we can just apply typical Leibniz rules to calculate the derivative of the contraction
+\bas
+&\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
+		\mleft. \mleft( \Delta \e^{t\nu} \mright) \mright|_{x}\mleft(\mathrm{D}_{p \cdot \e^{-t\nu_x}}\pi \mleft(X_{p \cdot \e^{-t\nu_x}}\mright)\mright)
+	\Bigr)
+\\
+&\hspace{1cm}=
+\mleft. \mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Delta \e^{t\nu} \mright) \mright|_{x}\bigl(\mathrm{D}_{p}\pi \mleft(X_{p}\mright)\bigr)
+	+ {\underbrace{\mleft. \mleft( \Delta e \mright) \mright|_{x}}_{= 0}}\mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\mathrm{D}_{p \cdot \e^{-t\nu_x}}\pi \mleft(X_{p \cdot \e^{-t\nu_x}}\mright)\mright)
+\\
+&\hspace{1cm}=
+\mleft. \mleft( \nabla^{\mathcal{G}} \nu \mright) \mright|_{x}\bigl(\mathrm{D}_{p}\pi \mleft(X_{p}\mright)\bigr),
+\eas
+and as before we conclude
 \bas
 A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
 &=
@@ -7017,13 +7050,13 @@ r_\sigma^*\biggl(
 \\
 &\hspace{2.5cm}
 	+ A\mleft(
-	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright) }}\mright), \mathrm{D}r_\sigma\mleft(X^h\mright) \mright]
+	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright) }}\mright), \mathrm{D}r_\sigma\mleft(Y^h\mright) \mright]
 	\mright)
 \nonumber
 \\
 &\hspace{2.5cm}
 	- A\mleft(
-	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright)\mleft(X^h \mright) }}\mright) \mright]
+	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
 	\mright)
 \Biggr).
 \ea
@@ -7085,16 +7118,21 @@ and therefore we can derive for the fourth term in Eq.\ \eqref{TransformedClassi
 	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]
 \mright).
 \eas
-For the second and third summands in Eq.\ \eqref{TransformedClassicStrengthTerm} we want to use Lemma \ref{lem:BracketVertHor}, and for this observe that
+For the second and third summands in Eq.\ \eqref{TransformedClassicStrengthTerm} we want to use Lemma \ref{lem:BracketVertHor} and our result of the fourth summand to show
 \bas
-\eas
-and thus by Lemma \ref{lem:BracketVertHor}
-\bas
-A\mleft(
+&A\mleft(
 	\mleft[\mathrm{D}r_\sigma\mleft(X^h\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
 	\mright)
+\\\hspace{1cm}
 &=
+A\mleft(
+	\mleft[\mathcal{r}_{\sigma*}\mleft(X^h\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
+	\mright)
+	+ A\mleft(\mleft[
+	r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
+	\mright)
 \eas
+using that $\mathcal{r}_{\sigma*}\mleft(X^h\mright)$ is horizontal due to the fact that $X^h$ is horizontal.
 \end{proof}
 
 %\subsection{Generalized covariant derivative/minimal coupling}
