@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.15)  16 AUG 2022 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.15)  17 AUG 2022 15:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1112,12 +1112,12 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 {C:/Users/kelru/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map}] (CYM.toc
 Overfull \hbox (1.09496pt too wide) detected at line 33
- []\T1/lmss/bx/n/10.95 121
+ []\T1/lmss/bx/n/10.95 122
  []
 
 
 Overfull \hbox (1.09496pt too wide) detected at line 34
- []\T1/lmss/bx/n/10.95 121
+ []\T1/lmss/bx/n/10.95 122
  []
 
 
@@ -1127,7 +1127,7 @@ Overfull \hbox (1.09496pt too wide) detected at line 35
 
 [2]
 Overfull \hbox (1.09496pt too wide) detected at line 36
- []\T1/lmss/bx/n/10.95 122
+ []\T1/lmss/bx/n/10.95 123
  []
 
 )
@@ -1181,18 +1181,13 @@ LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 4850.
 
 [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104]
-[105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
-Overfull \hbox (13.98895pt too wide) detected at line 7134
-[]
- []
-
-(CYM.bbl
+[105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gauge The-ory\T1/lmr/m/n/10.95 .  Springer, 
 2017.
  []
 
-[121]
+[122]
 Underfull \hbox (badness 1609) in paragraph at lines 53--58
 []\T1/lmr/m/n/10.95 Simon-Raphael Fis-cher.  Curved Yang^^UMills^^UHiggs gauge the-o-ries in the case of
  []
@@ -1209,7 +1204,7 @@ Underfull \hbox (badness 1867) in paragraph at lines 60--64
 9(9):1285--1305, 2009.
  []
 
-) [122] [123] [124] [125] [126] [127] [128] [129] [130] (CYM.aux)
+) [123] [124] [125] [126] [127] [128] [129] [130] [131] (CYM.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1217,9 +1212,9 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36034 strings out of 477958
- 765565 string characters out of 2833983
- 1205579 words of memory out of 3000000
+ 36035 strings out of 477958
+ 765573 string characters out of 2833983
+ 1202579 words of memory out of 3000000
  53749 multiletter control sequences out of 15000+600000
  592475 words of font info for 153 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1245,9 +1240,9 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program File
 t10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/symbols/msbm10.pfb><C:/Users/kelru/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/stix/stix-mathscr.
 pfb>
-Output written on CYM.pdf (132 pages, 1296375 bytes).
+Output written on CYM.pdf (133 pages, 1299171 bytes).
 PDF statistics:
- 1983 PDF objects out of 2073 (max. 8388607)
- 440 named destinations out of 1000 (max. 500000)
+ 1989 PDF objects out of 2073 (max. 8388607)
+ 441 named destinations out of 1000 (max. 500000)
  293 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7110,29 +7110,78 @@ r_\sigma^*\mleft(
 \eas
 and therefore we can derive for the fourth term in Eq.\ \eqref{TransformedClassicStrengthTerm} that
 \bas
-- A\mleft(
+\mleft( r_\sigma^*A \mright)\mleft(
 	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
 	\mright)
 &=
-- r_\sigma^*\mleft(
+r_\sigma^*\mleft(
 	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]
 \mright).
 \eas
 For the second and third summands in Eq.\ \eqref{TransformedClassicStrengthTerm} we want to use Lemma \ref{lem:BracketVertHor} and our result of the fourth summand to show
 \bas
-&A\mleft(
+&\mleft( r_\sigma^*A \mright)\mleft(
 	\mleft[\mathrm{D}r_\sigma\mleft(X^h\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
 	\mright)
-\\\hspace{1cm}
-&=
-A\mleft(
+\\ 
+&\hspace{0.5cm}
+=
+\mleft( r_\sigma^*A \mright)\mleft(
 	\mleft[\mathcal{r}_{\sigma*}\mleft(X^h\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
 	\mright)
-	+ A\mleft(\mleft[
+\\&\hspace{1.5cm}
+	+ \mleft( r_\sigma^*A \mright)\mleft(\mleft[
 	r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
 	\mright)
+\\ 
+&\hspace{0.5cm}
+=
+r_\sigma^*\Biggl(\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(X^h\mright)}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr)\Biggr)
+	+ r_\sigma^*\mleft(
+	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]
+\mright)
 \eas
-using that $\mathcal{r}_{\sigma*}\mleft(X^h\mright)$ is horizontal due to the fact that $X^h$ is horizontal.
+using that $\mathcal{r}_{\sigma*}\mleft(X^h\mright)$ is horizontal due to the fact that $X^h$ is horizontal, and, last but not least, we can write
+\bas
+\mathrm{D}\pi\mleft( \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright)
+&=
+\mathrm{D}\pi\mleft( \mathrm{D}r_{\sigma}\mleft(Y^h\mright)
+	- r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)}}\mright) \mright)
+=
+\mathrm{D}{\underbrace{\mleft( \pi \circ r_\sigma \mright)}_{= \pi}}\mleft(Y^h\mright)
+=
+\mathrm{D}\pi\mleft(Y^h\mright)
+\eas
+using that fundamental vector fields are in the kernel of $\mathrm{D}\pi$, and therefore
+\bas
+\mleft.\mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright)\mright|_p
+&=
+\mleft(\Delta \sigma \mright)_x\mleft(\mathrm{D}_p\pi\mleft(Y^h_p\mright) \mright)
+=
+\mleft(\pi^* \Delta \sigma \mright)\mleft(\mathrm{D}\pi\mleft( \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright) \mright)
+=
+\mleft(\pi^! \Delta \sigma \mright)\mleft( \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright).
+\eas
+for all $p \in \mathcal{P}_x$ ($x \in M$).
+
+Collecting all these results we can write Eq.\ \eqref{TransformedClassicStrengthTerm} to
+\bas
+&
+r_\sigma^*\mleft(
+\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \mleft(\mathcal{r}_{\sigma*}\mleft(X^h\mright), \mathcal{r}_{\sigma*}\mleft(Y^h\mright)\mright)
+\mright)
+\\&\hspace{1cm}
+=
+\sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
+\\&\hspace{1.5cm}
+	+ r_{\sigma}^*\Biggl(
+		\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(X^h\mright)}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr)
+		- \mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(Y^h\mright)}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright)\biggr)
+\\&\hspace{3cm}
+		- \mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)
+		+ \mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]
+\Biggr)
+\eas
 \end{proof}
 
 %\subsection{Generalized covariant derivative/minimal coupling}
