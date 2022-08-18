@@ -665,6 +665,8 @@ is called a \textbf{Lie group bundle} if:
 \end{enumerate}
 
 We also often say that \textbf{$\mathcal{G}$ is an LGB (over $M$)}, whose structural Lie group is either clear by context or not explicitly needed; and we may also denote LGBs by $G \to \mathcal{G} \stackrel{\pi}{\to} M$.
+
+The global section $e$ of $\mathcal{G}$ so that $e_p$ is the neutral element of $\mathcal{G}_p$ will be labelled as the \textbf{neutral section (of $\mathcal{G}$)}; we may also denote it by $e^{\mathcal{G}}$.
 \end{definitions}
 
 \begin{remarks}{Principal and Lie group bundles}{LiegroupbundlesNotPrincipalBundles}
@@ -1151,7 +1153,7 @@ Assume we have another underlying LGB atlas in sense of Cor.\ \ref{cor:PullbackL
 (f, \mathds{1}_G) \circ
 f^*\phi_i \circ \psi_i^{-1},
 \eas
-$(f, \mathds{1}_G)$ is clearly a Lie group isomorphism $f^{-1}(U_i) \times G \cong U_i \times G$, and thus the condition about $\pi_2|_x$ being a Lie group isomorphism enforces that we can write
+$(f, \mathds{1}_G)$ is clearly a Lie group isomorphism $f^{-1}(U_i) \times G \cong U_i \times G$ of trivial LGBs, and thus the condition about $\pi_2|_x$ being a Lie group isomorphism enforces that we can write
 \bas
 \mleft(f^*\phi_i \circ \psi_i^{-1}\mright)(x, g)
 &=
@@ -1171,7 +1173,7 @@ and since $f$ and the left hand side are smooth, $L$ has to be smooth. We can co
 \begin{definitions}{Pullback LGB}{PullbackLGBDef}
 Let $M, N$ be smooth manifolds, $\mathcal{G} \to M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then we call the LGB structure on $f^*\mathcal{G}$ as given in Cor.\ \ref{cor:PullbackLGB} the \textbf{pullback LGB of $\mathcal{G}$ (under $f$)}.
 
-We will refer to this structure often without further mention.
+With writing $f^*\mathcal{G}$ we will often refer to this structure without further mention.
 \end{definitions}
 
 Let us now define $\mathcal{G}$-actions.
@@ -1188,7 +1190,7 @@ f(p \cdot g) &= \pi(g),\\
 (p \cdot g) \cdot h &= p \cdot (gh),\label{ActionAssociative}\\
 p \cdot e_{f(p)} &= p\label{ActionNeutralElement}
 \ea
-for all $p \in N$ and $g, h \in \mathcal{G}_{f(p)}$, where $e_{f(p)}$ is the neutral element of $\mathcal{G}_{f(p)}$.
+for all $p \in N$ and $g, h \in \mathcal{G}_{f(p)}$, where $e$ is the neutral section of $\mathcal{G}$.
 \newline
 
 We analogously define left-actions, and we often write (left or right) \textbf{$\mathcal{G}$-action on $N$}. Furthermore, in order to increase readability as long as the dependency on $f$ is not important, we introduce the notation
@@ -1197,7 +1199,7 @@ N * \mathcal{G}
 &\coloneqq
 f^*\mathcal{G},
 \ea
-such that the action's notation has the typical shape $N * \mathcal{G} \to N$; one may also write $N * \mathcal{G} = N \times_M \mathcal{G}$. For left actions similarly $\mathcal{G} * N \to N$; even though $\mathcal{G} * N$ is the same pullback LGB as for right-actions, we also change the order of notation in this case, that is, $(g, p) \in \mathcal{G} * N$ reads $g \in \mathcal{G}_{f(p)}$ and $p \in N$. 
+such that the action's notation has the typical shape $N * \mathcal{G} \to N$; one may also write $N * \mathcal{G} = N \times_M \mathcal{G}$. For left actions similarly $\mathcal{G} * N \to N$; even though $\mathcal{G} * N$ is the same pullback LGB as for right-actions; we also change the order of notation in this case, that is, $(g, p) \in \mathcal{G} * N$ reads $g \in \mathcal{G}_{f(p)}$ and $p \in N$. 
 \end{definitions}
 
 \begin{remarks}{Relation to the structure of the canonical pullback Lie group bundle over $N$}{ActionAndPullbackLGBs}
@@ -1205,7 +1207,9 @@ Observe that by the definition of $f^*\mathcal{G}$ we can also write
 \bas
 f(p \cdot g) &= f(p),
 \eas
-so, the $\mathcal{G}$-action is defined in such a way that $f$ is invariant under it. If $f$ is the projection of $N$ as a bundle over $M$, then this means that an LGB action is fibre-preserving. Moreover, the fibre-wise group structure on $\mathcal{G}$ naturally defines a $\mathcal{G}$-action on $\mathcal{G}$; in this situation $f$ would be $\pi$ itself, see also Ex.\ \ref{ex:LGBActingOnItself}. This is mainly a technical condition. On one hand, having $M = \{*\}$ already recovers the notion of a Lie group action and condition \eqref{InvarianceOffUnderGAction} is then trivial, and on the other hand the mentioned reference, \cite[\S 1.6, Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}, actually generalizes this condition making use of the structure of groupoids.
+so, the $\mathcal{G}$-action is defined in such a way that $f$ is invariant under it. If $f$ is the projection of $N$ as a bundle over $M$, then this means that an LGB action is fibre-preserving. Moreover, the fibre-wise group structure on $\mathcal{G}$ naturally defines a $\mathcal{G}$-action on $\mathcal{G}$; in this situation $f$ would be $\pi$ itself, see also Ex.\ \ref{ex:LGBActingOnItself}. 
+
+\eqref{InvarianceOffUnderGAction} is mainly a technical condition: On one hand, having $M = \{*\}$ already recovers the notion of a Lie group action and condition \eqref{InvarianceOffUnderGAction} is then trivial, and on the other hand the mentioned reference, \cite[\S 1.6, Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}, actually generalizes this condition making use of the structure of groupoids.
 \newline
 
 Furthermore, the other conditions are the typical conditions for actions, especially such that we get a $\mathcal{G}$-action on $f^*\mathcal{G}$ by
@@ -1227,13 +1231,13 @@ Fix any open neighbourhood $U$ of $M$. Then $f^{-1}(U)$ is an open neighbourhood
 \eas
 because of $f(p \cdot g) \stackrel{\text{Eq.\ \eqref{InvarianceOffUnderGAction}}}{=} \pi(g) = f(p)$, that is, if $(p, g) \in \mleft.(N*\mathcal{G})\mright|_{f^{-1}(U)}$, then $p \in f^{-1}(U)$ and so $p \cdot g \in f^{-1}(U)$. In fact, by the definition of $N*\mathcal{G}$ as $f^*\mathcal{G}$, this describes a $\mathcal{G}|_{U}$-action on $f^{-1}(U)$
 \bas
-f^{-1}(U) * \mleft.\mathcal{G}\mright|_{U} \coloneqq \mleft( f|_U\mright)^*(\mathcal{G}|_U) &\to f^{-1}(U).
+f^{-1}(U) * \mleft.\mathcal{G}\mright|_{U} \coloneqq \mleft( f|_U\mright)^*(\mathcal{G}|_U) = \mleft.(N*\mathcal{G})\mright|_{f^{-1}(U)} &\to f^{-1}(U).
 \eas
 If $x \in M$ is a regular value of $f$, then $f^{-1}(\{x\})$ is an embedded submanifold of $N$ due to the regular value theorem (for this see \textit{e.g.}\ \cite[\S A.1, Thm.\ A.1.32, page 611]{Hamilton}). In that case one could apply the same arguments to restrict the action on $f^{-1}(\{x\})$. Since $\mathcal{G}_x$ is a Lie group one actually gets a typical Lie group action on $f^{-1}(\{x\})$. For more details about this see Ex.\ \ref{ex:TrivialLGBAction} later.
 \end{remarks}
 
 \begin{remarks}{Left- and right-actions}{LeftRightAction}
-In the following we usually define everything with respect to right-actions; however, one can of course define the same for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
+In the following we usually define everything with respect to right-actions; however, one can of course define the same following notions for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
 \end{remarks}
 
 One can probably see that it is straightforward to extend a lot of the typical notions of Lie group actions to LGB actions; hence, we mainly focus on the definitions and properties which we need in this paper. 
@@ -1265,7 +1269,7 @@ g &\mapsto \tau_{\pi(g)} \cdot g.
 \begin{remarks}{Left action and translation}{LeftTranslation}
 Similarly we define left translations for left actions, which we similarly denote by $l_g$ and $l_\sigma$. By Rem.\ \ref{rem:LocalLGBAction} we can define $r_\sigma$ (and $l_\sigma$) also for local sections $\sigma \in \Gamma(\mathcal{G}|_U)$ by restricting $N$ onto $f^{-1}(U)$, where $U$ is some open subset of $M$; then $r_\sigma, l_\sigma: f^{-1}(U) \to f^{-1}(U)$. In the same manner one achieves a restriction for $\Phi_\tau: \mathcal{G}|_U \to f^{-1}(U)$, if $\tau: U \to f^{-1}(U)$.
 
-In case of $N$ being $\mathcal{G}$ itself we will denote right (and left) translations via capital letters.
+In case of $N$ being $\mathcal{G}$ itself we may denote right (and left) translations via capital letters.
 \end{remarks}
 
 \begin{remarks}{Group action on sections}{SectionMultiplication}
@@ -1287,12 +1291,12 @@ g &\mapsto (p, g) \mapsto p \cdot g.
 \eas
 The second arrow/map is smooth due to the fact that we have a smooth action; the first one is smooth because $N * \mathcal{G}$ is the pullback LGB $f^*\mathcal{G}$ and the first arrow is precisely the embedding of $\mathcal{G}_x$ into $f^*\mathcal{G}$ as a fibre over $p$; recall \textit{e.g.}\ Cor.\ \ref{cor:PullbackLGB}.
 
-For the right-translation $r_\sigma$ we have a similar argument, namely, $r_\sigma$ is a composition of smooth maps
+For the right-translation $r_\sigma$ we proceed in a similar fashion, namely, $r_\sigma$ is a composition of smooth maps
 \bas
 N &\to N*\mathcal{G} \to N,\\
 p &\mapsto \mleft(p, \sigma_{f(p)}\mright) \mapsto p \cdot \sigma_{f(p)}.
 \eas
-The first map describes now a section of $N*\mathcal{G} = f^*\mathcal{G}$, and thus an embedding. Thus, smoothness follows again. Similarly, $\Phi_\tau$ is the composition of maps
+The first map describes now a section of $N*\mathcal{G} = f^*\mathcal{G}$ as LGB over $N$, and thence an embedding. Thus, smoothness follows again as previously. Similarly, $\Phi_\tau$ is the composition of maps
 \bas
 \mathcal{G} &\to N * \mathcal{G} \to N,\\
 g &\mapsto \mleft( \tau_{\pi(g)}, g \mright) \mapsto \tau_{\pi(g)} \cdot g,
@@ -1301,15 +1305,15 @@ and the first arrow is clearly a smooth map $\mathcal{G} \to N \times \mathcal{G
 
 However, for $r_g$ smoothness can only be discussed if $f^{-1}(\{x\})$ is a smooth manifold. That is for example the case if $x$ is a regular value of $f$; recall the regular value theorem as cited in \cite[\S A.1, Thm.\ A.1.32, page 611]{Hamilton}. This would be the case if \textit{e.g.}\ $f$ is a submersion. If $x$ is a regular value, then $f^{-1}(\{x\})$ is an embedded submanifold of $N$, and $r_g$ is a similar composition of smooth maps as for $r_\sigma$ but restricted to $f^{-1}(\{x\})$
 \bas
-f^{-1}(\{x\}) &\to \mleft.N*\mathcal{G}\mright|_{f^{-1}(\{x\})} \to f^{-1}(\{x\}),\\
+f^{-1}(\{x\}) &\to \mleft.\mleft(N*\mathcal{G}\mright)\mright|_{f^{-1}(\{x\})} \to f^{-1}(\{x\}),\\
 p &\mapsto (p, g) \mapsto p \cdot g.
 \eas
-Since $f^{-1}(\{x\})$ is an embedded submanifold, $\mleft.N*\mathcal{G}\mright|_{f^{-1}(\{x\})}$ is also a fibre bundle, see for example \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}, and trivially an embedded submanifold of $N*\mathcal{G}$. Altogether, the same arguments as for $r_\sigma$ apply.
+Since $f^{-1}(\{x\})$ is an embedded submanifold, $\mleft.\mleft(N*\mathcal{G}\mright)\mright|_{f^{-1}(\{x\})}$ is also a fibre bundle, see for example \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}, and trivially an embedded submanifold of $N*\mathcal{G}$. Altogether, the same arguments as for $r_\sigma$ apply.
 
-Last but not least, $r_\sigma$ is clearly a diffeomorphism with inverse $r_{\sigma^{-1}}$, where $\mleft(\sigma^{-1}\mright)_x = (\sigma_x)^{-1} \eqqcolon \sigma_x^{-1}$. Similarly for $r_g$ if $f^{-1}(\{x\})$ is an embedded submanifold (otherwise $r_g$ is just a bijection). Analogously for $l_\sigma$ and $l_g$ in case of a left action.
+Last but not least, $r_\sigma$ is clearly a diffeomorphism with inverse $r_{\sigma^{-1}}$, where $\mleft(\sigma^{-1}\mright)_x \coloneqq \sigma_x^{-1} \coloneqq (\sigma_x)^{-1}$. Similarly for $r_g$, if $f^{-1}(\{x\})$ is an embedded submanifold (otherwise $r_g$ is just a bijection). Analogously for $l_\sigma$ and $l_g$ in case of a left action.
 \end{remark}
 
-Motivated by the previous remark, it might be hence useful to require that $f$ is a submersion, or that $N$ is actually some bundle over $M$ and $f$ its projection. In fact, this will be later the case.
+Motivated by the previous remark, it might be useful to require that $f$ is a submersion, or that $N$ is actually some bundle over $M$ and $f$ its projection. In fact, this will be the case later.
 
 %In order to generalize principal bundles we need the following terms.
 %
