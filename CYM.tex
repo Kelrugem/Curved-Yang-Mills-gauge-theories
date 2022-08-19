@@ -1480,7 +1480,7 @@ Therefore this describes an action.
 \end{proof}
 
 \begin{remarks}{Relation to automorphisms of principal bundles and gauge transformations}{ClassGaugeTrafosAndcgPMulti}
-Recall that gauge transformations have a strong relation to principal bundle automorphisms $f$ of the principal bundle $P$; see \textit{e.g.}\ \cite[\S 5.3, Def.\ 5.3.1, page 256f.]{Hamilton}\ and \cite[\S 5.4, Thm.\ 5.4.4, page 273]{Hamilton}. That is, $f$ is a diffeomorphism $P \to P$ with
+Recall that gauge transformations are related to principal bundle automorphisms $f$ of the principal bundle $P$; see \textit{e.g.}\ \cite[\S 5.3, Def.\ 5.3.1, page 256f.]{Hamilton}\ and \cite[\S 5.4, Thm.\ 5.4.4, page 273]{Hamilton}. That is, $f$ is a diffeomorphism $P \to P$ with
 \bas
 \pi_P \circ f &= \mathds{1}_M,\\
 f(p \cdot g) &= f(p) \cdot g
@@ -6545,7 +6545,13 @@ where $\mathrm{At}(P)$ is the Atiyah bundle of $P$. A connection on $P$ in the "
 &=
 \mleft[ \chi(X), \nu \mright]_{\mathrm{At}(P)}
 \eas
-for all $X \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathrm{Ad}(P))$. It follows by \cite[\S 7.3, Prop.\ 7.3.2 and Lemma 7.3.3, page 278]{mackenzieGeneralTheory} that $\nabla^{\mathrm{YM}}$ is indeed a Yang-Mills connection. In other words, $\nabla^{\mathrm{YM}}$ is the \textbf{adjoint connection} induced by a connection on $P$ (see for example \cite[\S 5.3, especially Prop.\ 5.3.13, page 199]{mackenzieGeneralTheory}). Thence, by the discussion in \cite[\S 5.9, page 289ff.]{Hamilton} $\nabla^{\mathrm{YM}}$ corresponds to the natural parallel transport $\mathrm{PT}^{\mathrm{Ad}(P)}$ on $\mathrm{Ad}(P)$ (omitting the notation of the corresponding curve) given by
+for all $X \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathrm{Ad}(P))$. It follows by \cite[\S 7.3, Prop.\ 7.3.2 and Lemma 7.3.3, page 278]{mackenzieGeneralTheory} that $\nabla^{\mathrm{YM}}$ is indeed a Yang-Mills connection with $\zeta \in \Omega^2(M;\mathrm{Ad}(P))$ for example given by 
+\bas
+\zeta(Y, Z)
+&\coloneqq
+\mleft[ \chi(Y), \chi(Z) \mright]_{\mathrm{At}(P)} - \chi([Y, Z])
+\eas
+for all $Y, Z \in \mathfrak{X}(M)$. In other words, $\nabla^{\mathrm{YM}}$ is the \textbf{adjoint connection} induced by a connection on $P$ (see for example \cite[\S 5.3, especially Prop.\ 5.3.13, page 199]{mackenzieGeneralTheory}). Thence, by the discussion in \cite[\S 5.9, page 289ff.]{Hamilton} $\nabla^{\mathrm{YM}}$ corresponds to the natural parallel transport $\mathrm{PT}^{\mathrm{Ad}(P)}$ on $\mathrm{Ad}(P)$ (omitting the notation of the corresponding curve) given by
 \bas
 \mathrm{PT}^{\mathrm{Ad}(P)}\bigl( [p, v] \bigr)
 &\coloneqq
