@@ -1338,9 +1338,12 @@ U \times G \times G &\to U \times G,\\
 (x, g, q) &\mapsto (x, gq).
 \eas
 We will also call the $\mathcal{G}$-action on itself the \textbf{multiplication in $\mathcal{G}$}.
-
-Similarly one can argue that the \textbf{inverse map} $\mathcal{G} \to \mathcal{G}$, $g \mapsto g^{-1}$, is smooth, too.
 \end{examples}
+
+\begin{remark}
+\leavevmode\newline
+Similarly one can argue that the \textbf{inverse map} $\mathcal{G} \to \mathcal{G}$, $g \mapsto g^{-1}$, is smooth, too.
+\end{remark}
 
 \begin{examples}{Trivial action, \cite[\S 1.6, special situation of Ex.\ 1.6.3, page 35]{mackenzieGeneralTheory}}{TrivialAction}
 The projection $\pi_1$ onto the first factor of $f^*\mathcal{G} \stackrel{\pi_1}{\to} N$ satisfies the properties of a right $\mathcal{G}$-action on $N$, that is, the action is given by
@@ -1368,7 +1371,7 @@ which is clearly a smooth map since it is a composition of the $\mathcal{G}$-act
 N \times G &\to f^*\mathcal{G},\\
 (p, g) &\mapsto (p, f(p), g).
 \eas
-The latter is smooth because $(p, g) \mapsto (p, f(p), g)$ is a smooth map $N \times G \to N \times M \times G$ and $f^*\mathcal{G}$ is an embedded submanifold of $N \times M \times G$. Using Def.\ \ref{def:LiegroupACtion}, It is trivial to see that $p \cdot e = p$, and
+The latter is smooth because $(p, g) \mapsto (p, f(p), g)$ is a smooth map $N \times G \to N \times M \times G$ and $f^*\mathcal{G}$ is an embedded submanifold of $N \times M \times G$. Using Def.\ \ref{def:LiegroupACtion}, it is trivial to see that $p \cdot e = p$, and
 \bas
 p \cdot (gh)
 &=
@@ -1378,15 +1381,15 @@ p \cdot \underbrace{(f(p), gh)}_{\mathclap{= (f(p), g) \cdot (f(p), h)}}
 =
 (p \cdot g) \cdot h
 \eas
-for all $g,h \in G$. Hence, we have a $G$-action on N, and by construction it is equivalent to the $\mathcal{G}$-action on $N$. Due to the discussion in Rem.\ \ref{rem:LocalLGBAction} we can therefore conclude that every $\mathcal{G}$-action is locally a typical Lie group action. If $f$ is a submersion, then the action is also a $G$-action on each fibre.
+for all $g,h \in G$. Hence, we have a $G$-action on $N$, and by construction it is equivalent to the $\mathcal{G}$-action on $N$. Due to the discussion in Rem.\ \ref{rem:LocalLGBAction} we can therefore conclude that every $\mathcal{G}$-action is locally a typical Lie group action. If $f$ is a submersion, then the action is also a $G$-action on each fibre of $f$.
 
 Observe, that one can therefore recover the notion of Lie group actions not only via $M = \{*\}$, the point manifold, but also via trivial LGBs. Translations with constant sections of $M \times G$ w.r.t.\ the action $N*\mathcal{G}\to N$ are trivially to be seen as translations with an element of $G$ w.r.t.\ the action $N \times G \to N$.
 \end{examples}
 
-Hence, if one wants something "truly" new, then one has to look at global structures of LGBs and their actions. In fact, the following example will provide such a new structure, which we will understand later once we have introduced the physical theory.
+Hence, if one wants something "truly" new regarding LGB actions, then one has to look at global structures of LGBs and their actions. In fact, the following example will provide such a new structure, which we will understand later once we have introduced the physical theory.
 
 \begin{examples}{Inner group bundle acting on associated fibre bundles, \newline\cite[\S 1.6, simplified version of Ex.\ 1.6.4, page 35]{mackenzieGeneralTheory}}{AssocLGACtingOnAssocVec}
-Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$ over a smooth manifold $M$, and recall Ex.\ \ref{ex:InnerLGBs}. Furthermore, let $F$ be another smooth manifold, equipped with a smooth left $G$-action $\Psi: G \times F \to F$. In total we have two associated bundles over $M$: 
+Let $P \stackrel{\pi_P}{\to} M$ be a principal $G$-bundle with structural Lie group $G$ over a smooth manifold $M$, and recall Ex.\ \ref{ex:InnerLGBs}. Furthermore, let $F$ be another smooth manifold, equipped with a smooth left $G$-action $\Psi: G \times F \to F$. In total we have two associated bundles over $M$: 
 \begin{center}
 	\begin{tikzcd}
 		G \arrow{r} & c_G(P) \arrow{d}{\pi_{c_G(P)}} && F \arrow{r} & \mathcal{F} \coloneqq P \times_\Psi F \arrow{d}{\pi_{\mathcal{F}}} \\
