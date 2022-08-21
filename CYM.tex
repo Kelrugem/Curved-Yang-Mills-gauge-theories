@@ -1544,12 +1544,12 @@ for all $x \in M$, where $p$ is any element of $P$ such that $\pi_P(p) = x$, and
 
 \begin{remark}
 \leavevmode\newline
-As one may guess, $\Gamma\bigl( c_G(P) \bigr)$ is the analogue of $C^\infty(M; G)^G$ such that one could ask for a more direct analogue to $\sAut(P)$. Indeed, as argued in \cite[\S 1.3, Prop.\ 1.3.9, page 20]{mackenzieGeneralTheory}, $c_G(P)$ is actually isomorphic to $\mleft(P \times_M P\mright) \Big/ G$, where $P\times_M P \coloneqq \pi_P^*P$, and the $G$-action is the diagonal action on $P \times P$. One can prove that an isomorphism is given by 
+As one may guess, $\Gamma\bigl( c_G(P) \bigr)$ is the analogue of $C^\infty(M; G)^G$ such that one could ask for a more direct analogue to $\sAut(P)$. Indeed, as argued in \cite[\S 1.3, Prop.\ 1.3.9, page 20]{mackenzieGeneralTheory}, $c_G(P)$ is isomorphic to $\mleft(P \times_M P\mright) \Big/ G$, where $P\times_M P \coloneqq \pi_P^*P$, and the $G$-action is the diagonal action on $P \times P$. One can prove that an isomorphism is given by 
 \bas
 c_G(P) &\to \mleft(P \times_M P\mright) \Big/ G,\\
 [p, g] &\mapsto [p, p \cdot g].
 \eas
-It is also argued in \cite[\S 1.4, Ex.\ 1.4.7, page 25]{mackenzieGeneralTheory} that $\sAut(P)$ is then isomorphic to $\Gamma\mleft(\mleft(P \times_M P\mright) \Big/ G\mright)$ by 
+It is also argued in \cite[\S 1.4, Ex.\ 1.4.7, page 25]{mackenzieGeneralTheory} that $\sAut(P)$ is isomorphic to $\Gamma\mleft(\mleft(P \times_M P\mright) \Big/ G\mright)$ by 
 \bas
 \sAut(P) &\to \Gamma\mleft(\mleft(P \times_M P\mright) \Big/ G\mright),\\
 f &\mapsto L_f,
@@ -1569,13 +1569,13 @@ However, this description often arises if one wants to use the formalism of grou
 
 \begin{proof}[Proof of Prop.\ \ref{prop:GaugeTrafoAndInnerLGB}]
 \leavevmode\newline
-\indent $\bullet$ Let us first quickly check whether $g_f \in \Gamma\bigl( c_G(P) \bigr)$ is well-defined for all $f \in \sAut(P)$. For $p \in P_x$ ($x \in M$) we have
+\indent $\bullet$ Let us first quickly check whether $q_f \in \Gamma\bigl( c_G(P) \bigr)$ is well-defined for all $f \in \sAut(P)$. For $p \in P_x$ ($x \in M$) we have
 \bas
 \mleft. q_f \mright|_x
 &=
 \mleft[ p, \sigma_f(p) \mright],
 \eas
-If $p^\prime = p \cdot g$ ($g \in G$) is another element of $P_x$, then, using $p^\prime$ to define $q_f$,
+If $p^\prime = p \cdot g$ ($g \in G$) is another element of $P_x$, then, using $p^\prime$ to define $\mleft. q_f \mright|_x$,
 \bas
 \mleft. q_f \mright|_x
 &=
@@ -1587,7 +1587,7 @@ If $p^\prime = p \cdot g$ ($g \in G$) is another element of $P_x$, then, using $
 \eas
 also using the definition of $c_G(P)$, recall Ex.\ \ref{ex:InnerLGBs}. It follows that $q_f$ is well-defined, and it is clear that $q_f$ is smooth.
 
-$\bullet$ We want to show that $f \mapsto q_f$ is a group isomorphism by using that it is a composition of the group isomorphisms $\sAut \to C^\infty(P; G)^G$ as in Rem.\ \ref{rem:ClassGaugeTrafosAndcgPMulti} and 
+$\bullet$ We want to show that $f \mapsto q_f$ is a group isomorphism by using that it is a composition of the group isomorphisms $\sAut(P) \to C^\infty(P; G)^G$ as in Rem.\ \ref{rem:ClassGaugeTrafosAndcgPMulti} and 
 \ba
 C^\infty(P; G)^G &\to \Gamma\bigl( c_G(P) \bigr),\nonumber\\
 \sigma &\mapsto q_\sigma,\label{IsomCPGGTocGPSec}
@@ -1646,7 +1646,7 @@ Applying that trivialization to $q$ we derive that
 \eas
 is smooth, because $q$ is smooth. Since $\psi_{\beta_U\mleft(p^\prime\mright)}$ is smooth and bijective, we conclude that $\sigma$ is smooth. Hence, $\sigma \in C^\infty(P; G)^G$, so, Def.\ \eqref{IsomCPGGTocGPSec} is also surjective and thence bijective.
 
-Finally let us show that Def.\ \eqref{IsomCPGGTocGPSec} is a group isomorphism. Let $\sigma, \sigma^\prime$ be elements of $C^\infty(P; G)^G$, then use Def.\ \eqref{IsomCPGGTocGPSec} to derive
+Finally let us show that Def.\ \eqref{IsomCPGGTocGPSec} is a group isomorphism. Let $\sigma, \sigma^\prime$ be elements of $C^\infty(P; G)^G$, then Def.\ \eqref{IsomCPGGTocGPSec} reads
 \bas
 \sigma \sigma^\prime
 &\mapsto
@@ -1668,8 +1668,8 @@ such that Def.\ \eqref{IsomCPGGTocGPSec} satisfies
 \eas
 This concludes the proof.
 \end{proof}
-
-Associated fibre bundles are motivated by making the invariance of gauge theory under local gauge transformations (that is, the change of gauge/local section of $P$) an inherent part of the bundle, similar to typical manifold coordinates; while the action of more global transformations "remain", similar to diffeomorphisms of a manifold. This procedure of "reducing" the action onto these is reflected in the quotient bundle $c_G(P)$.
+%
+%Associated fibre bundles are motivated by making the invariance of gauge theory under local gauge transformations (that is, the change of gauge/local section of $P$) an inherent part of the bundle, similar to typical manifold coordinates; while the action of more global transformations "remain", similar to diffeomorphisms of a manifold. This procedure of "reducing" the action onto these is reflected in the quotient bundle $c_G(P)$.
 
 \section{Lie algebra bundles (LABs)}
 
@@ -1746,24 +1746,24 @@ Endomorphisms of a vector bundle are of course another important example of LABs
 Let $V \to M$ be a vector bundle, and denote with $\mathrm{End}(V) \to M$ its bundle of fibre-wise endomorphisms (its sections are the base-preserving bundle endomorphisms of $V$). This is clearly an LAB whose field of Lie brackets is given by the commutator.
 \end{examples}
 
-We have the notion of structure constants on all fibres, such that we get now structure functions after fixing a frame.\footnote{However, observe that $\Gamma(\mathcal{g})$ is an infinite-dimensional Lie algebra, such that there is still a notion structure constants, but an inconvenient one due to that these constants are in general not finitely many.}
-
-\begin{definitions}{Structure functions, \cite[\S 16.5, page 119]{DaSilva}}{StructureFunctons}
-Let $\mathcal{g} \to M$ be an LAB over a smooth manifold $M$, and $\mleft( e_a \mright)_a$ be a local frame of $\mathcal{g}$ over some open subset $U \subset M$. Then the \textbf{structure functions} $C^a_{bc} \in C^\infty(U)$ are defined by 
-\bas
-	\mleft[e_b, e_c\mright]_{\mathcal{g}} = C^a_{bc} e_a.
-\eas
-\end{definitions}
-
-\begin{remarks}{Properties of the structure functions}{PropOfStrFunctions}
-Of course, one has the typical properties for such structure functions as for structure constants due to that $C^a_{bc}$ restrict to typical structure constants on each fibre. Similar to \cite[\S 1.4, discussion after Def.\ 1.4.17, page 38]{Hamilton},
-\bas
-C^a_{bc} &= - C^a_{cb},\\
-0&=
-	C^d_{ae} C^e_{bc} + C^d_{be} C^e_{ca} + C^d_{ce} C^e_{ab}
-\eas
-for all $a, b, c, d$; the former due to antisymmetry, the latter because of the Jacobi identity.
-\end{remarks}
+%We have the notion of structure constants on all fibres, such that we get now structure functions after fixing a frame.\footnote{However, observe that $\Gamma(\mathcal{g})$ is an infinite-dimensional Lie algebra, such that there is still a notion structure constants, but an inconvenient one due to that these constants are in general not finitely many.}
+%
+%\begin{definitions}{Structure functions, \cite[\S 16.5, page 119]{DaSilva}}{StructureFunctons}
+%Let $\mathcal{g} \to M$ be an LAB over a smooth manifold $M$, and $\mleft( e_a \mright)_a$ be a local frame of $\mathcal{g}$ over some open subset $U \subset M$. Then the \textbf{structure functions} $C^a_{bc} \in C^\infty(U)$ are defined by 
+%\bas
+	%\mleft[e_b, e_c\mright]_{\mathcal{g}} = C^a_{bc} e_a.
+%\eas
+%\end{definitions}
+%
+%\begin{remarks}{Properties of the structure functions}{PropOfStrFunctions}
+%Of course, one has the typical properties for such structure functions as for structure constants due to that $C^a_{bc}$ restrict to typical structure constants on each fibre. Similar to \cite[\S 1.4, discussion after Def.\ 1.4.17, page 38]{Hamilton},
+%\bas
+%C^a_{bc} &= - C^a_{cb},\\
+%0&=
+	%C^d_{ae} C^e_{bc} + C^d_{be} C^e_{ca} + C^d_{ce} C^e_{ab}
+%\eas
+%for all $a, b, c, d$; the former due to antisymmetry, the latter because of the Jacobi identity.
+%\end{remarks}
 
 As we have seen it for LGBs, the pullback of LABs is again an LAB.
 
@@ -1775,13 +1775,13 @@ Let $M, N$ be smooth manifolds, $\mathcal{g} \stackrel{\pi}{\to} M$ an LAB over 
 
 \begin{proof}
 \leavevmode\newline
-Either prove this similarly as Cor.\ \ref{cor:PullbackLGB} (by also using a similar statement already known for vector bundles), or observe that the pullback $f^*\mleft(\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}\mright)$ of the field of Lie brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ on $\mathcal{g}$ as a section is clearly also a smooth field of Lie brackets on $f^*\mathcal{g}$ with same structural Lie algebra $\mathfrak{g}$.
+Either prove this similarly as Cor.\ \ref{cor:PullbackLGB} (by also using a similar statement already known for the pullbacks of vector bundles), or observe that the pullback $f^*\mleft(\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}\mright)$ of the field of Lie brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ on $\mathcal{g}$ as a section is clearly also a smooth field of Lie brackets on $f^*\mathcal{g}$ with same structural Lie algebra $\mathfrak{g}$.
 \end{proof}
 
 \begin{definitions}{Pullback LAB}{PullbackLABDef}
 Let $M, N$ be smooth manifolds, $\mathcal{g} \to M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then we call the LAB structure on $f^*\mathcal{g}$ as given in Cor.\ \ref{cor:PullBackLABIsLAB} the \textbf{pullback LAB of $\mathcal{g}$ (under $f$)}.
 
-We will refer to this structure often without further mention.
+With writing $f^*\mathcal{g}$ we will often refer to this structure without further mention.
 \end{definitions}
 
 \subsection{From LGBs to LABs}
