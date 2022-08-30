@@ -6441,6 +6441,8 @@ Alexei's and Thomas's theory also generalizes the curvature/field strength relat
 
 \subsection{Generalized curvature/field strength}
 
+\subsubsection{Yang-Mills connections on LGBs}
+
 In the following we will introduce the curvature; in order to achieve gauge invariance later in the physical gauge theory, we will now need to assume certain what we will call \textbf{compatibility conditions} on the horizontal distribution of the structural LGB $\mathcal{G}$. Here in this work we will just present these compatibility conditions, and you will be able to see in the proofs why this leads to gauge invariance later. However, if you want to understand the following conditions coming from a point of view not knowing the solution beforehand, then either see \cite{CurvedYMH} or \cite{MyThesis}; the latter also provides a physical motivation using what I called the \textbf{field redefinitions} which naturally motivate the gauge theory presented here by transforming a classical gauge theory in such a way that the physics is preserved.
 
 \begin{definitions}{Yang-Mills connection}{YangMillsConnection}
@@ -6468,6 +6470,8 @@ One may want to write that $\mleft( \nabla^{\mathrm{YM}}, \zeta \mright)$ is a Y
 
 The relation to Mackenzie's study can be useful for the interested reader to understand the importance of these compatibility conditions, too. In my opinion, the compatibility conditions together with a trivial what Mackenzie calls the obstruction class (and an ad-invariant fibre metric on the LAB) are needed to define Yang-Mills gauge theories from an axiomatic point of view. If the reader is interested into that, then I would appreciate an email so that I can send these details.
 \end{remark}
+%For this we will start 
+%We will need several auxiliary result, also related to the Darboux derivative w.r.t.\ Yang-Mills connections. Especially also recall all the discussion around the modified push-forward $\mathcal{r}$ via right-translations, Def.\ \ref{def:WeModTheRIghtPush}.
 
 Viewing the LGB $\mathcal{G}$ as a principal $\mathcal{G}$-bundle, one can show that Yang-Mills connections are a special type of Ehresmann connection.
 
@@ -6561,52 +6565,6 @@ for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal para
 
 This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$. Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle.
 \end{examples}
-
-Let us now introduce and discuss the field strength.
-
-\begin{definitions}{(Generalized) Field strength}{NewFieldStrength}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we define the \textbf{(generalized) field strength $F$} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
-\bas
-F
-&\coloneqq
-\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi^{\mathrm{H}\mathcal{P}}, \pi^{\mathrm{H}\mathcal{P}} \mright)
-	+ \pi^!\zeta,
-\eas
-where $\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}$ is the exterior covariant derivative related to the pullback connection $\pi^*\nabla^{\mathrm{YM}}$, and $\pi^{\mathrm{H}\mathcal{P}}: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ is the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$. That is,
-\bas
-F
-&=
-\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \mleft( \pi^{\mathrm{H}\mathcal{P}}(X), \pi^{\mathrm{H}\mathcal{P}}(Y) \mright)
-	+ \mleft(\pi^*\zeta\mright) \bigl( \mathrm{D}\pi(X), \mathrm{D}\pi(Y) \bigr)
-\eas
-for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
-\end{definitions}
-
-Of course, we expect certain properties, naturally generalized by our previous discussion:
-
-\begin{propositions}{Properties of the field strength}{NewFieldStrengthWithCoolProps}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
-\begin{itemize}
-	\item \textbf{(Form of type $\sAd$)}
-	\bas
-	\mathcal{r}_{\sigma}^!F
-	&=
-	\sAd_{\sigma^{-1}} \circ F
-	\eas
-	for all (local) $\sigma \in \Gamma(\mathcal{G})$.
-	\item \textbf{(Horizontal form)}
-	\newline
-	For $X, Y \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$) we have
-	\bas
-	F(X, Y)
-	&=
-	0
-	\eas
-	if either of $X$ and $Y$ is vertical.
-\end{itemize}
-\end{propositions}
-
-However, despite the easy proof in the classical theory, the proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} will be rather involved. We will need several auxiliary result, also related to the Darboux derivative w.r.t.\ Yang-Mills connections. Especially also recall all the discussion around the modified push-forward $\mathcal{r}$ via right-translations, Def.\ \ref{def:WeModTheRIghtPush}.
 
 \begin{corollaries}{Commutation of modified push-forward and projections}{ModifiedRightPushyCommutesWithProj}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$ on $\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ an Ehresmann connection on $\mathcal{P}$; denote with $\pi_h$ and $\pi_v$ the associated projections on the horizontal and vertical bundle of $\mathcal{P}$, respectively. Then we have
@@ -6937,7 +6895,54 @@ A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
 \eas
 \end{proof}
 
-Now we can finally prove Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}.
+\subsubsection{Field strength related to Yang-Mills connections}
+
+Let us now introduce and discuss the field strength.
+
+\begin{definitions}{(Generalized) Field strength}{NewFieldStrength}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we define the \textbf{(generalized) field strength $F$} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
+\bas
+F
+&\coloneqq
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi^{\mathrm{H}\mathcal{P}}, \pi^{\mathrm{H}\mathcal{P}} \mright)
+	+ \pi^!\zeta,
+\eas
+where $\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}$ is the exterior covariant derivative related to the pullback connection $\pi^*\nabla^{\mathrm{YM}}$, and $\pi^{\mathrm{H}\mathcal{P}}: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ is the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$. That is,
+\bas
+F
+&=
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \mleft( \pi^{\mathrm{H}\mathcal{P}}(X), \pi^{\mathrm{H}\mathcal{P}}(Y) \mright)
+	+ \mleft(\pi^*\zeta\mright) \bigl( \mathrm{D}\pi(X), \mathrm{D}\pi(Y) \bigr)
+\eas
+for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
+\end{definitions}
+
+Of course, we expect certain properties, naturally generalized by our previous discussion:
+
+\begin{propositions}{Properties of the field strength}{NewFieldStrengthWithCoolProps}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
+\begin{itemize}
+	\item \textbf{(Form of type $\sAd$)}
+	\bas
+	\mathcal{r}_{\sigma}^!F
+	&=
+	\sAd_{\sigma^{-1}} \circ F
+	\eas
+	for all (local) $\sigma \in \Gamma(\mathcal{G})$.
+	\item \textbf{(Horizontal form)}
+	\newline
+	For $X, Y \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$) we have
+	\bas
+	F(X, Y)
+	&=
+	0
+	\eas
+	if either of $X$ and $Y$ is vertical.
+\end{itemize}
+\end{propositions}
+
+However, despite the easy proof in the classical theory, the proof of the first property in Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} will be rather involved. 
+%Now we can finally prove Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}.
 
 \begin{proof}[Proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}]
 \leavevmode\newline

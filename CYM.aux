@@ -5,10 +5,13 @@
 \@nameuse{bbl@beforestart}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -394,18 +397,20 @@
 \citation{My1stpaper}
 \newlabel{rem:IntegratingKotovStrobl}{{6.63}{108}{Integrating curved Yang-Mills gauge theories}{theorem.6.63}{}}
 \BKM@entry{id=31,dest={73756273656374696F6E2E362E34},srcline={6442}}{5C3337365C3337375C303030475C303030655C3030306E5C303030655C303030725C303030615C3030306C5C303030695C3030307A5C303030655C303030645C3030305C3034305C303030635C303030755C303030725C303030765C303030615C303030745C303030755C303030725C303030655C3030302F5C303030665C303030695C303030655C3030306C5C303030645C3030305C3034305C303030735C303030745C303030725C303030655C3030306E5C303030675C303030745C30303068}
+\BKM@entry{id=32,dest={73756273756273656374696F6E2E362E342E31},srcline={6444}}{5C3337365C3337375C303030595C303030615C3030306E5C303030675C3030302D5C3030304D5C303030695C3030306C5C3030306C5C303030735C3030305C3034305C303030635C3030306F5C3030306E5C3030306E5C303030655C303030635C303030745C303030695C3030306F5C3030306E5C303030735C3030305C3034305C3030306F5C3030306E5C3030305C3034305C3030304C5C303030475C303030425C30303073}
 \citation{CurvedYMH}
 \citation{MyThesis}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Generalized curvature/field strength}{109}{subsection.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.1}Yang-Mills connections on LGBs}{109}{subsubsection.6.4.1}\protected@file@percent }
+\newlabel{def:YangMillsConnection}{{6.64}{109}{Yang-Mills connection}{theorem.6.64}{}}
+\newlabel{CondSGleichNullLAB}{{52}{109}{Yang-Mills connection}{equation.6.52}{}}
+\newlabel{CondKruemmungmitBLAB}{{53}{109}{Yang-Mills connection}{equation.6.53}{}}
 \citation{MyThesis}
 \citation{My1stpaper}
 \citation{mackenzieGeneralTheory}
 \citation{MyThesis}
 \citation{My1stpaper}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Generalized curvature/field strength}{109}{subsection.6.4}\protected@file@percent }
-\newlabel{def:YangMillsConnection}{{6.64}{109}{Yang-Mills connection}{theorem.6.64}{}}
-\newlabel{CondSGleichNullLAB}{{52}{109}{Yang-Mills connection}{equation.6.52}{}}
-\newlabel{CondKruemmungmitBLAB}{{53}{109}{Yang-Mills connection}{equation.6.53}{}}
-\newlabel{MackenziesStuffRelation}{{6.65}{109}{}{theorem.6.65}{}}
+\newlabel{MackenziesStuffRelation}{{6.65}{110}{}{theorem.6.65}{}}
 \newlabel{lem:YangMillsConnAnEhresmann}{{6.66}{110}{Yang-Mills connections as a special Ehresmann connection}{theorem.6.66}{}}
 \newlabel{rem:baseManifoldHoriz}{{6.67}{110}{Base manifold a horizontal leave}{theorem.6.67}{}}
 \citation{mackenzieGeneralTheory}
@@ -415,37 +420,39 @@
 \newlabel{ex:ClassicalYangMillsConnection}{{6.68}{111}{(Pre-)Classical Yang-Mills connection}{theorem.6.68}{}}
 \newlabel{ex:OurVeryImportantExample}{{6.69}{111}{Associated connections of inner group bundles are Yang-Mills connections}{theorem.6.69}{}}
 \newlabel{ex:NablaYMAsAdjointConnection}{{6.70}{112}{The Yang-Mills connections on inner group bundles: Alternative point of view and explanation}{theorem.6.70}{}}
-\newlabel{def:NewFieldStrength}{{6.71}{113}{(Generalized) Field strength}{theorem.6.71}{}}
-\newlabel{prop:NewFieldStrengthWithCoolProps}{{6.72}{113}{Properties of the field strength}{theorem.6.72}{}}
 \citation{mackenzieGeneralTheory}
-\newlabel{cor:ModifiedRightPushyCommutesWithProj}{{6.73}{114}{Commutation of modified push-forward and projections}{theorem.6.73}{}}
-\newlabel{RemOohThesePullbacksConfusOrNotToConfus}{{6.74}{114}{}{theorem.6.74}{}}
-\newlabel{prop:DarbouxLeibnizRule}{{6.75}{114}{Leibniz rule of the Darboux derivative}{theorem.6.75}{}}
+\newlabel{cor:ModifiedRightPushyCommutesWithProj}{{6.71}{113}{Commutation of modified push-forward and projections}{theorem.6.71}{}}
+\newlabel{RemOohThesePullbacksConfusOrNotToConfus}{{6.72}{113}{}{theorem.6.72}{}}
+\newlabel{prop:DarbouxLeibnizRule}{{6.73}{113}{Leibniz rule of the Darboux derivative}{theorem.6.73}{}}
 \citation{Hamilton}
 \citation{Hamilton}
-\newlabel{lem:BracketVertHor}{{6.77}{116}{Lie bracket of horizontal and vertical vector}{theorem.6.77}{}}
+\newlabel{lem:BracketVertHor}{{6.75}{115}{Lie bracket of horizontal and vertical vector}{theorem.6.75}{}}
+\BKM@entry{id=33,dest={73756273756273656374696F6E2E362E342E32},srcline={6898}}{5C3337365C3337375C303030465C303030695C303030655C3030306C5C303030645C3030305C3034305C303030735C303030745C303030725C303030655C3030306E5C303030675C303030745C303030685C3030305C3034305C303030725C303030655C3030306C5C303030615C303030745C303030655C303030645C3030305C3034305C303030745C3030306F5C3030305C3034305C303030595C303030615C3030306E5C303030675C3030302D5C3030304D5C303030695C3030306C5C3030306C5C303030735C3030305C3034305C303030635C3030306F5C3030306E5C3030306E5C303030655C303030635C303030745C303030695C3030306F5C3030306E5C30303073}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.2}Field strength related to Yang-Mills connections}{117}{subsubsection.6.4.2}\protected@file@percent }
+\newlabel{def:NewFieldStrength}{{6.76}{117}{(Generalized) Field strength}{theorem.6.76}{}}
+\newlabel{prop:NewFieldStrengthWithCoolProps}{{6.77}{118}{Properties of the field strength}{theorem.6.77}{}}
 \citation{Hamilton}
-\newlabel{TransformedClassicStrengthTerm}{{54}{119}{Generalized curvature/field strength}{equation.6.54}{}}
-\BKM@entry{id=32,dest={73656374696F6E2E37},srcline={7202}}{5C3337365C3337375C303030435C303030755C303030725C303030765C303030655C303030645C3030305C3034305C303030595C303030615C3030306E5C303030675C3030302D5C3030304D5C303030695C3030306C5C3030306C5C303030735C3030305C3034305C303030675C303030615C303030755C303030675C303030655C3030305C3034305C303030745C303030685C303030655C3030306F5C303030725C30303079}
-\BKM@entry{id=33,dest={73656374696F6E2E38},srcline={7204}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030635C3030306C5C303030755C303030735C303030695C3030306F5C3030306E}
+\newlabel{TransformedClassicStrengthTerm}{{54}{119}{Field strength related to Yang-Mills connections}{equation.6.54}{}}
+\BKM@entry{id=34,dest={73656374696F6E2E37},srcline={7207}}{5C3337365C3337375C303030435C303030755C303030725C303030765C303030655C303030645C3030305C3034305C303030595C303030615C3030306E5C303030675C3030302D5C3030304D5C303030695C3030306C5C3030306C5C303030735C3030305C3034305C303030675C303030615C303030755C303030675C303030655C3030305C3034305C303030745C303030685C303030655C3030306F5C303030725C30303079}
+\BKM@entry{id=35,dest={73656374696F6E2E38},srcline={7209}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030635C3030306C5C303030755C303030735C303030695C3030306F5C3030306E}
 \bibdata{Literatur}
-\BKM@entry{id=34,dest={73656374696F6E2A2E33},srcline={1}}{5C3337365C3337375C3030304C5C303030695C303030735C303030745C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C303030655C303030665C303030655C303030725C303030655C3030306E5C303030635C303030655C30303073}
+\BKM@entry{id=36,dest={73656374696F6E2A2E33},srcline={1}}{5C3337365C3337375C3030304C5C303030695C303030735C303030745C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C303030655C303030665C303030655C303030725C303030655C3030306E5C303030635C303030655C30303073}
 \bibcite{Hamilton}{1}
 \bibcite{mackenzieGeneralTheory}{2}
 \bibcite{PullbackLGBLAB}{3}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{121}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{121}{section.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\nonumberline List of References}{121}{section*.3}\protected@file@percent }
 \bibcite{DaSilva}{4}
 \bibcite{MyThesis}{5}
 \bibcite{GroupoidBasedPrincipalBundles}{6}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{121}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{121}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\nonumberline List of References}{121}{section*.3}\protected@file@percent }
 \bibcite{OtherPreprintAboutConnection}{7}
 \bibcite{CurvedYMH}{8}
 \bibcite{My1stpaper}{9}
 \bibcite{Highervectorbundles}{10}
 \bibcite{meinrenkensplitting}{11}
 \bibstyle{unsrt}
-\BKM@entry{id=35,dest={617070656E6469782E41},srcline={7236}}{5C3337365C3337375C303030445C3030306F5C303030755C303030625C3030306C5C303030655C3030305C3034305C303030745C303030615C3030306E5C303030675C303030655C3030306E5C303030745C3030305C3034305C303030625C303030755C3030306E5C303030645C3030306C5C303030655C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030695C303030745C303030735C3030305C3034305C303030635C303030615C3030306E5C3030306F5C3030306E5C303030695C303030635C303030615C3030306C5C3030305C3034305C303030665C3030306C5C303030695C303030705C3030305C3034305C3030306D5C303030615C30303070}
+\BKM@entry{id=37,dest={617070656E6469782E41},srcline={7241}}{5C3337365C3337375C303030445C3030306F5C303030755C303030625C3030306C5C303030655C3030305C3034305C303030745C303030615C3030306E5C303030675C303030655C3030306E5C303030745C3030305C3034305C303030625C303030755C3030306E5C303030645C3030306C5C303030655C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030695C303030745C303030735C3030305C3034305C303030635C303030615C3030306E5C3030306F5C3030306E5C303030695C303030635C303030615C3030306C5C3030305C3034305C303030665C3030306C5C303030695C303030705C3030305C3034305C3030306D5C303030615C30303070}
 \citation{mackenzieGeneralTheory}
 \citation{mackenzieGeneralTheory}
 \@writefile{toc}{\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{122}{appendix.A}\protected@file@percent }
