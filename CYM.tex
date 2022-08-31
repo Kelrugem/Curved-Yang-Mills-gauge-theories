@@ -666,7 +666,7 @@ is called a \textbf{Lie group bundle} if:
 
 We also often say that \textbf{$\mathcal{G}$ is an LGB (over $M$)}, whose structural Lie group is either clear by context or not explicitly needed; and we may also denote LGBs by $G \to \mathcal{G} \stackrel{\pi}{\to} M$.
 
-The global section $e$ of $\mathcal{G}$ so that $e_p$ is the neutral element of $\mathcal{G}_p$ will be labelled as the \textbf{neutral section (of $\mathcal{G}$)}; we may also denote it by $e^{\mathcal{G}}$.
+The global section $e$ of $\mathcal{G}$ so that $e_p$ is the neutral element of $\mathcal{G}_p$ will be labelled as the \textbf{neutral (element) section (of $\mathcal{G}$)}; we may also denote it by $e^{\mathcal{G}}$.
 \end{definitions}
 
 \begin{remarks}{Principal and Lie group bundles}{LiegroupbundlesNotPrincipalBundles}
@@ -6473,7 +6473,7 @@ The relation to Mackenzie's study can be useful for the interested reader to und
 %For this we will start 
 %We will need several auxiliary result, also related to the Darboux derivative w.r.t.\ Yang-Mills connections. Especially also recall all the discussion around the modified push-forward $\mathcal{r}$ via right-translations, Def.\ \ref{def:WeModTheRIghtPush}.
 
-Viewing the LGB $\mathcal{G}$ as a principal $\mathcal{G}$-bundle, one can show that Yang-Mills connections are a special type of Ehresmann connection.
+Let us initially focus on the first compatibility condition \eqref{CondSGleichNullLAB}. In the following we will also view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle which is equipped with the same horizontal distribution as $\mathcal{G}$ as LGB.  one can show that Yang-Mills connections are a special type of Ehresmann connection via \eqref{CondSGleichNullLAB}.
 
 \begin{lemmata}{Yang-Mills connections as a special Ehresmann connection}{YangMillsConnAnEhresmann}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle if and only if Eq.\ \eqref{CondSGleichNullLAB} is satisfied.
@@ -6491,17 +6491,30 @@ for all $(g, q) \in \mathcal{G} * \mathcal{G}$. As a principal bundle, $\mathrm{
 \end{proof}
 
 \begin{remarks}{Base manifold a horizontal leave}{baseManifoldHoriz}
-Observe that the proof's argument implies that a parallel transported neutral element is again the neutral element of the corresponding final fibre. Thus, $M$ naturally embedded via $e$, the neutral element section, can be viewed as a horizontal leave of $\mathrm{H}\mathcal{G}$ if $\mathrm{H}\mathcal{G}$ is an Ehresmann connection.
+Observe that the proof's argument implies that a parallel transported neutral element is again the neutral element of the corresponding final fibre. Thus, $M$ naturally embedded via the neutral section $e$ can be viewed as a horizontal leave of $\mathrm{H}\mathcal{G}$, if $\mathrm{H}\mathcal{G}$ is an Ehresmann connection or equivalently satisfies compatibility condition \eqref{CondSGleichNullLAB}.
 \end{remarks}
 
-Let us provide canonical examples of Yang-Mills connections.
+Due to this, given compatibility condition \eqref{CondSGleichNullLAB}, the following is clear by definition.
+
+\begin{corollaries}{The total Maurer-Cartan form as connection 1-form}{TotMCFormIsConnectionForm}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$.
+\end{corollaries}
+
+\begin{proof}
+\leavevmode\newline
+This simply follows by Def.\ \ref{def:TotMCFormOnLGB} and Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}.
+\end{proof}
+
+Ehresmann connections on LGBs (and Lie groupoids) were already discussed \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. By these works we can conclude what the compatibility condition \eqref{CondSGleichNullLAB} tells us about $\mu_{\mathcal{G}}^{\mathrm{tot}}$.
+
+To conclude this subsection, let us provide canonical examples of Yang-Mills connections.
 
 \begin{examples}{(Pre-)Classical Yang-Mills connection}{ClassicalYangMillsConnection}
 Let us look at a classical principal bundle $P$ with trivial LGB $\mathcal{G} = M \times G$, $G$ a Lie group; recall Ex.\ \ref{ex:TheCLassicalPrincAsEx} and \ref{ex:OurConnectionIsReallyMoreGeneral}. The canonical flat connection on $\mathcal{G}$ induces the canonical flat connection $\nabla^{\mathcal{G}}$ on its LAB $\mathcal{g} = M \times \mathfrak{g}$, recall Ex.\ \ref{ex:CanonicalFlatGConnection}. Thus,
 \bas
 R_{\nabla^{\mathcal{G}}} &= 0
 \eas
-and so we can set $\zeta \equiv 0$. Using a frame of global sections, it is trivial to check that also Eq.\ \eqref{CondSGleichNullLAB} is satisfied. We then call $\nabla^{\mathrm{cYM}} = \nabla^{\mathcal{G}}$ a \textbf{classical Yang-Mills connection}.
+and so we can set $\zeta \equiv 0$. Using a frame of global sections, it is trivial to check that also Eq.\ \eqref{CondSGleichNullLAB} is satisfied. We then call $\nabla^{\mathrm{cYM}} \coloneqq \nabla^{\mathcal{G}}$ a \textbf{classical Yang-Mills connection}.
 
 However, observe that $\zeta$ can be centre-valued while $\nabla^{\mathcal{G}}$ is still flat. In such an occasion we speak of a \textbf{pre-classical Yang-Mills connection}, denoted by $\nabla^{\mathrm{pYM}}$.
 \end{examples}
