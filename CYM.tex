@@ -4995,6 +4995,11 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 for all $\nu \in \Gamma(\mathcal{g})$, the \textbf{$\mathcal{G}$-connection (on its LAB $\mathcal{g}$)}.
 \end{definitions}
 
+\begin{remark}
+\leavevmode\newline
+Such a construction of vector bundle connections on LABs also arises in \cite[S 4.5, Prop.\ 4.22]{LAURENTGENGOUXStienonXuMultiplicativeForms}, but w.r.t.\ a more specific $\mathrm{H}\mathcal{G}$, see Subsubsection \ref{MultiplicativeForms} later.
+\end{remark}
+
 \begin{examples}{Canonical flat $\mathcal{G}$-connection}{CanonicalFlatGConnection}
 If we again focus on trivial LGBs with their canonical flat connection as in Remark \ref{rem:TrivialLGBsAndTheirMCForm} and \ref{rem:DarbouxOnCanonFlat}, we can quickly derive that $\nabla^{\mathcal{G}}$ is then the canonical flat connection on the trivial LAB $\mathcal{g} = M \times \mathfrak{g}$ of $\mathcal{G} = M \times G$, $\mathfrak{g}$ the Lie algebra of the Lie group $G$. Let $\nu$ be a constant section of $\mathcal{g}$, then $\e^{t\nu}$ is a constant section of $\mathcal{G}$ for all $t \in \mathbb{R}$, so that by Remark \ref{rem:DarbouxOnCanonFlat}
 \bas
@@ -6441,7 +6446,7 @@ Alexei's and Thomas's theory also generalizes the curvature/field strength relat
 
 \subsection{Generalized curvature/field strength}
 
-\subsubsection{Yang-Mills connections on LGBs}
+\subsubsection{Yang-Mills connections on LGBs}\label{MultiplicativeForms}
 
 In the following we will introduce the curvature; in order to achieve gauge invariance later in the physical gauge theory, we will now need to assume certain what we will call \textbf{compatibility conditions} on the horizontal distribution of the structural LGB $\mathcal{G}$. Here in this work we will just present these compatibility conditions, and you will be able to see in the proofs why this leads to gauge invariance later. However, if you want to understand the following conditions coming from a point of view not knowing the solution beforehand, then either see \cite{CurvedYMH} or \cite{MyThesis}; the latter also provides a physical motivation using what I called the \textbf{field redefinitions} which naturally motivate the gauge theory presented here by transforming a classical gauge theory in such a way that the physics is preserved.
 
@@ -6505,9 +6510,13 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\ma
 This simply follows by Def.\ \ref{def:TotMCFormOnLGB} and Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}.
 \end{proof}
 
-Ehresmann connections on LGBs (and Lie groupoids) were already discussed \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. By these works we can conclude what the compatibility condition \eqref{CondSGleichNullLAB} tells us about $\mu_{\mathcal{G}}^{\mathrm{tot}}$.
+Ehresmann connections on LGBs (and Lie groupoids) were already discussed \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. By these works we can conclude what the compatibility condition \eqref{CondSGleichNullLAB} tells us that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a multiplicative form; let us introduce this.
 
-To conclude this subsection, let us provide canonical examples of Yang-Mills connections.
+\begin{definitions}{Multiplicative forms}{MultiplicativeFormsDef}
+
+\end{definitions}
+
+To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections.
 
 \begin{examples}{(Pre-)Classical Yang-Mills connection}{ClassicalYangMillsConnection}
 Let us look at a classical principal bundle $P$ with trivial LGB $\mathcal{G} = M \times G$, $G$ a Lie group; recall Ex.\ \ref{ex:TheCLassicalPrincAsEx} and \ref{ex:OurConnectionIsReallyMoreGeneral}. The canonical flat connection on $\mathcal{G}$ induces the canonical flat connection $\nabla^{\mathcal{G}}$ on its LAB $\mathcal{g} = M \times \mathfrak{g}$, recall Ex.\ \ref{ex:CanonicalFlatGConnection}. Thus,
