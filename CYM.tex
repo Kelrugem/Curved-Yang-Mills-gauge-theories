@@ -4997,7 +4997,7 @@ for all $\nu \in \Gamma(\mathcal{g})$, the \textbf{$\mathcal{G}$-connection (on 
 
 \begin{remark}
 \leavevmode\newline
-Such a construction of vector bundle connections on LABs also arises in \cite[S 4.5, Prop.\ 4.22]{LAURENTGENGOUXStienonXuMultiplicativeForms}, but w.r.t.\ a more specific $\mathrm{H}\mathcal{G}$, see Subsubsection \ref{MultiplicativeForms} later.
+Such a construction of vector bundle connections on LABs also arises in \cite[\S 4.5, Prop.\ 4.22]{LAURENTGENGOUXStienonXuMultiplicativeForms}, but w.r.t.\ a more specific $\mathrm{H}\mathcal{G}$, see Subsubsection \ref{MultiplicativeForms} later.
 \end{remark}
 
 \begin{examples}{Canonical flat $\mathcal{G}$-connection}{CanonicalFlatGConnection}
@@ -5111,7 +5111,7 @@ we have a right $\mathcal{G}$-action given by
 \mleft(\mathcal{P} \times_M N\mright) * \mathcal{G} &\to \mathcal{P} \times_M N,\\
 (p, x, g) &\mapsto (p, x) \cdot g \coloneqq \mleft( p \cdot g, g^{-1} \cdot x \mright)
 \eas
-where $\mleft(\mathcal{P} \times_M N\mright) * \mathcal{G}$ is given as pullback of $\mathcal{G}$ w.r.t.\ the map $\widetilde{\pi}: \mathcal{P} \times_M N \to M$, $(p,x) = \pi(p)$.
+where $\mleft(\mathcal{P} \times_M N\mright) * \mathcal{G}$ is given as pullback of $\mathcal{G}$ w.r.t.\ the map $\widetilde{\pi}: \mathcal{P} \times_M N \to M$, $(p,x) \mapsto \pi(p)$.
 \end{propositions}
 
 \begin{proof}
@@ -6510,10 +6510,27 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\ma
 This simply follows by Def.\ \ref{def:TotMCFormOnLGB} and Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}.
 \end{proof}
 
-Ehresmann connections on LGBs (and Lie groupoids) were already discussed \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. By these works we can conclude what the compatibility condition \eqref{CondSGleichNullLAB} tells us that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a multiplicative form; let us introduce this.
+\begin{remarks}{Darboux derivative as local gauge field}{DavouxderivativeALocalGaugeField}
+If $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$, we know by Cor.\ \ref{cor:TotMCFormIsConnectionForm} that the Darboux derivative $\Delta \sigma$ of a (local) section $\sigma$ of $\mathcal{G}$ (Def.\ \ref{def:DarbouxDerivativeOnLGBs}) is a local gauge field (w.r.t.\ $\sigma$) corresponding to $\mu_{\mathcal{G}}^{\mathrm{tot}}$, recall Def.\ \ref{def:LocalGaugeField}. That is,
+\bas
+\Delta \sigma
+&=
+\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_\sigma.
+\eas
+\end{remarks}
 
-\begin{definitions}{Multiplicative forms}{MultiplicativeFormsDef}
+Ehresmann connections on LGBs (and Lie groupoids) were already discussed \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. By these works we can conclude that compatibility condition \eqref{CondSGleichNullLAB} implies that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a multiplicative form; let us introduce this notion for 1-forms.
 
+\begin{definitions}{Multiplicative forms, \cite[\S 2.1, special situation of Def.\ 2.1]{crainic2015multiplicative}}{MultiplicativeFormsDef}
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$. Then we call an $\omega \in \Omega^1\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright)$ a \textbf{multiplicative form} if
+\bas
+\mleft(\Phi^!\omega\mright)_{(g, q)}(X, Y)
+&=
+\sAd_{q^{-1}}\bigl( \omega_{g}(X) \bigr)
+	+ \omega_{q}(Y)
+\eas
+for all $(g, q) \in \mathcal{G}*\mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(g, q)}(\mathcal{G}*\mathcal{G})$,
+where $\Phi: \mathcal{G} * \mathcal{G} \to \mathcal{G}$ is the multiplication in $\mathcal{G}$.
 \end{definitions}
 
 To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections.
