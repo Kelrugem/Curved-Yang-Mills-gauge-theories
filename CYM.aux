@@ -5,10 +5,13 @@
 \@nameuse{bbl@beforestart}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -335,15 +338,15 @@
 \newlabel{def:DarbouxDerivativeOnLGBs}{{6.25}{77}{Darboux derivative}{theorem.6.25}{}}
 \newlabel{RemarkABoutDarbouxNotationWRTPullback}{{6.26}{77}{}{theorem.6.26}{}}
 \newlabel{rem:DarbouxInActionInfinit}{{6.27}{78}{Darboux derivative in the infinitesimal LGB action}{theorem.6.27}{}}
-\newlabel{rem:DefOfConnectionIdeaWithDarboux}{{6.28}{78}{Idea behind the notion of connection on principal bundles using the Darboux derivative}{theorem.6.28}{}}
 \citation{mackenzieGeneralTheory}
+\newlabel{rem:DefOfConnectionIdeaWithDarboux}{{6.28}{79}{Idea behind the notion of connection on principal bundles using the Darboux derivative}{theorem.6.28}{}}
 \newlabel{rem:PullBackDarboux}{{6.29}{79}{Pullback situation: Part II}{theorem.6.29}{}}
-\newlabel{PullBackDarbouxOnPullbackSections}{{46}{79}{Pullback situation: Part II}{equation.6.46}{}}
+\newlabel{PullBackDarbouxOnPullbackSections}{{46}{80}{Pullback situation: Part II}{equation.6.46}{}}
 \newlabel{rem:DarbouxOnCanonFlat}{{6.30}{80}{Canonical flat Darboux derivative}{theorem.6.30}{}}
-\newlabel{rem:MCAsDerivativePartII}{{6.31}{80}{Maurer-Cartan form inducing a natural derivative: Part II}{theorem.6.31}{}}
-\newlabel{NablaByProjection}{{47}{80}{Maurer-Cartan form inducing a natural derivative: Part II}{equation.6.47}{}}
+\newlabel{rem:MCAsDerivativePartII}{{6.31}{81}{Maurer-Cartan form inducing a natural derivative: Part II}{theorem.6.31}{}}
+\newlabel{NablaByProjection}{{47}{81}{Maurer-Cartan form inducing a natural derivative: Part II}{equation.6.47}{}}
 \newlabel{prop:FinallyTheNablaInduction}{{6.32}{81}{LGB connection induces LAB connection}{theorem.6.32}{}}
-\newlabel{RemarkAboutPrTwoInDarbouxDerivative}{{6.33}{81}{}{theorem.6.33}{}}
+\newlabel{RemarkAboutPrTwoInDarbouxDerivative}{{6.33}{82}{}{theorem.6.33}{}}
 \newlabel{DiagramForNablaConn}{{48}{82}{Darboux derivative on LGBs}{equation.6.48}{}}
 \newlabel{EqForNablaConnectionWithFlip}{{49}{82}{Darboux derivative on LGBs}{equation.6.49}{}}
 \citation{LAURENTGENGOUXStienonXuMultiplicativeForms}
@@ -351,33 +354,33 @@
 \newlabel{def:ConnectionOnLAB}{{6.34}{85}{LGB connection on its LAB}{theorem.6.34}{}}
 \newlabel{ex:CanonicalFlatGConnection}{{6.36}{85}{Canonical flat $\mathcal {G}$-connection}{theorem.6.36}{}}
 \newlabel{rem:PullBackConnectionOfNablaG}{{6.37}{85}{Pullback situation: Part III}{theorem.6.37}{}}
-\BKM@entry{id=28,dest={73756273756273656374696F6E2E362E322E33},srcline={5094}}{5C3337365C3337375C303030465C303030695C303030725C303030735C303030745C3030305C3034305C303030735C303030745C303030655C303030705C3030305C3034305C303030745C3030306F5C303030775C303030615C303030725C303030645C303030735C3030305C3034305C303030745C3030306F5C303030775C303030615C303030725C303030645C303030735C3030305C3034305C303030615C303030735C303030735C3030306F5C303030635C303030695C303030615C303030745C303030655C303030645C3030305C3034305C303030625C303030755C3030306E5C303030645C3030306C5C303030655C30303073}
+\BKM@entry{id=28,dest={73756273756273656374696F6E2E362E322E33},srcline={5103}}{5C3337365C3337375C303030465C303030695C303030725C303030735C303030745C3030305C3034305C303030735C303030745C303030655C303030705C3030305C3034305C303030745C3030306F5C303030775C303030615C303030725C303030645C303030735C3030305C3034305C303030745C3030306F5C303030775C303030615C303030725C303030645C303030735C3030305C3034305C303030615C303030735C303030735C3030306F5C303030635C303030695C303030615C303030745C303030655C303030645C3030305C3034305C303030625C303030755C3030306E5C303030645C3030306C5C303030655C30303073}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}First step towards towards associated bundles}{86}{subsubsection.6.2.3}\protected@file@percent }
 \newlabel{prop:CanonicalLGBActionForAssociatedBundles}{{6.38}{87}{Canonical LGB action on pullback vector bundles over principal LGB-bundles}{theorem.6.38}{}}
-\BKM@entry{id=29,dest={73756273756273656374696F6E2E362E322E34},srcline={5206}}{5C3337365C3337375C303030475C303030655C3030306E5C303030655C303030725C303030615C3030306C5C303030695C3030307A5C303030655C303030645C3030305C3034305C303030635C3030306F5C3030306E5C3030306E5C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030315C3030302D5C303030665C3030306F5C303030725C3030306D5C303030735C3030305C3034305C3030306F5C3030306E5C3030305C3034305C303030705C303030725C303030695C3030306E5C303030635C303030695C303030705C303030615C3030306C5C3030305C3034305C303030625C303030755C3030306E5C303030645C3030306C5C303030655C30303073}
-\citation{Hamilton}
 \newlabel{ex:AdjointACtionOnVP}{{6.39}{88}{Adjoint action on the vertical bundle of $\mathcal {P}$}{theorem.6.39}{}}
 \newlabel{ex:ConjugationActionForTheGeneralInnerGroupBundle}{{6.40}{88}{Conjugation action over $\mathcal {P}$}{theorem.6.40}{}}
+\BKM@entry{id=29,dest={73756273756273656374696F6E2E362E322E34},srcline={5215}}{5C3337365C3337375C303030475C303030655C3030306E5C303030655C303030725C303030615C3030306C5C303030695C3030307A5C303030655C303030645C3030305C3034305C303030635C3030306F5C3030306E5C3030306E5C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030315C3030302D5C303030665C3030306F5C303030725C3030306D5C303030735C3030305C3034305C3030306F5C3030306E5C3030305C3034305C303030705C303030725C303030695C3030306E5C303030635C303030695C303030705C303030615C3030306C5C3030305C3034305C303030625C303030755C3030306E5C303030645C3030306C5C303030655C30303073}
+\citation{Hamilton}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.4}Generalized connection 1-forms on principal bundles}{89}{subsubsection.6.2.4}\protected@file@percent }
 \newlabel{prop:IsomorphismRightPushAndDarboux}{{6.41}{89}{The right-pushforward modified by the Darboux derivative is a well-defined isomorphism}{theorem.6.41}{}}
 \newlabel{def:WeModTheRIghtPush}{{6.42}{91}{Modified pushforward via right-translation}{theorem.6.42}{}}
 \newlabel{rem:ModRightPushOnVertic}{{6.43}{91}{Restriction onto vertical bundle gives typical right-pushforward}{theorem.6.43}{}}
-\newlabel{RSigmaAnAuto}{{6.44}{91}{}{theorem.6.44}{}}
 \citation{GroupoidBasedPrincipalBundles}
-\citation{Hamilton}
+\newlabel{RSigmaAnAuto}{{6.44}{92}{}{theorem.6.44}{}}
 \newlabel{def:FinallyTheConnection}{{6.45}{92}{Ehresmann connection on principal LGB-bundles}{theorem.6.45}{}}
-\newlabel{ex:OurConnectionIsReallyMoreGeneral}{{6.47}{92}{Recovering of the classical definition}{theorem.6.47}{}}
+\citation{Hamilton}
+\newlabel{ex:OurConnectionIsReallyMoreGeneral}{{6.47}{93}{Recovering of the classical definition}{theorem.6.47}{}}
 \newlabel{ex:AssociatedLGBsAndTheirCanonicalConnection}{{6.48}{93}{Associated LGBs}{theorem.6.48}{}}
 \newlabel{def:PullbackOfFormsViaModRight}{{6.49}{94}{The pullback of forms}{theorem.6.49}{}}
 \newlabel{def:GaugeBosonsOnLGBPrincies}{{6.51}{94}{Connection 1-forms on principal LGB-bundles}{theorem.6.51}{}}
 \citation{mackenzieGeneralTheory}
-\citation{Hamilton}
 \newlabel{PointwiseNotationOfConnectioNOneForms}{{6.52}{95}{}{theorem.6.52}{}}
 \newlabel{thm:OurConnectionHasAUniqueoneForm}{{6.53}{95}{1:1 correspondence of Ehresmann connections and connection 1-forms}{theorem.6.53}{}}
 \citation{Hamilton}
+\citation{Hamilton}
 \newlabel{cor:ModifiedRightPushyCommutesWithProj}{{6.54}{97}{Commutation of modified push-forward and projections}{theorem.6.54}{}}
-\newlabel{RemOohThesePullbacksConfusOrNotToConfus}{{6.55}{97}{}{theorem.6.55}{}}
-\BKM@entry{id=30,dest={73756273656374696F6E2E362E33},srcline={5686}}{5C3337365C3337375C303030475C303030615C303030755C303030675C303030655C3030305C3034305C303030745C303030725C303030615C3030306E5C303030735C303030665C3030306F5C303030725C3030306D5C303030615C303030745C303030695C3030306F5C3030306E5C30303073}
+\BKM@entry{id=30,dest={73756273656374696F6E2E362E33},srcline={5695}}{5C3337365C3337375C303030475C303030615C303030755C303030675C303030655C3030305C3034305C303030745C303030725C303030615C3030306E5C303030735C303030665C3030306F5C303030725C3030306D5C303030615C303030745C303030695C3030306F5C3030306E5C30303073}
+\newlabel{RemOohThesePullbacksConfusOrNotToConfus}{{6.55}{98}{}{theorem.6.55}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Gauge transformations}{98}{subsection.6.3}\protected@file@percent }
 \newlabel{def:GaugeTrafosLGBMaps}{{6.56}{98}{LGB-valued conjugation maps}{theorem.6.56}{}}
 \newlabel{rem:GroupStructureOnCInftPGG}{{6.57}{98}{Group structure on $C^\infty (\mathcal {P}; \mathcal {G})^{\mathcal {G}}$}{theorem.6.57}{}}
@@ -389,7 +392,7 @@
 \citation{Hamilton}
 \newlabel{def:LocalGaugeField}{{6.60}{104}{Local gauge field}{theorem.6.60}{}}
 \newlabel{PullBackGaugeFieldRemark}{{6.61}{104}{}{theorem.6.61}{}}
-\newlabel{prop:GaugeTrafosAsLGBSectionsLocal}{{6.62}{104}{Gauge transformations and sections of the structural LGB}{theorem.6.62}{}}
+\newlabel{prop:GaugeTrafosAsLGBSectionsLocal}{{6.62}{105}{Gauge transformations and sections of the structural LGB}{theorem.6.62}{}}
 \newlabel{rem:OtherNotationForLGBSectionsAsGaugeTrafo}{{6.63}{105}{Other notation}{theorem.6.63}{}}
 \newlabel{prop:GaugeChangeAsBundleAutomorph}{{6.64}{107}{Change of gauge as a local bundle automorphism}{theorem.6.64}{}}
 \newlabel{thm:LocalGaugeTrafoChangeGauge}{{6.65}{108}{Gauge transformations as a change of gauge in the local gauge field}{theorem.6.65}{}}
@@ -397,8 +400,8 @@
 \citation{MyThesis}
 \citation{My1stpaper}
 \newlabel{rem:IntegratingKotovStrobl}{{6.66}{109}{Integrating curved Yang-Mills gauge theories}{theorem.6.66}{}}
-\BKM@entry{id=31,dest={73756273656374696F6E2E362E34},srcline={6490}}{5C3337365C3337375C303030475C303030655C3030306E5C303030655C303030725C303030615C3030306C5C303030695C3030307A5C303030655C303030645C3030305C3034305C303030635C303030755C303030725C303030765C303030615C303030745C303030755C303030725C303030655C3030302F5C303030665C303030695C303030655C3030306C5C303030645C3030305C3034305C303030735C303030745C303030725C303030655C3030306E5C303030675C303030745C30303068}
-\BKM@entry{id=32,dest={73756273756273656374696F6E2E362E342E31},srcline={6492}}{5C3337365C3337375C303030595C303030615C3030306E5C303030675C3030302D5C3030304D5C303030695C3030306C5C3030306C5C303030735C3030305C3034305C303030635C3030306F5C3030306E5C3030306E5C303030655C303030635C303030745C303030695C3030306F5C3030306E5C303030735C3030305C3034305C3030306F5C3030306E5C3030305C3034305C3030304C5C303030475C303030425C30303073}
+\BKM@entry{id=31,dest={73756273656374696F6E2E362E34},srcline={6499}}{5C3337365C3337375C303030475C303030655C3030306E5C303030655C303030725C303030615C3030306C5C303030695C3030307A5C303030655C303030645C3030305C3034305C303030635C303030755C303030725C303030765C303030615C303030745C303030755C303030725C303030655C3030302F5C303030665C303030695C303030655C3030306C5C303030645C3030305C3034305C303030735C303030745C303030725C303030655C3030306E5C303030675C303030745C30303068}
+\BKM@entry{id=32,dest={73756273756273656374696F6E2E362E342E31},srcline={6501}}{5C3337365C3337375C303030595C303030615C3030306E5C303030675C3030302D5C3030304D5C303030695C3030306C5C3030306C5C303030735C3030305C3034305C303030635C3030306F5C3030306E5C3030306E5C303030655C303030635C303030745C303030695C3030306F5C3030306E5C303030735C3030305C3034305C3030306F5C3030306E5C3030305C3034305C3030304C5C303030475C303030425C30303073}
 \citation{CurvedYMH}
 \citation{MyThesis}
 \citation{MyThesis}
@@ -422,38 +425,42 @@
 \citation{LAURENTGENGOUXStienonXuMultiplicativeForms}
 \newlabel{rem:DavouxderivativeALocalGaugeField}{{6.72}{112}{Darboux derivative as local gauge field}{theorem.6.72}{}}
 \newlabel{def:MultiplicativeFormsDef}{{6.73}{112}{Multiplicative forms, \cite [\S 2.1, special situation of Def.\ 2.1]{crainic2015multiplicative}}{theorem.6.73}{}}
+\newlabel{sloppynotationformultiplicativity}{{6.74}{112}{}{theorem.6.74}{}}
 \newlabel{thm:TotMaurerIsMultiplicativeIfSEqual0}{{6.75}{112}{Ehresmann connection 1-forms on LGBs are multiplicative, \newline \cite [\S 4.4, implication of Lemma 4.14]{LAURENTGENGOUXStienonXuMultiplicativeForms}}{theorem.6.75}{}}
-\newlabel{ex:ClassicalYangMillsConnection}{{6.76}{113}{(Pre-)Classical Yang-Mills connection}{theorem.6.76}{}}
+\citation{mackenzieGeneralTheory}
+\newlabel{prop:DarbouxLeibnizRule}{{6.76}{113}{Leibniz rule of the Darboux derivative}{theorem.6.76}{}}
+\citation{LAURENTGENGOUXStienonXuMultiplicativeForms}
+\newlabel{thm:GenMCEq}{{6.78}{115}{Generalized Maurer-Cartan equation}{theorem.6.78}{}}
+\newlabel{rem:ClassicalMCEqinGeneralizedOne}{{6.79}{115}{Classical Maurer-Cartan equation recovered}{theorem.6.79}{}}
+\newlabel{rem:SimplicialDifferentialStuff}{{6.80}{115}{Relation to simplicial differential}{theorem.6.80}{}}
+\newlabel{ex:ClassicalYangMillsConnection}{{6.81}{115}{(Pre-)Classical Yang-Mills connection}{theorem.6.81}{}}
+\newlabel{ex:OurVeryImportantExample}{{6.82}{115}{Associated connections of inner group bundles are Yang-Mills connections}{theorem.6.82}{}}
 \citation{mackenzieGeneralTheory}
 \citation{mackenzieGeneralTheory}
 \citation{mackenzieGeneralTheory}
 \citation{Hamilton}
-\newlabel{ex:OurVeryImportantExample}{{6.77}{114}{Associated connections of inner group bundles are Yang-Mills connections}{theorem.6.77}{}}
-\newlabel{ex:NablaYMAsAdjointConnection}{{6.78}{114}{The Yang-Mills connections on inner group bundles: Alternative point of view and explanation}{theorem.6.78}{}}
-\citation{mackenzieGeneralTheory}
-\newlabel{prop:DarbouxLeibnizRule}{{6.79}{115}{Leibniz rule of the Darboux derivative}{theorem.6.79}{}}
+\newlabel{ex:NablaYMAsAdjointConnection}{{6.83}{116}{The Yang-Mills connections on inner group bundles: Alternative point of view and explanation}{theorem.6.83}{}}
 \citation{Hamilton}
 \citation{Hamilton}
-\newlabel{lem:BracketVertHor}{{6.81}{117}{Lie bracket of horizontal and vertical vector}{theorem.6.81}{}}
-\BKM@entry{id=33,dest={73756273756273656374696F6E2E362E342E32},srcline={6993}}{5C3337365C3337375C303030465C303030695C303030655C3030306C5C303030645C3030305C3034305C303030735C303030745C303030725C303030655C3030306E5C303030675C303030745C303030685C3030305C3034305C303030725C303030655C3030306C5C303030615C303030745C303030655C303030645C3030305C3034305C303030745C3030306F5C3030305C3034305C303030595C303030615C3030306E5C303030675C3030302D5C3030304D5C303030695C3030306C5C3030306C5C303030735C3030305C3034305C303030635C3030306F5C3030306E5C3030306E5C303030655C303030635C303030745C303030695C3030306F5C3030306E5C30303073}
+\newlabel{lem:BracketVertHor}{{6.84}{117}{Lie bracket of horizontal and vertical vector}{theorem.6.84}{}}
+\BKM@entry{id=33,dest={73756273756273656374696F6E2E362E342E32},srcline={7081}}{5C3337365C3337375C303030465C303030695C303030655C3030306C5C303030645C3030305C3034305C303030735C303030745C303030725C303030655C3030306E5C303030675C303030745C303030685C3030305C3034305C303030725C303030655C3030306C5C303030615C303030745C303030655C303030645C3030305C3034305C303030745C3030306F5C3030305C3034305C303030595C303030615C3030306E5C303030675C3030302D5C3030304D5C303030695C3030306C5C3030306C5C303030735C3030305C3034305C303030635C3030306F5C3030306E5C3030306E5C303030655C303030635C303030745C303030695C3030306F5C3030306E5C30303073}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.2}Field strength related to Yang-Mills connections}{119}{subsubsection.6.4.2}\protected@file@percent }
-\newlabel{def:NewFieldStrength}{{6.82}{119}{(Generalized) Field strength}{theorem.6.82}{}}
-\newlabel{prop:NewFieldStrengthWithCoolProps}{{6.83}{120}{Properties of the field strength}{theorem.6.83}{}}
+\newlabel{def:NewFieldStrength}{{6.85}{120}{(Generalized) Field strength}{theorem.6.85}{}}
+\newlabel{prop:NewFieldStrengthWithCoolProps}{{6.86}{120}{Properties of the field strength}{theorem.6.86}{}}
 \citation{Hamilton}
-\newlabel{TransformedClassicStrengthTerm}{{54}{121}{Field strength related to Yang-Mills connections}{equation.6.54}{}}
-\BKM@entry{id=34,dest={73656374696F6E2E37},srcline={7302}}{5C3337365C3337375C303030435C303030755C303030725C303030765C303030655C303030645C3030305C3034305C303030595C303030615C3030306E5C303030675C3030302D5C3030304D5C303030695C3030306C5C3030306C5C303030735C3030305C3034305C303030675C303030615C303030755C303030675C303030655C3030305C3034305C303030745C303030685C303030655C3030306F5C303030725C30303079}
-\BKM@entry{id=35,dest={73656374696F6E2E38},srcline={7304}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030635C3030306C5C303030755C303030735C303030695C3030306F5C3030306E}
+\newlabel{TransformedClassicStrengthTerm}{{54}{122}{Field strength related to Yang-Mills connections}{equation.6.54}{}}
+\BKM@entry{id=34,dest={73656374696F6E2E37},srcline={7390}}{5C3337365C3337375C303030435C303030755C303030725C303030765C303030655C303030645C3030305C3034305C303030595C303030615C3030306E5C303030675C3030302D5C3030304D5C303030695C3030306C5C3030306C5C303030735C3030305C3034305C303030675C303030615C303030755C303030675C303030655C3030305C3034305C303030745C303030685C303030655C3030306F5C303030725C30303079}
+\BKM@entry{id=35,dest={73656374696F6E2E38},srcline={7392}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030635C3030306C5C303030755C303030735C303030695C3030306F5C3030306E}
 \bibdata{Literatur}
 \BKM@entry{id=36,dest={73656374696F6E2A2E33},srcline={1}}{5C3337365C3337375C3030304C5C303030695C303030735C303030745C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C303030655C303030665C303030655C303030725C303030655C3030306E5C303030635C303030655C30303073}
 \bibcite{Hamilton}{1}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{123}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{123}{section.8}\protected@file@percent }
 \bibcite{mackenzieGeneralTheory}{2}
 \bibcite{PullbackLGBLAB}{3}
 \bibcite{DaSilva}{4}
 \bibcite{MyThesis}{5}
 \bibcite{GroupoidBasedPrincipalBundles}{6}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{123}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{123}{section.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\nonumberline List of References}{123}{section*.3}\protected@file@percent }
 \bibcite{OtherPreprintAboutConnection}{7}
 \bibcite{CurvedYMH}{8}
 \bibcite{LAURENTGENGOUXStienonXuMultiplicativeForms}{9}
@@ -462,32 +469,33 @@
 \bibcite{crainic2015multiplicative}{12}
 \bibcite{Highervectorbundles}{13}
 \bibcite{meinrenkensplitting}{14}
+\@writefile{toc}{\contentsline {section}{\nonumberline List of References}{124}{section*.3}\protected@file@percent }
 \bibstyle{unsrt}
-\BKM@entry{id=37,dest={617070656E6469782E41},srcline={7336}}{5C3337365C3337375C303030445C3030306F5C303030755C303030625C3030306C5C303030655C3030305C3034305C303030745C303030615C3030306E5C303030675C303030655C3030306E5C303030745C3030305C3034305C303030625C303030755C3030306E5C303030645C3030306C5C303030655C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030695C303030745C303030735C3030305C3034305C303030635C303030615C3030306E5C3030306F5C3030306E5C303030695C303030635C303030615C3030306C5C3030305C3034305C303030665C3030306C5C303030695C303030705C3030305C3034305C3030306D5C303030615C30303070}
+\BKM@entry{id=37,dest={617070656E6469782E41},srcline={7424}}{5C3337365C3337375C303030445C3030306F5C303030755C303030625C3030306C5C303030655C3030305C3034305C303030745C303030615C3030306E5C303030675C303030655C3030306E5C303030745C3030305C3034305C303030625C303030755C3030306E5C303030645C3030306C5C303030655C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030695C303030745C303030735C3030305C3034305C303030635C303030615C3030306E5C3030306F5C3030306E5C303030695C303030635C303030615C3030306C5C3030305C3034305C303030665C3030306C5C303030695C303030705C3030305C3034305C3030306D5C303030615C30303070}
 \citation{mackenzieGeneralTheory}
 \citation{mackenzieGeneralTheory}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{124}{appendix.A}\protected@file@percent }
-\newlabel{DoubleTangentFlip}{{A}{124}{Double tangent bundle and its canonical flip map}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{125}{appendix.A}\protected@file@percent }
+\newlabel{DoubleTangentFlip}{{A}{125}{Double tangent bundle and its canonical flip map}{appendix.A}{}}
 \citation{Highervectorbundles}
 \citation{mackenzieGeneralTheory}
-\newlabel{DoubleTangentAsDiagram}{{A.1}{125}{Double tangent bundle and its canonical flip map}{equation.A.1}{}}
+\newlabel{DoubleTangentAsDiagram}{{A.1}{126}{Double tangent bundle and its canonical flip map}{equation.A.1}{}}
 \citation{mackenzieGeneralTheory}
-\newlabel{definitionOfFlipMap}{{A.2}{126}{Double tangent bundle and its canonical flip map}{equation.A.2}{}}
+\newlabel{definitionOfFlipMap}{{A.2}{127}{Double tangent bundle and its canonical flip map}{equation.A.2}{}}
 \newlabel{CoordinateExpressionOfTTM}{{A.3}{127}{Double tangent bundle and its canonical flip map}{equation.A.3}{}}
-\newlabel{CoordinateExprOfFlippy}{{A.4}{127}{Double tangent bundle and its canonical flip map}{equation.A.4}{}}
-\newlabel{LinearStructureOfProlongInCoordinates}{{A.5}{127}{Double tangent bundle and its canonical flip map}{equation.A.5}{}}
 \citation{mackenzieGeneralTheory}
-\newlabel{rem:CanonicalInvolutionAnIsom}{{A.1}{128}{The canonical involution/flip map an isomorphism, \newline \cite [\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}}{theorem.A.1}{}}
-\newlabel{rem:SchwarzThmInDiffGeo}{{A.2}{128}{Revisit: Schwarz's Theorem}{theorem.A.2}{}}
+\newlabel{CoordinateExprOfFlippy}{{A.4}{128}{Double tangent bundle and its canonical flip map}{equation.A.4}{}}
+\newlabel{LinearStructureOfProlongInCoordinates}{{A.5}{128}{Double tangent bundle and its canonical flip map}{equation.A.5}{}}
+\newlabel{rem:CanonicalInvolutionAnIsom}{{A.1}{129}{The canonical involution/flip map an isomorphism, \newline \cite [\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}}{theorem.A.1}{}}
+\newlabel{rem:SchwarzThmInDiffGeo}{{A.2}{129}{Revisit: Schwarz's Theorem}{theorem.A.2}{}}
 \citation{mackenzieGeneralTheory}
 \newlabel{rem:TotalDerivativesAreLinearWithRTOtherLinearStructure}{{A.3}{130}{Total derivatives of tangent bundle morphisms linear with respect to prolonged vertical structure}{theorem.A.3}{}}
-\newlabel{rem:BothLinearStructuresTheSameOnTheVerticalBundle}{{A.4}{130}{Alignment of both vector bundle structures on $\mathrm {TT}M$ on the restricted vertical bundle}{theorem.A.4}{}}
 \citation{meinrenkensplitting}
-\newlabel{rem:TangentLifts}{{A.5}{131}{Tangent lift, \cite [\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{theorem.A.5}{}}
+\newlabel{rem:BothLinearStructuresTheSameOnTheVerticalBundle}{{A.4}{131}{Alignment of both vector bundle structures on $\mathrm {TT}M$ on the restricted vertical bundle}{theorem.A.4}{}}
+\newlabel{rem:TangentLifts}{{A.5}{132}{Tangent lift, \cite [\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{theorem.A.5}{}}
 \newlabel{TotalDerivativeOfTMWithLeibniz}{{A.6}{132}{Tangent lift, \cite [\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{equation.A.6}{}}
 \global\csname @altsecnumformattrue\endcsname
 \global\@namedef{scr@dte@section@lastmaxnumwidth}{16.1933pt}
 \global\@namedef{scr@dte@subsection@lastmaxnumwidth}{21.4132pt}
 \global\@namedef{scr@dte@subsubsection@lastmaxnumwidth}{29.92982pt}
 \@writefile{toc}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
-\gdef \@abspage@last{134}
+\gdef \@abspage@last{135}

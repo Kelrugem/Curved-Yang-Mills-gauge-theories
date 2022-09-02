@@ -4534,7 +4534,7 @@ for all $p \in M$ and $X \in \mathrm{T}_p M$. For $G = \mathbb{R}^n$ one usually
 We now have a similar behaviour in our case but related to arbitrary connections on $\mathbb{R}^n$ (as a trivial bundle over $M$).
 
 \begin{definitions}{Darboux derivative}{DarbouxDerivativeOnLGBs}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$.
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$.
 For $\sigma \in \Gamma(\mathcal{G})$ define the \textbf{Darboux derivative $\Delta \sigma \in \Omega^1(M; \mathcal{g})$}
 \bas
 \Delta \sigma
@@ -4549,7 +4549,7 @@ We may also write $\Delta^{\mathcal{G}}$ instead of $\Delta$ in order to accentu
 
 \begin{remark}\label{RemarkABoutDarbouxNotationWRTPullback}
 \leavevmode\newline
-The notation with the pullback $\sigma^*$ is only needed if one wants to view $\Delta \sigma$ as a $C^\infty(M)$-linear map $\mathfrak{X}(M) \to \Gamma(\mathcal{g})$; in this case it is a composition of base-preserving vector bundle morphisms $\mathrm{D}\sigma: \mathrm{T}M \to \sigma^*\mathrm{T}\mathcal{G}$ and $\sigma^*\mu_{\mathcal{G}}^{\mathrm{tot}}: \sigma^*\mathrm{T}\mathcal{G} \to \sigma^*\pi^*\mathcal{g} \cong \mathcal{g}$ which can be extended to sections, where $\pi$ is the projection of $\mathcal{G}$. 
+The notation with the pullback $\sigma^*$ is only needed if one wants to view $\Delta \sigma$ as a $C^\infty(M)$-linear map $\mathfrak{X}(M) \to \Gamma(\mathcal{g})$; in this case it is a composition of base-preserving vector bundle morphisms $\mathrm{D}\sigma: \mathrm{T}M \to \sigma^*\mathrm{T}\mathcal{G}$ and $\sigma^*\mu_{\mathcal{G}}^{\mathrm{tot}}: \sigma^*\mathrm{T}\mathcal{G} \to \sigma^*\pi_{\mathcal{G}}^*\mathcal{g} \cong \mathcal{g}$ which can be extended to sections, where $\pi$ is the projection of $\mathcal{G}$.
 
 Of course one can view $\Delta \sigma$ as a map $\mathrm{T}M \to \mathcal{g}$ which one can also write as the composition of $\mathrm{D}\sigma: \mathrm{T}M \to \mathrm{T}\mathcal{G}$ and $\mu_{\mathcal{G}}^{\mathrm{tot}}: \mathrm{T}\mathcal{G} \to \mathcal{g}$, that is,
 \bas
@@ -4557,6 +4557,15 @@ Of course one can view $\Delta \sigma$ as a map $\mathrm{T}M \to \mathcal{g}$ wh
 &=
 \mu_{\mathcal{G}}^{\mathrm{tot}} \circ \mathrm{D}\sigma.
 \eas
+If one wants to emphasize base points of the involved pullback bundles, that is, one views $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \pi_{\mathcal{G}}^*\mathcal{g}$, then one can write point-wise
+\bas
+\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma_x} \circ \mathrm{D}_x\sigma
+&=
+\bigl(
+	\sigma_x, \mleft.\mleft(\Delta \sigma\mright)\mright|_x
+\bigr)
+\eas
+for all $x \in M$.
 \end{remark}
 
 We can actually rewrite some important equations now; recall the notation introduced in Remark \ref{rem:FundVecNotationOnPullbackBundle}.
@@ -5714,7 +5723,7 @@ p \cdot \sigma_p
 &\coloneqq
 p \cdot \mathrm{pr}_2\mleft( \sigma_p \mright)
 \ea
-for all $p \in \mathcal{P}$, where $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. In essence, we drop the notation of $\mathrm{pr}_2$, as if we view $\sigma$ as a map $\mathcal{P} \to \mathcal{G}$ of fibre bundles over $\pi$; recall Subsection \ref{BasicNotations}. If we denote the right $\mathcal{G}$-action on $\mathcal{P}$ by $\Phi$, then observe by $\sigma_p = (p, \mathrm{pr}_2(\sigma))$ that we could also write
+for all $p \in \mathcal{P}$, where $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. In essence, we drop the notation of $\mathrm{pr}_2$, as if we view $\sigma$ as a map $\mathcal{P} \to \mathcal{G}$ of fibre bundles over $\pi$; recall Subsection \ref{BasicNotations}. If we denote the right $\mathcal{G}$-action on $\mathcal{P}$ by $\Phi$, then observe by $\sigma_p = (p, \mathrm{pr}_2(\sigma_p))$ that we could also write
 \bas
 p \cdot \sigma_p
 &=
@@ -6491,10 +6500,10 @@ Alexei's and Thomas's theory also generalizes the curvature/field strength relat
 
 \subsubsection{Yang-Mills connections on LGBs}\label{MultiplicativeForms}
 
-In the following we will introduce the curvature; in order to achieve gauge invariance later in the physical gauge theory, we will now need to assume certain what we will call \textbf{compatibility conditions} on the horizontal distribution of the structural LGB $\mathcal{G}$. Here in this work we will just present these compatibility conditions, and you will be able to see in the proofs why this leads to gauge invariance later. However, if you want to understand the following conditions coming from a point of view not knowing the solution beforehand, then either see \cite{CurvedYMH} or \cite{MyThesis}; the latter also provides a physical motivation using what I called the \textbf{field redefinitions} which naturally motivate the gauge theory presented here by transforming a classical gauge theory in such a way that the physics is preserved.
+In the following we will introduce the curvature; in order to achieve gauge invariance later in the physical gauge theory, we will now need to assume certain what we will call \textbf{compatibility conditions} on the horizontal distribution of the structural LGB $\mathcal{G}$. Here in this work we will just present these compatibility conditions, and you will be able to see in the proofs why this leads to gauge invariance later. However, if you want to understand the following conditions coming from a point of view not knowing the solution beforehand, then either see \cite{CurvedYMH} or \cite{MyThesis}; the latter also provides a physical motivation using what I called the \textbf{field redefinitions} which naturally motivate the gauge theory presented here by transforming a classical gauge theory in such a way that the physics is preserved; recall Def.\ \ref{def:ConnectionOnLAB} for the following.
 
 \begin{definitions}{Yang-Mills connection}{YangMillsConnection}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is a \textbf{Yang-Mills connection (on $\mathcal{G}$)} if there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that the $\mathcal{G}$-connection $\nabla^{\mathcal{G}}$ on the associated LAB $\mathcal{g}$ with bracket $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ (recall Def.\ \ref{def:ConnectionOnLAB}) satisfies the \textbf{compatibility conditions}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is a \textbf{Yang-Mills connection (on $\mathcal{G}$)} if there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that the $\mathcal{G}$-connection $\nabla^{\mathcal{G}}$ on the associated LAB $\mathcal{g}$ with bracket $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ satisfies the \textbf{compatibility conditions}
 \ba\label{CondSGleichNullLAB}
 \nabla^{\mathcal{G}}\mleft( \mleft[ \mu, \nu \mright]_{\mathcal{g}} \mright)
 &=
@@ -6576,16 +6585,16 @@ for all $(g, q) \in \mathcal{G}*\mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(g, q)}
 where $\Phi: \mathcal{G} * \mathcal{G} \to \mathcal{G}$ is the multiplication in $\mathcal{G}$, and $\widehat{\omega} \coloneqq \mathrm{pr}_2 \circ \omega$, where $\mathrm{pr}_2: \pi_{\mathcal{G}}^*\mathcal{g} \to \mathcal{g}$ is the natural projection onto the second component.
 \end{definitions}
 
-\begin{remark}
+\begin{remark}\label{sloppynotationformultiplicativity}
 \leavevmode\newline
 The shape of the second summand is again just because of technical reasons due to the definition of pullback bundles and their base points. If we do not care so much about the involved base points since these are clear by context, then we can also shortly write
 \bas
 \mleft(\Phi^!\omega\mright)_{(g, q)}(X, Y)
 &=
 \sAd_{q^{-1}}\bigl( \omega_{g}(X) \bigr)
-	+ \omega_{q}(Y),
+	+ \omega_{q}(Y).
 \eas
-also recall what we mentioned in Subsection \ref{BasicNotations} about pullback sections.
+Also recall what we mentioned in Subsection \ref{BasicNotations} about pullback sections.
 \end{remark}
 
 \begin{theorems}{Ehresmann connection 1-forms on LGBs are multiplicative, \newline \cite[\S 4.4, implication of Lemma 4.14]{LAURENTGENGOUXStienonXuMultiplicativeForms}}{TotMaurerIsMultiplicativeIfSEqual0}
@@ -6596,7 +6605,15 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 \leavevmode\newline
 The general approach in the mentioned reference is different to ours; hence, let us provide a proof suitable to our constructions. We will view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle whose horizontal distribution is also $\mathrm{H}\mathcal{G}$; thence, related notions of principal bundles and especially their notation carries over to $\mathcal{G}$. We will also use the same notation as in Def.\ \ref{def:MultiplicativeFormsDef}.
 
-$\bullet$ Let us first assume that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, therefore we now initially show that the associated total Maurer-Cartan form is multiplicative. By Cor.\ \ref{cor:TotMCFormIsConnectionForm} we know that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies Def.\ \ref{def:GaugeBosonsOnLGBPrincies}; also recall the second part of Rem.\ \ref{PointwiseNotationOfConnectioNOneForms}. By additionally using Thm.\ \ref{thm:DiffOfLGBAction} (especially the associated Rem.\ \ref{rem:DarbouxInActionInfinit}) we show
+%Let us first assume that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, therefore we now initially show that the associated total Maurer-Cartan form is multiplicative. 
+To answer whether or not $\mathrm{H}\mathcal{G}$ is an Ehresmann connection we just need to discuss whether $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a connection 1-form on $\mathcal{G}$ due to the fact that $\mathrm{H}\mathcal{G}$ is the kernel of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ by definition (see also Cor.\ \ref{cor:TotMCFormIsConnectionForm}), also using Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}. Also by definition, $\mu_{\mathcal{G}}^{\mathrm{tot}}$ already satisfies
+\bas
+\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \widetilde{\nu} \mright)
+&=
+\pi_{\mathcal{G}}^*\nu.
+\eas
+%By Cor.\ \ref{cor:TotMCFormIsConnectionForm} we know that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies Def.\ \ref{def:GaugeBosonsOnLGBPrincies}; also recall the second part of Rem.\ \ref{PointwiseNotationOfConnectioNOneForms}. 
+By additionally using Thm.\ \ref{thm:DiffOfLGBAction} (especially the associated Rem.\ \ref{rem:DarbouxInActionInfinit}) we show
 \bas
 \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{gq}\mleft( \mathrm{D}_{(g,q)}\Phi(X, Y) \mright)
 &=
@@ -6615,20 +6632,197 @@ $\bullet$ Let us first assume that $\mathrm{H}\mathcal{G}$ is an Ehresmann conne
 &=
 \mleft(\mathcal{r}_q^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g}(X)
 		+ \mleft( gq, \mleft( \widehat{\mu_{\mathcal{G}}^{\mathrm{tot}}}\mright)_{q} (Y) \mright)
-\\
-&=
+%\\
+%&=
+%\sAd_{q^{-1}}\mleft(\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g}(X)\mright)
+		%+ \mleft( gq, \mleft( \widehat{\mu_{\mathcal{G}}^{\mathrm{tot}}}\mright)_{q} (Y) \mright)
+\eas 
+for all $(g, q) \in \mathcal{G}*\mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(g, q)}(\mathcal{G}*\mathcal{G})$, where $\sigma$ is a (local) section of $\mathcal{G}$ such that $\sigma_{x} = q$. Thus, $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative if and only if
+\bas
 \sAd_{q^{-1}}\mleft(\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g}(X)\mright)
 		+ \mleft( gq, \mleft( \widehat{\mu_{\mathcal{G}}^{\mathrm{tot}}}\mright)_{q} (Y) \mright)
-\eas 
-for all $(g, q) \in \mathcal{G}*\mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(g, q)}(\mathcal{G}*\mathcal{G})$, where $\sigma$ is a (local) section of $\mathcal{G}$ such that $\sigma_{x} = q$. Thus, $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative.
-
-$\bullet$ Now we assume that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative. In order to show that $\mathrm{H}\mathcal{G}$ we just need to show that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a connection 1-form on $\mathcal{G}$ due to the fact that $\mathrm{H}\mathcal{G}$ is the kernel of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ by definition, using Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}. By definition, $\mu_{\mathcal{G}}^{\mathrm{tot}}$ already satisfies
-\bas
-\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \widetilde{\nu} \mright)
 &=
-\pi_{\mathcal{G}}^*\nu
+\mleft(\mathcal{r}_q^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g}(X)
+		+ \mleft( gq, \mleft( \widehat{\mu_{\mathcal{G}}^{\mathrm{tot}}}\mright)_{q} (Y) \mright)
+\eas
+if and only if
+\bas
+\sAd_{q^{-1}}\mleft(\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g}(X)\mright)
+&=
+\mleft(\mathcal{r}_q^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g}(X)
+\eas
+if and only if $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a connection 1-form. This finishes the proof.
+%
+%$\bullet$ Now we assume that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative. 
+\end{proof}
+
+This Theorem also implies the Leibniz rule of the Darboux derivative.
+
+
+\begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then we have
+\bas
+\Delta(\sigma \tau)
+&=
+\mathrm{Ad}_{\tau^{-1}} \circ \Delta \sigma
+	+ \Delta\tau
+\eas
+and
+\bas
+\Delta\mleft(\sigma^{-1}\mright)
+&=
+- \mathrm{Ad}_{\sigma} \circ \Delta \sigma
+\eas
+for all $\sigma, \tau \in \Gamma(\mathcal{G})$.
+\end{propositions}
+
+\begin{remark}
+\leavevmode\newline
+These are precisely the formulas one expects, see \textit{e.g.}\ \cite[\S 5.1, Eq.\ (2) and (3), page 182]{mackenzieGeneralTheory} for the "classical" case; beware that the reference uses right- instead of left-invariant vector fields to describe the Lie algebra, so that the referenced formulas look explicitly a bit different. Nevertheless, the similarity of the structure should be obvious.
+
+The mentioned reference for Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0}, \cite[\S 4.4, Lemma 4.14]{LAURENTGENGOUXStienonXuMultiplicativeForms}, actually uses the Leibniz rule of the Darboux derivative as an equivalent description of Ehresmann connections.
+\end{remark}
+
+\begin{proof}[Proof of Prop.\ \ref{prop:DarbouxLeibnizRule}]
+\leavevmode\newline
+For this calculation we will take care about base points of pullback bundles w.r.t.\ the Darboux derivative, thus recall the last part of Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. Using the same notation as in Def.\ \ref{def:MultiplicativeFormsDef}, this follows simply by Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0}, that is, set $Y \coloneqq \mathrm{D}_x\sigma(X)$ and $Z \coloneqq \mathrm{D}_x\tau(X)$, then
+\bas
+\bigl( \sigma_x\tau_x, \Delta(\sigma\tau)_x(X) \bigr)
+&=
+\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma_x\tau_x}\bigl( \mathrm{D}_x(\sigma \tau)(X) \bigr)
+\\
+&=
+\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma_x\tau_x}\bigl( \mathrm{D}_{(\sigma_x, \tau_x)}\Phi(Y, Z) \bigr)
+\\
+&=
+\sAd_{\tau_{x}^{-1}}\mleft(\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma_x}(Y)\mright)
+		+ \mleft( \sigma_x\tau_x, \mleft( \widehat{\mu_{\mathcal{G}}^{\mathrm{tot}}}\mright)_{\tau_x} (Z) \mright)
+\\
+&=
+\mleft( 
+	\sigma_x\tau_x, 
+	\mathrm{Ad}_{\tau_x^{-1}}\mleft( \mleft( \widehat{\mu_{\mathcal{G}}^{\mathrm{tot}}}\mright)_{\sigma_x} (Y) \mright) 
+	+ \mleft( \widehat{\mu_{\mathcal{G}}^{\mathrm{tot}}}\mright)_{\tau_x} (Z) 
+\mright)
+\\
+&=
+\mleft( 
+	\sigma_x\tau_x, 
+	\mathrm{Ad}_{\tau_x^{-1}}\bigl( \mleft.\mleft( \Delta \sigma \mright)\mright|_x(X) \bigr) 
+	+ \mleft.\mleft( \Delta \tau \mright)\mright|_x(X)
+\mright).
+\eas
+Hence,
+\bas
+\Delta(\sigma \tau)
+&=
+\mathrm{Ad}_{\tau^{-1}} \circ \Delta \sigma
+	+ \Delta\tau.
+\eas
+%
+%We have
+%\bas
+%\mathrm{D}_x\underbrace{(\sigma \tau)}_{\mathclap{ M \ni y \mapsto \sigma_x \tau_x = R_\tau(\sigma_x) }}(X)
+%&=
+%\mathrm{D}_x\mleft( R_\tau \circ \sigma \mright)(X)
+%\\
+%&=
+%\mathrm{D}_{\sigma_x}R_\tau \bigl( \mathrm{D}_x\sigma(X) \bigr)
+%\\
+%&=
+%\mathcal{r}_{\tau_x*}\bigl( \mathrm{D}_x\sigma(X) \bigr)
+	%+ \mleft.{\oversortoftilde{
+		%\mleft. \mleft( \pi_{\mathcal{G}}^!\Delta\tau \mright) \mright|_{\sigma_x}\bigl( \mathrm{D}_x\sigma(X) \bigr)
+	%}}\mright|_{\sigma_x \cdot \tau_x}
+%\\
+%&=
+%\mathcal{r}_{\tau_x*}\bigl( \mathrm{D}_x\sigma(X) \bigr)
+	%+ \mleft.{\oversortoftilde{
+		%\mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
+	%}}\mright|_{\sigma_x \cdot \tau_x}
+%\eas
+%for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$, where we used that $\pi_{\mathcal{G}} \circ \sigma = \mathds{1}_M$. Viewing $\mathcal{G}$ as a principal $\mathcal{G}$-bundle we can apply Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj}. Together with recalling Def.\ \ref{def:FundVecs} we derive
+%\bas
+%\Delta(\sigma\tau)_x(X)
+%&=
+%\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma_x\tau_x}\bigl( \mathrm{D}_x(\sigma \tau)(X) \bigr)
+%\\
+%&=
+%\mleft(\mathrm{D}_{\sigma_x\tau_x} L_{(\sigma_x\tau_x)^{-1}} \circ \pi_v \circ \mathrm{D}_x(\sigma\tau) \mright)(X)
+%\\
+%&=
+%\mleft(\mathrm{D}_{\sigma_x\tau_x} L_{\tau_x^{-1}\sigma_x^{-1}} \circ \mathcal{r}_{\tau_x*} \circ \pi_v \circ \mathrm{D}_x\sigma\mright)(X)
+	%+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
+%\\
+%&=
+%\mleft(\mathrm{D}_{\sigma_x\tau_x} L_{\tau_x^{-1}\sigma_x^{-1}} \circ \mathrm{D}_{\sigma_x}R_{\tau_x}
+%\circ \pi_v \circ \mathrm{D}_x\sigma\mright)(X)
+	%+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
+%\\
+%&=
+%\Bigl(\mathrm{D}_{\sigma_x} 
+%{\underbrace{\mleft( L_{\tau_x^{-1}\sigma_x^{-1}} \circ R_{\tau_x} \mright)}
+	%_{\mathclap{ \mathcal{G} \ni g \mapsto c_{\tau_x^{-1}} \circ L_{\sigma_x^{-1}} }}}
+%\circ \pi_v \circ \mathrm{D}_x\sigma\Bigr)(X)
+	%+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
+%\\
+%&=
+%\mleft(\mathrm{D}_{e_x} c_{\tau_x^{-1}} \circ \mathrm{D}_{\sigma_x}L_{\sigma_x^{-1}}
+%\circ \pi_v \circ \mathrm{D}_x\sigma\mright)(X)
+	%+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
+%\\
+%&=
+%\mathrm{Ad}_{\tau_x^{-1}}\bigl( \mleft(\Delta\sigma\mright)_x(X) \bigr)
+	%+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
+%\eas
+%where $\pi_v$ is the projection onto the vertical structure in $\mathcal{G}$, $e_x$ the neutral element of $\mathcal{G}_x$, and using Remark \ref{rem:ModRightPushOnVertic}, \textit{i.e.} ${\mathcal{r}_{\tau_x*}} \circ \pi_v = r_{\tau_x*} \circ \pi_v$.
+
+Now recall Remark \ref{rem:baseManifoldHoriz}; this implies for the neutral element section $e$ that
+\bas
+\Delta e
+&\equiv
+0,
+\eas
+and therefore
+\bas
+0
+&=
+\Delta e
+=
+\Delta \mleft( \sigma \sigma^{-1} \mright)
+=
+\mathrm{Ad}_{\sigma} \circ \Delta \sigma
+	+ \Delta\mleft(\sigma^{-1}\mright),
+\eas
+thus, concluding the proof with
+\bas
+\Delta\mleft(\sigma^{-1}\mright)
+&=
+- \mathrm{Ad}_{\sigma} \circ \Delta \sigma.
 \eas
 \end{proof}
+
+Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if and only if the total Maurer-Cartan form is mutiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}.
+
+\begin{theorems}{Generalized Maurer-Cartan equation}{GenMCEq}
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ satisfies compatibility condition \eqref{CondKruemmungmitBLAB} if and only if there is a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$ such that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies
+\bas
+\mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
+	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
+&=
+\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
+\eas
+for all $g \in \mathcal{G}$. We then say that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ solves the \textbf{generalized Maurer-Cartan equation}.
+\end{theorems}
+
+\begin{remarks}{Classical Maurer-Cartan equation recovered}{ClassicalMCEqinGeneralizedOne}
+If $\mathcal{G}$ is a trivial LGB, $\mathrm{H}\mathcal{G}$ its canonical flat connection and $\zeta \equiv 0$, then $\nabla^{\mathcal{G}}$ is the canonical flat connection on the trivial LAB $\mathcal{g}$ (recall Ex.\ \ref{ex:CanonicalFlatGConnection}) and it clearly satisfies the compatibility conditions in Def.\ \ref{def:YangMillsConnection} w.r.t.\ $\zeta \equiv 0$. Furthermore, the generalized Maurer-Cartan equation then reduces to the classical Maurer-Cartan equation.
+\end{remarks}
+
+\begin{remarks}{Relation to simplicial differential}{SimplicialDifferentialStuff}
+
+\end{remarks}
 
 To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections.
 
@@ -6701,112 +6895,6 @@ for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal para
 
 This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$. Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle.
 \end{examples}
-
-\begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
-Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then we have
-\bas
-\Delta(\sigma \tau)
-&=
-\mathrm{Ad}_{\tau^{-1}} \circ \Delta \sigma
-	+ \Delta\tau
-\eas
-and
-\bas
-\Delta\mleft(\sigma^{-1}\mright)
-&=
-- \mathrm{Ad}_{\sigma} \circ \Delta \sigma
-\eas
-for all $\sigma, \tau \in \Gamma(\mathcal{G})$.
-\end{propositions}
-
-\begin{remark}
-\leavevmode\newline
-These are precisely the formulas one expects, see \textit{e.g.}\ \cite[\S 5.1, Eq.\ (2) and (3), page 182]{mackenzieGeneralTheory} for the "classical" case; beware that the reference uses right- instead of left-invariant vector fields to describe the Lie algebra, so that the referenced formulas look explicitly a bit different. Nevertheless, the similarity of the structure should be obvious.
-\end{remark}
-
-\begin{proof}[Proof of Prop.\ \ref{prop:DarbouxLeibnizRule}]
-\leavevmode\newline
- We have
-\bas
-\mathrm{D}_x\underbrace{(\sigma \tau)}_{\mathclap{ M \ni y \mapsto \sigma_x \tau_x = R_\tau(\sigma_x) }}(X)
-&=
-\mathrm{D}_x\mleft( R_\tau \circ \sigma \mright)(X)
-\\
-&=
-\mathrm{D}_{\sigma_x}R_\tau \bigl( \mathrm{D}_x\sigma(X) \bigr)
-\\
-&=
-\mathcal{r}_{\tau_x*}\bigl( \mathrm{D}_x\sigma(X) \bigr)
-	+ \mleft.{\oversortoftilde{
-		\mleft. \mleft( \pi_{\mathcal{G}}^!\Delta\tau \mright) \mright|_{\sigma_x}\bigl( \mathrm{D}_x\sigma(X) \bigr)
-	}}\mright|_{\sigma_x \cdot \tau_x}
-\\
-&=
-\mathcal{r}_{\tau_x*}\bigl( \mathrm{D}_x\sigma(X) \bigr)
-	+ \mleft.{\oversortoftilde{
-		\mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
-	}}\mright|_{\sigma_x \cdot \tau_x}
-\eas
-for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$, where we used that $\pi_{\mathcal{G}} \circ \sigma = \mathds{1}_M$. Viewing $\mathcal{G}$ as a principal $\mathcal{G}$-bundle we can apply Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj}. Together with recalling Def.\ \ref{def:FundVecs} we derive
-\bas
-\Delta(\sigma\tau)_x(X)
-&=
-\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma_x\tau_x}\bigl( \mathrm{D}_x(\sigma \tau)(X) \bigr)
-\\
-&=
-\mleft(\mathrm{D}_{\sigma_x\tau_x} L_{(\sigma_x\tau_x)^{-1}} \circ \pi_v \circ \mathrm{D}_x(\sigma\tau) \mright)(X)
-\\
-&=
-\mleft(\mathrm{D}_{\sigma_x\tau_x} L_{\tau_x^{-1}\sigma_x^{-1}} \circ \mathcal{r}_{\tau_x*} \circ \pi_v \circ \mathrm{D}_x\sigma\mright)(X)
-	+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
-\\
-&=
-\mleft(\mathrm{D}_{\sigma_x\tau_x} L_{\tau_x^{-1}\sigma_x^{-1}} \circ \mathrm{D}_{\sigma_x}R_{\tau_x}
-\circ \pi_v \circ \mathrm{D}_x\sigma\mright)(X)
-	+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
-\\
-&=
-\Bigl(\mathrm{D}_{\sigma_x} 
-{\underbrace{\mleft( L_{\tau_x^{-1}\sigma_x^{-1}} \circ R_{\tau_x} \mright)}
-	_{\mathclap{ \mathcal{G} \ni g \mapsto c_{\tau_x^{-1}} \circ L_{\sigma_x^{-1}} }}}
-\circ \pi_v \circ \mathrm{D}_x\sigma\Bigr)(X)
-	+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
-\\
-&=
-\mleft(\mathrm{D}_{e_x} c_{\tau_x^{-1}} \circ \mathrm{D}_{\sigma_x}L_{\sigma_x^{-1}}
-\circ \pi_v \circ \mathrm{D}_x\sigma\mright)(X)
-	+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
-\\
-&=
-\mathrm{Ad}_{\tau_x^{-1}}\bigl( \mleft(\Delta\sigma\mright)_x(X) \bigr)
-	+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
-\eas
-where $\pi_v$ is the projection onto the vertical structure in $\mathcal{G}$, $e_x$ the neutral element of $\mathcal{G}_x$, and using Remark \ref{rem:ModRightPushOnVertic}, \textit{i.e.} ${\mathcal{r}_{\tau_x*}} \circ \pi_v = r_{\tau_x*} \circ \pi_v$.
-
-Now recall Remark \ref{rem:baseManifoldHoriz}; this implies for the neutral element section $e$ that
-\bas
-\Delta e
-&\equiv
-0,
-\eas
-and therefore
-\bas
-0
-&=
-\Delta e
-=
-\Delta \mleft( \sigma \sigma^{-1} \mright)
-=
-\mathrm{Ad}_{\sigma} \circ \Delta \sigma
-	+ \Delta\mleft(\sigma^{-1}\mright),
-\eas
-thus, concluding the proof with
-\bas
-\Delta\mleft(\sigma^{-1}\mright)
-&=
-- \mathrm{Ad}_{\sigma} \circ \Delta \sigma.
-\eas
-\end{proof}
 
 We also need a generalization of statements as \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}.
 
