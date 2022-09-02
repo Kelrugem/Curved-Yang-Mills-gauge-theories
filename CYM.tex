@@ -5489,7 +5489,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \end{itemize}
 \end{definitions}
 
-\begin{remark}
+\begin{remark}\label{PointwiseNotationOfConnectioNOneForms}
 \leavevmode\newline
 \indent $\bullet$ Due to the fact that we formulated the $\mathcal{G}$-equivariance using Ex.\ \ref{ex:AdjointACtionOnVP}, one may be able to show an analogue of the 1:1 correspondence of typical (classical) connection 1-forms to connection reforms and splittings of the Atiyah sequence; that is, a generalization of \cite[\S 3.2, page 90 ff.]{mackenzieGeneralTheory}.
 
@@ -5638,6 +5638,49 @@ A_{p \cdot \sigma_x}\bigl( \mathcal{r}_{\sigma*}(X) \bigr)
 0
 \eas
 for all (local) $\sigma \in \Gamma(\mathcal{G})$, where $x \coloneqq \pi(p)$. Thence, $\mathcal{r}_{\sigma*}(X) = \mathcal{r}_{\sigma_x*}(X) \in \mathrm{H}_{p \cdot \sigma_x}\mathcal{P}$, therefore we derive by Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} and dimensional reasons that $\mathcal{r}_{\sigma_x*}\mleft(\mathrm{H}_p \mathcal{P}\mright) = \mathrm{H}_{p \cdot \sigma_x}\mathcal{P}$, and so $\mathrm{H}\mathcal{P}$ is an Ehresmann connection.
+\end{proof}
+
+We conclude this subsection with the following technical and useful corollary.
+
+\begin{corollaries}{Commutation of modified push-forward and projections}{ModifiedRightPushyCommutesWithProj}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$ on $\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ an Ehresmann connection on $\mathcal{P}$; denote with $\pi_h$ and $\pi_v$ the associated projections on the horizontal and vertical bundle of $\mathcal{P}$, respectively. Then we have
+\bas
+\mathcal{r}_{g*} \circ \pi_h
+&=
+\pi_h \circ \mathcal{r}_{g*},\\
+\mathcal{r}_{g*} \circ \pi_v
+&=
+\pi_v \circ \mathcal{r}_{g*}
+\eas
+for all $g \in \mathcal{G}$.
+\end{corollaries}
+
+\begin{remark}\label{RemOohThesePullbacksConfusOrNotToConfus}
+\leavevmode\newline
+This extends of course to (local) sections $\sigma \in \Gamma(\mathcal{G})$, and as discussed in Remark \ref{RemarkABoutDarbouxNotationWRTPullback} we can extend these equations to vector fields on $\mathcal{P}$ via pullbacks, that is,
+\bas
+\mathcal{r}_{\sigma*} \circ \pi_h
+&=
+r_\sigma^*\pi_h \circ \mathcal{r}_{\sigma*},\\
+\mathcal{r}_{\sigma*} \circ \pi_v
+&=
+r_\sigma^*\pi_v \circ \mathcal{r}_{\sigma*},
+\eas
+making use of that $\mathcal{r}_{\sigma*}$ is an isomorphism over $r_{\sigma*}$, recall Prop.\ \ref{prop:IsomorphismRightPushAndDarboux}.
+\end{remark}
+
+\begin{proof}
+\leavevmode\newline
+By Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} (also recall Remark \ref{rem:ModRightPushOnVertic}) and Def.\ \ref{def:FinallyTheConnection} we have
+\bas
+\mathcal{r}_{g*}\mleft(\mathrm{V}_p\mathcal{P}\mright)
+&=
+\mathrm{V}_{p\cdot g}\mathcal{P},\\
+\mathcal{r}_{g*}\mleft( \mathrm{H}_p\mathcal{P} \mright)
+&=
+\mathrm{H}_{p\cdot g}\mathcal{P},
+\eas
+thus, $\mathcal{r}_{g*}$ preserves the splitting $\mathrm{T}\mathcal{P} = \mathrm{H}\mathcal{P} \oplus \mathrm{V}\mathcal{P}$. This concludes the proof.
 \end{proof}
 
 \subsection{Gauge transformations}
@@ -6524,22 +6567,67 @@ Ehresmann connections on LGBs (and Lie groupoids) were already discussed \cite{L
 \begin{definitions}{Multiplicative forms, \cite[\S 2.1, special situation of Def.\ 2.1]{crainic2015multiplicative}}{MultiplicativeFormsDef}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$. Then we call an $\omega \in \Omega^1\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright)$ a \textbf{multiplicative form} if
 \bas
+\omega_{gq}\mleft( \mathrm{D}_{(g, q)}\Phi(X, Y)  \mright)
+&=
+\sAd_{q^{-1}}\bigl( \omega_{g}(X) \bigr)
+	+ \bigl( gq, \widehat{\omega}_{q}(Y) \bigr)
+\eas
+for all $(g, q) \in \mathcal{G}*\mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(g, q)}(\mathcal{G}*\mathcal{G})$,
+where $\Phi: \mathcal{G} * \mathcal{G} \to \mathcal{G}$ is the multiplication in $\mathcal{G}$, and $\widehat{\omega} \coloneqq \mathrm{pr}_2 \circ \omega$, where $\mathrm{pr}_2: \pi_{\mathcal{G}}^*\mathcal{g} \to \mathcal{g}$ is the natural projection onto the second component.
+\end{definitions}
+
+\begin{remark}
+\leavevmode\newline
+The shape of the second summand is again just because of technical reasons due to the definition of pullback bundles and their base points. If we do not care so much about the involved base points since these are clear by context, then we can also shortly write
+\bas
 \mleft(\Phi^!\omega\mright)_{(g, q)}(X, Y)
 &=
 \sAd_{q^{-1}}\bigl( \omega_{g}(X) \bigr)
-	+ \omega_{q}(Y)
+	+ \omega_{q}(Y),
 \eas
-for all $(g, q) \in \mathcal{G}*\mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(g, q)}(\mathcal{G}*\mathcal{G})$,
-where $\Phi: \mathcal{G} * \mathcal{G} \to \mathcal{G}$ is the multiplication in $\mathcal{G}$.
-\end{definitions}
+also recall what we mentioned in Subsection \ref{BasicNotations} about pullback sections.
+\end{remark}
 
 \begin{theorems}{Ehresmann connection 1-forms on LGBs are multiplicative, \newline \cite[\S 4.4, implication of Lemma 4.14]{LAURENTGENGOUXStienonXuMultiplicativeForms}}{TotMaurerIsMultiplicativeIfSEqual0}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$ with corresponding total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$. Then $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle if and only if $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative.
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$ with corresponding total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$. Then $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle if and only if $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative.
 \end{theorems}
 
 \begin{proof}
 \leavevmode\newline
-$\bullet$ Let us first assume that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, therefore we now initially show that the associated total Maurer-Cartan form is multiplicative. 
+The general approach in the mentioned reference is different to ours; hence, let us provide a proof suitable to our constructions. We will view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle whose horizontal distribution is also $\mathrm{H}\mathcal{G}$; thence, related notions of principal bundles and especially their notation carries over to $\mathcal{G}$. We will also use the same notation as in Def.\ \ref{def:MultiplicativeFormsDef}.
+
+$\bullet$ Let us first assume that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, therefore we now initially show that the associated total Maurer-Cartan form is multiplicative. By Cor.\ \ref{cor:TotMCFormIsConnectionForm} we know that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies Def.\ \ref{def:GaugeBosonsOnLGBPrincies}; also recall the second part of Rem.\ \ref{PointwiseNotationOfConnectioNOneForms}. By additionally using Thm.\ \ref{thm:DiffOfLGBAction} (especially the associated Rem.\ \ref{rem:DarbouxInActionInfinit}) we show
+\bas
+\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{gq}\mleft( \mathrm{D}_{(g,q)}\Phi(X, Y) \mright)
+&=
+\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{gq}\mleft(
+	\mathrm{D}_gR_\sigma(X)
+		- \mleft.{\oversortoftilde{ \mleft.\mleft(\pi_{\mathcal{G}}^!\Delta \sigma\mright)\mright|_g (X)}}\mright|_{gq}
+		+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{q} (Y)}}\mright|_{gq}
+\mright)
+\\
+&=
+\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{gq}\bigl(
+	\mathcal{r}_{q*}(X)
+\bigr)
+		+ \mleft( gq, \mleft( \widehat{\mu_{\mathcal{G}}^{\mathrm{tot}}}\mright)_{q} (Y) \mright)
+\\
+&=
+\mleft(\mathcal{r}_q^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g}(X)
+		+ \mleft( gq, \mleft( \widehat{\mu_{\mathcal{G}}^{\mathrm{tot}}}\mright)_{q} (Y) \mright)
+\\
+&=
+\sAd_{q^{-1}}\mleft(\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g}(X)\mright)
+		+ \mleft( gq, \mleft( \widehat{\mu_{\mathcal{G}}^{\mathrm{tot}}}\mright)_{q} (Y) \mright)
+\eas 
+for all $(g, q) \in \mathcal{G}*\mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(g, q)}(\mathcal{G}*\mathcal{G})$, where $\sigma$ is a (local) section of $\mathcal{G}$ such that $\sigma_{x} = q$. Thus, $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative.
+
+$\bullet$ Now we assume that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative. In order to show that $\mathrm{H}\mathcal{G}$ we just need to show that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a connection 1-form on $\mathcal{G}$ due to the fact that $\mathrm{H}\mathcal{G}$ is the kernel of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ by definition, using Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}. By definition, $\mu_{\mathcal{G}}^{\mathrm{tot}}$ already satisfies
+\bas
+\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \widetilde{\nu} \mright)
+&=
+\pi_{\mathcal{G}}^*\nu
+\eas
 \end{proof}
 
 To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections.
@@ -6613,47 +6701,6 @@ for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal para
 
 This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$. Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle.
 \end{examples}
-
-\begin{corollaries}{Commutation of modified push-forward and projections}{ModifiedRightPushyCommutesWithProj}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$ on $\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ an Ehresmann connection on $\mathcal{P}$; denote with $\pi_h$ and $\pi_v$ the associated projections on the horizontal and vertical bundle of $\mathcal{P}$, respectively. Then we have
-\bas
-\mathcal{r}_{g*} \circ \pi_h
-&=
-\pi_h \circ \mathcal{r}_{g*},\\
-\mathcal{r}_{g*} \circ \pi_v
-&=
-\pi_v \circ \mathcal{r}_{g*}
-\eas
-for all $g \in \mathcal{G}$.
-\end{corollaries}
-
-\begin{remark}\label{RemOohThesePullbacksConfusOrNotToConfus}
-\leavevmode\newline
-This extends of course to (local) sections $\sigma \in \Gamma(\mathcal{G})$, and as discussed in Remark \ref{RemarkABoutDarbouxNotationWRTPullback} we can extend these equations to vector fields on $\mathcal{P}$ via pullbacks, that is,
-\bas
-\mathcal{r}_{\sigma*} \circ \pi_h
-&=
-r_\sigma^*\pi_h \circ \mathcal{r}_{\sigma*},\\
-\mathcal{r}_{\sigma*} \circ \pi_v
-&=
-r_\sigma^*\pi_v \circ \mathcal{r}_{\sigma*},
-\eas
-making use of that $\mathcal{r}_{\sigma*}$ is an isomorphism over $r_{\sigma*}$, recall Prop.\ \ref{prop:IsomorphismRightPushAndDarboux}.
-\end{remark}
-
-\begin{proof}
-\leavevmode\newline
-By Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} (also recall Remark \ref{rem:ModRightPushOnVertic}) and Def.\ \ref{def:FinallyTheConnection} we have
-\bas
-\mathcal{r}_{g*}\mleft(\mathrm{V}_p\mathcal{P}\mright)
-&=
-\mathrm{V}_{p\cdot g}\mathcal{P},\\
-\mathcal{r}_{g*}\mleft( \mathrm{H}_p\mathcal{P} \mright)
-&=
-\mathrm{H}_{p\cdot g}\mathcal{P},
-\eas
-thus, $\mathcal{r}_{g*}$ preserves the splitting $\mathrm{T}\mathcal{P} = \mathrm{H}\mathcal{P} \oplus \mathrm{V}\mathcal{P}$. This concludes the proof.
-\end{proof}
 
 \begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then we have
