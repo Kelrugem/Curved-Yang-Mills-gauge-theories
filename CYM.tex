@@ -465,6 +465,36 @@ Most of the time we will not mention this 1:1 correspondence explicitly, it shou
 \eas
 
 \item We will often have connections on a bundle, that is, a splitting into a horizontal and vertical bundle of its tangent bundle. When we write "Let $\pi$ be the projection onto the vertical/horizontal bundle", then this will be always w.r.t.\ to the fixed connection even though we are not explicitly mention it again.
+
+\item We also need to extend contractions of tensors to graded extensions:
+\begin{definitions}{Graded extension of products, \newline \cite[generalization of Definition 5.5.3; page 275]{Hamilton}}{GradingOfProducts}
+Let $l \in \mathbb{N}$ and $E_1, \dots E_{l+1} \to M$ be vector bundles over a smooth manifold $M$, and $F \in \Gamma\left( \left(\bigotimes_{m=1}^{l} E_m^*\right) \otimes E_{l+1} \right)$. Then we define the \textbf{graded extension of $F$} as
+	\bas
+\Omega^{k_1}(M; E_1) \times \dots \times \Omega^{k_l}(M; E_l)
+&\to \Omega^{k}(M; E_{l+1}), \\
+(A_1, \dots, A_l)
+&\mapsto
+F\mleft(A_1\stackrel{\wedge}{,} \dotsc \stackrel{\wedge}{,} A_l\mright),
+\eas
+where $k := k_1+\dots k_l$ and $k_i \in \mathbb{N}_0$ for all $i\in \{1, \dots, l\}$. $F\mleft(A_1\stackrel{\wedge}{,} \dotsc \stackrel{\wedge}{,} A_l\mright)$ is defined as an element of $\Omega^{k}(M; E_{l+1})$ by
+\bas
+&F\mleft(A_1\stackrel{\wedge}{,} \dotsc \stackrel{\wedge}{,} A_l\mright)\mleft(Y_1, \dots, Y_{k}\mright)
+\coloneqq \\
+&\frac{1}{k_1! \cdot \dots \cdot k_l!} \sum_{\sigma \in S_{k}} \mathrm{sgn}(\sigma) ~ F\left( A_1\left( Y_{\sigma(1)}, \dots, Y_{\sigma(k_1)} \right), \dots, A_l\left( Y_{\sigma(k-k_l+1)}, \dots, Y_{\sigma(k)} \right) \right)
+\eas
+for all $Y_1, \dots, Y_{k} \in \mathfrak{X}(M)$, where $S_{k}$ is the group of permutations of $\{1, \dots, k\}$ and $\mathrm{sgn}(\sigma)$ the signature of a given permutation $\sigma$. 
+
+$\stackrel{\wedge}{,}$ may be written just as a comma when a zero-form is involved.
+%
+%Locally, with respect to given frames $\mleft( e^{(i)}_{a_i} \mright)_{a_i}$ of $E_i$, this definition has the form
+%\ba\label{CoordExprOfGradedExtension}
+%F\mleft(A_1\stackrel{\wedge}{,} \dotsc \stackrel{\wedge}{,} A_l\mright)
+%&=
+%F\mleft(e^{(1)}_{a_1}, \dotsc, e^{(l)}_{a_l}\mright) \otimes A_1^{a_1} \wedge \dotsc \wedge A_l^{a_l}
+%\ea
+%for all $A_i = A_i^{a_i} \otimes e^{(i)}_{a_i}$, where $A_i^{a_i}$ are $k_i$-forms on $M$.
+\end{definitions}
+
 \end{itemize}
 
 \subsection{Assumed background knowledge}
@@ -6802,7 +6832,7 @@ thus, concluding the proof with
 \eas
 \end{proof}
 
-Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if and only if the total Maurer-Cartan form is mutiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}.
+Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if and only if the total Maurer-Cartan form is multiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}.
 
 \begin{theorems}{Generalized Maurer-Cartan equation}{GenMCEq}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ satisfies compatibility condition \eqref{CondKruemmungmitBLAB} if and only if there is a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$ such that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies
@@ -6813,16 +6843,84 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 &=
 \sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
 \eas
-for all $g \in \mathcal{G}$. We then say that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ solves the \textbf{generalized Maurer-Cartan equation}.
+for all $g \in \mathcal{G}$. We then say that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ solves the \textbf{generalized Maurer-Cartan equation (w.r.t.\ $\zeta$)}.
 \end{theorems}
 
 \begin{remarks}{Classical Maurer-Cartan equation recovered}{ClassicalMCEqinGeneralizedOne}
-If $\mathcal{G}$ is a trivial LGB, $\mathrm{H}\mathcal{G}$ its canonical flat connection and $\zeta \equiv 0$, then $\nabla^{\mathcal{G}}$ is the canonical flat connection on the trivial LAB $\mathcal{g}$ (recall Ex.\ \ref{ex:CanonicalFlatGConnection}) and it clearly satisfies the compatibility conditions in Def.\ \ref{def:YangMillsConnection} w.r.t.\ $\zeta \equiv 0$. Furthermore, the generalized Maurer-Cartan equation then reduces to the classical Maurer-Cartan equation.
+Recall Rem.\ \ref{rem:DarbouxOnCanonFlat}. If $\mathcal{G}$ is a trivial LGB, $\mathrm{H}\mathcal{G}$ its canonical flat connection and $\zeta \equiv 0$, then $\nabla^{\mathcal{G}}$ is the canonical flat connection on the trivial LAB $\mathcal{g}$ (recall Ex.\ \ref{ex:CanonicalFlatGConnection}) and it clearly satisfies the compatibility conditions in Def.\ \ref{def:YangMillsConnection} w.r.t.\ $\zeta \equiv 0$. Furthermore, the generalized Maurer-Cartan equation then reduces to the classical Maurer-Cartan equation.
 \end{remarks}
 
 \begin{remarks}{Relation to simplicial differential}{SimplicialDifferentialStuff}
+In fact, Def.\ \ref{def:MultiplicativeFormsDef} comes from a simplicial differential (w.r.t.\ points on $\mathcal{G}$) defined in \cite[beginning of \S 1.2]{crainic2003differentiable}. We do not have time to introduce it completely, but we give a short sketch about its definitions, also following the style of \cite[appendix]{FernandesMarcutMultiplicativeForms}. On degree one the cited differential is a map
+\bas
+\Omega^\bullet\mleft(\mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)
+&\to
+\Omega^\bullet\mleft(\mathcal{G} * \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)
+\\
+\omega
+&\mapsto
+\delta\omega
+\eas
+with
+\bas
+\mleft(\delta\omega\mright)_{(g,q)}
+&\coloneqq
+\sAd_{q^{-1}}\circ\mleft(\mathrm{pr}_1^!\omega\mright)_{(g,q)} 
+	+ \mleft(\mathrm{pr}_2^!\omega\mright)_{(g, q)}
+	- \mleft( \Phi^!\omega \mright)_{(g,q)}
+\eas
+for all $(g, q) \in \mathcal{G} * \mathcal{G}$, where $\Phi: \mathcal{G}*\mathcal{G}\to \mathcal{G}$ is the $\mathcal{G}$-multiplication, and $\mathrm{pr}_i: \mathcal{G}*\mathcal{G} \to \mathcal{G}$ are the canonical projections onto the $i$-th component ($i \in \{1,2\}$). Recall Rem.\ \ref{sloppynotationformultiplicativity}, $\omega$ can be defined to be multiplicative if $\delta\omega = 0$, \textit{i.e.}\ $\omega$ is closed w.r.t.\ $\delta$. 
 
+On degree 0 it is a map $\Omega^\bullet(M; \mathcal{g}) \to \Omega^\bullet\mleft(\mathcal{G}; \pi^{*}_{\mathcal{g}}\mright)$ given for $\xi \in \Omega^\bullet(M; \mathcal{g})$ by
+\bas
+\mleft(\delta\xi\mright)_g
+\coloneqq
+\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \xi\mright)\mright|_g
+	- \mleft.\mleft(\pi_{\mathcal{G}}^! \xi\mright)\mright|_g
+\eas
+for all $g\in \mathcal{G}$. Then observe that we can rewrite the generalized Mauer-Cartan equation to
+\bas
+F_{\mathcal{G}}
+&=
+\delta \zeta,
+\eas
+where
+\bas
+F_{\mathcal{G}}
+&=
+\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
+\in \Omega^2\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright).
+\eas
+It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e.g.}\ \cite[\S 2.5, Prop.\ 2.22]{FernandesMarcutMultiplicativeForms}) by making use of that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection. In total we concluded that compatibility condition \eqref{CondSGleichNullLAB} is equivalent to that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative, which implies that $F_{\mathcal{G}}$ is multiplicative and thus $\delta$-closed; additionally with compatibility condition \eqref{CondKruemmungmitBLAB} we achieve $\delta$-exactness of $F_{\mathcal{G}}$. This is no wonder, the compatibility conditions already tell us by definition that the connection-1-form of $\nabla$ is closed w.r.t.\ the Chevalley-Eilenberg complex, which also implies the same for the curvature, however the curvature has to be exact by \eqref{CondKruemmungmitBLAB}. We depict that as $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$ and $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$; a summary is shown in Table \ref{tab:CompatibilityConditionsOnLGBAndItsLAB}.
 \end{remarks}
+
+\begin{table}[htbp]
+	\centering
+		\caption{Compatibility conditions on LGB $\mathcal{G}$ and its LAB $\mathcal{g}$}
+		\begin{tabular}{ll|lll}
+			& Compatibility condition & \multicolumn{1}{c}{$\mathcal{g}$} && \multicolumn{1}{c}{$\mathcal{G}$} \\
+			\hline
+			\textbf{(Closedness)} &
+			$\nabla^{\mathcal{G}}\mleft( \mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \mright) = 0$
+	& $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$
+	&& $\delta\mu_{\mathcal{G}}^{\mathrm{tot}} = 0$
+	\\
+	&
+	& \hspace{0.2cm} $\Rightarrow \delta^{\mathrm{CE}}R_{\nabla^{\mathcal{G}}} = 0$
+	&& \hspace{0.2cm} $\Rightarrow \delta F_{\mathcal{G}} = 0$
+	\\
+	\textbf{(Exactness)}&
+			\hspace{0.2cm} \& $R_{\nabla^{\mathcal{G}}} = \mathrm{ad} \circ \zeta$
+		& $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$
+		&& $F_{\mathcal{G}} = \delta \zeta$
+		\end{tabular}
+	\label{tab:CompatibilityConditionsOnLGBAndItsLAB}
+\end{table}
+
+\begin{proof}[Proof of Thm.\ \ref{thm:GenMCEq}]
+\leavevmode\newline
+\end{proof}
 
 To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections.
 

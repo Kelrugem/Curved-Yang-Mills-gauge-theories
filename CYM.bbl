@@ -33,13 +33,13 @@ Simon-Raphael Fischer.
 
 \bibitem{GroupoidBasedPrincipalBundles}
 Ieke Moerdijk and Janez Mrcun.
-\newblock {\em Introduction to foliations and Lie groupoids}, volume~91.
+\newblock {\em Introduction to foliations and {L}ie groupoids}, volume~91.
 \newblock Cambridge University Press, 2003.
 \newblock https://doi.org/10.1017/CBO9780511615450.
 
 \bibitem{OtherPreprintAboutConnection}
 Marco~Castrillón López and Álvaro~Rodríguez Abella.
-\newblock Principal bundles and connections modelled by lie group bundles,
+\newblock Principal bundles and connections modelled by {L}ie group bundles,
   2022.
 \newblock https://arxiv.org/abs/2201.07088.
 
@@ -64,14 +64,20 @@ Simon-Raphael Fischer.
 
 \bibitem{FernandesMarcutMultiplicativeForms}
 Rui~Loja Fernandes and Ioan Marcut.
-\newblock Multiplicative ehresmann connections, 2022.
+\newblock Multiplicative {E}hresmann connections, 2022.
 \newblock https://doi.org/10.48550/ARXIV.2204.08507.
 
 \bibitem{crainic2015multiplicative}
 Marius Crainic, Maria~Amelia Salazar, and Ivan Struchiner.
-\newblock Multiplicative forms and spencer operators.
+\newblock Multiplicative forms and {S}pencer operators.
 \newblock {\em Mathematische Zeitschrift}, 279(3):939--979, 2015.
 \newblock https://doi.org/10.1007/s00209-014-1398-z.
+
+\bibitem{crainic2003differentiable}
+Marius Crainic.
+\newblock Differentiable and algebroid cohomology, van {E}st isomorphisms, and
+  characteristic classes.
+\newblock {\em Commentarii Mathematici Helvetici}, 78(4):681--721, 2003.
 
 \bibitem{Highervectorbundles}
 Janusz Grabowski and Miko{\l}aj Rotkiewicz.
