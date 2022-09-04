@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  3 SEP 2022 22:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  4 SEP 2022 19:39
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1368,7 +1368,13 @@ Underfull \hbox (badness 2970) in paragraph at lines 71--75
  []
 
 [125]
-Underfull \hbox (badness 1867) in paragraph at lines 83--87
+Underfull \hbox (badness 1552) in paragraph at lines 77--82
+[]\T1/lmr/m/n/10.95 Marius Crainic.  Dif-fer-en-tiable and al-ge-broid co-ho-mo
+l-ogy, van Est iso-mor-phisms,
+ []
+
+
+Underfull \hbox (badness 1867) in paragraph at lines 90--94
 \T1/lmr/m/n/10.95 sym-plec-tic man-i-folds.  \T1/lmr/m/it/10.95 Jour-nal of Ge-
 om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
  []
@@ -1377,17 +1383,14 @@ om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34936 strings out of 478907
- 729464 string characters out of 2851891
- 1226461 words of memory out of 3000000
- 51719 multiletter control sequences out of 15000+600000
+ 34939 strings out of 478907
+ 729534 string characters out of 2851891
+ 1217486 words of memory out of 3000000
+ 51721 multiletter control sequences out of 15000+600000
  526646 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1429,9 +1432,9 @@ onts/type1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/kelru/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (136 pages, 1329671 bytes).
+Output written on CYM.pdf (136 pages, 1331377 bytes).
 PDF statistics:
- 2067 PDF objects out of 2073 (max. 8388607)
- 459 named destinations out of 1000 (max. 500000)
+ 2071 PDF objects out of 2073 (max. 8388607)
+ 460 named destinations out of 1000 (max. 500000)
  309 words of extra memory for PDF output out of 10000 (max. 10000000)
 

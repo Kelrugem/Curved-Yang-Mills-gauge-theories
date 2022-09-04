@@ -2278,7 +2278,7 @@ Observe that by Cor.\ \ref{cor:PullBackLABIsLAB} we know that $\mathrm{V}\mathca
 e^*\mathrm{V}\mathcal{G}
 &=
 e^*\pi^*\mathcal{g}
-=
+\cong
 (\pi \circ e)^* \mathcal{g}
 =
 \mathcal{g}.
@@ -6869,7 +6869,7 @@ with
 	+ \mleft(\mathrm{pr}_2^!\omega\mright)_{(g, q)}
 	- \mleft( \Phi^!\omega \mright)_{(g,q)}
 \eas
-for all $(g, q) \in \mathcal{G} * \mathcal{G}$, where $\Phi: \mathcal{G}*\mathcal{G}\to \mathcal{G}$ is the $\mathcal{G}$-multiplication, and $\mathrm{pr}_i: \mathcal{G}*\mathcal{G} \to \mathcal{G}$ are the canonical projections onto the $i$-th component ($i \in \{1,2\}$). Recall Rem.\ \ref{sloppynotationformultiplicativity}, $\omega$ can be defined to be multiplicative if $\delta\omega = 0$, \textit{i.e.}\ $\omega$ is closed w.r.t.\ $\delta$. 
+for all $(g, q) \in \mathcal{G} * \mathcal{G}$, where $\Phi: \mathcal{G}*\mathcal{G}\to \mathcal{G}$ is the $\mathcal{G}$-multiplication, and $\mathrm{pr}_i: \mathcal{G}*\mathcal{G} \to \mathcal{G}$ are the canonical projections onto the $i$-th component ($i \in \{1,2\}$). Recall Def.\ \ref{def:MultiplicativeFormsDef} and its Rem.\ \ref{sloppynotationformultiplicativity}, $\omega$ can be defined to be multiplicative if $\delta\omega = 0$, \textit{i.e.}\ $\omega$ is closed w.r.t.\ $\delta$. 
 
 On degree 0 it is a map $\Omega^\bullet(M; \mathcal{g}) \to \Omega^\bullet\mleft(\mathcal{G}; \pi^{*}_{\mathcal{g}}\mright)$ given for $\xi \in \Omega^\bullet(M; \mathcal{g})$ by
 \bas
@@ -6920,6 +6920,15 @@ It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e
 
 \begin{proof}[Proof of Thm.\ \ref{thm:GenMCEq}]
 \leavevmode\newline
+The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. That is, we now first show that 
+\bas
+\mathcal{G} \ni g &\mapsto
+\mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
+	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
+	- \sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
+\eas
+is constant along the fibres of $\mathcal{G}$, that is, constant along the flows of vertical tangent vectors. Recall Cor.\ \ref{cor:TLGBAsLGB}
 \end{proof}
 
 To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections.
