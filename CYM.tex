@@ -6850,230 +6850,7 @@ thus, concluding the proof with
 %\eas
 \end{proof}
 
-Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if and only if the total Maurer-Cartan form is multiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}.
-
-\begin{theorems}{Generalized Maurer-Cartan equation}{GenMCEq}
-Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ satisfies compatibility condition \eqref{CondKruemmungmitBLAB} if and only if there is a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$ such that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies
-\bas
-\mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
-	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
-	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
-&=
-\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
-\eas
-for all $g \in \mathcal{G}$. We then say that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ solves the \textbf{generalized Maurer-Cartan equation (w.r.t.\ $\zeta$)}.
-\end{theorems}
-
-\begin{remarks}{Classical Maurer-Cartan equation recovered}{ClassicalMCEqinGeneralizedOne}
-Recall Rem.\ \ref{rem:DarbouxOnCanonFlat}. If $\mathcal{G}$ is a trivial LGB, $\mathrm{H}\mathcal{G}$ its canonical flat connection and $\zeta \equiv 0$, then $\nabla^{\mathcal{G}}$ is the canonical flat connection on the trivial LAB $\mathcal{g}$ (recall Ex.\ \ref{ex:CanonicalFlatGConnection}) and it clearly satisfies the compatibility conditions in Def.\ \ref{def:YangMillsConnection} w.r.t.\ $\zeta \equiv 0$. Furthermore, the generalized Maurer-Cartan equation then reduces to the classical Maurer-Cartan equation.
-\end{remarks}
-
-\begin{remarks}{Relation to simplicial differential}{SimplicialDifferentialStuff}
-In fact, Def.\ \ref{def:MultiplicativeFormsDef} comes from a simplicial differential (w.r.t.\ points on $\mathcal{G}$) defined in \cite[beginning of \S 1.2]{crainic2003differentiable}. We do not have time to introduce it completely, but we give a short sketch about its definitions, also following the style of \cite[appendix]{FernandesMarcutMultiplicativeForms}. On degree one the cited differential is a map
-\bas
-\Omega^\bullet\mleft(\mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)
-&\to
-\Omega^\bullet\mleft(\mathcal{G} * \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)
-\\
-\omega
-&\mapsto
-\delta\omega
-\eas
-with
-\bas
-\mleft(\delta\omega\mright)_{(g,q)}
-&\coloneqq
-\sAd_{q^{-1}}\circ\mleft(\mathrm{pr}_1^!\omega\mright)_{(g,q)} 
-	+ \mleft(\mathrm{pr}_2^!\omega\mright)_{(g, q)}
-	- \mleft( \Phi^!\omega \mright)_{(g,q)}
-\eas
-for all $(g, q) \in \mathcal{G} * \mathcal{G}$, where $\Phi: \mathcal{G}*\mathcal{G}\to \mathcal{G}$ is the $\mathcal{G}$-multiplication, and $\mathrm{pr}_i: \mathcal{G}*\mathcal{G} \to \mathcal{G}$ are the canonical projections onto the $i$-th component ($i \in \{1,2\}$). Recall Def.\ \ref{def:MultiplicativeFormsDef} and its Rem.\ \ref{sloppynotationformultiplicativity}, $\omega$ can be defined to be multiplicative if $\delta\omega = 0$, \textit{i.e.}\ $\omega$ is closed w.r.t.\ $\delta$. 
-
-On degree 0 it is a map $\Omega^\bullet(M; \mathcal{g}) \to \Omega^\bullet\mleft(\mathcal{G}; \pi^{*}_{\mathcal{g}}\mright)$ given for $\xi \in \Omega^\bullet(M; \mathcal{g})$ by
-\bas
-\mleft(\delta\xi\mright)_g
-\coloneqq
-\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \xi\mright)\mright|_g
-	- \mleft.\mleft(\pi_{\mathcal{G}}^! \xi\mright)\mright|_g
-\eas
-for all $g\in \mathcal{G}$. Then observe that we can rewrite the generalized Mauer-Cartan equation to
-\bas
-F_{\mathcal{G}}
-&=
-\delta \zeta,
-\eas
-where
-\bas
-F_{\mathcal{G}}
-&=
-\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
-	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
-\in \Omega^2\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright).
-\eas
-It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e.g.}\ \cite[\S 2.5, Prop.\ 2.22]{FernandesMarcutMultiplicativeForms}) by making use of that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection. In total we concluded that compatibility condition \eqref{CondSGleichNullLAB} is equivalent to that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative, which implies that $F_{\mathcal{G}}$ is multiplicative and thus $\delta$-closed; additionally with compatibility condition \eqref{CondKruemmungmitBLAB} we achieve $\delta$-exactness of $F_{\mathcal{G}}$. This is no wonder, the compatibility conditions already tell us by definition that the connection-1-form of $\nabla$ is closed w.r.t.\ the Chevalley-Eilenberg complex, which also implies the same for the curvature, however the curvature has to be exact by \eqref{CondKruemmungmitBLAB}. We depict that as $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$ and $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$; a summary is shown in Table \ref{tab:CompatibilityConditionsOnLGBAndItsLAB}.
-\end{remarks}
-
-\begin{table}[htbp]
-	\centering
-		\caption{Compatibility conditions on LGB $\mathcal{G}$ and its LAB $\mathcal{g}$}
-		\begin{tabular}{ll|lll}
-			& Compatibility condition & \multicolumn{1}{c}{$\mathcal{g}$} && \multicolumn{1}{c}{$\mathcal{G}$} \\
-			\hline
-			\textbf{(Closedness)} &
-			$\nabla^{\mathcal{G}}\mleft( \mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \mright) = 0$
-	& $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$
-	&& $\delta\mu_{\mathcal{G}}^{\mathrm{tot}} = 0$
-	\\
-	&
-	& \hspace{0.2cm} $\Rightarrow \delta^{\mathrm{CE}}R_{\nabla^{\mathcal{G}}} = 0$
-	&& \hspace{0.2cm} $\Rightarrow \delta F_{\mathcal{G}} = 0$
-	\\
-	\textbf{(Exactness)}&
-			\hspace{0.2cm} \& $R_{\nabla^{\mathcal{G}}} = \mathrm{ad} \circ \zeta$
-		& $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$
-		&& $F_{\mathcal{G}} = \delta \zeta$
-		\end{tabular}
-	\label{tab:CompatibilityConditionsOnLGBAndItsLAB}
-\end{table}
-
-\begin{proof}[Proof of Thm.\ \ref{thm:GenMCEq}]
-\leavevmode\newline
-The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. That is, we now first discuss when 
-\bas
-\mathcal{G} \ni g &\mapsto \omega_g \coloneqq
-\mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
-	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
-	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
-	- \sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
-\eas
-is constant along the fibres of $\mathcal{G}$, that is, constant along the flows of vertical tangent vectors, the left-invariant vector fields (recall Cor.\ \ref{cor:TLGBAsLGB}). First of all observe that $\omega$ vanishes if at least one tangent vector is vertical. Let $Y \in \mathrm{V}_g\mathcal{G}$ ($g \in \mathcal{G}_x$, $x \in M$), and write $Y = \mleft.\widetilde{\nu_x}\mright|_g$ for a $\nu_x \in \mathcal{g}_x$. Due to $\mathrm{D}\pi_{\mathcal{G}} \mleft( Y \mright) = 0$ it is clear that the contraction of $\pi_{\mathcal{G}}^! \zeta$ with $Y$ is 0. Let $Z \in \mathrm{T}_g\mathcal{G}$ for which we write
-\bas
-Z 
-&\coloneqq
-\mleft.\widetilde{\mu_x}\mright|_g
-	+ X_g
-\eas
-for a $\mu_x \in \mathcal{g}_x$ and $X_g \in \mathrm{H}_g\mathcal{G}$;
-then by Cor.\ \ref{cor:TotMCFormIsConnectionForm}
-\bas
-\frac{1}{2} \mleft.\mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}\mright|_g (Y, Z)
-&=
-\mleft[ \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g(Y), \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g(Z) \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
-=
-\mleft( g,
-\mleft[ \nu_x, \mu_x \mright]_{\mathcal{g}_x}
-\mright).
-\eas
-Extend $Y$ and $Z$ naturally to vector fields on $\mathcal{G}$ (for simplicity also denoted by $Y$ and $Z$, respectively) by viewing $\nu_x$ and $\mu_x$ as values of sections $\nu$ and $\mu$, respectively, of $\mathcal{g}$ at $x$, and extending $X_g$ (locally) to a horizontal vector field $X$; thence,
-\bas
-\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g(Y, Z)
-&=
-\mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{Y_g} \mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}(Z) \mright)
-	- \mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{Z_g} \mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}(Y) \mright)
-	- \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g\mleft( [Y, Z] \mright)
-\\
-&=
-{\underbrace{\mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{\widetilde{\nu}_g} \mleft( \pi^*_{\mathcal{G}}\mu \mright)}
-	_{\mathclap{ = \mleft. \pi^*_{\mathcal{G}}\mleft( \nabla^{\mathcal{G}}_{\mathrm{D} \pi_{\mathcal{G}} \mleft( \widetilde{\nu} \mright)} \mu \mright) \mright|_g = 0 }}}
-	- \mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{\widetilde{\mu}_g + X_g} \mleft( \pi^*_{\mathcal{G}}\nu \mright)
-\\
-&\hspace{1cm}
-	- \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g\mleft( [\widetilde{\nu}, \widetilde{\mu}] \mright)
-	- \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g\mleft( [\widetilde{\nu}, X] \mright)
-\\
-&=
-- \mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{X_g} \mleft( \pi^*_{\mathcal{G}}\nu \mright)
-	- \mleft( g, \mleft[ \nu_x, \mu_x \mright]_{\mathcal{g}_x} \mright)
-	+ \mleft( \pi^*_{\mathcal{G}}\nabla^{\mathcal{G}} \mright)_{X_g}\mleft( \pi^*_{\mathcal{G}}\nu \mright)
-\\
-&=
-- \mleft( g, \mleft[ \nu_x, \mu_x \mright]_{\mathcal{g}_x} \mright)
-\eas
-using Remark \ref{rem:FundVecsAreLABActions} (bracket of fundamental/left-invariant vector fields is fundamental/left-invariant) and Lemma \ref{lem:BracketVertHor}. Thus,
-\bas
-\mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
-	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}\mright)\mright|_g(Y, Z)
-&=
-0.
-\eas
-It follows that $\omega$ vanishes if contracted with a vertical tangent vector.
-
-For a given $g \in \mathcal{G}_x$ ($x \in M$) take any curve $\gamma: I \to \mathcal{G}_x$ ($I$ an open interval of $\mathbb{R}$ containing 0) so that $\gamma(0) = g$.
-\end{proof}
-
-To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections.
-
-\begin{examples}{(Pre-)Classical Yang-Mills connection}{ClassicalYangMillsConnection}
-Let us look at a classical principal bundle $P$ with trivial LGB $\mathcal{G} = M \times G$, $G$ a Lie group; recall Ex.\ \ref{ex:TheCLassicalPrincAsEx} and \ref{ex:OurConnectionIsReallyMoreGeneral}. The canonical flat connection on $\mathcal{G}$ induces the canonical flat connection $\nabla^{\mathcal{G}}$ on its LAB $\mathcal{g} = M \times \mathfrak{g}$, recall Ex.\ \ref{ex:CanonicalFlatGConnection}. Thus,
-\bas
-R_{\nabla^{\mathcal{G}}} &= 0
-\eas
-and so we can set $\zeta \equiv 0$. Using a frame of global sections, it is trivial to check that also Eq.\ \eqref{CondSGleichNullLAB} is satisfied. We then call $\nabla^{\mathrm{cYM}} \coloneqq \nabla^{\mathcal{G}}$ a \textbf{classical Yang-Mills connection}.
-
-However, observe that $\zeta$ can be centre-valued while $\nabla^{\mathcal{G}}$ is still flat. In such an occasion we speak of a \textbf{pre-classical Yang-Mills connection}, denoted by $\nabla^{\mathrm{pYM}}$.
-\end{examples}
-
-\begin{examples}{Associated connections of inner group bundles are Yang-Mills connections}{OurVeryImportantExample}
-Recall Ex.\ \ref{ex:AssociatedLGBsAndTheirCanonicalConnection}, its setup and notation. We have discussed a canonical connection on associated LGBs $\mathcal{H} = P \times_\psi H$, called associated connection. Following the argument about parallel transports in the proof of Lemma \ref{lem:YangMillsConnAnEhresmann}, we know that the associated connection satisfies Eq.\ \eqref{CondSGleichNullLAB} due to the fact that the parallel transport of $\mathcal{H}$ is a homomorphism.
-
-Now we turn to Eq.\ \eqref{CondKruemmungmitBLAB}. As it is well-known, the curvature measures the holonomy, that is, the parallel transport over closed (contractible) curves. Together with Eq.\ \eqref{CondKruemmungmitBLAB}, the parallel transport over a closed (contractible) curve $\alpha$ should act as conjugation with some group element. Let us see whether this holds here; there is a unique $g \in G$ for $p \in P$ such that
-\bas
-\mathrm{PT}^{P}_\alpha(p)
-&=
-p \cdot g,
-\eas
-and thus for $[p, h] \in \mathcal{H}$
-\bas
-\mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
-&=
-\mleft[ p \cdot g, h \mright]
-=
-\mleft[ p, \psi_g(h) \mright].
-\eas
-Thus, if $\mathcal{H} = c_G(P)$, the inner group bundle of Ex.\ \ref{ex:InnerLGBs}, we get
-\bas
-\mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
-&=
-\mleft[ p, ghg^{-1} \mright]
-=
-\mleft[p, g\mright] \cdot
-\mleft[p, h\mright] \cdot
-\mleft[p, g^{-1}\mright],
-\eas
-the conjugation of $[p, h]$ with $[p, g]$ in $c_G(P)$. It follows that there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that Eq.\ \eqref{CondKruemmungmitBLAB} is satisfied. This also implies that the associated connection of an inner group bundle is a Yang-Mills connection. 
-\end{examples}
-
-\begin{examples}{The Yang-Mills connections on inner group bundles: Alternative point of view and explanation}{NablaYMAsAdjointConnection}
-Alternatively one can prove what we have shown in Ex.\ \ref{ex:OurVeryImportantExample} by using the aforementioned relationship of the compatibility conditions with Mackenzie's study about extending Lie algebroids via LABs; recall Remark \ref{MackenziesStuffRelation}. The following is an information for the experienced reader: The LAB of $c_G(P)$ is given by the adjoint bundle $\mathrm{Ad}(P)$; recall Ex.\ \ref{ex:AssociatedLABsFromAssocLGBs}. $\mathrm{Ad}(P)$ is the kernel of the Atiyah sequence (see \textit{e.g.}\ \cite[\S 3.2, page 90ff.]{mackenzieGeneralTheory}), a short exact sequence of Lie algebroids over $M$
-\begin{center}
-	\begin{tikzcd}
-		0 \arrow{r} & \mathrm{Ad}(P) \arrow{r} & \mathrm{At}(P) \arrow{r} & \mathrm{T}M \arrow{r} & 0,
-	\end{tikzcd}
-\end{center}
-where $\mathrm{At}(P)$ is the Atiyah bundle of $P$. A connection on $P$ in the "classical" sense (that is, related to a canonical flat connection on $M \times G$ in our sense) has a 1:1 correspondence to a splitting $\chi: \mathrm{T}M \to \mathrm{AT}(P)$ to that sequence, \textit{i.e.}\ a section of the left non-trivial arrow. We can then construct a vector bundle connection $\nabla^{\mathrm{YM}}$ on the adjoint bundle by using the Lie algebroid bracket $\mleft[ \cdot, \cdot \mright]_{\mathrm{At}(P)}$ on $\mathrm{At}(P)$, that is,
-\bas
-\nabla^{\mathrm{YM}}_X \nu
-&=
-\mleft[ \chi(X), \nu \mright]_{\mathrm{At}(P)}
-\eas
-for all $X \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathrm{Ad}(P))$. It follows by \cite[\S 7.3, Prop.\ 7.3.2 and Lemma 7.3.3, page 278]{mackenzieGeneralTheory} that $\nabla^{\mathrm{YM}}$ is indeed a Yang-Mills connection with $\zeta \in \Omega^2(M;\mathrm{Ad}(P))$ for example given by 
-\bas
-\zeta(Y, Z)
-&\coloneqq
-\mleft[ \chi(Y), \chi(Z) \mright]_{\mathrm{At}(P)} - \chi([Y, Z])
-\eas
-for all $Y, Z \in \mathfrak{X}(M)$. In other words, $\nabla^{\mathrm{YM}}$ is the \textbf{adjoint connection} induced by a connection on $P$ (see for example \cite[\S 5.3, especially Prop.\ 5.3.13, page 199]{mackenzieGeneralTheory}). Thence, by the discussion in \cite[\S 5.9, page 289ff.]{Hamilton} $\nabla^{\mathrm{YM}}$ corresponds to the natural parallel transport $\mathrm{PT}^{\mathrm{Ad}(P)}$ on $\mathrm{Ad}(P)$ (omitting the notation of the corresponding curve) given by
-\bas
-\mathrm{PT}^{\mathrm{Ad}(P)}\bigl( [p, v] \bigr)
-&\coloneqq
-\mleft[ \mathrm{PT}^{P}(p), v \mright]
-\eas
-for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal parallel transport inherited by $\mathrm{PT}^{c_G(P)}$, so that we can conclude that $\nabla^{\mathrm{YM}}$ corresponds to the Yang-Mills connection on $c_G(P)$ in sense of Def.\ \ref{def:ConnectionOnLAB}.
-
-This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$. Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle.
-\end{examples}
-
-We also need a generalization of statements as \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}.
+We also get a generalization of statements like \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}:
 
 \begin{lemmata}{Lie bracket of horizontal and vertical vector}{BracketVertHor}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have
@@ -7254,6 +7031,237 @@ A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
 \mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu).
 \eas
 \end{proof}
+
+Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if and only if the total Maurer-Cartan form is multiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}.
+
+\begin{theorems}{Generalized Maurer-Cartan equation}{GenMCEq}
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ satisfies compatibility condition \eqref{CondKruemmungmitBLAB} if and only if there is a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$ such that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies
+\bas
+\mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
+	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
+&=
+\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
+\eas
+for all $g \in \mathcal{G}$. We then say that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ solves the \textbf{generalized Maurer-Cartan equation (w.r.t.\ $\zeta$)}.
+\end{theorems}
+
+\begin{remarks}{Classical Maurer-Cartan equation recovered}{ClassicalMCEqinGeneralizedOne}
+Recall Rem.\ \ref{rem:DarbouxOnCanonFlat}. If $\mathcal{G}$ is a trivial LGB, $\mathrm{H}\mathcal{G}$ its canonical flat connection and $\zeta \equiv 0$, then $\nabla^{\mathcal{G}}$ is the canonical flat connection on the trivial LAB $\mathcal{g}$ (recall Ex.\ \ref{ex:CanonicalFlatGConnection}) and it clearly satisfies the compatibility conditions in Def.\ \ref{def:YangMillsConnection} w.r.t.\ $\zeta \equiv 0$. Furthermore, the generalized Maurer-Cartan equation then reduces to the classical Maurer-Cartan equation.
+\end{remarks}
+
+\begin{remarks}{Relation to simplicial differential}{SimplicialDifferentialStuff}
+In fact, Def.\ \ref{def:MultiplicativeFormsDef} comes from a simplicial differential (w.r.t.\ points on $\mathcal{G}$) defined in \cite[beginning of \S 1.2]{crainic2003differentiable}. We do not have time to introduce it completely, but we give a short sketch about its definitions, also following the style of \cite[appendix]{FernandesMarcutMultiplicativeForms}. On degree one the cited differential is a map
+\bas
+\Omega^\bullet\mleft(\mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)
+&\to
+\Omega^\bullet\mleft(\mathcal{G} * \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)
+\\
+\omega
+&\mapsto
+\delta\omega
+\eas
+with
+\bas
+\mleft(\delta\omega\mright)_{(g,q)}
+&\coloneqq
+\sAd_{q^{-1}}\circ\mleft(\mathrm{pr}_1^!\omega\mright)_{(g,q)} 
+	+ \mleft(\mathrm{pr}_2^!\omega\mright)_{(g, q)}
+	- \mleft( \Phi^!\omega \mright)_{(g,q)}
+\eas
+for all $(g, q) \in \mathcal{G} * \mathcal{G}$, where $\Phi: \mathcal{G}*\mathcal{G}\to \mathcal{G}$ is the $\mathcal{G}$-multiplication, and $\mathrm{pr}_i: \mathcal{G}*\mathcal{G} \to \mathcal{G}$ are the canonical projections onto the $i$-th component ($i \in \{1,2\}$). Recall Def.\ \ref{def:MultiplicativeFormsDef} and its Rem.\ \ref{sloppynotationformultiplicativity}, $\omega$ can be defined to be multiplicative if $\delta\omega = 0$, \textit{i.e.}\ $\omega$ is closed w.r.t.\ $\delta$. 
+
+On degree 0 it is a map $\Omega^\bullet(M; \mathcal{g}) \to \Omega^\bullet\mleft(\mathcal{G}; \pi^{*}_{\mathcal{g}}\mright)$ given for $\xi \in \Omega^\bullet(M; \mathcal{g})$ by
+\bas
+\mleft(\delta\xi\mright)_g
+\coloneqq
+\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \xi\mright)\mright|_g
+	- \mleft.\mleft(\pi_{\mathcal{G}}^! \xi\mright)\mright|_g
+\eas
+for all $g\in \mathcal{G}$. Then observe that we can rewrite the generalized Mauer-Cartan equation to
+\bas
+F_{\mathcal{G}}
+&=
+\delta \zeta,
+\eas
+where
+\bas
+F_{\mathcal{G}}
+&=
+\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
+\in \Omega^2\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright).
+\eas
+It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e.g.}\ \cite[\S 2.5, Prop.\ 2.22]{FernandesMarcutMultiplicativeForms}) by making use of that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection. In total we concluded that compatibility condition \eqref{CondSGleichNullLAB} is equivalent to that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative, which implies that $F_{\mathcal{G}}$ is multiplicative and thus $\delta$-closed; additionally with compatibility condition \eqref{CondKruemmungmitBLAB} we achieve $\delta$-exactness of $F_{\mathcal{G}}$. This is no wonder, the compatibility conditions already tell us by definition that the connection-1-form of $\nabla$ is closed w.r.t.\ the Chevalley-Eilenberg complex, which also implies the same for the curvature, however the curvature has to be exact by \eqref{CondKruemmungmitBLAB}. We depict that as $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$ and $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$; a summary is shown in Table \ref{tab:CompatibilityConditionsOnLGBAndItsLAB}.
+\end{remarks}
+
+\begin{table}[htbp]
+	\centering
+		\caption{Compatibility conditions on LGB $\mathcal{G}$ and its LAB $\mathcal{g}$}
+		\begin{tabular}{ll|lll}
+			& Compatibility condition & \multicolumn{1}{c}{$\mathcal{g}$} && \multicolumn{1}{c}{$\mathcal{G}$} \\
+			\hline
+			\textbf{(Closedness)} &
+			$\nabla^{\mathcal{G}}\mleft( \mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \mright) = 0$
+	& $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$
+	&& $\delta\mu_{\mathcal{G}}^{\mathrm{tot}} = 0$
+	\\
+	&
+	& \hspace{0.2cm} $\Rightarrow \delta^{\mathrm{CE}}R_{\nabla^{\mathcal{G}}} = 0$
+	&& \hspace{0.2cm} $\Rightarrow \delta F_{\mathcal{G}} = 0$
+	\\
+	\textbf{(Exactness)}&
+			\hspace{0.2cm} \& $R_{\nabla^{\mathcal{G}}} = \mathrm{ad} \circ \zeta$
+		& $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$
+		&& $F_{\mathcal{G}} = \delta \zeta$
+		\end{tabular}
+	\label{tab:CompatibilityConditionsOnLGBAndItsLAB}
+\end{table}
+
+\begin{proof}[Proof of Thm.\ \ref{thm:GenMCEq}]
+\leavevmode\newline
+The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. 
+
+$\bullet$ That is, we now first discuss when 
+\bas
+\mathcal{G} \ni g &\mapsto \omega_g \coloneqq
+\mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
+	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
+	- \sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
+\eas
+is constant along the fibres of $\mathcal{G}$, that is, constant along the flows of vertical tangent vectors, the left-invariant vector fields (recall Cor.\ \ref{cor:TLGBAsLGB}). First of all observe that $\omega$ vanishes if at least one tangent vector is vertical. Let $Y \in \mathrm{V}_g\mathcal{G}$ ($g \in \mathcal{G}_x$, $x \in M$), and write $Y = \mleft.\widetilde{\nu_x}\mright|_g$ for a $\nu_x \in \mathcal{g}_x$. Due to $\mathrm{D}\pi_{\mathcal{G}} \mleft( Y \mright) = 0$ it is clear that the contraction of $\pi_{\mathcal{G}}^! \zeta$ with $Y$ is 0. Let $Z \in \mathrm{T}_g\mathcal{G}$ for which we write
+\bas
+Z 
+&\coloneqq
+\mleft.\widetilde{\mu_x}\mright|_g
+	+ X_g
+\eas
+for a $\mu_x \in \mathcal{g}_x$ and $X_g \in \mathrm{H}_g\mathcal{G}$;
+then by Cor.\ \ref{cor:TotMCFormIsConnectionForm}
+\bas
+\frac{1}{2} \mleft.\mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}\mright|_g (Y, Z)
+&=
+\mleft[ \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g(Y), \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g(Z) \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
+=
+\mleft( g,
+\mleft[ \nu_x, \mu_x \mright]_{\mathcal{g}_x}
+\mright).
+\eas
+Extend $Y$ and $Z$ naturally to vector fields on $\mathcal{G}$ (for simplicity also denoted by $Y$ and $Z$, respectively) by viewing $\nu_x$ and $\mu_x$ as values of sections $\nu$ and $\mu$, respectively, of $\mathcal{g}$ at $x$, and extending $X_g$ (locally) to a horizontal vector field $X$; thence,
+\bas
+\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g(Y, Z)
+&=
+\mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{Y_g} \mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}(Z) \mright)
+	- \mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{Z_g} \mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}(Y) \mright)
+	- \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g\mleft( [Y, Z] \mright)
+\\
+&=
+{\underbrace{\mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{\widetilde{\nu}_g} \mleft( \pi^*_{\mathcal{G}}\mu \mright)}
+	_{\mathclap{ = \mleft. \pi^*_{\mathcal{G}}\mleft( \nabla^{\mathcal{G}}_{\mathrm{D} \pi_{\mathcal{G}} \mleft( \widetilde{\nu} \mright)} \mu \mright) \mright|_g = 0 }}}
+	- \mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{\widetilde{\mu}_g + X_g} \mleft( \pi^*_{\mathcal{G}}\nu \mright)
+\\
+&\hspace{1cm}
+	- \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g\mleft( [\widetilde{\nu}, \widetilde{\mu}] \mright)
+	- \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g\mleft( [\widetilde{\nu}, X] \mright)
+\\
+&=
+- \mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{X_g} \mleft( \pi^*_{\mathcal{G}}\nu \mright)
+	- \mleft( g, \mleft[ \nu_x, \mu_x \mright]_{\mathcal{g}_x} \mright)
+	+ \mleft( \pi^*_{\mathcal{G}}\nabla^{\mathcal{G}} \mright)_{X_g}\mleft( \pi^*_{\mathcal{G}}\nu \mright)
+\\
+&=
+- \mleft( g, \mleft[ \nu_x, \mu_x \mright]_{\mathcal{g}_x} \mright)
+\eas
+using Rem.\ \ref{rem:FundVecsAreLABActions} (bracket of fundamental/left-invariant vector fields is fundamental/left-invariant) and Lemma \ref{lem:BracketVertHor}. Thus,
+\bas
+\mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}\mright)\mright|_g(Y, Z)
+&=
+0.
+\eas
+It follows that $\omega$ vanishes if contracted with a vertical tangent vector. Therefore we can study $\omega$ just w.r.t.\ tangent vectors complementary to the vertical structure, not necessarily elements of $\mathrm{H}\mathcal{G}$.
+
+For a given $g \in \mathcal{G}_x$ ($x \in M$) define
+\bas
+\mathbb{R} &\to \mathcal{G}_x,\\
+t &\mapsto \gamma(t) \coloneqq \sigma \cdot \e^{t\nu}
+\eas
+
+ take any curve $\gamma: I \to \mathcal{G}_x$ () so that $\gamma(0) = g$.
+\end{proof}
+
+To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections.
+
+\begin{examples}{(Pre-)Classical Yang-Mills connection}{ClassicalYangMillsConnection}
+Let us look at a classical principal bundle $P$ with trivial LGB $\mathcal{G} = M \times G$, $G$ a Lie group; recall Ex.\ \ref{ex:TheCLassicalPrincAsEx} and \ref{ex:OurConnectionIsReallyMoreGeneral}. The canonical flat connection on $\mathcal{G}$ induces the canonical flat connection $\nabla^{\mathcal{G}}$ on its LAB $\mathcal{g} = M \times \mathfrak{g}$, recall Ex.\ \ref{ex:CanonicalFlatGConnection}. Thus,
+\bas
+R_{\nabla^{\mathcal{G}}} &= 0
+\eas
+and so we can set $\zeta \equiv 0$. Using a frame of global sections, it is trivial to check that also Eq.\ \eqref{CondSGleichNullLAB} is satisfied. We then call $\nabla^{\mathrm{cYM}} \coloneqq \nabla^{\mathcal{G}}$ a \textbf{classical Yang-Mills connection}.
+
+However, observe that $\zeta$ can be centre-valued while $\nabla^{\mathcal{G}}$ is still flat. In such an occasion we speak of a \textbf{pre-classical Yang-Mills connection}, denoted by $\nabla^{\mathrm{pYM}}$.
+\end{examples}
+
+\begin{examples}{Associated connections of inner group bundles are Yang-Mills connections}{OurVeryImportantExample}
+Recall Ex.\ \ref{ex:AssociatedLGBsAndTheirCanonicalConnection}, its setup and notation. We have discussed a canonical connection on associated LGBs $\mathcal{H} = P \times_\psi H$, called associated connection. Following the argument about parallel transports in the proof of Lemma \ref{lem:YangMillsConnAnEhresmann}, we know that the associated connection satisfies Eq.\ \eqref{CondSGleichNullLAB} due to the fact that the parallel transport of $\mathcal{H}$ is a homomorphism.
+
+Now we turn to Eq.\ \eqref{CondKruemmungmitBLAB}. As it is well-known, the curvature measures the holonomy, that is, the parallel transport over closed (contractible) curves. Together with Eq.\ \eqref{CondKruemmungmitBLAB}, the parallel transport over a closed (contractible) curve $\alpha$ should act as conjugation with some group element. Let us see whether this holds here; there is a unique $g \in G$ for $p \in P$ such that
+\bas
+\mathrm{PT}^{P}_\alpha(p)
+&=
+p \cdot g,
+\eas
+and thus for $[p, h] \in \mathcal{H}$
+\bas
+\mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
+&=
+\mleft[ p \cdot g, h \mright]
+=
+\mleft[ p, \psi_g(h) \mright].
+\eas
+Thus, if $\mathcal{H} = c_G(P)$, the inner group bundle of Ex.\ \ref{ex:InnerLGBs}, we get
+\bas
+\mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
+&=
+\mleft[ p, ghg^{-1} \mright]
+=
+\mleft[p, g\mright] \cdot
+\mleft[p, h\mright] \cdot
+\mleft[p, g^{-1}\mright],
+\eas
+the conjugation of $[p, h]$ with $[p, g]$ in $c_G(P)$. It follows that there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that Eq.\ \eqref{CondKruemmungmitBLAB} is satisfied. This also implies that the associated connection of an inner group bundle is a Yang-Mills connection. 
+\end{examples}
+
+\begin{examples}{The Yang-Mills connections on inner group bundles: Alternative point of view and explanation}{NablaYMAsAdjointConnection}
+Alternatively one can prove what we have shown in Ex.\ \ref{ex:OurVeryImportantExample} by using the aforementioned relationship of the compatibility conditions with Mackenzie's study about extending Lie algebroids via LABs; recall Remark \ref{MackenziesStuffRelation}. The following is an information for the experienced reader: The LAB of $c_G(P)$ is given by the adjoint bundle $\mathrm{Ad}(P)$; recall Ex.\ \ref{ex:AssociatedLABsFromAssocLGBs}. $\mathrm{Ad}(P)$ is the kernel of the Atiyah sequence (see \textit{e.g.}\ \cite[\S 3.2, page 90ff.]{mackenzieGeneralTheory}), a short exact sequence of Lie algebroids over $M$
+\begin{center}
+	\begin{tikzcd}
+		0 \arrow{r} & \mathrm{Ad}(P) \arrow{r} & \mathrm{At}(P) \arrow{r} & \mathrm{T}M \arrow{r} & 0,
+	\end{tikzcd}
+\end{center}
+where $\mathrm{At}(P)$ is the Atiyah bundle of $P$. A connection on $P$ in the "classical" sense (that is, related to a canonical flat connection on $M \times G$ in our sense) has a 1:1 correspondence to a splitting $\chi: \mathrm{T}M \to \mathrm{AT}(P)$ to that sequence, \textit{i.e.}\ a section of the left non-trivial arrow. We can then construct a vector bundle connection $\nabla^{\mathrm{YM}}$ on the adjoint bundle by using the Lie algebroid bracket $\mleft[ \cdot, \cdot \mright]_{\mathrm{At}(P)}$ on $\mathrm{At}(P)$, that is,
+\bas
+\nabla^{\mathrm{YM}}_X \nu
+&=
+\mleft[ \chi(X), \nu \mright]_{\mathrm{At}(P)}
+\eas
+for all $X \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathrm{Ad}(P))$. It follows by \cite[\S 7.3, Prop.\ 7.3.2 and Lemma 7.3.3, page 278]{mackenzieGeneralTheory} that $\nabla^{\mathrm{YM}}$ is indeed a Yang-Mills connection with $\zeta \in \Omega^2(M;\mathrm{Ad}(P))$ for example given by 
+\bas
+\zeta(Y, Z)
+&\coloneqq
+\mleft[ \chi(Y), \chi(Z) \mright]_{\mathrm{At}(P)} - \chi([Y, Z])
+\eas
+for all $Y, Z \in \mathfrak{X}(M)$. In other words, $\nabla^{\mathrm{YM}}$ is the \textbf{adjoint connection} induced by a connection on $P$ (see for example \cite[\S 5.3, especially Prop.\ 5.3.13, page 199]{mackenzieGeneralTheory}). Thence, by the discussion in \cite[\S 5.9, page 289ff.]{Hamilton} $\nabla^{\mathrm{YM}}$ corresponds to the natural parallel transport $\mathrm{PT}^{\mathrm{Ad}(P)}$ on $\mathrm{Ad}(P)$ (omitting the notation of the corresponding curve) given by
+\bas
+\mathrm{PT}^{\mathrm{Ad}(P)}\bigl( [p, v] \bigr)
+&\coloneqq
+\mleft[ \mathrm{PT}^{P}(p), v \mright]
+\eas
+for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal parallel transport inherited by $\mathrm{PT}^{c_G(P)}$, so that we can conclude that $\nabla^{\mathrm{YM}}$ corresponds to the Yang-Mills connection on $c_G(P)$ in sense of Def.\ \ref{def:ConnectionOnLAB}.
+
+This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$. Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle.
+\end{examples}
 
 \subsubsection{Field strength related to Yang-Mills connections}
 
