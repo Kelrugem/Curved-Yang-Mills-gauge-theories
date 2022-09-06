@@ -6830,20 +6830,24 @@ thus, concluding the proof with
 &=
 - \mathrm{Ad}_{\sigma} \circ \Delta \sigma.
 \eas
-Then
-\bas
-\Delta\mleft( \e^{\mathrm{Ad}_\sigma (\nu)} \mright)
-&=
-\Delta\mleft( \sigma \e^{\nu} \sigma^{-1} \mright)
-\\
-&=
-\mathrm{Ad}_{\sigma^{-1}} \circ \Delta \mleft( \sigma \e^\nu \mright)
-	+ \Delta \mleft( \sigma^{-1} \mright)
-\\
-&=
-\mathrm{Ad}_{\sigma^{-1}} \circ \mleft( \mathrm{Ad}_{\e^{-\nu}} \circ \Delta \sigma + \Delta e^\nu \mright)
-	- \mathrm{Ad}_\sigma \circ \Delta \sigma
-\eas
+%Then
+%\bas
+%\Delta\mleft( \e^{\mathrm{Ad}_\sigma (\nu)} \mright)
+%&=
+%\Delta\mleft( \sigma \e^{\nu} \sigma^{-1} \mright)
+%\\
+%&=
+%\mathrm{Ad}_{\sigma} \circ \Delta \mleft( \sigma \e^\nu \mright)
+	%+ \Delta \mleft( \sigma^{-1} \mright)
+%\\
+%&=
+%\mathrm{Ad}_{\sigma} \circ \mleft( \mathrm{Ad}_{\e^{-\nu}} \circ \Delta \sigma + \Delta e^\nu \mright)
+	%- \mathrm{Ad}_\sigma \circ \Delta \sigma
+%\\
+%&=
+%\mathrm{Ad}_{\sigma} \circ \mleft( \mathrm{Ad}_{\e^{-\nu}} \circ \Delta \sigma
+	%- \Delta \sigma + \Delta \e^\nu \mright)
+%\eas
 \end{proof}
 
 Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if and only if the total Maurer-Cartan form is multiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}.
@@ -6934,7 +6938,7 @@ It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e
 
 \begin{proof}[Proof of Thm.\ \ref{thm:GenMCEq}]
 \leavevmode\newline
-The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. That is, we now first show that 
+The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. That is, we now first discuss when 
 \bas
 \mathcal{G} \ni g &\mapsto \omega_g \coloneqq
 \mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
@@ -6942,8 +6946,59 @@ The idea of the proof is similar to the proof of a statement about when two mult
 	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
 	- \sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
 \eas
-is constant along the fibres of $\mathcal{G}$, that is, constant along the flows of vertical tangent vectors. For a given $g \in \mathcal{G}_x$ ($x \in M$) take any curve $\gamma: I \to \mathcal{G}_x$ ($I$ an open interval of $\mathbb{R}$ containing 0) so that $\gamma(0) = g$.
-Recall Cor.\ \ref{cor:TLGBAsLGB}
+is constant along the fibres of $\mathcal{G}$, that is, constant along the flows of vertical tangent vectors, the left-invariant vector fields (recall Cor.\ \ref{cor:TLGBAsLGB}). First of all observe that $\omega$ vanishes if at least one tangent vector is vertical. Let $Y \in \mathrm{V}_g\mathcal{G}$ ($g \in \mathcal{G}_x$, $x \in M$), and write $Y = \mleft.\widetilde{\nu_x}\mright|_g$ for a $\nu_x \in \mathcal{g}_x$. Due to $\mathrm{D}\pi_{\mathcal{G}} \mleft( Y \mright) = 0$ it is clear that the contraction of $\pi_{\mathcal{G}}^! \zeta$ with $Y$ is 0. Let $Z \in \mathrm{T}_g\mathcal{G}$ for which we write
+\bas
+Z 
+&\coloneqq
+\mleft.\widetilde{\mu_x}\mright|_g
+	+ X_g
+\eas
+for a $\mu_x \in \mathcal{g}_x$ and $X_g \in \mathrm{H}_g\mathcal{G}$;
+then by Cor.\ \ref{cor:TotMCFormIsConnectionForm}
+\bas
+\frac{1}{2} \mleft.\mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}\mright|_g (Y, Z)
+&=
+\mleft[ \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g(Y), \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g(Z) \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
+=
+\mleft( g,
+\mleft[ \nu_x, \mu_x \mright]_{\mathcal{g}_x}
+\mright).
+\eas
+Extend $Y$ and $Z$ naturally to vector fields on $\mathcal{G}$ (for simplicity also denoted by $Y$ and $Z$, respectively) by viewing $\nu_x$ and $\mu_x$ as values of sections $\nu$ and $\mu$, respectively, of $\mathcal{g}$ at $x$, and extending $X_g$ (locally) to a horizontal vector field $X$; thence,
+\bas
+\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g(Y, Z)
+&=
+\mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{Y_g} \mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}(Z) \mright)
+	- \mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{Z_g} \mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}(Y) \mright)
+	- \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g\mleft( [Y, Z] \mright)
+\\
+&=
+{\underbrace{\mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{\widetilde{\nu}_g} \mleft( \pi^*_{\mathcal{G}}\mu \mright)}
+	_{\mathclap{ = \mleft. \pi^*_{\mathcal{G}}\mleft( \nabla^{\mathcal{G}}_{\mathrm{D} \pi_{\mathcal{G}} \mleft( \widetilde{\nu} \mright)} \mu \mright) \mright|_g = 0 }}}
+	- \mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{\widetilde{\mu}_g + X_g} \mleft( \pi^*_{\mathcal{G}}\nu \mright)
+\\
+&\hspace{1cm}
+	- \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g\mleft( [\widetilde{\nu}, \widetilde{\mu}] \mright)
+	- \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g\mleft( [\widetilde{\nu}, X] \mright)
+\\
+&=
+- \mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{X_g} \mleft( \pi^*_{\mathcal{G}}\nu \mright)
+	- \mleft( g, \mleft[ \nu_x, \mu_x \mright]_{\mathcal{g}_x} \mright)
+	+ \mleft( \pi^*_{\mathcal{G}}\nabla^{\mathcal{G}} \mright)_{X_g}\mleft( \pi^*_{\mathcal{G}}\nu \mright)
+\\
+&=
+- \mleft( g, \mleft[ \nu_x, \mu_x \mright]_{\mathcal{g}_x} \mright)
+\eas
+using Remark \ref{rem:FundVecsAreLABActions} (bracket of fundamental/left-invariant vector fields is fundamental/left-invariant) and Lemma \ref{lem:BracketVertHor}. Thus,
+\bas
+\mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}\mright)\mright|_g(Y, Z)
+&=
+0.
+\eas
+It follows that $\omega$ vanishes if contracted with a vertical tangent vector.
+
+For a given $g \in \mathcal{G}_x$ ($x \in M$) take any curve $\gamma: I \to \mathcal{G}_x$ ($I$ an open interval of $\mathbb{R}$ containing 0) so that $\gamma(0) = g$.
 \end{proof}
 
 To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections.
