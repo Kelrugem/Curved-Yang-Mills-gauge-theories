@@ -6830,24 +6830,24 @@ thus, concluding the proof with
 &=
 - \mathrm{Ad}_{\sigma} \circ \Delta \sigma.
 \eas
-%Then
-%\bas
-%\Delta\mleft( \e^{\mathrm{Ad}_\sigma (\nu)} \mright)
-%&=
-%\Delta\mleft( \sigma \e^{\nu} \sigma^{-1} \mright)
-%\\
-%&=
-%\mathrm{Ad}_{\sigma} \circ \Delta \mleft( \sigma \e^\nu \mright)
-	%+ \Delta \mleft( \sigma^{-1} \mright)
-%\\
-%&=
-%\mathrm{Ad}_{\sigma} \circ \mleft( \mathrm{Ad}_{\e^{-\nu}} \circ \Delta \sigma + \Delta e^\nu \mright)
-	%- \mathrm{Ad}_\sigma \circ \Delta \sigma
-%\\
-%&=
-%\mathrm{Ad}_{\sigma} \circ \mleft( \mathrm{Ad}_{\e^{-\nu}} \circ \Delta \sigma
-	%- \Delta \sigma + \Delta \e^\nu \mright)
-%\eas
+Then
+\bas
+\Delta\mleft( \e^{\mathrm{Ad}_\sigma (\nu)} \mright)
+&=
+\Delta\mleft( \sigma \e^{\nu} \sigma^{-1} \mright)
+\\
+&=
+\mathrm{Ad}_{\sigma} \circ \Delta \mleft( \sigma \e^\nu \mright)
+	+ \Delta \mleft( \sigma^{-1} \mright)
+\\
+&=
+\mathrm{Ad}_{\sigma} \circ \mleft( \mathrm{Ad}_{\e^{-\nu}} \circ \Delta \sigma + \Delta e^\nu \mright)
+	- \mathrm{Ad}_\sigma \circ \Delta \sigma
+\\
+&=
+\mathrm{Ad}_{\sigma} \circ \mleft( \mathrm{Ad}_{\e^{-\nu}} \circ \Delta \sigma
+	- \Delta \sigma + \Delta \e^\nu \mright)
+\eas
 \end{proof}
 
 We also get a generalization of statements like \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}:
@@ -7092,7 +7092,7 @@ F_{\mathcal{G}}
 	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
 \in \Omega^2\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright).
 \eas
-It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e.g.}\ \cite[\S 2.5, Prop.\ 2.22]{FernandesMarcutMultiplicativeForms}) by making use of that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection. In total we concluded that compatibility condition \eqref{CondSGleichNullLAB} is equivalent to that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative, which implies that $F_{\mathcal{G}}$ is multiplicative and thus $\delta$-closed; additionally with compatibility condition \eqref{CondKruemmungmitBLAB} we achieve $\delta$-exactness of $F_{\mathcal{G}}$. This is no wonder, the compatibility conditions already tell us by definition that the connection-1-form of $\nabla$ is closed w.r.t.\ the Chevalley-Eilenberg complex, which also implies the same for the curvature, however the curvature has to be exact by \eqref{CondKruemmungmitBLAB}. We depict that as $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$ and $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$; a summary is shown in Table \ref{tab:CompatibilityConditionsOnLGBAndItsLAB}.
+It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e.g.}\ \cite[\S 4.6, Thm.\ 4.27, Eq.\ (53)]{LAURENTGENGOUXStienonXuMultiplicativeForms} or \cite[\S 2.5, Prop.\ 2.22]{FernandesMarcutMultiplicativeForms}) by making use of that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection. In total we concluded that compatibility condition \eqref{CondSGleichNullLAB} is equivalent to that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative, which implies that $F_{\mathcal{G}}$ is multiplicative and thus $\delta$-closed; additionally with compatibility condition \eqref{CondKruemmungmitBLAB} we achieve $\delta$-exactness of $F_{\mathcal{G}}$. This is no wonder, the compatibility conditions already tell us by definition that the connection-1-form of $\nabla$ is closed w.r.t.\ the Chevalley-Eilenberg complex, which also implies the same for the curvature, however the curvature has to be exact by \eqref{CondKruemmungmitBLAB}. We depict that as $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$ and $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$; a summary is shown in Table \ref{tab:CompatibilityConditionsOnLGBAndItsLAB}.
 \end{remarks}
 
 \begin{table}[htbp]
