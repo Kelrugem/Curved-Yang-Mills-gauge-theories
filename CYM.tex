@@ -6532,8 +6532,10 @@ Alexei's and Thomas's theory also generalizes the curvature/field strength relat
 
 In the following we will introduce the curvature; in order to achieve gauge invariance later in the physical gauge theory, we will now need to assume certain what we will call \textbf{compatibility conditions} on the horizontal distribution of the structural LGB $\mathcal{G}$. Here in this work we will just present these compatibility conditions, and you will be able to see in the proofs why this leads to gauge invariance later. However, if you want to understand the following conditions coming from a point of view not knowing the solution beforehand, then either see \cite{CurvedYMH} or \cite{MyThesis}; the latter also provides a physical motivation using what I called the \textbf{field redefinitions} which naturally motivate the gauge theory presented here by transforming a classical gauge theory in such a way that the physics is preserved; recall Def.\ \ref{def:ConnectionOnLAB} for the following.
 
-\begin{definitions}{Yang-Mills connection}{YangMillsConnection}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is a \textbf{Yang-Mills connection (on $\mathcal{G}$)} if there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that the $\mathcal{G}$-connection $\nabla^{\mathcal{G}}$ on the associated LAB $\mathcal{g}$ with bracket $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ satisfies the \textbf{compatibility conditions}
+We start with the infinitesimal version of the compatibility conditions, already known and pointed out in the previously-mentioned references.
+
+\begin{definitions}{Infinitesimal Yang-Mills connection}{YangMillsConnection}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is an \textbf{infinitesimal Yang-Mills connection (on $\mathcal{G}$)} if there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that the $\mathcal{G}$-connection $\nabla^{\mathcal{G}}$ on the associated LAB $\mathcal{g}$ with bracket $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ satisfies the \textbf{infinitesimal compatibility conditions}
 \ba\label{CondSGleichNullLAB}
 \nabla^{\mathcal{G}}\mleft( \mleft[ \mu, \nu \mright]_{\mathcal{g}} \mright)
 &=
@@ -6544,7 +6546,7 @@ R_{\nabla^{\mathcal{G}}}(X, Y)\mu
 &=
 \mleft[ \zeta(X, Y), \mu \mright]_{\mathcal{g}}\label{CondKruemmungmitBLAB}
 \ea
-for all $\mu, \nu \in \Gamma(\mathcal{g})$ and $X, Y \in \mathfrak{X}(M)$, where $R_{\nabla^{\mathcal{G}}}$ is the curvature of $\nabla^{\mathcal{G}}$. We then also call $\nabla^{\mathcal{G}}$ a Yang-Mills connection and denote it by $\nabla^{\mathrm{YM}}$.
+for all $\mu, \nu \in \Gamma(\mathcal{g})$ and $X, Y \in \mathfrak{X}(M)$, where $R_{\nabla^{\mathcal{G}}}$ is the curvature of $\nabla^{\mathcal{G}}$. We then also call $\nabla^{\mathcal{G}}$ an \textbf{(infinitesimal) Yang-Mills connection} and denote it by $\nabla^{\mathrm{YM}}$.
 
 In the following $\zeta$ is always such a 2-form as given here, and even though it is not uniquely given we will treat it as if it is fixed for a given $\nabla^{\mathrm{YM}}$. 
 \end{definitions}
@@ -6560,25 +6562,26 @@ The relation to Mackenzie's study can be useful for the interested reader to und
 %For this we will start 
 %We will need several auxiliary result, also related to the Darboux derivative w.r.t.\ Yang-Mills connections. Especially also recall all the discussion around the modified push-forward $\mathcal{r}$ via right-translations, Def.\ \ref{def:WeModTheRIghtPush}.
 
-Let us initially focus on the first compatibility condition \eqref{CondSGleichNullLAB}. In the following we will also view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle which is equipped with the same horizontal distribution as $\mathcal{G}$ as LGB.  one can show that Yang-Mills connections are a special type of Ehresmann connection via \eqref{CondSGleichNullLAB}.
+We want to integrate these infinitesimal compatibility conditions to conditions on $\mathrm{H}\mathcal{G}$ directly.
+Let us initially focus on the first infinitesmal compatibility condition \eqref{CondSGleichNullLAB}. In the following we will also view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle which is equipped with the same horizontal distribution as $\mathcal{G}$ as LGB. One can show that Ehresmann connections satisfy \eqref{CondSGleichNullLAB}, and in fact Ehresmann connections on LGBs (and Lie groupoids) were already discussed \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}.
 
-\begin{lemmata}{Yang-Mills connections as a special Ehresmann connection}{YangMillsConnAnEhresmann}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle if and only if Eq.\ \eqref{CondSGleichNullLAB} is satisfied.
+\begin{lemmata}{Ehresmann connections induce Lie bracket derivations, \newline \cite[\S 4.5, Prop.\ 4.21]{LAURENTGENGOUXStienonXuMultiplicativeForms}}{YangMillsConnAnEhresmann}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$. If $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle, then the infinitesimal compatibility condition \eqref{CondSGleichNullLAB} is satisfied.
 \end{lemmata}
 
 \begin{proof}
 \leavevmode\newline
-This can be quickly answered by recalling how the parallel transport behaves; recall that Def.\ \ref{def:FinallyTheConnection} comes from Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} which itself stems from Eq.\ \eqref{PTHomomNEw}. Starting with Eq.\ \eqref{CondSGleichNullLAB} means that $\nabla^{\mathcal{G}}$ is a Lie bracket derivation; integrated this means that the corresponding parallel transport $\mathrm{PT}^{\mathcal{G}}$ of $\mathcal{G}$ (omitting the notation of the involved curve) is a homomorphism, \textit{i.e.}\
+This can be quickly answered by recalling how the parallel transport behaves; recall that Def.\ \ref{def:FinallyTheConnection} comes from Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} which itself stems from Eq.\ \eqref{PTHomomNEw}; that is, the associated parallel transport to an Ehresmann connection $\mathrm{H}\mathcal{G}$ satisfies Eq.\ \eqref{PTHomomNEw}. This means that the corresponding parallel transport $\mathrm{PT}^{\mathcal{G}}$ of $\mathcal{G}$ (omitting the notation of the involved curve) is a homomorphism, \textit{i.e.}\
 \bas
 \mathrm{PT}^{\mathcal{G}}(gq)
 &=
 \mathrm{PT}^{\mathcal{G}}(g) ~ \mathrm{PT}^{\mathcal{G}}(q)
 \eas
-for all $(g, q) \in \mathcal{G} * \mathcal{G}$. As a principal bundle, $\mathrm{H}\mathcal{G}$ therefore also satisfies Eq.\ \eqref{PTHomomNEw}, and thus $\mathrm{H}\mathcal{G}$ is an Ehresmann connection. The other direction is trivially following by Eq.\ \eqref{PTHomomNEw}.
+for all $(g, q) \in \mathcal{G} * \mathcal{G}$. Thus, infinitesimally the associated parallel transport on $\mathcal{g}$ is a homomorphism w.r.t.\ the Lie bracket, and thus $\nabla^{\mathcal{G}}$ is a Lie bracket derivation.
 \end{proof}
 
 \begin{remarks}{Base manifold a horizontal leave}{baseManifoldHoriz}
-Observe that the proof's argument implies that a parallel transported neutral element is again the neutral element of the corresponding final fibre. Thus, $M$ naturally embedded via the neutral section $e$ can be viewed as a horizontal leave of $\mathrm{H}\mathcal{G}$, if $\mathrm{H}\mathcal{G}$ is an Ehresmann connection or equivalently satisfies compatibility condition \eqref{CondSGleichNullLAB}.
+Observe that the proof's argument implies that a parallel transported neutral element is again the neutral element of the corresponding final fibre, if $\mathrm{H}\mathcal{G}$ is an Ehresmann connection. Thus, $M$ naturally embedded via the neutral section $e$ can then be viewed as a horizontal leave of $\mathrm{H}\mathcal{G}$.
 \end{remarks}
 
 Due to this, given compatibility condition \eqref{CondSGleichNullLAB}, the following is clear by definition.
@@ -6601,7 +6604,7 @@ If $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$, we know by 
 \eas
 \end{remarks}
 
-Ehresmann connections on LGBs (and Lie groupoids) were already discussed \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. By these works we can conclude that compatibility condition \eqref{CondSGleichNullLAB} implies that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a multiplicative form; let us introduce this notion for 1-forms. Recall Lemma \ref{lem:PullbackFibreBundleItsTangentSp}.
+Furthermore, following \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}, we can derive that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a multiplicative form if and only if $\mathrm{H}\mathcal{G}$ is an Ehresmann connection; let us introduce multiplicative 1-forms. Recall Lemma \ref{lem:PullbackFibreBundleItsTangentSp}.
 
 \begin{definitions}{Multiplicative forms, \cite[\S 2.1, special situation of Def.\ 2.1]{crainic2015multiplicative}}{MultiplicativeFormsDef}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$. Then we call an $\omega \in \Omega^1\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright)$ a \textbf{multiplicative form} if
@@ -6830,7 +6833,36 @@ thus, concluding the proof with
 &=
 - \mathrm{Ad}_{\sigma} \circ \Delta \sigma.
 \eas
-Then
+\end{proof}
+
+The Leibniz rule of the Darboux derivative extends to $\nabla^{\mathcal{G}}$.
+
+\begin{lemmata}{The conjugation of the canonical LAB connection a Yang-Mills connection}{FieldRedefViaLGBSection}
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then we have
+\bas
+\mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathcal{G}} \circ \mathrm{Ad}_\sigma
+&=
+\nabla^{\mathcal{G}}
+	+ \mathrm{ad}_{\Delta \sigma}
+\eas
+for all $\sigma \in \Gamma(\mathcal{G})$. If $\mathrm{H}\mathcal{G}$ is an infinitesimal Yang-Mills connection, $\nabla^{\mathcal{G}} = \nabla^{\mathrm{YM}}$, then $\widetilde{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathrm{YM}} \circ \mathrm{Ad}_\sigma$ is also a Yang-Mills connection with
+\bas
+R_{\widetilde{\nabla}^\sigma}
+&=
+\mathrm{ad}_{\mathrm{Ad}_{\sigma^{-1}}(\zeta)},
+\eas
+in particular we get
+\ba\label{AlmostGeneralizedMaurerCartanEquation}
+\mleft[ \mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright] + \zeta - \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, ~ \nu \mright]_{\mathcal{g}}
+&=
+0
+\ea
+for all $\nu \in \Gamma(\mathcal{g})$.
+\end{lemmata}
+
+\begin{proof}
+\leavevmode\newline
+By Prop.\ \ref{prop:DarbouxLeibnizRule} we get
 \bas
 \Delta\mleft( \e^{\mathrm{Ad}_\sigma (\nu)} \mright)
 &=
@@ -6848,6 +6880,36 @@ Then
 \mathrm{Ad}_{\sigma} \circ \mleft( \mathrm{Ad}_{\e^{-\nu}} \circ \Delta \sigma
 	- \Delta \sigma + \Delta \e^\nu \mright)
 \eas
+for all $\sigma \in \Gamma(\mathcal{G})$ and $\nu \in \Gamma(\mathcal{g})$, where the first equality is a well-known fact, see \textit{e.g.}\ \cite[\S 1.7, Thm.\ 1.7.16, page 59]{Hamilton}. Then
+\bas
+\nabla^{\mathcal{G}}\mleft( \mathrm{Ad}_\sigma(\nu) \mright)
+&=
+\mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0} \mleft(
+	\Delta\mleft( \e^{\mathrm{Ad}_\sigma (t\nu)} \mright)
+\mright)
+\\
+&=
+\mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0} \Bigl(
+	\mathrm{Ad}_{\sigma} \circ \mleft( \mathrm{Ad}_{\e^{-t\nu}} \circ \Delta \sigma
+	- \Delta \sigma + \Delta \e^{t\nu} \mright)
+\Bigr)
+\\
+&=
+\mathrm{Ad}_{\sigma} \circ \mleft( \mathrm{ad}_{-\nu} \circ \Delta \sigma
+	+ \nabla^{\mathcal{G}} \nu \mright)
+\\
+&=
+\mathrm{Ad}_{\sigma} \circ \mleft( \mathrm{ad}_{\Delta \sigma}(\nu)
+	+ \nabla^{\mathcal{G}} \nu \mright)
+\eas
+making use of that this calculation is pointwise at $x \in M$ just a standard derivative in the vector space $\mathcal{g}_x$. Thus,
+\bas
+\mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathcal{G}} \circ \mathrm{Ad}_\sigma
+&=
+\nabla^{\mathcal{G}}
+	+ \mathrm{ad}_{\Delta \sigma}.
+\eas
+The remaining part of the statement are trivial and straight-forward calculations, making use of Def.\ \ref{def:YangMillsConnection}.
 \end{proof}
 
 We also get a generalization of statements like \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}:
