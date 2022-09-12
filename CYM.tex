@@ -6563,7 +6563,7 @@ The relation to Mackenzie's study can be useful for the interested reader to und
 %We will need several auxiliary result, also related to the Darboux derivative w.r.t.\ Yang-Mills connections. Especially also recall all the discussion around the modified push-forward $\mathcal{r}$ via right-translations, Def.\ \ref{def:WeModTheRIghtPush}.
 
 We want to integrate these infinitesimal compatibility conditions to conditions on $\mathrm{H}\mathcal{G}$ directly.
-Let us initially focus on the first infinitesmal compatibility condition \eqref{CondSGleichNullLAB}. In the following we will also view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle which is equipped with the same horizontal distribution as $\mathcal{G}$ as LGB. One can show that Ehresmann connections satisfy \eqref{CondSGleichNullLAB}, and in fact Ehresmann connections on LGBs (and Lie groupoids) were already discussed \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}.
+Let us initially focus on the first infinitesmal compatibility condition \eqref{CondSGleichNullLAB}. In the following we will also view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle which is equipped with the same horizontal distribution as $\mathcal{G}$ as LGB; related notions and notations carry over. One can show that Ehresmann connections satisfy \eqref{CondSGleichNullLAB}, and in fact Ehresmann connections on LGBs (and Lie groupoids) were already discussed \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}.
 
 \begin{lemmata}{Ehresmann connections induce Lie bracket derivations, \newline \cite[\S 4.5, Prop.\ 4.21]{LAURENTGENGOUXStienonXuMultiplicativeForms}}{YangMillsConnAnEhresmann}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$. If $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle, then the infinitesimal compatibility condition \eqref{CondSGleichNullLAB} is satisfied.
@@ -6636,7 +6636,7 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 
 \begin{proof}
 \leavevmode\newline
-The general approach in the mentioned reference is different to ours; hence, let us provide a proof suitable to our constructions. We will view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle whose horizontal distribution is also $\mathrm{H}\mathcal{G}$; thence, related notions of principal bundles and especially their notation carries over to $\mathcal{G}$. We will also use the same notation as in Def.\ \ref{def:MultiplicativeFormsDef}.
+The general approach in the mentioned reference is different to ours; hence, let us provide a proof suitable to our constructions. We will view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle whose horizontal distribution is also $\mathrm{H}\mathcal{G}$. We will also use the same notation as in Def.\ \ref{def:MultiplicativeFormsDef}.
 
 %Let us first assume that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, therefore we now initially show that the associated total Maurer-Cartan form is multiplicative. 
 To answer whether or not $\mathrm{H}\mathcal{G}$ is an Ehresmann connection we just need to discuss whether $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a connection 1-form on $\mathcal{G}$ due to the fact that $\mathrm{H}\mathcal{G}$ is the kernel of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ by definition (see also Cor.\ \ref{cor:TotMCFormIsConnectionForm}), also using Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}. Also by definition, $\mu_{\mathcal{G}}^{\mathrm{tot}}$ already satisfies
@@ -6839,13 +6839,13 @@ The Leibniz rule of the Darboux derivative extends to $\nabla^{\mathcal{G}}$.
 
 \begin{lemmata}{The conjugation of the canonical LAB connection a Yang-Mills connection}{FieldRedefViaLGBSection}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then we have
-\bas
+\ba\label{SpecialFieldRedef}
 \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathcal{G}} \circ \mathrm{Ad}_\sigma
 &=
 \nabla^{\mathcal{G}}
 	+ \mathrm{ad}_{\Delta \sigma}
-\eas
-for all $\sigma \in \Gamma(\mathcal{G})$. If $\mathrm{H}\mathcal{G}$ is an infinitesimal Yang-Mills connection, $\nabla^{\mathcal{G}} = \nabla^{\mathrm{YM}}$, then $\widetilde{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathrm{YM}} \circ \mathrm{Ad}_\sigma$ is also a Yang-Mills connection with
+\ea
+for all $\sigma \in \Gamma(\mathcal{G})$. If $\mathrm{H}\mathcal{G}$ is an infinitesimal Yang-Mills connection, $\nabla^{\mathcal{G}} = \nabla^{\mathrm{YM}}$, especially $R_{\nabla^{\mathrm{YM}}} = \mathrm{ad}_\zeta$ for $\zeta \in \Omega^2(M; \mathcal{g})$, then $\widetilde{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathrm{YM}} \circ \mathrm{Ad}_\sigma$ is also a Yang-Mills connection with
 \bas
 R_{\widetilde{\nabla}^\sigma}
 &=
@@ -6909,7 +6909,37 @@ making use of that this calculation is pointwise at $x \in M$ just a standard de
 \nabla^{\mathcal{G}}
 	+ \mathrm{ad}_{\Delta \sigma}.
 \eas
-The remaining part of the statement are trivial and straight-forward calculations, making use of Def.\ \ref{def:YangMillsConnection}.
+In order to show $R_{\widetilde{\nabla}^\sigma} = \mathrm{ad}_{\mathrm{Ad}_{\sigma^{-1}}(\zeta)}$ one uses the definition $\widetilde{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathrm{YM}} \circ \mathrm{Ad}_\sigma$ to calculate the curvature, 
+\bas
+R_{\widetilde{\nabla}^\sigma} (X, Y) \nu
+&=
+\widetilde{\nabla}^\sigma_X \widetilde{\nabla}^\sigma_Y \nu
+	- \widetilde{\nabla}^\sigma_Y \widetilde{\nabla}^\sigma_X \nu
+	- \widetilde{\nabla}^\sigma_{[X, Y]} \nu
+\\
+&=
+\mleft(\mathrm{Ad}_{\sigma^{-1}} \circ \mleft( \nabla^{\mathrm{YM}}_X \circ \nabla^{\mathrm{YM}}_Y 
+	- \nabla^{\mathrm{YM}}_Y \circ \nabla^{\mathrm{YM}}_X
+	- \nabla^{\mathrm{YM}}_{[X, Y]} \mright) \circ \mathrm{Ad}_\sigma\mright) (\nu)
+\\
+&=
+\mleft( \mathrm{Ad}_{\sigma^{-1}} \circ
+	R_{\nabla^{\mathcal{G}}}(X, Y) \circ \mathrm{Ad}_{\sigma}
+\mright) (\nu)
+\\
+&=
+\mathrm{Ad}_{\sigma^{-1}}\mleft( \mleft[ \zeta(X, Y), \mathrm{Ad}_{\sigma}(\nu) \mright]_{\mathcal{g}} \mright)
+\\
+&=
+\mleft[ \mathrm{Ad}_{\sigma^{-1}}\bigl(\zeta(X, Y)\bigr), \nu \mright]_{\mathcal{g}}
+\eas
+for all $X, Y \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathcal{g})$. The remaining parts of the statement are trivial and straight-forward calculations, making use of Def.\ \ref{def:YangMillsConnection}; in fact, we have proven all the remaining statements already in \cite[\S 3, part of Thm.\ 3.6]{My1stpaper} and in a more general manner in \cite[\S 4.6, Thm.\ 4.6.9]{MyThesis}: That $\widetilde{\nabla}^\sigma$ is a Lie bracket derivation is trivial to show, and one uses identity \eqref{SpecialFieldRedef} to show another identity of its curvature,
+\bas
+R_{\widetilde{\nabla}^\sigma} 
+&=
+\mleft[ \mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright] + \zeta, \cdot \mright]_{\mathcal{g}}.
+\eas
+Combining both identities for $R_{\widetilde{\nabla}^\sigma}$ we conclude with a proof of Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation}. 
 \end{proof}
 
 We also get a generalization of statements like \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}:
@@ -7094,7 +7124,7 @@ A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
 \eas
 \end{proof}
 
-Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if and only if the total Maurer-Cartan form is multiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}.
+This concludes our discussion about the infinitesimal compatibility condition \eqref{CondSGleichNullLAB} and its integrated version, $\mathrm{H}\mathcal{G} =$ Ehresmann connection. Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if the total Maurer-Cartan form is multiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}.
 
 \begin{theorems}{Generalized Maurer-Cartan equation}{GenMCEq}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ satisfies compatibility condition \eqref{CondKruemmungmitBLAB} if and only if there is a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$ such that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies
@@ -7133,7 +7163,7 @@ with
 \eas
 for all $(g, q) \in \mathcal{G} * \mathcal{G}$, where $\Phi: \mathcal{G}*\mathcal{G}\to \mathcal{G}$ is the $\mathcal{G}$-multiplication, and $\mathrm{pr}_i: \mathcal{G}*\mathcal{G} \to \mathcal{G}$ are the canonical projections onto the $i$-th component ($i \in \{1,2\}$). Recall Def.\ \ref{def:MultiplicativeFormsDef} and its Rem.\ \ref{sloppynotationformultiplicativity}, $\omega$ can be defined to be multiplicative if $\delta\omega = 0$, \textit{i.e.}\ $\omega$ is closed w.r.t.\ $\delta$. 
 
-On degree 0 it is a map $\Omega^\bullet(M; \mathcal{g}) \to \Omega^\bullet\mleft(\mathcal{G}; \pi^{*}_{\mathcal{g}}\mright)$ given for $\xi \in \Omega^\bullet(M; \mathcal{g})$ by
+On degree 0 $\delta$ is a map $\Omega^\bullet(M; \mathcal{g}) \to \Omega^\bullet\mleft(\mathcal{G}; \pi^{*}_{\mathcal{g}}\mright)$ given for $\xi \in \Omega^\bullet(M; \mathcal{g})$ by
 \bas
 \mleft(\delta\xi\mright)_g
 \coloneqq
@@ -7154,37 +7184,40 @@ F_{\mathcal{G}}
 	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
 \in \Omega^2\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright).
 \eas
-It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e.g.}\ \cite[\S 4.6, Thm.\ 4.27, Eq.\ (53)]{LAURENTGENGOUXStienonXuMultiplicativeForms} or \cite[\S 2.5, Prop.\ 2.22]{FernandesMarcutMultiplicativeForms}) by making use of that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection. In total we concluded that compatibility condition \eqref{CondSGleichNullLAB} is equivalent to that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative, which implies that $F_{\mathcal{G}}$ is multiplicative and thus $\delta$-closed; additionally with compatibility condition \eqref{CondKruemmungmitBLAB} we achieve $\delta$-exactness of $F_{\mathcal{G}}$. This is no wonder, the compatibility conditions already tell us by definition that the connection-1-form of $\nabla$ is closed w.r.t.\ the Chevalley-Eilenberg complex, which also implies the same for the curvature, however the curvature has to be exact by \eqref{CondKruemmungmitBLAB}. We depict that as $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$ and $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$; a summary is shown in Table \ref{tab:CompatibilityConditionsOnLGBAndItsLAB}.
+It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e.g.}\ \cite[\S 4.6, Thm.\ 4.27, Eq.\ (53)]{LAURENTGENGOUXStienonXuMultiplicativeForms} or \cite[\S 2.5, Prop.\ 2.22]{FernandesMarcutMultiplicativeForms}) by making use of that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection. In total we concluded that compatibility condition \eqref{CondSGleichNullLAB} is implied, if $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative, which also implies that $F_{\mathcal{G}}$ is multiplicative and thus $\delta$-closed; additionally with compatibility condition \eqref{CondKruemmungmitBLAB} we achieve $\delta$-exactness of $F_{\mathcal{G}}$. This is no wonder, the compatibility conditions already tell us by definition that the connection-1-form of $\nabla$ is closed w.r.t.\ the Chevalley-Eilenberg complex, which also implies the same for the curvature, however the curvature has to be exact by \eqref{CondKruemmungmitBLAB}. We depict that as $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$ and $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$; a summary is shown in Table \ref{tab:CompatibilityConditionsOnLGBAndItsLAB}.
 \end{remarks}
 
 \begin{table}[htbp]
 	\centering
-		\caption{Compatibility conditions on LGB $\mathcal{G}$ and its LAB $\mathcal{g}$}
-		\begin{tabular}{ll|lll}
-			& Compatibility condition & \multicolumn{1}{c}{$\mathcal{g}$} && \multicolumn{1}{c}{$\mathcal{G}$} \\
+		\caption{Infinitesimal compatibility conditions on the LAB $\mathcal{g}$} and integrated compatibility conditions on the overlying LGB $\mathcal{G}$
+		\begin{tabular}{|llll|}
+		\hline
+			%\multicolumn{2}{l}{Infinitesimal compatibility condition} 
+			& \multicolumn{1}{c}{$\mathcal{g}$} && \multicolumn{1}{c}{$\mathcal{G}$} \\
 			\hline
-			\textbf{(Closedness)} &
-			$\nabla^{\mathcal{G}}\mleft( \mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \mright) = 0$
-	& $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$
-	&& $\delta\mu_{\mathcal{G}}^{\mathrm{tot}} = 0$
+			\textbf{Closedness}
+			%$\nabla^{\mathcal{G}}\mleft( \mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \mright) = 0$
+	& $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$ $\mleft(\Rightarrow \delta^{\mathrm{CE}}R_{\nabla^{\mathcal{G}}} = 0\mright)$
+	&& $\delta\mu_{\mathcal{G}}^{\mathrm{tot}} = 0$ $\mleft(\Rightarrow \delta F_{\mathcal{G}} = 0\mright)$
+	%\\
+	%& \hspace{0.2cm} $\Rightarrow \delta^{\mathrm{CE}}R_{\nabla^{\mathcal{G}}} = 0$
+	%&& \hspace{0.2cm} $\Rightarrow \delta F_{\mathcal{G}} = 0$
 	\\
-	&
-	& \hspace{0.2cm} $\Rightarrow \delta^{\mathrm{CE}}R_{\nabla^{\mathcal{G}}} = 0$
-	&& \hspace{0.2cm} $\Rightarrow \delta F_{\mathcal{G}} = 0$
-	\\
-	\textbf{(Exactness)}&
-			\hspace{0.2cm} \& $R_{\nabla^{\mathcal{G}}} = \mathrm{ad} \circ \zeta$
+	\textbf{Exactness}
+			%\hspace{0.2cm} \& $R_{\nabla^{\mathcal{G}}} = \mathrm{ad} \circ \zeta$
 		& $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$
 		&& $F_{\mathcal{G}} = \delta \zeta$
+		\\
+		\hline
 		\end{tabular}
 	\label{tab:CompatibilityConditionsOnLGBAndItsLAB}
 \end{table}
 
 \begin{proof}[Proof of Thm.\ \ref{thm:GenMCEq}]
 \leavevmode\newline
-The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. 
+The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms\footnote{See Rem.\ \ref{rem:SimplicialDifferentialStuff}; multiplicative is related to closedness w.r.t.\ a differential.However, we will not need this general notion.} are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. 
 
-$\bullet$ That is, we now first discuss when 
+$\bullet$ That is, we now first discuss under what conditions 
 \bas
 \mathcal{G} \ni g &\mapsto \omega_g \coloneqq
 \mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
@@ -7244,13 +7277,19 @@ using Rem.\ \ref{rem:FundVecsAreLABActions} (bracket of fundamental/left-invaria
 \eas
 It follows that $\omega$ vanishes if contracted with a vertical tangent vector. Therefore we can study $\omega$ just w.r.t.\ tangent vectors complementary to the vertical structure, not necessarily elements of $\mathrm{H}\mathcal{G}$.
 
-For a given $g \in \mathcal{G}_x$ ($x \in M$) define
+Therefore it is only left to discuss $\omega$ restricted to non-vertical tangent vectors. For a given $g \in \mathcal{G}_x$ ($x \in M$) define
 \bas
-\mathbb{R} &\to \mathcal{G}_x,\\
-t &\mapsto \gamma(t) \coloneqq \sigma \cdot \e^{t\nu}
+\mathbb{R} &\to \Gamma(\mathcal{G}),\\
+t &\mapsto \gamma(t) \coloneqq \sigma \cdot \e^{t\nu},
 \eas
-
- take any curve $\gamma: I \to \mathcal{G}_x$ () so that $\gamma(0) = g$.
+where $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$. By Cor.\ \ref{cor:TLGBAsLGB} the flows of elements of $\mathrm{V}_g\mathcal{G}$ can be precisely described by curves like $\gamma$, so that the derivative w.r.t.\ $t$ of pullbacks of tensors with $\gamma$ characterizes any derivative along a fibre of $\mathcal{G}$. Furthermore, $\gamma(t)$ is by definition a section of $\mathcal{G}$ for all $t$ and thence describes an embedding of $M$ into $\mathcal{G}$. Thus, the $t$-derivatives of terms like $\gamma(t)^!\omega$ describe the derivatives of $\omega$ along fibres of $\mathcal{G}$ contracted with tangent vectors complementary to the vertical structure. Therefore let us calculate $\gamma(t)^!\omega$; we have
+\bas
+\gamma(t)^!\pi_{\mathcal{G}}^!\zeta
+&\cong
+{\underbrace{\bigl( \pi_{\mathcal{G}} \circ \gamma(t) \bigr)^!}_{\equiv \mathds{1}_M}}\zeta
+\cong
+\zeta
+\eas
 \end{proof}
 
 To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections.
