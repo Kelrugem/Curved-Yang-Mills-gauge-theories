@@ -7133,10 +7133,16 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
 	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
 &=
-\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
+%\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
+\mleft( g, \mathrm{Ad}_{g^{-1}} \circ \zeta_x \circ \mathrm{D}_g \pi_{\mathcal{G}} \mright)
 \eas
-for all $g \in \mathcal{G}$. We then say that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ solves the \textbf{generalized Maurer-Cartan equation (w.r.t.\ $\zeta$)}.
+for all $g \in \mathcal{G}_x$ ($x \in M$). We then say that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ solves the \textbf{generalized Maurer-Cartan equation (w.r.t.\ $\zeta$)}.
 \end{theorems}
+
+\begin{remark}
+\leavevmode\newline
+The structure on the right hand side is again due to denoting the base point in pullback bundles; one may decide to drop the base point for simplicity in the notation.
+\end{remark}
 
 \begin{remarks}{Classical Maurer-Cartan equation recovered}{ClassicalMCEqinGeneralizedOne}
 Recall Rem.\ \ref{rem:DarbouxOnCanonFlat}. If $\mathcal{G}$ is a trivial LGB, $\mathrm{H}\mathcal{G}$ its canonical flat connection and $\zeta \equiv 0$, then $\nabla^{\mathcal{G}}$ is the canonical flat connection on the trivial LAB $\mathcal{g}$ (recall Ex.\ \ref{ex:CanonicalFlatGConnection}) and it clearly satisfies the compatibility conditions in Def.\ \ref{def:YangMillsConnection} w.r.t.\ $\zeta \equiv 0$. Furthermore, the generalized Maurer-Cartan equation then reduces to the classical Maurer-Cartan equation.
@@ -7282,14 +7288,44 @@ Therefore it is only left to discuss $\omega$ restricted to non-vertical tangent
 \mathbb{R} &\to \Gamma(\mathcal{G}),\\
 t &\mapsto \gamma(t) \coloneqq \sigma \cdot \e^{t\nu},
 \eas
-where $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$. By Cor.\ \ref{cor:TLGBAsLGB} the flows of elements of $\mathrm{V}_g\mathcal{G}$ can be precisely described by curves like $\gamma$, so that the derivative w.r.t.\ $t$ of pullbacks of tensors with $\gamma$ characterizes any derivative along a fibre of $\mathcal{G}$. Furthermore, $\gamma(t)$ is by definition a section of $\mathcal{G}$ for all $t$ and thence describes an embedding of $M$ into $\mathcal{G}$. Thus, the $t$-derivatives of terms like $\gamma(t)^!\omega$ describe the derivatives of $\omega$ along fibres of $\mathcal{G}$ contracted with tangent vectors complementary to the vertical structure. Therefore let us calculate $\gamma(t)^!\omega$; we have
+where $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$; pointwise we denote $M \ni x \mapsto \gamma_x(t)$. By Cor.\ \ref{cor:TLGBAsLGB} the flows of elements of $\mathrm{V}_g\mathcal{G}$ can be precisely described by curves like $\gamma$, so that the derivative w.r.t.\ $t$ of pullbacks of tensors with $\gamma$ characterizes any derivative along a fibre of $\mathcal{G}$. Furthermore, $\gamma(t)$ is by definition a section of $\mathcal{G}$ for all $t$ and thence describes an embedding of $M$ into $\mathcal{G}$. Thus, the $t$-derivatives of terms like $\gamma(t)^!\omega$ describe the derivatives of $\omega$ along fibres of $\mathcal{G}$ contracted with tangent vectors complementary to the vertical structure. Therefore let us calculate $\gamma(t)^!\omega$; we have
 \bas
 \gamma(t)^!\pi_{\mathcal{G}}^!\zeta
-&\cong
+&=
 {\underbrace{\bigl( \pi_{\mathcal{G}} \circ \gamma(t) \bigr)^!}_{\equiv \mathds{1}_M}}\zeta
-\cong
+=
 \zeta
 \eas
+
+It is a straight-forward calculation to show that 
+\bas
+\gamma(t)^!\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+&=
+\mathrm{d}^{\gamma(t)^*\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mleft( \gamma^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)
+=
+\mathrm{d}^{\mleft(\pi_{\mathcal{G}}\circ \gamma(t)\mright)^*\nabla^{\mathcal{G}}} \mleft( \gamma^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)
+=
+\mathrm{d}^{\nabla^{\mathcal{G}}} \mleft( \gamma^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright),
+\eas
+using the definition of pullback vector bundle connections; alternatively see the explicit calulations in \cite[Appendix, Prop.\ A.1, (A.1)]{My1stpaper} or \cite[Appendix, Prop.\ A.1.1, (A.2)]{MyThesis}. We also have
+\bas
+&\mleft(\gamma(t)^!\mleft( \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}} \mright)\mright)_x(X,Y)
+\\
+&\hspace{1cm}=
+\mleft[ \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\gamma_x(t)}\mleft( \mathrm{D}_x\bigl(\gamma(t)\bigr)(X) \mright), 
+\mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\gamma_x(t)}\mleft( \mathrm{D}_x\bigl(\gamma(t)\bigr)(Y) \mright) \mright]_{\mathcal{g}_{x}}
+\\
+&\hspace{1cm}=
+\mleft[ \mleft(\gamma^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{x}(X), 
+\mleft(\gamma^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{x}(Y) \mright]_{\mathcal{g}_{x}}
+\\
+&\hspace{1cm}=
+\mleft( \frac{1}{2}
+	\mleft[ \gamma^!\mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,}
+	\gamma^!\mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\mathcal{g}}
+\mright)_x(X,Y)
+\eas
+for all $x \in M$ and $X, Y \in \mathrm{T}_xM$.
 \end{proof}
 
 To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections.
