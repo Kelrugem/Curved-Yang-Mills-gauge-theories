@@ -495,6 +495,29 @@ $\stackrel{\wedge}{,}$ may be written just as a comma when a zero-form is involv
 %for all $A_i = A_i^{a_i} \otimes e^{(i)}_{a_i}$, where $A_i^{a_i}$ are $k_i$-forms on $M$.
 \end{definitions}
 
+In case of antisymmetric tensors we of course get:
+
+\begin{propositions}{Graded extensions of antisymmetric tensors}{GradedExtensionPlusAntiSymm}
+Let $E_1, E_2 \to N$ be real vector bundles of finite rank over a smooth manifold $N$, $F \in \Omega^2(E_1; E_2)$. Then
+\ba
+F \mleft( A \stackrel{\wedge}{,} B \mright)
+&=
+-\mleft( -1 \mright)^{km}
+F \mleft( B \stackrel{\wedge}{,} A \mright)
+\ea 
+for all $A \in \Omega^k(N; E_1)$ and $B \in \Omega^m(N; E_2)$ ($k,m \in \mathbb{N}_0$). Similarly extended to all $F \in \Omega^l(E_1; E_2)$.
+\end{propositions}
+
+\begin{remark}
+\leavevmode\newline
+This is a generalization of similar relations just using the Lie algebra bracket $\mleft[ \cdot, \cdot\mright]_{\mathfrak{g}}$ of a Lie algebra $\mathfrak{g}$, see \cite[\S 5, first statement of Exercise 5.15.14; page 316]{Hamilton}.
+\end{remark}
+
+\begin{proof}
+\leavevmode\newline
+Trivial, for example by using local coordinates.
+\end{proof}
+
 \end{itemize}
 
 \subsection{Assumed background knowledge}
@@ -7300,7 +7323,7 @@ $\bullet$ Therefore we now discuss the behaviour of $\omega$ restricted to non-v
 \mathbb{R} &\to \Gamma(\mathcal{G}),\\
 t &\mapsto \gamma(t) \coloneqq \sigma \e^{t\nu},
 \eas
-where $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$; pointwise we denote $M \ni x \mapsto \gamma_x(t)$. By Cor.\ \ref{cor:TLGBAsLGB} the flows of elements of $\mathrm{V}_g\mathcal{G}$ can be precisely described by curves like $\gamma$, so that the derivative w.r.t.\ $t$ of pullbacks of tensors with $\gamma$ characterizes any derivative along a fibre of $\mathcal{G}$. Furthermore, $\gamma(t)$ is by definition a section of $\mathcal{G}$ for all $t$ and thence describes an embedding of $M$ into $\mathcal{G}$. Thus, the $t$-derivatives of terms like $\gamma(t)^!\omega$ describe the derivatives of $\omega$ along fibres of $\mathcal{G}$ contracted with tangent vectors complementary to the vertical structure. Therefore let us calculate $\gamma(t)^!\omega$; we have
+where $\nu$ is any section of $\mathcal{g}$ and $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$; pointwise we denote $M \ni x \mapsto \gamma_x(t)$. By Cor.\ \ref{cor:TLGBAsLGB} the flows of elements of $\mathrm{V}_g\mathcal{G}$ can be precisely described by curves like $\gamma$, so that the derivative w.r.t.\ $t$ of pullbacks of tensors with $\gamma$ characterizes any derivative along a fibre of $\mathcal{G}$. Furthermore, $\gamma(t)$ is by definition a section of $\mathcal{G}$ for all $t$ and thence describes an embedding of $M$ into $\mathcal{G}$. Thus, the $t$-derivatives of terms like $\gamma(t)^!\omega$ describe the derivatives of $\omega$ along fibres of $\mathcal{G}$ contracted with tangent vectors complementary to the vertical structure. Therefore let us calculate $\gamma(t)^!\omega$; we have
 \bas
 \gamma(t)^!\pi_{\mathcal{G}}^!\zeta
 &=
@@ -7420,14 +7443,54 @@ for all $X, Y \in \mathfrak{X}(M)$, hence,
 	- \mleft[\Delta \sigma \stackrel{\wedge}{,} \nabla^{\mathcal{G}}\nu \mright]_{\mathcal{g}}
 	+ R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
 \eas
-making use of that this calculation is pointwise at $x \in M$ just a standard derivative in the vector space $\mathcal{g}_x$ and that $\Delta e \equiv 0$ by Remark \ref{rem:baseManifoldHoriz}. In a similar fashion,
+making use of that this calculation is pointwise at $x \in M$ just a standard derivative in the vector space $\mathcal{g}_x$ and that $\Delta e \equiv 0$ by Remark \ref{rem:baseManifoldHoriz}; we also used Prop.\ \ref{prop:GradedExtensionPlusAntiSymm}. In a similar fashion,
 \bas
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\mleft[ \Delta\gamma(t) \stackrel{\wedge}{,} \Delta\gamma(t) \mright]_{\mathcal{g}}
 &=
-\mleft[ \mleft[\Delta\sigma, \nu \mright]_{\mathcal{g}} \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}
-	+ \mleft[ \Delta \sigma \stackrel{\wedge}{,} \mleft[\Delta\sigma, \nu \mright]_{\mathcal{g}} \mright]_{\mathcal{g}}
+2\mleft[ \mleft[\Delta\sigma, \nu \mright]_{\mathcal{g}} \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}
+	+ 2\mleft[ \Delta \sigma \stackrel{\wedge}{,} \nabla^{\mathcal{G}}\nu \mright]_{\mathcal{g}},
+\eas
+by the Jacobi identity
+\bas
+\mleft[ \mleft[\Delta\sigma, \nu \mright]_{\mathcal{g}} \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}(X, Y)
+&=
+\mleft[ \mleft[\Delta\sigma(X), \nu \mright]_{\mathcal{g}} , \Delta\sigma(Y) \mright]_{\mathcal{g}}
+	- \mleft[ \mleft[\Delta\sigma(Y), \nu \mright]_{\mathcal{g}} , \Delta\sigma(X) \mright]_{\mathcal{g}}
+\\
+&=
+\mleft[ \mleft[\Delta\sigma(X), \Delta\sigma(Y) \mright]_{\mathcal{g}} , \nu \mright]_{\mathcal{g}}
+\\
+&=
+\mleft[ \frac{1}{2} \mleft[\Delta\sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} , \nu \mright]_{\mathcal{g}}(X, Y)
+\eas
+for all $X, Y \in \mathfrak{X}(M)$, and trivially
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mathrm{Ad}_{\gamma^{-1}(t)} \circ \zeta
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mathrm{Ad}_{\e^{-t\nu}} \circ \mathrm{Ad}_{\sigma^{-1}} \circ \zeta
+=
+\mleft[ \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, \nu \mright]_{\mathcal{g}}.
+\eas
+Collecting everything we derive
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \gamma(t)^!\omega
+&=
+\mleft[ \mathrm{d}^{\nabla^{\mathcal{G}}} \Delta \sigma, \nu \mright]_{\mathcal{g}}
+	- \mleft[\Delta \sigma \stackrel{\wedge}{,} \nabla^{\mathcal{G}}\nu \mright]_{\mathcal{g}}
+	+ R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
+\\
+&\hspace{1cm}
+	+ \mleft[ \frac{1}{2} \mleft[\Delta\sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} , \nu \mright]_{\mathcal{g}}
 	+ \mleft[ \Delta \sigma \stackrel{\wedge}{,} \nabla^{\mathcal{G}}\nu \mright]_{\mathcal{g}}
-	+ \mleft[ \nabla^{\mathcal{G}}\nu \stackrel{\wedge}{,} \Delta \sigma \mright]_{\mathcal{g}}
+	- \mleft[ \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, \nu \mright]_{\mathcal{g}}
+\\
+&=
+R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
+	+ \mleft[ 
+		\mathrm{d}^{\nabla^{\mathcal{G}}} \Delta \sigma
+		+ \frac{1}{2} \mleft[\Delta\sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}
+		- \mathrm{Ad}_{\sigma^{-1}} \circ \zeta
+		, \nu \mright]_{\mathcal{g}}
 \eas
 \end{proof}
 
