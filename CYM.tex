@@ -6860,7 +6860,7 @@ thus, concluding the proof with
 
 The Leibniz rule of the Darboux derivative extends to $\nabla^{\mathcal{G}}$.
 
-\begin{lemmata}{The conjugation of the canonical LAB connection a Yang-Mills connection}{FieldRedefViaLGBSection}
+\begin{lemmata}{The conjugation of the canonical LAB connection is a Yang-Mills connection}{FieldRedefViaLGBSection}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then we have
 \ba\label{SpecialFieldRedef}
 \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathcal{G}} \circ \mathrm{Ad}_\sigma
@@ -6884,7 +6884,7 @@ R_{\widetilde{\nabla}^\sigma}
 \eas
 in particular we get
 \ba\label{AlmostGeneralizedMaurerCartanEquation}
-\mleft[ \mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright] + \zeta - \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, ~ \nu \mright]_{\mathcal{g}}
+\mleft[ \mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} + \zeta - \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, ~ \nu \mright]_{\mathcal{g}}
 &=
 0
 \ea
@@ -6968,7 +6968,7 @@ for all $X, Y \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathcal{g})$. The remain
 \bas
 R_{\widetilde{\nabla}^\sigma} 
 &=
-\mleft[ \mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright] + \zeta, \cdot \mright]_{\mathcal{g}}.
+\mleft[ \mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} + \zeta, \cdot \mright]_{\mathcal{g}}.
 \eas
 Combining both identities for $R_{\widetilde{\nabla}^\sigma}$ we conclude with a proof of Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation}. 
 \end{proof}
@@ -7155,18 +7155,18 @@ A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
 \eas
 \end{proof}
 
-This concludes our discussion about the infinitesimal compatibility condition \eqref{CondSGleichNullLAB} and its integrated version, $\mathrm{H}\mathcal{G} =$ Ehresmann connection. Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if the total Maurer-Cartan form is multiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}.
+This concludes our discussion about the infinitesimal compatibility condition \eqref{CondSGleichNullLAB} and its integrated version, "$\mathrm{H}\mathcal{G} =$ Ehresmann connection"'. Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if the total Maurer-Cartan form is multiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}, which we can actually integrate in to an equivalent statement.
 
 \begin{theorems}{Generalized Maurer-Cartan equation}{GenMCEq}
-Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then $\mathrm{H}\mathcal{G}$ satisfies compatibility condition \eqref{CondKruemmungmitBLAB} if and only if there is a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$ such that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies
-\bas
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$, and $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then $\mathrm{H}\mathcal{G}$ satisfies the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB} w.r.t.\ $\zeta$ if and only if the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies
+\ba\label{THEGeneralizedMCEq}
 \mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
 	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
 	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
 &=
 %\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
 \mleft( g, \mathrm{Ad}_{g^{-1}} \circ \zeta_x \circ \mathrm{D}_g \pi_{\mathcal{G}} \mright)
-\eas
+\ea
 for all $g \in \mathcal{G}_x$ ($x \in M$). We then say that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ solves the \textbf{generalized Maurer-Cartan equation (w.r.t.\ $\zeta$)}.
 \end{theorems}
 
@@ -7256,7 +7256,7 @@ It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e
 
 \begin{proof}[Proof of Thm.\ \ref{thm:GenMCEq}]
 \leavevmode\newline
-The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms\footnote{See Rem.\ \ref{rem:SimplicialDifferentialStuff}; multiplicative is related to closedness w.r.t.\ a differential. However, we will not need this general notion.} are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. That is, we now first discuss under what conditions 
+The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms\footnote{See Rem.\ \ref{rem:SimplicialDifferentialStuff}; multiplicativity is related to closedness w.r.t.\ a differential. However, we will not need this general notion.} are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. That is, we want to discuss under what conditions 
 \bas
 \mathcal{G} \ni g &\mapsto \omega_g \coloneqq
 \mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
@@ -7316,14 +7316,14 @@ using Rem.\ \ref{rem:FundVecsAreLABActions} (bracket of fundamental/left-invaria
 &=
 0.
 \eas
-It follows that $\omega$ vanishes if contracted with a vertical tangent vector. Therefore we can study $\omega$ just w.r.t.\ tangent vectors complementary to the vertical structure, not necessarily elements of $\mathrm{H}\mathcal{G}$.
+It follows that $\omega$ vanishes if contracted with a vertical tangent vector.
 
-$\bullet$ Therefore we now discuss the behaviour of $\omega$ restricted to non-vertical tangent vectors. For a given $g \in \mathcal{G}_x$ ($x \in M$) define
+$\bullet$ Therefore we can study $\omega$ just w.r.t.\ tangent vectors complementary to the vertical structure, these do not necessarily need to be elements of $\mathrm{H}\mathcal{G}$. For a given $g \in \mathcal{G}_x$ ($x \in M$) define
 \bas
 \mathbb{R} &\to \Gamma(\mathcal{G}),\\
 t &\mapsto \gamma(t) \coloneqq \sigma \e^{t\nu},
 \eas
-where $\nu$ is any section of $\mathcal{g}$ and $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$; pointwise we denote $M \ni x \mapsto \gamma_x(t)$. By Cor.\ \ref{cor:TLGBAsLGB} the flows of elements of $\mathrm{V}_g\mathcal{G}$ can be precisely described by curves like $\gamma$, so that the derivative w.r.t.\ $t$ of pullbacks of tensors with $\gamma$ characterizes any derivative along a fibre of $\mathcal{G}$. Furthermore, $\gamma(t)$ is by definition a section of $\mathcal{G}$ for all $t$ and thence describes an embedding of $M$ into $\mathcal{G}$. Thus, the $t$-derivatives of terms like $\gamma(t)^!\omega$ describe the derivatives of $\omega$ along fibres of $\mathcal{G}$ contracted with tangent vectors complementary to the vertical structure. Therefore let us calculate $\gamma(t)^!\omega$; we have
+where $\nu$ is any section of $\mathcal{g}$ and $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$; pointwise we denote $\gamma(t)$ as a map $M \ni x \mapsto \gamma_x(t)$. By Cor.\ \ref{cor:TLGBAsLGB} the flows of elements of $\mathrm{V}_g\mathcal{G}$ can be precisely described by curves like $\gamma$, so that the derivative w.r.t.\ $t$ of pullbacks of tensors with $\gamma$ characterizes any derivative along a fibre of $\mathcal{G}$. Furthermore, $\gamma(t)$ is by definition a section of $\mathcal{G}$ for all $t$ and thence describes an embedding of $M$ into $\mathcal{G}$. Thus, the $t$-derivatives of terms like $\gamma(t)^!\omega$ describe the derivatives of $\omega$ along fibres of $\mathcal{G}$ contracted with tangent vectors complementary to the vertical structure. Therefore let us calculate $\gamma(t)^!\omega$; we have
 \bas
 \gamma(t)^!\pi_{\mathcal{G}}^!\zeta
 &=
@@ -7368,7 +7368,7 @@ using the definition of pullback vector bundle connections; alternatively see th
 \mright)_x(X,Y)
 \eas
 for all $x \in M$ and $X, Y \in \mathrm{T}_xM$. Thus, we have so far
-\bas
+\ba\label{PullbackofMCGeneralCurvPlusExtra}
 \gamma(t)^!\omega
 &=
 \mathrm{d}^{\nabla^{\mathcal{G}}} \mleft( \gamma(t)^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)
@@ -7377,13 +7377,14 @@ for all $x \in M$ and $X, Y \in \mathrm{T}_xM$. Thus, we have so far
 	\gamma(t)^!\mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\mathcal{g}}
 	+ \zeta
 	- \mathrm{Ad}_{\gamma^{-1}(t)} \circ \zeta
+\nonumber
 \\
 &=
 \mathrm{d}^{\nabla^{\mathcal{G}}} \bigl( \Delta\gamma(t) \bigr)
 	+ \frac{1}{2} \mleft[ \Delta\gamma(t) \stackrel{\wedge}{,} \Delta\gamma(t) \mright]_{\mathcal{g}}
 	+ \zeta
 	- \mathrm{Ad}_{\gamma^{-1}(t)} \circ \zeta.
-\eas
+\ea
 By Prop.\ \ref{prop:DarbouxLeibnizRule} we get
 \bas
 \Delta\gamma(t)
@@ -7472,17 +7473,19 @@ for all $X, Y \in \mathfrak{X}(M)$, and trivially
 \mleft[ \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, \nu \mright]_{\mathcal{g}}.
 \eas
 Collecting everything we derive
-\bas
+\ba\label{PullbackofMCEqGivesCurv}
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \gamma(t)^!\omega
 &=
 \mleft[ \mathrm{d}^{\nabla^{\mathcal{G}}} \Delta \sigma, \nu \mright]_{\mathcal{g}}
 	- \mleft[\Delta \sigma \stackrel{\wedge}{,} \nabla^{\mathcal{G}}\nu \mright]_{\mathcal{g}}
 	+ R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
+\nonumber
 \\
 &\hspace{1cm}
 	+ \mleft[ \frac{1}{2} \mleft[\Delta\sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} , \nu \mright]_{\mathcal{g}}
 	+ \mleft[ \Delta \sigma \stackrel{\wedge}{,} \nabla^{\mathcal{G}}\nu \mright]_{\mathcal{g}}
 	- \mleft[ \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, \nu \mright]_{\mathcal{g}}
+\nonumber
 \\
 &=
 R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
@@ -7491,6 +7494,93 @@ R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
 		+ \frac{1}{2} \mleft[\Delta\sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}
 		- \mathrm{Ad}_{\sigma^{-1}} \circ \zeta
 		, \nu \mright]_{\mathcal{g}}
+\ea
+for all $\nu \in \Gamma(\mathcal{g})$ and $\sigma \in \Gamma(\mathcal{G})$.
+
+$\bullet$ On the one hand, if $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies Eq.\ \eqref{THEGeneralizedMCEq}, then $\omega \equiv 0$. As previously mentioned, we have $\Delta e = 0$, so that we then get in total for Eq.\ \eqref{PullbackofMCEqGivesCurv} w.r.t.\ $\sigma \coloneqq e$ that
+\bas
+R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
+&=
+\mleft[ \zeta, \nu \mright]_{\mathcal{g}}
+\eas
+for all $\nu \in \Gamma(\mathcal{g})$, which is the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB}.
+
+$\bullet$ On the other hand, if $\mathrm{H}\mathcal{G}$ satisfies the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB}, $R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu = \mleft[ \zeta, \cdot \mright]_{\mathcal{g}}$, then we know by Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation} (Lemma \ref{lem:FieldRedefViaLGBSection}) that 
+\bas
+\mleft[ \mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} - \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, ~ \nu \mright]_{\mathcal{g}}
+&=
+- \mleft[ \zeta, \nu \mright]_{\mathcal{g}},
+\eas
+so that Eq.\ \eqref{PullbackofMCEqGivesCurv} then has the form
+\bas
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \gamma(t)^!\omega
+&=
+R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
+	- \mleft[ \zeta, \nu \mright]_{\mathcal{g}}
+\stackrel{\eqref{CondKruemmungmitBLAB}}{=}
+0
+\eas
+for all $\nu \in \Gamma(\mathcal{g})$ and $\sigma \in \Gamma(\mathcal{G})$.
+As aforementioned in the discussion around the definition of $\gamma$, also recall that $\omega$ vanishes if contracted with a vertical vector, we can conclude that $\omega$ is constant along the fibres of $\mathcal{G}$ which implies
+\bas
+\omega
+=
+\pi_{\mathcal{G}}^!\xi
+\eas
+for a $\xi \in \Omega^2(M;\mathcal{g})$, especially 
+\bas
+e^!\omega 
+&=
+\mleft(\pi_{\mathcal{G}}\circ e\mright)^!\xi
+=
+\xi.
+\eas
+But we already have calculated this in Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra}, set $t=0$ and $\sigma \coloneqq e$, then also again by $\Delta e = 0$ we have
+\bas
+\xi
+&=
+e^!\omega
+\stackrel{\eqref{PullbackofMCGeneralCurvPlusExtra}}{=}
+\zeta
+	- \zeta
+=
+0.
+\eas
+Finally we get
+\bas
+\omega
+&=
+\pi_{\mathcal{G}}^!\xi
+=
+0,
+\eas
+which finishes the proof.
+\end{proof}
+
+Trivially, this theorem is an extension of Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation} (Lemma \ref{lem:FieldRedefViaLGBSection}).
+
+\begin{corollaries}{Pullback of generalized Maurer-Cartan equation}{PullbackOfMCSupperEquation}
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$ satisfying the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB} w.r.t.\ a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then
+\bas
+\mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta \sigma 
+	+ \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} 
+	+ \zeta 
+&=
+\mathrm{Ad}_{\sigma^{-1}} \circ \zeta
+\eas
+for all $\sigma \in \Gamma(\mathcal{G})$.
+\end{corollaries}
+
+\begin{proof}
+\leavevmode\newline
+Keeping the same notation as in the proof of Thm.\ \ref{thm:GenMCEq}, we have derived Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra}, and due to Thm.\ \ref{thm:GenMCEq} we get $\omega = 0$; altogether Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra} at $t=0$ gives then
+\bas
+0
+&=
+\mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta\sigma
+	+ \frac{1}{2} \mleft[ \Delta\sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}
+	+ \zeta
+	- \mathrm{Ad}_{\sigma^{-1}} \circ \zeta.
 \eas
 \end{proof}
 
