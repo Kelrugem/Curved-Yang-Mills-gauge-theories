@@ -26,14 +26,14 @@
 \contentsline {subsection}{\numberline {6.2}Generalized distributions and connections}{69}{subsection.6.2}%
 \contentsline {subsubsection}{\numberline {6.2.1}Idea and motivation}{71}{subsubsection.6.2.1}%
 \contentsline {subsubsection}{\numberline {6.2.2}Darboux derivative on LGBs}{75}{subsubsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3}First step towards towards associated bundles}{87}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.3}First step towards towards associated bundles}{88}{subsubsection.6.2.3}%
 \contentsline {subsubsection}{\numberline {6.2.4}Generalized connection 1-forms on principal bundles}{90}{subsubsection.6.2.4}%
 \contentsline {subsection}{\numberline {6.3}Gauge transformations}{99}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Generalized curvature/field strength}{111}{subsection.6.4}%
 \contentsline {subsubsection}{\numberline {6.4.1}Yang-Mills connections on LGBs}{111}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}Field strength related to Yang-Mills connections}{128}{subsubsection.6.4.2}%
-\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{132}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{132}{section.8}%
-\contentsline {section}{\nonumberline List of References}{132}{section*.3}%
-\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{133}{appendix.A}%
+\contentsline {subsubsection}{\numberline {6.4.2}Field strength related to Yang-Mills connections}{129}{subsubsection.6.4.2}%
+\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{133}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{133}{section.8}%
+\contentsline {section}{\nonumberline List of References}{133}{section*.3}%
+\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{134}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

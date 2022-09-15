@@ -2189,7 +2189,7 @@ for all $g\in G$. Denoting $[ \cdot, \cdot ] \eqqcolon \pi$ we get infinitesimal
 \eas
 where $e_H$ is the neutral element of $H$. One can trivially check that this gives an equivalence relation on $P_x \times \mathfrak{h}$, precisely the one we need for $\mathcal{h}$. It finally follows that the LAB of $\mathcal{H}$ is given by $\mathcal{h}$.
 
-As a special example, the LAB of the inner group bundle $c_G(P)$, Ex.\ \ref{ex:InnerLGBs}, is the \textbf{adjoint bundle $\mathrm{Ad}(P)$ of $P$}, $\mathrm{Ad}(P) \coloneqq P \times_{\mathrm{Ad}} \mathfrak{g}$, where $\mathrm{Ad}$ is the adjoint representation of $G$. This is also a special example of the generalized Atiyah sequence (as both, a short exact sequence of Lie groupoids and algebroids) in \cite[\S 3.5, Def.\ 3.5.19, page 130]{mackenzieGeneralTheory}.
+As a special example, the LAB of the inner group bundle $c_G(P)$, Ex.\ \ref{ex:InnerLGBs}, is the \textbf{adjoint bundle $\mathrm{Ad}(P)$ of $P$}, $\mathrm{Ad}(P) \coloneqq P \times_{\mathrm{Ad}} \mathfrak{g}$, where $\mathrm{Ad}$ is the adjoint representation of $G$. This is also a special example of the generalized Atiyah sequence (of both, a short exact sequence of Lie groupoids and algebroids) in \cite[\S 3.5, Def.\ 3.5.19, page 130]{mackenzieGeneralTheory}.
 \end{examples}
 
 \subsection{Vertical Maurer-Cartan form of LGBs}
@@ -5057,9 +5057,9 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 for all $\nu \in \Gamma(\mathcal{g})$, the \textbf{$\mathcal{G}$-connection (on its LAB $\mathcal{g}$)}.
 \end{definitions}
 
-\begin{remark}
+\begin{remark}\label{PTLABComingFromPTLGB}
 \leavevmode\newline
-Such a construction of vector bundle connections on LABs also arises in \cite[\S 4.5, Prop.\ 4.22]{LAURENTGENGOUXStienonXuMultiplicativeForms}, but w.r.t.\ a more specific $\mathrm{H}\mathcal{G}$, see Subsubsection \ref{MultiplicativeForms} later.
+Such a construction of vector bundle connections on LABs also arises in \cite[\S 4.5, Prop.\ 4.22]{LAURENTGENGOUXStienonXuMultiplicativeForms}, but w.r.t.\ a more specific $\mathrm{H}\mathcal{G}$, see Subsubsection \ref{MultiplicativeForms} later; in this context that reference also shows that the parallel transport associated to $\nabla^{\mathcal{G}}$ is the infinitesimal version of the parallel transport associated with $\mathrm{H}\mathcal{G}$.
 \end{remark}
 
 \begin{examples}{Canonical flat $\mathcal{G}$-connection}{CanonicalFlatGConnection}
@@ -7584,22 +7584,41 @@ Keeping the same notation as in the proof of Thm.\ \ref{thm:GenMCEq}, we have de
 \eas
 \end{proof}
 
-To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections.
+Thus, we can finally define the connection we need on the LGB.
+
+\begin{definitions}{Yang-Mills connection}{NowReallyYangMillsConnectio}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is a \textbf{Yang-Mills connection}, if it satisfies the \textbf{compatibility conditions}:
+\begin{enumerate}
+	\item $\mathrm{H}\mathcal{G}$ is an Ehresmann connection,
+	\item the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies the generalized Maurer-Cartan equation (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$).
+\end{enumerate}
+By Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} we can equivalently define $\mathrm{H}\mathcal{G}$ as a Yang-Mills connection if
+\begin{enumerate}
+	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative,
+	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies the generalized Maurer-Cartan equation (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$).
+\end{enumerate}
+\end{definitions}
+
+\begin{remarks}{Yang-Mills connections integrate infinitesimal Yang-Mills connections}{YangMillsEqualsInfYM}
+By Lemma \ref{lem:YangMillsConnAnEhresmann} and Thm.\ \ref{thm:GenMCEq}, every Yang-Mills connection is also an infinitesimal Yang-Mills connections, \textit{i.e.}\ the infinitesimal compatibility conditions are also satisfied.
+\end{remarks}
+
+To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections; we will make use of Thm.\ \ref{thm:GenMCEq} in order to prove that the generalized Maurer-Cartan equation is satisfied.
 
 \begin{examples}{(Pre-)Classical Yang-Mills connection}{ClassicalYangMillsConnection}
-Let us look at a classical principal bundle $P$ with trivial LGB $\mathcal{G} = M \times G$, $G$ a Lie group; recall Ex.\ \ref{ex:TheCLassicalPrincAsEx} and \ref{ex:OurConnectionIsReallyMoreGeneral}. The canonical flat connection on $\mathcal{G}$ induces the canonical flat connection $\nabla^{\mathcal{G}}$ on its LAB $\mathcal{g} = M \times \mathfrak{g}$, recall Ex.\ \ref{ex:CanonicalFlatGConnection}. Thus,
+Let us look at a classical principal bundle $P$ with trivial LGB $\mathcal{G} = M \times G$, $G$ a Lie group; recall Ex.\ \ref{ex:TheCLassicalPrincAsEx} and \ref{ex:OurConnectionIsReallyMoreGeneral}. The canonical flat connection $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$ induces the canonical flat connection $\nabla^{\mathcal{G}}$ on its LAB $\mathcal{g} = M \times \mathfrak{g}$, recall Ex.\ \ref{ex:CanonicalFlatGConnection}. Thus,
 \bas
 R_{\nabla^{\mathcal{G}}} &= 0
 \eas
-and so we can set $\zeta \equiv 0$. Using a frame of global sections, it is trivial to check that also Eq.\ \eqref{CondSGleichNullLAB} is satisfied. We then call $\nabla^{\mathrm{cYM}} \coloneqq \nabla^{\mathcal{G}}$ a \textbf{classical Yang-Mills connection}.
+and so we can set $\zeta \equiv 0$. By Ex.\ \ref{ex:OurConnectionIsReallyMoreGeneral} (viewing $\mathcal{G}$ also as a principal bundle equipped with the same horizontal distribution) we know that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, so that its total Maurer-Cartan form is multiplicative.
+
+We then call $\nabla^{\mathrm{cYM}} \coloneqq \nabla^{\mathcal{G}}$ a \textbf{classical Yang-Mills connection}.
 
 However, observe that $\zeta$ can be centre-valued while $\nabla^{\mathcal{G}}$ is still flat. In such an occasion we speak of a \textbf{pre-classical Yang-Mills connection}, denoted by $\nabla^{\mathrm{pYM}}$.
 \end{examples}
 
 \begin{examples}{Associated connections of inner group bundles are Yang-Mills connections}{OurVeryImportantExample}
-Recall Ex.\ \ref{ex:AssociatedLGBsAndTheirCanonicalConnection}, its setup and notation. We have discussed a canonical connection on associated LGBs $\mathcal{H} = P \times_\psi H$, called associated connection. Following the argument about parallel transports in the proof of Lemma \ref{lem:YangMillsConnAnEhresmann}, we know that the associated connection satisfies Eq.\ \eqref{CondSGleichNullLAB} due to the fact that the parallel transport of $\mathcal{H}$ is a homomorphism.
-
-Now we turn to Eq.\ \eqref{CondKruemmungmitBLAB}. As it is well-known, the curvature measures the holonomy, that is, the parallel transport over closed (contractible) curves. Together with Eq.\ \eqref{CondKruemmungmitBLAB}, the parallel transport over a closed (contractible) curve $\alpha$ should act as conjugation with some group element. Let us see whether this holds here; there is a unique $g \in G$ for $p \in P$ such that
+Recall Ex.\ \ref{ex:AssociatedLGBsAndTheirCanonicalConnection}, its setup and notation. We have discussed a canonical connection on associated LGBs $\mathcal{H} = P \times_\psi H$, called associated connection which is an Ehresmann connection. As it is well-known, the curvature measures the holonomy, that is, the parallel transport over closed (contractible) curves. Together with Eq.\ \eqref{CondKruemmungmitBLAB}, the parallel transport over a closed (contractible) curve $\alpha$ should act as conjugation with some group element. Let us see whether this holds here; there is a unique $g \in G$ for $p \in P$ such that
 \bas
 \mathrm{PT}^{P}_\alpha(p)
 &=
@@ -7623,23 +7642,23 @@ Thus, if $\mathcal{H} = c_G(P)$, the inner group bundle of Ex.\ \ref{ex:InnerLGB
 \mleft[p, h\mright] \cdot
 \mleft[p, g^{-1}\mright],
 \eas
-the conjugation of $[p, h]$ with $[p, g]$ in $c_G(P)$. It follows that there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that Eq.\ \eqref{CondKruemmungmitBLAB} is satisfied. This also implies that the associated connection of an inner group bundle is a Yang-Mills connection. 
+the conjugation of $[p, h]$ with $[p, g]$ in $c_G(P)$. It follows that there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that Eq.\ \eqref{CondKruemmungmitBLAB} is satisfied. This also implies that the associated connection of an inner group bundle is a Yang-Mills connection. We will not prove this approach, instead the next approach provides an alternative proof with an explicit expression for $\zeta$.
 \end{examples}
 
 \begin{examples}{The Yang-Mills connections on inner group bundles: Alternative point of view and explanation}{NablaYMAsAdjointConnection}
-Alternatively one can prove what we have shown in Ex.\ \ref{ex:OurVeryImportantExample} by using the aforementioned relationship of the compatibility conditions with Mackenzie's study about extending Lie algebroids via LABs; recall Remark \ref{MackenziesStuffRelation}. The following is an information for the experienced reader: The LAB of $c_G(P)$ is given by the adjoint bundle $\mathrm{Ad}(P)$; recall Ex.\ \ref{ex:AssociatedLABsFromAssocLGBs}. $\mathrm{Ad}(P)$ is the kernel of the Atiyah sequence (see \textit{e.g.}\ \cite[\S 3.2, page 90ff.]{mackenzieGeneralTheory}), a short exact sequence of Lie algebroids over $M$
+Alternatively one can prove what we have argued in Ex.\ \ref{ex:OurVeryImportantExample} by using the aforementioned relationship of the compatibility conditions with Mackenzie's study about extending Lie algebroids via LABs; recall Remark \ref{MackenziesStuffRelation}. The following is an information for the experienced reader: The LAB of $c_G(P)$ is given by the adjoint bundle $\mathrm{Ad}(P)$; recall Ex.\ \ref{ex:AssociatedLABsFromAssocLGBs}. $\mathrm{Ad}(P)$ is the kernel of the Atiyah sequence (see \textit{e.g.}\ \cite[\S 3.2, page 90ff.]{mackenzieGeneralTheory}), a short exact sequence of Lie algebroids over $M$
 \begin{center}
 	\begin{tikzcd}
 		0 \arrow{r} & \mathrm{Ad}(P) \arrow{r} & \mathrm{At}(P) \arrow{r} & \mathrm{T}M \arrow{r} & 0,
 	\end{tikzcd}
 \end{center}
-where $\mathrm{At}(P)$ is the Atiyah bundle of $P$. A connection on $P$ in the "classical" sense (that is, related to a canonical flat connection on $M \times G$ in our sense) has a 1:1 correspondence to a splitting $\chi: \mathrm{T}M \to \mathrm{AT}(P)$ to that sequence, \textit{i.e.}\ a section of the left non-trivial arrow. We can then construct a vector bundle connection $\nabla^{\mathrm{YM}}$ on the adjoint bundle by using the Lie algebroid bracket $\mleft[ \cdot, \cdot \mright]_{\mathrm{At}(P)}$ on $\mathrm{At}(P)$, that is,
+where $\mathrm{At}(P)$ is the Atiyah bundle of $P$. A connection on $P$ in the "classical" sense (that is, related to a canonical flat connection on $M \times G$ in our sense) has a 1:1 correspondence to a splitting $\chi: \mathrm{T}M \to \mathrm{AT}(P)$ to that sequence, \textit{i.e.}\ a section of the right non-trivial arrow. We can then construct a vector bundle connection $\nabla^{\mathrm{YM}}$ on the adjoint bundle by using the Lie algebroid bracket $\mleft[ \cdot, \cdot \mright]_{\mathrm{At}(P)}$ on $\mathrm{At}(P)$, that is,
 \bas
 \nabla^{\mathrm{YM}}_X \nu
 &=
 \mleft[ \chi(X), \nu \mright]_{\mathrm{At}(P)}
 \eas
-for all $X \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathrm{Ad}(P))$. It follows by \cite[\S 7.3, Prop.\ 7.3.2 and Lemma 7.3.3, page 278]{mackenzieGeneralTheory} that $\nabla^{\mathrm{YM}}$ is indeed a Yang-Mills connection with $\zeta \in \Omega^2(M;\mathrm{Ad}(P))$ for example given by 
+for all $X \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathrm{Ad}(P))$. It follows by straight-forward calculations as in \cite[\S 7.3, Prop.\ 7.3.2 and Lemma 7.3.3, page 278]{mackenzieGeneralTheory} that $\nabla^{\mathrm{YM}}$ is indeed a Yang-Mills connection with $\zeta \in \Omega^2(M;\mathrm{Ad}(P))$ for example given by 
 \bas
 \zeta(Y, Z)
 &\coloneqq
@@ -7651,7 +7670,7 @@ for all $Y, Z \in \mathfrak{X}(M)$. In other words, $\nabla^{\mathrm{YM}}$ is th
 &\coloneqq
 \mleft[ \mathrm{PT}^{P}(p), v \mright]
 \eas
-for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal parallel transport inherited by $\mathrm{PT}^{c_G(P)}$, so that we can conclude that $\nabla^{\mathrm{YM}}$ corresponds to the Yang-Mills connection on $c_G(P)$ in sense of Def.\ \ref{def:ConnectionOnLAB}.
+for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal parallel transport inherited by $\mathrm{PT}^{c_G(P)}$, so that we can conclude that $\nabla^{\mathrm{YM}}$ corresponds to the Yang-Mills connection on $c_G(P)$ in sense of Def.\ \ref{def:ConnectionOnLAB} (also recall Rem.\ \ref{PTLABComingFromPTLGB}).
 
 This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$. Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle.
 \end{examples}
@@ -7668,9 +7687,9 @@ F
 \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi^{\mathrm{H}\mathcal{P}}, \pi^{\mathrm{H}\mathcal{P}} \mright)
 	+ \pi^!\zeta,
 \eas
-where $\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}$ is the exterior covariant derivative related to the pullback connection $\pi^*\nabla^{\mathrm{YM}}$, and $\pi^{\mathrm{H}\mathcal{P}}: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ is the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$. That is,
+where $\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}$ is the exterior covariant derivative related to the pullback connection $\pi^*\nabla^{\mathrm{YM}}$, and $\pi^{\mathrm{H}\mathcal{P}}: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ is the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$; that is,
 \bas
-F
+F(X, Y)
 &=
 \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \mleft( \pi^{\mathrm{H}\mathcal{P}}(X), \pi^{\mathrm{H}\mathcal{P}}(Y) \mright)
 	+ \mleft(\pi^*\zeta\mright) \bigl( \mathrm{D}\pi(X), \mathrm{D}\pi(Y) \bigr)
@@ -7678,7 +7697,7 @@ F
 for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
 \end{definitions}
 
-Of course, we expect certain properties, naturally generalized by our previous discussion:
+Of course, we expect certain properties, naturally generalized by our previous discussions:
 
 \begin{propositions}{Properties of the field strength}{NewFieldStrengthWithCoolProps}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
