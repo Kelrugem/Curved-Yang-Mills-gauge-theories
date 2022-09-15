@@ -7587,7 +7587,7 @@ Keeping the same notation as in the proof of Thm.\ \ref{thm:GenMCEq}, we have de
 Thus, we can finally define the connection we need on the LGB.
 
 \begin{definitions}{Yang-Mills connection}{NowReallyYangMillsConnectio}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is a \textbf{Yang-Mills connection}, if it satisfies the \textbf{compatibility conditions}:
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is a \textbf{Yang-Mills connection (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$)}, if it satisfies the \textbf{compatibility conditions}:
 \begin{enumerate}
 	\item $\mathrm{H}\mathcal{G}$ is an Ehresmann connection,
 	\item the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies the generalized Maurer-Cartan equation (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$).
@@ -7597,6 +7597,8 @@ By Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} we can equivalently define
 	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative,
 	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies the generalized Maurer-Cartan equation (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$).
 \end{enumerate}
+
+We then label $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a Yang-Mills connection, too.
 \end{definitions}
 
 \begin{remarks}{Yang-Mills connections integrate infinitesimal Yang-Mills connections}{YangMillsEqualsInfYM}
@@ -7680,7 +7682,7 @@ This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$:
 Let us now introduce and discuss the field strength.
 
 \begin{definitions}{(Generalized) Field strength}{NewFieldStrength}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we define the \textbf{(generalized) field strength $F$} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we define the \textbf{(generalized) field strength $F$} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
 \bas
 F
 &\coloneqq
@@ -7700,7 +7702,7 @@ for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
 Of course, we expect certain properties, naturally generalized by our previous discussions:
 
 \begin{propositions}{Properties of the field strength}{NewFieldStrengthWithCoolProps}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
 \begin{itemize}
 	\item \textbf{(Form of type $\sAd$)}
 	\bas
