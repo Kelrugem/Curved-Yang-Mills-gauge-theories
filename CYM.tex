@@ -5399,7 +5399,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \eas
 for all $p \in \mathcal{P}_x$ and $X \in \mathrm{T}_p \mathcal{P}$, where $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$.
 
-Similarly, for a (local) section $\sigma$ of $\mathcal{G}$ we define the \textbf{modified right-pushforward $\mathcal{r}_{\sigma*}$ with $\sigma$} as a (local) map $\mathrm{T}\mathcal{P} \to \mathrm{T}\mathcal{P}$ by
+Similarly, for a (local) section $\sigma$ of $\mathcal{G}$ we define the \textbf{modified right-pushforward $\mathcal{r}_{\sigma*}$ with $\sigma$} as a (local) vector bundle isomorphism $\mathrm{T}\mathcal{P} \to \mathrm{T}\mathcal{P}$ by
 \bas
 \mathcal{r}_{\sigma*}(X)
 &\coloneqq
@@ -7789,12 +7789,14 @@ for all $p \in \mathcal{P}_x$ ($x \in M$) and $X, Y \in \mathrm{T}_p\mathcal{P}$
 	%\mathcal{r}_{\sigma*}Y
 %\mright)
 \eas
-Let us denote $X^h \coloneqq \pi_h(X)$ and $Y^h \coloneqq \pi_h(Y)$, and $X$ and $Y$ will now be elements of $\mathfrak{X}(\mathcal{P})$, and we rewrite
+Let us denote $X^h \coloneqq \pi_h(X)$ and $Y^h \coloneqq \pi_h(Y)$, where $X$ and $Y$ are elements of $\mathfrak{X}(\mathcal{P})$, and we rewrite
 \bas
 \mathcal{r}_{\sigma*}(X)
 &=
 \mathrm{D}r_{\sigma}(X)
-	- r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) (X)}}\mright).
+	- r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) (X)}}\mright)
+\in
+\Gamma\mleft( r_\sigma^* \mathrm{T}\mathcal{P} \mright) \cong \mathfrak{X}(\mathcal{P}).
 \eas
 %
 %Also observe that we have 
@@ -7904,7 +7906,7 @@ We know by Remark \ref{rem:FundVecsAreLABActions} that the map to fundamental ve
 &=
 r_\sigma^*\mleft(
 {\oversortoftilde{
-	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]
+	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]_{\mathcal{\pi^*\mathcal{g}}}
 }}
 \mright),
 \eas
@@ -7915,7 +7917,7 @@ and therefore we can derive for the fourth term in Eq.\ \eqref{TransformedClassi
 	\mright)
 &=
 r_\sigma^*\mleft(
-	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]
+	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]_{\mathcal{\pi^*\mathcal{g}}}
 \mright).
 \eas
 For the second and third summands in Eq.\ \eqref{TransformedClassicStrengthTerm} we want to use Lemma \ref{lem:BracketVertHor} and our result of the fourth summand to show
@@ -7938,7 +7940,7 @@ For the second and third summands in Eq.\ \eqref{TransformedClassicStrengthTerm}
 =
 r_\sigma^*\Biggl(\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(X^h\mright)}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr)\Biggr)
 	+ r_\sigma^*\mleft(
-	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]
+	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]_{\mathcal{\pi^*\mathcal{g}}}
 \mright)
 \eas
 using that $\mathcal{r}_{\sigma*}\mleft(X^h\mright)$ is horizontal due to the fact that $X^h$ is horizontal, and, last but not least, we can write
@@ -7979,7 +7981,7 @@ r_\sigma^*\mleft(
 		- \mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(Y^h\mright)}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright)\biggr)
 \\&\hspace{3cm}
 		- \mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)
-		+ \mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]
+		+ \mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]_{\mathcal{\pi^*\mathcal{g}}}
 \Biggr)
 \eas
 \end{proof}
