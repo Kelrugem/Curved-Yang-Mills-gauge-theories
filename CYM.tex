@@ -1260,12 +1260,10 @@ Observe that by the definition of $f^*\mathcal{G}$ we can also write
 \bas
 f(p \cdot g) &= f(p),
 \eas
-so, the $\mathcal{G}$-action is defined in such a way that $f$ is invariant under it. If $f$ is the projection of $N$ as a bundle over $M$, then this means that an LGB action is fibre-preserving. Moreover, the fibre-wise group structure on $\mathcal{G}$ naturally defines a $\mathcal{G}$-action on $\mathcal{G}$; in this situation $f$ would be $\pi$ itself, see also Ex.\ \ref{ex:LGBActingOnItself}. 
-
-\eqref{InvarianceOffUnderGAction} is mainly a technical condition: On one hand, having $M = \{*\}$ already recovers the notion of a Lie group action and condition \eqref{InvarianceOffUnderGAction} is then trivial, and on the other hand the mentioned reference, \cite[\S 1.6, Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}, actually generalizes this condition making use of the structure of groupoids.
+so, the $\mathcal{G}$-action is defined in such a way that $f$ is invariant under it. If $f$ is the projection of $N$ as a bundle over $M$, then this means that an LGB action is fibre-preserving. Moreover, the fibre-wise group structure on $\mathcal{G}$ naturally defines a $\mathcal{G}$-action on $\mathcal{G}$; in this situation $f$ would be $\pi$ itself, see also Ex.\ \ref{ex:LGBActingOnItself} later. Furthermore, having $M = \{*\}$ recovers the notion of a Lie group action and condition \eqref{InvarianceOffUnderGAction} is then trivial.
 \newline
 
-Furthermore, the other conditions are the typical conditions for actions, especially such that we get a $\mathcal{G}$-action on $f^*\mathcal{G}$ by
+The other conditions are the typical conditions for actions, especially such that we get a $\mathcal{G}$-action on $f^*\mathcal{G}$ by
 \ba
 (p, g) \cdot q
 &\coloneqq
@@ -1284,19 +1282,19 @@ Fix any open neighbourhood $U$ of $M$. Then $f^{-1}(U)$ is an open neighbourhood
 \eas
 because of $f(p \cdot g) \stackrel{\text{Eq.\ \eqref{InvarianceOffUnderGAction}}}{=} \pi(g) = f(p)$, that is, if $(p, g) \in \mleft.(N*\mathcal{G})\mright|_{f^{-1}(U)}$, then $p \in f^{-1}(U)$ and so $p \cdot g \in f^{-1}(U)$. In fact, by the definition of $N*\mathcal{G}$ as $f^*\mathcal{G}$, this describes a $\mathcal{G}|_{U}$-action on $f^{-1}(U)$
 \bas
-f^{-1}(U) * \mleft.\mathcal{G}\mright|_{U} \coloneqq \mleft( f|_U\mright)^*(\mathcal{G}|_U) = \mleft.(N*\mathcal{G})\mright|_{f^{-1}(U)} &\to f^{-1}(U).
+f^{-1}(U) * \mleft.\mathcal{G}\mright|_{U} \coloneqq \mleft( f|_{f^{-1}(U)}\mright)^*(\mathcal{G}|_U) = \mleft.(N*\mathcal{G})\mright|_{f^{-1}(U)} &\to f^{-1}(U).
 \eas
 If $x \in M$ is a regular value of $f$, then $f^{-1}(\{x\})$ is an embedded submanifold of $N$ due to the regular value theorem (for this see \textit{e.g.}\ \cite[\S A.1, Thm.\ A.1.32, page 611]{Hamilton}). In that case one could apply the same arguments to restrict the action on $f^{-1}(\{x\})$. Since $\mathcal{G}_x$ is a Lie group one actually gets a typical Lie group action on $f^{-1}(\{x\})$. For more details about this see Ex.\ \ref{ex:TrivialLGBAction} later.
 \end{remarks}
 
 \begin{remarks}{Left- and right-actions}{LeftRightAction}
-In the following we usually define everything with respect to right-actions; however, one can of course define the same following notions for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
+In the following we usually define everything with respect to right-actions; however, one can of course define the following notions for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
 \end{remarks}
 
 One can probably see that it is straightforward to extend a lot of the typical notions of Lie group actions to LGB actions; hence, we mainly focus on the definitions and properties which we need in this paper. 
 
 \begin{definitions}{Left and right translations, \newline \cite[\S 3.2, notation similar to Def.\ 3.2.3, page 131]{Hamilton} \newline \cite[\S 1.4, special situation of Def.\ 1.4.1 and its discussion, page 22]{mackenzieGeneralTheory}}{LRTranslations}
-Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Furthermore assume that we have a right action $N * \mathcal{G} \to N$. We define the \textbf{right translation} over $x \in M$ with $g \in \mathcal{G}$ as a map $r_g$ defined by
+Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Furthermore assume that we have a right action $N * \mathcal{G} \to N$. We define the \textbf{right translation} over $x \in M$ with $g \in \mathcal{G}_x$ as a map $r_g$ defined by
 \bas
 f^{-1}(\{x\}) &\to f^{-1}(\{x\}),\\
 p &\mapsto p \cdot g,
@@ -1322,11 +1320,11 @@ g &\mapsto \tau_{\pi(g)} \cdot g.
 \begin{remarks}{Left action and translation}{LeftTranslation}
 Similarly we define left translations for left actions, which we similarly denote by $l_g$ and $l_\sigma$. By Rem.\ \ref{rem:LocalLGBAction} we can define $r_\sigma$ (and $l_\sigma$) also for local sections $\sigma \in \Gamma(\mathcal{G}|_U)$ by restricting $N$ onto $f^{-1}(U)$, where $U$ is some open subset of $M$; then $r_\sigma, l_\sigma: f^{-1}(U) \to f^{-1}(U)$. In the same manner one achieves a restriction for $\Phi_\tau: \mathcal{G}|_U \to f^{-1}(U)$, if $\tau: U \to f^{-1}(U)$.
 
-In case of $N$ being $\mathcal{G}$ itself we may denote right (and left) translations via capital letters.
+In case of $N$ being $\mathcal{G}$ itself we will introduce right (and left) translations later via capital letters.
 \end{remarks}
 
 \begin{remarks}{Group action on sections}{SectionMultiplication}
-Assume that $N$ is a fibre bundle over $M$ with $f$ as its projection. Also observe that $\Gamma(\mathcal{G})$ is clearly a group and it may be possible to endow it with an infinite-dimensional Lie group structure. In the same fashion as before, we can define a $\Gamma(\mathcal{G})$-action on $\Gamma(N)$ given by
+Assume that $N$ is a fibre bundle over $M$ with $f$ as its projection. Also observe that $\Gamma(\mathcal{G})$ is clearly a group and it may be possible to endow it with an infinite-dimensional Lie group structure (but this is not important here now). In the same fashion as before, we can define a $\Gamma(\mathcal{G})$-action on $\Gamma(N)$ given by
 \bas
 \mleft(\tau \cdot \sigma\mright)_x
 &\coloneqq

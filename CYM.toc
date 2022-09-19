@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {2.2}Associated Lie group bundles}{7}{subsection.2.2}%
 \contentsline {section}{\numberline {3}LGB actions, part I}{13}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Definition}{13}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Examples of LGB actions}{20}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Examples of LGB actions}{19}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Lie algebra bundles (LABs)}{26}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Definition}{26}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}From LGBs to LABs}{29}{subsection.4.2}%
