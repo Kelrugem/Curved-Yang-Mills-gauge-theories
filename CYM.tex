@@ -7787,7 +7787,8 @@ for all $p \in \mathcal{P}_x$ ($x \in M$) and $X, Y \in \mathrm{T}_p\mathcal{P}$
 	%\mathcal{r}_{\sigma*}Y
 %\mright)
 \eas
-Let us denote $X^h \coloneqq \pi_h(X)$ and $Y^h \coloneqq \pi_h(Y)$, where $X$ and $Y$ are elements of $\mathfrak{X}(\mathcal{P})$, and we rewrite
+Let us denote $X^h \coloneqq \pi_h(X)$ and $Y^h \coloneqq \pi_h(Y)$, where $X$ and $Y$ are now elements of $\mathfrak{X}(\mathcal{P})$; since we are looking at tensorial equations we can w.l.o.g.\ assume that $X^h$ and $Y^h$ are the horizontal lifts of vector fields $\omega^X$ and $\omega^Y$, respectively, on $M$, especially $\mathrm{D}\pi\mleft( X^h \mright) = \mathrm{D}\pi\mleft( X \mright) = \pi^*\omega^X$ and $\mathrm{D}\pi\mleft( Y^h \mright) = \mathrm{D}\pi\mleft( Y \mright) = \pi^*\omega^Y$.
+We also rewrite
 \bas
 \mathcal{r}_{\sigma*}(X)
 &=
@@ -7796,6 +7797,7 @@ Let us denote $X^h \coloneqq \pi_h(X)$ and $Y^h \coloneqq \pi_h(Y)$, where $X$ a
 \in
 \Gamma\mleft( r_\sigma^* \mathrm{T}\mathcal{P} \mright) \cong \mathfrak{X}(\mathcal{P}).
 \eas
+In the following we will make use of the canonical identification $\mathfrak{X}(\mathcal{P}) \cong \Gamma\mleft( r_\sigma^* \mathrm{T}\mathcal{P} \mright)$, $X \mapsto r_\sigma^*X$, especially in order to calculate Lie brackets.
 %
 %Also observe that we have 
 %\bas
@@ -7936,35 +7938,58 @@ For the second and third summands in Eq.\ \eqref{TransformedClassicStrengthTerm}
 \\ 
 &\hspace{0.5cm}
 =
-r_\sigma^*\Biggl(\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(X^h\mright)}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr)\Biggr)
+r_\sigma^*\Biggl(
+\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(X^h\mright)}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr)
+\Biggr)
 	+ r_\sigma^*\mleft(
 	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]_{\mathcal{\pi^*\mathcal{g}}}
 \mright)
 \eas
-using that $\mathcal{r}_{\sigma*}\mleft(X^h\mright)$ is horizontal due to the fact that $X^h$ is horizontal, and, last but not least, we can write
+using that $\mathcal{r}_{\sigma*}\mleft(X^h\mright)$ is horizontal due to the fact that $X^h$ is horizontal, and, last but not least, we can write for terms like
 \bas
-\mathrm{D}\pi\mleft( \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright)
+\mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)
 &=
-\mathrm{D}\pi\mleft( \mathrm{D}r_{\sigma}\mleft(Y^h\mright)
-	- r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)}}\mright) \mright)
+\mleft(\pi^* \Delta \sigma \mright) \mleft(\mathrm{D}\pi\mleft(Y^h\mright)\mright)
 =
-\mathrm{D}{\underbrace{\mleft( \pi \circ r_\sigma \mright)}_{= \pi}}\mleft(Y^h\mright)
+\mleft(\pi^* \Delta \sigma \mright) \mleft(\pi^*\omega^Y\mright)
 =
-\mathrm{D}\pi\mleft(Y^h\mright)
+\pi^*\Bigl( \mleft(\Delta \sigma \mright) \mleft(\omega^Y\mright) \Bigr),
 \eas
-using that fundamental vector fields are in the kernel of $\mathrm{D}\pi$, and therefore
+and
 \bas
-\mleft.\mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright)\mright|_p
+\mathrm{D}\pi\mleft( \mathcal{r}_{\sigma*}\mleft(X^h\mright) \mright)
 &=
-\mleft(\Delta \sigma \mright)_x\mleft(\mathrm{D}_p\pi\mleft(Y^h_p\mright) \mright)
+\mathrm{D}\pi\mleft( \mathrm{D}r_{\sigma}\mleft(X^h\mright)
+	- r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright)}}\mright) \mright)
 =
-\mleft(\pi^* \Delta \sigma \mright)\mleft(\mathrm{D}\pi\mleft( \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright) \mright)
+\mathrm{D}{\underbrace{\mleft( \pi \circ r_\sigma \mright)}_{= \pi}}\mleft(X^h\mright)
 =
-\mleft(\pi^! \Delta \sigma \mright)\mleft( \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright).
+\mathrm{D}\pi\mleft(X^h\mright),
 \eas
-for all $p \in \mathcal{P}_x$ ($x \in M$).
+using that fundamental vector fields are in the kernel of $\mathrm{D}\pi$, 
+and therefore
+\bas
+%r_\sigma^*\Biggl(
+\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(X^h\mright)}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr)
+%\Biggr)
+&=
+\pi^*\mleft(
+	\nabla^{\mathrm{YM}}_{\mathrm{D}\pi\mleft(X^h\mright)}\Bigl( \mleft(\Delta \sigma \mright) \mleft(\omega^Y\mright)\Bigr)
+\mright)
+\\
+&=
+\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{X^h}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr).
+%\mleft.\mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright)\mright|_p
+%&=
+%\mleft(\Delta \sigma \mright)_x\mleft(\mathrm{D}_p\pi\mleft(Y^h_p\mright) \mright)
+%=
+%\mleft(\pi^* \Delta \sigma \mright)\mleft(\mathrm{D}\pi\mleft( \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright) \mright)
+%=
+%\mleft(\pi^! \Delta \sigma \mright)\mleft( \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright)
+\eas
+%for all $p \in \mathcal{P}_x$ ($x \in M$).
 
-Collecting all these results we can write Eq.\ \eqref{TransformedClassicStrengthTerm} to
+Collecting all these results we can write Eq.\ \eqref{TransformedClassicStrengthTerm} as
 \bas
 &
 r_\sigma^*\mleft(
@@ -7975,8 +8000,8 @@ r_\sigma^*\mleft(
 \sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
 \\&\hspace{1.5cm}
 	+ r_{\sigma}^*\Biggl(
-		\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(X^h\mright)}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr)
-		- \mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{\mathcal{r}_{\sigma*}\mleft(Y^h\mright)}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright)\biggr)
+		\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{X^h}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr)
+		- \mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{Y^h}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright)\biggr)
 \\&\hspace{3cm}
 		- \mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)
 		+ \mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]_{\mathcal{\pi^*\mathcal{g}}}
