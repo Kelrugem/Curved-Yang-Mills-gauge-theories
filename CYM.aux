@@ -5,10 +5,13 @@
 \@nameuse{bbl@beforestart}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -473,16 +476,16 @@
 \newlabel{prop:NewFieldStrengthWithCoolProps}{{6.91}{130}{Properties of the field strength}{theorem.6.91}{}}
 \citation{Hamilton}
 \newlabel{TransformedClassicStrengthTerm}{{60}{131}{Field strength related to Yang-Mills connections}{equation.6.60}{}}
-\BKM@entry{id=34,dest={73656374696F6E2E37},srcline={8014}}{5C3337365C3337375C303030435C303030755C303030725C303030765C303030655C303030645C3030305C3034305C303030595C303030615C3030306E5C303030675C3030302D5C3030304D5C303030695C3030306C5C3030306C5C303030735C3030305C3034305C303030675C303030615C303030755C303030675C303030655C3030305C3034305C303030745C303030685C303030655C3030306F5C303030725C30303079}
-\BKM@entry{id=35,dest={73656374696F6E2E38},srcline={8016}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030635C3030306C5C303030755C303030735C303030695C3030306F5C3030306E}
+\citation{Hamilton}
+\BKM@entry{id=34,dest={73656374696F6E2E37},srcline={8044}}{5C3337365C3337375C303030435C303030755C303030725C303030765C303030655C303030645C3030305C3034305C303030595C303030615C3030306E5C303030675C3030302D5C3030304D5C303030695C3030306C5C3030306C5C303030735C3030305C3034305C303030675C303030615C303030755C303030675C303030655C3030305C3034305C303030745C303030685C303030655C3030306F5C303030725C30303079}
+\BKM@entry{id=35,dest={73656374696F6E2E38},srcline={8046}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030635C3030306C5C303030755C303030735C303030695C3030306F5C3030306E}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{133}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{133}{section.8}\protected@file@percent }
 \bibdata{Literatur}
 \BKM@entry{id=36,dest={73656374696F6E2A2E33},srcline={1}}{5C3337365C3337375C3030304C5C303030695C303030735C303030745C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C303030655C303030665C303030655C303030725C303030655C3030306E5C303030635C303030655C30303073}
 \bibcite{Hamilton}{1}
 \bibcite{mackenzieGeneralTheory}{2}
 \bibcite{PullbackLGBLAB}{3}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{133}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{133}{section.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\nonumberline List of References}{133}{section*.3}\protected@file@percent }
 \bibcite{DaSilva}{4}
 \bibcite{MyThesis}{5}
 \bibcite{GroupoidBasedPrincipalBundles}{6}
@@ -493,11 +496,12 @@
 \bibcite{FernandesMarcutMultiplicativeForms}{11}
 \bibcite{crainic2015multiplicative}{12}
 \bibcite{crainic2003differentiable}{13}
+\@writefile{toc}{\contentsline {section}{\nonumberline List of References}{134}{section*.3}\protected@file@percent }
 \bibcite{bursztyn2004integration}{14}
 \bibcite{Highervectorbundles}{15}
 \bibcite{meinrenkensplitting}{16}
 \bibstyle{unsrt}
-\BKM@entry{id=37,dest={617070656E6469782E41},srcline={8048}}{5C3337365C3337375C303030445C3030306F5C303030755C303030625C3030306C5C303030655C3030305C3034305C303030745C303030615C3030306E5C303030675C303030655C3030306E5C303030745C3030305C3034305C303030625C303030755C3030306E5C303030645C3030306C5C303030655C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030695C303030745C303030735C3030305C3034305C303030635C303030615C3030306E5C3030306F5C3030306E5C303030695C303030635C303030615C3030306C5C3030305C3034305C303030665C3030306C5C303030695C303030705C3030305C3034305C3030306D5C303030615C30303070}
+\BKM@entry{id=37,dest={617070656E6469782E41},srcline={8078}}{5C3337365C3337375C303030445C3030306F5C303030755C303030625C3030306C5C303030655C3030305C3034305C303030745C303030615C3030306E5C303030675C303030655C3030306E5C303030745C3030305C3034305C303030625C303030755C3030306E5C303030645C3030306C5C303030655C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030695C303030745C303030735C3030305C3034305C303030635C303030615C3030306E5C3030306F5C3030306E5C303030695C303030635C303030615C3030306C5C3030305C3034305C303030665C3030306C5C303030695C303030705C3030305C3034305C3030306D5C303030615C30303070}
 \citation{mackenzieGeneralTheory}
 \citation{mackenzieGeneralTheory}
 \@writefile{toc}{\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{135}{appendix.A}\protected@file@percent }
@@ -507,18 +511,18 @@
 \newlabel{DoubleTangentAsDiagram}{{A.1}{136}{Double tangent bundle and its canonical flip map}{equation.A.1}{}}
 \citation{mackenzieGeneralTheory}
 \newlabel{definitionOfFlipMap}{{A.2}{137}{Double tangent bundle and its canonical flip map}{equation.A.2}{}}
-\newlabel{CoordinateExpressionOfTTM}{{A.3}{137}{Double tangent bundle and its canonical flip map}{equation.A.3}{}}
-\citation{mackenzieGeneralTheory}
+\newlabel{CoordinateExpressionOfTTM}{{A.3}{138}{Double tangent bundle and its canonical flip map}{equation.A.3}{}}
 \newlabel{CoordinateExprOfFlippy}{{A.4}{138}{Double tangent bundle and its canonical flip map}{equation.A.4}{}}
 \newlabel{LinearStructureOfProlongInCoordinates}{{A.5}{138}{Double tangent bundle and its canonical flip map}{equation.A.5}{}}
+\citation{mackenzieGeneralTheory}
 \newlabel{rem:CanonicalInvolutionAnIsom}{{A.1}{139}{The canonical involution/flip map an isomorphism, \newline \cite [\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}}{theorem.A.1}{}}
 \newlabel{rem:SchwarzThmInDiffGeo}{{A.2}{139}{Revisit: Schwarz's Theorem}{theorem.A.2}{}}
-\citation{mackenzieGeneralTheory}
 \newlabel{rem:TotalDerivativesAreLinearWithRTOtherLinearStructure}{{A.3}{140}{Total derivatives of tangent bundle morphisms linear with respect to prolonged vertical structure}{theorem.A.3}{}}
-\citation{meinrenkensplitting}
+\citation{mackenzieGeneralTheory}
 \newlabel{rem:BothLinearStructuresTheSameOnTheVerticalBundle}{{A.4}{141}{Alignment of both vector bundle structures on $\mathrm {TT}M$ on the restricted vertical bundle}{theorem.A.4}{}}
+\citation{meinrenkensplitting}
 \newlabel{rem:TangentLifts}{{A.5}{142}{Tangent lift, \cite [\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{theorem.A.5}{}}
-\newlabel{TotalDerivativeOfTMWithLeibniz}{{A.6}{142}{Tangent lift, \cite [\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{equation.A.6}{}}
+\newlabel{TotalDerivativeOfTMWithLeibniz}{{A.6}{143}{Tangent lift, \cite [\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{equation.A.6}{}}
 \global\csname @altsecnumformattrue\endcsname
 \global\@namedef{scr@dte@section@lastmaxnumwidth}{16.1933pt}
 \global\@namedef{scr@dte@subsection@lastmaxnumwidth}{21.4132pt}

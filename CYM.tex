@@ -7964,7 +7964,7 @@ and
 =
 \mathrm{D}{\underbrace{\mleft( \pi \circ r_\sigma \mright)}_{= \pi}}\mleft(X^h\mright)
 =
-\mathrm{D}\pi\mleft(X^h\mright),
+\omega^X,
 \eas
 using that fundamental vector fields are in the kernel of $\mathrm{D}\pi$, 
 and therefore
@@ -7974,11 +7974,11 @@ and therefore
 %\Biggr)
 &=
 \pi^*\mleft(
-	\nabla^{\mathrm{YM}}_{\mathrm{D}\pi\mleft(X^h\mright)}\Bigl( \mleft(\Delta \sigma \mright) \mleft(\omega^Y\mright)\Bigr)
-\mright)
-\\
-&=
-\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{X^h}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr).
+	\nabla^{\mathrm{YM}}_{\omega^X}\Bigl( \mleft(\Delta \sigma \mright) \mleft(\omega^Y\mright)\Bigr)
+\mright).
+%\\
+%&=
+%\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{X^h}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr).
 %\mleft.\mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright)\mright|_p
 %&=
 %\mleft(\Delta \sigma \mright)_x\mleft(\mathrm{D}_p\pi\mleft(Y^h_p\mright) \mright)
@@ -8000,13 +8000,43 @@ r_\sigma^*\mleft(
 \sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
 \\&\hspace{1.5cm}
 	+ r_{\sigma}^*\Biggl(
-		\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{X^h}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr)
-		- \mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_{Y^h}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright)\biggr)
+		\pi^*\mleft(
+	\nabla^{\mathrm{YM}}_{\omega^X}\Bigl( \mleft(\Delta \sigma \mright) \mleft(\omega^Y\mright)\Bigr)
+\mright)
+		- \pi^*\mleft(
+	\nabla^{\mathrm{YM}}_{\omega^Y}\Bigl( \mleft(\Delta \sigma \mright) \mleft(\omega^X\mright)\Bigr)
+\mright)
 \\&\hspace{3cm}
-		- \mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)
-		+ \mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]_{\mathcal{\pi^*\mathcal{g}}}
+		- {\underbrace{\mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)}_{= \pi^* \mleft(\Delta \sigma \mleft(\mleft[ \omega^X, \omega^Y\mright]\mright)\mright)}}
+		+ \mleft[ \pi^*\Bigl( \mleft(\Delta \sigma \mright) \mleft(\omega^X\mright) \Bigr), \pi^*\Bigl( \mleft(\Delta \sigma \mright) \mleft(\omega^Y\mright) \Bigr) \mright]_{\mathcal{\pi^*\mathcal{g}}}
+\Biggr)
+\\&\hspace{1cm}
+=
+\sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
+\\&\hspace{1.5cm}
+	+ r_{\sigma}^* \pi^*\mleft( 
+		\mleft(
+			\mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta\sigma
+			+ \frac{1}{2} \mleft[ \Delta\sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}
+		\mright)
+	\mleft(\omega^X, \omega^Y\mright) \mright)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\&\hspace{1cm}
+=
+\sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
+\\&\hspace{1.5cm}
+	+ r_{\sigma}^*\Biggl( \mleft(
+		\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}\mleft( \pi^!\Delta\sigma \mright)
+		+ \frac{1}{2} \mleft[ \pi^!\Delta\sigma \stackrel{\wedge}{,} \pi^!\Delta\sigma \mright]_{\mathcal{\pi^*\mathcal{g}}} \mright)\mleft( X^h, Y^h \mright)
 \Biggr)
 \eas
+where we used that $\mathrm{D}\pi (X) = \pi^*\omega^X$ and $\mathrm{D}\pi (Y) = \pi^*\omega^Y$, which immediately implies
+\bas
+\mathrm{D}\pi\mleft( [X, Y] \mright)
+&=
+\pi^*\mleft( \mleft[\omega^X, \omega^Y\mright] \mright),
+\eas
+which is a well-known fact, as also given in \cite[Proposition A.1.49; page 615]{Hamilton}, but also straight-forward to check. 
 \end{proof}
 
 %\subsection{Generalized covariant derivative/minimal coupling}
