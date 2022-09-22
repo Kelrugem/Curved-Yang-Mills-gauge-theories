@@ -7168,13 +7168,23 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 for all $g \in \mathcal{G}_x$ ($x \in M$). We then say that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ solves the \textbf{generalized Maurer-Cartan equation (w.r.t.\ $\zeta$)}.
 \end{theorems}
 
-\begin{remark}
+\begin{remark}\label{BasePointDifficultiesinGenMCEq}
 \leavevmode\newline
 The structure on the right hand side is again due to denoting the base point in pullback bundles; one may decide to drop the base point for simplicity in the notation. Since the base point is clear by context, one may also just write
 \bas
 \mathrm{Ad}_{g^{-1}} \circ \pi_{\mathcal{G}}^!\zeta
 \eas
 on the right hand side.
+%
+%W.r.t.\ a section $\sigma \in \Gamma(\mathcal{G})$ the notation simplifies again to
+%\bas
+%\mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+	%+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
+	%+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_\sigma
+%&=
+%%\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
+%\pi_{\mathcal{G}}^!\mleft(\mathrm{Ad}_{\sigma^{-1}} \circ \zeta \mright).
+%\eas
 \end{remark}
 
 \begin{remarks}{Classical Maurer-Cartan equation recovered}{ClassicalMCEqinGeneralizedOne}
@@ -7558,7 +7568,7 @@ which finishes the proof.
 Trivially, this theorem is an extension of Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation} (Lemma \ref{lem:FieldRedefViaLGBSection}).
 
 \begin{corollaries}{Pullback of generalized Maurer-Cartan equation}{PullbackOfMCSupperEquation}
-Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$ satisfying the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB} w.r.t.\ a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$ so that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies the generalized Maurer-Cartan equation \eqref{THEGeneralizedMCEq} w.r.t.\ a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then
 \bas
 \mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta \sigma 
 	+ \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} 
@@ -7699,7 +7709,7 @@ for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
 
 Of course, we expect certain properties, naturally generalized by our previous discussions:
 
-\begin{propositions}{Properties of the field strength}{NewFieldStrengthWithCoolProps}
+\begin{propositions}{Properties of the generalized field strength}{NewFieldStrengthWithCoolProps}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
 \begin{itemize}
 	\item \textbf{(Form of type $\sAd$)}
@@ -7721,14 +7731,16 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \end{itemize}
 \end{propositions}
 
-However, despite the easy proof in the classical theory, the proof of the first property in Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} will be rather involved. 
+However, despite the easy proof in the classical theory, the proof of the first property in Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} will be rather involved; most of the proof is straight-forward calculation, and then use our discussion about Yang-Mills connections; the quintessence will be about using Lemma \ref{lem:BracketVertHor} (for first order terms w.r.t.\ $\sigma$) and Cor.\ \ref{cor:PullbackOfMCSupperEquation} (for second order terms w.r.t.\ $\sigma$).
 %Now we can finally prove Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}.
 
 \begin{proof}[Proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}]
 \leavevmode\newline
-The second bullet point quickly follows by construction: The first summand of $F$ (recall Def.\ \ref{def:NewFieldStrength}) is clearly zero if either of $X$ and $Y$ is vertical; similar holds for the second summand because the vertical bundle is the kernel of $\mathrm{D}\pi$.
+For this proof we will neglect caring for the base point information in the involved pullback bundles since the base point information is clear by context; recall Subsection \ref{BasicNotations}. In that sense we also have $\sAd_\sigma \cong \pi^*\mathrm{Ad}_\sigma \cong \mathrm{Ad}_\sigma$ for all $\sigma \in \Gamma(\mathcal{G})$ \textit{etc.}; this will simplify the following notation a bit.
 
-Thence, let us focus on proving the first bullet point, and denote with $\pi_h: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, so that we write
+$\bullet$ The second bullet point quickly follows by construction: The first summand of $F$ (recall Def.\ \ref{def:NewFieldStrength}) is clearly zero if either of $X$ and $Y$ is vertical; similar holds for the second summand because the vertical bundle is the kernel of $\mathrm{D}\pi$.
+
+$\bullet$ Thence, let us focus on proving the first bullet point, and denote with $\pi_h: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, so that we write
 \bas
 F
 &=
@@ -7989,7 +8001,7 @@ and therefore
 \eas
 %for all $p \in \mathcal{P}_x$ ($x \in M$).
 
-Collecting all these results we can write Eq.\ \eqref{TransformedClassicStrengthTerm} as
+Collecting all these results and using Cor.\ \ref{cor:PullbackOfMCSupperEquation} we can write Eq.\ \eqref{TransformedClassicStrengthTerm} as
 \bas
 &
 r_\sigma^*\mleft(
@@ -8013,22 +8025,44 @@ r_\sigma^*\mleft(
 \\&\hspace{1cm}
 =
 \sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
-\\&\hspace{1.5cm}
-	+ r_{\sigma}^* \pi^*\mleft( 
+%\\&\hspace{1.5cm}
+	+ {\underbrace{r_{\sigma}^* \pi^*}_{= \pi^*}}\mleft( 
 		\mleft(
 			\mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta\sigma
 			+ \frac{1}{2} \mleft[ \Delta\sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}
 		\mright)
 	\mleft(\omega^X, \omega^Y\mright) \mright)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \\&\hspace{1cm}
 =
 \sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
-\\&\hspace{1.5cm}
-	+ r_{\sigma}^*\Biggl( \mleft(
-		\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}\mleft( \pi^!\Delta\sigma \mright)
-		+ \frac{1}{2} \mleft[ \pi^!\Delta\sigma \stackrel{\wedge}{,} \pi^!\Delta\sigma \mright]_{\mathcal{\pi^*\mathcal{g}}} \mright)\mleft( X^h, Y^h \mright)
-\Biggr)
+%\\&\hspace{1.5cm}
+	+ \pi^*\mleft( 
+		\mleft( \mathrm{Ad}_{\sigma^{-1}} \circ \zeta 
+		- \zeta \mright)
+	\bigl(\mathrm{D}\pi(X), \mathrm{D}\pi(Y)\bigr) \mright)
+\\&\hspace{1cm}
+=
+\sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
+%\\&\hspace{1.5cm}
+	+ \mleft(\mleft(\pi^!\mleft(  
+		\mathrm{Ad}_{\sigma^{-1}} \circ \zeta 
+		- \zeta 
+	\mright)\mright)(X, Y) \mright)
+\\&\hspace{1cm}
+=
+\mleft(
+	\sAd_{\sigma^{-1}}\circ \mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \circ ( \pi_h, \pi_h) + \pi^!\zeta \mright) 
+		- \pi^!\zeta 
+\mright)(X, Y)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\\&\hspace{1cm}
+%=
+%\sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
+%\\&\hspace{1.5cm}
+	%+ r_{\sigma}^*\Biggl( \mleft(
+		%\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}\mleft( \pi^!\Delta\sigma \mright)
+		%+ \frac{1}{2} \mleft[ \pi^!\Delta\sigma \stackrel{\wedge}{,} \pi^!\Delta\sigma \mright]_{\mathcal{\pi^*\mathcal{g}}} \mright)\mleft( X^h, Y^h \mright)
+%\Biggr)
 \eas
 where we used that $\mathrm{D}\pi (X) = \pi^*\omega^X$ and $\mathrm{D}\pi (Y) = \pi^*\omega^Y$, which immediately implies
 \bas
@@ -8037,6 +8071,34 @@ where we used that $\mathrm{D}\pi (X) = \pi^*\omega^X$ and $\mathrm{D}\pi (Y) = 
 \pi^*\mleft( \mleft[\omega^X, \omega^Y\mright] \mright),
 \eas
 which is a well-known fact, as also given in \cite[Proposition A.1.49; page 615]{Hamilton}, but also straight-forward to check. 
+
+Finally, we can conclude this proof by combining the previous result with our first calculation of this proof, that is,
+\bas
+\mathcal{r}_{\sigma}^!F
+&=
+\sAd_{\sigma^{-1}}\circ \mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \circ ( \pi_h, \pi_h) + \pi^!\zeta \mright) 
+		- \pi^!\zeta
+		+ \pi^!\zeta
+=
+\sAd_{\sigma^{-1}} \circ F.
+\eas
+\end{proof}
+
+We achieve of course also a structure equation.
+
+\begin{theorems}{Structure equation of the generalized field strength}{StructureEq}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the \textbf{structure equation}
+\bas
+F
+=
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A
+	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
+	+ \pi^!\zeta.
+\eas
+\end{theorems}
+
+\begin{proof}[Proof of Thm.\ \ref{thm:StructureEq}]
+\leavevmode\newline
 \end{proof}
 
 %\subsection{Generalized covariant derivative/minimal coupling}
