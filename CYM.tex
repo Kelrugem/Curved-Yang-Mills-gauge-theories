@@ -7163,16 +7163,18 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
 &=
 %\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
-\mleft( g, \mathrm{Ad}_{g^{-1}} \circ \zeta_x \circ \mathrm{D}_g \pi_{\mathcal{G}} \mright)
+\mleft( g, \mathrm{Ad}_{g^{-1}} \circ \zeta_x \circ \mleft(\mathrm{D}_g \pi_{\mathcal{G}}, \mathrm{D}_g \pi_{\mathcal{G}}\mright) \mright)
 \ea
 for all $g \in \mathcal{G}_x$ ($x \in M$). We then say that $\mu_{\mathcal{G}}^{\mathrm{tot}}$ solves the \textbf{generalized Maurer-Cartan equation (w.r.t.\ $\zeta$)}.
 \end{theorems}
 
 \begin{remark}\label{BasePointDifficultiesinGenMCEq}
 \leavevmode\newline
-The structure on the right hand side is again due to denoting the base point in pullback bundles; one may decide to drop the base point for simplicity in the notation. Since the base point is clear by context, one may also just write
+The structure on the right hand side is again due to denoting the base point in pullback bundles; one may decide to drop the base point for simplicity in the notation. In that case, since the base point is clear by context, one may also just write
 \bas
-\mathrm{Ad}_{g^{-1}} \circ \pi_{\mathcal{G}}^!\zeta
+\sAd_{g^{-1}} \circ \mleft.\pi_{\mathcal{G}}^!\zeta\mright|_g
+~\text{ or }~
+\mathrm{Ad}_{g^{-1}} \circ \mleft.\pi_{\mathcal{G}}^!\zeta\mright|_g
 \eas
 on the right hand side.
 %
@@ -7216,7 +7218,7 @@ On degree 0 $\delta$ is a map $\Omega^\bullet(M; \mathcal{g}) \to \Omega^\bullet
 \bas
 \mleft(\delta\xi\mright)_g
 \coloneqq
-\mleft( g, \mathrm{Ad}_{g^{-1}} \circ \xi_x \circ \mathrm{D}_g \pi_{\mathcal{G}} \mright)
+\bigl( g, \mathrm{Ad}_{g^{-1}} \circ \xi_x \circ {\underbrace{\mleft(\mathrm{D}_g \pi_{\mathcal{G}}, \dotsc, \mathrm{D}_g \pi_{\mathcal{G}}\mright)}_{ \text{times the degree of $\xi$} }} \bigr)
 	- \mleft.\mleft(\pi_{\mathcal{G}}^! \xi\mright)\mright|_g
 \eas
 for all $g\in \mathcal{G}$. Then observe that we can rewrite the generalized Mauer-Cartan equation to
@@ -7270,7 +7272,7 @@ The idea of the proof is similar to the proof of a statement about when two mult
 \mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
 	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
 	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
-	- \mleft( g, \mathrm{Ad}_{g^{-1}} \circ \zeta_x \circ \mathrm{D}_g \pi_{\mathcal{G}} \mright)
+	- \mleft( g, \mathrm{Ad}_{g^{-1}} \circ \zeta_x \circ \mleft(\mathrm{D}_g \pi_{\mathcal{G}}, \mathrm{D}_g \pi_{\mathcal{G}}\mright) \mright)
 \eas
 is constant along the fibres of $\mathcal{G}$, that is, constant along the flows of vertical tangent vectors, the left-invariant vector fields (recall Cor.\ \ref{cor:TLGBAsLGB}). 
 
@@ -7682,7 +7684,7 @@ for all $Y, Z \in \mathfrak{X}(M)$. In other words, $\nabla^{\mathrm{YM}}$ is th
 \eas
 for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal parallel transport inherited by $\mathrm{PT}^{c_G(P)}$, so that we can conclude that $\nabla^{\mathrm{YM}}$ corresponds to the Yang-Mills connection on $c_G(P)$ in sense of Def.\ \ref{def:ConnectionOnLAB} (also recall Rem.\ \ref{PTLABComingFromPTLGB}).
 
-This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$. Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle.
+This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$. Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle, thence also the label as Yang-Mills connection to reflect its relation to the classical theory.
 \end{examples}
 
 \subsubsection{Field strength related to Yang-Mills connections}
@@ -7705,6 +7707,8 @@ F(X, Y)
 	+ \mleft(\pi^*\zeta\mright) \bigl( \mathrm{D}\pi(X), \mathrm{D}\pi(Y) \bigr)
 \eas
 for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
+
+One may label $F$ also as the \textbf{curvature of $A$}.
 \end{definitions}
 
 Of course, we expect certain properties, naturally generalized by our previous discussions:
@@ -8097,9 +8101,39 @@ F
 \eas
 \end{theorems}
 
+\begin{remarks}{The generalized field strength of the total Maurer-Cartan form}{CurvoftotMCForm}
+Again viewing $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ as the principal bundle itself with $\mathrm{H}\mathcal{P} = \mathrm{H}\mathcal{G}$, we know by Cor.\ \ref{cor:TotMCFormIsConnectionForm} that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$. Denoting the associated generalized field strength by $F\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)$, the structure equation and the generalized Maurer-Cartan equation, Thm.\ \ref{thm:GenMCEq} (also recall Rem.\ \ref{BasePointDifficultiesinGenMCEq}), imply
+\bas
+F_g\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)
+&=
+\sAd_{g^{-1}} \circ \mleft. \pi_{\mathcal{G}}^!\zeta \mright|_g
+\eas
+for all $g \in \mathcal{G}_x$ ($x \in M$). This implies that $F\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)$ is fully encoded by $\zeta$, especially we have
+\ba\label{ZetaIsTheCurvatureOnG}
+e^!\Bigl(F\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)\Bigr)
+&=
+\zeta,
+\ea
+where $e$ is the neutral section of $\mathcal{G}$. Thus, $\zeta$ is the curvature of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ restricted on $M$, and 
+\bas
+F
+&=
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A
+	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
+	+ (e \circ \pi)^!\Bigl(F\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)\Bigr).
+\eas
+Following similar calculations as in the proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}, it is trivial to show that the first two summands measure the failure of $\mathrm{H}\mathcal{P}$ being a foliation, hence this meaning carries over from the classical theory as also argued in \cite[\S 2.5, Cor.\ 2.23]{FernandesMarcutMultiplicativeForms} for LGBs. Due to the third summand, $\mathrm{H}\mathcal{P}$ is involutive if and only if
+\bas
+F
+&=
+(e \circ \pi)^!\Bigl(F\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)\Bigr).
+\eas
+In that sense Eq.\ \eqref{ZetaIsTheCurvatureOnG} reflects the fact that $M$ is a horizontal leave of $\mathrm{H}\mathcal{G}$. Furthermore, $F$ can be non-zero while $\mathrm{H}\mathcal{P}$ is involutive, if $F\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}} \mright)$ is non-zero along $M$.
+\end{remarks}
+
 \begin{proof}[Proof of Thm.\ \ref{thm:StructureEq}]
 \leavevmode\newline
-The idea of the proof is similar to the proof of the "classical" statement; following the structure of \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}.
+The idea of the proof is similar to the proof of the "classical" statement; following the structure of \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}. That is, we will look at vertical and horizontal tangent vectors and their mixed terms; recall Def.\ \ref{def:GaugeBosonsOnLGBPrincies} and Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}.
 
 $\bullet$ We have by Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}
 \bas
@@ -8107,8 +8141,118 @@ F\mleft( \widetilde{\nu}, \widetilde{\mu} \mright)
 &=
 0
 \eas
-for all $\mu, \nu \in \Gamma(\mathcal{g})$.
+for all $\mu, \nu \in \Gamma(\mathcal{g})$. Regarding the right hand side of the structure equation, this trivially also holds for the third summand $\mleft(\pi^!\zeta\mright)\mleft( \widetilde{\nu}, \widetilde{\mu} \mright) = 0$. We also have
+\bas
+\mleft(\frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}\mright)\mleft( \widetilde{\nu}, \widetilde{\mu} \mright)
+&=
+\mleft[ A\mleft( \widetilde{\nu} \mright), A\mleft( \widetilde{\mu} \mright) \mright]_{\pi^*\mathcal{g}}
+=
+\mleft[ \pi^*\nu, \pi^*\mu \mright]_{\pi^*\mathcal{g}}
+=
+\pi^*\mleft( \mleft[ \nu, \mu \mright]_{\mathcal{g}} \mright),
+\eas
+and
+\bas
+\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright)\mleft( \widetilde{\nu}, \widetilde{\mu} \mright)
+&=
+{\underbrace{\mleft(\pi^*\nabla^{\mathrm{YM}}\mright)_{\widetilde{\nu}} \bigl(A\mleft( \widetilde{\mu} \mright) \bigr)}_{\mathclap{ = \pi^*\mleft( \nabla^{\mathrm{YM}}_{\mathrm{D}\pi\mleft( \widetilde{\nu} \mright)} \mu \mright) = 0 }}}
+	- \mleft(\pi^*\nabla^{\mathrm{YM}}\mright)_{\widetilde{\mu}} \bigl(A\mleft( \widetilde{\nu} \mright) \bigr)
+	- A {\underbrace{\bigl( \mleft[ \widetilde{\nu}, \widetilde{\mu} \mright] \bigr)}_{= \widetilde{[\nu, \mu]}}}
+=
+- \pi^*\mleft( \mleft[ \nu, \mu \mright]_{\mathcal{g}} \mright).
+\eas
+Thus,
+\bas
+\mleft(
+	\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A
+	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
+	+ \pi^!\zeta
+\mright)\mleft( \widetilde{\nu}, \widetilde{\mu} \mright)
+&=
+0
+=
+F\mleft( \widetilde{\nu}, \widetilde{\mu} \mright).
+\eas
+
+$\bullet$ Let $X$ and $Y$ be horizontal vector fields of $\mathcal{P}$, then clearly
+\bas
+\mleft(\frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}\mright)(X, Y)
+&=
+\bigl[ A\mleft( X \mright), A\mleft( Y \mright) \bigr]_{\pi^*\mathcal{g}}
+=
+0,
+\eas
+then clearly
+\bas
+\mleft(
+	\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A
+	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
+	+ \pi^!\zeta
+\mright)(X, Y)
+&=
+\mleft(
+	\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi_h, \pi_h \mright)
+	+ \pi^!\zeta
+\mright)(X, Y)
+=
+F(X, Y),
+\eas
+where $\pi_h: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ denotes the canonical projection onto the horizontal bundle $\mathrm{H}\mathcal{P}$ (especially, $\pi_h(X) = X$, $\pi_h(Y)= Y$).
+
+$\bullet$ Now let $X \in \mathfrak{X}(\mathcal{P})$ be again horizontal and $\nu \in \Gamma(\mathcal{g})$; then again by Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}
+\bas
+F\mleft(X, \widetilde{\nu}\mright)
+&=
+0,
+\eas
+as also clearly $\mleft( \pi^!\zeta \mright)\mleft(X, \widetilde{\nu}\mright) = 0$,
+furthermore
+\bas
+\mleft(\frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}\mright)\mleft( X, \widetilde{\nu} \mright)
+&=
+\mleft[ A(X), A\mleft( \widetilde{\nu} \mright) \mright]_{\pi^*\mathcal{g}}
+=
+0,
+\eas
+and by Lemma \ref{lem:BracketVertHor}
+\bas
+\mleft(\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright)\mleft( X, \widetilde{\nu} \mright)
+&=
+\mleft( \pi^*\nabla^{\mathrm{YM}} \mright)_X \mleft( \pi^*\nu \mright)
+	- A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
+\stackrel{\ref{lem:BracketVertHor}}{=}
+0,
+\eas
+which concludes the proof with
+\bas
+F\mleft(X, \widetilde{\nu}\mright)
+&=
+\mleft(
+	\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A
+	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
+	+ \pi^!\zeta
+\mright)\mleft(X, \widetilde{\nu}\mright).
+\eas
 \end{proof}
+
+Concluding this subsubsection, we also achieve a generalized Bianchi identity, which we already have proven in \cite[\S 7, Thm.\ 7.3]{My1stpaper} and \cite[\S 5, Thm.\ 5.1.42]{MyThesis}; the proof is straightforward to show, making use of the infinitesimal compatibility conditions, Def.\ \ref{def:YangMillsConnection}.
+
+\begin{theorems}{Generalized Bianchi identity, \cite[\S 5, Thm.\ 5.1.42]{MyThesis}}{GenBianchi}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the \textbf{(generalized) Bianchi identity}
+\bas
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}F
+	+ \mleft[ A \stackrel{\wedge}{,} F \mright]_{\pi^*\mathcal{g}}
+&=
+\pi^! \mathrm{d}^{\nabla^{\mathrm{YM}}} \zeta.
+\eas
+\end{theorems}
+
+\begin{remark}
+\leavevmode\newline
+As argued in \cite[]{Hamilton}
+\end{remark}
+
+\subsubsection{Gauge transformation of the generalized field strength}
 
 %\subsection{Generalized covariant derivative/minimal coupling}
 

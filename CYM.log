@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.15)  22 SEP 2022 16:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.15)  23 SEP 2022 16:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1111,23 +1111,23 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 
 {C:/Users/kelru/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map}] (CYM.toc
-Overfull \hbox (1.09496pt too wide) detected at line 35
- []\T1/lmss/bx/n/10.95 134
- []
-
-
 Overfull \hbox (1.09496pt too wide) detected at line 36
- []\T1/lmss/bx/n/10.95 134
+ []\T1/lmss/bx/n/10.95 136
  []
 
 [2]
 Overfull \hbox (1.09496pt too wide) detected at line 37
- []\T1/lmss/bx/n/10.95 134
+ []\T1/lmss/bx/n/10.95 136
  []
 
 
 Overfull \hbox (1.09496pt too wide) detected at line 38
  []\T1/lmss/bx/n/10.95 136
+ []
+
+
+Overfull \hbox (1.09496pt too wide) detected at line 39
+ []\T1/lmss/bx/n/10.95 138
  []
 
 )
@@ -1138,7 +1138,7 @@ Overfull \hbox (1.09496pt too wide) detected at line 38
 LaTeX Font Info:    Trying to load font information for U+euf on input line 485.
  (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [2] [3]
+) [2] [3] [4]
 Underfull \hbox (badness 10000) in paragraph at lines 726--728
 
  []
@@ -1148,16 +1148,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 740--743
 
  []
 
-[4] [5] [6] [7]
+[5] [6] [7]
 Underfull \hbox (badness 10000) in paragraph at lines 862--865
 
  []
 
-[8] [9] [10] [11] [12] [13]
+[8] [9] [10] [11] [12] [13] [14]
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1208.
  (C:\Users\kelru\AppData\Roaming\MiKTeX\2.9\tex/latex/doublestroke\udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [14]
+)
 Underfull \hbox (badness 10000) in paragraph at lines 1245--1248
 
  []
@@ -1176,23 +1176,23 @@ LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 
 [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105]
 [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122]
-Overfull \hbox (2.67805pt too wide) in paragraph at lines 7319--7326
+Overfull \hbox (2.67805pt too wide) in paragraph at lines 7321--7328
 \T1/lmr/m/n/10.95 using Rem. [][]5.19[][] (bracket of fundamental/left-invariant vec-tor fields is fundamental/left-inva
 riant)
  []
 
 [123] [124] [125] [126] [127] [128] [129] [130] [131]
-Overfull \hbox (3.1053pt too wide) detected at line 7934
+Overfull \hbox (3.1053pt too wide) detected at line 7938
 []
  []
 
-[132] [133] (CYM.bbl
+[132] [133] [134] [135] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gauge The-ory\T1/lmr/m/n/10.95 .  Springer, 
 2017.
  []
 
-[134]
+[136]
 Underfull \hbox (badness 10000) in paragraph at lines 53--57
 []\T1/lmr/m/n/10.95 Camille Laurent-Gengoux, Math-ieu Stiénon, and Ping Xu.  Non-abelian
  []
@@ -1236,7 +1236,7 @@ Underfull \hbox (badness 1867) in paragraph at lines 90--94
 9(9):1285--1305, 2009.
  []
 
-) [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] (CYM.aux)
+) [137] [138] [139] [140] [141] [142] [143] [144] [145] [146] (CYM.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1244,10 +1244,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36129 strings out of 477958
- 767334 string characters out of 2833983
- 1210732 words of memory out of 3000000
- 53795 multiletter control sequences out of 15000+600000
+ 36135 strings out of 477958
+ 767399 string characters out of 2833983
+ 1212007 words of memory out of 3000000
+ 53794 multiletter control sequences out of 15000+600000
  592475 words of font info for 153 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,106p,10627b,1313s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1272,9 +1272,9 @@ ublic/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
 /public/lm/lmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/U
 sers/kelru/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (146 pages, 1392329 bytes).
+Output written on CYM.pdf (148 pages, 1408605 bytes).
 PDF statistics:
- 2201 PDF objects out of 2487 (max. 8388607)
- 489 named destinations out of 1000 (max. 500000)
- 309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2238 PDF objects out of 2487 (max. 8388607)
+ 496 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
