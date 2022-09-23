@@ -33,8 +33,8 @@
 \contentsline {subsubsection}{\numberline {6.4.1}Yang-Mills connections on LGBs}{111}{subsubsection.6.4.1}%
 \contentsline {subsubsection}{\numberline {6.4.2}Field strength related to Yang-Mills connections}{129}{subsubsection.6.4.2}%
 \contentsline {subsubsection}{\numberline {6.4.3}Gauge transformation of the generalized field strength}{136}{subsubsection.6.4.3}%
-\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{136}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{136}{section.8}%
-\contentsline {section}{\nonumberline List of References}{136}{section*.3}%
-\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{138}{appendix.A}%
+\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{137}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{137}{section.8}%
+\contentsline {section}{\nonumberline List of References}{137}{section*.3}%
+\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{139}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -5743,7 +5743,7 @@ By Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} (also recall Remark \ref
 thus, $\mathcal{r}_{g*}$ preserves the splitting $\mathrm{T}\mathcal{P} = \mathrm{H}\mathcal{P} \oplus \mathrm{V}\mathcal{P}$. This concludes the proof.
 \end{proof}
 
-\subsection{Gauge transformations}
+\subsection{Gauge transformations}\label{GaugeTrafoForA}
 
 Let us now look at how gauge transformations of $A$ look like in this setting; for this recall the definition of gauge transformations in Def.\ \ref{def:MorphOfPrincBundles}. As in Remark \ref{rem:ClassGaugeTrafosAndcgPMulti} we expect a relationship between gauge transformations and certain LGB valued maps. For the following also recall Ex.\ \ref{ex:ConjugationActionForTheGeneralInnerGroupBundle}.
 
@@ -5934,7 +5934,7 @@ H^!A
 \eas
 where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined as in Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} and $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component.
 
-Similar to Def.\ \ref{MultiWithPulli} we may shortly just write 
+Similar to Def.\ \eqref{MultiWithPulli} we may shortly just write 
 \bas
 H^!A
 &=
@@ -6089,36 +6089,42 @@ p \cdot \mathrm{pr}_2\mleft(\sigma^H_p\mright)
 \Bigl( \Phi \circ \mleft( \mathds{1}_{\mathcal{P}}, \mathrm{pr}_2\circ\sigma^H \mright) \Bigr)(p)
 \eas
 for all $p \in \mathcal{P}_x$ ($x\in M$), where $\Phi$ is the right $\mathcal{G}$-action on $\mathcal{P}$, also recall Def.\ \ref{MultiWithPulli}, that is, now $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. Define $\widetilde{\sigma} \coloneqq \mathrm{pr}_2 \circ \sigma^H$, $\mathcal{P} \ni p \mapsto \widetilde{\sigma}_p \in \mathcal{G}$; by Remark \ref{rem:PullbackTotMCForm}, \ref{rem:PullBackDarboux} and Thm.\ \ref{thm:DiffOfLGBAction}, especially Remark \ref{rem:DarbouxInActionInfinit}, we can calculate
-\bas
+\ba\label{DiffOfPrincAutom}
 \mathrm{D}_p H(X)
 &=
 \mathrm{D}_{\mleft(p, \widetilde{\sigma}_p\mright)}\Phi \bigl( X, \mathrm{D}_p\widetilde{\sigma}(X) \bigr)
+\nonumber
 \\
 &=
 \mathrm{D}_pr_\sigma(X)
 	- \mleft.{\oversortoftilde{ \mleft.\mleft(\pi^!\Delta \sigma\mright)\mright|_p (X)}}\mright|_{p \cdot \widetilde{\sigma}_p}
 	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\widetilde{\sigma}_p} \bigl(\mathrm{D}_p\widetilde{\sigma}(X) \bigr)}}\mright|_{p \cdot \widetilde{\sigma}_p}
+\nonumber
 \\
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
 	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\mathrm{pr}_2\mleft(\sigma^H_p\mright)} \mleft(\mleft(\mathrm{D}_{\sigma^H_p}\mathrm{pr}_2 \circ \mathrm{D}_p\sigma^H\mright)(X) \mright)}}\mright|_{H(p)}
+\nonumber
 \\
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
 	+ \mleft.{\oversortoftilde{\mleft( \mathrm{pr}_2^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma^H_p} \mleft(\mathrm{D}_p\sigma^H(X) \mright)}}\mright|_{H(p)}
+\nonumber
 \\
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
 	+ \mleft.{\oversortoftilde{\mleft( \mu_{\pi^*\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma^H_p} \mleft(\mathrm{D}_p\sigma^H(X) \mright)}}\mright|_{H(p)}
+\nonumber
 \\
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
 	+ \mleft.{\oversortoftilde{ \mleft(\Delta^{\pi^*\mathcal{G}}\sigma^H\mright)_p(X) }}\mright|_{H(p)}
+\nonumber
 \\
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
 	+ \mleft.{\oversortoftilde{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
-\eas
+\ea
 for all $X \in \mathrm{T}_p\mathcal{P}$, where $\sigma$ is a (local) section of $\mathcal{G}$ so that $\sigma_x = \widetilde{\sigma}_p = \mathrm{pr}_2\mleft( \sigma^H_p \mright)$.
 
 Then
@@ -6999,7 +7005,12 @@ A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
 \eas
 \end{lemmata}
 
-\begin{proof}
+\begin{remark}
+\leavevmode\newline
+The last statement got also stated in \cite[Eq.\ (2.8)]{FernandesMarcutMultiplicativeForms} in the case of the LGB as principal bundle; we were unaware of this proof, which is why our proof is a bit different.
+\end{remark}
+
+\begin{proof}[Proof of Lemma \ref{lem:BracketVertHor}]
 \leavevmode\newline
 First of all recall the very basic fact (see \textit{e.g.}\ \cite[\S A.1, Thm.\ A.1.46, page 615]{Hamilton}) that for two vector fields $X, Y \in \mathfrak{X}(\mathcal{P})$ we have\footnote{Rigorously, similarly to Prop.\ \ref{prop:FinallyTheNablaInduction} one has a projection involved, but as explained in Remark \ref{RemarkAboutPrTwoInDarbouxDerivative} we will omit notating this projection; in the context of this proof we can allow ourselves to take the typical less rigorous approach for simplicity.}
 \bas
@@ -8133,7 +8144,7 @@ In that sense Eq.\ \eqref{ZetaIsTheCurvatureOnG} reflects the fact that $M$ is a
 
 \begin{proof}[Proof of Thm.\ \ref{thm:StructureEq}]
 \leavevmode\newline
-The idea of the proof is similar to the proof of the "classical" statement; following the structure of \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}. That is, we will look at vertical and horizontal tangent vectors and their mixed terms; recall Def.\ \ref{def:GaugeBosonsOnLGBPrincies} and Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}.
+The idea of the proof is similar to the proof of the "classical" statement; following the structure of \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}, see also works like \cite[\S 4.6, Lemma 4.25]{LAURENTGENGOUXStienonXuMultiplicativeForms} and \cite[\S 2.5, Prop.\ 2.24]{FernandesMarcutMultiplicativeForms} where something similar is shown on Lie groupoids instead of principal bundles, but with no $\zeta$. That is, we will look at vertical and horizontal tangent vectors and their mixed terms; recall Def.\ \ref{def:GaugeBosonsOnLGBPrincies} and Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}.
 
 $\bullet$ We have by Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}
 \bas
@@ -8247,12 +8258,66 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \eas
 \end{theorems}
 
-\begin{remark}
-\leavevmode\newline
-As argued in \cite[]{Hamilton}
-\end{remark}
-
 \subsubsection{Gauge transformation of the generalized field strength}
+
+Similar to Subsection \ref{GaugeTrafoForA} we will now discuss the gauge transformation of the generalized field strength $F$; recall Thm.\ \ref{thm:GaugeTrafoOfGaugeBoson}.
+
+\begin{theorems}{Gauge transformation of the generalized field strength}{GaugeTrafoOfCurv}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. We then have that $H^!F$ is the field strength related to $H^!A$ and
+\bas
+H^!F
+&=
+{\sAd_{\mathrm{pr}_2\circ\mleft(\sigma^H\mright)^{-1}}} \circ F,
+\eas
+where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined as in Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} and $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component.
+
+Similar to Def.\ \eqref{MultiWithPulli} we may shortly just write 
+\bas
+H^!F
+&=
+{\sAd_{\mleft(\sigma^H\mright)^{-1}}} \circ F.
+\eas
+\end{theorems}
+
+\begin{proof}
+\leavevmode\newline
+That $H^!F$ is the field strenght related to $H^!A$ follows quickly by the same calculation as for proving Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra}, using $\pi \circ H = \pi$,
+\bas
+H^!F
+&=
+\mathrm{d}^{(\pi \circ H)^*\nabla^{\mathrm{YM}}} \mleft(H^!A\mright)
+	+ \frac{1}{2} \mleft[ H^!A \stackrel{\wedge}{,} H^!A \mright]_{\pi^*\mathcal{g}}
+	+ (\pi \circ H)^!\zeta
+\\
+&=
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} \mleft(H^!A\mright)
+	+ \frac{1}{2} \mleft[ H^!A \stackrel{\wedge}{,} H^!A \mright]_{\pi^*\mathcal{g}}
+	+ \pi^!\zeta,
+\eas
+which is the field strength of $H^!A$. Now recall Eq.\ \eqref{DiffOfPrincAutom}, that is,
+\bas
+\mathrm{D}_p H(X)
+&=
+\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+	+ \mleft.{\oversortoftilde{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
+\eas
+for all $X \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$), where $\widetilde{\sigma}_p \coloneqq \mathrm{pr}_2\mleft( \sigma^H_p \mright)$. Thus, by Prop.\ \ref{prop:NewFieldStrengthWithCoolProps},
+\bas
+\mleft( H^!F \mright)_p(X, Y)
+&=
+F_{H(p)}\bigl( \mathrm{D}_pH(X), \mathrm{D}_pH(Y) \bigr)
+\\
+&=
+F_{p \cdot \widetilde{\sigma}_p}\bigl( \mathcal{r}_{\widetilde{\sigma}_p*}(X), \mathcal{r}_{\widetilde{\sigma}_p*}(Y) \bigr)
+\\
+&=
+\mleft(\mathcal{r}_{\widetilde{\sigma}}^!F\mright)_p(X, Y)
+\\
+&=
+\mleft(\sAd_{\widetilde{\sigma}_p^{-1}} \circ F\mright)_p(X, Y)
+\eas
+for all $X, Y \in \mathrm{T}_p \mathcal{P}$; this finishes the proof.
+\end{proof}
 
 %\subsection{Generalized covariant derivative/minimal coupling}
 
