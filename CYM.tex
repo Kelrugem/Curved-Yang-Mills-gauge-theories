@@ -6366,13 +6366,13 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \
 
 Then the map $H_{ji}$ defined by
 \bas
-\mathcal{P}_{U_i \cap U_j} &\to \mathcal{P}_{U_i \cap U_j},\\
+\mleft.\mathcal{P}\mright|_{U_i \cap U_j} &\to \mleft.\mathcal{P}\mright|_{U_i \cap U_j},\\
 p &\mapsto \mleft.s_i\mright|_{\pi(p)} \cdot \Phi_{s_j}^{-1}(p),
 \eas
-is an element of $\sAut\mleft( \mathcal{P}_{U_i \cap U_j} \mright)$,
+is an element of $\sAut\mleft( \mleft.\mathcal{P}\mright|_{U_i \cap U_j} \mright)$,
 where $\Phi_{s_j}$ is the orbit map through $s_j$.
 
-In sense of Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} we also get that $\sigma^{H_{ji}}$ is related to $\sigma_{ji}$ w.r.t.\ $s_j$ in sense of Prop.\ \ref{prop:GaugeTrafosAsLGBSectionsLocal}, that is,
+Using the notation of Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps}, we also get that $\sigma^{H_{ji}}$ is related to $\sigma_{ji}$ via $s_j$ in sense of Prop.\ \ref{prop:GaugeTrafosAsLGBSectionsLocal}, that is,
 \bas
 \sigma^{H_{ji}}_p
 &=
@@ -6526,7 +6526,7 @@ s_j^! H_{ji}^!A
 
 This allows us to finally show the first relation to the infinitesimal gauge theory developed by Alexei Kotov and Thomas Strobl.
 
-\begin{remarks}{Integrating curved Yang-Mills gauge theories}{IntegratingKotovStrobl}
+\begin{remarks}{Integrating curved Yang-Mills gauge theories, part I}{IntegratingKotovStrobl}
 Let the situation be as in Thm.\ \ref{thm:LocalGaugeTrafoChangeGauge}, then set 
 \bas
 \sigma_{ji}
@@ -8281,7 +8281,7 @@ H^!F
 
 \begin{proof}
 \leavevmode\newline
-That $H^!F$ is the field strenght related to $H^!A$ follows quickly by the same calculation as for proving Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra}, using $\pi \circ H = \pi$,
+That $H^!F$ is the field strength related to $H^!A$ follows quickly by the same calculation as for proving Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra}, using $\pi \circ H = \pi$,
 \bas
 H^!F
 &=
@@ -8319,9 +8319,90 @@ F_{p \cdot \widetilde{\sigma}_p}\bigl( \mathcal{r}_{\widetilde{\sigma}_p*}(X), \
 for all $X, Y \in \mathrm{T}_p \mathcal{P}$; this finishes the proof.
 \end{proof}
 
+We will now extend this again to a local change of gauges (sections of $\mathcal{P}$).
+
+\begin{definitions}{Local field strength}{LocalFieldStrength}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we define the \textbf{local curvature} of \textbf{local field strength $F_s \in \Omega^2\mleft(U; \mleft.\mathcal{g}\mright|_U\mright)$ (w.r.t.\ $s$)} by
+\bas
+F_s
+&\coloneqq
+s^!F.
+\eas
+\end{definitions}
+
+In previous calculations for the total Maurer-Cartan form and the generalized Maurer-Cartan equation we have basically already shown the pullback of the structure equation.
+
+\begin{corollaries}{Pullback of the structure equation}{PullbackOfStructureEq}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we can express the local field strength as the pullback of the structure equation, that is,
+\bas
+F_s
+&=
+\mathrm{d}^{\nabla^{\mathrm{YM}}}A_s
+	+ \frac{1}{2} \mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathcal{g}}
+	+ \zeta.
+\eas
+\end{corollaries}
+
+\begin{proof}
+\leavevmode\newline
+This follows quickly by the same calculation as for proving Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra}.
+\end{proof}
+
+The gauge transformation of the field strength $F$ describes the behaviour of $F$ under a change of gauge.
+
+\begin{theorems}{Gauge transformations again as a change of gauge}{LocalGaugeTrafoChangeGaugeFieldStrength}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
+
+Then we have for the fields strength of $A$ that
+\bas
+F_{s_i}
+&=
+\mathrm{Ad}_{\sigma_{ji}^{-1}}\circ F_{s_j}.
+\eas
+\end{theorems}
+
+\begin{proof}
+\leavevmode\newline
+The proof is precisely as for Thm.\ \ref{thm:LocalGaugeTrafoChangeGauge}, just without catering for the Darboux derivative in the gauge transformation due to that one uses Thm.\ \ref{thm:GaugeTrafoOfCurv} instead of Thm.\ \ref{thm:GaugeTrafoOfGaugeBoson}.
+\end{proof}
+
+\begin{remarks}{Integrating curved Yang-Mills gauge theories, part II}{IntegratingKotovStroblFieldStrength}
+Similar to Rem.\ \ref{rem:IntegratingKotovStrobl}, Cor.\ \ref{cor:PullbackOfStructureEq} and Thm.\ \ref{thm:LocalGaugeTrafoChangeGaugeFieldStrength} show that we recover the field strength and its gauge transformation as developed by Alexei Kotov and Thomas Strobl, see \cite{CurvedYMH} for a concise summary or \cite{MyThesis} for an extended introduction. These references are for the very general situation using Lie algebroids, hence see alternatively \cite{My1stpaper} for this type of gauge theory restricted to Lie algebra bundles.
+\end{remarks}
+
 %\subsection{Generalized covariant derivative/minimal coupling}
 
 \section{Curved Yang-Mills gauge theory}
+
+We eventually are able to conclude this paper with the definition of what we will call \textbf{curved Yang-Mills gauge theory}, highlighting that this theory is an integral of the infinitesimal gauge theory originally developed by Alexei Kotov and Thomas Strobl. For the following we say that a fibre metric $\kappa$ of $\mathcal{g}$ is \textbf{$\mathrm{Ad}$-invariant} if
+\bas
+\kappa\bigl( \mathrm{Ad}_g(\nu), \mathrm{Ad}_g(\mu) \bigr)
+&=
+\kappa (\nu, \mu)
+\eas
+for all $g \in \mathcal{G}_x$ ($x \in M$) and $\mu, \nu \in \mathcal{g}_x$.
+
+\begin{corollaries}{Contraction of local field strength with Ad-invariant fibre metric is well-defined}{ContractionOfLocalFIeldWellDefined}
+Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $\mleft( U_i \mright)_i$ be an open covering of $M$ so that there are subordinate gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$.
+
+Then the map $\mathfrak{L}_{\mathrm{CYM}}[A]: M \to \mathbb{R}$, defined locally by
+\bas
+\mleft.\bigl(\mathfrak{L}_{\mathrm{CYM}}[A]\bigr)\mright|_{U_i}
+&\coloneqq 
+- \frac{1}{2} \kappa \mleft( F_{s_i} \stackrel{\wedge}{,} *F_{s_i} \mright),
+\eas
+is well-defined and independent of the choice of gauge, where $*$ is the Hodge star operator w.r.t.\ the spacetime metric of $M$.
+\end{corollaries}
+
+\begin{proof}
+\leavevmode\newline
+Let $s_j$ be another gauge corresponding to $U_j$ so that $U_i \cap U_j \neq \emptyset$ and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$. Then it follows by Thm.\ \ref{thm:LocalGaugeTrafoChangeGaugeFieldStrength} that
+\bas
+\kappa \mleft( F_{s_i} \stackrel{\wedge}{,} *F_{s_i} \mright)
+&=
+\kappa \mleft( \mleft(\mathrm{Ad}_{\sigma_{ji}^{-1}}\circ F_{s_j} \mright) \stackrel{\wedge}{,} *\mleft( \mathrm{Ad}_{\sigma_{ji}^{-1}}\circ F_{s_j} \mright) \mright)
+\eas
+\end{proof}
 
 \section{Conclusion}
 

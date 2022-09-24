@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  24 SEP 2022 02:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  24 SEP 2022 21:19
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1255,22 +1255,22 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 {C:/Users/kelru/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (CYM.toc
 Overfull \hbox (1.09496pt too wide) detected at line 36
- []\T1/lmss/bx/n/10.95 137
+ []\T1/lmss/bx/n/10.95 138
  []
 
 [2]
 Overfull \hbox (1.09496pt too wide) detected at line 37
- []\T1/lmss/bx/n/10.95 137
+ []\T1/lmss/bx/n/10.95 139
  []
 
 
 Overfull \hbox (1.09496pt too wide) detected at line 38
- []\T1/lmss/bx/n/10.95 137
+ []\T1/lmss/bx/n/10.95 139
  []
 
 
 Overfull \hbox (1.09496pt too wide) detected at line 39
- []\T1/lmss/bx/n/10.95 139
+ []\T1/lmss/bx/n/10.95 140
  []
 
 )
@@ -1335,13 +1335,13 @@ Overfull \hbox (3.1053pt too wide) detected at line 7949
 []
  []
 
-[132] [133] [134] [135] [136] (CYM.bbl
+[132] [133] [134] [135] [136] [137] [138] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-[137]
+[139]
 Underfull \hbox (badness 10000) in paragraph at lines 53--57
 []\T1/lmr/m/n/10.95 Camille Laurent-Gengoux, Math-ieu Stiénon, and Ping Xu.  No
 n-abelian
@@ -1389,7 +1389,7 @@ Underfull \hbox (badness 1867) in paragraph at lines 90--94
 om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
  []
 
-) [138] [139] [140] [141] [142] [143] [144] [145] [146] [147] (CYM.aux)
+) [140] [141] [142] [143] [144] [145] [146] [147] [148] (CYM.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1397,10 +1397,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 35006 strings out of 478907
- 730563 string characters out of 2851891
- 1227006 words of memory out of 3000000
- 51749 multiletter control sequences out of 15000+600000
+ 35023 strings out of 478907
+ 730910 string characters out of 2851891
+ 1224396 words of memory out of 3000000
+ 51760 multiletter control sequences out of 15000+600000
  526646 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1444,9 +1444,9 @@ rams/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Us
 ers/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pf
 b>
-Output written on CYM.pdf (149 pages, 1415884 bytes).
+Output written on CYM.pdf (150 pages, 1428090 bytes).
 PDF statistics:
- 2255 PDF objects out of 2487 (max. 8388607)
- 499 named destinations out of 1000 (max. 500000)
+ 2277 PDF objects out of 2487 (max. 8388607)
+ 505 named destinations out of 1000 (max. 500000)
  317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
