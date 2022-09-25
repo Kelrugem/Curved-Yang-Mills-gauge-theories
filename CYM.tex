@@ -8374,6 +8374,8 @@ Similar to Rem.\ \ref{rem:IntegratingKotovStrobl}, Cor.\ \ref{cor:PullbackOfStru
 
 \section{Curved Yang-Mills gauge theory}
 
+\subsection{Definition and gauge invariance}
+
 We eventually are able to conclude this paper with the definition of what we will call \textbf{curved Yang-Mills gauge theory}, highlighting that this theory is an integral of the infinitesimal gauge theory originally developed by Alexei Kotov and Thomas Strobl. For the following we say that a fibre metric $\kappa$ of $\mathcal{g}$ is \textbf{$\mathrm{Ad}$-invariant} if
 \bas
 \kappa\bigl( \mathrm{Ad}_g(\nu), \mathrm{Ad}_g(\mu) \bigr)
@@ -8396,13 +8398,104 @@ is well-defined and independent of the choice of gauge, where $*$ is the Hodge s
 
 \begin{proof}
 \leavevmode\newline
-Let $s_j$ be another gauge corresponding to $U_j$ so that $U_i \cap U_j \neq \emptyset$ and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$. Then it follows by Thm.\ \ref{thm:LocalGaugeTrafoChangeGaugeFieldStrength} that
+Let $s_j$ be another gauge corresponding to $U_j$ so that $U_i \cap U_j \neq \emptyset$, and we have a unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$. Then it follows by Thm.\ \ref{thm:LocalGaugeTrafoChangeGaugeFieldStrength} and the definition of the Hodge star operator (which is just a certain contraction w.r.t.\ $M$) that
 \bas
 \kappa \mleft( F_{s_i} \stackrel{\wedge}{,} *F_{s_i} \mright)
 &=
 \kappa \mleft( \mleft(\mathrm{Ad}_{\sigma_{ji}^{-1}}\circ F_{s_j} \mright) \stackrel{\wedge}{,} *\mleft( \mathrm{Ad}_{\sigma_{ji}^{-1}}\circ F_{s_j} \mright) \mright)
+=
+\kappa \mleft( F_{s_j} \stackrel{\wedge}{,} *F_{s_j} \mright),
+\eas
+using the $\mathrm{Ad}$-invariance of $\kappa$. This concludes the proof.
+\end{proof}
+
+\begin{definitions}{Curved Yang-Mills gauge theory}{CYMGTFinally}
+Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
+
+Then the map $\mathfrak{L}_{\mathrm{CYM}}[A]$ defined in Cor.\ \ref{cor:ContractionOfLocalFIeldWellDefined} is called the \textbf{curved Yang-Mills Lagrangian}.
+\end{definitions}
+
+By construction, this Lagrangian is gauge-invariant.
+
+\begin{theorems}{Gauge invariance of the curved Yang-Mills Lagrangian}{GaugeInvarianceOfLagrangian}
+Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
+
+Then we have
+\bas
+\mathfrak{L}_{\mathrm{CYM}}\mleft[ H^!A \mright]
+&=
+\mathfrak{L}_{\mathrm{CYM}}[A]
+\eas
+for all $H \in \sAut(\mathcal{P})$.
+\end{theorems}
+
+\begin{proof}
+\leavevmode\newline
+By Thm.\ \ref{thm:GaugeTrafoOfCurv} we have 
+\bas
+H^!F
+&=
+{\sAd_{\mathrm{pr}_2\circ\mleft(\sigma^H\mright)^{-1}}} \circ F,
+\eas
+where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined as in Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} and $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. Similar to the argument in the proof of Thm.\ \ref{thm:LocalGaugeTrafoChangeGauge} we have
+\bas
+\mleft( H^!F \mright)_s
+&=
+\mathrm{Ad}_{\mathrm{pr}_2\circ\mleft(\sigma^H\mright)^{-1} \circ s} \circ F_s
+\eas
+for a given gauge $s \in \Gamma(\mathcal{P}|_U)$, where $U$ is an open subset of $M$. With the same argument as in Cor.\ \ref{cor:ContractionOfLocalFIeldWellDefined} it follows that
+\bas
+\mathfrak{L}_{\mathrm{CYM}}\mleft[ H^!A \mright]
+&=
+\mathfrak{L}_{\mathrm{CYM}}[A].
 \eas
 \end{proof}
+
+\begin{remarks}{Infinitesimal gauge invariance}{InfinitesimalGaugeInv}
+As we have seen previously, the compatibility conditions (Def.\ \ref{def:NowReallyYangMillsConnectio}) were important to derive how $F$ behaves under modified right push-forwards. Recall Rem.\ \ref{rem:IntegratingKotovStrobl}, we have a corresponding formulation of infinitesimal gauge transformation and it is straight-forward to show that we achieve \textbf{infinitesimal gauge invariance} as in the classical theory. However, as argued by Alexei Kotov and Thomas Strobl in \cite{CurvedYMH} (for a concise summary; \cite{MyThesis} for an extended introduction, or alternatively \cite{My1stpaper} for a simplified language) the corresponding infinitesimal gauge invariance just needs the infinitesimal compatibility conditions (Def.\ \ref{def:YangMillsConnection}).
+\end{remarks}
+
+\subsection{Examples}
+
+Let us provide some examples of this theory, especially also recall Ex.\ \ref{ex:ClassicalYangMillsConnection} and the labels introduced there. However, before we do so, it is natural to ask whether or not there is a transformation keeping the Lagrangian invariant, but non-trivially transforming data like $\nabla^{\mathrm{YM}}$ so that it may become flat, and we may end up at a classical theory describing the same physics. In fact, there is such a transformation which we have studied in \cite{MyThesis} (and \cite{My1stpaper} which is just formulated for LABs so that it may be easier for the reader to follow given the context here). These transformations are simply called \textbf{field redefinitions}, but given the time of their development, they just focus on infinitesimal gauge invariance and the underlying infinitesimal compatibility conditions.
+
+\begin{theorems}{Invariance w.r.t.\ field redefinitions, \newline \cite[\S 4, Def.\ 4.5.1 and 4.7.10, Thm.\ 4.7.13]{MyThesis}, \cite[\S 3, Thm.\ 3.6]{My1stpaper}}{FieldRedefStuff}
+Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. We also define \textbf{field redefinitions w.r.t.\ $\lambda \in \Omega^1(M; \mathcal{g})$} by
+\bas
+\widetilde{A}^\lambda
+&\coloneqq
+A + \pi^!\lambda,
+\\
+\widetilde{\nabla^{\mathrm{YM}}}^\lambda
+&\coloneqq
+\nabla^{\mathrm{YM}} - \mathrm{ad}_\lambda,
+\\
+\widetilde{\zeta}^\lambda
+&\coloneqq
+\zeta
+	- \mathrm{d}^{\nabla^{\mathrm{YM}}}\lambda + \frac{1}{2} \mleft[ \lambda \stackrel{\wedge}{,} \lambda \mright]_{\mathcal{g}}.
+\eas
+
+Then we have that $\widetilde{\nabla^{\mathrm{YM}}}^\lambda$ and $\widetilde{\zeta}^\lambda$ satisfy the infinitesimal compatibility conditions of Def.\ \ref{def:YangMillsConnection} and
+\bas
+\widetilde{F}^\lambda
+&\coloneqq
+\mathrm{d}^{\pi^*\widetilde{\nabla^{\mathrm{YM}}}^\lambda} A
+	+ \frac{1}{2} \mleft[ \widetilde{A}^\lambda \stackrel{\wedge}{,} \widetilde{A}^\lambda \mright]_{\pi^*\mathcal{g}}
+	+ \pi^!\widetilde{\zeta}^\lambda
+\equiv
+F
+\eas
+for all $\lambda \in \Omega^1(M; \mathcal{G})$. That is, the Lagrangian $\mathfrak{L}_{\mathrm{CYM}}$ is invariant under these field redefinitions, and infinitesimal gauge invariance is preserved.
+\end{theorems}
+
+In fact, these field redefinitions are not just any transformation preserving the physics. As pointed out in \cite{MyThesis}, curved Yang-Mills gauge theory as a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions, similar to how one reformulates Classical Mechanics so that it is form-invariant w.r.t.\ Galilei or Lorentz transformations. This reformulation introduces extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength.
+
+As a next step one can then investigate whether there is a curved Yang-Mills gauge theory which cannot be transformed to a classical (infinitesimal) gauge theory via a field redefinition.
+
+\begin{examples}{Classical examples}{ClassicalYMTheoriesRecovered}
+
+\end{examples}
 
 \section{Conclusion}
 
