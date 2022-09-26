@@ -232,6 +232,19 @@
     fonttitle=\bfseries,
   }% options
   {cor}% prefix
+\newtcbtheorem
+  [use counter*=theorem,number within=section]% init options
+  {conjectures}% name
+  {Conjecture}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+    colback=gray!25,
+    colframe=gray!0!black,
+    fonttitle=\bfseries,
+  }% options
+  {con}% prefix
 \newtheorem{conjecture}[theorem]{Conjecture}
 
 
@@ -4860,7 +4873,7 @@ We also have
 \mathrm{T}_{\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \mathrm{D}_xe(X) \mright) }\mathcal{g}
 \nonumber
 \ea
-for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. We also introduced the notation $\nu_T$ similar to Remark \ref{rem:TangentLifts} for simplicity; in fact $\nu_T$ is a vector field on $\mathrm{T}\mathcal{G}$ only defined over $\mathrm{T}M$ which is canonically embedded into $\mathrm{T}\mathcal{G}$ by the zero section while $M$ is embedded into $\mathcal{G}$ by $e$. Similarly we naturally embed $\mathrm{T}\mathcal{g}$ into $\mathrm{TT}\mathcal{G}$. In total, we will work with these embeddings now so that everything is embedded into $\mathrm{TT}\mathcal{G}$ as the "total space"; hence, you will see $e$ and its total derivative $\mathrm{D}e$ acting as an embedding several times.
+for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. We also introduced the notation $\nu_T$ similar to Remark \ref{rem:TangentLifts} for simplicity; in fact $\nu_T$ is a vector field on $\mathrm{T}\mathcal{G}$ only defined over $\mathrm{T}M$ which is canonically embedded into $\mathrm{T}\mathcal{G}$ by embedding $M$ into $\mathcal{G}$ via $e$. We also naturally embed $\mathrm{T}\mathcal{g}$ into $\mathrm{TT}\mathcal{G}$ by the zero section. In total, we will work with these embeddings now so that everything is embedded into $\mathrm{TT}\mathcal{G}$ as the "total space"; hence, you will see $e$ and its total derivative $\mathrm{D}e$ acting as an embedding several times.
 
 We get by Eq.\ \eqref{DiagramForNablaConn}
 %omitting the base points in the differentials for readability,
@@ -7635,13 +7648,15 @@ R_{\nabla^{\mathcal{G}}} &= 0
 \eas
 and so we can set $\zeta \equiv 0$. By Ex.\ \ref{ex:OurConnectionIsReallyMoreGeneral} (viewing $\mathcal{G}$ also as a principal bundle equipped with the same horizontal distribution) we know that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, so that its total Maurer-Cartan form is multiplicative.
 
-We then call $\nabla^{\mathrm{cYM}} \coloneqq \nabla^{\mathcal{G}}$ a \textbf{classical Yang-Mills connection}.
+We therefore call flat $\nabla^{\mathrm{cYM}} \coloneqq \nabla^{\mathcal{G}}$ a \textbf{classical Yang-Mills connection}, regardless of whether or not $\mathcal{G}$ is trivial.
 
-However, observe that $\zeta$ can be centre-valued while $\nabla^{\mathcal{G}}$ is still flat. In such an occasion we speak of a \textbf{pre-classical Yang-Mills connection}, denoted by $\nabla^{\mathrm{pYM}}$.
+However, observe that $\zeta$ can be centre-valued and non-zero while $\nabla^{\mathcal{G}}$ is still flat. In such an occasion we speak of a \textbf{pre-classical Yang-Mills connection}, denoted by $\nabla^{\mathrm{pYM}}$.
 \end{examples}
 
 \begin{examples}{Associated connections of inner group bundles are Yang-Mills connections}{OurVeryImportantExample}
-Recall Ex.\ \ref{ex:AssociatedLGBsAndTheirCanonicalConnection}, its setup and notation. We have discussed a canonical connection on associated LGBs $\mathcal{H} = P \times_\psi H$, called associated connection which is an Ehresmann connection. As it is well-known, the curvature measures the holonomy, that is, the parallel transport over closed (contractible) curves. Together with Eq.\ \eqref{CondKruemmungmitBLAB}, the parallel transport over a closed (contractible) curve $\alpha$ should act as conjugation with some group element. Let us see whether this holds here; there is a unique $g \in G$ for $p \in P$ such that
+Recall Ex.\ \ref{ex:AssociatedLGBsAndTheirCanonicalConnection}, its setup and notation. We have discussed a canonical connection on associated LGBs $\mathcal{H} = P \times_\psi H$, called associated connection which is an Ehresmann connection. 
+
+As it is well-known, the curvature measures the holonomy, that is, the parallel transport over closed (contractible) curves. Together with Eq.\ \eqref{CondKruemmungmitBLAB}, the parallel transport over a closed (contractible) curve $\alpha$ should act as conjugation with some group element. Let us see whether this holds here; there is a unique $g \in G$ for $p \in P$ such that
 \bas
 \mathrm{PT}^{P}_\alpha(p)
 &=
@@ -7668,8 +7683,8 @@ Thus, if $\mathcal{H} = c_G(P)$, the inner group bundle of Ex.\ \ref{ex:InnerLGB
 the conjugation of $[p, h]$ with $[p, g]$ in $c_G(P)$. It follows that there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that Eq.\ \eqref{CondKruemmungmitBLAB} is satisfied. This also implies that the associated connection of an inner group bundle is a Yang-Mills connection. We will not prove this approach, instead the next approach provides an alternative proof with an explicit expression for $\zeta$.
 \end{examples}
 
-\begin{examples}{The Yang-Mills connections on inner group bundles: Alternative point of view and explanation}{NablaYMAsAdjointConnection}
-Alternatively one can prove what we have argued in Ex.\ \ref{ex:OurVeryImportantExample} by using the aforementioned relationship of the compatibility conditions with Mackenzie's study about extending Lie algebroids via LABs; recall Remark \ref{MackenziesStuffRelation}. The following is an information for the experienced reader: The LAB of $c_G(P)$ is given by the adjoint bundle $\mathrm{Ad}(P)$; recall Ex.\ \ref{ex:AssociatedLABsFromAssocLGBs}. $\mathrm{Ad}(P)$ is the kernel of the Atiyah sequence (see \textit{e.g.}\ \cite[\S 3.2, page 90ff.]{mackenzieGeneralTheory}), a short exact sequence of Lie algebroids over $M$
+\begin{examples}{Yang-Mills connections on inner group bundles: Alternative point of view and explanation}{NablaYMAsAdjointConnection}
+Alternatively one can prove that the total Maurer-Cartan form solves the generalized Maurer-Cartan equation in Ex.\ \ref{ex:OurVeryImportantExample} by using the aforementioned relationship of the compatibility conditions with Mackenzie's study about extending Lie algebroids via LABs; recall Remark \ref{MackenziesStuffRelation}. The following is an information for the experienced reader: The LAB of $c_G(P)$ is given by the adjoint bundle $\mathrm{Ad}(P)$; recall Ex.\ \ref{ex:AssociatedLABsFromAssocLGBs}. $\mathrm{Ad}(P)$ is the kernel of the Atiyah sequence (see \textit{e.g.}\ \cite[\S 3.2, page 90ff.]{mackenzieGeneralTheory}), a short exact sequence of Lie algebroids over $M$
 \begin{center}
 	\begin{tikzcd}
 		0 \arrow{r} & \mathrm{Ad}(P) \arrow{r} & \mathrm{At}(P) \arrow{r} & \mathrm{T}M \arrow{r} & 0,
@@ -7695,7 +7710,7 @@ for all $Y, Z \in \mathfrak{X}(M)$. In other words, $\nabla^{\mathrm{YM}}$ is th
 \eas
 for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal parallel transport inherited by $\mathrm{PT}^{c_G(P)}$, so that we can conclude that $\nabla^{\mathrm{YM}}$ corresponds to the Yang-Mills connection on $c_G(P)$ in sense of Def.\ \ref{def:ConnectionOnLAB} (also recall Rem.\ \ref{PTLABComingFromPTLGB}).
 
-This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$. Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle, thence also the label as Yang-Mills connection to reflect its relation to the classical theory.
+This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$ (as a field strength with values in the adjoint bundle). Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle, thence also the label as Yang-Mills connection to reflect its relation to the classical theory.
 \end{examples}
 
 \subsubsection{Field strength related to Yang-Mills connections}
@@ -8489,12 +8504,51 @@ F
 for all $\lambda \in \Omega^1(M; \mathcal{G})$. That is, the Lagrangian $\mathfrak{L}_{\mathrm{CYM}}$ is invariant under these field redefinitions, and infinitesimal gauge invariance is preserved.
 \end{theorems}
 
-In fact, these field redefinitions are not just any transformation preserving the physics. As pointed out in \cite{MyThesis}, curved Yang-Mills gauge theory as a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions, similar to how one reformulates Classical Mechanics so that it is form-invariant w.r.t.\ Galilei or Lorentz transformations. This reformulation introduces extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength.
+In fact, these field redefinitions are not just any transformation preserving the physics. As pointed out in \cite{MyThesis}, curved Yang-Mills gauge theory is a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions, similar to how one reformulates Classical Mechanics so that it is form-invariant w.r.t.\ Galilei or Lorentz transformations. This reformulation introduces extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength.
 
-As a next step one can then investigate whether there is a curved Yang-Mills gauge theory which cannot be transformed to a classical (infinitesimal) gauge theory via a field redefinition.
+As a next step one can then investigate whether there is a curved Yang-Mills gauge theory which cannot be transformed to a classical (infinitesimal) gauge theory via a field redefinition, this has be done in the mentioned references whose results will be used in the following examples.
 
 \begin{examples}{Classical examples}{ClassicalYMTheoriesRecovered}
+By Ex.\ \ref{ex:ClassicalYangMillsConnection}, we just recover the classical formalism of gauge theory if having a classical principal bundle $P$ on which a trivial LGB $\mathcal{G} = M \times G$ acts on the right, where $G$ is a Lie group with Lie algebra $\mathfrak{g}$. $\mathrm{H}\mathcal{G}$ is the canonical flat Yang-Mills connection, $\nabla^{\mathrm{YM}}=\nabla^{\mathrm{cYM}}$ is the canonical flat connection on $\mathcal{g} = M \times \mathfrak{g}$, and $\zeta \equiv 0$. Then every example known in the classical formalism carries over.
 
+Furthermore, starting with such a classical example, by \cite[\S 6, Cor.\ 6.2]{My1stpaper} we know that if $\mathfrak{g}$ has a non-zero centre (and if $M$ is at least three-dimensional), then one can always add a centre-valued $\zeta$ to this gauge theory, transforming it into a flat pre-classical gauge theory, $\nabla^{\mathrm{YM}} = \nabla^{\mathrm{pYM}}$, with non-trivial $\zeta$. If $\mathrm{d}^{\nabla^{\mathrm{pYM}}} \zeta \neq 0$, then there is no $\lambda \in \Omega^1(M; \mathcal{g})$ with $\widetilde{\zeta}^\lambda = 0$.
+\end{examples}
+
+This shows that there are examples with non-trivial $\zeta$, stable w.r.t.\ field redefinitions. However, as shown in \cite[\S 5.2, Thm.\ 5.16]{My1stpaper} (or alternatively \cite[\S 5.1.5, Thm.\ 5.1.33]{MyThesis}), if $M$ is contractible, then there is $\lambda \in \Omega^1(M; \mathcal{g})$ so that $\widetilde{\nabla^{\mathrm{YM}}}^\lambda$ is flat. Thus, if $M$ is contractible, then every curved Yang-Mills Lagrangian is equivalent to a Lagrangian of a pre-classical gauge theory ($\zeta$ may be non-vanishing). This may be due to that $\mathcal{G}$ is a trivial fibre bundle, and then the LGB action breaks down to Lie group action; recall all our discussions related to classical principal bundles equipped with an LGB action of a trivial LGB as in the previous example. 
+Hence we conjecture:
+
+\begin{conjectures}{Trivial LGBs are associated with pre-classical theories}{TrivialLGBIsPreclassical}
+Let $\mathcal{G} \to M$ be a trivial LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
+
+Then there is a $\lambda \in \Omega^1(M; \mathcal{g})$ so that $\widetilde{\nabla^{\mathrm{YM}}}^\lambda$ is flat.
+\end{conjectures}
+
+However, we will not have time to prove this, but as a first step one may integrate the field redefinitions to a redefinition of the horizontal bundle on the LGB $\mathcal{G}$ itself, not just of the connection on its LAB.
+
+Obviously, non-trivial LGBs are not used in the classical formalism, and by the previous discussion one may ask if there is a (global) example with curved Yang-Mills connection starting with a non-trivial LGB. In fact, there is one related to a Hopf fibration, as already argued in \cite[\S 5.3, Ex.\ 5.18]{My1stpaper} and \cite[\S 5.1.5, Ex.\ 5.1.35]{MyThesis}.
+
+\begin{examples}{Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$ giving rise to a curved Yang-Mills gauge theory}{HopfEx}
+By Ex.\ \ref{ex:NablaYMAsAdjointConnection} (recall also \ref{ex:OurVeryImportantExample}) we know that $c_G(P)$ is an LGB admitting a Yang-Mills connection $\nabla^{\mathrm{YM}}$, where $P$ is a classical principal $G$-bundle, and $G$ a Lie group with Lie algebra $\mathfrak{g}$. We define $\mathcal{P}$ to be $c_G(P)$ itself now, but $A$ is arbitrary and does not need to be related to the horizontal distribution of $\nabla^{\mathrm{YM}}$.
+
+Now define $P$ as the Hopf bundle
+\begin{center}
+	\begin{tikzcd}
+		\mathrm{SU}(2) \cong \mathds{S}^3 \arrow{r}	& \mathds{S}^7 \arrow{d} \\
+			& \mathds{S}^4
+	\end{tikzcd}
+\end{center}
+where $\mathds{S}^n$ ($n \in \mathbb{N}$) denotes the n-dimensional sphere.
+For the inner bundle
+\bas
+\mathcal{P}
+\coloneqq
+\mathcal{G}
+&\coloneqq
+c_{\mathrm{SU}(2)}(P)
+\eas
+we then have that its associated Yang-Mills connection $\nabla^{\mathrm{YM}}$, as constructed previously in Ex.\ \ref{ex:NablaYMAsAdjointConnection}, is non-flat, and there is also no $\lambda \in \Omega^1(M; \mathrm{ad}(P))$ such that $\widetilde{\nabla^{\mathrm{YM}}}^\lambda$ is flat. As argued in the mentioned references, this is due to a discussion in \cite[Example 7.3.20; page 287]{mackenzieGeneralTheory}: $\mathds{S}^4$ is not contractible, but simply connected. Due to the fact that $\mathrm{SU}(2)$ is semisimple and following Ex.\ \ref{ex:NablaYMAsAdjointConnection}, a flat $\widetilde{\nabla^{\mathrm{YM}}}^\lambda$ would be equivalent to a flat connection on $P$, inducing a trivialization for $P$ since $\mathds{S}^4$ is simply connected. But $P$ cannot be trivial due to it being a Hopf fibration. This argument is independent of the field redefinitions, and it shows that all possible Yang-Mills connections are curved.
+
+An $\mathrm{Ad}$-invariant fibre metric exists clearly, so that we have all ingredients to define a truly curved Yang-Mills gauge theory with Lagrangian as given in Def.\ \ref{def:CYMGTFinally}.
 \end{examples}
 
 \section{Conclusion}

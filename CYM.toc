@@ -33,10 +33,10 @@
 \contentsline {subsubsection}{\numberline {6.4.1}Yang-Mills connections on LGBs}{111}{subsubsection.6.4.1}%
 \contentsline {subsubsection}{\numberline {6.4.2}Field strength related to Yang-Mills connections}{129}{subsubsection.6.4.2}%
 \contentsline {subsubsection}{\numberline {6.4.3}Gauge transformation of the generalized field strength}{136}{subsubsection.6.4.3}%
-\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{138}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Definition and gauge invariance}{138}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Examples}{140}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Conclusion}{141}{section.8}%
-\contentsline {section}{\nonumberline List of References}{142}{section*.3}%
-\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{143}{appendix.A}%
+\contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{139}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Definition and gauge invariance}{139}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Examples}{141}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Conclusion}{143}{section.8}%
+\contentsline {section}{\nonumberline List of References}{144}{section*.3}%
+\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{145}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
