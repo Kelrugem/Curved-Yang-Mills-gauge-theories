@@ -472,12 +472,32 @@ However, I also studied the other edge case of having Lie algebra bundles (LABs)
 
 This is now the starting point of this paper. We want to understand why the adjoint bundle of $\mathds{S}^7 \to \mathds{S}^4$ works as a curved example, and where it differs from the classical formalism of gauge theory. To truly understand this, and also to possible get new information about the general case regarding Lie algebroids, we will integrate curved Yang-Mills-Higgs gauge theories in the case of LABs in this paper. Using LABs means that there is no coupling to a Higgs field in the usual sense and therefore we will now just speak instead of a curved Yang-Mills gauge theory.
 
-The gauge theory presented here will be based on principal bundles $\mathcal{P} \stackrel{\pi}{\to} M$, $M$ a smooth manifold, related to a right action of a Lie group bundle $\mathcal{G}$ (LGB). The most important distinction to classical gauge theory is that the action $\Phi$ is a map
+The gauge theory presented here will be based on principal bundles $\mathcal{P} \stackrel{\pi}{\to} M$, $M$ a smooth manifold, related to a right action of a Lie group bundle (LGB) $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$. The most important distinction to classical gauge theory is that the action $\Phi$ is a map
 \bas
 \mathcal{P} * \mathcal{G} \coloneqq \pi^*\mathcal{G} &\to \mathcal{P},\\
 (p, g) &\mapsto p \cdot g,
 \eas
-where $\pi^*\mathcal{G}$ is the pullback LGB of $\mathcal{G}$ along $\pi$. Observe that an element $g \in \mathcal{G}_x$ only acts on $\mathcal{P}_x$, not on all of $\mathcal{P}$, where notations like $\mathcal{G}_x$ denote the fibre of $\mathcal{G}$ over an $x \in M$.
+where $\pi^*\mathcal{G}$ is the pullback LGB of $\mathcal{G}$ along $\pi$. Observe that an element $g \in \mathcal{G}_x$ only acts on $\mathcal{P}_x$, not on all of $\mathcal{P}$, where notations like $\mathcal{G}_x$ denote the fibre of $\mathcal{G}$ over an $x \in M$. This leads to certain difficulties for defining gauge theory which we will resolve in this paper.
+
+However, this paper aims to be accessible, too. Thus, we start with an extensive introduction to LGBs, their actions and their infinitesimal analogues, the LABs, in Section \ref{LGBSection} to \ref{LGBActionIISection}. These sections introduce and generalize all the notions known in the "classical" Lie group situations in the context of gauge theory, most of which is straight-forward to generalize. We will especially follow \cite{mackenzieGeneralTheory}, but since this and other references are usually introducing these basic notions on (Lie) groupoids, we decided to reintroduce all the needed notions and proofs so that it should not be required for the reader to follow and learn about groupoids even though we just need the much simpler situation regarding LGBs. The experienced reader may start directly with Section \ref{ConnCurvOnPrincLGBBundle}, but there is one partially new result in these preliminary sections: For gauge theory we will need to understand the differential of the $\mathcal{G}$-action $\Phi$ which we will derive in Thm.\ \ref{thm:DiffOfLGBAction}.
+
+\begin{theorems*}{Differential of LGB action $\Phi$, simplified situation}
+We have
+\bas
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_pr_\sigma(X)
+	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
+\eas
+for all $(p, g) \in \mathcal{P} * \mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(p, g)}(\mathcal{P}*\mathcal{G})$, where $x \coloneqq \pi(p)$, $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_{x} = g$, $e$ is the identity section of $\mathcal{G}$, and $\omega$ is an element of $\mathrm{T}_xM$ given by
+\bas
+\omega
+&\coloneqq
+\mathrm{D}_p \pi(X)
+= 
+\mathrm{D}_g\pi_{\mathcal{G}}(Y).
+\eas
+\end{theorems*}
 
 \subsection{Basic notations and remarks}\label{BasicNotations}
 
@@ -578,7 +598,7 @@ F \mleft( A \stackrel{\wedge}{,} B \mright)
 -\mleft( -1 \mright)^{km}
 F \mleft( B \stackrel{\wedge}{,} A \mright)
 \ea 
-for all $A \in \Omega^k(N; E_1)$ and $B \in \Omega^m(N; E_2)$ ($k,m \in \mathbb{N}_0$). Similarly extended to all $F \in \Omega^l(E_1; E_2)$.
+for all $A \in \Omega^k(N; E_1)$ and $B \in \Omega^m(N; E_1)$ ($k,m \in \mathbb{N}_0$). Similarly extended to all $F \in \Omega^l(E_1; E_2)$.
 \end{propositions}
 
 \begin{remark}
@@ -595,11 +615,9 @@ Trivial, for example by using local coordinates.
 
 \subsection{Assumed background knowledge}
 
-It is highly recommended to have basic knowledge about differential geometry and gauge theory as presented in \cite[especially Chapter 1 to 5]{Hamilton}, and we will follow the style and labeling as in \cite{Hamilton} when we generalize certain notions; however, sometimes we will still give explicit references to help with more technical details. It can be useful to have knowledge about Lie algebra and Lie group bundles, and even Lie algebroids and Lie groupoids, but we will introduce their basic notions such that it is not necessarily needed to have knowledge about these upfront.
+It is highly recommended to have basic knowledge about differential geometry and gauge theory as presented in \cite[especially Chapter 1 to 5]{Hamilton}, and we will follow the style and labeling as in \cite{Hamilton} when we generalize certain notions; however, sometimes we will still give explicit references to help with more technical details. It can be useful to have knowledge about Lie algebra and Lie group bundles, and even Lie algebroids and Lie groupoids, but we will introduce the basic notions of LGBs and LABs such that it is not necessarily needed to have knowledge about these upfront.
 
-We also often give references about Lie group bundles (LGBs), but the given references are often about Lie groupoids. If the reader has no knowledge about Lie groupoids, then it is important to know that LGBs are a special example of Lie groupoids; Lie groupoids carry "two projections", called \textbf{source} and \textbf{target}. An LGB is a special example of a Lie groupoid whose source equals the target.\footnote{But not every Lie groupoid with equal source and target is an LGB, they're in general bundles of Lie groups which is not completely the same; this nuance will not be important here.} If you look into such a reference, then the source and target are often denoted by $\alpha$ and $\beta$, or by $s$ and $t$; simply put both to be the same and identify these with our bundle projection which we often denote by $\pi$. In that way it should be possible to read the references without the need to know Lie groupoids. However, we try to re-prove the needed statements such that these types of references could be avoided by the reader.
-
-See also the previous subsection about notions we assume to be known.
+We also often give references about Lie group bundles (LGBs), but the given references are most of the time about Lie groupoids. If the reader has no knowledge about Lie groupoids, then it is important to know that LGBs are a special example of Lie groupoids; Lie groupoids carry "two projections", called \textbf{source} and \textbf{target}. An LGB is a special example of a Lie groupoid whose source equals the target.\footnote{But not every Lie groupoid with equal source and target is an LGB, they're in general bundles of Lie groups which is not completely the same; this nuance will not be important here.} If you look into such a reference, then the source and target are often denoted by $\alpha$ and $\beta$, or by $s$ and $t$; simply put both to be the same and identify these with our bundle projection which we often denote by $\pi$or $\pi_{\mathcal{G}}$, $\mathcal{G}$ the corresponding LGB. In that way it should be possible to read the references without the need to know Lie groupoids. However, we try to re-prove the needed statements such that these types of references could be avoided by the reader.
 
 %\twocolumn
 %\section{Basic definitions}\label{BasicDefinitions}
@@ -766,7 +784,7 @@ See also the previous subsection about notions we assume to be known.
 %for all constant sections $\mu, \nu \in \Gamma(E)$. We call this structure \textbf{action Lie algebroid}.
 %\end{propositions}
 
-\section{Lie group bundles (LGBs)}
+\section{Lie group bundles (LGBs)}\label{LGBSection}
 
 \subsection{Definition}
 %\pagebreak
@@ -2571,7 +2589,7 @@ is an LAB morphism over $f$.
 Again by our notes in Subsection \ref{BasicNotations}, we can view $F$ as a base-preserving LGB morphism $F: \mathcal{H} \to f^*\mathcal{G}$, since $f^*\mathcal{G}$ is an LGB whose structure is naturally inherited by $\mathcal{G}$ as given in Cor.\ \ref{cor:PullbackLGB}; similarly for its LAB by Cor.\ \ref{cor:PullBackLABIsLAB}. Thus, it is fibre-wise a Lie group morphism, and its tangent map restricted to $\mathcal{h} = e^*\mathrm{V}\mathcal{H}$ ($e$ the identity section of $\mathcal{H}$) gives therefore fibre-wise a Lie algebra morphism. Thus, $\mleft.\mathrm{D} F\mright|_{\mathcal{h}}: \mathcal{h} \to f^*\mathcal{g}$ is an LAB morphism (using Cor.\ \ref{cor:LABOfPullbackLGBIsPullbackLAB}), and can be seen as an LAB morphism $\mathcal{h} \to \mathcal{g}$ over $f$. Alternatively, it is straightforward and trivial to show it directly.
 \end{proof}
 
-\section{LGB actions, part II}
+\section{LGB actions, part II}\label{LGBActionIISection}
 
 Finally, we come to the last part of the \textit{basics} for LGBs and their notions needed in this paper and needed to formulate a new and more general form of gauge theory.
 
@@ -3066,7 +3084,7 @@ for all $(p, g) \in N * \mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(p, g)}(N*\math
 = 
 \mathrm{D}_g\pi(Y).
 \eas
-We may omit the natural embedding of $\omega$ into $\mathrm{T}_{e_x}\mathcal{G}$ via $\mathrm{D}_xe$, writing instead
+We can also write instead
 \ba
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
@@ -3357,7 +3375,7 @@ Eq.\ \eqref{DIFfActionSimilarToTangenGroupoid} may be the most elegant formulati
 Those equations additionally show that we have a more general Leibniz rule with a third summand. However, by Ex.\ \ref{ex:TrivialLGBAction} we expect still a typical Leibniz rule once a trivialization of $\mathcal{G}$ around $g$ is fixed. Indeed, as we will understand and see also later, this is the case; fix such a trivialization, equip it with a canonical flat connection, and take $\sigma$ to be a parallel section, that is, $g$ as a constant section. Then one can calculate that the typical Leibniz rule is recovered. Hence, one can view this Leibniz rule as the "covariantized" version of the Leibniz rule, independent of a choice of "coordinate"/section on $\mathcal{G}$. 
 \end{remark}
 
-\section{Connections and curvature on LGB principal bundles}
+\section{Connections and curvature on LGB principal bundles}\label{ConnCurvOnPrincLGBBundle}
 
 \subsection{Principal bundles with structural LGB}
 

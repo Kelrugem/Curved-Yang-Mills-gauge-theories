@@ -35,17 +35,17 @@ Simon-Raphael Fischer.
 \newblock ID: unige:152555,
   https://doi.org/10.13097/archive-ouverte/unige:152555.
 
-\bibitem{Hamilton}
-Mark~JD Hamilton.
-\newblock {\em Mathematical {G}auge {T}heory}.
-\newblock Springer, 2017.
-\newblock https://doi.org/10.1007/978-3-319-68439-0.
-
 \bibitem{mackenzieGeneralTheory}
 K.~Mackenzie.
 \newblock General {T}heory of {L}ie {G}roupoids and {A}lgebroids.
 \newblock {\em London Mathematical Society Lecture Note Series}, 213, 2005.
 \newblock https://doi.org/10.1017/CBO9781107325883.
+
+\bibitem{Hamilton}
+Mark~JD Hamilton.
+\newblock {\em Mathematical {G}auge {T}heory}.
+\newblock Springer, 2017.
+\newblock https://doi.org/10.1007/978-3-319-68439-0.
 
 \bibitem{PullbackLGBLAB}
 K~Ajaykumar, B.~S. Kiranagi, and R~Rangarajan.
