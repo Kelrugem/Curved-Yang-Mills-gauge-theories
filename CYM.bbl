@@ -1,5 +1,40 @@
 \begin{thebibliography}{10}
 
+\bibitem{CurvedYMH}
+Alexei Kotov and Thomas Strobl.
+\newblock Curving {Y}ang-{M}ills-{H}iggs gauge theories.
+\newblock {\em Physical Review D}, 92(8):085032, 2015.
+\newblock https://doi.org/10.1103/PhysRevD.92.085032.
+
+\bibitem{DaSilva}
+Ana~Cannas Da~Silva and Alan Weinstein.
+\newblock {\em Geometric models for noncommutative algebras}, volume~10.
+\newblock American Mathematical Soc., 1999.
+
+\bibitem{OriginofCYMH}
+Thomas Strobl.
+\newblock Algebroid yang-mills theories.
+\newblock {\em Physical review letters}, 93(21):211601, 2004.
+
+\bibitem{mayer2009lie}
+Christoph Mayer and Thomas Strobl.
+\newblock Lie algebroid yang--mills with matter fields.
+\newblock {\em Journal of Geometry and Physics}, 59(12):1613--1623, 2009.
+
+\bibitem{My1stpaper}
+Simon-Raphael Fischer.
+\newblock Curved {Y}ang–{M}ills–{H}iggs gauge theories in the case of
+  massless gauge bosons.
+\newblock {\em Journal of Geometry and Physics}, 162:104104, 2021.
+\newblock https://doi.org/10.1016/j.geomphys.2021.104104.
+
+\bibitem{MyThesis}
+Simon-Raphael Fischer.
+\newblock {\em {G}eometry of curved {Y}ang-{M}ills-{H}iggs gauge theories}.
+\newblock PhD thesis, 05/31 2021.
+\newblock ID: unige:152555,
+  https://doi.org/10.13097/archive-ouverte/unige:152555.
+
 \bibitem{Hamilton}
 Mark~JD Hamilton.
 \newblock {\em Mathematical {G}auge {T}heory}.
@@ -19,18 +54,6 @@ K~Ajaykumar, B.~S. Kiranagi, and R~Rangarajan.
 \newblock {\em Journal of Algebra and Related Topics}, 8(1):15--26, 2020.
 \newblock https://doi.org/10.22124/jart.2020.13988.1156.
 
-\bibitem{DaSilva}
-Ana~Cannas Da~Silva and Alan Weinstein.
-\newblock {\em Geometric models for noncommutative algebras}, volume~10.
-\newblock American Mathematical Soc., 1999.
-
-\bibitem{MyThesis}
-Simon-Raphael Fischer.
-\newblock {\em {G}eometry of curved {Y}ang-{M}ills-{H}iggs gauge theories}.
-\newblock PhD thesis, 05/31 2021.
-\newblock ID: unige:152555,
-  https://doi.org/10.13097/archive-ouverte/unige:152555.
-
 \bibitem{GroupoidBasedPrincipalBundles}
 Ieke Moerdijk and Janez Mrcun.
 \newblock {\em Introduction to foliations and {L}ie groupoids}, volume~91.
@@ -43,24 +66,11 @@ Marco~Castrillón López and Álvaro~Rodríguez Abella.
   2022.
 \newblock https://arxiv.org/abs/2201.07088.
 
-\bibitem{CurvedYMH}
-Alexei Kotov and Thomas Strobl.
-\newblock Curving {Y}ang-{M}ills-{H}iggs gauge theories.
-\newblock {\em Physical Review D}, 92(8):085032, 2015.
-\newblock https://doi.org/10.1103/PhysRevD.92.085032.
-
 \bibitem{LAURENTGENGOUXStienonXuMultiplicativeForms}
 Camille Laurent-Gengoux, Mathieu Stiénon, and Ping Xu.
 \newblock Non-abelian differentiable gerbes.
 \newblock {\em Advances in Mathematics}, 220(5):1357--1427, 2009.
 \newblock https://doi.org/10.1016/j.aim.2008.10.018.
-
-\bibitem{My1stpaper}
-Simon-Raphael Fischer.
-\newblock Curved {Y}ang–{M}ills–{H}iggs gauge theories in the case of
-  massless gauge bosons.
-\newblock {\em Journal of Geometry and Physics}, 162:104104, 2021.
-\newblock https://doi.org/10.1016/j.geomphys.2021.104104.
 
 \bibitem{FernandesMarcutMultiplicativeForms}
 Rui~Loja Fernandes and Ioan Marcut.
