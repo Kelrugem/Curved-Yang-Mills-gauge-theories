@@ -41,6 +41,12 @@ K.~Mackenzie.
 \newblock {\em London Mathematical Society Lecture Note Series}, 213, 2005.
 \newblock https://doi.org/10.1017/CBO9781107325883.
 
+\bibitem{GroupoidBasedPrincipalBundles}
+Ieke Moerdijk and Janez Mrcun.
+\newblock {\em Introduction to foliations and {L}ie groupoids}, volume~91.
+\newblock Cambridge University Press, 2003.
+\newblock https://doi.org/10.1017/CBO9780511615450.
+
 \bibitem{Hamilton}
 Mark~JD Hamilton.
 \newblock {\em Mathematical {G}auge {T}heory}.
@@ -53,12 +59,6 @@ K~Ajaykumar, B.~S. Kiranagi, and R~Rangarajan.
   invariance.
 \newblock {\em Journal of Algebra and Related Topics}, 8(1):15--26, 2020.
 \newblock https://doi.org/10.22124/jart.2020.13988.1156.
-
-\bibitem{GroupoidBasedPrincipalBundles}
-Ieke Moerdijk and Janez Mrcun.
-\newblock {\em Introduction to foliations and {L}ie groupoids}, volume~91.
-\newblock Cambridge University Press, 2003.
-\newblock https://doi.org/10.1017/CBO9780511615450.
 
 \bibitem{OtherPreprintAboutConnection}
 Marco~Castrillón López and Álvaro~Rodríguez Abella.
