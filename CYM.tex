@@ -470,7 +470,7 @@ In \cite{MyThesis} I first focused on Lie algebroids where the anchor map is an 
 
 However, I also studied the other edge case of having Lie algebra bundles (LABs) instead of Lie algebroids: \cite{MyThesis} (also in \cite{My1stpaper}) points out that locally, \textit{i.e.}~over a contractible base manifold $N$, there is always a field redefinition transforming the initial gauge theory to a pre-classical one. Hence, we arrive at a similar situation as for tangent bundles. But globally there are examples given by the adjoint bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$, where $\mathds{S}^n$ ($n \in \mathbb{N}$) denotes the $n$-dimensional sphere.
 
-This is now the starting point of this paper. We want to understand why the adjoint bundle of $\mathds{S}^7 \to \mathds{S}^4$ works as a curved example, and where it differs from the classical formalism of gauge theory. To truly understand this, and also to possible get new information about the general case regarding Lie algebroids, we will integrate curved Yang-Mills-Higgs gauge theories in the case of LABs in this paper. Using LABs means that there is no coupling to a Higgs field in the usual sense and therefore we will now just speak instead of a curved Yang-Mills gauge theory.
+This is now the starting point of this paper. We want to understand why the adjoint bundle of $\mathds{S}^7 \to \mathds{S}^4$ works as a curved example, and where it differs from the classical formalism of gauge theory. To truly understand this, and also to possible get new information about the general case regarding Lie algebroids, we will integrate curved Yang-Mills-Higgs gauge theories in the case of LABs in this paper. Using LABs means that there is no coupling to a Higgs field in the usual sense and therefore we will now just speak instead of a curved Yang-Mills gauge theory. In the following we will start outlining the paper's main results; we will focus on an easy presentation in the introduction, especially we will not always restate our assumptions.
 
 The gauge theory presented here will be based on principal bundles $\mathcal{P} \stackrel{\pi}{\to} M$, $M$ a smooth manifold, related to a right action of a Lie group bundle (LGB) $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$. The most important distinction to classical gauge theory is that the action $\Phi$ is a map
 \bas
@@ -499,7 +499,7 @@ for all $(p, g) \in \mathcal{P} * \mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(p, g
 \eas
 \end{theorems*}
 
-In Section \ref{ConnCurvOnPrincLGBBundle} we will introduce connections and generalized curvatures on principal LGB-bundles: Subsection \ref{PrincBundlLGBBased} starts with introducing principal $\mathcal{G}$-bundles $\mathcal{P}$. Such principal bundles were already introduced in \cite[\S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}, but also here we rephrased it in such a way that these bundles' definition has a more familiar shape for readers not so proficient with the study of groupoids. The main difference to Lie group based principal bundles is the previously-mentioned LGB action $\Phi$. Since these bundles were not studied a lot before we introduce basic notions like morphisms and easy examples, for example LGBs $\mathcal{G}$ themselves are principal $\mathcal{G}$-bundles, so that the gauge theory presented in this paper can also be understood as a gauge theory based not only on "classical" principal bundles but also on LGBs which were excluded in general in the classical formalism. Furthermore we generalize certain statements known about classical principal bundles, \textit{e.g.}\ we observe that a section of $\mathcal{P}$ does not trivialize $\mathcal{P}$ in general, however it introduces an isomorphism to $\mathcal{G}$, as pointed out in Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}.
+In Section \ref{ConnCurvOnPrincLGBBundle} we will introduce connections and generalized curvatures on principal LGB-bundles: Subsection \ref{PrincBundlLGBBased} starts with introducing principal $\mathcal{G}$-bundles $\mathcal{P}$. Such principal bundles were already introduced in \cite[\S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}, but also here we rephrased it in such a way that these bundles' definition has a more familiar shape for readers not so proficient with the study of groupoids. The main difference to Lie group based principal bundles is the previously-mentioned LGB action $\Phi$. Since these bundles were not studied a lot before we introduce basic notions like morphisms and easy examples, for example LGBs $\mathcal{G}$ themselves are principal $\mathcal{G}$-bundles, so that the gauge theory presented in this paper can also be understood as a gauge theory based not only on "classical" principal bundles but also on LGBs which were excluded in general in the classical formalism. Furthermore we generalize certain statements known about classical principal bundles, \textit{e.g.}\ we observe that a section of $\mathcal{P}$ does not trivialize $\mathcal{P}$ in general, however it introduces an isomorphism to $\mathcal{G}$, as will be pointed out in Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}.
 
 \begin{lemmata*}{Local sections of principal bundles induce isomorphisms to the structural LGB, simplified language}
 Let $s: U \to \mathcal{P}$ be a smooth local section of $\mathcal{P}$ over an open subset $U$ of $M$. Then the orbit map through $s$,
@@ -510,13 +510,13 @@ g &\mapsto s_{\pi_{\mathcal{G}}(g)} \cdot g,
 is a base-preserving principal $\mathcal{G}$-bundle isomorphism.
 \end{lemmata*}
 
-In Subsection \ref{ConnectionSubsection} we finally turn to the notion of connections on $\mathcal{P}$, as horizontal subbundle $\mathrm{H}\mathcal{P}$ of the tangent bundle $\mathrm{T}\mathcal{P}$, and equivalently as connection 1-form $A$. As one can see in the last theorem about the derivative of the action $\Phi$, due to the fact that right-translations $r_g$ of an element $g \in \mathcal{G}_x$ now only acts on $\mathcal{P}_x$, its derivative $\mathrm{D}r_g$ only acts on the tangent bundle of $\mathcal{P}_x$, the vertical tangent vectors of $\mathcal{P}$ (over $x$). Hence, in order to define the pushforward of non-vertical vectors we make use of auxiliary sections. However, this leads to the problem that there are many different sections with the same value over a fixed base point $x \in M$, all of whose pushforwards of non-vertical vectors are in general different. To get rid of the ambiguity in the choice of section we are going to modify and generalize the pushforward of tangent vectors by right-translations. To do so, we fix a horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$, without further assumptions than the bare-bones for horizontal distributions. Then we start to construct the horizontal distribution $\mathrm{H}\mathcal{P}$ initially by its associated parallel transport, shortly denoted now by $\mathrm{PT}^{\mathcal{P}}$; similarly we denote the parallel transport associated to $\mathrm{H}\mathcal{G}$ by $\mathrm{PT}^{\mathcal{G}}$. We want a connection on $\mathcal{P}$ characterised by
+In Subsection \ref{ConnectionSubsection} we finally turn to the notion of connections on $\mathcal{P}$, as horizontal subbundle $\mathrm{H}\mathcal{P}$ of the tangent bundle $\mathrm{T}\mathcal{P}$, complementary to the vertical bundle $\mathrm{V}\mathcal{P}$, and equivalently we want to describe $\mathrm{H}\mathcal{P}$ as a connection 1-form $A$. As one can see in the last theorem about the derivative of the action $\Phi$, due to the fact that right-translations $r_g$ of an element $g \in \mathcal{G}_x$ now only acts on $\mathcal{P}_x$, its derivative $\mathrm{D}r_g$ only acts on the tangent bundle of $\mathcal{P}_x$, the vertical tangent vectors of $\mathcal{P}$ (over $x$). Hence, in order to define the pushforward of non-vertical vectors we make use of auxiliary sections. However, this leads to the problem that there are many different sections with the same value over a fixed base point $x \in M$, all of whose pushforwards of non-vertical vectors are in general different. To get rid of the ambiguity in the choice of section we are going to modify and generalize the pushforward of tangent vectors by right-translations. To do so, we fix a horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$, without further assumptions than the bare-bones for horizontal distributions. Then we start to construct the horizontal distribution $\mathrm{H}\mathcal{P}$ initially by its associated parallel transport, shortly denoted now by $\mathrm{PT}^{\mathcal{P}}$; similarly we denote the parallel transport associated to $\mathrm{H}\mathcal{G}$ by $\mathrm{PT}^{\mathcal{G}}$. We want a connection on $\mathcal{P}$ characterised by
 \bas
 \mathrm{PT}^{\mathcal{P}}(p \cdot g)
 &=
 \mathrm{PT}^{\mathcal{P}}(p) \cdot \mathrm{PT}^{\mathcal{G}}(g)
 \eas
-for all $(p, g) \in \mathcal{P}*\mathcal{G}$. However, in order to define the connection 1-form it is useful to find a definition of such $\mathrm{H}\mathcal{P}$ via a symmetry w.r.t.\ a certain map acting on $\mathrm{T}\mathcal{P}$, as already high-lighted, a modification of the pushforward via right-translations. Differentiating the condition about parallel transports w.r.t.\ the curve parameter achieves this modification, summarised in Prop.\ \ref{prop:IsomorphismRightPushAndDarboux}; we explain the second summand after the following proposition.
+for all $(p, g) \in \mathcal{P}*\mathcal{G}$. However, in order to define the connection 1-form it is useful to find a definition of such $\mathrm{H}\mathcal{P}$ via a symmetry w.r.t.\ a certain map acting on $\mathrm{T}\mathcal{P}$, as already high-lighted, a modification of the pushforward via right-translations. Differentiating the condition about parallel transports w.r.t.\ the curve parameter achieves this modification, summarised in Prop.\ \ref{prop:IsomorphismRightPushAndDarboux}; we explain the second summand of the following proposition afterwards.
 
 \begin{propositions*}{The modified right-pushforward}
 For $g \in \mathcal{G}_x$ ($x \in M$) define the map
@@ -538,7 +538,8 @@ where $p \in \mathcal{P}_x$, $X \in \mathrm{T}_p \mathcal{P}$, $\pi^!$ denotes t
 Furthermore, if we have a horizontal distribution $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, then $\mathrm{H}_p\mathcal{P}$ is isomorphic via $\mathcal{r}_{g*}$ to a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$ (this complement is not necessarily $\mathrm{H}_{p \cdot g}\mathcal{P}$).
 \end{propositions*}
 
-$\Delta\sigma$ is the generalised version of the Darboux derivative, often simply denoted as $\sigma^{-1} \mathrm{d}\sigma$ in the classical formalism, but in some works like \cite[\S 5.1, page 182ff.]{mackenzieGeneralTheory} also already in the classical formalism written as $\Delta\sigma$. As expected, this derivative plays an important role in gauge theory, which is why we will also discuss and introduce the Darboux derivative; usually it only appears in the gauge transformations, but in our case it will already appears now. In Def.\ \ref{def:TotMCFormOnLGB} we first introduce the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$} as the connection 1-form associated to $\mathcal{G}$ with values in the LAB $\mathcal{g}$ of $\mathcal{G}$; the labelling comes from that this form will play a similar role like the Maurer-Cartan form in the typical formalism for gauge theory.
+This can be generalized to sections $\sigma$ of $\mathcal{G}$ in a straight-forward manner, giving rise to an automorphism $\mathcal{r}_\sigma$ of $\mathrm{T}\mathcal{P}$ over the right-translation $r_\sigma$.
+$\Delta\sigma$ is the generalised version of the Darboux derivative, often simply denoted as $\sigma^{-1} \mathrm{d}\sigma$ in the classical formalism, but in some works like \cite[\S 5.1, page 182ff.]{mackenzieGeneralTheory} also already in the classical formalism written as $\Delta\sigma$. As expected, this derivative plays an important role in gauge theory, which is why we will also discuss and introduce the Darboux derivative; usually it only appears in the gauge transformations, but in our case it will already appears now. In Def.\ \ref{def:TotMCFormOnLGB} we will first introduce the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$} as the connection 1-form associated to $\mathcal{G}$ with values in the LAB $\mathcal{g}$ of $\mathcal{G}$; the labelling comes from that this form will play a similar role like the Maurer-Cartan form in the typical formalism for gauge theory, and in contrast to $\mu_{\mathcal{G}}$ it acts on whole of $\mathrm{T}\mathcal{G}$ instead of just the vertical subbundle.
 
 \begin{definitions*}{Total Maurer-Cartan form}
 Let us denote with $\pi^{\mathrm{vert}}$ the projection onto the vertical bundle $\mathcal{G}$, corresponding to its horizontal bundle $\mathrm{H}\mathcal{G}$. Then we define the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}} \in \Omega^1\mleft(\mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)$ of $\mathcal{G}$} as the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$, \textit{i.e.}\
@@ -561,6 +562,158 @@ For $\sigma \in \Gamma(\mathcal{G})$ we define the \textbf{Darboux derivative $\
 &=
 \sigma^! \mu_{\mathcal{G}}^{\mathrm{tot}}.
 \eas
+\end{definitions*}
+
+Using the Darboux derivative, we defined the modified pushforward via right-translations (also called modified right-pushforward) which eventually leads to the definition of an Ehresmann connection on the principal $\mathcal{G}$-bundle $\mathcal{P}$, as pinpointed in Def.\ \ref{def:FinallyTheConnection}.
+
+\begin{definitions*}{Ehresmann connection on principal LGB-bundles}
+We call $\mathrm{H}\mathcal{P}$ an \textbf{Ehresmann connection} or a \textbf{connection on $\mathcal{P}$} if it is \textbf{right-invariant (w.r.t.\ modified right-pushforward)}, \textit{i.e.}\
+\bas
+\mathcal{r}_{g*}\mleft( \mathrm{H}_p\mathcal{P} \mright)
+&=
+\mathrm{H}_{p\cdot g}\mathcal{P}
+\eas
+for all $p \in \mathcal{P}_x$ and $g \in \mathcal{G}_x$ ($x \coloneqq \pi(p)$).
+\end{definitions*}
+
+The basic formula is to just replace the typical right-pushforward with the modified one, the pull-back of forms will be simply given by Def.\ \ref{def:PullbackOfFormsViaModRight}; see the actual definition for a push-forward with a single element. However, we will mainly need the formulation with sections.
+
+\begin{definitions*}{The pullback of forms via modified right-pushforward, the section formulation}
+For $\omega \in \Omega^k(\mathcal{P}; \pi^*\mathcal{g})$ ($k \in \mathbb{N}_0$) we define the \textbf{pullback via the modified right-pushforward $r^!_{\sigma}\omega$ with a (local) section $\sigma \in \Gamma(\mathcal{G})$} as an element of $\Omega^k(\mathcal{P}; \pi^*\mathcal{g})$ by 
+\bas
+\mleft.\mleft(\mathcal{r}_\sigma^!\omega\mright)\mright|_p \mleft( Y_1, \dotsc, Y_k\mright)
+&\coloneqq
+\omega_{p \cdot \sigma_x} \bigl( \mathcal{r}_{\sigma*}(Y_1), \dotsc, \mathcal{r}_{\sigma*}(Y_k)\bigr)
+\eas
+for all $p \in \mathcal{P}_x$ ($x \in M$) and $Y_1, \dotsc, Y_k \in \mathrm{T}_p\mathcal{P}$.
+\end{definitions*}
+
+It is now straight-forward to define the connection 1-form $A$ on $\mathcal{P}$, which we will do in Def.\ \ref{def:GaugeBosonsOnLGBPrincies}.
+
+\begin{definitions*}{Connection 1-forms on principal LGB-bundles, simplified notation}
+A \textbf{connection 1-form} or \textbf{gauge field} on $\mathcal{P}$ is a 1-form $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ satisfying:
+\begin{itemize}
+	\item \textbf{($\mathcal{G}$-equivariance, but w.r.t.\ modified right-pushforward)}
+		\bas 
+			\mathcal{r}_\sigma^! A
+			&=
+			\mathrm{Ad}_{\sigma^{-1}} \circ A
+		\eas
+	for all (local) $\sigma \in \Gamma(\mathcal{G})$, where $\mathrm{Ad}$ is the adjoint representation of $\mathcal{G}$ on $\mathcal{g}$.
+	\item \textbf{(Identity on $\mathrm{V}\mathcal{P}$)}
+	\bas
+	A\mleft(\widetilde{\nu}\mright)
+	&=
+	\pi^*\nu
+	\eas
+	for all (local) $\nu \in \Gamma(\mathcal{g})$.
+\end{itemize}
+\end{definitions*}
+
+Of course we will achieve a 1:1 correspondence to Ehresmann connections in Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}.
+
+\begin{theorems*}{1:1 correspondence of Ehresmann connections and connection 1-forms}
+There is a 1:1 correspondence between Ehresmann connections and connection 1-forms on $\mathcal{P}$:
+\begin{itemize}
+	\item Let $\mathrm{H}\mathcal{P}$ be an Ehresmann connection on $\mathcal{P}$. Then $\mathrm{H}\mathcal{P}$ defines a connection 1-form $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ by
+	\bas
+	A_p\bigl( \widetilde{v}_p + X_p \bigr)
+	&=
+	(p, v)
+	\eas
+	for all $p \in \mathcal{P}_x$ ($x \in M$), $v \in \mathcal{g}_x$ and $X \in \mathrm{H}_p\mathcal{P}$.
+	\item Let $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then $A$ defines an Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$ via its kernel $\mathrm{Ker}(A)$, that is,
+	\bas
+	\mathrm{H}_p\mathcal{P}
+	&=
+	\mathrm{Ker}(A_p)
+	\eas
+	for all $p \in \mathcal{P}$.
+\end{itemize}
+\end{theorems*}
+
+Not only these results are straight-forward once one has the definition of the modified right-pushforward, also other results will be simple to guess. For example the gauge transformations will have a similar shape but with the generalized Darboux derivative appearing, see Thm.\ \ref{thm:GaugeTrafoOfGaugeBoson} later.
+
+\begin{theorems*}{Gauge transformations of connection 1-forms, simplified notation}
+Let $H$ be an automorphism of $\mathcal{P}$. We then have that $H^!A$ is a connection 1-form on $\mathcal{P}$ and
+\bas
+H^!A
+&=
+{\mathrm{Ad}_{\mleft(\sigma^H\mright)^{-1}}} \circ A 
+	+ \mleft(\pi^*\Delta\mright)\sigma^H,
+\eas
+where $\sigma^H \in \Gamma(\pi^*\mathcal{G})$ is uniquely defined by
+\bas
+H(p)
+=
+p \cdot \sigma_p^H
+\eas
+for all $p \in \mathcal{P}$, and $\pi^*\Delta$ is the Darboux derivative on $\pi^*\mathcal{G}$ naturally inherited by the pullback of the connection on $\mathcal{G}$.
+\end{theorems*}
+
+The 1:1 correspondence between $H$ and $\sigma^H$ arising here leads to similar statements as in the classical gauge theory which we will also shortly point-out. We will show in Thm.\ \ref{thm:LocalGaugeTrafoChangeGauge} that this theorem about gauge transformations implies a pullback version, that is, one looks at the pullback $A_{s_i} \coloneqq s_i^!A$ of $A$ w.r.t.\ a section (also called gauge) $s_i$ of $\mathcal{P}$ defined over an open subset $U_i \subset M$, and then the change of $A$ by changing the gauge $s_i$ to another gauge follows by the previous theorem.
+
+\begin{theorems*}{Gauge transformations as a change of gauge in the local gauge field}
+Let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$. Then we have
+\bas
+A_{s_i}
+&=
+\mathrm{Ad}_{\sigma_{ji}^{-1}}\circ A_{s_j}
+	+ \Delta\sigma_{ji}.
+\eas
+\end{theorems*}
+
+This finished the discussion about $A$, but of course we also needs its field strength $F$ and a certain shape of gauge transformation for $F$. Up until now $\mathrm{H}\mathcal{G}$ was an arbitrary horizontal distribution, but we will need to fix certain conditions on it to assure gauge invariance later. On one hand, viewing $\mathcal{G}$ as a principal $\mathcal{G}$-bundle whose horizontal distribution aligns with $\mathrm{H}\mathcal{G}$, it is natural to guess that $\mathrm{H}\mathcal{G}$ should be an Ehresmann connection itself. Ehresmann connections on LGBs were already discussed in works like \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. One of the results of these works is that an Ehresmann connection on LGBs is characterized by the fact that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ has to be a multiplicative form:
+
+\begin{definitions*}{Multiplicative forms, simplified notation, \newline \cite[\S 2.1, special situation of Def.\ 2.1]{crainic2015multiplicative}}
+We call an $\omega \in \Omega^1\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright)$ a \textbf{multiplicative form} if
+\bas
+\omega_{gq}\mleft( \mathrm{D}_{(g, q)}\Phi(X, Y)  \mright)
+&=
+\mathrm{Ad}_{q^{-1}}\bigl( \omega_{g}(X) \bigr)
+	+ \omega_{q}(Y)
+\eas
+for all $(g, q) \in \mathcal{G}*\mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(g, q)}(\mathcal{G}*\mathcal{G})$, where $\Phi: \mathcal{G} * \mathcal{G} \to \mathcal{G}$ is the multiplication in $\mathcal{G}$.
+\end{definitions*}
+
+\begin{theorems*}{Ehresmann connection 1-forms on LGBs are multiplicative, \newline \cite[\S 4.4, implication of Lemma 4.14]{LAURENTGENGOUXStienonXuMultiplicativeForms}}
+$\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle if and only if $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative.
+\end{theorems*}
+
+Assuming that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection will also allow us to formulate certain technical identities for the Darboux derivative like a Leibniz rule. In order to calculate the gauge transformation for the curvature/field strength $F$ of $A$ we need to understand the curvature of the total Maurer-Cartan form. Classically, this is described by the Maurer-Cartan equation, however, we generalize this condition, allowing non-flat connections on $\mathcal{G}$. For this we will need a connection on the LAB $\mathcal{g}$ of $\mathcal{G}$, naturally induced by $\mathrm{H}\mathcal{G}$; we will construct this connection in Prop.\ \ref{prop:FinallyTheNablaInduction} and Def.\ \ref{def:ConnectionOnLAB}, and our construction aligns with \cite[\S 4.5, Prop.\ 4.22]{LAURENTGENGOUXStienonXuMultiplicativeForms} even though we argue the following differently since we have shown the following statement actually for all horizontal distributions $\mathrm{H}\mathcal{G}$ instead of just Ehresmann connections.
+
+\begin{propositions*}{LGB connection induces LAB connection, simplified notation}
+The map $\nabla^{\mathcal{G}}: \Gamma(\mathcal{g}) \to \Omega^1(M; \mathcal{g})$, $\nu \mapsto \nabla^{\mathcal{G}}\nu$ denoted as an element of $\Omega^1(M; \mathcal{g})$ by $X \mapsto \nabla^{\mathcal{G}}_X \nu$, defined by
+\bas
+\mleft.\nabla^{\mathcal{G}}_X \nu\mright|_x
+&\coloneqq
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu}\mright)_x (X) \Bigr)
+\eas
+for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, is a vector bundle connection on $\mathcal{g}$, where $t \in \mathbb{R}$. We will call $\nabla^{\mathcal{G}}$ the \textbf{$\mathcal{G}$-connection (on its LAB $\mathcal{g}$)}.
+\end{propositions*}
+
+In fact, $\nabla^{\mathcal{G}}$ will play the role of $\nabla$ from the beginning of this introduction. This will allow us to define the generalized Maurer-Cartan equation in Thm.\ \ref{thm:GenMCEq} and Def.\ \ref{def:NowReallyYangMillsConnectio}.
+
+\begin{definitions*}{Yang-Mills connection, simplified notation}
+We say that $\mathrm{H}\mathcal{G}$, and $\mu_{\mathcal{G}}^{\mathrm{tot}}$, is a \textbf{Yang-Mills connection (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$)}, if it satisfies the \textbf{compatibility conditions}:
+\begin{enumerate}
+	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative,
+	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies the \textbf{generalized Maurer-Cartan equation}, that is,
+	\bas
+	\mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}} \mright)\mright|_g
+&=
+\mathrm{Ad}_{g^{-1}} \circ \mleft.\pi_{\mathcal{G}}^!\zeta\mright|_g
+	- \mleft.\pi_{\mathcal{G}}^!\zeta\mright|_g
+	\eas
+	for all $g \in \mathcal{G}_x$ ($x \in M$), where $\mleft[\cdot, \cdot\mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}$ is the Lie bracket of the pullback-LAB $\pi_{\mathcal{G}}^*\mathcal{g}$, and the $\stackrel{\wedge}{,}$ denotes the typical graded extension of tensors, that is, the second summand on the left hand side is an element of $\Omega^2(\mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g})$ given here by
+	\bas
+	\mleft(\frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}} \mright) (X, Y)
+	&=
+	\mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}}(X), \mu_{\mathcal{G}}^{\mathrm{tot}}(Y) \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
+	\eas
+	for all $X, Y \in \mathfrak{X}(\mathcal{G})$ (vector fields on $\mathcal{G}$).
+\end{enumerate}
 \end{definitions*}
 
 \subsection{Basic notations and remarks}\label{BasicNotations}
@@ -5207,7 +5360,7 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 &=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Delta \e^{t \nu}
 \eas
-for all $\nu \in \Gamma(\mathcal{g})$, the \textbf{$\mathcal{G}$-connection (on its LAB $\mathcal{g}$)}.
+for all $\nu \in \Gamma(\mathcal{g})$, the \textbf{$\mathcal{G}$-connection (on the LAB $\mathcal{g}$)}.
 \end{definitions}
 
 \begin{remark}\label{PTLABComingFromPTLGB}
@@ -5586,7 +5739,7 @@ Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} trivially extends to $\mathcal{
 Hence, the following definition makes sense, especially if thinking about what we discussed for Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}.
 
 \begin{definitions}{Ehresmann connection on principal LGB-bundles}{FinallyTheConnection}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal distributions $\mathrm{H}\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ on $\mathcal{G}$ and $\mathcal{P}$, respectively. We call $\mathrm{H}\mathcal{P}$ an \textbf{Ehresmann connection} or a \textbf{connection on $\mathcal{P}$} if it is \textbf{right-invariant (w.r.t.\ modifier right-pushforward)}, \textit{i.e.}\
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal distributions $\mathrm{H}\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ on $\mathcal{G}$ and $\mathcal{P}$, respectively. We call $\mathrm{H}\mathcal{P}$ an \textbf{Ehresmann connection} or a \textbf{connection on $\mathcal{P}$} if it is \textbf{right-invariant (w.r.t.\ modified right-pushforward)}, \textit{i.e.}\
 \bas
 \mathcal{r}_{g*}\mleft( \mathrm{H}_p\mathcal{P} \mright)
 &=
@@ -5653,14 +5806,14 @@ We call such connections on LGBs associated to a classical principal bundle an \
 
 As expected, we have a corresponding connection 1-form. For this we need to formally define the pullback of 1-forms with respect to the modified right-pushforward.
 
-\begin{definitions}{The pullback of forms }{PullbackOfFormsViaModRight}
+\begin{definitions}{The pullback of forms via modified right-pushforward}{PullbackOfFormsViaModRight}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a fixed horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. For $\omega \in \Omega^k(\mathcal{P}; \pi^*\mathcal{g})$ ($k \in \mathbb{N}_0$) we define the \textbf{pullback via the modified right-pushforward $\mathcal{r}_g^!\mleft(\mleft.\omega\mright|_{\mathcal{P}_x}\mright)$ (with $g\in\mathcal{G}_x$, over $\mathcal{P}_x$, $x \in M$)} as an element of $\Gamma \mleft( \Lambda^k\mleft.\mathrm{T}^*\mathcal{P}\mright|_{\mathcal{P}_x} \otimes \mathcal{g}_x \mright)$ by
 \bas
 \mleft.\mleft(\mathcal{r}_g^!\mleft(\mleft.\omega\mright|_{\mathcal{P}_x}\mright)\mright)\mright|_p \mleft( Y_1, \dotsc, Y_k\mright)
 &\coloneqq
 \omega_{p \cdot g} \bigl( \mathcal{r}_{g*}(Y_1), \dotsc, \mathcal{r}_{g*}(Y_k)\bigr)
 \eas
-for all $p \in \mathcal{P}_x$ and $Y_1, \dotsc, Y_k \in \mathrm{T}_p\mathcal{P}$. Similarly we define the \textbf{pullback via the modified right-pushforward $r^!_{\sigma}\omega$ with a (local) section $\sigma \in \Gamma(\mathcal{G})$} as an element of $\Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ by 
+for all $p \in \mathcal{P}_x$ and $Y_1, \dotsc, Y_k \in \mathrm{T}_p\mathcal{P}$. Similarly we define the \textbf{pullback via the modified right-pushforward $r^!_{\sigma}\omega$ with a (local) section $\sigma \in \Gamma(\mathcal{G})$} as an element of $\Omega^k(\mathcal{P}; \pi^*\mathcal{g})$ by 
 \bas
 \mleft.\mleft(\mathcal{r}_\sigma^!\omega\mright)\mright|_p \mleft( Y_1, \dotsc, Y_k\mright)
 &\coloneqq
@@ -6745,7 +6898,7 @@ The relation to Mackenzie's study can be useful for the interested reader to und
 %We will need several auxiliary result, also related to the Darboux derivative w.r.t.\ Yang-Mills connections. Especially also recall all the discussion around the modified push-forward $\mathcal{r}$ via right-translations, Def.\ \ref{def:WeModTheRIghtPush}.
 
 We want to integrate these infinitesimal compatibility conditions to conditions on $\mathrm{H}\mathcal{G}$ directly.
-Let us initially focus on the first infinitesmal compatibility condition \eqref{CondSGleichNullLAB}. In the following we will also view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle which is equipped with the same horizontal distribution as $\mathcal{G}$ as LGB; related notions and notations carry over. One can show that Ehresmann connections satisfy \eqref{CondSGleichNullLAB}, and in fact Ehresmann connections on LGBs (and Lie groupoids) were already discussed \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}.
+Let us initially focus on the first infinitesmal compatibility condition \eqref{CondSGleichNullLAB}. In the following we will also view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle which is equipped with the same horizontal distribution as $\mathcal{G}$ as LGB; related notions and notations carry over. One can show that Ehresmann connections satisfy \eqref{CondSGleichNullLAB}, and in fact Ehresmann connections on LGBs (and Lie groupoids) were already discussed in \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}.
 
 \begin{lemmata}{Ehresmann connections induce Lie bracket derivations, \newline \cite[\S 4.5, Prop.\ 4.21]{LAURENTGENGOUXStienonXuMultiplicativeForms}}{YangMillsConnAnEhresmann}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$. If $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle, then the infinitesimal compatibility condition \eqref{CondSGleichNullLAB} is satisfied.
