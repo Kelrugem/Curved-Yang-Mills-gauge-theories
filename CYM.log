@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.15)  29 SEP 2022 16:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.15)  30 SEP 2022 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1117,22 +1117,22 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 {C:/Users/kelru/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map}] (CYM.toc
 Overfull \hbox (1.09496pt too wide) detected at line 36
- []\T1/lmss/bx/n/10.95 148
+ []\T1/lmss/bx/n/10.95 153
  []
 
 [2]
 Overfull \hbox (1.09496pt too wide) detected at line 39
- []\T1/lmss/bx/n/10.95 152
+ []\T1/lmss/bx/n/10.95 157
  []
 
 
 Overfull \hbox (1.09496pt too wide) detected at line 40
- []\T1/lmss/bx/n/10.95 153
+ []\T1/lmss/bx/n/10.95 158
  []
 
 
 Overfull \hbox (1.09496pt too wide) detected at line 41
- []\T1/lmss/bx/n/10.95 154
+ []\T1/lmss/bx/n/10.95 159
  []
 
 )
@@ -1143,50 +1143,51 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 441.
  (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 1034--1036
+[14] [15] [16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 1236--1238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1048--1051
+Underfull \hbox (badness 10000) in paragraph at lines 1250--1253
 
  []
 
-[14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 1170--1173
+[18] [19] [20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 1372--1375
 
  []
 
-[17] [18] [19] [20] [21] [22] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1553--1556
+[22] [23] [24] [25] [26] [27] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 1755--1758
 
  []
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 1570--1573
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1775
 
  []
 
-[25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47]
-[48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70]
-[71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]
+[30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52]
+[53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75]
+[76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 5225.
+(Font)              using `U/stmry/m/n' instead on input line 5427.
 
-[93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112]
-[113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131]
-Overfull \hbox (2.67805pt too wide) in paragraph at lines 7640--7647
+[98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117]
+[118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135]
+Overfull \hbox (2.67805pt too wide) in paragraph at lines 7771--7778
 \T1/lmr/m/n/10.95 using Rem. [][]5.19[][] (bracket of fundamental/left-invariant vec-tor fields is fundamental/left-inva
 riant)
  []
 
-[132] [133] [134] [135] [136] [137] [138] [139] [140]
-Overfull \hbox (3.1053pt too wide) detected at line 8259
+[136] [137] [138] [139] [140] [141] [142] [143] [144] [145]
+Overfull \hbox (3.1053pt too wide) detected at line 8459
 []
  []
 
-[141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] (CYM.bbl [152]
+[146] [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] (CYM.bbl [157]
 Underfull \hbox (badness 1609) in paragraph at lines 25--30
 []\T1/lmr/m/n/10.95 Simon-Raphael Fis-cher.  Curved Yang^^UMills^^UHiggs gauge the-o-ries in the case of
  []
@@ -1220,23 +1221,23 @@ Underfull \hbox (badness 2970) in paragraph at lines 62--66
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--72
+Underfull \hbox (badness 1552) in paragraph at lines 68--73
+[]\T1/lmr/m/n/10.95 Marius Crainic.  Dif-fer-en-tiable and al-ge-broid co-ho-mol-ogy, van Est iso-mor-phisms,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--79
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gauge The-ory\T1/lmr/m/n/10.95 .  Springer, 
 2017.
  []
 
-
-Underfull \hbox (badness 1552) in paragraph at lines 87--92
-[]\T1/lmr/m/n/10.95 Marius Crainic.  Dif-fer-en-tiable and al-ge-broid co-ho-mol-ogy, van Est iso-mor-phisms,
- []
-
-[153]
+[158]
 Underfull \hbox (badness 1867) in paragraph at lines 100--104
 \T1/lmr/m/n/10.95 sym-plec-tic man-i-folds.  \T1/lmr/m/it/10.95 Jour-nal of Ge-om-e-try and Physics\T1/lmr/m/n/10.95 , 5
 9(9):1285--1305, 2009.
  []
 
-) [154] [155] [156] [157] [158] [159] [160] [161] [162] (CYM.aux)
+) [159] [160] [161] [162] [163] [164] [165] [166] [167] (CYM.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1244,10 +1245,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36280 strings out of 477958
- 770012 string characters out of 2833983
- 1207157 words of memory out of 3000000
- 53902 multiletter control sequences out of 15000+600000
+ 36344 strings out of 477958
+ 771338 string characters out of 2833983
+ 1215426 words of memory out of 3000000
+ 53961 multiletter control sequences out of 15000+600000
  596930 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,106p,10627b,1313s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1273,9 +1274,9 @@ public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb
 1/public/lm/lmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/
 Users/kelru/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (164 pages, 1534275 bytes).
+Output written on CYM.pdf (169 pages, 1561750 bytes).
 PDF statistics:
- 2444 PDF objects out of 2487 (max. 8388607)
- 533 named destinations out of 1000 (max. 500000)
+ 2493 PDF objects out of 2984 (max. 8388607)
+ 538 named destinations out of 1000 (max. 500000)
  333 words of extra memory for PDF output out of 10000 (max. 10000000)
 

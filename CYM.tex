@@ -445,7 +445,7 @@ A short summary of this type of generalized infinitesimal gauge theory follows; 
 	\item a 2-form on $N$ with values in $E$, $\zeta \in \Omega^2(N;E)$, an additional contribution to the field strength of $A$.
 \end{itemize}
 
-Infinitesimal gauge invariance of the Yang-Mills type functional leads to four \textbf{compatibility conditions} to be satisfied between these structures. If the connection on $E$ is flat, the compatibilities imply that the Lie algebroid is locally an action Lie algebroid:
+Infinitesimal gauge invariance of the Yang-Mills type functional leads to two \textbf{infinitesimal compatibility conditions} and two metric compatibilities to be satisfied between these structures; we will present those compatibility conditions later in this introduction. If the connection on $E$ is flat, the compatibilities imply that the Lie algebroid is locally an action Lie algebroid:
 
 \begin{definitions*}{Action Lie algebroids, \cite[\S 16.2, Example 5; page 114]{DaSilva}}
 Let $\mleft(\mathfrak{g}, \mleft[\cdot, \cdot \mright]_{\mathfrak{g}}\mright)$ be a Lie algebra equipped with a Lie algebra action $\gamma: \mathfrak{g} \to \mathfrak{X}(N)$ on a smooth manifold $N$. A \textbf{transformation Lie algebroid} or \textbf{action Lie algebroid} is defined as the bundle $E \coloneqq N \times \mathfrak{g}$ over $N$ with anchor
@@ -464,7 +464,7 @@ for $(p, v) \in E$, and Lie bracket
 
 As it is shown in the mentioned references for this type of infinitesimal gauge theory, one gets back to the standard Yang-Mills-Higgs gauge theory if additionally $\zeta \equiv 0$. Thus, the theory represents a covariantized version of gauge theory equipped with an additional 2-form $\zeta$. If $\nabla$ is flat we say in general that we have a \textbf{pre-classical} gauge theory, and if additionally $\zeta \equiv 0$ we have a \textbf{classical} gauge theory.
 
-The 2-form $\zeta$ is needed to allow non-flat $\nabla$, because otherwise only flat $\nabla$ could satisfy the compatibility conditions. But $\zeta$ is not just an auxiliary map, in \cite{MyThesis} I have shown that there is also a field redefinition for the classical formulation of gauge theory. This field redefinition breaks the gauge invariance; so, in order to keep gauge invariance, one needs to add $\zeta$ to the field strength, and at the same time one achieves a richer framework for gauge theories. It is then natural to study whether there is an infinitesimal gauge theory where $\zeta$ is non-zero and cannot be transformed to zero by the mentioned field redefinition.
+The 2-form $\zeta$ is needed to allow non-flat $\nabla$, because otherwise only flat $\nabla$ could satisfy the compatibility conditions. But $\zeta$ is not just an auxiliary map, in \cite{MyThesis} I have shown that there is also a class of \textbf{field redefinitions} for the classical formulation of gauge theory. This field redefinition breaks the gauge invariance; so, in order to keep gauge invariance, one needs to add $\zeta$ to the field strength, and at the same time one achieves a richer framework for gauge theories. It is then natural to study whether there is an infinitesimal gauge theory where $\zeta$ is non-zero and cannot be transformed to zero by the mentioned field redefinition.
 
 In \cite{MyThesis} I first focused on Lie algebroids where the anchor map is an isomorphism and, thus, the Lie algebroid is just the tangent bundle of $M$. Locally, such examples can be excluded: The curvature can be always transformed to zero by the field redefinitions. However, globally, this is not always true: I have shown that the tangent bundle of the seven-dimensional sphere $\mathds{S}^7$ is an example of a curved gauge theory which cannot be transformed to a flat gauge theory, otherwise it would be a Lie group which is not possible.
 
@@ -576,7 +576,8 @@ We call $\mathrm{H}\mathcal{P}$ an \textbf{Ehresmann connection} or a \textbf{co
 for all $p \in \mathcal{P}_x$ and $g \in \mathcal{G}_x$ ($x \coloneqq \pi(p)$).
 \end{definitions*}
 
-The basic formula is to just replace the typical right-pushforward with the modified one, the pull-back of forms will be simply given by Def.\ \ref{def:PullbackOfFormsViaModRight}; see the actual definition for a push-forward with a single element. However, we will mainly need the formulation with sections.
+$\mathrm{H}\mathcal{P}$ will now always be an Ehresmann connection in the following.
+The basic idea now is to replace the typical right-pushforward with the modified one, the pull-back of forms will be simply given by Def.\ \ref{def:PullbackOfFormsViaModRight}; see the actual definition for a push-forward with a single element. However, we will mainly need the formulation with sections.
 
 \begin{definitions*}{The pullback of forms via modified right-pushforward, the section formulation}
 For $\omega \in \Omega^k(\mathcal{P}; \pi^*\mathcal{g})$ ($k \in \mathbb{N}_0$) we define the \textbf{pullback via the modified right-pushforward $r^!_{\sigma}\omega$ with a (local) section $\sigma \in \Gamma(\mathcal{G})$} as an element of $\Omega^k(\mathcal{P}; \pi^*\mathcal{g})$ by 
@@ -606,7 +607,7 @@ A \textbf{connection 1-form} or \textbf{gauge field} on $\mathcal{P}$ is a 1-for
 	&=
 	\pi^*\nu
 	\eas
-	for all (local) $\nu \in \Gamma(\mathcal{g})$.
+	for all (local) $\nu \in \Gamma(\mathcal{g})$, where notations like $\pi^*$ denote the pull-back of sections.
 \end{itemize}
 \end{definitions*}
 
@@ -632,7 +633,7 @@ There is a 1:1 correspondence between Ehresmann connections and connection 1-for
 \end{itemize}
 \end{theorems*}
 
-Not only these results are straight-forward once one has the definition of the modified right-pushforward, also other results will be simple to guess. For example the gauge transformations will have a similar shape but with the generalized Darboux derivative appearing, see Thm.\ \ref{thm:GaugeTrafoOfGaugeBoson} later.
+Not only these results are straight-forward once one has the definition of the modified right-pushforward, also other results will be simple to guess. For example in Subsection \ref{GaugeTrafoForA} we turn to the gauge transformations which will have a familiar shape but with the generalized Darboux derivative appearing, see Thm.\ \ref{thm:GaugeTrafoOfGaugeBoson}.
 
 \begin{theorems*}{Gauge transformations of connection 1-forms, simplified notation}
 Let $H$ be an automorphism of $\mathcal{P}$. We then have that $H^!A$ is a connection 1-form on $\mathcal{P}$ and
@@ -663,7 +664,7 @@ A_{s_i}
 \eas
 \end{theorems*}
 
-This finished the discussion about $A$, but of course we also needs its field strength $F$ and a certain shape of gauge transformation for $F$. Up until now $\mathrm{H}\mathcal{G}$ was an arbitrary horizontal distribution, but we will need to fix certain conditions on it to assure gauge invariance later. On one hand, viewing $\mathcal{G}$ as a principal $\mathcal{G}$-bundle whose horizontal distribution aligns with $\mathrm{H}\mathcal{G}$, it is natural to guess that $\mathrm{H}\mathcal{G}$ should be an Ehresmann connection itself. Ehresmann connections on LGBs were already discussed in works like \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. One of the results of these works is that an Ehresmann connection on LGBs is characterized by the fact that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ has to be a multiplicative form:
+This finished the discussion about $A$, but of course we also needs its field strength $F$ and a certain shape of gauge transformation for $F$. Up until now $\mathrm{H}\mathcal{G}$ was an arbitrary horizontal distribution, but we will need to fix certain conditions on it to assure gauge invariance later. We will discuss this in Subsection \ref{CurvatureSubsection}. On one hand, viewing $\mathcal{G}$ as a principal $\mathcal{G}$-bundle whose horizontal distribution aligns with $\mathrm{H}\mathcal{G}$, it is natural to guess that $\mathrm{H}\mathcal{G}$ should be an Ehresmann connection itself. Ehresmann connections on LGBs were already discussed in works like \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. One of the results of these works is that an Ehresmann connection on LGBs is characterized by the fact that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ has to be a multiplicative form:
 
 \begin{definitions*}{Multiplicative forms, simplified notation, \newline \cite[\S 2.1, special situation of Def.\ 2.1]{crainic2015multiplicative}}
 We call an $\omega \in \Omega^1\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright)$ a \textbf{multiplicative form} if
@@ -697,7 +698,7 @@ In fact, $\nabla^{\mathcal{G}}$ will play the role of $\nabla$ from the beginnin
 \begin{definitions*}{Yang-Mills connection, simplified notation}
 We say that $\mathrm{H}\mathcal{G}$, and $\mu_{\mathcal{G}}^{\mathrm{tot}}$, is a \textbf{Yang-Mills connection (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$)}, if it satisfies the \textbf{compatibility conditions}:
 \begin{enumerate}
-	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative,
+	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative (\textit{i.e.}\ $\mathrm{H}\mathcal{G}$ is an Ehresmann connection),
 	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies the \textbf{generalized Maurer-Cartan equation}, that is,
 	\bas
 	\mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
@@ -715,6 +716,207 @@ We say that $\mathrm{H}\mathcal{G}$, and $\mu_{\mathcal{G}}^{\mathrm{tot}}$, is 
 	for all $X, Y \in \mathfrak{X}(\mathcal{G})$ (vector fields on $\mathcal{G}$).
 \end{enumerate}
 \end{definitions*}
+
+Making a pull-back of the generalized Maurer-Cartan equation w.r.t.\ a section $\sigma \in \Gamma(\mathcal{G})$ is straight-forward and will be provided in Cor.\ \ref{cor:PullbackOfMCSupperEquation}.
+
+\begin{corollaries*}{Pullback of generalized Maurer-Cartan equation}
+Let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection w.r.t.\ a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then
+\bas
+\mathrm{d}^{\nabla^{\mathcal{G}}} \Delta \sigma 
+	+ \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} 
+	+ \zeta 
+&=
+\mathrm{Ad}_{\sigma^{-1}} \circ \zeta
+\eas
+for all $\sigma \in \Gamma(\mathcal{G})$.
+\end{corollaries*}
+
+We will now argue that those compatibility conditions are the integrals of the compatibility conditions proposed by Alexei Kotov and Thomas Strobl, mentioned earlier. In \cite{LAURENTGENGOUXStienonXuMultiplicativeForms} it was already observed that an Ehresmann connection on an LGB naturally implies that $\nabla^{\mathcal{G}}$ is a Lie bracket derivation.
+
+\begin{lemmata*}{Ehresmann connections induce Lie bracket derivations, \newline \cite[\S 4.5, Prop.\ 4.21]{LAURENTGENGOUXStienonXuMultiplicativeForms}}
+If $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle, then
+\bas
+\nabla^{\mathcal{G}}\mleft( \mleft[ \mu, \nu \mright]_{\mathcal{g}} \mright)
+&=
+\mleft[ \nabla^{\mathcal{G}} \mu, \nu \mright]_{\mathcal{g}}
+	+ \mleft[ \mu, \nabla^{\mathcal{G}} \nu \mright]_{\mathcal{g}}
+\eas 
+for all $\mu, \nu \in \Gamma(\mathcal{g})$.
+\end{lemmata*}
+
+That $\nabla^{\mathcal{G}}$ is a Lie bracket derivation is one of the infinitesimal compatibility conditions.
+Furthermore, we will show in Thm.\ \ref{thm:GenMCEq} that the generalized Maurer-Cartan equation is actually equivalent to its infinitesimal version.
+
+\begin{theorems*}{Generalized Maurer-Cartan equation, changed formulation}
+Let $\mathrm{H}\mathcal{G}$ be an Ehresmann connection on $\mathcal{G}$, and $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then $\mathrm{H}\mathcal{G}$ satisfies the generalized Maurer-Cartan equation w.r.t.\ $\zeta$ if and only if 
+\bas
+R_{\nabla^{\mathcal{G}}}(X, Y)\mu
+&=
+\mleft[ \zeta(X, Y), \mu \mright]_{\mathcal{g}}
+\eas
+for all $X, Y \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathcal{g})$, where $R_{\nabla^{\mathcal{G}}}$ is the curvature of $\nabla^{\mathcal{G}}$.
+\end{theorems*}
+
+The condition about the curvature is in fact the second infinitesimal compatibility condition proposed by Alexei Kotov and Thomas Strobl, so that we can conclude that Yang-Mills connections on LGBs serve as an integral of the infinitesimal compatibility conditions which we will point out in Def.\ \ref{def:YangMillsConnection} and Rem.\ \ref{rem:YangMillsEqualsInfYM}.
+
+\begin{theorems*}{Yang-Mills connections satisfy the infinitesimal compatibility conditions}
+Every Yang-Mills connection (w.r.t.\ $\zeta \in \Omega^2(M; \mathcal{g})$) $\mathrm{H}\mathcal{G}$ is an \textbf{infinitesimal Yang-Mills connection (on $\mathcal{G}$)}, that is, it satisfies the \textbf{infinitesimal compatibility conditions}
+\bas
+\nabla^{\mathcal{G}}\mleft( \mleft[ \mu, \nu \mright]_{\mathcal{g}} \mright)
+&=
+\mleft[ \nabla^{\mathcal{G}} \mu, \nu \mright]_{\mathcal{g}}
+	+ \mleft[ \mu, \nabla^{\mathcal{G}} \nu \mright]_{\mathcal{g}},
+\\
+R_{\nabla^{\mathcal{G}}}(X, Y)\mu
+&=
+\mleft[ \zeta(X, Y), \mu \mright]_{\mathcal{g}}
+\eas
+for all $\mu, \nu \in \Gamma(\mathcal{g})$ and $X, Y \in \mathfrak{X}(M)$.
+\end{theorems*}
+
+We will denote such connections $\nabla^{\mathcal{G}}$ by $\nabla^{\mathrm{YM}}$. Additionally we will mention in Rem.\ \ref{rem:SimplicialDifferentialStuff} that multiplicativity of the total Maurer-Cartan form is in fact a closedness condition w.r.t.\ a certain simplicial differential $\delta$, introduced in \cite[beginning of \S 1.2]{crainic2003differentiable}. The generalized Maurer-Cartan equation is then an exactness-condition of the "classical" curvature for the total Maurer-Cartan form, its $\delta$-primitive given by $\zeta$. This is in alignment with the infinitesimal compatibility conditions which are also equivalent to statements about closedness and exactness w.r.t.\ the Chevalley-Eilenberg complex.
+
+This will finish the discussion about the connection on $\mathcal{G}$. This will be important for defining the field strength which will be discussed afterwards, starting with Def.\ \ref{def:NewFieldStrength}. For this we will always assume now that $\mathrm{H}\mathcal{G}$ is a Yang-Mills connection w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$ (while $\mathrm{H}\mathcal{P}$ is still an Ehresmann connection).
+
+\begin{definitions*}{(Generalized) Field strength}
+We define the \textbf{(generalized) curvature} or \textbf{(generalized) field strength $F$ (of $A$)} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
+\bas
+F
+&\coloneqq
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi^{\mathrm{H}\mathcal{P}}, \pi^{\mathrm{H}\mathcal{P}} \mright)
+	+ \pi^!\zeta,
+\eas
+where $\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}$ is the exterior covariant derivative related to the pullback connection $\pi^*\nabla^{\mathrm{YM}}$, and $\pi^{\mathrm{H}\mathcal{P}}: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ is the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$; that is,
+\bas
+F(X, Y)
+&=
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \mleft( \pi^{\mathrm{H}\mathcal{P}}(X), \pi^{\mathrm{H}\mathcal{P}}(Y) \mright)
+	+ \mleft(\pi^*\zeta\mright) \bigl( \mathrm{D}\pi(X), \mathrm{D}\pi(Y) \bigr)
+\eas
+for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
+\end{definitions*}
+
+With a lengthy calculation evolving around that $\mathrm{H}\mathcal{G}$ is a Yang-Mills connection, especially using the generalized Maurer-Cartan equation, we will show in Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}, which is the last step needed for defining the physical theory and its associated Lagrangian.
+
+\begin{propositions*}{Properties of the generalized field strength, simplified notation}
+We have the following properties of the field strength:
+\begin{itemize}
+	\item \textbf{(Form of type $\mathrm{Ad}$)}
+	\bas
+	\mathcal{r}_{\sigma}^!F
+	&=
+	\mathrm{Ad}_{\sigma^{-1}} \circ F
+	\eas
+	for all (local) $\sigma \in \Gamma(\mathcal{G})$.
+	\item \textbf{(Horizontal form)}
+	\newline
+	For $X, Y \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$) we have
+	\bas
+	F(X, Y)
+	&=
+	0
+	\eas
+	if either of $X$ and $Y$ is vertical.
+\end{itemize}
+\end{propositions*}
+
+We will also derive a structure equation in Thm.\ \ref{thm:StructureEq}.
+
+\begin{theorems*}{Structure equation of the generalized field strength}
+We have the \textbf{structure equation}
+\bas
+F
+=
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A
+	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
+	+ \pi^!\zeta.
+\eas
+\end{theorems*}
+
+We will argue  that $\zeta$ of course also affects the Bianchi identity, which we have in fact already derived in earlier works.
+
+\begin{theorems*}{Generalized Bianchi identity, \newline \cite[\S 7, Thm.\ 7.3]{My1stpaper} \& \cite[\S 5, Thm.\ 5.1.42]{MyThesis}}
+We have the \textbf{(generalized) Bianchi identity}
+\bas
+\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}F
+	+ \mleft[ A \stackrel{\wedge}{,} F \mright]_{\pi^*\mathcal{g}}
+&=
+\pi^! \mathrm{d}^{\nabla^{\mathrm{YM}}} \zeta.
+\eas
+\end{theorems*}
+
+Similarly to the discussion about connections, Subsection \ref{CurvatureSubsection} will be concluded with a discussion about the gauge transformation of $F$ in Thm.\ \ref{thm:GaugeTrafoOfCurv}; as for $A$ the gauge transformations of $F$ are given by form-pullbacks with a (base-preserving) principal bundle automorphism $H$ with associated unique $\sigma^H \in \Gamma(\pi^*\mathcal{G})$ given by $H(p) = p \cdot \sigma^H_p$ for all $p \in \mathcal{P}$.
+
+\begin{theorems*}{Gauge transformation of the generalized field strength, simplified notation}
+We have that $H^!F$ is the field strength related to $H^!A$ and
+\bas
+H^!F
+&=
+{\mathrm{Ad}_{\mleft(\sigma^H\mright)^{-1}}} \circ F.
+\eas
+\end{theorems*}
+
+As for $A$, we are interested about what this formula for the gauge transformation implies for pull-backs $F_s \coloneqq s^!F$ w.r.t.\ a gauge $s$ of $\mathcal{P}$ when changing the choice of $s$. This is straight-forward to calculate and will be stated in Thm.\ \ref{thm:LocalGaugeTrafoChangeGaugeFieldStrength}.
+
+\begin{theorems*}{Gauge transformations again as a change of gauge}
+Let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
+
+Then we have for the fields strength of $A$ that
+\bas
+F_{s_i}
+&=
+\mathrm{Ad}_{\sigma_{ji}^{-1}}\circ F_{s_j}.
+\eas
+\end{theorems*}
+
+Eventually in Section \ref{CYMSection} we will start to introduce the physical theory, that is, first of all defining the Lagrangian of a gauge theory based on principal LGB-bundles in Subsection \ref{CYMDefGaugeInv}. Due to that we will have pointed out that this theory integrates the infinitesimal curved Yang-Mills-Higgs gauge theory developed by Alexei Kotov and Thomas Strobl (in the case of LABs), we are going to label this theory \textbf{curved Yang-Mills gauge theory} in Def.\ \ref{def:CYMGTFinally}. To do so, $M$ is now a spacetime, so that we can define the Hodge star operator $*$, and we assume that we have an $\mathrm{Ad}$-invariant fibre metric $\kappa$ on $\mathcal{g}$.
+
+\begin{definitions*}{Curved Yang-Mills gauge theory}
+Let $\mleft( U_i \mright)_i$ be an open covering of $M$ so that there are subordinate gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$. Then the map $\mathfrak{L}_{\mathrm{CYM}}[A]: M \to \Omega^{\mathrm{dim}(M)}(M; \mathbb{R})$, defined locally by
+\bas
+\mleft.\bigl(\mathfrak{L}_{\mathrm{CYM}}[A]\bigr)\mright|_{U_i}
+&\coloneqq 
+- \frac{1}{2} \kappa \mleft( F_{s_i} \stackrel{\wedge}{,} *F_{s_i} \mright),
+\eas
+is called the \textbf{curved Yang-Mills Lagrangian}.
+\end{definitions*}
+
+We will have argued in Cor.\ \ref{cor:ContractionOfLocalFIeldWellDefined} that this Lagrangian is well-defined; a trivial consequence of the previously-highlighted gauge transformations. Similarly, we will achieve gauge invariance in Thm.\ \ref{thm:GaugeInvarianceOfLagrangian}.
+
+\begin{theorems*}{Gauge invariance of the curved Yang-Mills Lagrangian}
+We have
+\bas
+\mathfrak{L}_{\mathrm{CYM}}\mleft[ H^!A \mright]
+&=
+\mathfrak{L}_{\mathrm{CYM}}[A]
+\eas
+for all principal bundle automorphisms $H$.
+\end{theorems*}
+
+As the final part of statements we will discuss new examples of gauge theory in Subsection \ref{CYMExamples}, after pointing out that this gauge theory generalizes the classical formalism. We will also discuss this matter in the context of my previously-mentioned Ph.D.\ thesis, \cite{MyThesis}, and the field redefinitions. Especially, the paper concludes with the reason why this project started: The inner group bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$ is an example of curved Yang-Mills gauge theory, so that $\nabla^{\mathrm{YM}}$ is not curved; we will present this in Ex.\ \ref{ex:HopfEx}. We will point out that this is indeed due to the fact that involved LGB is non-trivial, so that we also conjecture that trivial LGBs imply the existence of a field redefinition flattening $\nabla^{\mathrm{YM}}$.
+
+\begin{examples*}{Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$ giving rise to a curved Yang-Mills gauge theory}
+Let $P$ be the Hopf bundle
+\begin{center}
+	\begin{tikzcd}
+		\mathrm{SU}(2) \cong \mathds{S}^3 \arrow{r}	& \mathds{S}^7 \arrow{d} \\
+			& \mathds{S}^4
+	\end{tikzcd}
+\end{center}
+We define the principal bundle $\mathcal{P}$ and LGB $\mathcal{G}$ as the inner group bundle of $P$
+\bas
+\mathcal{P}
+\coloneqq
+\mathcal{G}
+&\coloneqq
+c_{\mathrm{SU}(2)}(P)
+\coloneqq 
+(P\times G) \Big/ G,
+\eas
+where $(P\times G) \Big/ G$ is the associated Lie group bundle, where the action of $G$ on $G$ is given by its conjugation, $c_g(q) = gqg^{-1}$ for all $g, q \in G$. This principal $c_{\mathrm{SU}(2)}(P)$-bundle admits the structure as curved Yang-Mills gauge theory, which is neither classical nor pre-classical. Furthermore, all possible (curved) Yang-Mills gauge theory structures lead to a curved $\nabla^{\mathrm{YM}}$ and non-zero $\zeta$, which also implies that this gauge theory cannot be described with the typical formalism of gauge theory.
+\end{examples*}
+
+We will finish this paper with a conclusion in Section \ref{conclusions}, highlighting further constructions and conjecturing how to integrate the full formalism of the gauge theory developed by Alexei Kotov and Thomas Strobl.
 
 \subsection{Basic notations and remarks}\label{BasicNotations}
 
@@ -6861,7 +7063,7 @@ Thus, we successfully integrated this definition of infinitesimal gauge transfor
 
 Alexei's and Thomas's theory also generalizes the curvature/field strength related to gauge theory. Hence, let us now turn to this notion.
 
-\subsection{Generalized curvature/field strength}
+\subsection{Generalized curvature/field strength}\label{CurvatureSubsection}
 
 \subsubsection{Yang-Mills connections on LGBs}\label{MultiplicativeForms}
 
@@ -7512,77 +7714,6 @@ on the right hand side.
 Recall Rem.\ \ref{rem:DarbouxOnCanonFlat}. If $\mathcal{G}$ is a trivial LGB, $\mathrm{H}\mathcal{G}$ its canonical flat connection and $\zeta \equiv 0$, then $\nabla^{\mathcal{G}}$ is the canonical flat connection on the trivial LAB $\mathcal{g}$ (recall Ex.\ \ref{ex:CanonicalFlatGConnection}) and it clearly satisfies the compatibility conditions in Def.\ \ref{def:YangMillsConnection} w.r.t.\ $\zeta \equiv 0$. Furthermore, the generalized Maurer-Cartan equation then reduces to the classical Maurer-Cartan equation.
 \end{remarks}
 
-\begin{remarks}{Relation to simplicial differential}{SimplicialDifferentialStuff}
-In fact, Def.\ \ref{def:MultiplicativeFormsDef} comes from a simplicial differential (w.r.t.\ points on $\mathcal{G}$) defined in \cite[beginning of \S 1.2]{crainic2003differentiable}. We do not have time to introduce it completely, but we give a short sketch about its definitions, also following the style of \cite[appendix]{FernandesMarcutMultiplicativeForms}. On degree one the cited differential is a map
-\bas
-\Omega^\bullet\mleft(\mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)
-&\to
-\Omega^\bullet\mleft(\mathcal{G} * \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)
-\\
-\omega
-&\mapsto
-\delta\omega
-\eas
-with
-\bas
-\mleft(\delta\omega\mright)_{(g,q)}
-&\coloneqq
-\sAd_{q^{-1}}\circ\mleft(\mathrm{pr}_1^!\omega\mright)_{(g,q)} 
-	+ \mleft(\mathrm{pr}_2^!\omega\mright)_{(g, q)}
-	- \mleft( \Phi^!\omega \mright)_{(g,q)}
-\eas
-for all $(g, q) \in \mathcal{G} * \mathcal{G}$, where $\Phi: \mathcal{G}*\mathcal{G}\to \mathcal{G}$ is the $\mathcal{G}$-multiplication, and $\mathrm{pr}_i: \mathcal{G}*\mathcal{G} \to \mathcal{G}$ are the canonical projections onto the $i$-th component ($i \in \{1,2\}$). Recall Def.\ \ref{def:MultiplicativeFormsDef} and its Rem.\ \ref{sloppynotationformultiplicativity}, $\omega$ can be defined to be multiplicative if $\delta\omega = 0$, \textit{i.e.}\ $\omega$ is closed w.r.t.\ $\delta$. 
-
-On degree 0 $\delta$ is a map $\Omega^\bullet(M; \mathcal{g}) \to \Omega^\bullet\mleft(\mathcal{G}; \pi^{*}_{\mathcal{g}}\mright)$ given for $\xi \in \Omega^\bullet(M; \mathcal{g})$ by
-\bas
-\mleft(\delta\xi\mright)_g
-\coloneqq
-\bigl( g, \mathrm{Ad}_{g^{-1}} \circ \xi_x \circ {\underbrace{\mleft(\mathrm{D}_g \pi_{\mathcal{G}}, \dotsc, \mathrm{D}_g \pi_{\mathcal{G}}\mright)}_{ \text{times the degree of $\xi$} }} \bigr)
-	- \mleft.\mleft(\pi_{\mathcal{G}}^! \xi\mright)\mright|_g
-\eas
-for all $g\in \mathcal{G}$. Then observe that we can rewrite the generalized Mauer-Cartan equation to
-\bas
-F_{\mathcal{G}}
-&=
-\delta \zeta,
-\eas
-where
-\bas
-F_{\mathcal{G}}
-&=
-\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
-	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
-\in \Omega^2\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright).
-\eas
-It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e.g.}\ \cite[\S 4.6, Thm.\ 4.27, Eq.\ (53)]{LAURENTGENGOUXStienonXuMultiplicativeForms} or \cite[\S 2.5, Prop.\ 2.22]{FernandesMarcutMultiplicativeForms}) by making use of that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection. In total we concluded that compatibility condition \eqref{CondSGleichNullLAB} is implied, if $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative, which also implies that $F_{\mathcal{G}}$ is multiplicative and thus $\delta$-closed; additionally with compatibility condition \eqref{CondKruemmungmitBLAB} we achieve $\delta$-exactness of $F_{\mathcal{G}}$. This is no wonder, the compatibility conditions already tell us by definition that the connection-1-form of $\nabla$ is closed w.r.t.\ the Chevalley-Eilenberg complex, which also implies the same for the curvature, however the curvature has to be exact by \eqref{CondKruemmungmitBLAB}. We depict that as $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$ and $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$; a summary is shown in Table \ref{tab:CompatibilityConditionsOnLGBAndItsLAB}.
-\end{remarks}
-
-\begin{table}[htbp]
-	\centering
-		\caption{Infinitesimal compatibility conditions on the LAB $\mathcal{g}$} and integrated compatibility conditions on the overlying LGB $\mathcal{G}$
-		\begin{tabular}{|llll|}
-		\hline
-			%\multicolumn{2}{l}{Infinitesimal compatibility condition} 
-			& \multicolumn{1}{c}{$\mathcal{g}$} && \multicolumn{1}{c}{$\mathcal{G}$} \\
-			\hline
-			\textbf{Closedness}
-			%$\nabla^{\mathcal{G}}\mleft( \mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \mright) = 0$
-	& $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$ $\mleft(\Rightarrow \delta^{\mathrm{CE}}R_{\nabla^{\mathcal{G}}} = 0\mright)$
-	&& $\delta\mu_{\mathcal{G}}^{\mathrm{tot}} = 0$ $\mleft(\Rightarrow \delta F_{\mathcal{G}} = 0\mright)$
-	%\\
-	%& \hspace{0.2cm} $\Rightarrow \delta^{\mathrm{CE}}R_{\nabla^{\mathcal{G}}} = 0$
-	%&& \hspace{0.2cm} $\Rightarrow \delta F_{\mathcal{G}} = 0$
-	\\
-	\textbf{Exactness}
-			%\hspace{0.2cm} \& $R_{\nabla^{\mathcal{G}}} = \mathrm{ad} \circ \zeta$
-		& $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$
-		&& $F_{\mathcal{G}} = \delta \zeta$
-		\\
-		\hline
-		\end{tabular}
-	\label{tab:CompatibilityConditionsOnLGBAndItsLAB}
-\end{table}
-
 \begin{proof}[Proof of Thm.\ \ref{thm:GenMCEq}]
 \leavevmode\newline
 The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms\footnote{See Rem.\ \ref{rem:SimplicialDifferentialStuff}; multiplicativity is related to closedness w.r.t.\ a differential. However, we will not need this general notion.} are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. That is, we want to discuss under what conditions 
@@ -7934,6 +8065,77 @@ We then label $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a Yang-Mills connection, too
 By Lemma \ref{lem:YangMillsConnAnEhresmann} and Thm.\ \ref{thm:GenMCEq}, every Yang-Mills connection is also an infinitesimal Yang-Mills connections, \textit{i.e.}\ the infinitesimal compatibility conditions are also satisfied.
 \end{remarks}
 
+\begin{remarks}{Relation to simplicial differential}{SimplicialDifferentialStuff}
+In fact, Def.\ \ref{def:MultiplicativeFormsDef} comes from a simplicial differential (w.r.t.\ points on $\mathcal{G}$) defined in \cite[beginning of \S 1.2]{crainic2003differentiable}. We do not have time to introduce it completely, but we give a short sketch about its definitions, also following the style of \cite[appendix]{FernandesMarcutMultiplicativeForms}. On degree one the cited differential is a map
+\bas
+\Omega^\bullet\mleft(\mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)
+&\to
+\Omega^\bullet\mleft(\mathcal{G} * \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)
+\\
+\omega
+&\mapsto
+\delta\omega
+\eas
+with
+\bas
+\mleft(\delta\omega\mright)_{(g,q)}
+&\coloneqq
+\sAd_{q^{-1}}\circ\mleft(\mathrm{pr}_1^!\omega\mright)_{(g,q)} 
+	+ \mleft(\mathrm{pr}_2^!\omega\mright)_{(g, q)}
+	- \mleft( \Phi^!\omega \mright)_{(g,q)}
+\eas
+for all $(g, q) \in \mathcal{G} * \mathcal{G}$, where $\Phi: \mathcal{G}*\mathcal{G}\to \mathcal{G}$ is the $\mathcal{G}$-multiplication, and $\mathrm{pr}_i: \mathcal{G}*\mathcal{G} \to \mathcal{G}$ are the canonical projections onto the $i$-th component ($i \in \{1,2\}$). Recall Def.\ \ref{def:MultiplicativeFormsDef} and its Rem.\ \ref{sloppynotationformultiplicativity}, $\omega$ can be defined to be multiplicative if $\delta\omega = 0$, \textit{i.e.}\ $\omega$ is closed w.r.t.\ $\delta$. 
+
+On degree 0 $\delta$ is a map $\Omega^\bullet(M; \mathcal{g}) \to \Omega^\bullet\mleft(\mathcal{G}; \pi^{*}_{\mathcal{g}}\mright)$ given for $\xi \in \Omega^\bullet(M; \mathcal{g})$ by
+\bas
+\mleft(\delta\xi\mright)_g
+\coloneqq
+\bigl( g, \mathrm{Ad}_{g^{-1}} \circ \xi_x \circ {\underbrace{\mleft(\mathrm{D}_g \pi_{\mathcal{G}}, \dotsc, \mathrm{D}_g \pi_{\mathcal{G}}\mright)}_{ \text{times the degree of $\xi$} }} \bigr)
+	- \mleft.\mleft(\pi_{\mathcal{G}}^! \xi\mright)\mright|_g
+\eas
+for all $g\in \mathcal{G}$. Then observe that we can rewrite the generalized Mauer-Cartan equation to
+\bas
+F_{\mathcal{G}}
+&=
+\delta \zeta,
+\eas
+where
+\bas
+F_{\mathcal{G}}
+&=
+\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
+\in \Omega^2\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright).
+\eas
+It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e.g.}\ \cite[\S 4.6, Thm.\ 4.27, Eq.\ (53)]{LAURENTGENGOUXStienonXuMultiplicativeForms} or \cite[\S 2.5, Prop.\ 2.22]{FernandesMarcutMultiplicativeForms}) by making use of that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection. In total we concluded that compatibility condition \eqref{CondSGleichNullLAB} is implied, if $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative, which also implies that $F_{\mathcal{G}}$ is multiplicative and thus $\delta$-closed; additionally with compatibility condition \eqref{CondKruemmungmitBLAB} we achieve $\delta$-exactness of $F_{\mathcal{G}}$. This is no wonder, the compatibility conditions already tell us by definition that the connection-1-form of $\nabla$ is closed w.r.t.\ the Chevalley-Eilenberg complex, which also implies the same for the curvature, however the curvature has to be exact by \eqref{CondKruemmungmitBLAB}. We depict that as $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$ and $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$; a summary is shown in Table \ref{tab:CompatibilityConditionsOnLGBAndItsLAB}.
+\end{remarks}
+
+\begin{table}[htbp]
+	\centering
+		\caption{Infinitesimal compatibility conditions on the LAB $\mathcal{g}$} and integrated compatibility conditions on the overlying LGB $\mathcal{G}$
+		\begin{tabular}{|llll|}
+		\hline
+			%\multicolumn{2}{l}{Infinitesimal compatibility condition} 
+			& \multicolumn{1}{c}{$\mathcal{g}$} && \multicolumn{1}{c}{$\mathcal{G}$} \\
+			\hline
+			\textbf{Closedness}
+			%$\nabla^{\mathcal{G}}\mleft( \mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \mright) = 0$
+	& $\delta^{\mathrm{CE}}\nabla^{\mathcal{G}} = 0$ $\mleft(\Rightarrow \delta^{\mathrm{CE}}R_{\nabla^{\mathcal{G}}} = 0\mright)$
+	&& $\delta\mu_{\mathcal{G}}^{\mathrm{tot}} = 0$ $\mleft(\Rightarrow \delta F_{\mathcal{G}} = 0\mright)$
+	%\\
+	%& \hspace{0.2cm} $\Rightarrow \delta^{\mathrm{CE}}R_{\nabla^{\mathcal{G}}} = 0$
+	%&& \hspace{0.2cm} $\Rightarrow \delta F_{\mathcal{G}} = 0$
+	\\
+	\textbf{Exactness}
+			%\hspace{0.2cm} \& $R_{\nabla^{\mathcal{G}}} = \mathrm{ad} \circ \zeta$
+		& $R_{\nabla^{\mathcal{G}}} = \delta^{\mathrm{CE}}\zeta$
+		&& $F_{\mathcal{G}} = \delta \zeta$
+		\\
+		\hline
+		\end{tabular}
+	\label{tab:CompatibilityConditionsOnLGBAndItsLAB}
+\end{table}
+
 To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections; we will make use of Thm.\ \ref{thm:GenMCEq} in order to prove that the generalized Maurer-Cartan equation is satisfied.
 
 \begin{examples}{(Pre-)Classical Yang-Mills connection}{ClassicalYangMillsConnection}
@@ -8013,7 +8215,7 @@ This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$:
 Let us now introduce and discuss the field strength.
 
 \begin{definitions}{(Generalized) Field strength}{NewFieldStrength}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we define the \textbf{(generalized) field strength $F$} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we define the \textbf{(generalized) curvature} or \textbf{(generalized) field strength $F$ (of $A$)} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
 \bas
 F
 &\coloneqq
@@ -8028,8 +8230,6 @@ F(X, Y)
 	+ \mleft(\pi^*\zeta\mright) \bigl( \mathrm{D}\pi(X), \mathrm{D}\pi(Y) \bigr)
 \eas
 for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
-
-One may label $F$ also as the \textbf{curvature of $A$}.
 \end{definitions}
 
 Of course, we expect certain properties, naturally generalized by our previous discussions:
@@ -8682,9 +8882,9 @@ Similar to Rem.\ \ref{rem:IntegratingKotovStrobl}, Cor.\ \ref{cor:PullbackOfStru
 
 %\subsection{Generalized covariant derivative/minimal coupling}
 
-\section{Curved Yang-Mills gauge theory}
+\section{Curved Yang-Mills gauge theory}\label{CYMSection}
 
-\subsection{Definition and gauge invariance}
+\subsection{Definition and gauge invariance}\label{CYMDefGaugeInv}
 
 We eventually are able to conclude this paper with the definition of what we will call \textbf{curved Yang-Mills gauge theory}, highlighting that this theory is an integral of the infinitesimal gauge theory originally developed by Alexei Kotov and Thomas Strobl. For the following we say that a fibre metric $\kappa$ of $\mathcal{g}$ is \textbf{$\mathrm{Ad}$-invariant} if
 \bas
@@ -8697,7 +8897,7 @@ for all $g \in \mathcal{G}_x$ ($x \in M$) and $\mu, \nu \in \mathcal{g}_x$.
 \begin{corollaries}{Contraction of local field strength with Ad-invariant fibre metric is well-defined}{ContractionOfLocalFIeldWellDefined}
 Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $\mleft( U_i \mright)_i$ be an open covering of $M$ so that there are subordinate gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$.
 
-Then the map $\mathfrak{L}_{\mathrm{CYM}}[A]: M \to \mathbb{R}$, defined locally by
+Then the map $\mathfrak{L}_{\mathrm{CYM}}[A]: M \to \Omega^{\mathrm{dim}(M)}(M; \mathbb{R})$, defined locally by
 \bas
 \mleft.\bigl(\mathfrak{L}_{\mathrm{CYM}}[A]\bigr)\mright|_{U_i}
 &\coloneqq 
@@ -8765,7 +8965,7 @@ for a given gauge $s \in \Gamma(\mathcal{P}|_U)$, where $U$ is an open subset of
 As we have seen previously, the compatibility conditions (Def.\ \ref{def:NowReallyYangMillsConnectio}) were important to derive how $F$ behaves under modified right push-forwards. Recall Rem.\ \ref{rem:IntegratingKotovStrobl}, we have a corresponding formulation of infinitesimal gauge transformation and it is straight-forward to show that we achieve \textbf{infinitesimal gauge invariance} as in the classical theory. However, as argued by Alexei Kotov and Thomas Strobl in \cite{CurvedYMH} (for a concise summary; \cite{MyThesis} for an extended introduction, or alternatively \cite{My1stpaper} for a simplified language) the corresponding infinitesimal gauge invariance just needs the infinitesimal compatibility conditions (Def.\ \ref{def:YangMillsConnection}).
 \end{remarks}
 
-\subsection{Examples}
+\subsection{Examples}\label{CYMExamples}
 
 Let us provide some examples of this theory, especially also recall Ex.\ \ref{ex:ClassicalYangMillsConnection} and the labels introduced there. However, before we do so, it is natural to ask whether or not there is a transformation keeping the Lagrangian invariant, but non-trivially transforming data like $\nabla^{\mathrm{YM}}$ so that it may become flat, and we may end up at a classical theory describing the same physics. In fact, there is such a transformation which we have studied in \cite{MyThesis} (and \cite{My1stpaper} which is just formulated for LABs so that it may be easier for the reader to follow given the context here). These transformations are simply called \textbf{field redefinitions}, but given the time of their development, they just focus on infinitesimal gauge invariance and the underlying infinitesimal compatibility conditions.
 
@@ -8846,7 +9046,7 @@ we then have that its associated Yang-Mills connection $\nabla^{\mathrm{YM}}$, a
 An $\mathrm{Ad}$-invariant fibre metric exists clearly, so that we have all ingredients to define a truly curved Yang-Mills gauge theory with Lagrangian as given in Def.\ \ref{def:CYMGTFinally}.
 \end{examples}
 
-\section{Conclusion}
+\section{Conclusion}\label{conclusions}
 
 \textbf{Also mention that the new connection is not necessarily equivalent to a classical connection even though the related gauge theories are. What does it imply on theories based on the sense of connections like general relativity?}
 

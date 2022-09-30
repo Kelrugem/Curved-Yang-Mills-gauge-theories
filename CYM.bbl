@@ -64,6 +64,13 @@ Marius Crainic, Maria~Amelia Salazar, and Ivan Struchiner.
 \newblock {\em Mathematische Zeitschrift}, 279(3):939--979, 2015.
 \newblock https://doi.org/10.1007/s00209-014-1398-z.
 
+\bibitem{crainic2003differentiable}
+Marius Crainic.
+\newblock Differentiable and algebroid cohomology, van {E}st isomorphisms, and
+  characteristic classes.
+\newblock {\em Commentarii Mathematici Helvetici}, 78(4):681--721, 2003.
+\newblock https://doi.org/10.1007/s00014-001-0766-9.
+
 \bibitem{Hamilton}
 Mark~JD Hamilton.
 \newblock {\em Mathematical {G}auge {T}heory}.
@@ -82,13 +89,6 @@ Marco~Castrillón López and Álvaro~Rodríguez Abella.
 \newblock Principal bundles and connections modelled by {L}ie group bundles,
   2022.
 \newblock https://arxiv.org/abs/2201.07088.
-
-\bibitem{crainic2003differentiable}
-Marius Crainic.
-\newblock Differentiable and algebroid cohomology, van {E}st isomorphisms, and
-  characteristic classes.
-\newblock {\em Commentarii Mathematici Helvetici}, 78(4):681--721, 2003.
-\newblock https://doi.org/10.1007/s00014-001-0766-9.
 
 \bibitem{bursztyn2004integration}
 Henrique Bursztyn, Marius Crainic, Alan Weinstein, and Chenchang Zhu.
