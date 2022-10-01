@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  30 SEP 2022 22:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  1 OCT 2022 22:19
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1288,6 +1288,7 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 441
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 1236--1238
 
  []
@@ -1297,7 +1298,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1250--1253
 
  []
 
-[18] [19] [20] [21]
+[19] [20] [21]
 Underfull \hbox (badness 10000) in paragraph at lines 1372--1375
 
  []
@@ -1319,19 +1320,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1772--1775
 [90] [91] [92] [93] [94] [95] [96] [97]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 5427.
+(Font)              using `U/stmry/m/n' instead on input line 5445.
 
 [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110]
 [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122]
 [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134]
 [135]
-Overfull \hbox (2.67805pt too wide) in paragraph at lines 7771--7778
+Overfull \hbox (2.67805pt too wide) in paragraph at lines 7789--7796
 \T1/lmr/m/n/10.95 using Rem. [][]5.19[][] (bracket of fundamental/left-invarian
 t vec-tor fields is fundamental/left-invariant)
  []
 
 [136] [137] [138] [139] [140] [141] [142] [143] [144] [145]
-Overfull \hbox (3.1053pt too wide) detected at line 8459
+Overfull \hbox (3.1053pt too wide) detected at line 8477
 []
  []
 
@@ -1398,10 +1399,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 35207 strings out of 478907
- 734379 string characters out of 2851891
+ 35204 strings out of 478907
+ 734328 string characters out of 2851891
  1230485 words of memory out of 3000000
- 51911 multiletter control sequences out of 15000+600000
+ 51908 multiletter control sequences out of 15000+600000
  531101 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1446,9 +1447,9 @@ s/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
 /kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (169 pages, 1562559 bytes).
+Output written on CYM.pdf (169 pages, 1563757 bytes).
 PDF statistics:
- 2493 PDF objects out of 2984 (max. 8388607)
+ 2495 PDF objects out of 2984 (max. 8388607)
  538 named destinations out of 1000 (max. 500000)
  333 words of extra memory for PDF output out of 10000 (max. 10000000)
 
