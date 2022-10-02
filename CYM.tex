@@ -1215,7 +1215,7 @@ Let $G, \mathcal{G}, M$ be smooth manifolds. A fibre bundle
 		& M
 	\end{tikzcd}
 \end{center}
-is called a \textbf{Lie group bundle} if:
+is called a \textbf{Lie group bundle (LGB)} if:
 \begin{enumerate}
 	\item $G$ and each fibre $\mathcal{G}_x \coloneqq \pi^{-1}\mleft( \{x\} \mright)$, $x\in M$, are Lie groups;
 	\item there exists a bundle atlas $\mleft\{ \mleft( U_i, \phi_i \mright) \mright\}_{i \in I}$ such that the induced maps
@@ -1229,7 +1229,7 @@ is called a \textbf{Lie group bundle} if:
 
 We also often say that \textbf{$\mathcal{G}$ is an LGB (over $M$)}, whose structural Lie group is either clear by context or not explicitly needed; and we may also denote LGBs by $G \to \mathcal{G} \stackrel{\pi}{\to} M$.
 
-The global section $e$ of $\mathcal{G}$ so that $e_p$ is the neutral element of $\mathcal{G}_p$ will be labelled as the \textbf{neutral (element) section (of $\mathcal{G}$)}; we may also denote it by $e^{\mathcal{G}}$.
+The global section $e$ of $\mathcal{G}$ so that $e_p$ is the neutral element of $\mathcal{G}_p$ will be labelled as the \textbf{neutral (element)/identity section (of $\mathcal{G}$)}; we may also denote it by $e^{\mathcal{G}}$.
 \end{definitions}
 
 \begin{remarks}{Principal and Lie group bundles}{LiegroupbundlesNotPrincipalBundles}
@@ -2007,23 +2007,43 @@ On the other hand, using $p^\prime$ as a fixed element, we derive, using $q_i^\p
 \eas
 which finalizes the argument needed to show that the action is well-defined.
 
-$\bullet$ To show the smoothness of the proposed action we simply use the atlas constructed in the proof for Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}; the idea of the atlas there does not just work for $c_G(P)$ but it also serves for constructing a fibre bundle atlas for $\mathcal{F}$ following the same relevant part of the proof. That is, we will use a principal bundle atlas for $P$, hence for some $U \subset M$ open and a local trivialization $\varphi_U: P_U \to U \times G$ of $P$ we write
+$\bullet$ To show the smoothness of the proposed action we simply use the atlas constructed in the proof for Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}; the idea of the atlas there does not just work for $c_G(P)$ but it also serves for constructing a fibre bundle atlas for $\mathcal{F}$ following the same relevant parts of the cited proof. That is, we will use a principal bundle atlas for $P$, hence for some $U \subset M$ open and a local trivialization $\varphi_U: P_U \to U \times G$ of $P$ we write
 \bas
 \varphi_U(p)
 &=
 \bigl( \pi_P(p), \beta_U(p) \bigr)
 \eas
-for all $p \in P$, where $\beta_U: P_U \to G$ is an equivariant map. Then we have a map $\phi_{c_G(P)}$ by 
+for all $p \in P$, where $\beta_U: P_U \to G$ is an equivariant map. Then we have maps $\phi_{c_G(P)}: \mleft. c_G(P)\mright|_U \to U \times G$ and $\phi_{\mathcal{F}}: \mleft. \mathcal{F} \mright|_U \to U \times F$ given by 
 \bas
-\mleftc_G(P)\mright|_U
-&\to
-U \times G,\\
-[p, h]
-&\mapsto
+\phi_{c_G(P)}\bigl([p, g]\bigr)
+&=
 \mleft(
 	\pi_P(p), c_{\beta_U(p)} (h)
-\mright)
+\mright),&
+\phi_{\mathcal{F}}\bigl([p, v]\bigr)
+&=
+\mleft(
+	\pi_P(p), \Psi_{\beta_U(p)} (v)
+\mright),
 \eas
+with inverses
+\bas
+\phi_{c_G(P)}^{-1}(x, g)
+&=
+\mleft[ \varphi_U^{-1}\mleft(x, e\mright), g \mright],&
+\phi_{\mathcal{F}}^{-1}(x, v)
+&=
+\mleft[ \varphi_U^{-1}\mleft(x, e\mright), v \mright].
+\eas
+Following the related calculations in the proof for Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure} one shows that the proposed action looks locally like (w.r.t.\ these maps)
+\bas
+\bigl((x, v) , (x, g) \bigr)
+&\mapsto 
+\mleft( x, \Psi_{\beta_U \mleft( \varphi_U^{-1}\mleft(x, e\mright) \cdot g \mright)}(v) \mright) 
+=
+\bigl( x, \Psi_{g}(v) \bigr),
+\eas
+which is clearly a smooth map.
 
 $\bullet$ Let us now quickly check that the conditions in Def.\ \ref{def:LiegroupACtion} are satisfied. We have
 \bas
@@ -2095,7 +2115,7 @@ As argued in \cite[\S 5.3, Thm.\ 5.3.8, page 269; formulated as left action ther
 =
 \mleft[ p \cdot \sigma_{f}(p)^{-1}, v \mright]
 \eas
-for all $[p, v] \in \mathcal{F}_x$ ($x \in M$) and $f \in \sAut(P)$. $\sigma_f$ can also be just locally defined, therefore one could investigate whether there is also an action just with an element $g$ of $G$, basically the restriction of $\sigma_f$ onto the fibre $P_x$. However, the action given by $[p, v] \cdot g = \mleft[ p \cdot g^{-1}, v \mright]$ for $g \in G$ is in general clearly only well-defined w.r.t.\ a change of the representative of $[p, v] = \mleft[ p \cdot q, \Psi_{q^{-1}}(v) \mright]$ ($q \in G$), if $G$ is abelian. But one can resolve this by looking at it carefully: The rough idea is that $g$ basically comes from $\sigma_f(p)$ in this context, but
+for all $[p, v] \in \mathcal{F}_x$ ($x \in M$) and $f \in \sAut(P)$. Therefore one could investigate whether there is also an action just with an element $g$ of $G$, basically the restriction of $\sigma_f$ onto the fibre $P_x$. However, the action given by $[p, v] \cdot g = \mleft[ p \cdot g^{-1}, v \mright]$ for $g \in G$ is in general clearly only well-defined w.r.t.\ a change of the representative of $[p, v] = \mleft[ p \cdot q, \Psi_{q^{-1}}(v) \mright]$ ($q \in G$), if $G$ is abelian. But one can resolve this by looking at it carefully: The rough idea is that $g$ basically comes from $\sigma_f(p)$ in this context, but
 \bas
 \sigma_f(p \cdot q)
 &=
@@ -2188,7 +2208,7 @@ such that
 &=
 e,
 \eas
-so $\sigma = \sigma^\prime$ and hence injectivity follows. For surjectivity observe that for a section $q \in \Gamma\bigl( c_G(P) \bigr)$ we can define a map $\sigma: P \to G$ by
+so $\sigma = \sigma^\prime$ and hence injectivity follows. For surjectivity observe that for a section $q \in \Gamma\bigl( c_G(P) \bigr)$ we can define a map $\sigma: P \to G$ uniquely (unique due to the simply transitive action on $P$) by
 \bas
 q_x
 &=
@@ -2216,14 +2236,14 @@ U \times G,\\
 \mleft[p^\prime, g\mright]
 &\mapsto
 \mleft(
-	\pi_P\mleft(p^\prime\mright), \psi_{\beta_U\mleft(p^\prime\mright)} (g)
+	\pi_P\mleft(p^\prime\mright), c_{\beta_U\mleft(p^\prime\mright)} (g)
 \mright).
 \eas
 Applying that trivialization to $q$ we derive that
 \bas
-\mleft[ p^\prime \mapsto \psi_{\beta_U\mleft(p^\prime\mright)}\mleft( \sigma\mleft(p^\prime\mright) \mright) \mright]
+\mleft[ p^\prime \mapsto c_{\beta_U\mleft(p^\prime\mright)}\mleft( \sigma\mleft(p^\prime\mright) \mright) \mright]
 \eas
-is smooth, because $q$ is smooth. Since $\psi_{\beta_U\mleft(p^\prime\mright)}$ is smooth and bijective, we conclude that $\sigma$ is smooth. Hence, $\sigma \in C^\infty(P; G)^G$, so, Def.\ \eqref{IsomCPGGTocGPSec} is also surjective and thence bijective.
+is smooth, because $q$ is smooth. Since $c_{\beta_U\mleft(p^\prime\mright)}$ is an element of $\mathrm{Aut}(G)$, we conclude that $\sigma$ is smooth. Hence, $\sigma \in C^\infty(P; G)^G$, so, Def.\ \eqref{IsomCPGGTocGPSec} is also surjective and thence bijective.
 
 Finally let us show that Def.\ \eqref{IsomCPGGTocGPSec} is a group isomorphism. Let $\sigma, \sigma^\prime$ be elements of $C^\infty(P; G)^G$, then Def.\ \eqref{IsomCPGGTocGPSec} reads
 \bas
@@ -2264,7 +2284,7 @@ Let $\mathfrak{g}$ be a Lie algebra, and $\mathcal{g}, M$ be smooth manifolds. A
 	& M
 	\end{tikzcd}
 \end{center}
-is called a \textbf{Lie algebra bundle} if:
+is called a \textbf{Lie algebra bundle (LAB)} if:
 \begin{enumerate}
 	\item $\mathfrak{g}$ and each fibre $\mathcal{g}_x$, $x \in M$, are Lie algebras;
 	\item there exists a bundle atlas $\mleft\{ \mleft( U_i, \phi_i \mright) \mright\}_{i \in I}$ such that the induced maps
@@ -2313,10 +2333,7 @@ We have similar remarks as in Rem.\ \ref{LGBMOrphismRemark}. Additionally, we ha
 \ea
 for all $X, Y \in \mathcal{g}_x$ ($x \in M$). Using a local trivialization, this bracket is locally of the form as in Rem.\ \ref{LGBMOrphismRemark} such that smoothness follows.
 
-In fact, as also argued in \cite[\S 16.2, Example 2, page 114; but speaking in the context of Lie algebroids there whose are a generalization of LABs]{DaSilva}, every vector bundle equipped with a smooth field of Lie brackets is an LAB.
-%Using a partition of unity subordinate to an open covering of $M$ over which trivializations of the LAB is defined, we conclude that there is a smooth field of Lie algebra brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$ which restricts to a Lie algebra bracket on each fibre. We will often fix such a smooth field of Lie brackets when speaking about an LAB.
-%
-%We actually have a similar smooth extension for LGB's algebra. See our discussion of LGB actions later, especially Ex.\ \ref{ex:LGBActingOnItself}.
+In fact, as also argued in \cite[\S 16.2, Example 2, page 114; but speaking in the context of Lie algebroids there, a generalization of LABs]{DaSilva}, every vector bundle equipped with a smooth field of Lie brackets is an LAB.
 \end{remarks}
 
 Endomorphisms of a vector bundle are of course another important example of LABs.
@@ -2325,26 +2342,7 @@ Endomorphisms of a vector bundle are of course another important example of LABs
 Let $V \to M$ be a vector bundle, and denote with $\mathrm{End}(V) \to M$ its bundle of fibre-wise endomorphisms (its sections are the base-preserving bundle endomorphisms of $V$). This is clearly an LAB whose field of Lie brackets is given by the commutator.
 \end{examples}
 
-%We have the notion of structure constants on all fibres, such that we get now structure functions after fixing a frame.\footnote{However, observe that $\Gamma(\mathcal{g})$ is an infinite-dimensional Lie algebra, such that there is still a notion structure constants, but an inconvenient one due to that these constants are in general not finitely many.}
-%
-%\begin{definitions}{Structure functions, \cite[\S 16.5, page 119]{DaSilva}}{StructureFunctons}
-%Let $\mathcal{g} \to M$ be an LAB over a smooth manifold $M$, and $\mleft( e_a \mright)_a$ be a local frame of $\mathcal{g}$ over some open subset $U \subset M$. Then the \textbf{structure functions} $C^a_{bc} \in C^\infty(U)$ are defined by 
-%\bas
-	%\mleft[e_b, e_c\mright]_{\mathcal{g}} = C^a_{bc} e_a.
-%\eas
-%\end{definitions}
-%
-%\begin{remarks}{Properties of the structure functions}{PropOfStrFunctions}
-%Of course, one has the typical properties for such structure functions as for structure constants due to that $C^a_{bc}$ restrict to typical structure constants on each fibre. Similar to \cite[\S 1.4, discussion after Def.\ 1.4.17, page 38]{Hamilton},
-%\bas
-%C^a_{bc} &= - C^a_{cb},\\
-%0&=
-	%C^d_{ae} C^e_{bc} + C^d_{be} C^e_{ca} + C^d_{ce} C^e_{ab}
-%\eas
-%for all $a, b, c, d$; the former due to antisymmetry, the latter because of the Jacobi identity.
-%\end{remarks}
-
-As we have seen it for LGBs, the pullback of LABs is again an LAB.
+As we have seen for LGBs, the pullback of LABs is again an LAB.
 
 \begin{corollaries}{Pullbacks of LABs are LABs, \cite[\S 3, Thm.\ 3.2]{PullbackLGBLAB}}{PullBackLABIsLAB}
 Let $M, N$ be smooth manifolds, $\mathcal{g} \stackrel{\pi}{\to} M$ an LAB over $M$ and $f: N \to M$ a smooth map. Then the pullback vector bundle $f^*\mathcal{g}$ has a unique (up to isomorphisms) LAB structure such that the projection $\pi_2: f^*\mathcal{g} \to \mathcal{g}$ onto the second factor is an LAB morphism over $f$ with $\pi_2|_x: (f^*\mathcal{g})_x \to \mathcal{g}_{f(x)}$ being a Lie algebra isomorphism for all $x \in N$.
@@ -2360,14 +2358,14 @@ Either prove this similarly as Cor.\ \ref{cor:PullbackLGB} (by also using a simi
 \begin{definitions}{Pullback LAB}{PullbackLABDef}
 Let $M, N$ be smooth manifolds, $\mathcal{g} \to M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then we call the LAB structure on $f^*\mathcal{g}$ as given in Cor.\ \ref{cor:PullBackLABIsLAB} the \textbf{pullback LAB of $\mathcal{g}$ (under $f$)}.
 
-With writing $f^*\mathcal{g}$ we will often refer to this structure without further mention.
+By writing $f^*\mathcal{g}$ we will often refer to this structure without further mention.
 \end{definitions}
 
 \subsection{From LGBs to LABs}
 
 Let us now quickly discuss how LGBs and LABs are related; it is very similar to the relation of Lie groups and algebras, now somewhat fibre-wise. We will follow the style of \cite[\S 1.5.2, page 40ff.]{Hamilton}\ and \cite[\S 3.5, page 119ff.]{mackenzieGeneralTheory}; our approach will be using left-invariant vector fields but the mentioned latter reference actually uses right-invariant vector fields.
 
-Let us start with introducing the basic notations needed.
+Let us start with introducing the basic notations.
 
 \begin{definitions}{Left and right translation and conjugation, \newline \cite[\S 1.5, similar notation to Def.\ 1.5.3, page 40]{Hamilton}}{LeftRightTranslationConjugation}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$. For $g \in \mathcal{G}_x$ ($x \in M$) we define the following maps:
@@ -2402,7 +2400,7 @@ q &\mapsto c_\sigma(q) \coloneqq \mleft(L_\sigma \circ R_{\sigma^{-1}}\mright)(q
 \eas
 It is clear that $c_\sigma(gq) = c_\sigma(g) \cdot c_\sigma(q)$ for all $g, q \in \mathcal{G}$ with $\pi(g) = \pi(q)$, and that a smooth inverse is given by $c_{\sigma^{-1}}$; thence, $c_\sigma$ is an LGB isomorphism of $\mathcal{G}$ on itself, an automorphism, in sense of Def.\ \ref{def:LGB morphism}. It is also trivial to check that we have $c_{\sigma \cdot \tau} = c_\sigma \circ c_\tau$, where $\tau$ is another section of $\mathcal{G}$.
 
-Analogously we define $R_\sigma$ as $r_\sigma$ of Def.\ \ref{def:LRTranslations}; with the capital letter we put an emphasis on that the $\mathcal{G}$-action acts on $\mathcal{G}$ itself. Similarly for left translations.
+Analogously we defined $R_\sigma$ as $r_\sigma$ of Def.\ \ref{def:LRTranslations}; with the capital letter we put an emphasis on that the $\mathcal{G}$-action acts on $\mathcal{G}$ itself. Similarly for left translations.
 \end{remark}
 
 Since these are diffeomorphism of the fibres, it makes sense to say that a left-invariant vector field of $\mathcal{G}$ has to be a vertical vector field, that is, it is in the kernel of $\mathrm{D}\pi$, the total differential/tangent map of the projection of $\mathcal{G} \stackrel{\pi}{\to} M$. For this recall that there is the notion of a \textbf{vertical bundle} for fibre bundles $F \stackrel{\varpi}{\to} M$ (as \textit{e.g.}~introduced in \cite[\S 5.1.1, for principal bundles, but it is straightforward to extend the definitions; page 258ff.]{Hamilton}), which is defined as a subbundle $\mathrm{VF} \to F$ of the tangent bundle $\mathrm{T}F \to F$ given as the kernel of $\mathrm{D}\varpi : \mathrm{T}F \to \mathrm{T}M$. The fibres $\mathrm{V}_v F$ of $\mathrm{V}F$ at $v \in F$ are then given by 
@@ -2411,12 +2409,12 @@ Since these are diffeomorphism of the fibres, it makes sense to say that a left-
 &=
 \mathrm{T}_v F_x,
 \eas
-where $x \coloneqq \varpi(v) \in M$ and $F_p$ is the fibre of $F$ at $x$. $F_x$ is an embedded submanifold of $F$, thence, by definition a section $X \in \Gamma(\mathrm{V}F)$ restricts to a vector field on the fibres, that is, 
+where $x \coloneqq \varpi(v) \in M$ and $F_x$ is the fibre of $F$ at $x$. $F_x$ is an embedded submanifold of $F$, thence, by definition a section $X \in \Gamma(\mathrm{V}F)$ restricts to a vector field on the fibres, that is, 
 \bas
 X|_{F_x} \in \mathfrak{X}(F_x).
 \eas
 
-In our case $F = \mathcal{G}$, in this case $F_x = \mathcal{G}_x$ is then a Lie group, so, the vertical bundle just consists of the tangent bundles of Lie groups of all fibres. All of these are generated by their Lie algebra at $e_x$, the identity element of $\mathcal{G}_x$. Hence, it is natural to guess that the LAB for $\mathcal{G}$ will be $\mathrm{V}\mathcal{G}|_{e_M}$, where $e_M$ is the image of $M$ under the identity section of $\mathcal{G}$, thus, an embedding of $M$ into $\mathcal{G}$. Therefore $\mathrm{V}\mathcal{G}|_{e_M}$ is a fibre bundle by \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}, and clearly a vector bundle. Equivalently, since the identity section $e$ is an embedding, we think of $\mathrm{V}\mathcal{G}|_{e_M}$ as the pullback vector bundle $e^*\mathrm{V}\mathcal{G}$, which is conveniently a vector bundle over $M$.
+In our case $F = \mathcal{G}$, hence $F_x = \mathcal{G}_x$ is a Lie group, so, the vertical bundle just consists of the tangent bundles of Lie groups of all fibres. All of these are generated by their Lie algebra at $e_x$, the identity element of $\mathcal{G}_x$. Hence, it is natural to guess that the LAB for $\mathcal{G}$ will be $\mathrm{V}\mathcal{G}|_{e_M}$, where $e_M$ is the image of $M$ under the identity/neutral section of $\mathcal{G}$, thus, an embedding of $M$ into $\mathcal{G}$. Therefore $\mathrm{V}\mathcal{G}|_{e_M}$ is a fibre bundle by \cite[\S 4.1, Lemma 4.1.16, page 204]{Hamilton}, and clearly a vector bundle. Equivalently, since the identity section $e$ is an embedding, we think of $\mathrm{V}\mathcal{G}|_{e_M}$ as the pullback vector bundle $e^*\mathrm{V}\mathcal{G}$, which is conveniently a vector bundle over $M$.
 
 Hence, let us now show that $\mathcal{G}$ will be related to $e^*\mathrm{V}\mathcal{G}$ similar to how a Lie group will be related to its Lie algebra.
 
@@ -2438,7 +2436,7 @@ The set of all left-invariant vector fields on $\mathcal{G}$ will be denoted by 
 
 \begin{remark}
 \leavevmode\newline
-Observe that the second point in the definition is well-defined because $X$ is a vertical vector field; that is, recall that $L_q: \mathcal{G}_x \to \mathcal{G}_x$ such that $\mathrm{D}_gL_q(X_g): \mathrm{T}_g\mathcal{G}_x \to \mathrm{T}_{qg}\mathcal{G}_x$, hence, $\mathrm{D}_gL_q(X_g): \mathrm{V}_g\mathcal{G} \to \mathrm{V}_{qg}\mathcal{G}$.
+Observe that the second point in the definition is well-defined because $X$ is a vertical vector field; that is, recall that $L_q: \mathcal{G}_x \to \mathcal{G}_x$ such that $\mathrm{D}_gL_q: \mathrm{T}_g\mathcal{G}_x \to \mathrm{T}_{qg}\mathcal{G}_x$, hence, $\mathrm{D}_gL_q: \mathrm{V}_g\mathcal{G} \to \mathrm{V}_{qg}\mathcal{G}$.
 \end{remark}
 
 \begin{remarks}{Abstract notation 1}{AbstractNotationForLeftInvarianceVf}
@@ -2451,7 +2449,7 @@ $\mathcal{G}_x$ is a Lie group and left translations are diffeomorphisms on it, 
 \mathrm{D}L_q\mleft( X|_{\mathcal{G}_x} \mright) &= L_q^*\mleft(X|_{\mathcal{G}_x}\mright).
 \ea
 For this recall that $\mathrm{D}L_q \in \Omega^1\mleft(\mathcal{G}_x; L_q^*\mathrm{T}\mathcal{G}_x\mright)$ for the left hand side, and that $L_q^*$ is the pullback of sections on the right hand side, that is, $L_q^*\mleft(X|_{\mathcal{G}_x}\mright) \in \Gamma\mleft(L_q^*\mathrm{T}\mathcal{G}_x\mright)$.
-Furthermore, $X|_{\mathcal{G}_x}$ is therefore a left-invariant vector on $\mathcal{G}_x$. Which is why one may also define the left-invariance of $X$ as a vector field on $\mathcal{G}$ by saying that it has to restrict to a left-invariant vector field on each fibre in the usual sense of Lie groups.
+Furthermore, $X|_{\mathcal{G}_x}$ is therefore a left-invariant vector field on $\mathcal{G}_x$ as Lie group. Which is why one may also define the left-invariance of $X$ as a vector field on $\mathcal{G}$ by saying that it has to restrict to a left-invariant vector field on each fibre in the usual sense of Lie groups.
 \end{remarks}
 
 One quickly shows that this is a Lie subalgebra of $\mathfrak{X}(\mathcal{G})$.
@@ -2528,7 +2526,7 @@ Since $e^*\mathrm{V}\mathcal{G} \cong \mathrm{V}\mathcal{G}|_{e_M}$ is a very na
 \eas
 omitting $\mathrm{pr}_2$ and using that natural isomorphism without further mention.
 
-Also observe that we can actually define a left translations by (local) sections of $\mathcal{G}$, \textit{i.e.}\ for $\sigma \in \Gamma(\mathcal{G})$ we define the left translation $L_\sigma$ as a map by
+Also recall that we can actually define a left translations by (local) sections of $\mathcal{G}$, \textit{i.e.}\ for $\sigma \in \Gamma(\mathcal{G})$ we define the left translation $L_\sigma$ as a map by
 \bas
 \mathcal{G} &\to \mathcal{G},\\
 q &\mapsto \sigma_{\pi(q)} \cdot q.
@@ -2626,7 +2624,7 @@ is smooth, also using the smoothness of $\nu$, $\pi$ and $g \mapsto 0_g$.
 
 Finally, that $\phi: L(\mathcal{G}) \to \Gamma\mleft(e^*\mathrm{V}\mathcal{G}\mright)$, $X \mapsto e^*X$, is bijective is also clear, similar to typical gauge theory; we know that $X|_{\mathcal{G}_x}$ is a left-invariant vector field on $\mathcal{G}_x$ by Rem.\ \ref{rem:AbstractNotationForLeftInvarianceVf}. Hence, for $g \in \mathcal{G}_x$,
 \bas
-X|_{\mathcal{G}_x}
+\mleft.\mleft(X|_{\mathcal{G}_x}\mright)\mright|_g
 &=
 \mathrm{D}_{e_x}L_g(X_{e_x})
 =
@@ -2679,11 +2677,11 @@ As already discussed $e^*\mathrm{V}\mathcal{G}$ is a vector bundle. The fibres a
 &=
 \mathrm{T}_{e_x}\mathcal{G}_x
 \cong
-\mathrm{T}_{e} G
+\mathrm{T}_{e_G} G
 =
 \mathfrak{g}
 \eas
-for all $x \in M$, where we used that $\mathcal{G}_x$ is isomorphic to $G$ as a Lie group. All fibres are Lie algebras of the fibre Lie group, isomorphic to $\mathfrak{g}$. By construction, the Lie bracket is precisely the Lie bracket isomorphic to the one of $\mathfrak{g}$, and $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ is smooth. Therefore we conclude that $\mathcal{g}$ is an LAB with structural Lie algebra $\mathfrak{g}$. Alternatively see \cite[\S 3.5, Ex.\ 3.5.12, page 126]{mackenzieGeneralTheory} for an explicit construction of an LAB atlas.
+for all $x \in M$, where we used that $\mathcal{G}_x$ is isomorphic to $G$ as a Lie group whose neutral element we denoted formally by $e_G$. All fibres are Lie algebras of the fibre Lie group, isomorphic to $\mathfrak{g}$. By construction, the Lie bracket is precisely the Lie bracket isomorphic to the one of $\mathfrak{g}$, and $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ is smooth. Therefore we conclude that $\mathcal{g}$ is an LAB with structural Lie algebra $\mathfrak{g}$. Alternatively see \cite[\S 3.5, Ex.\ 3.5.12, page 126]{mackenzieGeneralTheory} for an explicit construction of an LAB atlas.
 \end{proof}
 
 \begin{definitions}{The LAB of an LGB, \newline\cite[\S 3.5, special situation of Def.\ 3.5.1, page 120]{mackenzieGeneralTheory}}{LABOfAnLGB}
@@ -2720,7 +2718,7 @@ As a special example, the LAB of the inner group bundle $c_G(P)$, Ex.\ \ref{ex:I
 
 \subsection{Vertical Maurer-Cartan form of LGBs}
 
-As one may expect, the last result gives hints about the tangent bundle structure of $\mathcal{G}$; this can be shown with the Maurer-Cartan form on LGBs, which we will call vertical Maurer-Cartan form. It will be clear later why we choose to add this adjective; however, as a first argument recall Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs}, especially the last paragraph.
+As one may expect, the last result gives hints about the vertical bundle structure of $\mathcal{G}$; this can be shown with the Maurer-Cartan form on LGBs, which we will call vertical Maurer-Cartan form. It will be clear later why we choose to add this adjective; however, as a first argument recall Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs}, especially the last paragraph.
 
 \begin{corollaries}{Well-definedness of the vertical Maurer-Cartan form}{VertMCVormIsWellDefined}
 Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. Define the following map
@@ -2822,14 +2820,14 @@ Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$. Th
 
 \begin{remark}
 \leavevmode\newline
-Observe that by Cor.\ \ref{cor:PullBackLABIsLAB} we know that $\mathrm{V}\mathcal{G}$ admits a unique LAB structure such that $\mathrm{V}\mathcal{G} \cong \pi^*\mathcal{g}$ is an isomorphism of LABs. This statement is also not in contradiction with $\mathcal{g} = e^*\mathrm{V}\mathcal{G}$ ($e$ the identity section of $\mathcal{G}$), because
+Observe that by Cor.\ \ref{cor:PullBackLABIsLAB} we then know that $\mathrm{V}\mathcal{G}$ admits a unique LAB structure such that $\mathrm{V}\mathcal{G} \cong \pi^*\mathcal{g}$ is an isomorphism of LABs. This statement is also not in contradiction with $\mathcal{g} = e^*\mathrm{V}\mathcal{G}$ ($e$ the identity section of $\mathcal{G}$), because
 \bas
 e^*\mathrm{V}\mathcal{G}
-&=
+&\cong
 e^*\pi^*\mathcal{g}
 \cong
 (\pi \circ e)^* \mathcal{g}
-=
+\cong
 \mathcal{g}.
 \eas
 By this we also know that $\mathrm{V}\mathcal{G}$ is trivial if and only if $\mathcal{g}$ is trivial; as also argued in \cite[\S 3.5, discussion after Cor.\ 3.5.4, page 121]{mackenzieGeneralTheory}. Compare this result with $\mathrm{T}G \cong G \times \mathfrak{g}$, where $G$ is a Lie group with Lie algebra $\mathfrak{g}$. We recover this result by restricting to the Lie group fibres $\mathcal{G}_x$ ($x \in M$), that is,
@@ -2866,7 +2864,7 @@ where $\mu_\mathcal{G}$ is defined as in Def.\ \ref{def:MCFormOnLGBs}, and $\mu_
 
 \subsection{Exponential map of LGBs}\label{ExponentialMapSubsection}
 
-By Remark \ref{rem:AbstractNotationForLeftInvarianceVf} it is clear that we have a natural exponential map, just given by the fibre-wise exponential. If one is interested into a general exponential map, then see \cite[\S 3.6, page 132ff.]{mackenzieGeneralTheory}. However, since our situation is much simpler, we quickly finish this discussion just making use of the already existing exponential map in each fibre; a straightforward generalization on results as provided in \cite[\S 1.7, page 55ff.]{Hamilton}.
+By Remark \ref{rem:AbstractNotationForLeftInvarianceVf} it is clear that we have a natural exponential map, just given by the fibre-wise exponential. If one is interested into a more general exponential map, then see \cite[\S 3.6, page 132ff.]{mackenzieGeneralTheory}. However, since our situation is much simpler, we quickly finish this discussion just making use of the already existing exponential map in each fibre; a straightforward generalization on results as provided in \cite[\S 1.7, page 55ff.]{Hamilton}.
 
 \begin{definitions}{Exponential map, \newline \cite[\S 3.6, second part of Ex.\ 3.6.2, page 133f.]{mackenzieGeneralTheory}}{ExpOfLGB}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{g} \to M$ its LAB. Then we define the \textbf{exponential map $\exp: \mathcal{g} \to \mathcal{G}$} by
@@ -2884,7 +2882,7 @@ for all $x \in M$ and $\nu \in \Gamma(\mathcal{g})$.
 Usually, the LGB is given by context, otherwise we will denote the exponential map by $\exp_{\mathcal{G}}$ instead.
 \end{definitions}
 
-The exponential map is well-defined, especially it is smooth because it describes the flow of left-invariant vector fields as it also happens for Lie groups; see for example \cite[Prop.\ 1.7.12, page 58]{Hamilton} for the Lie group statement. Also recall Cor.\ \ref{cor:LeftInvVfToLAB}, we denote left-invariant vector fields by $X_\nu$ where $\nu \in \Gamma(\mathcal{g})$ due to 1:1 correspondence of $L(\mathcal{G})$ and $\Gamma(\mathcal{g})$.
+The exponential map is well-defined, especially it is smooth because it describes the flow of left-invariant vector fields as it also happens for Lie groups; see for example \cite[Prop.\ 1.7.12, page 58]{Hamilton} for the Lie group statement. Also recall Cor.\ \ref{cor:LeftInvVfToLAB}, we denote left-invariant vector fields by $X_\nu$ where $\nu \in \Gamma(\mathcal{g})$ due to the 1:1 correspondence of $L(\mathcal{G})$ and $\Gamma(\mathcal{g})$.
 
 \begin{corollaries}{The exponential map as flow of $L(\mathcal{G})$, \newline \cite[discussion at the beginning of \S 3.6, Prop.\ 3.6.1 and its discussion afterwards; page 132f.]{mackenzieGeneralTheory}}{ExpAsFlow}
 Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{g} \to M$ its LAB. Then the flow of a left-invariant vector field $X_\nu \in L(\mathcal{G})$ ($\nu \in \Gamma(\mathcal{g})$) is a complete flow $\phi: \mathbb{R} \times \mathcal{G} \to \mathcal{G}$ given by
@@ -2913,7 +2911,7 @@ As mentioned in Remark \ref{rem:AbstractNotationForLeftInvarianceVf}, $X_\nu$ is
 \mathbb{R} \times \mathcal{G}_x &\to \mathcal{G}_x,\\
 (t, g) &\mapsto \phi_x(t, g) = g \cdot \exp_{\mathcal{G}_x}\mleft(t \nu_x\mright),
 \eas
-where $\exp_{\mathcal{G}_x}$ is the exponential map of $\mathcal{G}_x$. Since this works for all fibres $\mathcal{G}_x$ and by Def.\ \ref{def:ExpOfLGB} we get that the flow $\phi$ of $X_\nu$ is complete and given by
+where $\exp_{\mathcal{G}_x}$ is the exponential map of $\mathcal{G}_x$. Since this works for all fibres $\mathcal{G}_x$ we get by Def.\ \ref{def:ExpOfLGB} that the flow $\phi$ of $X_\nu$ is complete and given by
 \bas
 \phi(t, g)
 &=
@@ -3028,7 +3026,7 @@ Again by our notes in Subsection \ref{BasicNotations}, we can view $F$ as a base
 
 \section{LGB actions, part II}\label{LGBActionIISection}
 
-Finally, we come to the last part of the \textit{basics} for LGBs and their notions needed in this paper and needed to formulate a new and more general form of gauge theory.
+Finally, we come to the last part of the \textit{basics} for LGBs and their notions needed.
 
 \subsection{LGB and LAB representations}
 
@@ -3092,7 +3090,7 @@ This is an immediate consequence of Def.\ \ref{def:LGBRep} and \ref{def:Liegroup
 Similarly as to Ex.\ \ref{ex:TrivialLGBAction}, if $\mathcal{G} = M \times G$ is a trivial LGB over $M$, $G$ its structural Lie group, and $V = M \times W$ a trivial vector bundle with structural vector space $W$, then $\Psi$ is equivalent to a $G$-representation on $W$. Backwards, every Lie group representation gives a representation of trivial LGBs on trivial vector bundles.
 \end{examples}
 
-Also recall Ex.\ \ref{ex:AutOfVectorBundleAnLGB}: We can now similarly construct another LGB needed for the adjoint representation.
+Also recall Ex.\ \ref{ex:AutOfVectorBundleAnLGB}: We can similarly construct another LGB needed for the adjoint representation.
 
 \begin{examples}{Another LGB example: Automorphisms of LABs, \newline \cite[\S 1.7, special situation of Ex.\ 1.7.12, page 46]{mackenzieGeneralTheory}}{AutosOfLABsAsLGB}
 Let $\mathcal{g}$ be an LAB over the smooth manifold $M$. We denote with $\mathrm{Aut}(\mathcal{g}) \to M$ the bundle of fibre-wise Lie algebra automorphisms of $\mathcal{g}$, where the sections of $\mathrm{Aut}(\mathcal{g})$ are the base-preserving LAB automorphisms of $\mathcal{g}$. As in Ex.\ \ref{ex:AutOfVectorBundleAnLGB} one can show $\mathrm{Aut}(\mathcal{g})$ is an LGB by using LAB trivializations of $\mathcal{g}$ instead of vector bundle trivializations.
@@ -3110,7 +3108,7 @@ For $g \in \mathcal{G}_x$ ($x \in M$) we have the conjugation $c_g$ which is a $
 \eas
 for all $g \in \mathcal{G}_x$ ($x \in M$). 
 
-That this is a $\mathcal{G}$-representation on $\mathcal{g}$ follows by the following proof: By construction $\mathrm{Ad}_g \in \mathrm{Aut}(\mathcal{g}_x) = \mleft.\mathrm{Aut}(\mathcal{g})\mright|_x$ so that the adjoint representation is well-defined. As in the Lie group case, due to the fact that $c_{gq} = c_{g} \circ c_q$ for all $g, q\in \mathcal{G}_x$ and $c_g(e_x) = e_x$ we have
+That this is a $\mathcal{G}$-representation on $\mathcal{g}$ follows quickly: By construction $\mathrm{Ad}_g \in \mathrm{Aut}(\mathcal{g}_x) = \mleft.\mathrm{Aut}(\mathcal{g})\mright|_x$ so that the adjoint representation is clearly well-defined. As in the Lie group case, due to the fact that $c_{gq} = c_{g} \circ c_q$ for all $g, q\in \mathcal{G}_x$ and $c_g(e_x) = e_x$ we have
 \bas
 \mathrm{Ad}_{gq}
 &=
@@ -3245,7 +3243,7 @@ for all $(p, \nu) \in f^*\mathcal{g}$, and thus describes a base-preserving vect
 \bas
 f \circ \Phi
 &=
-\pi \circ \mathrm{pr}_2,
+\pi \circ \mathrm{pr}_2^{f^*\mathcal{G}},
 \eas
 where $\mathrm{pr}_2^{f^*\mathcal{G}}$ is the projection onto the second factor in $f^*\mathcal{G}\subset N \times \mathcal{G}$. Thence, we have
 \bas
@@ -3255,7 +3253,7 @@ where $\mathrm{pr}_2^{f^*\mathcal{G}}$ is the projection onto the second factor 
 =
 \mleft.\mathrm{D}(f \circ \Phi)\mright|_{f^*\mathcal{g}}
 =
-\mleft.\mleft(\mathrm{D}\pi \circ \mathrm{Dpr}_2^{f*\mathcal{G}}\mright)\mright|_{f^*\mathcal{g}}
+\mleft.\mleft(\mathrm{D}\pi \circ \mathrm{Dpr}_2^{f^*\mathcal{G}}\mright)\mright|_{f^*\mathcal{g}}
 =
 \mleft.\mathrm{D}\pi\mright|_{\mathcal{g}} \circ \mathrm{pr}_2^{f^*\mathcal{g}}
 = 0,
@@ -3276,7 +3274,8 @@ if we can show that $\mathrm{D}\Phi(f^*\mu)$ and $\mathrm{D}\Phi(f^*\nu)$ are $\
 &\stackrel{!}{=}
 \mathrm{D}_{(p, g)}\Phi\mleft( \mleft.\mleft(f^*\mu\mright)\mright|_{(p,g)} \mright)
 \ea
-for all $(p, g) \in N*\mathcal{G}$, similarly for $\nu$; here we understand the LABs of LGBs as left-invariant vector fields as in Cor.\ \ref{cor:LeftInvVfToLAB}. Observe that we have in general for $\eta \in \Gamma(f^*\mathcal{g})$
+for all $(p, g) \in N*\mathcal{G}$, similarly for $\nu$; here we understand the LABs of LGBs as left-invariant vector fields as in Cor.\ \ref{cor:LeftInvVfToLAB}. Observe that we have in general for $\eta \Gamma(f^*\mathcal{g}) \in \cong L(f^*\mathcal{G})$, using the definition of $\rho$,
+%($N$ canonically embedded into $f^*\mathcal{G}$ via the neutral section)
 \bas
 \mleft.\mathrm{D}\phi(\eta)\mright|_{p\cdot g}
 &=
