@@ -4037,41 +4037,53 @@ The latter about the typical trivialization is also stated in \cite[\S 5.7, four
 
 \begin{proof}[Proof of Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}]
 \leavevmode\newline
-The proof is similar to the "classical" statement as \textit{e.g.}\ given in \cite[\S 4.2, proof of Lemma 4.2.7, page 210ff.]{Hamilton}, but generalized since we have to treat a possible non-triviality of $\mathcal{G}|_U$. As already discussed, the orbit map $\Phi_s$ is well-defined because of $\pi_{\mathcal{P}} \circ s = \mathds{1}_{U}$ such that $\mleft(s_{\pi_{\mathcal{G}}(g)}, g\mright) \in \mathcal{P}*\mathcal{G}$. Let us denote with $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{G}$ the right $\mathcal{G}$-action $(p, g) \mapsto p \cdot g$ on $\mathcal{P}$, then
-\ba\label{RewritingLocalTrivOfPrinc}
+The proof is similar to the "classical" statement as \textit{e.g.}\ given in \cite[\S 4.2, proof of Lemma 4.2.7, page 210ff.]{Hamilton}, but generalized since we have to treat a possible non-triviality of $\mathcal{G}|_U$. As already discussed, the orbit map $\Phi_s$ is well-defined because of $\pi_{\mathcal{P}} \circ s = \mathds{1}_{U}$ such that $\mleft(s_{\pi_{\mathcal{G}}(g)}, g\mright) \in \mathcal{P}*\mathcal{G}$. Via Rem.\ \ref{SmoothnessOfACtionTranslations} we also know that $\Phi_s$ is also smooth,
+ %Let us denote with $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{G}$ the right $\mathcal{G}$-action $(p, g) \mapsto p \cdot g$ on $\mathcal{P}$, then
+%\ba\label{RewritingLocalTrivOfPrinc}
+%\Phi_s(g)
+%&=
+%\Phi\mleft( s_{\pi_{\mathcal{G}}(g)}, g\mright)
+%=
+%\bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathds{1}_{\mathcal{G}} \mright) \bigr) (g,g).
+%\ea
+%Thence, $\Phi_s$ is clearly a smooth map as the composition of smooth maps, that is, $\Phi$ is composed with the restriction of the smooth map $\mleft( \pi_{\mathcal{G}}^*s, \mathds{1}_{\mathcal{G}} \mright): \mathcal{G} \times \mathcal{G} \to \mathcal{G}$, which is given by $(g, q) \mapsto \mleft( s_{\pi_{\mathcal{G}(g)}} , q \mright)$, and it is clearly smooth if restricted to the diagonal as embedded submanifold.
+%By Def.\ \ref{def:LiegroupACtion} we have
+%\bas
+%\mleft( \pi_{\mathcal{P}} \circ \Phi_s \mright)(g)
+%&=
+%\pi_{\mathcal{P}}\mleft( s_{\pi_{\mathcal{G}}(g)} \cdot g \mright)
+%=
+%\pi_{\mathcal{G}}(g),
+%\eas
+%thus, $\Phi_s$ is base-preserving, similarly it follows that $\Phi_s$ is $\mathcal{G}$-equivariant w.r.t.\ $\mathds{1}_{\mathcal{G}}$ by making use of $\pi_{\mathcal{G}}(g q) = \pi_{\mathcal{G}}(g)$ for all $g, q \in \mathcal{G}*\mathcal{G}$. Furthermore, $\Phi_s$ is bijective since the right $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive, that is, when we restrict $\Phi_s$ to an $x \in U$, then it is a map
+%\bas
+%\mathcal{G}_x &\to \mathcal{P}_x,\\
+%g &\mapsto s_x \cdot g,
+%\eas
+%thence, as expected 
+and it is point-wise the orbit map $\Phi_{s_x}$ through $s_x$ which is a $\mathcal{G}_x$-equivariant diffeomorphism by Remark \ref{rem:LGBPrincDefDiscussion}. So, $\Phi_s$ is fibre-wise bijective and therefore bijective as a whole since it is base-preserving, and it is $\mathcal{G}$-equivariant w.r.t.\ $\mathds{1}_{\mathcal{G}}$.
+
+Now we want to use the inverse function theorem to show that its inverse is also smooth. Once we know that the tangent map/total derivative $\mathrm{D}_g\Phi_s: \mathrm{T}_g \mathcal{G} \to \mathrm{T}_{s_{x} \cdot g}\mathcal{P}$ is an isomorphism of vector spaces for all $g \in \mathcal{G}|_U$, then we know by the inverse function theorem that $\Phi_s^{-1}$ is smooth. Hence, we will now show that $\mathrm{D}_g\Phi_s$ is injective, then it has to bijective by dimensional reasons ($\mathrm{dim}(\mathcal{G}) = \mathrm{dim}(\mathcal{P})$) so that we are done. Let us denote with $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{G}$ the right $\mathcal{G}$-action $(p, g) \mapsto p \cdot g$ on $\mathcal{P}$, then
+\bas
 \Phi_s(g)
 &=
 \Phi\mleft( s_{\pi_{\mathcal{G}}(g)}, g\mright)
 =
 \bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathds{1}_{\mathcal{G}} \mright) \bigr) (g,g).
-\ea
-Thence, $\Phi_s$ is clearly a smooth map as the composition of smooth maps; the second map $\mleft( \pi_{\mathcal{G}}^*s, \mathds{1}_{\mathcal{G}} \mright): \mathcal{G} \times \mathcal{G} \to \mathcal{G}$ is given by $(g, q) \mapsto \mleft( s_{\pi_{\mathcal{G}(g)}} , q \mright)$ and is clearly smooth if restricted to the diagonal as embedded submanifold. By Def.\ \ref{def:LiegroupACtion} we have
-\bas
-\mleft( \pi_{\mathcal{P}} \circ \Phi_s \mright)(g)
-&=
-\pi_{\mathcal{P}}\mleft( s_{\pi_{\mathcal{G}}(g)} \cdot g \mright)
-=
-\pi_{\mathcal{G}}(g),
 \eas
-thus, $\Phi_s$ is base-preserving, similarly it follows that $\Phi_s$ is $\mathcal{G}$-equivariant w.r.t.\ $\mathds{1}_{\mathcal{G}}$ by making use of $\pi_{\mathcal{G}}(g q) = \pi_{\mathcal{G}}(g)$ for all $g, q \in \mathcal{G}*\mathcal{G}$. Furthermore, $\Phi_s$ is bijective since the right $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive, that is, when we restrict $\Phi_s$ to an $x \in U$, then it is a map
-\bas
-\mathcal{G}_x &\to \mathcal{P}_x,\\
-g &\mapsto s_x \cdot g,
-\eas
-thence, as expected is is the orbit map $\Phi_{s_x}$ through $s_x$ which is a $\mathcal{G}_x$-equivariant diffeomorphism by Remark \ref{rem:LGBPrincDefDiscussion}. So, $\Phi_s$ is fibre-wise bijective and therefore bijective as a whole since it is base-preserving.
-
-Now we want to use the inverse function theorem to show that its inverse is also smooth. Once we know that the tangent map/total derivative $\mathrm{D}_g\Phi_s: \mathrm{T}_g \mathcal{G} \to \mathrm{T}_{s_{x} \cdot g}\mathcal{P}$ is an isomorphism of vector spaces for all $g \in \mathcal{G}|_U$, then we know by the inverse function theorem that $\Phi_s^{-1}$ is smooth. Hence, we will now show that $\mathrm{D}_g\Phi_s$ is injective, then it has to bijective by dimensional reasons ($\mathrm{dim}(\mathcal{G}) = \mathrm{dim}(\mathcal{P})$) so that we are done. This differential is given by Thm.\ \ref{thm:DiffOfLGBAction}, making use of Eq.\ \eqref{RewritingLocalTrivOfPrinc},
-\bas
+Then $\mathrm{D}_g\Phi_s$ is given by Thm.\ \ref{thm:DiffOfLGBAction},
+\ba
 \mathrm{D}_g \Phi_s (Y)
 &=
 \mathrm{D}_{s_x}r_\sigma\bigl( \mathrm{D}_x s(\omega) \bigr)
 	+ \mleft.\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y - \mathrm{D}_x \sigma(\omega) \bigr) }\mright|_{s_x \cdot g}
-\\
+\nonumber\\
 &=
 \mathrm{D}_x \mleft( r_\sigma \circ s \mright)(\omega)
 	+ \mleft.\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y - \mathrm{D}_x \sigma(\omega) \bigr) }\mright|_{s_x \cdot g}
-\eas
-for all $Y \in \mathrm{T}_g \mathcal{G}$, where $x \coloneqq \pi_{\mathcal{G}}(g)$, $\sigma \in \Gamma(\mathcal{G}|_U)$\footnote{W.l.o.g.\ we assume that $\sigma$ is defined on $U$, otherwise "make $U$ smaller".} with $\sigma_{x} = g$ and $\omega \coloneqq \mathrm{D}_{g}\pi_{\mathcal{G}}(Y) \in \mathrm{T}_xM$. We want to decompose $\Phi_s$ now. Observe that $Y - \mathrm{D}_x \sigma(\omega) \in \mathrm{V}_g \mathcal{G}$, \textit{i.e.}\ it is vertical in $\mathcal{G}$ due to the fact that
+	\label{DiffOfOrbitMap}
+\ea
+for all $Y \in \mathrm{T}_g \mathcal{G}$, where $x \coloneqq \pi_{\mathcal{G}}(g)$, $\sigma \in \Gamma(\mathcal{G}|_U)$\footnote{W.l.o.g.\ we assume that $\sigma$ is defined on $U$, otherwise "make $U$ smaller around $x$".} with $\sigma_{x} = g$ and $\omega \coloneqq \mathrm{D}_{g}\pi_{\mathcal{G}}(Y) \in \mathrm{T}_xM$. We want to decompose $\Phi_s$ now. Observe that $Y - \mathrm{D}_x \sigma(\omega) \in \mathrm{V}_g \mathcal{G}$, \textit{i.e.}\ it is vertical in $\mathcal{G}$ due to the fact that
 \ba\label{DecomposingTheLGBVectorfieldsWithsections}
 \mathrm{D}_g\pi_{\mathcal{G}}
 \mleft(Y - \mathrm{D}_x \sigma(\omega)\mright)
@@ -4093,7 +4105,7 @@ such that
 &=
 \mathds{1}_{\mathrm{T}M|_U}.
 \ea
-Usually, we just make use of that without further mention; we repeat this trivial fact in order to emphasize that $\mathrm{D}\sigma$ is injective because $\mathds{1}_{\mathrm{T}M|_U}$ bijective and that we have
+Usually, we just make use of that without further mention; we repeat this trivial fact in order to emphasize that $\mathrm{D}\sigma$ is injective because $\mathds{1}_{\mathrm{T}M|_U}$ is bijective, and to emphasize that we have
 \bas
 %\mathrm{T}_g\mathcal{G}
 %&=
@@ -4134,7 +4146,7 @@ $v$ stands for the vertical part and $h$ for its complementary part ("horizontal
 	\end{tikzcd}
 \ees
 and $\mathrm{D}\sigma$ is a splitting/section of this sequence
-so that we have $\sigma^*\mathrm{T}\mathcal{G} \cong \mathrm{Im}(\mathrm{D}\sigma) \oplus \sigma^*\mathrm{V}\mathcal{G}$.\footnote{$\sigma$ is actually an embedding, and thus $\mathrm{Im}(\mathrm{D}\sigma)$ is a well-defined subbundle isomorphic to $\mathrm{T}M$.} Furthermore, again due to Eq.\ \eqref{DsigmaIsASPlitting}, we have $\mathrm{Im}(\mathrm{D}_x\sigma) \cong \mathrm{T}_xM$ as vector spaces by $Y^h \mapsto \mathrm{D}_g\pi_{\mathcal{G}}\mleft(Y^h\mright) = \mathrm{D}_g\pi_{\mathcal{G}}(Y) = \omega$ since $Y^v$ is vertical. Hence, we can view $\mathrm{D}_g\Phi_s$ as a map
+so that we have $\sigma^*\mathrm{T}\mathcal{G} \cong \mathrm{Im}(\mathrm{D}\sigma) \oplus \sigma^*\mathrm{V}\mathcal{G}$.\footnote{$\sigma$ is actually an embedding, and thus $\mathrm{Im}(\mathrm{D}\sigma)$ is a well-defined subbundle isomorphic to $\mathrm{T}M$.} Furthermore, again due to Eq.\ \eqref{DsigmaIsASPlitting}, we have $\mathrm{Im}(\mathrm{D}_x\sigma) \cong \mathrm{T}_xM$ as vector spaces by $Y^h \mapsto \mathrm{D}_g\pi_{\mathcal{G}}\mleft(Y^h\mright) = \mathrm{D}_g\pi_{\mathcal{G}}(Y) = \omega$ since $Y^v$ is vertical. Hence, we can rewrite Eq.\ \eqref{DiffOfOrbitMap} as a map
 \bas
 \mathrm{T}_xM \oplus \mathrm{V}_g \mathcal{G} &\to \mathrm{T}_{s_{x} \cdot g}\mathcal{P},\\
 \mleft(\omega,~ Y^v\mright) &\mapsto
@@ -4157,7 +4169,7 @@ for all $y \in M$. As before, we split
 \mathrm{Im}\bigl( \mathrm{D}_x(r_\sigma\circ s) \bigr)
 	\oplus \mathrm{V}_{s_x \cdot g} \mathcal{P},
 \eas
-and we identify $\mathrm{Im}\bigl( \mathrm{D}_x(r_\sigma\circ s) \bigr) \cong \mathrm{T}_xM$ as vector spaces, now via $\omega \mapsto \mathrm{D}_x(r_\sigma\circ s) (\omega)$ due to Eq.\ \eqref{DsigmaIsASPlitting} but with $r_\sigma \circ s$ playing the role as section. Additionally by Def.\ \ref{def:FundVecs} and Remark \ref{rem:FundVecsNotations} we know that fundamental vector fields are vertical, and so we can view $\mathrm{D}_g \Phi_s$ as a map
+and we identify $\mathrm{T}_xM \cong \mathrm{Im}\bigl( \mathrm{D}_x(r_\sigma\circ s) \bigr)$ as vector spaces, now via $\omega \mapsto \mathrm{D}_x(r_\sigma\circ s) (\omega)$ due to Eq.\ \eqref{DsigmaIsASPlitting} but with $r_\sigma \circ s$ playing the role as section. Additionally by Def.\ \ref{def:FundVecs} and Remark \ref{rem:FundVecsNotations} we know that fundamental vector fields are vertical, and so we can further rewrite Eq.\ \eqref{DiffOfOrbitMap} as a map
 \bas
 \mathrm{T}_xM \oplus \mathrm{V}_g \mathcal{G} 
 &\to 
@@ -4180,12 +4192,12 @@ Usually, one likes to think about the choice of sections as a choice of a coordi
 
 However, we now learned that on a more general scale this is not completely what is happening. The idea of LGBs and principal bundles are very similar; both are fibre bundles related to a Lie group and they carry an action which also restricts on each fibre. But the fibres of an LGB are Lie groups themselves, while the fibres of a principal bundle are "just" diffeomorphic to a Lie group in an equivariant way as outlined in Remark \ref{rem:LGBPrincDefDiscussion} and as given in their definition Def.\ \ref{def:PrinciBdleWithStruLGB}. One could view the fibres of $\mathcal{P}$ as having an "almost" Lie group structure, a Lie group structure without a designated neutral element. 
 
-Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} shows that the choice of a section of $\mathcal{P}$ is actually the choice of a designated neutral element, naturally inducing a Lie group structure in each fibre and thus an LGB structure, which may not be trivial. Aligning the more general definition of principal bundles with the definition of LGBs. For example set $\mathcal{P} = \mathcal{G} = c_G(P)$ as in Ex.\ \ref{ex:InnerLGBs}, where $P$ is a non-trivial classical principal bundle and the underlying Lie group $G$ is non-abelian; such an LGB is likely non-trivial but always carries a global section. We will see such an example later.
+Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} shows that the choice of a section of $\mathcal{P}$ is actually the choice of a designated neutral element, naturally inducing a Lie group structure in each fibre and thus an LGB structure, which may not be trivial. Aligning the more general definition of principal bundles with the definition of LGBs. For example set $\mathcal{P} = \mathcal{G} = c_G(P)$ as in Ex.\ \ref{ex:InnerLGBs}, where $P$ is a non-trivial classical principal bundle and the underlying Lie group $G$ is non-abelian; such an LGB is likely non-trivial but always carries a global section, for examples the neutral section $e$. We will see such an example later.
 
 We want to use this now in order to study a certain pullback of principal bundles. For this we need to introduce general pullbacks of principal bundles; also recall again Cor.\ \ref{cor:PullbackLGB}.
 
 \begin{corollaries}{Pullbacks of principal LGB-bundles are principal LGB-bundles}{PullBacksArePrincToo}
-Let $M, N$ be smooth manifolds, $f: N \to M$ a smooth map, $\mathcal{G} \to M$ an LGB, and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Then there is a unique (up to isomorphisms) principal $f^*\mathcal{G}$-bundle structure on $f^*\mathcal{P}$ such that the projection $\pi_2: f^*\mathcal{P} \to \mathcal{P}$ onto the second factor is a principal bundle morphism (over $f$) w.r.t.\ the projection $\pi_2^{\mathcal{G}}: f^*\mathcal{G} \to \mathcal{G}$ onto the second factor as LGB morphism and such that $\pi_2|_x: (f^*\mathcal{P})_x \to \mathcal{P}_{f(x)}$ is a $\mathcal{G}_x$-equivariant diffeomorphism w.r.t.\ the LGB isomorphism $\mleft.\pi_2^{\mathcal{G}}\mright|_x$.
+Let $M, N$ be smooth manifolds, $f: N \to M$ a smooth map, $\mathcal{G} \to M$ an LGB, and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Then there is a unique (up to isomorphisms) principal $f^*\mathcal{G}$-bundle structure on $f^*\mathcal{P}$, such that the projection $\pi_2: f^*\mathcal{P} \to \mathcal{P}$ onto the second factor is a principal bundle morphism (over $f$) w.r.t.\ the projection $\pi_2^{\mathcal{G}}: f^*\mathcal{G} \to \mathcal{G}$ onto the second factor as LGB morphism, and such that $\pi_2|_x: (f^*\mathcal{P})_x \to \mathcal{P}_{f(x)}$ is a $\mathcal{G}_x$-equivariant diffeomorphism w.r.t.\ the LGB isomorphism $\mleft.\pi_2^{\mathcal{G}}\mright|_x$.
 %
 %$f^*\mathcal{P}$ is the \textbf{pullback principal bundle of $\mathcal{P}$ (under $f$)}.
 \end{corollaries}
@@ -4237,7 +4249,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \bas
 \mathcal{P}*\mathcal{G} &\cong \pi^*\mathcal{P}
 \eas
-w.r.t.\ the LGB isomorphism given as the identity map on $\mathcal{P} * \mathcal{G}$.
+w.r.t.\ the LGB isomorphism given as the identity map on $\mathcal{P} * \mathcal{G} = \pi^*\mathcal{G}$.
 \end{corollaries}
 
 \begin{proof}
@@ -4255,7 +4267,7 @@ This is clearly a well-defined global section of $\pi^*\mathcal{P}$, so that by 
 By Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} this isomorphism is explicitly given by
 \bas
 \mathcal{P}*\mathcal{G} &\to \pi^*\mathcal{P},\\
-(p, g) &\mapsto (p, p \cdot g).
+(p, g) &\mapsto (p,p) \cdot (p, g) = (p, p \cdot g).
 \eas
 In fact, the cited reference of Def.\ \ref{def:PrinciBdleWithStruLGB}, \cite[simplification of the beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}, takes the existence of such a diffeomorphism as the essential sole part of defining principal bundles. Such an approach essentially avoids the second part of Def.\ \ref{def:PrinciBdleWithStruLGB}.
 \end{remark}
@@ -4290,7 +4302,9 @@ By Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}, a gauge corresponds to
 It is important to mention beforehand that there is another great paper, \cite{OtherPreprintAboutConnection}, which also discusses the notion of connections on principal LGB-bundles. When I wrote this subsection about the connection, I was not aware of this preprint so that there will be some shared results which I found independently of the other authors. This will be obvious due to the fact that our approach is different. Both, this and the other paper, lead to the same sense of connection (based on the same idea of the behaviour of the parallel transport), but are explicitly not directly the same formulation. More like equivalent definitions of the same object, two sides of the same coin, so that it should be worth it to read both research works. \cite{OtherPreprintAboutConnection} sole purpose was in defining connections, while we want to discuss this sense of connection in the context of Yang-Mills gauge theory, also pinpointing what happens for Yang-Mills-Higgs gauge theories. Hence, our approach will be different, we will use sections of the LGB to formulate connections, simplifying certain explicit formulas; while \cite{OtherPreprintAboutConnection} avoids using sections and rather uses formulations just looking on the vertical parts of a vector or by rephrasing the notions via the total derivative of the LGB action. Another example of difference is that we are also introducing a generalisation of the Darboux derivative and phrasing important formulas with this derivative. Furthermore, we are not going to fix a specific connection on $\mathcal{G}$ for the principal bundle's connection (other than a horizontal distribution), while \cite{OtherPreprintAboutConnection} did fix a more specific type of connection on $\mathcal{G}$, and our curvature will be different and more general as already pointed out in research like \cite{CurvedYMH} and \cite{MyThesis}.
 \end{remarks}
 
-Finally, let us now define the gauge theory, starting with horizontal distributions. For readability, we start with a very easy toy model which should help in understanding the general definitions. We expect a basic understanding of horizontal distributions and their relationship to what we call connections (on principal and vector bundles). The bare-bones start with horizontal distributions.
+Finally, let us now define the gauge theory, starting with horizontal distributions. 
+%For readability, we start with a very easy toy model which should help in understanding the general definitions. 
+We expect a basic understanding of horizontal distributions and their relationship to what we call connections (on principal and vector bundles). The bare-bones start with horizontal distributions.
 
 \begin{definitions}{Horizontal distribution, \newline \cite[\S 5.1.2, Def.\ 5.1.6, page 260; without the symmetry along right-translations here]{Hamilton}}{EhresmannConnectionBasics}
 Let $F \to M$ be a fibre bundle over a smooth manifold $M$. Then a \textbf{horizontal distribution/bundle of $F$} is a smooth subbundle $\mathrm{H}F$ of $\mathrm{T}F$ with
