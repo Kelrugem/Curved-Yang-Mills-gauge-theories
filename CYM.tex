@@ -9422,7 +9422,7 @@ X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mri
 This finishes the proof, so we have:
 
 \begin{remarks}{The canonical involution/flip map an isomorphism, \newline\cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}}{CanonicalInvolutionAnIsom}
-The canonical involution/flip $S$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$, and similarly vice versa. We also write $S \eqqcolon S_M$ to give an accentuation on $M$.
+The canonical involution/flip $S$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$, and similarly vice versa. We also write $S_M \coloneqq S$ to give an accentuation on $M$.
 \end{remarks}
 
 This isomorphism is basically now Schwarz's Theorem:
@@ -9468,7 +9468,7 @@ For a notation with base points in $M$, consider a special case with $M = M_1 \t
 M_2 &\to \mathrm{T}N,\\
 p_2 &\mapsto
 \mleft.\mathrm{D}_{p_1} F(Y_1)\mright|_{p_2}
-= 
+\coloneqq 
 \mathrm{D}_{(p_1, p_2)} F\mleft(Y_1, 0_{p_2}\mright),
 \eas
 where $0_{p_2}$ is the zero tangent vector at $\mathrm{T}_{p_2}M_2$,
@@ -9511,7 +9511,7 @@ S_N\Bigl(\mathrm{D}_{p_2} \bigl(\mathrm{D}_{p_1} F(Y_1) \bigr) (Y_2)\Bigr).
 In fact, using the canonical flip/involution, we can construct and state other properties which can be useful for calculations related to second derivatives. 
 
 \begin{remarks}{Total derivatives of tangent bundle morphisms linear with respect to prolonged vertical structure}{TotalDerivativesAreLinearWithRTOtherLinearStructure}
-Consider a vector bundle morphism $L: \mathrm{T}M \to \mathrm{T}N$, where $N$ is another smooth manifold. Then for $\xi, \eta \in \mathrm{TT}M$ with their approximating curves $X$ and $Y$, respectively, as previously, then
+Consider a vector bundle morphism $L: \mathrm{T}M \to \mathrm{T}N$ (over some map $M \to N$), where $N$ is another smooth manifold. Then for $\xi, \eta \in \mathrm{TT}M$ with their approximating curves $X$ and $Y$, respectively, as previously,
 \bas
 \mathrm{D}L\mleft(\lambda \boldsymbol{\cdot} \xi \RPlus \kappa \boldsymbol{\cdot} \eta\mright)
 &=
@@ -9543,7 +9543,7 @@ By definition, the vertical bundle $\mathrm{VT}M$ of $\mathrm{T}M$ is a subbundl
 		\widetilde{M} \arrow[r, "\cong"]& M
 	\end{tikzcd}
 \end{center} 
-and $S=S_M$ does not only restrict onto that, $S$ is actually the identity on $\mathrm{VT}M|_{\widetilde{M}}$, as also stated in \cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}. This follows simply by the coordinate expressions Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy} (recall the involved notation). $\xi \in \mathrm{VT}M|_{\widetilde{M}}$ is in the kernel of both projections, $\mathrm{D}\pi_{\mathrm{T}M}$ and $\pi_{\mathrm{TT}M}$, thus $\omega = X_0 = 0 \in \mathrm{T}_pM$, therefore $S(\xi) = \xi$ by Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy}. By Remark \ref{rem:CanonicalInvolutionAnIsom} the addition $\RPlus$ and scalar multiplication $\boldsymbol{\cdot}$ align with the typical addition $+$ and scalar multiplication $\cdot$, respectively, of $\mathrm{TT}M$ as tangent bundle.
+and $S=S_M$ does not only restrict onto that, $S$ is actually the identity on $\mathrm{VT}M|_{\widetilde{M}}$, as also stated in \cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}. This follows simply by the coordinate expressions Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy} (recall the involved notation). $\xi \in \mathrm{VT}M|_{\widetilde{M}}$ is in the kernel of both projections, $\mathrm{D}\pi_{\mathrm{T}M}$ and $\pi_{\mathrm{TT}M}$, thus $\omega = X_0 = 0 \in \mathrm{T}_pM$, therefore $S(\xi) = \xi$ by Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy}. By Remark \ref{rem:CanonicalInvolutionAnIsom} the addition $\RPlus$ and scalar multiplication $\boldsymbol{\cdot}$ then also align with the typical addition $+$ and scalar multiplication $\cdot$, respectively, of $\mathrm{TT}M$ as tangent bundle.
 
 Motivated by this, we can actually recover something similar for $\mathrm{VT}M$. In this case 
 \begin{center}
@@ -9599,7 +9599,7 @@ Let $X \in \mathfrak{X}(M)$, then its total derivative is a map $\mathrm{D}X: \m
 =
 \mathds{1}_{\mathrm{T}M},
 \eas
-so that $\mathrm{D}X$ is a section of $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} M$. Due to the fact that $S = S_M$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{T}M}}{\to} M$ (and vice versa), we have a vector field $X_T \in \mathfrak{X}(\mathrm{T}M)$ given by
+so that $\mathrm{D}X$ is a section of $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$. Due to the fact that $S = S_M$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ (and vice versa), we have a vector field $X_T \in \mathfrak{X}(\mathrm{T}M)$ given by
 \bas
 X_T &\coloneqq S \circ \mathrm{D}X,
 \eas
@@ -9611,7 +9611,7 @@ called the \textbf{tangent lift of $X$}. We then also have
 =
 X,
 \eas
-thus the label as lift. We also have linearity properties (sort of) and a Leibniz rule, that is, we clearly get
+thus the label as tangent lift. We also have linearity properties (sort of) and a Leibniz rule, that is, we clearly get
 \bas
 X_T\mleft( \lambda Y + \kappa Z \mright)
 &=
