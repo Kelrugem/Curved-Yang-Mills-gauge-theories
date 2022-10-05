@@ -5369,7 +5369,7 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta \e^{t \nu}\mright)_x (X) \Bigr)
 \mright)
 \eas
-for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, is a vector bundle connection on $\mathcal{g}$, where $t \in \mathbb{R}$, and $\mathrm{pr}_2: \mathrm{V}\mathcal{g} \to \mathcal{g}$ is the projection onto the second component of $\mathrm{V}\mathcal{g}$ naturally viewed as pullback bundle.
+for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, is a well-defined vector bundle connection on $\mathcal{g}$, where $t \in \mathbb{R}$, and $\mathrm{pr}_2: \mathrm{V}\mathcal{g} \to \mathcal{g}$ is the projection onto the second component of $\mathrm{V}\mathcal{g}$ naturally viewed as pullback bundle.
 \end{propositions}
 
 \begin{remark}\label{RemarkAboutPrTwoInDarbouxDerivative}
@@ -5422,7 +5422,7 @@ We also have
 \mathrm{T}_{\mu_{\mathcal{G}}^{\mathrm{tot}}\mleft( \mathrm{D}_xe(X) \mright) }\mathcal{g}
 \nonumber
 \ea
-for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. We also introduced the notation $\nu_T$ similar to Remark \ref{rem:TangentLifts} for simplicity; in fact $\nu_T$ is a vector field on $\mathrm{T}\mathcal{G}$ only defined over $\mathrm{T}M$ which is canonically embedded into $\mathrm{T}\mathcal{G}$ by embedding $M$ into $\mathcal{G}$ via $e$. We also naturally embed $\mathrm{T}\mathcal{g}$ into $\mathrm{TT}\mathcal{G}$ by the zero section. In total, we will work with these embeddings now so that everything is embedded into $\mathrm{TT}\mathcal{G}$ as the "total space"; hence, you will see $e$ and its total derivative $\mathrm{D}e$ acting as an embedding several times.
+for all $x \in M$ and $X \in \mathrm{T}_xM$, where $e$ is the neutral section of $\mathcal{G}$, and we viewed $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a map $\mathrm{T}\mathcal{G} \to \mathcal{g}$ when applying the chain rule; recall Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. $S_{\mathcal{G}}$ is the linear canonical flip map on $\mathrm{TT}\mathcal{G}$, especially see the last part of Remark \ref{rem:SchwarzThmInDiffGeo}. We also introduced the notation $\nu_T$ similar to Remark \ref{rem:TangentLifts} for simplicity; in fact $\nu_T$ is a vector field on $\mathrm{T}\mathcal{G}$ only defined over $\mathrm{T}M$ which is canonically embedded into $\mathrm{T}\mathcal{G}$ by embedding $M$ into $\mathcal{G}$ via $e$. We also naturally embed $\mathrm{T}\mathcal{g}$ into $\mathrm{TT}\mathcal{G}$. In total, we will work with these embeddings now so that everything is embedded into $\mathrm{TT}\mathcal{G}$ as the "total space"; hence, you will  also see $e$ and its total derivative $\mathrm{D}e$ acting as an embedding several times.
 
 We get by Eq.\ \eqref{DiagramForNablaConn}
 %omitting the base points in the differentials for readability,
@@ -5539,7 +5539,7 @@ and
 \mright)
 \\
 &=
-f(x) ~ \mleft.\nabla^{\mathcal{G}}_{X} (f \nu) \mright|_x
+f(x) ~ \mleft.\nabla^{\mathcal{G}}_{X} \nu \mright|_x
 	+ X(f) ~ \mathrm{pr}_2\mleft(
 	\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \mleft( \nu^a \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)} \mright)
 \mright)
@@ -5552,7 +5552,7 @@ for all $f \in C^\infty(M)$, where $\mleft( \xi^a \mright)_a$ are fibre coordina
 %X^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}\mathcal{G}}^*x^i\mright)}\mright|_{\nu_x}
 	%+ X^i \mleft.\frac{\partial \nu^a}{\partial x^i}\mright|_x \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\nu_x}
 %\eas
-It was well-defined to use the linearity of $\mathrm{pr}_2$, since we know by what we have shown earlier that both, $\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( (f\nu)_T (X) \bigr)$ and $\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( f \nu_T (X) \bigr) = f ~ \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T (X) \bigr)$, are elements of $\mathrm{V}\mathcal{g}$. Thence, 
+It was well-defined to use the linearity of $\mathrm{pr}_2$, since we know by what we have shown earlier that both, $\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( (f\nu)_T (X) \bigr)$ and $\mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( f \nu_T (X) \bigr) = f ~ \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \bigl( \nu_T (X) \bigr)$, are elements of $\mathrm{V}\mathcal{g}$, so that 
 \bas
 \mathrm{D}_{\mathrm{D}_x e(X)}\mu_{\mathcal{G}}^{\mathrm{tot}} \mleft( \nu^a \mleft.\frac{\partial}{\partial \xi^a}\mright|_{\mathrm{D}_x e(X)} \mright)
 \eas
@@ -5666,7 +5666,7 @@ f^*\mleft( \e_{\mathcal{G}}^\nu \mright)
 for all $\nu \in \Gamma(\mathcal{g})$. Due to clatch of notation we relabel the projection $\mathrm{V}\mathcal{g} \to \mathcal{g}$ in Prop.\ \ref{prop:FinallyTheNablaInduction} to $\pi_2$, and then observe, by using Eq.\ \eqref{PullBackDarbouxOnPullbackSections},
 \bas
 \mleft.\nabla^{f^*\mathcal{G}}_Y (f^*\nu)\mright|_p
-&\coloneqq
+&=
 \pi_2 \mleft(
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mleft(\Delta^{f^*\mathcal{G}} \e_{f^*\mathcal{G}}^{t \cdot f^*\nu}\mright)_p (Y) \Bigr)
 \mright)
@@ -5773,7 +5773,7 @@ Associativity follows simply by
 =
 \mleft( p, x \mright) \cdot (gq)
 \eas
-for all $g, q \in \mathcal{G}_x$ ($x \coloneqq \pi(p) = f(x)$); it is trivial to check that $\mleft( p, x \mright) \cdot e_x = (p, x)$.
+for all $g, q \in \mathcal{G}_y$ ($y \coloneqq \pi(p) = f(x)$); it is trivial to check that $\mleft( p, x \mright) \cdot e_y = (p, x)$.
 \end{proof}
 
 As mentioned in Remark \ref{rem:ItIsAPrincipalAction}, constructions of quotients related to the LGB action may be possible here. Thus, using the last proposition, one should be able to construct associated bundles in this more general setting. We mainly need this proposition for the following examples.
@@ -5816,7 +5816,7 @@ We will denote this also by
 \bas
 \mathcal{c}_{g^{-1}}(p, q)
 \coloneqq
-(p, g) \cdot g,
+(p, q) \cdot g,
 \eas
 the \textbf{conjugation of $\mathcal{G}$ on the integral of $\mathrm{V}\mathcal{P}$}.
 
@@ -5879,7 +5879,7 @@ $\bullet$ $\mathcal{r}_{g*}$ is clearly linear by construction. Let us now show 
 &=
 \mathrm{D}_pr_g:\mathrm{V}_p\mathcal{P} \to \mathrm{V}_{p\cdot g}\mathcal{P},
 \eas
-which is a vector space isomorphism by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} and dimensional reasons. We rewrite $\mathrm{D}_pr_\sigma$ as
+which is a vector space isomorphism by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} and dimensional reasons (which implies that $\mathrm{D}_pr_g$ is surjective and thus bijective). We rewrite $\mathrm{D}_pr_\sigma$ as
 \bas
 \mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P} &\to \mathrm{T}_{p \cdot g}\mathcal{P},\\
 \mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright) &\mapsto 
@@ -5897,9 +5897,7 @@ By dimensional reasons and due to the bijectivity of $\mathrm{D}_pr_\sigma$ and 
 \mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( X^{\mathrm{H}} \mright),
 \eas
 using that the vertical subbundle is given by the kernel of $\mathrm{D}\pi$, and
-where we split $X = X^{\mathrm{H}} + X^{\mathrm{V}}$ for all $X\in\mathrm{T}_p\mathcal{P} = \mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P}$.
-
-Hence, we get in total that $\mathcal{r}_{g*}$ at $p$ is equivalent to
+where we split again $X = X^{\mathrm{H}} + X^{\mathrm{V}}$ for all $X\in\mathrm{T}_p\mathcal{P} = \mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P}$. Hence, we get in total that $\mathcal{r}_{g*}$ at $p$ is equivalent to
 \bas
 \mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P} 
 &\to 
@@ -5987,7 +5985,7 @@ for all $X \in \mathrm{V}_p\mathcal{P}$; we actually have proven this directly a
 
 \begin{remark}\label{RSigmaAnAuto}
 \leavevmode\newline
-Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} trivially extends to $\mathcal{r}_{\sigma*}$, that is $\mathcal{r}_{\sigma*}$ is a (local) automorphism of $\mathrm{T}\mathcal{P}$ over $r_\sigma$. Thus, we can view $\mathcal{r}_{\sigma*}$ as an element of $\Omega^1\mleft(\mathcal{P}; r_\sigma^*\mathrm{T}\mathcal{P}\mright)$.
+Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} trivially extends to $\mathcal{r}_{\sigma*}$, that is, $\mathcal{r}_{\sigma*}$ is a (local) automorphism of $\mathrm{T}\mathcal{P}$ over $r_\sigma$. Thus, we can view $\mathcal{r}_{\sigma*}$ as an element of $\Omega^1\mleft(\mathcal{P}; r_\sigma^*\mathrm{T}\mathcal{P}\mright)$.
 \end{remark}
 
 Hence, the following definition makes sense, especially if thinking about what we discussed for Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}.
@@ -6012,7 +6010,7 @@ However, this is not a suitable definition for us, because our moment map is the
 Let us discuss several examples.
 
 \begin{examples}{Recovering of the classical definition}{OurConnectionIsReallyMoreGeneral}
-As we already discussed several times, especially recall Remark \ref{rem:ModRightPushOnVertic} and Ex.\ \ref{ex:TheCLassicalPrincAsEx}, we recover the typical definition of a connection on a principal bundle if $\mathcal{P}$ is a classical principal bundle and if the trivial LGB $\mathcal{G}$ is equipped with its canonical flat connection $\mathrm{H}\mathcal{G}$. We call such a connection a \textbf{classical connection}.
+As we already discussed several times, especially recall Remark \ref{rem:ModRightPushOnVertic} and Ex.\ \ref{ex:TheCLassicalPrincAsEx}, but ultimately by the discussion for Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} which also applies to classical principal bundles and their notion of connection and parallel transport: We recover the typical definition of a connection on a principal bundle if $\mathcal{P}$ is a classical principal bundle and if the trivial LGB $\mathcal{G}$ is equipped with its canonical flat connection $\mathrm{H}\mathcal{G}$. We call such a connection a \textbf{classical connection}.
 \end{examples}
 
 \begin{examples}{Associated LGBs}{AssociatedLGBsAndTheirCanonicalConnection}
