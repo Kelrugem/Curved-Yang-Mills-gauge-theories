@@ -6229,15 +6229,15 @@ where $A^a \in \Omega^1\mleft( \mathcal{P}|_U \mright)$. Due to $A\mleft( \widet
 \bas
 A^a\mleft( \widetilde{e_b} \mright)
 &=
-\delta^a_b ~ \pi^*e_a,
+\delta^a_b,
 \eas
-where $\delta^a_b$ is the Kronecker delta. $\mleft( A^a \mright)_a$ is the dual frame of $\mleft( \widetilde{e_a} \mright)_a$, which is a frame of $\mathrm{V}\mathcal{P}$ by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}, thus, the $A^a$ are linear independent to each other. Fix an auxiliary fibre metric $\langle \cdot, \cdot \rangle$ on $\mathrm{T}\mathcal{P}$, and denote with $\mleft(V^a\mright)_a$ the $\langle \cdot, \cdot \rangle$-dual frame to $\mleft(A^a\mright)_a$, \textit{i.e.}\
+where $\delta^a_b$ is the Kronecker delta. Hence, $\mleft( A^a \mright)_a$ is the dual frame of $\mleft( \widetilde{e_a} \mright)_a$, which is a frame of $\mathrm{V}\mathcal{P}$ by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}, and so the $A^a$ are linear independent to each other. Fix an auxiliary fibre metric $\langle \cdot, \cdot \rangle$ on $\mathrm{T}\mathcal{P}$, and denote with $\mleft(V^a\mright)_a$ the $\langle \cdot, \cdot \rangle$-dual frame to $\mleft(A^a\mright)_a$, \textit{i.e.}\
 \bas
 A^a 
 &=
 \langle V^a, \cdot \rangle.
 \eas
-Due to the smoothness of $A$, $\mleft(V^a\mright)_a$ are smooth (local) vector fields on $\mathcal{P}$, linear independent to each other. Observe that any orthogonal frame $\mleft(W^\alpha\mright)_\alpha$ to $\mleft(V^a\mright)_a$ satisfies
+Due to the smoothness of $A$ and due to that $\langle \cdot, \cdot \rangle$ is a fibre metric, $\mleft(V^a\mright)_a$ are smooth (local) vector fields on $\mathcal{P}$, linear independent to each other. Observe that any orthogonal frame $\mleft(W^\alpha\mright)_\alpha$ to $\mleft(V^a\mright)_a$ satisfies
 \bas
 A^a(W^\alpha)
 &=
@@ -6257,13 +6257,13 @@ A_{p \cdot \sigma_x}\bigl( \mathcal{r}_{\sigma*}(X) \bigr)
 =
 0
 \eas
-for all (local) $\sigma \in \Gamma(\mathcal{G})$, where $x \coloneqq \pi(p)$. Thence, $\mathcal{r}_{\sigma*}(X) = \mathcal{r}_{\sigma_x*}(X) \in \mathrm{H}_{p \cdot \sigma_x}\mathcal{P}$, therefore we derive by Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} and dimensional reasons that $\mathcal{r}_{\sigma_x*}\mleft(\mathrm{H}_p \mathcal{P}\mright) = \mathrm{H}_{p \cdot \sigma_x}\mathcal{P}$, and so $\mathrm{H}\mathcal{P}$ is an Ehresmann connection.
+for all (local) $\sigma \in \Gamma(\mathcal{G})$, where $x \coloneqq \pi(p)$. Thence, $\mathcal{r}_{\sigma*}(X) = \mathcal{r}_{\sigma_x*}(X) \in \mathrm{H}_{p \cdot \sigma_x}\mathcal{P}$, and therefore we derive by Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} and dimensional reasons that $\mathcal{r}_{\sigma_x*}\mleft(\mathrm{H}_p \mathcal{P}\mright) = \mathrm{H}_{p \cdot \sigma_x}\mathcal{P}$. We eventually conclude that $\mathrm{H}\mathcal{P}$ is an Ehresmann connection.
 \end{proof}
 
-We conclude this subsection with the following technical and useful corollary.
+We finish this subsection with the following technical and useful corollary.
 
 \begin{corollaries}{Commutation of modified push-forward and projections}{ModifiedRightPushyCommutesWithProj}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$ on $\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ an Ehresmann connection on $\mathcal{P}$; denote with $\pi_h$ and $\pi_v$ the associated projections on the horizontal and vertical bundle of $\mathcal{P}$, respectively. Then we have
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ an Ehresmann connection on $\mathcal{P}$; denote with $\pi_h$ and $\pi_v$ the associated projections on the horizontal and vertical bundle of $\mathcal{P}$, respectively. Then we have
 \bas
 \mathcal{r}_{g*} \circ \pi_h
 &=
@@ -6373,7 +6373,7 @@ p \cdot \mathrm{pr}_2\mleft(\sigma_p^H\mright),
 where $\mathrm{pr}_2: \mathcal{P}*\mathcal{G} = \pi^*\mathcal{G} \to \mathcal{G}$ is the smooth projection onto the second component.
 Let us first show smoothness of $p \mapsto \sigma_p^H$: We can write
 \bas
-H(p) &= \Phi_p \mleft( \sigma_p^H \mright),
+H(p) &= \Phi_p \Bigl( \mathrm{pr}_2\mleft(\sigma_p^H\mright) \Bigr),
 \eas
 where $\Phi_p: \mathcal{G}_x \to \mathcal{P}_x$ is the orbit map through $p \in \mathcal{P}_x$ ($x \in M$). By Remark \ref{rem:LGBPrincDefDiscussion}, $\Phi_p$ is a $\mathcal{G}_x$-equivariant diffeomorphism, especially invertible, so that
 \bas
@@ -6409,7 +6409,13 @@ for all $(p, g) \in \mathcal{P}*\mathcal{G}$, where $\Phi$ denotes the right $\m
 L: \mathcal{P}*\mathcal{G} &\to \pi^*\mathcal{P},\\
 (p, g) &\mapsto \bigl( p, \Phi(p, g) \bigr),
 \eas
-is a base-preserving principal bundle isomorphism (w.r.t.\ the LGB isomorphism given as the identity map on $\mathcal{P} * \mathcal{G}$), recall Cor.\ \ref{cor:ProductSpaceIsPItself} and Remark \ref{AlternativePrincBdlDef}. Thus, we have
+is a base-preserving principal bundle isomorphism (w.r.t.\ the LGB isomorphism given as the identity map on $\mathcal{P} * \mathcal{G}$), recall Cor.\ \ref{cor:ProductSpaceIsPItself} and Remark \ref{AlternativePrincBdlDef}. Thus, we have in total
+\bas
+\Phi^{-1} \circ L
+&=
+\mathrm{pr}_2,
+\eas
+and thus
 \bas
 \Phi^{-1}
 &=
@@ -6421,9 +6427,9 @@ $\bullet$ That $\sigma^H$ is an element of $C^\infty(\mathcal{P};\mathcal{G})^{\
 \bas
 (p \cdot g) \cdot \mathrm{pr}_2\mleft(\sigma^H_{p \cdot g}\mright)
 &=
-f(p \cdot g)
+H(p \cdot g)
 =
-f(p) \cdot g
+H(p) \cdot g
 =
 p \cdot \mleft(\mathrm{pr}_2\mleft(\sigma^H_p\mright) ~ g \mright)
 \eas
@@ -6457,7 +6463,7 @@ H^\sigma(p)
 &\coloneqq
 p \cdot \sigma_p
 \eas
-for all $p \in \mathcal{P}$. Smoothness here is now obvious, and we have 
+for all $p \in \mathcal{P}$. Smoothness here is now obvious, it is also clearly base-preserving, and we have 
 \bas
 H^\sigma(p \cdot g)
 &=
@@ -6569,7 +6575,7 @@ Now also observe that
 =
 \widetilde{\nu}_{H(p)}
 \ea
-for all $\nu \in \mathcal{g}_x$, where $\Phi_p$ is the orbit map through $p$, and due to that $H$ is base-preserving we derive
+for all $\nu \in \mathcal{g}_x$, where $\Phi_p$ is the orbit map through $p$. Due to that $H$ is base-preserving we derive
 \bas
 \mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_{H(p)}\bigl(\mathrm{D}_pH(X)\bigr)
 &=
@@ -6612,7 +6618,7 @@ A_{H(p) \cdot \sigma_x}\mleft(
 \sAd_{\sigma^{-1}}
 \mleft( \mleft(H^!A\mright)_p(X) \mright),
 \eas
-where we wrote $A = \mleft( p, \widehat{A}_p \mright)$ with $\widehat{A} \coloneqq \pi_2 \circ A$ ($\pi_2 = \mathrm{D}\mathrm{pr}_2|_{\pi^*\mathcal{g}}: \pi^*\mathcal{g} \to \mathcal{g}$ the projection onto the second component), and thus
+where we wrote $A = \mleft( p, \widehat{A}_p \mright)$ with $\widehat{A} \coloneqq \pi_2 \circ A$ ($\pi_2: \pi^*\mathcal{g} \to \mathcal{g}$ the projection onto the second component), and thus
 \bas
 \mathcal{r}_\sigma^!H^!A
 &=
@@ -6626,7 +6632,7 @@ By Eq.\ \eqref{GaugeTrafoDiffOnFUndVect} we also get $\mathrm{D}H(\widetilde{\nu
 =
 \mleft(H^*A\mright)\mleft( H^*\widetilde{\nu} \mright)
 =
-H^*\bigl( A\mleft( \widetilde{\pi}\mright) \bigr)
+H^*\bigl( A\mleft( \widetilde{\nu}\mright) \bigr)
 =
 H^*\pi^*\nu
 =
@@ -6648,7 +6654,7 @@ p \cdot \mathrm{pr}_2\mleft(\sigma^H_p\mright)
 =
 \Bigl( \Phi \circ \mleft( \mathds{1}_{\mathcal{P}}, \mathrm{pr}_2\circ\sigma^H \mright) \Bigr)(p)
 \eas
-for all $p \in \mathcal{P}_x$ ($x\in M$), where $\Phi$ is the right $\mathcal{G}$-action on $\mathcal{P}$, also recall Def.\ \ref{MultiWithPulli}, that is, now $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. Define $\widetilde{\sigma} \coloneqq \mathrm{pr}_2 \circ \sigma^H$, $\mathcal{P} \ni p \mapsto \widetilde{\sigma}_p \in \mathcal{G}$; by Remark \ref{rem:PullbackTotMCForm}, \ref{rem:PullBackDarboux} and Thm.\ \ref{thm:DiffOfLGBAction}, especially Remark \ref{rem:DarbouxInActionInfinit}, we can calculate
+for all $p \in \mathcal{P}_x$ ($x\in M$), where $\Phi$ is the right $\mathcal{G}$-action on $\mathcal{P}$, also recall Def.\ \ref{MultiWithPulli}, that is, $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. Define $\widetilde{\sigma} \coloneqq \mathrm{pr}_2 \circ \sigma^H$, $\mathcal{P} \ni p \mapsto \widetilde{\sigma}_p \in \mathcal{G}$; by Remark \ref{rem:PullbackTotMCForm}, \ref{rem:PullBackDarboux} and Thm.\ \ref{thm:DiffOfLGBAction}, especially Remark \ref{rem:DarbouxInActionInfinit}, we can calculate
 \ba\label{DiffOfPrincAutom}
 \mathrm{D}_p H(X)
 &=
@@ -6746,7 +6752,7 @@ s^!A.
 
 \begin{remark}\label{PullBackGaugeFieldRemark}
 \leavevmode\newline
-$A$ has values in $\pi^*\mathcal{g}$, and thus $A_s$ has values in $s^*\pi^*\mathcal{g} \cong (\pi \circ s)^*\mathcal{g} = \mathds{1}_U^*\mathcal{g} \cong \mathcal{g}$.
+$A$ has values in $\pi^*\mathcal{g}$, and thus $A_s$ has values in $s^*\pi^*\mathcal{g} \cong (\pi \circ s)^*\mathcal{g} = \mathds{1}_U^*\mathcal{g} \cong \mleft.\mathcal{g}\mright|_U$.
 \end{remark}
 
 Gauge transformations now naturally arise in a change of the gauge $s$. So, let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$. For two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$ there is then a unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ such that
@@ -6758,7 +6764,7 @@ s_j \cdot \sigma_{ji}
 \Phi_{s_j} \circ \sigma_{ji}
 \eas
 on $U_i \cap U_j$,
-where $\Phi_{s_j}$ is the orbit through $s_j$, especially recall Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}.
+where $\Phi_{s_j}$ is the orbit through $s_j$, especially also recall Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}.
 The unique existence is clear by the definition of principal bundles, while the smoothness follows by Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} so that we can write $\sigma_{ji}$ as the composition of smooth maps
 \bas
 \sigma_{ji}
@@ -6789,18 +6795,18 @@ Instead of calculating directly how $A_{s_i}$ and $A_{s_j}$ are related we want 
 \begin{propositions}{Gauge transformations and sections of the structural LGB}{GaugeTrafosAsLGBSectionsLocal}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Also let $s \in \Gamma\mleft(\mleft.\mathcal{P}\mright|_U\mright)$ be a gauge defined over some open subset $U$ of $M$. Then we have a group isomorphism given by
 \bas
-C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U} 
+C^\infty \mleft( \mleft.\mathcal{P}\mright|_U; \mleft.\mathcal{G}\mright|_U \mright)^{\mleft.\mathcal{G}\mright|_U} 
 &\to 
-\Gamma\mleft(\mathcal{G}_U\mright),
+\Gamma\mleft(\mleft.\mathcal{G}\mright|_U\mright),
 \\
 \sigma &\mapsto \mathrm{pr}_2 \circ \sigma \circ s,
 \eas
 where $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component,
 with inverse
 \bas
-\Gamma\mleft(\mathcal{G}_U\mright)
+\Gamma\mleft(\mleft.\mathcal{G}\mright|_U\mright)
 &\to
-C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U},
+C^\infty \mleft( \mleft.\mathcal{P}\mright|_U; \mleft.\mathcal{G}\mright|_U \mright)^{\mleft.\mathcal{G}\mright|_U},
 \\ 
 \tau &\mapsto \sigma^\tau,
 \eas
@@ -6817,11 +6823,11 @@ with $\Phi_s$ being the orbit map through $s$.
 \end{propositions}
 
 \begin{remarks}{Other notation}{OtherNotationForLGBSectionsAsGaugeTrafo}
-Due to the fact that $s^*\pi^*\mathcal{G}_U \cong (\pi \circ s)^*\mathcal{G}_U = \mathds{1}_U^*\mathcal{G}_U \cong \mathcal{G}_U$, and due to what we discussed in Subsection \ref{BasicNotations} about pullback sections, we could rewrite the first map to
+Due to the fact that $s^*\pi^*\mathcal{G} \cong (\pi \circ s)^*\mathcal{G} = \mathds{1}_U^*\mathcal{G} \cong \mleft.\mathcal{G}\mright|_U$, and due to what we discussed in Subsection \ref{BasicNotations} about pullback sections, we could rewrite the first map to
 \bas
-C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U} 
+C^\infty \mleft( \mleft.\mathcal{P}\mright|_U; \mleft.\mathcal{G}\mright|_U \mright)^{\mleft.\mathcal{G}\mright|_U} 
 &\to 
-\Gamma\mleft(\mathcal{G}_U\mright),
+\Gamma\mleft(\mleft.\mathcal{G}\mright|_U\mright),
 \\
 \sigma &\mapsto s^*\sigma.
 \eas
@@ -6829,7 +6835,7 @@ C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U}
 
 \begin{proof}[Proof of Prop.\ \ref{prop:GaugeTrafosAsLGBSectionsLocal}]
 \leavevmode\newline
-For $\sigma \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U} \subset \Gamma\mleft( \pi^*\mathcal{G}_{U} \mright)$ observe that $\mathrm{pr}_2 \circ \sigma \circ s$ is by construction a section of $\mathcal{G}_U$ due to 
+For $\sigma \in C^\infty \mleft( \mleft.\mathcal{P}\mright|_U; \mleft.\mathcal{G}\mright|_U \mright)^{\mleft.\mathcal{G}\mright|_U} \subset \Gamma\mleft( \pi^*\mleft.\mathcal{G}\mright|_U \mright)$ observe that $\mathrm{pr}_2 \circ \sigma \circ s$ is by construction a section of $\mleft.\mathcal{G}\mright|_U$ due to 
 \bas
 \pi_{\mathcal{G}} \circ \mathrm{pr}_2 \circ \sigma \circ s
 &=
@@ -6840,7 +6846,7 @@ For $\sigma \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal
 \mathds{1}_U,
 \eas
 where $\mathrm{pr}_1: \pi^*\mathcal{G} \to \mathcal{P}$ is the projection onto the first component.
-For the supposed inverse we have similarly that $\sigma^\tau$ is a section of $\Gamma(\pi^*\mathcal{G}_U)$ by construction; then observe, using Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv},
+For the supposed inverse we have similarly that $\sigma^\tau$ is a section of $\Gamma(\pi^*\mleft.\mathcal{G}\mright|_U)$ by construction; then observe, using Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv},
 \bas
 \sigma_{p \cdot g}^\tau
 &=
@@ -6860,18 +6866,18 @@ For the supposed inverse we have similarly that $\sigma^\tau$ is a section of $\
 \mathcal{c}_{g^{-1}}
 \mleft( \sigma^\tau_p \mright)
 \eas
-for all $(p, g) \in \mathcal{P}_U * \mathcal{G}_U$, thus, $\sigma^\tau \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U}$. Recall
+for all $(p, g) \in \mleft.\mathcal{P}\mright|_U * \mleft.\mathcal{G}\mright|_U$, thus, $\sigma^\tau \in C^\infty \mleft( \mleft.\mathcal{P}\mright|_U; \mleft.\mathcal{G}\mright|_U \mright)^{\mleft.\mathcal{G}\mright|_U}$. Recall
 \bas
 p &= s_{\pi(p)} \cdot \Phi^{-1}_s(p)
 \eas 
-for all $p \in \mathcal{P}_U$,
+for all $p \in \mleft.\mathcal{P}\mright|_U$,
 so that
 \bas
 \Phi^{-1}_{s} \circ s
 &=
 e|_U,
 \eas
-where $e$ is the section of the neutral element of $\mathcal{G}$. Then
+where $e$ is the neutral section of $\mathcal{G}$. On one hand
 \bas
 \mleft(\mathrm{pr_2} \circ \sigma^\tau\mright)(s_x)
 &=
@@ -6883,7 +6889,7 @@ c_{e_x}\mleft( \tau_x \mright)
 =
 \tau_x
 \eas
-for all $x \in M$ and $\tau \in \Gamma(\mathcal{G}_U)$, and by Def.\ \ref{def:GaugeTrafosLGBMaps} and Ex.\ \ref{ex:ConjugationActionForTheGeneralInnerGroupBundle} we have
+for all $x \in M$ and $\tau \in \Gamma(\mleft.\mathcal{G}\mright|_U)$, and by Def.\ \ref{def:GaugeTrafosLGBMaps} and Ex.\ \ref{ex:ConjugationActionForTheGeneralInnerGroupBundle} we have one the other hand
 \bas
 \sigma^{\mathrm{pr}_2 \circ \sigma \circ s}_p
 &=
@@ -6904,7 +6910,7 @@ for all $x \in M$ and $\tau \in \Gamma(\mathcal{G}_U)$, and by Def.\ \ref{def:Ga
 &=
 \sigma_p
 \eas
-for all $p \in \mathcal{P}_U$ and $\sigma \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U}$. Thus, $\sigma \mapsto \mathrm{pr}_2 \circ \sigma \circ s$ is bijective with inverse $\tau \mapsto \sigma^\tau$, and so it is only left to show that $\sigma \mapsto \mathrm{pr}_2 \circ \sigma \circ s$ is a group homomorphism. For $\sigma^\prime \in C^\infty \mleft( \mathcal{P}_U; \mathcal{G}_U \mright)^{\mathcal{G}_U}$ we have
+for all $p \in \mleft.\mathcal{P}\mright|_U$ and $\sigma \in C^\infty \mleft( \mleft.\mathcal{P}\mright|_U; \mleft.\mathcal{G}\mright|_U \mright)^{\mleft.\mathcal{G}\mright|_U}$. Thus, $\sigma \mapsto \mathrm{pr}_2 \circ \sigma \circ s$ is bijective with inverse $\tau \mapsto \sigma^\tau$, and so it is only left to show that $\sigma \mapsto \mathrm{pr}_2 \circ \sigma \circ s$ is a group homomorphism. For $\sigma^\prime \in C^\infty \mleft( \mleft.\mathcal{P}\mright|_U; \mleft.\mathcal{G}\mright|_U \mright)^{\mleft.\mathcal{G}\mright|_U}$ we have
 \bas
 \mleft.\sigma \sigma^\prime\mright|_p
 &=
@@ -6938,7 +6944,7 @@ Using the notation of Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjuga
 &=
 \mleft(p, c_{\mleft(\Phi^{-1}_{s_j}(p)\mright)^{-1}} \mleft( \mleft.\sigma_{ji}\mright|_{\pi(p)} \mright) \mright)
 \eas
-for all $p \in \mathcal{P}_{U_i \cap U_j}$, and
+for all $p \in \mleft.\mathcal{P}\mright|_{U_i \cap U_j}$, and
 \bas
 \sigma_{ji}
 &=
@@ -6980,7 +6986,7 @@ due to
 =
 p
 \eas
-for all $p \in \mathcal{P}_{U_i \cap U_j}$, where $x \coloneqq \pi(p)$; by symmetry of course similarly when swapping $j$ and $i$. Thus, $H_{ji}$ is bijective and its inverse smooth, so that $H_{ji} \in \sAut\mleft( \mathcal{P}_{U_i \cap U_j} \mright)$.
+for all $p \in \mathcal{P}_{U_i \cap U_j}$, where $x \coloneqq \pi(p)$; by symmetry of course similarly when swapping $j$ and $i$. Thus, $H_{ji}$ is bijective and its inverse smooth, so that $H_{ji} \in \sAut\mleft( \mleft.\mathcal{P}\mright|_{U_i \cap U_j} \mright)$.
 
 Now write
 \bas
@@ -7117,7 +7123,7 @@ Alexei's and Thomas's theory also generalizes the curvature/field strength relat
 
 \subsubsection{Yang-Mills connections on LGBs}\label{MultiplicativeForms}
 
-In the following we will introduce the curvature; in order to achieve gauge invariance later in the physical gauge theory, we will now need to assume certain what we will call \textbf{compatibility conditions} on the horizontal distribution of the structural LGB $\mathcal{G}$. Here in this work we will just present these compatibility conditions, and you will be able to see in the proofs why this leads to gauge invariance later. However, if you want to understand the following conditions coming from a point of view not knowing the solution beforehand, then either see \cite{CurvedYMH} or \cite{MyThesis}; the latter also provides a physical motivation using what I called the \textbf{field redefinitions} which naturally motivate the gauge theory presented here by transforming a classical gauge theory in such a way that the physics is preserved; recall Def.\ \ref{def:ConnectionOnLAB} for the following.
+In the following we will introduce the curvature; in order to achieve gauge invariance later in the physical gauge theory, we will now need to assume what we will call \textbf{compatibility conditions} on the horizontal distribution of the structural LGB $\mathcal{G}$. Here in this work we will just present these compatibility conditions, and you will be able to see in the proofs why this leads to gauge invariance later. However, if you want to understand the following conditions coming from a point of view not knowing the solution beforehand, then either see \cite{CurvedYMH} or \cite{MyThesis}; the latter also provides a physical motivation using what I called the \textbf{field redefinitions} which naturally motivate the gauge theory presented here by transforming a classical gauge theory in such a way that the physics is preserved; now recall Def.\ \ref{def:ConnectionOnLAB} for the following.
 
 We start with the infinitesimal version of the compatibility conditions, already known and pointed out in the previously-mentioned references.
 
@@ -7135,7 +7141,7 @@ R_{\nabla^{\mathcal{G}}}(X, Y)\mu
 \ea
 for all $\mu, \nu \in \Gamma(\mathcal{g})$ and $X, Y \in \mathfrak{X}(M)$, where $R_{\nabla^{\mathcal{G}}}$ is the curvature of $\nabla^{\mathcal{G}}$. We then also call $\nabla^{\mathcal{G}}$ an \textbf{(infinitesimal) Yang-Mills connection} and denote it by $\nabla^{\mathrm{YM}}$.
 
-In the following $\zeta$ is always such a 2-form as given here, and even though it is not uniquely given we will treat it as if it is fixed for a given $\nabla^{\mathrm{YM}}$. 
+In the following, $\zeta$ is always such a 2-form as given here, and even though it is not uniquely given we will treat it as if it is fixed for a given $\nabla^{\mathrm{YM}}$. 
 \end{definitions}
 
 \begin{remark}\label{MackenziesStuffRelation}
@@ -7144,13 +7150,13 @@ As illustrated in \cite[\S 5.1]{MyThesis} and \cite{My1stpaper} such connections
 
 One may want to write that $\mleft( \nabla^{\mathrm{YM}}, \zeta \mright)$ is a Yang-Mills connection, giving an emphasis on the non-uniqueness of $\zeta$. However, we are not going to do so, and the mentioned references and relations to Mackenzie's work actually show that there is just one object behind all of that describing this Yang-Mills connection and its relation to the following gauge theory. It would take too much time introducing all of this again; see the references.
 
-The relation to Mackenzie's study can be useful for the interested reader to understand the importance of these compatibility conditions, too. In my opinion, the compatibility conditions together with a trivial what Mackenzie calls the obstruction class (and an ad-invariant fibre metric on the LAB) are needed to define Yang-Mills gauge theories from an axiomatic point of view. If the reader is interested into that, then I would appreciate an email so that I can send these details.
+The relation to Mackenzie's study can be useful for the interested reader to understand the importance of these compatibility conditions, too. In my opinion, the compatibility conditions together with a trivial what Mackenzie calls the obstruction class (and an ad-invariant fibre metric on the LAB) are needed to define infinitesimal Yang-Mills gauge theories from an axiomatic point of view. If the reader is interested into that, then I would appreciate an email so that I can send these details.
 \end{remark}
 %For this we will start 
 %We will need several auxiliary result, also related to the Darboux derivative w.r.t.\ Yang-Mills connections. Especially also recall all the discussion around the modified push-forward $\mathcal{r}$ via right-translations, Def.\ \ref{def:WeModTheRIghtPush}.
 
 We want to integrate these infinitesimal compatibility conditions to conditions on $\mathrm{H}\mathcal{G}$ directly.
-Let us initially focus on the first infinitesmal compatibility condition \eqref{CondSGleichNullLAB}. In the following we will also view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle which is equipped with the same horizontal distribution as $\mathcal{G}$ as LGB; related notions and notations carry over. One can show that Ehresmann connections satisfy \eqref{CondSGleichNullLAB}, and in fact Ehresmann connections on LGBs (and Lie groupoids) were already discussed in \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}.
+Let us initially focus on the first infinitesmal compatibility condition \eqref{CondSGleichNullLAB}. In the following we will also view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle which is equipped with the same horizontal distribution as $\mathcal{G}$ as LGB; related notions and notations carry over. One can show that Ehresmann connections satisfy \eqref{CondSGleichNullLAB}, and in fact Ehresmann connections on LGBs (and Lie groupoids) were already discussed in \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. \textbf{Special thanks to Camille Laurent-Gengoux for pointing out these references and discussing related subjects, this helped me tremendously.}
 
 \begin{lemmata}{Ehresmann connections induce Lie bracket derivations, \newline \cite[\S 4.5, Prop.\ 4.21]{LAURENTGENGOUXStienonXuMultiplicativeForms}}{YangMillsConnAnEhresmann}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$. If $\mathrm{H}\mathcal{G}$ is an (Ehresmann) connection on $\mathcal{G}$ as principal bundle, then the infinitesimal compatibility condition \eqref{CondSGleichNullLAB} is satisfied.
@@ -7183,7 +7189,7 @@ This simply follows by Def.\ \ref{def:TotMCFormOnLGB} and Thm.\ \ref{thm:OurConn
 \end{proof}
 
 \begin{remarks}{Darboux derivative as local gauge field}{DavouxderivativeALocalGaugeField}
-If $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$, we know by Cor.\ \ref{cor:TotMCFormIsConnectionForm} that the Darboux derivative $\Delta \sigma$ of a (local) section $\sigma$ of $\mathcal{G}$ (Def.\ \ref{def:DarbouxDerivativeOnLGBs}) is a local gauge field (w.r.t.\ $\sigma$) corresponding to $\mu_{\mathcal{G}}^{\mathrm{tot}}$, recall Def.\ \ref{def:LocalGaugeField}. That is,
+If $\mathrm{H}\mathcal{G}$ is an Ehresmann connection on $\mathcal{G}$, we know by Cor.\ \ref{cor:TotMCFormIsConnectionForm} that the Darboux derivative $\Delta \sigma$ of a (local) section $\sigma$ of $\mathcal{G}$ (Def.\ \ref{def:DarbouxDerivativeOnLGBs}) is a local gauge field (w.r.t.\ $\sigma$) corresponding to $\mu_{\mathcal{G}}^{\mathrm{tot}}$, recall Def.\ \ref{def:LocalGaugeField}. That is,
 \bas
 \Delta \sigma
 &=
@@ -7305,7 +7311,7 @@ The mentioned reference for Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0}, 
 
 \begin{proof}[Proof of Prop.\ \ref{prop:DarbouxLeibnizRule}]
 \leavevmode\newline
-For this calculation we will take care about base points of pullback bundles w.r.t.\ the Darboux derivative, thus recall the last part of Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. Using the same notation as in Def.\ \ref{def:MultiplicativeFormsDef}, this follows simply by Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0}, that is, set $Y \coloneqq \mathrm{D}_x\sigma(X)$ and $Z \coloneqq \mathrm{D}_x\tau(X)$, then
+For this calculation we will take care about base points of pullback bundles w.r.t.\ the Darboux derivative, thus recall the last part of Remark \ref{RemarkABoutDarbouxNotationWRTPullback}. Using the same notation as in Def.\ \ref{def:MultiplicativeFormsDef}, this proposition follows simply by Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0}, that is, set $Y \coloneqq \mathrm{D}_x\sigma(X)$ and $Z \coloneqq \mathrm{D}_x\tau(X)$ for $X \in \mathrm{T}_xM$ ($x \in M$), then
 \bas
 \bigl( \sigma_x\tau_x, \Delta(\sigma\tau)_x(X) \bigr)
 &=
@@ -7403,7 +7409,7 @@ Now recall Remark \ref{rem:baseManifoldHoriz}; this implies for the neutral elem
 &\equiv
 0,
 \eas
-and therefore
+and therefore, using the previous result just derived,
 \bas
 0
 &=
@@ -7440,7 +7446,7 @@ for all $\sigma \in \Gamma(\mathcal{G})$, that is,
 	+ \mleft[ \Delta\sigma(X), \nu \mright]_{\mathcal{g}}
 \eas
 for all $\nu \in \Gamma(\mathcal{g})$ and $X \in \mathfrak{X}(M)$.
-If $\mathrm{H}\mathcal{G}$ is an infinitesimal Yang-Mills connection, $\nabla^{\mathcal{G}} = \nabla^{\mathrm{YM}}$, especially $R_{\nabla^{\mathrm{YM}}} = \mathrm{ad}_\zeta$ for $\zeta \in \Omega^2(M; \mathcal{g})$, then $\widetilde{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathrm{YM}} \circ \mathrm{Ad}_\sigma$ is also a Yang-Mills connection with
+If $\mathrm{H}\mathcal{G}$ is an infinitesimal Yang-Mills connection, $\nabla^{\mathcal{G}} = \nabla^{\mathrm{YM}}$, especially $R_{\nabla^{\mathrm{YM}}} = \mathrm{ad}_\zeta$ for $\zeta \in \Omega^2(M; \mathcal{g})$, then $\widetilde{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathrm{YM}} \circ \mathrm{Ad}_\sigma$ is also an infinitesimal Yang-Mills connection with
 \bas
 R_{\widetilde{\nabla}^\sigma}
 &=
@@ -7572,7 +7578,7 @@ The last statement got also stated in \cite[Eq.\ (2.8)]{FernandesMarcutMultiplic
 
 \begin{proof}[Proof of Lemma \ref{lem:BracketVertHor}]
 \leavevmode\newline
-First of all recall the very basic fact (see \textit{e.g.}\ \cite[\S A.1, Thm.\ A.1.46, page 615]{Hamilton}) that for two vector fields $X, Y \in \mathfrak{X}(\mathcal{P})$ we have\footnote{Rigorously, similarly to Prop.\ \ref{prop:FinallyTheNablaInduction} one has a projection involved, but as explained in Remark \ref{RemarkAboutPrTwoInDarbouxDerivative} we will omit notating this projection; in the context of this proof we can allow ourselves to take the typical less rigorous approach for simplicity.}
+First of all recall the very basic fact (see \textit{e.g.}\ \cite[\S A.1, Thm.\ A.1.46, page 615]{Hamilton}) that for two vector fields $X, Y \in \mathfrak{X}(\mathcal{P})$ we have\footnote{Rigorously, similarly to Prop.\ \ref{prop:FinallyTheNablaInduction} one has a projection involved, but as explained in Remark \ref{RemarkAboutPrTwoInDarbouxDerivative} we will omit notating this projection; in the context of this proof we can allow ourselves to take the typical "less rigorous" approach for simplicity.}
 \bas
 \mleft[ X, Y \mright]_p
 &=
@@ -7724,7 +7730,7 @@ A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
 \eas
 \end{proof}
 
-This concludes our discussion about the infinitesimal compatibility condition \eqref{CondSGleichNullLAB} and its integrated version, "$\mathrm{H}\mathcal{G} =$ Ehresmann connection"'. Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if the total Maurer-Cartan form is multiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}, which we can actually integrate in to an equivalent statement.
+This concludes our discussion about the infinitesimal compatibility condition \eqref{CondSGleichNullLAB} and its integrated version, "$\mathrm{H}\mathcal{G} =$ Ehresmann connection"'. Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if the total Maurer-Cartan form is multiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}, which we can actually integrate to an equivalent statement.
 
 \begin{theorems}{Generalized Maurer-Cartan equation}{GenMCEq}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$, and $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then $\mathrm{H}\mathcal{G}$ satisfies the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB} w.r.t.\ $\zeta$ if and only if the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies
@@ -7766,7 +7772,7 @@ Recall Rem.\ \ref{rem:DarbouxOnCanonFlat}. If $\mathcal{G}$ is a trivial LGB, $\
 
 \begin{proof}[Proof of Thm.\ \ref{thm:GenMCEq}]
 \leavevmode\newline
-The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms\footnote{See Rem.\ \ref{rem:SimplicialDifferentialStuff}; multiplicativity is related to closedness w.r.t.\ a differential. However, we will not need this general notion.} are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. That is, we want to discuss under what conditions 
+The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms\footnote{See Rem.\ \ref{rem:SimplicialDifferentialStuff} later; multiplicativity is related to closedness w.r.t.\ a differential. However, we will not need this general notion.} are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. That is, we want to discuss under what conditions 
 \bas
 \mathcal{G} \ni g &\mapsto \omega_g \coloneqq
 \mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
@@ -7833,7 +7839,7 @@ $\bullet$ Therefore we can study $\omega$ just w.r.t.\ tangent vectors complemen
 \mathbb{R} &\to \Gamma(\mathcal{G}),\\
 t &\mapsto \gamma(t) \coloneqq \sigma \e^{t\nu},
 \eas
-where $\nu$ is any section of $\mathcal{g}$ and $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$; pointwise we denote $\gamma(t)$ as a map $M \ni x \mapsto \gamma_x(t)$. By Cor.\ \ref{cor:TLGBAsLGB} the flows of elements of $\mathrm{V}_g\mathcal{G}$ can be precisely described by curves like $\gamma$, so that the derivative w.r.t.\ $t$ of pullbacks of tensors with $\gamma$ characterizes any derivative along a fibre of $\mathcal{G}$. Furthermore, $\gamma(t)$ is by definition a section of $\mathcal{G}$ for all $t$ and thence describes an embedding of $M$ into $\mathcal{G}$. Thus, the $t$-derivatives of terms like $\gamma(t)^!\omega$ describe the derivatives of $\omega$ along fibres of $\mathcal{G}$ contracted with tangent vectors complementary to the vertical structure. Therefore let us calculate $\gamma(t)^!\omega$; we have
+where $\nu$ is any section of $\mathcal{g}$ and $\sigma \in \Gamma(\mathcal{G})$ (local) with $\sigma_x = g$; pointwise we denote $\gamma(t)$ as a map $M \ni x \mapsto \gamma_x(t)$. By Cor.\ \ref{cor:TLGBAsLGB} the flows of elements of $\mathrm{V}_g\mathcal{G}$ can be precisely described by curves like $\gamma$, so that the derivative w.r.t.\ $t$ of pullbacks of tensors with $\gamma$ characterizes any derivative along a fibre of $\mathcal{G}$. Furthermore, $\gamma(t)$ is by definition a section of $\mathcal{G}$ for all $t$ and thence describes an embedding of $M$ into $\mathcal{G}$. Thus, the $t$-derivatives of terms like $\gamma(t)^!\omega$ describe the derivatives of $\omega$ along fibres of $\mathcal{G}$ contracted with tangent vectors complementary to the vertical structure. Therefore let us calculate $\gamma(t)^!\omega$; we have
 \bas
 \gamma(t)^!\pi_{\mathcal{G}}^!\zeta
 &=
@@ -7859,7 +7865,7 @@ for all $x \in M$, where $\gamma^{-1}(t)$ is the $\mathcal{G}$-inverse of $\gamm
 =
 \mathrm{d}^{\nabla^{\mathcal{G}}} \mleft( \gamma(t)^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright),
 \eas
-using the definition of pullback vector bundle connections; alternatively see the explicit calulations in \cite[Appendix, Prop.\ A.1, (A.1)]{My1stpaper} or \cite[Appendix, Prop.\ A.1.1, (A.2)]{MyThesis}, and we have
+using the definition of pullback vector bundle connections; alternatively see the explicit calulations in \cite[Appendix, Prop.\ A.1, Eq.\ (A.1)]{My1stpaper} or \cite[Appendix, Prop.\ A.1.1, Eq.\ (A.2)]{MyThesis}, and we have
 \bas
 &\mleft(\gamma(t)^!\mleft( \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}} \mright)\mright)_x(X,Y)
 \\
@@ -7961,7 +7967,7 @@ making use of that this calculation is pointwise at $x \in M$ just a standard de
 2\mleft[ \mleft[\Delta\sigma, \nu \mright]_{\mathcal{g}} \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}
 	+ 2\mleft[ \Delta \sigma \stackrel{\wedge}{,} \nabla^{\mathcal{G}}\nu \mright]_{\mathcal{g}},
 \eas
-by the Jacobi identity
+which we can rewrite by the Jacobi identity
 \bas
 \mleft[ \mleft[\Delta\sigma, \nu \mright]_{\mathcal{g}} \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}(X, Y)
 &=
@@ -7974,7 +7980,7 @@ by the Jacobi identity
 &=
 \mleft[ \frac{1}{2} \mleft[\Delta\sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} , \nu \mright]_{\mathcal{g}}(X, Y)
 \eas
-for all $X, Y \in \mathfrak{X}(M)$, and trivially
+for all $X, Y \in \mathfrak{X}(M)$, and we also trivially have
 \bas
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mathrm{Ad}_{\gamma^{-1}(t)} \circ \zeta
 &=
@@ -8007,7 +8013,7 @@ R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
 \ea
 for all $\nu \in \Gamma(\mathcal{g})$ and $\sigma \in \Gamma(\mathcal{G})$.
 
-$\bullet$ On the one hand, if $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies Eq.\ \eqref{THEGeneralizedMCEq}, then $\omega \equiv 0$. As previously mentioned, we have $\Delta e = 0$, so that we then get in total for Eq.\ \eqref{PullbackofMCEqGivesCurv} w.r.t.\ $\sigma \coloneqq e$ that
+$\bullet$ On the one hand, if $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies Eq.\ \eqref{THEGeneralizedMCEq}, then $\omega \equiv 0$. As previously mentioned, we have $\Delta e \equiv 0$, so that we then get in total for Eq.\ \eqref{PullbackofMCEqGivesCurv} w.r.t.\ $\sigma \coloneqq e$ that
 \bas
 R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
 &=
@@ -8015,7 +8021,7 @@ R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
 \eas
 for all $\nu \in \Gamma(\mathcal{g})$, which is the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB}.
 
-$\bullet$ On the other hand, if $\mathrm{H}\mathcal{G}$ satisfies the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB}, $R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu = \mleft[ \zeta, \cdot \mright]_{\mathcal{g}}$, then we know by Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation} (Lemma \ref{lem:FieldRedefViaLGBSection}) that 
+$\bullet$ On the other hand, if $\mathrm{H}\mathcal{G}$ satisfies the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB}, $R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu = \mleft[ \zeta, \cdot \mright]_{\mathcal{g}}$, then $\mathrm{H}\mathcal{G}$ is an infinitesimal Yang-Mills connection by Lemma \ref{lem:YangMillsConnAnEhresmann}, $\nabla^{\mathcal{G}} = \nabla^{\mathrm{YM}}$, and we know by Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation} (Lemma \ref{lem:FieldRedefViaLGBSection}) that 
 \bas
 \mleft[ \mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} - \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, ~ \nu \mright]_{\mathcal{g}}
 &=
@@ -8272,7 +8278,7 @@ F
 \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A \circ \mleft( \pi^{\mathrm{H}\mathcal{P}}, \pi^{\mathrm{H}\mathcal{P}} \mright)
 	+ \pi^!\zeta,
 \eas
-where $\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}$ is the exterior covariant derivative related to the pullback connection $\pi^*\nabla^{\mathrm{YM}}$, and $\pi^{\mathrm{H}\mathcal{P}}: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ is the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$; that is,
+where $\pi^{\mathrm{H}\mathcal{P}}: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ is the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$; that is,
 \bas
 F(X, Y)
 &=
@@ -8551,7 +8557,7 @@ and
 =
 \mathrm{D}{\underbrace{\mleft( \pi \circ r_\sigma \mright)}_{= \pi}}\mleft(X^h\mright)
 =
-\omega^X,
+\pi^*\omega^X,
 \eas
 using that fundamental vector fields are in the kernel of $\mathrm{D}\pi$, 
 and therefore
@@ -8611,10 +8617,10 @@ r_\sigma^*\mleft(
 =
 \sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
 %\\&\hspace{1.5cm}
-	+ \pi^*\mleft( 
+	+ \bigl( \pi^*
 		\mleft( \mathrm{Ad}_{\sigma^{-1}} \circ \zeta 
-		- \zeta \mright)
-	\bigl(\mathrm{D}\pi(X), \mathrm{D}\pi(Y)\bigr) \mright)
+		- \zeta \mright) \bigr)
+	\bigl(\mathrm{D}\pi(X), \mathrm{D}\pi(Y)\bigr)
 \\&\hspace{1cm}
 =
 \sAd_{\sigma^{-1}}\mleft(\mleft( \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}A \mright)\mleft( X^h, Y^h \mright) \mright)
