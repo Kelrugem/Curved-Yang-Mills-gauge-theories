@@ -5,10 +5,13 @@
 \@nameuse{bbl@beforestart}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -18,7 +21,7 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \providecommand\BKM@entry[2]{}
 \babel@aux{english}{}
-\BKM@entry{id=1,dest={73656374696F6E2E31},srcline={422}}{5C3337365C3337375C303030495C3030306E5C303030745C303030725C3030306F5C303030645C303030755C303030635C303030745C303030695C3030306F5C3030306E}
+\BKM@entry{id=1,dest={73656374696F6E2E31},srcline={422}}{5C3337365C3337375C303030495C3030306E5C303030745C303030725C3030306F5C303030645C303030755C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030735C303030755C3030306D5C3030306D5C303030615C303030725C30303079}
 \citation{CurvedYMH}
 \citation{DaSilva}
 \citation{OriginofCYMH}
@@ -26,7 +29,7 @@
 \citation{CurvedYMH}
 \citation{My1stpaper}
 \citation{MyThesis}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction and summary}{1}{section.1}\protected@file@percent }
 \citation{DaSilva}
 \citation{MyThesis}
 \citation{MyThesis}
@@ -357,7 +360,7 @@
 \newlabel{ClassicalSymmetryofPTs}{{44}{87}{Idea and motivation}{equation.6.44}{}}
 \newlabel{PTHomomNEw}{{45}{88}{Idea and motivation}{equation.6.45}{}}
 \BKM@entry{id=27,dest={73756273756273656374696F6E2E362E322E32},srcline={4894}}{5C3337365C3337375C303030445C303030615C303030725C303030625C3030306F5C303030755C303030785C3030305C3034305C303030645C303030655C303030725C303030695C303030765C303030615C303030745C303030695C303030765C303030655C3030305C3034305C3030306F5C3030306E5C3030305C3034305C3030304C5C303030475C303030425C30303073}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Push-forward of a horizontal tangent vector $X$ with constant section (left) and general section(right), where $\mathcal  {P}$ is a classical principal bundle as in Ex.\ \ref {ex:TheCLassicalPrincAsEx} equipped with a "typical" connection $\mathrm  {H}\mathcal  {P}$ of principal $G$-bundles ($G$ the structural Lie group).}}{89}{figure.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Push-forward of a horizontal tangent vector $X$ with constant section (left) and general section(right), where $\mathcal  {P}$ is a classical principal bundle as in Ex.\ \ref  {ex:TheCLassicalPrincAsEx} equipped with a "typical" connection $\mathrm  {H}\mathcal  {P}$ of principal $G$-bundles ($G$ the structural Lie group).}}{89}{figure.1}\protected@file@percent }
 \newlabel{fig:Pushforwardwandwithoutparallelsection}{{1}{89}{Push-forward of a horizontal tangent vector $X$ with constant section (left) and general section(right), where $\mathcal {P}$ is a classical principal bundle as in Ex.\ \ref {ex:TheCLassicalPrincAsEx} equipped with a "typical" connection $\mathrm {H}\mathcal {P}$ of principal $G$-bundles ($G$ the structural Lie group)}{figure.1}{}}
 \newlabel{OiTHatIsHowWeFormulateHorizSymmetry}{{46}{89}{Idea and motivation}{equation.6.46}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}Darboux derivative on LGBs}{89}{subsubsection.6.2.2}\protected@file@percent }
@@ -563,13 +566,19 @@
 \newlabel{ex:ClassicalYMTheoriesRecovered}{{7.6}{156}{Classical examples}{theorem.7.6}{}}
 \newlabel{con:TrivialLGBIsPreclassical}{{7.7}{156}{Trivial LGBs are associated with pre-classical theories}{theorem.7.7}{}}
 \citation{mackenzieGeneralTheory}
-\BKM@entry{id=38,dest={73656374696F6E2E38},srcline={9105}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030635C3030306C5C303030755C303030735C303030695C3030306F5C3030306E}
+\BKM@entry{id=38,dest={73656374696F6E2E38},srcline={9105}}{5C3337365C3337375C303030465C303030755C303030745C303030755C303030725C303030655C3030305C3034305C303030705C303030725C3030306F5C303030735C303030705C303030655C303030635C303030745C30303073}
+\citation{LAURENTGENGOUXStienonXuMultiplicativeForms}
+\citation{OtherPreprintAboutConnection}
+\citation{FernandesMarcutMultiplicativeForms}
+\newlabel{ex:HopfEx}{{7.8}{157}{Hopf fibration $\mathds {S}^7 \to \mathds {S}^4$ giving rise to a curved Yang-Mills gauge theory}{theorem.7.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Future prospects}{157}{section.8}\protected@file@percent }
+\newlabel{conclusions}{{8}{157}{Future prospects}{section.8}{}}
+\citation{GroupoidBasedPrincipalBundles}
+\citation{MyThesis}
+\citation{MyThesis}
 \bibdata{Literatur}
 \BKM@entry{id=39,dest={73656374696F6E2A2E33},srcline={1}}{5C3337365C3337375C3030304C5C303030695C303030735C303030745C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C303030655C303030665C303030655C303030725C303030655C3030306E5C303030635C303030655C30303073}
 \bibcite{CurvedYMH}{1}
-\newlabel{ex:HopfEx}{{7.8}{157}{Hopf fibration $\mathds {S}^7 \to \mathds {S}^4$ giving rise to a curved Yang-Mills gauge theory}{theorem.7.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{157}{section.8}\protected@file@percent }
-\newlabel{conclusions}{{8}{157}{Conclusion}{section.8}{}}
 \bibcite{DaSilva}{2}
 \bibcite{OriginofCYMH}{3}
 \bibcite{mayer2009lie}{4}
@@ -580,40 +589,40 @@
 \bibcite{LAURENTGENGOUXStienonXuMultiplicativeForms}{9}
 \bibcite{FernandesMarcutMultiplicativeForms}{10}
 \bibcite{crainic2015multiplicative}{11}
+\@writefile{toc}{\contentsline {section}{\nonumberline List of References}{159}{section*.3}\protected@file@percent }
 \bibcite{crainic2003differentiable}{12}
 \bibcite{Hamilton}{13}
 \bibcite{PullbackLGBLAB}{14}
-\@writefile{toc}{\contentsline {section}{\nonumberline List of References}{158}{section*.3}\protected@file@percent }
 \bibcite{OtherPreprintAboutConnection}{15}
 \bibcite{bursztyn2004integration}{16}
 \bibcite{Highervectorbundles}{17}
 \bibcite{meinrenkensplitting}{18}
 \bibstyle{unsrt}
-\BKM@entry{id=40,dest={617070656E6469782E41},srcline={9137}}{5C3337365C3337375C303030445C3030306F5C303030755C303030625C3030306C5C303030655C3030305C3034305C303030745C303030615C3030306E5C303030675C303030655C3030306E5C303030745C3030305C3034305C303030625C303030755C3030306E5C303030645C3030306C5C303030655C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030695C303030745C303030735C3030305C3034305C303030635C303030615C3030306E5C3030306F5C3030306E5C303030695C303030635C303030615C3030306C5C3030305C3034305C303030665C3030306C5C303030695C303030705C3030305C3034305C3030306D5C303030615C30303070}
+\BKM@entry{id=40,dest={617070656E6469782E41},srcline={9170}}{5C3337365C3337375C303030445C3030306F5C303030755C303030625C3030306C5C303030655C3030305C3034305C303030745C303030615C3030306E5C303030675C303030655C3030306E5C303030745C3030305C3034305C303030625C303030755C3030306E5C303030645C3030306C5C303030655C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030695C303030745C303030735C3030305C3034305C303030635C303030615C3030306E5C3030306F5C3030306E5C303030695C303030635C303030615C3030306C5C3030305C3034305C303030665C3030306C5C303030695C303030705C3030305C3034305C3030306D5C303030615C30303070}
 \citation{mackenzieGeneralTheory}
 \citation{mackenzieGeneralTheory}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{159}{appendix.A}\protected@file@percent }
-\newlabel{DoubleTangentFlip}{{A}{159}{Double tangent bundle and its canonical flip map}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{160}{appendix.A}\protected@file@percent }
+\newlabel{DoubleTangentFlip}{{A}{160}{Double tangent bundle and its canonical flip map}{appendix.A}{}}
 \citation{Highervectorbundles}
 \citation{mackenzieGeneralTheory}
-\newlabel{DoubleTangentAsDiagram}{{A.1}{160}{Double tangent bundle and its canonical flip map}{equation.A.1}{}}
+\newlabel{DoubleTangentAsDiagram}{{A.1}{161}{Double tangent bundle and its canonical flip map}{equation.A.1}{}}
 \citation{mackenzieGeneralTheory}
-\newlabel{definitionOfFlipMap}{{A.2}{161}{Double tangent bundle and its canonical flip map}{equation.A.2}{}}
-\newlabel{CoordinateExpressionOfTTM}{{A.3}{162}{Double tangent bundle and its canonical flip map}{equation.A.3}{}}
-\newlabel{CoordinateExprOfFlippy}{{A.4}{162}{Double tangent bundle and its canonical flip map}{equation.A.4}{}}
-\newlabel{LinearStructureOfProlongInCoordinates}{{A.5}{162}{Double tangent bundle and its canonical flip map}{equation.A.5}{}}
+\newlabel{definitionOfFlipMap}{{A.2}{162}{Double tangent bundle and its canonical flip map}{equation.A.2}{}}
+\newlabel{CoordinateExpressionOfTTM}{{A.3}{163}{Double tangent bundle and its canonical flip map}{equation.A.3}{}}
+\newlabel{CoordinateExprOfFlippy}{{A.4}{163}{Double tangent bundle and its canonical flip map}{equation.A.4}{}}
+\newlabel{LinearStructureOfProlongInCoordinates}{{A.5}{163}{Double tangent bundle and its canonical flip map}{equation.A.5}{}}
 \citation{mackenzieGeneralTheory}
-\newlabel{rem:CanonicalInvolutionAnIsom}{{A.1}{163}{The canonical involution/flip map an isomorphism, \newline \cite [\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}}{theorem.A.1}{}}
-\newlabel{rem:SchwarzThmInDiffGeo}{{A.2}{163}{Revisit: Schwarz's Theorem}{theorem.A.2}{}}
-\newlabel{rem:TotalDerivativesAreLinearWithRTOtherLinearStructure}{{A.3}{164}{Total derivatives of tangent bundle morphisms linear with respect to prolonged vertical structure}{theorem.A.3}{}}
+\newlabel{rem:CanonicalInvolutionAnIsom}{{A.1}{164}{The canonical involution/flip map an isomorphism, \newline \cite [\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}}{theorem.A.1}{}}
+\newlabel{rem:SchwarzThmInDiffGeo}{{A.2}{164}{Revisit: Schwarz's Theorem}{theorem.A.2}{}}
 \citation{mackenzieGeneralTheory}
-\newlabel{rem:BothLinearStructuresTheSameOnTheVerticalBundle}{{A.4}{165}{Alignment of both vector bundle structures on $\mathrm {TT}M$ on the restricted vertical bundle}{theorem.A.4}{}}
+\newlabel{rem:TotalDerivativesAreLinearWithRTOtherLinearStructure}{{A.3}{166}{Total derivatives of tangent bundle morphisms linear with respect to prolonged vertical structure}{theorem.A.3}{}}
+\newlabel{rem:BothLinearStructuresTheSameOnTheVerticalBundle}{{A.4}{166}{Alignment of both vector bundle structures on $\mathrm {TT}M$ on the restricted vertical bundle}{theorem.A.4}{}}
 \citation{meinrenkensplitting}
-\newlabel{rem:TangentLifts}{{A.5}{166}{Tangent lift, \cite [\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{theorem.A.5}{}}
-\newlabel{TotalDerivativeOfTMWithLeibniz}{{A.6}{167}{Tangent lift, \cite [\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{equation.A.6}{}}
+\newlabel{rem:TangentLifts}{{A.5}{167}{Tangent lift, \cite [\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{theorem.A.5}{}}
+\newlabel{TotalDerivativeOfTMWithLeibniz}{{A.6}{168}{Tangent lift, \cite [\S 2.2, last parapgraph in Subsection 2.2]{meinrenkensplitting}}{equation.A.6}{}}
 \global\csname @altsecnumformattrue\endcsname
 \global\@namedef{scr@dte@section@lastmaxnumwidth}{16.1933pt}
 \global\@namedef{scr@dte@subsection@lastmaxnumwidth}{21.4132pt}
 \global\@namedef{scr@dte@subsubsection@lastmaxnumwidth}{29.92982pt}
 \@writefile{toc}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
-\gdef \@abspage@last{169}
+\gdef \@abspage@last{170}

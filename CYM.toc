@@ -1,5 +1,5 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {1}Introduction and summary}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Basic notations and remarks}{15}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Assumed background knowledge}{18}{subsection.1.2}%
 \contentsline {section}{\numberline {2}Lie group bundles (LGBs)}{18}{section.2}%
@@ -36,7 +36,7 @@
 \contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{153}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Definition and gauge invariance}{153}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Examples}{155}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Conclusion}{157}{section.8}%
-\contentsline {section}{\nonumberline List of References}{158}{section*.3}%
-\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{159}{appendix.A}%
+\contentsline {section}{\numberline {8}Future prospects}{157}{section.8}%
+\contentsline {section}{\nonumberline List of References}{159}{section*.3}%
+\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{160}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

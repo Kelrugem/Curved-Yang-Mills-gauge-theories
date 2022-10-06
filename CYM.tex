@@ -419,7 +419,7 @@ This leads to a generalized gauge theory with many similar, but generalized, sta
 
 \pagenumbering{arabic}
 
-\section{Introduction}
+\section{Introduction and summary}
 
 This paper's research concerns curved Yang-Mills-Higgs gauge theories, originally introduced by Alexei Kotov and Thomas Strobl in \cite{CurvedYMH}, where essentially the structural Lie algebra together with its action on the manifold $N$ of values of the Higgs fields is replaced by a general Lie algebroid $E \to N$:
 
@@ -916,7 +916,7 @@ c_{\mathrm{SU}(2)}(P)
 where $(P\times G) \Big/ G$ is the associated Lie group bundle, where the action of $G$ on $G$ is given by its conjugation, $c_g(q) = gqg^{-1}$ for all $g, q \in G$. This principal $c_{\mathrm{SU}(2)}(P)$-bundle admits the structure as curved Yang-Mills gauge theory, which is neither classical nor pre-classical. Furthermore, all possible (curved) Yang-Mills gauge theory structures lead to a curved $\nabla^{\mathrm{YM}}$ and non-zero $\zeta$, which also implies that this gauge theory cannot be described with the typical formalism of gauge theory.
 \end{examples*}
 
- We will finish this paper with a conclusion in Section \ref{conclusions}, highlighting further constructions and conjecturing how to integrate the full formalism of the gauge theory developed by Alexei Kotov and Thomas Strobl.
+ We will finish this paper with a short discussion about future prospects in Section \ref{conclusions}, highlighting further constructions and conjecturing how to integrate the full formalism of the gauge theory developed by Alexei Kotov and Thomas Strobl.
 
 \subsection{Basic notations and remarks}\label{BasicNotations}
 
@@ -8953,7 +8953,7 @@ for all $g \in \mathcal{G}_x$ ($x \in M$) and $\mu, \nu \in \mathcal{g}_x$.
 \begin{corollaries}{Contraction of local field strength with Ad-invariant fibre metric is well-defined}{ContractionOfLocalFIeldWellDefined}
 Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $\mleft( U_i \mright)_i$ be an open covering of $M$ so that there are subordinate gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$.
 
-Then the map $\mathfrak{L}_{\mathrm{CYM}}[A]: M \to \Omega^{\mathrm{dim}(M)}(M; \mathbb{R})$, defined locally by
+Then the top-degree form $\mathfrak{L}_{\mathrm{CYM}}[A] \in \Omega^{\mathrm{dim}(M)}(M; \mathbb{R})$, defined locally by
 \bas
 \mleft.\bigl(\mathfrak{L}_{\mathrm{CYM}}[A]\bigr)\mright|_{U_i}
 &\coloneqq 
@@ -8978,7 +8978,7 @@ using the $\mathrm{Ad}$-invariance of $\kappa$. This concludes the proof.
 \begin{definitions}{Curved Yang-Mills gauge theory}{CYMGTFinally}
 Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
 
-Then the map $\mathfrak{L}_{\mathrm{CYM}}[A]$ defined in Cor.\ \ref{cor:ContractionOfLocalFIeldWellDefined} is called the \textbf{curved Yang-Mills Lagrangian}.
+Then the functional $A \mapsto \mathfrak{L}_{\mathrm{CYM}}[A]$ is called the \textbf{curved Yang-Mills Lagrangian}, where $\mathfrak{L}_{\mathrm{CYM}}[A]$ is defined in Cor.\ \ref{cor:ContractionOfLocalFIeldWellDefined}.
 \end{definitions}
 
 By construction, this Lagrangian is gauge-invariant.
@@ -9046,7 +9046,7 @@ Then we have that $\widetilde{\nabla^{\mathrm{YM}}}^\lambda$ and $\widetilde{\ze
 \bas
 \widetilde{F}^\lambda
 &\coloneqq
-\mathrm{d}^{\pi^*\widetilde{\nabla^{\mathrm{YM}}}^\lambda} A
+\mathrm{d}^{\pi^*\widetilde{\nabla^{\mathrm{YM}}}^\lambda} \widetilde{A}^\lambda
 	+ \frac{1}{2} \mleft[ \widetilde{A}^\lambda \stackrel{\wedge}{,} \widetilde{A}^\lambda \mright]_{\pi^*\mathcal{g}}
 	+ \pi^!\widetilde{\zeta}^\lambda
 \equiv
@@ -9057,7 +9057,7 @@ for all $\lambda \in \Omega^1(M; \mathcal{G})$. That is, the Lagrangian $\mathfr
 
 In fact, these field redefinitions are not just any transformation preserving the physics. As pointed out in \cite{MyThesis}, curved Yang-Mills gauge theory is a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions, similar to how one reformulates Classical Mechanics so that it is form-invariant w.r.t.\ Galilei or Lorentz transformations. This reformulation introduces extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength.
 
-As a next step one can then investigate whether there is a curved Yang-Mills gauge theory which cannot be transformed to a classical (infinitesimal) gauge theory via a field redefinition, this has be done in the mentioned references whose results will be used in the following examples.
+As a next step one can then investigate whether there is a curved Yang-Mills gauge theory which cannot be transformed to a classical infinitesimal gauge theory via a field redefinition, this has be done in the mentioned references whose results will be used in the following examples.
 
 \begin{examples}{Classical examples}{ClassicalYMTheoriesRecovered}
 By Ex.\ \ref{ex:ClassicalYangMillsConnection}, we just recover the classical formalism of gauge theory if having a classical principal bundle $P$ on which a trivial LGB $\mathcal{G} = M \times G$ acts on the right, where $G$ is a Lie group with Lie algebra $\mathfrak{g}$. $\mathrm{H}\mathcal{G}$ is the canonical flat Yang-Mills connection, $\nabla^{\mathrm{YM}}=\nabla^{\mathrm{cYM}}$ is the canonical flat connection on $\mathcal{g} = M \times \mathfrak{g}$, and $\zeta \equiv 0$. Then every example known in the classical formalism carries over.
@@ -9076,7 +9076,7 @@ Then there is a $\lambda \in \Omega^1(M; \mathcal{g})$ so that $\widetilde{\nabl
 
 However, we will not have time to attempt proving this, but as a first step one may integrate the field redefinitions to a redefinition of the horizontal bundle on the LGB $\mathcal{G}$ itself, not just of the connection on its LAB.
 
-Obviously, non-trivial LGBs are not used in the classical formalism, and by the previous discussion one may ask if there is a (global) example with curved Yang-Mills connection starting with a non-trivial LGB. In fact, there is one related to a Hopf fibration, as already argued in \cite[\S 5.3, Ex.\ 5.18]{My1stpaper} and \cite[\S 5.1.5, Ex.\ 5.1.35]{MyThesis}.
+Obviously, non-trivial LGBs are not used in the classical formalism, and by the previous discussion one may ask if there is a (global) example with a curved Yang-Mills connection starting with a non-trivial LGB. In fact, there is one related to a Hopf fibration, as already argued in \cite[\S 5.3, Ex.\ 5.18]{My1stpaper} and \cite[\S 5.1.5, Ex.\ 5.1.35]{MyThesis}.
 
 \begin{examples}{Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$ giving rise to a curved Yang-Mills gauge theory}{HopfEx}
 By Ex.\ \ref{ex:NablaYMAsAdjointConnection} (recall also \ref{ex:OurVeryImportantExample}) we know that $c_G(P)$ is an LGB admitting a Yang-Mills connection $\nabla^{\mathrm{YM}}$, where $P$ is a classical principal $G$-bundle, and $G$ a Lie group with Lie algebra $\mathfrak{g}$. We define $\mathcal{P}$ to be $c_G(P)$ itself now, but $A$ is arbitrary and does not need to be related to the horizontal distribution of $\nabla^{\mathrm{YM}}$.
@@ -9102,11 +9102,44 @@ we then have that its associated Yang-Mills connection $\nabla^{\mathrm{YM}}$, a
 An $\mathrm{Ad}$-invariant fibre metric exists clearly, so that we have all ingredients to define a truly curved Yang-Mills gauge theory with Lagrangian as given in Def.\ \ref{def:CYMGTFinally}.
 \end{examples}
 
-\section{Conclusion}\label{conclusions}
+\section{Future prospects}\label{conclusions}
 
-\textbf{Also mention that the new connection is not necessarily equivalent to a classical connection even though the related gauge theories are. What does it imply on theories based on the sense of connections like general relativity?}
+We already summarized the results given here in the introduction. So, let us discuss the future prospects of this theory. Since a curved connection $\nabla^{\mathrm{YM}}$ only exists globally, one might say that this theory may be just a toy model for physics, but thinking of symplectic geometry, the global aspects may be at least interesting in mathematics; as already mentioned here several times, there are papers from other authors (than the ones directly working with curved gauge theories) with somewhat similar subjects, \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}, \cite{OtherPreprintAboutConnection}, and \cite{FernandesMarcutMultiplicativeForms}. Alternatively, gauge theory is also a theory about connections, so one could investigate what the sense of connection and curvature given here implies for the plethora of other theories based on connections.
 
-\textbf{Acknowledgements:} I want to thank Siye Wu, Camille Laurent-Gengoux, Mark John David Hamilton and Alessandra Frabetti for their great help and support in making this paper.
+As a next step one could now define minimal couplings. Given a vector bundle $V \to M$, equipped with a LGB representation $\rho: \mathcal{G} \to \mathrm{Aut}(V)$, we should be able to define associated vector bundles $\mathcal{V} \coloneqq ( \mathcal{P} \times_M V ) \Big/ \mathcal{G}$, as we already mentioned before. W.r.t.\ a local gauge $s$ of $\mathcal{P}$ every section $\Psi \in \Gamma(\mathcal{V})$ has locally the form
+\bas
+[s, \psi_s],
+\eas
+where $\psi$ is a local section of $V$ and $[ \cdot, \cdot ]$ denotes the equivalence class related to the construction in $\mathcal{V}$. Then one can define the \textbf{minimal coupling $\nabla^A \Psi$} locally by
+\bas
+\mleft[  s,
+	\nabla \psi_s + \rho_*(A_s)(\psi_s)
+\mright]
+\eas 
+where $\rho_*$ is the LAB representation inherited by $\rho$, and $\nabla$ is a vector bundle connection with
+\bas
+\nabla \circ \rho_*
+&=
+\rho_* \circ \nabla^{\mathrm{YM}},
+\\
+R_\nabla
+&=
+\rho_* \circ \zeta.
+\eas
+Observe the similarity with the infinitesimal compatibility conditions (Def.\ \ref{def:YangMillsConnection}); these conditions should precisely lead to that that $\nabla^A \Psi$ is well-defined and independent of the choice of $s$, also making use of an analogue of Lemma \ref{lem:FieldRedefViaLGBSection}. After showing this one could try to construct all the other obvious analogues of the classical formalism.
+
+However, as already highlighted in the introduction, Alexei Kotov and Thomas Strobl have constructed an infinitesimal gauge theory based on Lie algebroids, and the anchor of the involved Lie algebroid is describing the minimal coupling. Thus, as a next step one may actually attempt to integrate this infinitesimal gauge theory. In the context of this work, this gauge theory should probably be based on principal $\mathcal{G}$-bundles where $\mathcal{G}$ is now a Lie groupoid and not a Lie group. Such principal bundles were already constructed in \cite[beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}. The corresponding Lie groupoid should have two "projections", one over $M$ and one other over the target manifold $N$, the target of the Higgs field $\Xi$.
+
+\begin{center}
+	\begin{tikzcd}
+		& \mathcal{G} \arrow{dr}\arrow{dl} & \\
+		M \arrow{rr}{\Xi} & & N
+	\end{tikzcd}
+\end{center}
+
+In other words, $\mathcal{G}$ is a Lie groupoid over the graph of $\Xi$, or to be more precise, over the graph of an evaluation map $(p, \Xi, A) \to \Xi(p)$, where $p \in M$; a formulation using such an evaluation map is already formulated in \cite{MyThesis}, but only regarding the infinitesimal gauge theory. I may start with such a research project now, and if successful, such a type of gauge theory should actually lead to a notion of a principal bundle for Yang-Mills-Higgs gauge theories. So, the involved principal bundle is not only describing the Yang-Mills part, we would achieve a principal bundle analogue for the whole Yang-Mills-Higgs Lagrangian. Last, such a Lie groupoid based gauge theory may help to answer whether or not Alexei Kotov's and Thomas Strobl's theory provide new physical examples, especially examples "stable" w.r.t.\ the field redefinitions constructed in \cite{MyThesis}.
+
+\textbf{Acknowledgements:} I want to thank Siye Wu, Camille Laurent-Gengoux, Mark John David Hamilton and Alessandra Frabetti for their great help and support in making this paper. Also big thanks to my mother, father, Dennis, Gregor, Marco, Nico, Jakob, Kathi, Konstantin, Lukas, Locki, Gareth, Philipp, Ramona, Annerose, Michael, Maxim, Anna, and my girlfriend Rachelle for all their love.
 
 \textbf{Funding:} The paper is part of my post-doc fellowship at the National Center for Theoretical Sciences (NCTS), which is why I also want to thank the NCTS.
 
