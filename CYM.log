@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  13 DEC 2022 22:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  18 JAN 2023 13:10
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1362,43 +1362,55 @@ Underfull \hbox (badness 3635) in paragraph at lines 27--32
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--57
+Underfull \hbox (badness 7238) in paragraph at lines 41--46
+[]\T1/lmr/m/n/10.95 Kirill C. H. Macken-zie.  Gen-eral the-ory of Lie groupoids
+ and Lie al-ge-
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 41--46
+\T1/lmr/m/n/10.95 broids.  \T1/lmr/m/it/10.95 Lon-don Math-e-mat-i-cal So-ci-et
+y Lec-ture Note Se-ries\T1/lmr/m/n/10.95 , 213:xxxviii+501, 2005.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
 []\T1/lmr/m/n/10.95 Camille Laurent-Gengoux, Math-ieu Stiénon, and Ping Xu.  No
 n-abelian
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--57
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
 \T1/lmr/m/n/10.95 dif-fer-en-tiable gerbes.  \T1/lmr/m/it/10.95 Ad-vances in Ma
 th-e-mat-ics\T1/lmr/m/n/10.95 , 220(5):1357--1427, 2009.
  []
 
-
-Underfull \hbox (badness 5756) in paragraph at lines 64--68
+[159]
+Underfull \hbox (badness 5756) in paragraph at lines 65--69
 []\T1/lmr/m/n/10.95 Marius Crainic, Maria Amelia Salazar, and Ivan Struchiner. 
  Mul-ti-plica-tive
  []
 
 
-Underfull \hbox (badness 2970) in paragraph at lines 64--68
+Underfull \hbox (badness 2970) in paragraph at lines 65--69
 \T1/lmr/m/n/10.95 forms and Spencer op-er-a-tors.  \T1/lmr/m/it/10.95 Math-e-ma
 -tis-che Zeitschrift\T1/lmr/m/n/10.95 , 279(3):939--979, 2015.
  []
 
-[159]
-Underfull \hbox (badness 1552) in paragraph at lines 70--75
+
+Underfull \hbox (badness 1552) in paragraph at lines 71--76
 []\T1/lmr/m/n/10.95 Marius Crainic.  Dif-fer-en-tiable and al-ge-broid co-ho-mo
 l-ogy, van Est iso-mor-phisms,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--81
+Underfull \hbox (badness 10000) in paragraph at lines 78--82
 []\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
 
-Underfull \hbox (badness 1867) in paragraph at lines 102--106
+Underfull \hbox (badness 1867) in paragraph at lines 103--107
 \T1/lmr/m/n/10.95 sym-plec-tic man-i-folds.  \T1/lmr/m/it/10.95 Jour-nal of Ge-
 om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
  []
@@ -1413,7 +1425,7 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 Here is how much of TeX's memory you used:
  35252 strings out of 478907
  735455 string characters out of 2851891
- 1225375 words of memory out of 3000000
+ 1225514 words of memory out of 3000000
  51955 multiletter control sequences out of 15000+600000
  531101 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1459,7 +1471,7 @@ s/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
 /kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (170 pages, 1572235 bytes).
+Output written on CYM.pdf (170 pages, 1572816 bytes).
 PDF statistics:
  2513 PDF objects out of 2984 (max. 8388607)
  539 named destinations out of 1000 (max. 500000)

@@ -8,24 +8,24 @@ Database file #1: Literatur.bib
 Warning--empty school in MyThesis
 You've used 18 entries,
             1791 wiz_defined-function locations,
-            586 strings with 7082 characters,
-and the built_in function-call counts, 3717 in all, are:
-= -- 347
+            588 strings with 7140 characters,
+and the built_in function-call counts, 3824 in all, are:
+= -- 358
 > -- 138
 < -- 2
 + -- 54
 - -- 36
-* -- 238
-:= -- 613
+* -- 251
+:= -- 625
 add.period$ -- 69
 call.type$ -- 18
 change.case$ -- 14
 chr.to.int$ -- 0
 cite$ -- 19
-duplicate$ -- 153
-empty$ -- 373
+duplicate$ -- 154
+empty$ -- 386
 format.name$ -- 36
-if$ -- 816
+if$ -- 840
 int.to.chr$ -- 0
 int.to.str$ -- 18
 missing$ -- 18
@@ -35,16 +35,16 @@ pop$ -- 35
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 59
+skip$ -- 58
 stack$ -- 0
-substring$ -- 233
+substring$ -- 266
 swap$ -- 20
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 33
+while$ -- 34
 width$ -- 20
 write$ -- 225
 (There was 1 warning)
