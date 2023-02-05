@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.31)  18 JAN 2023 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2023.1.18)  5 FEB 2023 15:37
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1005,8 +1005,8 @@ Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.51'
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbbreakable.
 code.tex
 Library (tcolorbox): 'tcbbreakable.code.tex' version '4.51'
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/oberdiek\pdfcol.sty
-Package: pdfcol 2019/12/29 v1.6 Handle new color stacks for pdfTeX (HO)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pdfcol\pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
 \tcb@testbox=\box80
@@ -1423,10 +1423,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 35252 strings out of 478907
- 735455 string characters out of 2851891
+ 35251 strings out of 478907
+ 735427 string characters out of 2851892
  1225514 words of memory out of 3000000
- 51955 multiletter control sequences out of 15000+600000
+ 51954 multiletter control sequences out of 15000+600000
  531101 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,108p,10627b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1471,7 +1471,7 @@ s/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
 /kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (170 pages, 1572816 bytes).
+Output written on CYM.pdf (170 pages, 1572842 bytes).
 PDF statistics:
  2513 PDF objects out of 2984 (max. 8388607)
  539 named destinations out of 1000 (max. 500000)
