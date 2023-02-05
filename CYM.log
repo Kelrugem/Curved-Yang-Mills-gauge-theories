@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2023.1.18)  5 FEB 2023 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2023.1.18)  5 FEB 2023 16:03
 entering extended mode
 **./CYM.tex
 (CYM.tex
@@ -1053,46 +1053,46 @@ File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))
 Now handling font encoding LS1 ...
 ... no UTF-8 mapping file for font encoding LS1
-LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 61.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 62.
 \c@theorem=\count323
 \symmathx=\mathgroup8
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 36
-2.
+3.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (CYM.aux)
 \openout1 = `CYM.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 362.
-LaTeX Font Info:    ... okay on input line 362.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 362.
-LaTeX Font Info:    ... okay on input line 362.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 362.
-LaTeX Font Info:    ... okay on input line 362.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 362.
-LaTeX Font Info:    ... okay on input line 362.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 362.
-LaTeX Font Info:    ... okay on input line 362.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 362.
-LaTeX Font Info:    ... okay on input line 362.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 362.
-LaTeX Font Info:    ... okay on input line 362.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 362.
-LaTeX Font Info:    ... okay on input line 362.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 362.
-LaTeX Font Info:    ... okay on input line 362.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 362.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 363.
+LaTeX Font Info:    ... okay on input line 363.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 363.
+LaTeX Font Info:    ... okay on input line 363.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 363.
+LaTeX Font Info:    ... okay on input line 363.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 363.
+LaTeX Font Info:    ... okay on input line 363.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 363.
+LaTeX Font Info:    ... okay on input line 363.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 363.
+LaTeX Font Info:    ... okay on input line 363.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 363.
+LaTeX Font Info:    ... okay on input line 363.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 363.
+LaTeX Font Info:    ... okay on input line 363.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 363.
+LaTeX Font Info:    ... okay on input line 363.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 363.
 LaTeX Font Info:    Trying to load font information for LS1+stix on input line 
-362.
+363.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stix.fd
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 362.
-Package scrbase Info: activating english \contentsname on input line 362.
-Package scrbase Info: activating english \listfigurename on input line 362.
-Package scrbase Info: activating english \listtablename on input line 362.
+LaTeX Font Info:    ... okay on input line 363.
+Package scrbase Info: activating english \contentsname on input line 363.
+Package scrbase Info: activating english \listfigurename on input line 363.
+Package scrbase Info: activating english \listtablename on input line 363.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -1120,62 +1120,62 @@ fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-62.
+63.
  (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-62.
+63.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-362.
+363.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-362.
+363.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 362.
+(Font)              <10.95> on input line 363.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 362.
+(Font)              <8> on input line 363.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 362.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 362
+(Font)              <6> on input line 363.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 363
 .
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 362
+LaTeX Font Info:    Trying to load font information for U+msb on input line 363
 .
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+esint on input line 3
-62.
+63.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/esint\uesint.fd
 File: uesint.fd 
 )
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 3
-62.
+63.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 362.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 363.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 362.
+(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 363.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 362.
-Package hyperref Info: Link coloring ON on input line 362.
+(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 363.
+Package hyperref Info: Link coloring ON on input line 363.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1189,9 +1189,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count330
 )
-LaTeX Info: Redefining \ref on input line 362.
-LaTeX Info: Redefining \pageref on input line 362.
-LaTeX Info: Redefining \nameref on input line 362.
+LaTeX Info: Redefining \ref on input line 363.
+LaTeX Info: Redefining \pageref on input line 363.
+LaTeX Info: Redefining \nameref on input line 363.
  (CYM.out) (CYM.out)
 \@outlinefile=\write5
 \openout5 = `CYM.out'.
@@ -1203,7 +1203,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 362.
+(scrartcl)           before \begin{document} on input line 363.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
@@ -1229,30 +1229,30 @@ Package scrhack Info: \landscape patched to make \textheight change optional on
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 3
-74.
+75.
  (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-74.
+75.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 386.
+ne 393.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 3
-88.
+95.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-95.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+02.
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [1
@@ -1282,34 +1282,34 @@ Overfull \hbox (1.09496pt too wide) detected at line 41
 \tf@toc=\write6
 \openout6 = `CYM.toc'.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 439
+LaTeX Font Info:    Trying to load font information for U+euf on input line 446
 .
  (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1241--1243
+Underfull \hbox (badness 10000) in paragraph at lines 1248--1250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1255--1258
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1265
 
  []
 
 [19] [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1377--1380
+Underfull \hbox (badness 10000) in paragraph at lines 1384--1387
 
  []
 
 [22] [23] [24] [25] [26] [27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1760--1763
+Underfull \hbox (badness 10000) in paragraph at lines 1767--1770
 
  []
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 1777--1780
+Underfull \hbox (badness 10000) in paragraph at lines 1784--1787
 
  []
 
@@ -1320,19 +1320,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1777--1780
 [90] [91] [92] [93] [94] [95] [96] [97]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 5477.
+(Font)              using `U/stmry/m/n' instead on input line 5484.
 
 [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110]
 [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122]
 [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134]
 [135]
-Overfull \hbox (2.67805pt too wide) in paragraph at lines 7825--7832
+Overfull \hbox (2.67805pt too wide) in paragraph at lines 7832--7839
 \T1/lmr/m/n/10.95 using Rem. [][]5.19[][] (bracket of fundamental/left-invarian
 t vec-tor fields is fundamental/left-invariant)
  []
 
 [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146]
-Overfull \hbox (3.1053pt too wide) detected at line 8513
+Overfull \hbox (3.1053pt too wide) detected at line 8520
 []
  []
 
