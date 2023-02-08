@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.10)  7 FEB 2023 11:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.10)  8 FEB 2023 14:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1355,13 +1355,13 @@ LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 
 [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117]
 [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135]
-Overfull \hbox (2.67805pt too wide) in paragraph at lines 7831--7838
+Overfull \hbox (2.67805pt too wide) in paragraph at lines 7832--7839
 \T1/lmr/m/n/10.95 using Rem. [][]5.19[][] (bracket of fundamental/left-invariant vec-tor fields is fundamental/left-inva
 riant)
  []
 
 [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146]
-Overfull \hbox (3.1053pt too wide) detected at line 8519
+Overfull \hbox (3.1053pt too wide) detected at line 8520
 []
  []
 
@@ -1441,14 +1441,17 @@ Underfull \hbox (badness 1867) in paragraph at lines 103--107
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 37912 strings out of 476372
- 794228 string characters out of 2796084
+ 37913 strings out of 476372
+ 794245 string characters out of 2796084
  1887787 words of memory out of 3000000
- 57013 multiletter control sequences out of 15000+600000
+ 57014 multiletter control sequences out of 15000+600000
  643506 words of font info for 172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,106p,10620b,1311s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1482,7 +1485,7 @@ public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb
 1/public/lm/lmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/
 Users/kelru/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (170 pages, 1625163 bytes).
+Output written on CYM.pdf (170 pages, 1625376 bytes).
 PDF statistics:
  2585 PDF objects out of 2984 (max. 8388607)
  539 named destinations out of 1000 (max. 500000)
