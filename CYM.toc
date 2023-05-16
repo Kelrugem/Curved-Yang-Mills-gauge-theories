@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {5.1}LGB and LAB representations}{58}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Fundamental vector fields}{65}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Differential of smooth LGB actions}{67}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Connections and curvature on LGB principal bundles}{72}{section.6}%
+\contentsline {section}{\numberline {6}Connections and curvature on principal LGB-bundles}{72}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Principal bundles with structural LGB}{72}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}Definition}{72}{subsubsection.6.1.1}%
 \contentsline {subsubsection}{\numberline {6.1.2}Examples}{74}{subsubsection.6.1.2}%
