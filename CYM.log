@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.15)  14 JUN 2023 12:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.15)  21 JUN 2023 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1306,17 +1306,17 @@ Overfull \hbox (1.09496pt too wide) detected at line 36
 
 [2]
 Overfull \hbox (1.09496pt too wide) detected at line 39
- []\T1/lmss/bx/n/10.95 157
+ []\T1/lmss/bx/n/10.95 158
  []
 
 
 Overfull \hbox (1.09496pt too wide) detected at line 40
- []\T1/lmss/bx/n/10.95 159
+ []\T1/lmss/bx/n/10.95 160
  []
 
 
 Overfull \hbox (1.09496pt too wide) detected at line 41
- []\T1/lmss/bx/n/10.95 160
+ []\T1/lmss/bx/n/10.95 161
  []
 
 )
@@ -1371,7 +1371,7 @@ Overfull \hbox (3.1053pt too wide) detected at line 8520
 []
  []
 
-[147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158] (CYM.bbl
+[147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159] (CYM.bbl
 Underfull \hbox (badness 5533) in paragraph at lines 21--25
 []\T1/lmr/m/n/10.95 Christoph Mayer and Thomas Strobl.  Lie al-ge-broid Yang--Mills with mat-
  []
@@ -1415,7 +1415,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--58
 57--1427, 2009.
  []
 
-[159]
+[160]
 Underfull \hbox (badness 5756) in paragraph at lines 65--69
 []\T1/lmr/m/n/10.95 Marius Crainic, Maria Amelia Salazar, and Ivan Struchiner.  Mul-ti-plica-tive
  []
@@ -1443,7 +1443,7 @@ Underfull \hbox (badness 1867) in paragraph at lines 103--107
 9(9):1285--1305, 2009.
  []
 
-) [160] [161] [162] [163] [164] [165] [166] [167] [168] (CYM.aux)
+) [161] [162] [163] [164] [165] [166] [167] [168] [169] (CYM.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1451,10 +1451,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 38116 strings out of 476305
- 800390 string characters out of 5794636
- 1888340 words of memory out of 5000000
- 57277 multiletter control sequences out of 15000+600000
+ 38124 strings out of 476305
+ 800485 string characters out of 5794636
+ 1891340 words of memory out of 5000000
+ 57280 multiletter control sequences out of 15000+600000
  643506 words of font info for 172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,106p,10620b,1359s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1488,9 +1488,9 @@ public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb
 1/public/lm/lmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/
 Users/kelru/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (170 pages, 1626416 bytes).
+Output written on CYM.pdf (171 pages, 1632020 bytes).
 PDF statistics:
- 2585 PDF objects out of 2984 (max. 8388607)
- 539 named destinations out of 1000 (max. 500000)
+ 2599 PDF objects out of 2984 (max. 8388607)
+ 544 named destinations out of 1000 (max. 500000)
  381 words of extra memory for PDF output out of 10000 (max. 10000000)
 

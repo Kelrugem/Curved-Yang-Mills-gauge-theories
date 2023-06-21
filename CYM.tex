@@ -9062,6 +9062,56 @@ for all $\lambda \in \Omega^1(M; \mathcal{G})$. That is, the Lagrangian $\mathfr
 
 In fact, these field redefinitions are not just any transformation preserving the physics. As pointed out in \cite{MyThesis}, curved Yang-Mills gauge theory is a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions, similar to how one reformulates Classical Mechanics so that it is form-invariant w.r.t.\ Galilei or Lorentz transformations. This reformulation introduces extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength.
 
+However, there is also a natural explanation given the context here; it is straightforward to show the following and we leave the proof up to the reader.
+
+\begin{remarks}{Field redefinitions integrated}{FieldRedefIntegrated}
+Recall Rem.\ \ref{rem:SimplicialDifferentialStuff} and its notation, \textit{i.e.}\ there is a simplicial differential $\delta$ so that
+\bas
+\delta \mu_{\mathcal{G}}^{\mathrm{tot}} &= 0,\\
+F_{\mathcal{G}} &= \delta\zeta,
+\eas
+where $F_{\mathcal{G}}$ denotes the curvature of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ in a classical approach, that is,
+\bas
+F_{\mathcal{G}}
+&=
+\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathrm{YM}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
+	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}},
+\eas
+where $\pi_{\mathcal{G}}$ is the projection of $\mathcal{G}$.
+The field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is given by
+\bas
+\widetilde{\mu_{\mathcal{G}}^{\mathrm{tot}}}^{\lambda}
+&\coloneqq
+\mu_{\mathcal{G}}^{\mathrm{tot}}
+	- \delta \lambda,
+\eas
+which integrates the one for $\nabla^{\mathrm{YM}}$. Equivalently, since we introduced $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a composition of the vertical Maurer-Cartan form with the projection $\pi^{\mathrm{vert}}$ onto the vertical part w.r.t.\ the horizontal distribution on $\mathcal{G}$, we can define the field redefinition of $\pi^{\mathrm{vert}}$ by
+\bas
+\widetilde{\pi^{\mathrm{vert}}}^\lambda
+&\coloneqq
+\pi^{\mathrm{vert}}
+	- \widetilde{\pi_{\mathcal{G}}^! \lambda}^l
+	- \widetilde{\pi_{\mathcal{G}}^! \lambda}^r,
+\eas
+where $\widetilde{\pi_{\mathcal{G}^!} \lambda}^r$ denotes the fundamental vector field of $\pi_{\mathcal{G}}^! \lambda$ via right-multiplication, that is,
+\bas
+\mleft.\widetilde{\pi_{\mathcal{G}^!} \lambda}^r\mright|_g
+&=
+\mathrm{D}_{e_x}R_g \circ \lambda_{x} \circ \mathrm{D}_x \pi_{\mathcal{G}}
+\eas
+for all $g \in \mathcal{G}_x$, and $\widetilde{\pi_{\mathcal{G}}^! \lambda}^l$ is just the typical definition for fundamental vector fields, with an emphasis on that it is via left-multiplication. Thm.\ \ref{thm:FieldRedefStuff} has now several interpretations and implications, where we denote with $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ the equivalence class of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ inherited by $\delta$:
+\begin{enumerate}
+	\item The field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is about picking any other representative for $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$.
+	\item Every other representative of $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ is not just multiplicative, but also a Yang-Mills connection, that is,
+	\bas
+	\delta \widetilde{\mu_{\mathcal{G}}^{\mathrm{tot}}}^{\lambda} &= 0,\\
+	\widetilde{F_{\mathcal{G}}}^{\lambda} &= \delta\widetilde{\zeta}^{\lambda},
+	\eas
+	where $\widetilde{F_{\mathcal{G}}}^{\lambda}$ is defined like $F_{\mathcal{G}}$ but using $\widetilde{\mu_{\mathcal{G}}^{\mathrm{tot}}}^{\lambda}$ instead of $\mu_{\mathcal{G}}^{\mathrm{tot}}$.
+	\item Regarding the choice of $\mu_{\mathcal{G}}^{\mathrm{tot}}$, the Lagrangian only depends on the choice of class $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$. However, the explicit choice of $\zeta$ may still matter: One could vary $\zeta$ with centre-valued forms while keeping $\mu_{\mathcal{G}}^{\mathrm{tot}}$ fixed, this is in general not totally covered by the field redefinitions and may affect the Lagrangian as discussed in \cite{MyThesis} (or \cite{My1stpaper}).
+\end{enumerate}
+\end{remarks}
+
 As a next step one can then investigate whether there is a curved Yang-Mills gauge theory which cannot be transformed to a classical infinitesimal gauge theory via a field redefinition, this has be done in the mentioned references whose results will be used in the following examples.
 
 \begin{examples}{Classical examples}{ClassicalYMTheoriesRecovered}
@@ -9079,7 +9129,7 @@ Let $\mathcal{G} \to M$ be a trivial LGB over a spacetime $M$ so that its LAB $\
 Then there is a $\lambda \in \Omega^1(M; \mathcal{g})$ so that $\widetilde{\nabla^{\mathrm{YM}}}^\lambda$ is flat.
 \end{conjectures}
 
-However, we will not have time to attempt proving this, but as a first step one may integrate the field redefinitions to a redefinition of the horizontal bundle on the LGB $\mathcal{G}$ itself, not just of the connection on its LAB.
+However, we will not have time to attempt proving this, but as a first step one may integrate the field redefinitions to a redefinition of the horizontal bundle on the LGB $\mathcal{G}$ itself, not just of the connection on its LAB; basically proving Rem.\ \ref{rem:FieldRedefIntegrated}.
 
 Obviously, non-trivial LGBs are not used in the classical formalism, and by the previous discussion one may ask if there is a (global) example with a curved Yang-Mills connection starting with a non-trivial LGB. In fact, there is one related to a Hopf fibration, as already argued in \cite[\S 5.3, Ex.\ 5.18]{My1stpaper} and \cite[\S 5.1.5, Ex.\ 5.1.35]{MyThesis}.
 
@@ -9123,26 +9173,29 @@ where $\psi$ is a local section of $V$ and $[ \cdot, \cdot ]$ denotes the equiva
 \eas 
 where $\rho_*$ is the LAB representation inherited by $\rho$, and $\nabla$ is a vector bundle connection with
 \bas
-\nabla \circ \rho_*
+\rho\mleft( \sigma^{-1} \mright) \circ \nabla \circ \rho(\sigma)
 &=
-\rho_* \circ \nabla^{\mathrm{YM}},
+\nabla
+    + \rho_*(\Delta \sigma),
 \\
 R_\nabla
 &=
-\rho_* \circ \zeta.
+\rho_* \circ \zeta
 \eas
-Observe the similarity with the infinitesimal compatibility conditions (Def.\ \ref{def:YangMillsConnection}); these conditions should precisely lead to that that $\nabla^A \Psi$ is well-defined and independent of the choice of $s$, also making use of an analogue of Lemma \ref{lem:FieldRedefViaLGBSection}. After showing this one could try to construct all the other obvious analogues of the classical formalism.
+for all $\sigma \in \Gamma(\mathcal{G})$.
+Observe the similarity with the infinitesimal compatibility conditions Def.\ \ref{def:YangMillsConnection} and Lemma \ref{lem:FieldRedefViaLGBSection}; the first condition should lead to that that $\nabla^A \Psi$ is well-defined and independent of the choice of $s$. The second condition should imply that the curvature of $\nabla^A$ is given by the generalised field strength of $A$. After showing this one could try to construct all the other obvious analogues of the classical formalism.
 
-However, as already highlighted in the introduction, Alexei Kotov and Thomas Strobl have constructed an infinitesimal gauge theory based on Lie algebroids, and the anchor of the involved Lie algebroid is describing the minimal coupling. Thus, as a next step one may actually attempt to integrate this infinitesimal gauge theory. In the context of this work, this gauge theory should probably be based on principal $\mathcal{G}$-bundles where $\mathcal{G}$ is now a Lie groupoid and not a Lie group. Such principal bundles were already constructed in \cite[beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}. The corresponding Lie groupoid should have two "projections", one over $M$ and one other over the target manifold $N$, the target of the Higgs field $\Xi$.
+However, as already highlighted in the introduction, Alexei Kotov and Thomas Strobl have constructed an infinitesimal gauge theory based on Lie algebroids, and the anchor of the involved Lie algebroid is describing the minimal coupling. Thus, as a next step one may actually attempt to integrate this infinitesimal gauge theory. In the context of this work, this gauge theory should probably be based on principal $\mathcal{G}$-bundles where $\mathcal{G}$ is now a Lie groupoid and not a Lie group. Such principal bundles were already constructed in \cite[beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}. The corresponding Lie groupoid will be over $N$ and the principal bundle can be viewed as a bundle with two "projections", one over $M$ and one other over the target manifold $N$, the target of the Higgs field $\Xi$,
 
 \begin{center}
 	\begin{tikzcd}
-		& \mathcal{G} \arrow{dr}\arrow{dl} & \\
-		M \arrow{rr}{\Xi} & & N
+		& \mathcal{P} \arrow{dr}\arrow{dl} & \\
+		M & & N
 	\end{tikzcd}
 \end{center}
 
-In other words, $\mathcal{G}$ is a Lie groupoid over the graph of $\Xi$, or to be more precise, over the graph of an evaluation map $(p, \Xi, A) \to \Xi(p)$, where $p \in M$; a formulation using such an evaluation map is already formulated in \cite{MyThesis}, but only regarding the infinitesimal gauge theory. I may start with such a research project now, and if successful, such a type of gauge theory should actually lead to a notion of a principal bundle for Yang-Mills-Higgs gauge theories. So, the involved principal bundle is not only describing the Yang-Mills part, we would achieve a principal bundle analogue for the whole Yang-Mills-Higgs Lagrangian. Last, such a Lie groupoid based gauge theory may help to answer whether or not Alexei Kotov's and Thomas Strobl's theory provide new physical examples, especially examples "stable" w.r.t.\ the field redefinitions constructed in \cite{MyThesis}.
+and for every $\Xi$ there should be a section of the left arrow so that $\Xi$ is the composition of the right projection with this section.
+I may start with such a research project now, and if successful, such a type of gauge theory should actually lead to a notion of a principal bundle for Yang-Mills-Higgs gauge theories. So, the involved principal bundle is not only describing the Yang-Mills part, we would achieve a principal bundle analogue for the whole Yang-Mills-Higgs Lagrangian. Last, such a Lie groupoid based gauge theory may help to answer whether or not Alexei Kotov's and Thomas Strobl's theory provide new physical examples, especially examples "stable" w.r.t.\ the field redefinitions constructed in \cite{MyThesis}.
 
 \textbf{Acknowledgements:} I want to thank Siye Wu, Camille Laurent-Gengoux, Mark John David Hamilton and Alessandra Frabetti for their great help and support in making this paper. Also big thanks to my mother, father, Dennis, Gregor, Marco, Nico, Jakob, Kathi, Konstantin, Lukas, Locki, Gareth, Philipp, Ramona, Annerose, Michael, Maxim, Anna, and my girlfriend Rachelle for all their love.
 
