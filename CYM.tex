@@ -1996,9 +1996,10 @@ especially, it follows $q_i = g^\prime q_i^\prime$.
 
 On one hand, if we use $p$ as fixed element of $P_x$ to calculate the multiplication, we get 
 \bas
-[p_1, v] \cdot [p_2, g]
+[p_2, g] \cdot [p_1, v]
 &=
-[p, \Psi(q_1, v)] \cdot [p, c_{q_2}(g)]
+[p, c_{q_2}(g)] \cdot
+[p, \Psi(q_1, v)]
 =
 \mleft[p \cdot c_{q_2}(g), \Psi(q_1, v) \mright]
 =
@@ -2006,7 +2007,7 @@ On one hand, if we use $p$ as fixed element of $P_x$ to calculate the multiplica
 \eas
 On the other hand, using $p^\prime$ as a fixed element, we derive, using $q_i^\prime = \mleft( g^\prime \mright)^{-1} q_i$,
 \bas
-[p_1, v] \cdot [p_2, h]
+[p_2, g] \cdot [p_1, v]
 &=
 \mleft[p^\prime \cdot c_{q_2^\prime}\mleft( g \mright) ~ q_1^\prime, v \mright]
 =
@@ -2029,7 +2030,7 @@ for all $p \in P$, where $\beta_U: P_U \to G$ is an equivariant map. Then we hav
 \phi_{c_G(P)}\bigl([p, g]\bigr)
 &=
 \mleft(
-	\pi_P(p), c_{\beta_U(p)} (h)
+	\pi_P(p), c_{\beta_U(p)} (g)
 \mright),&
 \phi_{\mathcal{F}}\bigl([p, v]\bigr)
 &=
@@ -2048,7 +2049,7 @@ with inverses
 \eas
 Following the related calculations in the proof for Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure} one shows that the proposed action looks locally like (w.r.t.\ these maps)
 \bas
-\bigl((x, v) , (x, g) \bigr)
+\bigl((x, g), (x, v)\bigr)
 &\mapsto 
 \mleft( x, \Psi_{\beta_U \mleft( \varphi_U^{-1}\mleft(x, e\mright) \cdot g \mright)}(v) \mright) 
 =
@@ -2058,7 +2059,7 @@ which is clearly a smooth map.
 
 $\bullet$ Let us now quickly check that the conditions in Def.\ \ref{def:LiegroupACtion} are satisfied. We have
 \bas
-\pi_{\mathcal{F}}\bigl( [p, v] \cdot [p, g] \bigr)
+\pi_{\mathcal{F}}\bigl( [p, g] \cdot [p, v] \bigr)
 &=
 \pi_{\mathcal{F}}\mleft( \mleft[p , \Psi \mleft(g, v \mright) \mright] \mright)
 =
@@ -2068,19 +2069,21 @@ $\bullet$ Let us now quickly check that the conditions in Def.\ \ref{def:Liegrou
 \eas
 for all $p \in P_x$ ($x \in M$), $v \in F$ and $g \in G$; similarly, having additionally $h \in G$,
 \bas
-\bigl([p, v] \cdot [p, g] \bigr) \cdot [p, h]
+[p, h] \cdot \bigl([p, g] \cdot [p, v] \bigr)
 &=
-\mleft[ p \cdot g, v \mright] \cdot [p, h]
+%[p, h] \cdot \mleft[ p, \Psi_g(v) \mright]
+%=
+\mleft[ p, \Psi_h\mleft( \Psi_g(v) \mright) \mright]
 =
-\mleft[ p \cdot g h, v \mright]
+\mleft[ p, \Psi_{hg}(v) \mright]
 =
-[p, v] \cdot [p, gh]
+[p, hg] \cdot [p, v]
 =
-[p, v] \cdot \bigl([p, g] ~ [p, h] \bigr),
+\bigl([p, h] ~ [p, g] \bigr) \cdot [p, v],
 \eas
 and
 \bas
-[p, v] \cdot [p, e]
+[p, e] \cdot [p, v]
 &=
 [p \cdot e, v]
 =
@@ -2118,21 +2121,21 @@ p \cdot \sigma_f(p)
 \eas
 for all $p \in P$; one can prove that this is well-defined.
 
-As argued in \cite[\S 5.3, Thm.\ 5.3.8, page 269; formulated as left action there, which is why we have an inverse here]{Hamilton}, $\sAut(P)$ acts (on the right) on associated fibre bundles $\mathcal{F} = P \times_\Psi F$ by
+As argued in \cite[\S 5.3, Thm.\ 5.3.8, page 269]{Hamilton}, $\sAut(P)$ acts (on the left) on associated fibre bundles $\mathcal{F} = P \times_\Psi F$ by
 \bas
-[p, v] \cdot f
+f \cdot [p, v]
 &\coloneqq
-\mleft[ f^{-1}(p), v \mright]
+\mleft[ f(p), v \mright]
 =
-\mleft[ p \cdot \sigma_{f}(p)^{-1}, v \mright]
+\mleft[ p \cdot \sigma_{f}(p), v \mright]
 \eas
-for all $[p, v] \in \mathcal{F}_x$ ($x \in M$) and $f \in \sAut(P)$. Therefore one could investigate whether there is also an action just with an element $g$ of $G$, basically the restriction of $\sigma_f$ onto the fibre $P_x$. However, the action given by $[p, v] \cdot g = \mleft[ p \cdot g^{-1}, v \mright]$ for $g \in G$ is in general clearly only well-defined w.r.t.\ a change of the representative of $[p, v] = \mleft[ p \cdot q, \Psi_{q^{-1}}(v) \mright]$ ($q \in G$), if $G$ is abelian. But one can resolve this by looking at it carefully: The rough idea is that $g$ basically comes from $\sigma_f(p)$ in this context, but
+for all $[p, v] \in \mathcal{F}_x$ ($x \in M$) and $f \in \sAut(P)$. Therefore one could investigate whether there is also an action just with an element $g$ of $G$, basically the restriction of $\sigma_f$ onto the fibre $P_x$. However, the action given by $g \cdot [p, v] = \mleft[ p \cdot g, v \mright]$ for $g \in G$ is in general clearly only well-defined w.r.t.\ a change of the representative of $[p, v] = \mleft[ p \cdot q, \Psi_{q^{-1}}(v) \mright]$ ($q \in G$), if $G$ is abelian. But one can resolve this by looking at it carefully: The rough idea is that $g$ basically comes from $\sigma_f(p)$ in this context, but
 \bas
 \sigma_f(p \cdot q)
 &=
 c_{q^{-1}}\bigl( \sigma_f(p) \bigr).
 \eas
-Roughly, while $p$ is multiplied with $g^{-1}$, $p \cdot q$ has to be multiplied with $q^{-1} g^{-1} q$. It is easy to check that this resolves that issue, and the result is precisely the action described in Ex.\ \ref{ex:AssocLGACtingOnAssocVec}. In fact, we have the following proposition:
+Roughly, while $p$ is multiplied with $g$, $p \cdot q$ has to be multiplied with $q^{-1} g q$. It is easy to check that this resolves that issue, and the result is precisely the action described in Ex.\ \ref{ex:AssocLGACtingOnAssocVec}. In fact, we have the following proposition:
 \end{remarks}
 
 For the following proposition observe that the (local) sections of an LGB have a group structure given by pointwise multiplication.

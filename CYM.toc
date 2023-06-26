@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {3.2}Examples of LGB actions}{34}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Lie algebra bundles (LABs)}{41}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Definition}{41}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}From LGBs to LABs}{44}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}From LGBs to LABs}{43}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Vertical Maurer-Cartan form of LGBs}{51}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Exponential map of LGBs}{54}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}LABs of pullback LGBs}{56}{subsection.4.5}%
