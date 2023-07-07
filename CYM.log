@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  26 JUN 2023 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  8 JUL 2023 01:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1613,21 +1613,21 @@ Here is how much of TeX's memory you used:
  807158 string characters out of 5788025
  1892993 words of memory out of 5000000
  57416 multiletter control sequences out of 15000+600000
- 643506 words of font info for 172 fonts, out of 8000000 for 9000
+ 643514 words of font info for 172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,106p,10920b,1359s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bsmiu/bsmiu4
 e.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bsmiu/bs
-miu53.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bsmi
-u/bsmiu57.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/
-bsmiu/bsmiu59.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arp
-hic/bsmiu/bsmiu5b.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1
-/arphic/bsmiu/bsmiu5f.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/arphic/bsmiu/bsmiu70.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fon
-ts/type1/arphic/bsmiu/bsmiu74.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX
-/fonts/type1/arphic/bsmiu/bsmiu78.pfb><C:/Users/kelru/AppData/Local/Programs/Mi
-KTeX/fonts/type1/arphic/bsmiu/bsmiu79.pfb><C:/Users/kelru/AppData/Local/Program
-s/MiKTeX/fonts/type1/arphic/bsmiu/bsmiu7a.pfb><C:/Users/kelru/AppData/Local/Pro
+miu57.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bsmi
+u/bsmiu59.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/
+bsmiu/bsmiu5b.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arp
+hic/bsmiu/bsmiu5f.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1
+/arphic/bsmiu/bsmiu70.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/arphic/bsmiu/bsmiu74.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fon
+ts/type1/arphic/bsmiu/bsmiu78.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX
+/fonts/type1/arphic/bsmiu/bsmiu79.pfb><C:/Users/kelru/AppData/Local/Programs/Mi
+KTeX/fonts/type1/arphic/bsmiu/bsmiu7a.pfb><C:/Users/kelru/AppData/Local/Program
+s/MiKTeX/fonts/type1/arphic/bsmiu/bsmiu81.pfb><C:/Users/kelru/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/arphic/bsmiu/bsmiu8a.pfb><C:/Users/kelru/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/kelru/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Use
@@ -1665,7 +1665,7 @@ e1/public/lm/lmsy8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
 /public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/kelru/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (171 pages, 1632831 bytes).
+Output written on CYM.pdf (171 pages, 1633168 bytes).
 PDF statistics:
  2599 PDF objects out of 2984 (max. 8388607)
  544 named destinations out of 1000 (max. 500000)
