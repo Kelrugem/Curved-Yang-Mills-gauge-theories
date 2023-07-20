@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.15)  20 JUL 2023 16:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.15)  20 JUL 2023 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1371,7 +1371,13 @@ Overfull \hbox (3.1053pt too wide) detected at line 8523
 []
  []
 
-[147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159] (CYM.bbl
+[147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159]
+(C:\Users\kelru\AppData\Roaming\MiKTeX\2.9\tex/latex/cjk/UTF8\UTF8.enc
+File: UTF8.enc 2021/10/16 4.8.5
+)
+(C:\Users\kelru\AppData\Roaming\MiKTeX\2.9\tex/latex/cjk/UTF8\UTF8.chr
+File: UTF8.chr 2021/10/16 4.8.5
+) (CYM.bbl
 Underfull \hbox (badness 5533) in paragraph at lines 21--25
 []\T1/lmr/m/n/10.95 Christoph Mayer and Thomas Strobl.  Lie al-ge-broid Yang--Mills with mat-
  []
@@ -1451,8 +1457,8 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 38121 strings out of 476305
- 800434 string characters out of 5794636
+ 38125 strings out of 476305
+ 800710 string characters out of 5794636
  1891340 words of memory out of 5000000
  57277 multiletter control sequences out of 15000+600000
  643514 words of font info for 172 fonts, out of 8000000 for 9000
@@ -1488,7 +1494,7 @@ public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb
 1/public/lm/lmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/
 Users/kelru/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (171 pages, 1629393 bytes).
+Output written on CYM.pdf (171 pages, 1629588 bytes).
 PDF statistics:
  2599 PDF objects out of 2984 (max. 8388607)
  544 named destinations out of 1000 (max. 500000)
