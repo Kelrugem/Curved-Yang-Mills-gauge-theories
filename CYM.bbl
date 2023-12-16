@@ -93,6 +93,19 @@ Marco~Castrillón López and Álvaro~Rodríguez Abella.
   2022.
 \newblock https://arxiv.org/abs/2201.07088.
 
+\bibitem{EichtrafoKruemmungUrspruenglich}
+Martin Bojowald, Alexei Kotov, and Thomas Strobl.
+\newblock Lie algebroid morphisms, poisson sigma models, and off-shell closed
+  gauge symmetries.
+\newblock {\em Journal of Geometry and Physics}, 54(4):400--426, 2005.
+\newblock https://doi.org/10.1016/j.geomphys.2004.11.002.
+
+\bibitem{mayerlieAuchEichtrafoStuff}
+Christoph Mayer and Thomas Strobl.
+\newblock Lie algebroid {Y}ang--{M}ills with matter fields.
+\newblock {\em Journal of Geometry and Physics}, 59(12):1613--1623, 2009.
+\newblock https://doi.org/10.1016/j.geomphys.2009.07.018.
+
 \bibitem{bursztyn2004integration}
 Henrique Bursztyn, Marius Crainic, Alan Weinstein, and Chenchang Zhu.
 \newblock Integration of twisted {D}irac brackets.

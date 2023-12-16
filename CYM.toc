@@ -29,14 +29,14 @@
 \contentsline {subsubsection}{\numberline {6.2.3}First step towards towards associated bundles}{102}{subsubsection.6.2.3}%
 \contentsline {subsubsection}{\numberline {6.2.4}Generalized connection 1-forms on principal bundles}{104}{subsubsection.6.2.4}%
 \contentsline {subsection}{\numberline {6.3}Gauge transformations}{113}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Generalized curvature/field strength}{125}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Yang-Mills connections on LGBs}{125}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}Field strength related to Yang-Mills connections}{143}{subsubsection.6.4.2}%
-\contentsline {subsubsection}{\numberline {6.4.3}Gauge transformation of the generalized field strength}{150}{subsubsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4}Generalized curvature/field strength}{126}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Yang-Mills connections on LGBs}{126}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Field strength related to Yang-Mills connections}{144}{subsubsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.3}Gauge transformation of the generalized field strength}{151}{subsubsection.6.4.3}%
 \contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{153}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Definition and gauge invariance}{153}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Examples}{155}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Future prospects}{158}{section.8}%
-\contentsline {section}{\nonumberline List of References}{160}{section*.3}%
-\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{161}{appendix.A}%
+\contentsline {section}{\numberline {8}Future prospects}{159}{section.8}%
+\contentsline {section}{\nonumberline List of References}{161}{section*.3}%
+\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{162}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
