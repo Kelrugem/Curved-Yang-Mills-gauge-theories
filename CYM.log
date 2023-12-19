@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.16)  16 DEC 2023 16:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.16)  16 DEC 2023 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1536,55 +1536,66 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 38077 strings out of 474592
- 791508 string characters out of 5755616
+ 38153 strings out of 474592
+ 792546 string characters out of 5755616
  1964533 words of memory out of 5000000
- 59003 multiletter control sequences out of 15000+600000
- 689296 words of font info for 176 fonts, out of 8000000 for 9000
+ 59057 multiletter control sequences out of 15000+600000
+ 692286 words of font info for 187 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,107p,10920b,1359s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu4e.pfb><C
-:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu57.pfb><C:/Us
-ers/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu59.pfb><C:/Users/
-User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu5b.pfb><C:/Users/User
-/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu5f.pfb><C:/Users/User/App
-Data/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu70.pfb><C:/Users/User/AppData
-/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu74.pfb><C:/Users/User/AppData/Roa
-ming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu78.pfb><C:/Users/User/AppData/Roaming
-/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu79.pfb><C:/Users/User/AppData/Roaming/MiK
-TeX/fonts/type1/arphic/bkaiu/bkaiu7a.pfb><C:/Users/User/AppData/Roaming/MiKTeX/
-fonts/type1/arphic/bkaiu/bkaiu81.pfb><C:/Users/User/AppData/Roaming/MiKTeX/font
-s/type1/arphic/bkaiu/bkaiu8a.pfb><C:/Program Files/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmext
-ra/cmex7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8
-.pfb><C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/public/doublestroke/dsro
-m10.pfb><C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/public/doublestroke/d
-srom8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb
-><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbsy10.pfb><C:/Program Files/M
-iKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/lm/lmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:
-/Program Files/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/lm/lmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm
-/lmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX/fonts/ty
-pe1/public/lm/lmmi9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/Mi
-KTeX/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public
-/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX/fonts/ty
-pe1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri7.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Program Files/M
-iKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><
-C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTe
-X/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/l
-m/lmsy9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Progr
-am Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/User/AppData/
-Roaming/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (172 pages, 1635954 bytes).
+<C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu30.pfb><C
+:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu4e.pfb><C:/Us
+ers/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu53.pfb><C:/Users/
+User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu56.pfb><C:/Users/User
+/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu57.pfb><C:/Users/User/App
+Data/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu59.pfb><C:/Users/User/AppData
+/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu5b.pfb><C:/Users/User/AppData/Roa
+ming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu5e.pfb><C:/Users/User/AppData/Roaming
+/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu5f.pfb><C:/Users/User/AppData/Roaming/MiK
+TeX/fonts/type1/arphic/bkaiu/bkaiu65.pfb><C:/Users/User/AppData/Roaming/MiKTeX/
+fonts/type1/arphic/bkaiu/bkaiu6b.pfb><C:/Users/User/AppData/Roaming/MiKTeX/font
+s/type1/arphic/bkaiu/bkaiu70.pfb><C:/Users/User/AppData/Roaming/MiKTeX/fonts/ty
+pe1/arphic/bkaiu/bkaiu74.pfb><C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/
+arphic/bkaiu/bkaiu78.pfb><C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/arph
+ic/bkaiu/bkaiu79.pfb><C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/b
+kaiu/bkaiu7a.pfb><C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu
+/bkaiu7f.pfb><C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bka
+iu81.pfb><C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu86
+.pfb><C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu8a.pfb
+><C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu8d.pfb><C:
+/Users/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu97.pfb><C:/Use
+rs/User/AppData/Roaming/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu99.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/User/AppData/Roaming/MiKTeX/f
+onts/type1/public/doublestroke/dsrom10.pfb><C:/Users/User/AppData/Roaming/MiKTe
+X/fonts/type1/public/doublestroke/dsrom8.pfb><C:/Program Files/MiKTeX/fonts/typ
+e1/public/amsfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX/fonts/type1/public
+/lm/lmbsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Program Files/MiKTeX/fo
+nts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/
+lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi8.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Prog
+ram Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/M
+iKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
+ic/lm/lmri8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX
+/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/l
+m/lmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
+symbols/msam10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols
+/msbm10.pfb><C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/public/stix/stix-
+mathscr.pfb>
+Output written on CYM.pdf (172 pages, 1683044 bytes).
 PDF statistics:
- 2611 PDF objects out of 2984 (max. 8388607)
+ 2677 PDF objects out of 2984 (max. 8388607)
  548 named destinations out of 1000 (max. 500000)
- 381 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 425 words of extra memory for PDF output out of 10000 (max. 10000000)
 
