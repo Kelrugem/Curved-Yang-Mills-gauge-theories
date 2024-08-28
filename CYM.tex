@@ -9064,7 +9064,7 @@ A + \pi^!\lambda,
 \\
 \widetilde{\nabla^{\mathrm{YM}}}^\lambda
 &\coloneqq
-\nabla^{\mathrm{YM}} - \mathrm{ad}_\lambda,
+\nabla^{\mathrm{YM}} - \mathrm{ad} \circ \lambda,
 \\
 \widetilde{\zeta}^\lambda
 &\coloneqq
@@ -9124,7 +9124,9 @@ where $\widetilde{\pi_{\mathcal{G}^!} \lambda}^r$ denotes the fundamental vector
 &=
 \mathrm{D}_{e_x}R_g \circ \lambda_{x} \circ \mathrm{D}_x \pi_{\mathcal{G}}
 \eas
-for all $g \in \mathcal{G}_x$, and $\widetilde{\pi_{\mathcal{G}}^! \lambda}^l$ is just the typical definition for fundamental vector fields, with an emphasis on that it is via left-multiplication. Thm.\ \ref{thm:FieldRedefStuff} has now several interpretations and implications, where we denote with $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ the equivalence class of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ inherited by $\delta$:
+for all $g \in \mathcal{G}_x$, and $\widetilde{\pi_{\mathcal{G}}^! \lambda}^l$ is just the typical definition for fundamental vector fields, with an emphasis on that it is via left-multiplication. It is now a straight-forward exercise to show that $\widetilde{A}^\lambda$ is a connection 1-form on $\mathcal{P}$ w.r.t.\ $\widetilde{\mu_{\mathcal{G}}^{\mathrm{tot}}}^{\lambda}$.
+
+Thm.\ \ref{thm:FieldRedefStuff} has now several interpretations and implications, where we denote with $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ the equivalence class of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ inherited by $\delta$:
 \begin{enumerate}
 	\item The field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is about picking any other representative for $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$.
 	\item Every other representative of $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ is not just multiplicative, but also a Yang-Mills connection, that is,
