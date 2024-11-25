@@ -39,6 +39,7 @@
 \usepackage{pdfpages} %For \includepdf etc
 %\usepackage{trfsigns} % Fourier and Laplacesymbols for engineering und für \e für \exp
 \newcommand{\e}{\ensuremath{\mathrm{e\;\!}}}
+\newcommand\fibtimes[2]{\mathbin{_{#1}\times_{#2}}}
 %\usepackage{wasysym} %Smiley
 %\usepackage{siunitx} %SI Einheiten
 %\usepackage{eqnarray} %Gleichungen in Tabellenform
@@ -147,6 +148,42 @@
 \setcounter{totalnumber}{2}
 
 \def\tp{^{^{^{\leftrightarrow}}}\!\!\!\!\!\!\!}
+
+%% Quick macros
+
+\newcommand{\makecommand}[3]{%
+    \foreach \i in #3 {%
+        \expandafter\xdef\csname #1\i\endcsname{\noexpand#2{\unexpanded\expandafter{\i}}}%
+    }%
+}
+
+\newcommand{\latinalphabet}{A,a,B,b,C,c,d,D,E,e,F,f,G,g,H,h,I,i,J,j,K,k,L,l,M,m,N,n,O,o,P,p,Q,q,R,r,S,s,T,t,U,u,V,v,W,w,X,x,Y,y,Z,z}
+
+\makecommand{fr}{\mathfrak}{\latinalphabet}
+
+\makecommand{fr}{\mathfrak}{{der,gl,sl,so,osp,brst,su,sp,spin,string,Poisson,inn,at}}
+
+\makecommand{sf}{\mathsf}{\latinalphabet}
+
+\makecommand{sf}{\mathsf}{{id,String,Lie,Hom,SU,inv,SO,Map,Diff,HSymp,id,inn,Inn,CE,hom,Gpd,Bibun,pr}}
+
+\makecommand{rm}{\mathrm}{\latinalphabet}
+
+\makecommand{rm}{\mathrm}{{Ham,ad,id,dim,Ad,im,deg}}
+
+\makecommand{ca}{\mathcal}{\latinalphabet}
+
+\makecommand{I}{\mathbbm}{{N,Z,R,C}}
+
+\makecommand{sc}{\mathscr}{\latinalphabet}
+
+\makecommand{tt}{\mathtt}{\latinalphabet}
+
+\newcommand{\ihom}{\underline{\sfhom}}
+
+\newcommand{\iGpd}{\underline{\sfGpd}}
+
+\DeclareMathOperator{\tr}{tr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Definitionen %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -474,7 +511,9 @@ In \cite{MyThesis} I first focused on Lie algebroids where the anchor map is an 
 
 However, I also studied the other edge case of having Lie algebra bundles (LABs) instead of Lie algebroids: \cite{MyThesis} (also in \cite{My1stpaper}) points out that locally, \textit{i.e.}~over a contractible base manifold $N$, there is always a field redefinition transforming the initial gauge theory to a pre-classical one. Hence, we arrive at a similar situation as for tangent bundles. But globally there are examples given by the adjoint bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$, where $\mathds{S}^n$ ($n \in \mathbb{N}$) denotes the $n$-dimensional sphere.
 
-This is now the starting point of this paper. We want to understand why the adjoint bundle of $\mathds{S}^7 \to \mathds{S}^4$ works as a curved example, and where it differs from the classical formalism of gauge theory. To truly understand this, and also to possibly get new information about the general case regarding Lie algebroids, we will integrate curved Yang-Mills-Higgs gauge theories in the case of LABs in this paper. Using LABs means that there is no coupling to a Higgs field in the usual sense and therefore we will now just speak instead of a curved Yang-Mills gauge theory. In the following we will start outlining the paper's main results; we will focus on an easy presentation in the introduction, especially we will not always restate our assumptions, and the notation will be simplified w.r.t.\ the actual formulation.
+This is now the starting point of this paper. We want to understand why the adjoint bundle of $\mathds{S}^7 \to \mathds{S}^4$ works as a curved example, and where it differs from the classical formalism of gauge theory. To truly understand this, and also to possibly get new information about the general case regarding Lie algebroids, we will integrate curved Yang-Mills-Higgs theories in the case of LABs in this paper. Using LABs means that there is no coupling to a Higgs field in the usual sense and therefore we will now just speak instead of a curved Yang-Mills gauge theory. In the following we will start outlining the paper's main results; we will focus on an easy presentation in the introduction, especially we will not always restate our assumptions, and the notation will be simplified w.r.t.\ the actual formulation.
+
+\subsection{Summary}
 
 The gauge theory presented here will be based on principal bundles $\mathcal{P} \stackrel{\pi}{\to} M$, $M$ a smooth manifold, related to a right action of a Lie group bundle (LGB) $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$. The most important distinction to classical gauge theory is that the action $\Phi$ is a map
 \bas
@@ -506,7 +545,7 @@ for all $(p, g) \in \mathcal{P} * \mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(p, g
 In Section \ref{ConnCurvOnPrincLGBBundle} we will introduce connections and generalized curvatures on principal LGB-bundles: Subsection \ref{PrincBundlLGBBased} starts with introducing principal $\mathcal{G}$-bundles $\mathcal{P}$. Such principal bundles were already introduced in \cite[\S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}, but also here we rephrased it in such a way that these bundles' definition has a more familiar shape for readers not so proficient with the study of groupoids. The main difference to Lie group based principal bundles is the previously-mentioned LGB action $\Phi$. Since these bundles were not studied a lot before we introduce basic notions like morphisms and easy examples, for example LGBs $\mathcal{G}$ themselves are principal $\mathcal{G}$-bundles, so that the gauge theory presented in this paper can also be understood as a gauge theory based not only on "classical" principal bundles but also on LGBs which were excluded in general in the classical formalism. Furthermore we generalize certain statements known about classical principal bundles, \textit{e.g.}\ we observe that a section of $\mathcal{P}$ does not trivialize $\mathcal{P}$ in general, however it introduces an isomorphism to $\mathcal{G}$, as will be pointed out in Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}.
 
 \begin{lemmata*}{Local sections of principal bundles induce isomorphisms to the structural LGB, simplified language}
-Let $s: U \to \mathcal{P}$ be a smooth local section of $\mathcal{P}$ over an open subset $U$ of $M$. Then the orbit map through $s$,
+Let $s\colon U \to \mathcal{P}$ be a smooth local section of $\mathcal{P}$ over an open subset $U$ of $M$. Then the orbit map through $s$,
 \bas
 \mathcal{G}|_U &\to \mathcal{P}|_U,\\
 g &\mapsto s_{\pi_{\mathcal{G}}(g)} \cdot g,
@@ -514,13 +553,19 @@ g &\mapsto s_{\pi_{\mathcal{G}}(g)} \cdot g,
 is a base-preserving principal $\mathcal{G}$-bundle isomorphism.
 \end{lemmata*}
 
-In Subsection \ref{ConnectionSubsection} we finally turn to the notion of connections on $\mathcal{P}$, described as horizontal subbundle $\mathrm{H}\mathcal{P}$ of the tangent bundle $\mathrm{T}\mathcal{P}$, complementary to the vertical bundle $\mathrm{V}\mathcal{P}$, and equivalently we want to describe $\mathrm{H}\mathcal{P}$ as a connection 1-form $A$. As one can already see in the last theorem about the derivative of the action $\Phi$, due to the fact that right-translations $r_g$ of an element $g \in \mathcal{G}_x$ now only acts on $\mathcal{P}_x$, its derivative $\mathrm{D}r_g$ only acts on the tangent bundle of $\mathcal{P}_x$, the vertical tangent vectors of $\mathcal{P}$ (over $x$). Hence, in order to define the pushforward of non-vertical vectors we make use of auxiliary sections. However, this leads to the problem that there are many different sections with the same value over a fixed base point $x \in M$, all of whose pushforwards of non-vertical vectors are in general different. To get rid of the ambiguity in the choice of section we are going to modify and generalize the pushforward of tangent vectors by right-translations. To do so, we fix a horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$, without further assumptions than the bare-bones for horizontal distributions. Then we start to construct the horizontal distribution $\mathrm{H}\mathcal{P}$ initially by its associated parallel transport, shortly denoted now by $\mathrm{PT}^{\mathcal{P}}$; similarly we denote the parallel transport associated to $\mathrm{H}\mathcal{G}$ by $\mathrm{PT}^{\mathcal{G}}$. We want a connection on $\mathcal{P}$ characterised by
+In Subsection \ref{ConnectionSubsection} we finally turn to the notion of connections on $\mathcal{P}$, described as horizontal subbundle $\mathrm{H}\mathcal{P}$ of the tangent bundle $\mathrm{T}\mathcal{P}$, complementary to the vertical bundle $\mathrm{V}\mathcal{P}$, and equivalently we want to describe $\mathrm{H}\mathcal{P}$ as a connection 1-form $A$. As one can already see in the last theorem about the derivative of the action $\Phi$, due to the fact that right-translations $r_g$ of an element $g \in \mathcal{G}_x$ now only acts on $\mathcal{P}_x$, its derivative $\mathrm{D}r_g$ only acts on the tangent bundle of $\mathcal{P}_x$, the vertical tangent vectors of $\mathcal{P}$ (over $x$). Hence, in order to define the pushforward of non-vertical vectors we make use of auxiliary sections. However, this leads to the problem that there are many different sections with the same value over a fixed base point $x \in M$, all of whose pushforwards of non-vertical vectors are in general different. To get rid of the ambiguity in the choice of section we are going to modify and generalize the pushforward of tangent vectors by right-translations. To do so, we fix a horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$, without further assumptions than the bare-bones for horizontal distributions. The \textbf{(modified) right-pushforward} of $X \in \rmT_p \caP$ ($p \in \caP_x$) by $g \in \caG_x$ is then defined as
+\bes
+\car_{g*}(X) \coloneqq \rmD_{(p, g)}\Phi(X, Y),
+\ees
+where $Y \in \rmH_g\caG$ is the unique horizontal vector at $g$ lifting $\rmD_p\pi(X)$.
+
+Then we start to construct the horizontal distribution $\mathrm{H}\mathcal{P}$ initially by its associated parallel transport, shortly denoted now by $\mathrm{PT}^{\mathcal{P}}$; similarly we denote the parallel transport associated to $\mathrm{H}\mathcal{G}$ by $\mathrm{PT}^{\mathcal{G}}$. We want a connection on $\mathcal{P}$ characterised by
 \bas
 \mathrm{PT}^{\mathcal{P}}(p \cdot g)
 &=
 \mathrm{PT}^{\mathcal{P}}(p) \cdot \mathrm{PT}^{\mathcal{G}}(g)
 \eas
-for all $(p, g) \in \mathcal{P}*\mathcal{G}$. However, in order to define the connection 1-form it is useful to find a definition of such $\mathrm{H}\mathcal{P}$ via a symmetry w.r.t.\ a certain map acting on $\mathrm{T}\mathcal{P}$. As already high-lighted, this will be a modification of the pushforward via right-translations. Differentiating the condition about parallel transports w.r.t.\ the curve parameter achieves this modification, summarised in Prop.\ \ref{prop:IsomorphismRightPushAndDarboux}; we explain the second summand of the following proposition afterwards.
+for all $(p, g) \in \mathcal{P}*\mathcal{G}$. However, in order to define the connection 1-form it is useful to find a definition of such $\mathrm{H}\mathcal{P}$ via a symmetry w.r.t.\ a certain map acting on $\mathrm{T}\mathcal{P}$ which we will motivate by . As already high-lighted, this will be a modification of the pushforward via right-translations. Differentiating the condition about parallel transports w.r.t.\ the curve parameter achieves this modification, summarised in Prop.\ \ref{prop:IsomorphismRightPushAndDarboux}; we explain the second summand of the following proposition afterwards.
 
 \begin{propositions*}{The modified right-pushforward}
 For $g \in \mathcal{G}_x$ ($x \in M$) define the map
@@ -542,8 +587,8 @@ where $p \in \mathcal{P}_x$, $X \in \mathrm{T}_p \mathcal{P}$, $\pi^!$ denotes t
 Furthermore, if we have a horizontal distribution $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, then $\mathrm{H}_p\mathcal{P}$ is isomorphic via $\mathcal{r}_{g*}$ to a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$ (this complement is not necessarily $\mathrm{H}_{p \cdot g}\mathcal{P}$).
 \end{propositions*}
 
-This can be generalized to sections $\sigma$ of $\mathcal{G}$ in a straight-forward manner, giving rise to an automorphism $\mathcal{r}_\sigma$ of $\mathrm{T}\mathcal{P}$ over the right-translation $r_\sigma$.
-$\Delta\sigma$ is the generalised version of the Darboux derivative, often simply denoted as $\sigma^{-1} \mathrm{d}\sigma$ in the classical formalism, but in some works like \cite[\S 5.1, page 182ff.]{mackenzieGeneralTheory}\ also already in the classical formalism written as $\Delta\sigma$. As expected, this derivative plays an important role in gauge theory, which is why we will also discuss and introduce the Darboux derivative; usually it only appears in the gauge transformations, but in our case it will already appear now. In Def.\ \ref{def:TotMCFormOnLGB} we will first introduce the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$} as the connection 1-form associated to $\mathcal{G}$ with values in the LAB $\mathcal{g}$ of $\mathcal{G}$; the labelling comes from that this form will play a similar role like the Maurer-Cartan form in the typical formalism for gauge theory, and in contrast to $\mu_{\mathcal{G}}$ it acts on the whole of $\mathrm{T}\mathcal{G}$ instead of just the vertical subbundle.
+This can be generalized to sections $\sigma$ of $\mathcal{G}$ in a straight-forward manner, giving rise to an automorphism $\mathcal{r}_{\sigma*}$ of $\mathrm{T}\mathcal{P}$ over the right-translation $r_\sigma$.
+$\Delta\sigma$ is the generalised version of the Darboux derivative, often simply denoted as $\sigma^{-1} \mathrm{d}\sigma$ in the classical formalism, but in some works like \cite[\S 5.1, page 182ff.]{mackenzieGeneralTheory}\ also already written as $\Delta\sigma$ in the classical formalism. As expected, this derivative plays an important role in gauge theory, which is why we will also discuss and introduce the Darboux derivative; usually it only appears in the gauge transformations, but in our case it will already appear now. In Def.\ \ref{def:TotMCFormOnLGB} we will first introduce the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$} as the connection 1-form associated to $\mathcal{G}$ with values in the LAB $\mathcal{g}$ of $\mathcal{G}$; the labelling comes from that this form will play a similar role like the Maurer-Cartan form in the typical formalism for gauge theory, and in contrast to $\mu_{\mathcal{G}}$ it acts on the whole of $\mathrm{T}\mathcal{G}$ instead of just the vertical subbundle.
 
 \begin{definitions*}{Total Maurer-Cartan form}
 Let us denote with $\pi^{\mathrm{vert}}$ the projection onto the vertical bundle $\mathcal{G}$, corresponding to its horizontal bundle $\mathrm{H}\mathcal{G}$. Then we define the \textbf{total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}} \in \Omega^1\mleft(\mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)$ of $\mathcal{G}$} as the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$, \textit{i.e.}\
@@ -1664,6 +1709,8 @@ For this recall that there is the notion of pullbacks of fibre bundles, see \tex
 \ba
 f^*\mathcal{G}
 &\coloneqq
+N \fibtimes{f}{\pi} \caG
+\coloneqq
 \left\{
 	(x, g) \in N \times \mathcal{G} ~\middle|~
 	f(x) = \pi(g)
@@ -3486,6 +3533,8 @@ Let $M$ and $N$ be two smooth manifolds, $F \stackrel{\pi}{\to} M$ a fibre bundl
 	~\big|~
 	X \in \mathrm{T}_pN, Y\in \mathrm{T}_vF \text{ with } \mathrm{D}_pf(X) = \mathrm{D}_v\pi(Y)
 \bigr\}
+=
+\rmT N \fibtimes{\rmD f}{\rmD \pi} \rmT F
 \eas
 for all $(p, v) \in f^*F$.
 \end{lemmata}
@@ -4431,7 +4480,7 @@ By this result, we would like to have Eq.\ \eqref{SymmetryOfTheVerticalBundle} a
 
 \draw (19,0) node {$\mathcal{G}$}; %These three lines are for LGB projection
 \draw [->] (19,-0.4) -- (19,-3.1);
-%\draw (18.5,-1.75) node {$\pi_{\mathcal{G}}$};
+\draw (18.5,-1.75) node {$\pi_{\mathcal{G}}$};
 
 \draw (15.5,2) node {$\mathcal{G}_U$};
 \draw (14,-3.4) node {$($};
@@ -4445,7 +4494,7 @@ By this result, we would like to have Eq.\ \eqref{SymmetryOfTheVerticalBundle} a
 %\end{figure}
 \end{center}
 
-For $\mathcal{G} \to M$ an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle we fix a point $p \in \mathcal{P}_x$ ($x \in M$) and can multiply that with an element $g \in \mathcal{G}_x$. Infinitesimally, we are interested into how this multiplication by $g$ affects tangent vectors, especially non-vertical ones.
+For $\pi_\caG\colon\mathcal{G} \to M$ an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle we fix a point $p \in \mathcal{P}_x$ ($x \in M$) and can multiply that with an element $g \in \mathcal{G}_x$. Infinitesimally, we are interested into how this multiplication by $g$ affects tangent vectors, especially non-vertical ones.
 
 However, as we have seen in Def.\ \ref{def:LRTranslations}, Rem.\ \ref{rem:AbstractNotationTwoForLeftInvarVfs} and Thm.\ \ref{thm:DiffOfLGBAction} (and its proof) the push-forward of horizontal vectors is not well-defined anymore on non-vertical vectors if one uses a fixed element of an LGB; $r_g$ is just a map $\mathcal{P}_x \to \mathcal{P}_x$. In order to study push-forwards of non-vertical vectors, we need information of the $\mathcal{G}$-action in an open neighbourhood $U$ around the fibres over $x$. Hence we want to use a section $\sigma \in \Gamma(\mathcal{G}|_U)$ with $\sigma_x= g$ instead.
 
@@ -4495,7 +4544,7 @@ However, as we have seen in Def.\ \ref{def:LRTranslations}, Rem.\ \ref{rem:Abstr
 
 \draw (19,0) node {$\mathcal{G}$}; %These three lines are for LGB projection
 \draw [->] (19,-0.4) -- (19,-3.1);
-%\draw (18.5,-1.75) node {$\pi_{\mathcal{G}}$};
+\draw (18.5,-1.75) node {$\pi_{\mathcal{G}}$};
 
 \draw (15.5,2) node {$\mathcal{G}_U$};
 \draw (14,-3.4) node {$($};
@@ -4577,7 +4626,8 @@ X
 &\in
 \mathrm{H}_p\mathcal{P}.
 \eas
-We want to use Thm.\ \ref{thm:DiffOfLGBAction} now in order to understand what Eq.\ \eqref{PTHomomNEw} implies about the corresponding horizontal distribution of $\mathcal{P}$. For this we differentiate both sides of Eq.\ \eqref{PTHomomNEw} with $\mathrm{d}/\mathrm{d}t|_{t=0}$; the left hand side implies that the right hand side is an element of $\mathrm{H}_{p\cdot g}\mathcal{P}$, while the right hand side gives
+
+We differentiate both sides of Eq.\ \eqref{PTHomomNEw} with $\mathrm{d}/\mathrm{d}t|_{t=0}$; the left hand side implies that the right hand side is an element of $\mathrm{H}_{p\cdot g}\mathcal{P}$, while the right hand side gives
 \bas
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft(
 	\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}(g)
@@ -4586,8 +4636,22 @@ We want to use Thm.\ \ref{thm:DiffOfLGBAction} now in order to understand what E
 \mathrm{D}_{(p, g)}\Phi\mleft(
 	X, 
 	Y
+\mright).
+\eas
+We can now already derive an infinitesimal definition of $\rmH\caP$, that is, an Ehresmann connection $\rmH\caP$, given $\rmH \caG$, is precisely such a horizontal distribution such that $\rmD \Phi$ restricts to the horizontal distributions:
+\bes
+\rmD \Phi|_{\rmH\caP \fibtimes{\rmD\pi}{\rmD\pi_\caG} \rmH\caG} \colon 
+\rmH\caP \fibtimes{\rmD\pi}{\rmD\pi_\caG} \rmH\caG \to \rmH \caP,
+\ees
+where $\Phi\colon \mathcal{P}* \mathcal{G} \to \mathcal{P}$ denotes the $\mathcal{G}$-action on $\mathcal{P}$;
+one could say that ``horizontal vectors are a closed algebra''.
+
+We want to use Thm.\ \ref{thm:DiffOfLGBAction} now in order to understand what Eq.\ \eqref{PTHomomNEw} implies about the corresponding horizontal distribution of $\mathcal{P}$ in sense of right-translations:
+\bas
+\mathrm{D}_{(p, g)}\Phi\mleft(
+	X, 
+	Y
 \mright)
-\\
 &=
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
@@ -4597,7 +4661,7 @@ We want to use Thm.\ \ref{thm:DiffOfLGBAction} now in order to understand what E
 		- \mathrm{D}_x \sigma \bigl( \dot{\alpha}(0) \bigr)
 	\Bigr)}}\mright|_{p \cdot g}
 \eas
-where $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{P}$ denotes the $\mathcal{G}$-action on $\mathcal{P}$, $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$ and
+where $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$ and
 \bas
 \dot{\alpha}(0)
 &=
@@ -4641,7 +4705,9 @@ It may not surprise that $\mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G
 &\in
 \mathrm{H}_{p \cdot g}\mathcal{P}
 \ea
-for all $X \in \mathrm{H}_p\mathcal{P}$, and we would like to take this as the starting point of defining a connection on $\mathcal{P}$. We are going to prove that such a definition is independent of the chosen section $\sigma$, and thence this gives the fundamental formula for the following parts of this paper. Last but not least, our starting point was Eq.\ \eqref{SymmetryOfTheVerticalBundle}; there is no contradiction between the approaches of Eq.\ \eqref{SymmetryOfTheVerticalBundle} and \eqref{OiTHatIsHowWeFormulateHorizSymmetry}. If $X$ is a vertical vector, then
+for all $X \in \mathrm{H}_p\mathcal{P}$, and we would like to take this as the starting point of defining a connection on $\mathcal{P}$, denoting this by $\car_{g*}(X)$, the \textbf{modified right-pushforward}. 
+
+By construction, $\car_{g*}(X)$ is independent of the chosen section $\sigma$ because we have seen that it is equivalent to $\mathrm{D}_{(p, g)}\Phi\mleft(X, Y \mright)$, where $Y$ is the unique element of $\rmH_g\caG$ lifting $\rmD_p\pi(X)$; and thence this gives a well-defined fundamental formula for the following parts of this paper. Last but not least, our starting point was Eq.\ \eqref{SymmetryOfTheVerticalBundle}; there is no contradiction between the approaches of Eq.\ \eqref{SymmetryOfTheVerticalBundle} and \eqref{OiTHatIsHowWeFormulateHorizSymmetry}: If $X$ is a vertical vector, then
 \bas
 \mathrm{D}_p\pi(X) &= 0,
 \eas
