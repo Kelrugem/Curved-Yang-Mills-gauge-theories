@@ -37,8 +37,8 @@
 \contentsline {section}{\numberline {7}Curved Yang-Mills gauge theory}{154}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Definition and gauge invariance}{154}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Field redefinitions}{156}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Examples}{158}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Future prospects}{162}{section.8}%
-\contentsline {section}{\nonumberline List of References}{163}{section*.3}%
-\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{165}{appendix.A}%
+\contentsline {subsection}{\numberline {7.3}Examples}{159}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Future prospects}{163}{section.8}%
+\contentsline {section}{\nonumberline List of References}{164}{section*.3}%
+\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{166}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
