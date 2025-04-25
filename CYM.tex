@@ -9119,16 +9119,16 @@ As we have seen previously, the compatibility conditions (Def.\ \ref{def:NowReal
 
 \subsection{Field redefinitions}
 
-As developed in \cite{My1stpaper, MyThesis}: There is an equivalence relation of curved Yang-Mills gauge theories, preserving the dynamics and kinematics of this theory. Let us recapitulate and integrate these:
+As developed in \cite[the latter reference developed the following for Lie algebroids and groupoids as structure]{My1stpaper, MyThesis}: There is an equivalence relation of curved Yang-Mills gauge theories, preserving the dynamics and kinematics of this theory. Let us recapitulate and integrate these:
 
 \begin{definitions}{Field redefinitions on the LGB}{FieldRedefsAsDefIntegrated}
-Let $\pi \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$ with LAB $\mathcal{g}$; furthermore let $\mu_{\mathcal{G}}^{\mathrm{tot}}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \cag)$). We then define \textbf{field redefinitions w.r.t.\ $\lambda \in \Omega^1(M; \mathcal{g})$} of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ by
+Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$ with LAB $\mathcal{g}$; furthermore let $\mu_{\mathcal{G}}^{\mathrm{tot}}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \cag)$). We then define \textbf{field redefinitions w.r.t.\ $\lambda \in \Omega^1(M; \mathcal{g})$} of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ by
 \bes
 \mleft.\mu_{\mathcal{G}}^{\mathrm{tot}, \lambda}\mright|_g
 \coloneqq
 \mleft.\mu_{\mathcal{G}}^{\mathrm{tot}}\mright|_g
-	+ \sAd_{g^{-1}} \circ \mleft.\pi^!\lambda\mright|_g
-	- \mleft.\pi^!\lambda\mright|_g
+	+ \sAd_{g^{-1}} \circ \mleft. \pi_{\mathcal{G}}^!\lambda\mright|_g
+	- \mleft.\pi_{\mathcal{G}}^!\lambda\mright|_g
 \ees
 for all $g \in \caG$
 and of $\zeta$ by
@@ -9140,11 +9140,30 @@ and of $\zeta$ by
 \ees
 \end{definitions}
 
+\begin{remark}
+Equivalently, since we introduced $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a composition of the vertical Maurer-Cartan form with the projection $\pi^{\mathrm{vert}}$ onto the vertical part w.r.t.\ the horizontal distribution on $\mathcal{G}$, we can define the field redefinition of $\pi^{\mathrm{vert}}$ by
+\bas
+\pi^{\mathrm{vert}, \lambda}
+&\coloneqq
+\pi^{\mathrm{vert}}
+	+ \widetilde{\pi_{\mathcal{G}}^! \lambda}^l
+	+ \widetilde{\pi_{\mathcal{G}}^! \lambda}^r,
+\eas
+where $\widetilde{\pi_{\mathcal{G}^!} \lambda}^r$ denotes the fundamental vector field of $\pi_{\mathcal{G}}^! \lambda$ via right-multiplication, that is,
+\bas
+\mleft.\widetilde{\pi_{\mathcal{G}^!} \lambda}^r\mright|_g
+&=
+\mathrm{D}_{e_x}R_g \circ \lambda_{x} \circ \mathrm{D}_x \pi_{\mathcal{G}}
+\eas
+for all $g \in \mathcal{G}_x$, and $\widetilde{\pi_{\mathcal{G}}^! \lambda}^l$ is just the typical definition for fundamental vector fields, with an emphasis on that it is via left-multiplication. 
+\end{remark}
+
 \begin{propositions}{Field redefined Yang-Mills connection a Yang-Mills connection}{YMStaysYM}
 Given the context of Def.\ \ref{def:FieldRedefsAsDefIntegrated}, the field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a Yang-Mills connection w.r.t.\ $\widetilde{\zeta}^\lambda$.
 \end{propositions}
 
-\begin{proof}[Proof of Prop.\ \ref{prop:YMStaysYM}]
+\begin{proof}
+%[Proof of Prop.\ \ref{prop:YMStaysYM}]
 \leavevmode\newline
 It is a straight-forward check to see that $\mu_{\mathcal{G}}^{\mathrm{tot}, \lambda}$ is still multiplicative, and well-known in the mentioned literature regarding multiplicative connections; a quick way to see this is by following Rem.\ \ref{rem:SimplicialDifferentialStuff}: We actually add an exact term,
 \bes
@@ -9153,10 +9172,10 @@ It is a straight-forward check to see that $\mu_{\mathcal{G}}^{\mathrm{tot}, \la
 \mu_{\mathcal{G}}^{\mathrm{tot}}
 	+ \delta \lambda ~.
 \ees
-Thus, $\mu_{\mathcal{G}}^{\mathrm{tot}, \lambda}$ stays closed, and thus it is multiplicative. That it satisfies the generalised Maurer-Cartan equation w.r.t.\ $\zeta^\lambda$ is a straight-forward but a bit lengthy calculation, which is why the keep this as an exercise for the reader; for the infinitesimal, i.e.\ in the connected case by Thm.\ \ref{thm:GenMCEq}, see \cite{My1stpaper, MyThesis}.
+Thus, $\mu_{\mathcal{G}}^{\mathrm{tot}, \lambda}$ stays closed, and hence it is multiplicative. That it satisfies the generalised Maurer-Cartan equation w.r.t.\ $\zeta^\lambda$ is a straight-forward but a bit lengthy calculation, which is why the keep this as an exercise for the reader; for the infinitesimal, i.e.\ in the connected case by Thm.\ \ref{thm:GenMCEq}, see \cite{My1stpaper, MyThesis}.
 \end{proof}
 
-In fact, a simple field redefinition of an Ehresmann connection preserves the compatibilities with the new multiplicative connection; for the following observe that the field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ induces a field redefinition of $\nabla^{\mathrm{YM}}$ given by
+In fact, a simple field redefinition of an Ehresmann connection preserves the compatibilities with the new multiplicative connection, and this is precisely one of the ideas of the field redefinitions. As usual, the difference of two connection 1-forms $A - A^\prime$ should be a one-form which is horizontal and transforms via the Adjoint representations under the modified push-forward. However, we have seen here that the modified push-forward depends on a connection on the group bundle. Thus, is it possible to vary $A$ with a 1-form which is horizontal \textit{and} does not transform via the Adjoint transformation such that $A^\prime$ is a connection 1-form but w.r.t.\ a different connection on the group bundle? The answer to this are the field redefinitions; for the following observe that the field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ induces a field redefinition of $\nabla^{\mathrm{YM}}$ given by
 \bes
 \nabla^{\mathrm{YM}, \lambda}
 =
@@ -9187,19 +9206,48 @@ for all $\lambda \in \Omega^1(M; \mathcal{G})$.
 
 \begin{proof}
 \leavevmode\newline
-That $F^\lambda = F$ follows by similar calculations as in \cite{My1stpaper, MyThesis}. Therefore let us only prove that $A^\lambda$ is still a connection 1-form even though we add a form which does not transform by the Adjoin representation in general; the trick is to observe that $A^\lambda$ is a connection 1-form w.r.t.\ the field redefined connection on $\mathcal{G}$. $A^\lambda$ is clearly still the identity on the vertical structure, and henceforth let us check its behaviour w.r.t.\ the modified pushforward induced by $\mu_{\mathcal{G}}^{\mathrm{tot}, \lambda}$, denoted by $\mathcal{r}_\sigma^\lambda$ for $\sigma \in \Gamma(\mathcal{G})$: We have to study
+That $F^\lambda = F$ follows by similar calculations as in \cite{My1stpaper, MyThesis}. Therefore let us only prove that $A^\lambda$ is still a connection 1-form. $A^\lambda$ is clearly still the identity on the vertical structure, and henceforth let us check its behaviour w.r.t.\ the modified pushforward induced by $\mu_{\mathcal{G}}^{\mathrm{tot}, \lambda}$, denoted by $\mathcal{r}_\sigma^\lambda$ for $\sigma \in \Gamma(\mathcal{G})$: We have to study
 \bas
-\mleft(\mleft(\mathcal{r}_\sigma^\lambda\mright)^!A^\lambda\mright)_p(X)
+\mleft(\mleft(\mathcal{r}_\sigma^\lambda\mright)^!A^\lambda\mright)_p(Y)
 \eas
-for all $p \in \mathcal{P}_x$ and $X \in \mathrm{T}_p\mathcal{P}$. First of all, similar to the beginning of the proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} we have
+for all $p \in \mathcal{P}_x$ and $Y \in \mathrm{T}_p\mathcal{P}$. First of all, similar to the beginning of the proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} we have
 \bes
 \mleft(\mathcal{r}_\sigma^\lambda\mright)^! \mleft(\pi^! \lambda\mright)
 =
-\pi^! \lambda
+\pi^! \lambda ~ ,
 \ees
+and thus we essentially only need to study the field redefined Darboux derivative:
+\bes
+\Delta^\lambda \sigma
+\coloneqq
+\sigma^! \mu_{\mathcal{G}}^{\mathrm{tot}, \lambda}
+=
+\Delta \sigma 
+	+ \mathrm{Ad}_{\sigma^{-1}} \circ \lambda
+	- \lambda ~ .
+\ees
+In total,
+\bas
+\mleft(\mleft(\mathcal{r}_\sigma^\lambda\mright)^!A^\lambda\mright)_p(Y)
+&=
+A_{p \cdot \sigma_x}
+	\mleft( 
+		\mathcal{r}_{\sigma*}(Y)
+	\mright)
+	- \mleft(\pi^!\mleft( \mathrm{Ad}_{\sigma^{-1}} \circ \lambda \mright)\mright)_p(Y)
+	+ \lambda_x(X)
+	- \lambda_x(X)
+\\
+&=
+\mleft( \sAd_{\sigma^{-1}} \circ A - \sAd_{\sigma^{-1}} \circ \pi^!\lambda \mright)_p(Y)
+\\
+&=
+\mleft(\sAd_{\sigma^{-1}} \circ A^\lambda\mright)_p(Y) ~ ,
+\eas
+where $Y \coloneqq \mathrm{D}_p\pi(X)$, $\mathcal{r}_\sigma$ denotes the modified pushforward via $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as usual, and we made use of $A$ being a connection 1-form w.r.t.\ $\mu_{\mathcal{G}}^{\mathrm{tot}}$.
 \end{proof}
 
-
+We see there is a transformation keeping the Lagrangian invariant such that the dynamics are preserved; $\mathcal{P}$ itself does not change and thus the gauge transformations in form of (local) principal bundle automorphisms also stay the same, and so the kinematics are preserved, too. However, field redefinitions non-trivially transform data like $\nabla^{\mathrm{YM}}$ so that it may become flat, and we may end up at a pre-classical theory describing the same physics. $\zeta$ itself might survive as shown in \cite{My1stpaper, MyThesis}. Let us summarize these results from the point of view as in Rem.\ \ref{rem:SimplicialDifferentialStuff}.
 
 \begin{remarks}{Meaning of Field redefinitions}{FieldRedefIntegrated}
 Recall Rem.\ \ref{rem:SimplicialDifferentialStuff} and its notation, \textit{i.e.}\ there is a simplicial differential $\delta$ so that
@@ -9215,30 +9263,14 @@ F_{\mathcal{G}}
 	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}},
 \eas
 where $\pi_{\mathcal{G}}$ is the projection of $\mathcal{G}$.
-Thus, the field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is given by
+The field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ can be written as
 \bas
 \mu_{\mathcal{G}}^{\mathrm{tot}, \lambda}
-&\coloneqq
+&=
 \mu_{\mathcal{G}}^{\mathrm{tot}}
 	+ \delta \lambda ~ .
 \eas
-Equivalently, since we introduced $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a composition of the vertical Maurer-Cartan form with the projection $\pi^{\mathrm{vert}}$ onto the vertical part w.r.t.\ the horizontal distribution on $\mathcal{G}$, we can define the field redefinition of $\pi^{\mathrm{vert}}$ by
-\bas
-\pi^{\mathrm{vert}, \lambda}
-&\coloneqq
-\pi^{\mathrm{vert}}
-	+ \widetilde{\pi_{\mathcal{G}}^! \lambda}^l
-	+ \widetilde{\pi_{\mathcal{G}}^! \lambda}^r,
-\eas
-where $\widetilde{\pi_{\mathcal{G}^!} \lambda}^r$ denotes the fundamental vector field of $\pi_{\mathcal{G}}^! \lambda$ via right-multiplication, that is,
-\bas
-\mleft.\widetilde{\pi_{\mathcal{G}^!} \lambda}^r\mright|_g
-&=
-\mathrm{D}_{e_x}R_g \circ \lambda_{x} \circ \mathrm{D}_x \pi_{\mathcal{G}}
-\eas
-for all $g \in \mathcal{G}_x$, and $\widetilde{\pi_{\mathcal{G}}^! \lambda}^l$ is just the typical definition for fundamental vector fields, with an emphasis on that it is via left-multiplication. We will later show that $A^\lambda$ is a connection 1-form on $\mathcal{P}$ w.r.t.\ $\widetilde{\mu_{\mathcal{G}}^{\mathrm{tot}}}^{\lambda}$.
-
-Prop.\ \ref{prop:YMStaysYM} has now several interpretations and implications, where we denote with $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ the equivalence class of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ inherited by $\delta$:
+Prop.\ \ref{prop:YMStaysYM} and Thm.\ \ref{thm:EhresmannTransformedEhresmann} has now several interpretations and implications, where we denote with $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ the equivalence class of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ inherited by $\delta$:
 \begin{enumerate}
 	\item The field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is about picking any other representative for $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$.
 	\item Every other representative of $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ is not just multiplicative, but also a Yang-Mills connection, that is,
@@ -9251,95 +9283,13 @@ Prop.\ \ref{prop:YMStaysYM} has now several interpretations and implications, wh
 \end{enumerate}
 \end{remarks}
 
+Last but not least, these field redefinitions are not just any transformation preserving the physics. As pointed out in \cite{MyThesis}, curved Yang-Mills gauge theory is a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions, similar to how one reformulates Classical Mechanics so that it is form-invariant w.r.t.\ Galilei or Lorentz transformations. This reformulation introduces extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength. From that point of view it is tempting to ask whether there are examples which cannot be flattened by field redefinitions:
+
 \subsection{Examples}\label{CYMExamples}
 
-Let us provide some examples of this theory, especially also recall Ex.\ \ref{ex:ClassicalYangMillsConnection} and the labels introduced there. However, before we do so, it is natural to ask whether or not there is a transformation keeping the Lagrangian invariant, but non-trivially transforming data like $\nabla^{\mathrm{YM}}$ so that it may become flat, and we may end up at a classical theory describing the same physics. In fact, there is such a transformation which we have studied in \cite{MyThesis} (and \cite{My1stpaper} which is just formulated for LABs so that it may be easier for the reader to follow given the context here). These transformations are simply called \textbf{field redefinitions}, but given the time of their development, they just focus on infinitesimal gauge invariance and the underlying infinitesimal compatibility conditions.
+First examples which cannot be flattened by field redefinitions were found in \cite{My1stpaper, MyThesis}; but many more were found after the upload of this work: It turned out that connections like $\mu_{\mathcal{G}}^{\mathrm{tot}}$ help classifying singular foliations (\cite{Fischer:2401.05966}), and in return singular foliation theory provides a full theory of examples and even a classification of such examples as long as the group bundle is semisimple as worked out in \cite{Fischer:2024vak}; motivated by Ex.\ \ref{ex:NablaYMAsAdjointConnection} (recall also \ref{ex:OurVeryImportantExample}).
 
-\begin{theorems}{Invariance w.r.t.\ field redefinitions, \newline \cite[\S 4, Def.\ 4.5.1 and 4.7.10, Thm.\ 4.7.13]{MyThesis}, \cite[\S 3, Thm.\ 3.6]{My1stpaper}}{FieldRedefStuff}
-Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. We also define \textbf{field redefinitions w.r.t.\ $\lambda \in \Omega^1(M; \mathcal{g})$} by
-\bas
-\widetilde{A}^\lambda
-&\coloneqq
-A + \pi^!\lambda,
-\\
-\widetilde{\nabla^{\mathrm{YM}}}^\lambda
-&\coloneqq
-\nabla^{\mathrm{YM}} - \mathrm{ad} \circ \lambda,
-\\
-\widetilde{\zeta}^\lambda
-&\coloneqq
-\zeta
-	- \mathrm{d}^{\nabla^{\mathrm{YM}}}\lambda + \frac{1}{2} \mleft[ \lambda \stackrel{\wedge}{,} \lambda \mright]_{\mathcal{g}}.
-\eas
-
-Then we have that $\widetilde{\nabla^{\mathrm{YM}}}^\lambda$ and $\widetilde{\zeta}^\lambda$ satisfy the infinitesimal compatibility conditions of Def.\ \ref{def:YangMillsConnection} and
-\bas
-\widetilde{F}^\lambda
-&\coloneqq
-\mathrm{d}^{\pi^*\widetilde{\nabla^{\mathrm{YM}}}^\lambda} \widetilde{A}^\lambda
-	+ \frac{1}{2} \mleft[ \widetilde{A}^\lambda \stackrel{\wedge}{,} \widetilde{A}^\lambda \mright]_{\pi^*\mathcal{g}}
-	+ \pi^!\widetilde{\zeta}^\lambda
-\equiv
-F
-\eas
-for all $\lambda \in \Omega^1(M; \mathcal{G})$. That is, the Lagrangian $\mathfrak{L}_{\mathrm{CYM}}$ is invariant under these field redefinitions, and infinitesimal gauge invariance is preserved.
-\end{theorems}
-
-In fact, these field redefinitions are not just any transformation preserving the physics. As pointed out in \cite{MyThesis}, curved Yang-Mills gauge theory is a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions, similar to how one reformulates Classical Mechanics so that it is form-invariant w.r.t.\ Galilei or Lorentz transformations. This reformulation introduces extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength.
-
-However, there is also a natural explanation given the context here; it is straightforward to show the following and we leave the proof up to the reader.
-
-\begin{remarks}{Field redefinitions integrated}{FieldRedefIntegrated}
-Recall Rem.\ \ref{rem:SimplicialDifferentialStuff} and its notation, \textit{i.e.}\ there is a simplicial differential $\delta$ so that
-\bas
-\delta \mu_{\mathcal{G}}^{\mathrm{tot}} &= 0,\\
-F_{\mathcal{G}} &= \delta\zeta,
-\eas
-where $F_{\mathcal{G}}$ denotes the curvature of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ in a classical approach, that is,
-\bas
-F_{\mathcal{G}}
-&=
-\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathrm{YM}}} \mu_{\mathcal{G}}^{\mathrm{tot}}
-	+ \frac{1}{2} \mleft[ \mu_{\mathcal{G}}^{\mathrm{tot}} \stackrel{\wedge}{,} \mu_{\mathcal{G}}^{\mathrm{tot}} \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}},
-\eas
-where $\pi_{\mathcal{G}}$ is the projection of $\mathcal{G}$.
-The field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is given by
-\bas
-\widetilde{\mu_{\mathcal{G}}^{\mathrm{tot}}}^{\lambda}
-&\coloneqq
-\mu_{\mathcal{G}}^{\mathrm{tot}}
-	- \delta \lambda,
-\eas
-which integrates the one for $\nabla^{\mathrm{YM}}$. Equivalently, since we introduced $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a composition of the vertical Maurer-Cartan form with the projection $\pi^{\mathrm{vert}}$ onto the vertical part w.r.t.\ the horizontal distribution on $\mathcal{G}$, we can define the field redefinition of $\pi^{\mathrm{vert}}$ by
-\bas
-\widetilde{\pi^{\mathrm{vert}}}^\lambda
-&\coloneqq
-\pi^{\mathrm{vert}}
-	- \widetilde{\pi_{\mathcal{G}}^! \lambda}^l
-	- \widetilde{\pi_{\mathcal{G}}^! \lambda}^r,
-\eas
-where $\widetilde{\pi_{\mathcal{G}^!} \lambda}^r$ denotes the fundamental vector field of $\pi_{\mathcal{G}}^! \lambda$ via right-multiplication, that is,
-\bas
-\mleft.\widetilde{\pi_{\mathcal{G}^!} \lambda}^r\mright|_g
-&=
-\mathrm{D}_{e_x}R_g \circ \lambda_{x} \circ \mathrm{D}_x \pi_{\mathcal{G}}
-\eas
-for all $g \in \mathcal{G}_x$, and $\widetilde{\pi_{\mathcal{G}}^! \lambda}^l$ is just the typical definition for fundamental vector fields, with an emphasis on that it is via left-multiplication. It is now a straight-forward exercise to show that $\widetilde{A}^\lambda$ is a connection 1-form on $\mathcal{P}$ w.r.t.\ $\widetilde{\mu_{\mathcal{G}}^{\mathrm{tot}}}^{\lambda}$.
-
-Thm.\ \ref{thm:FieldRedefStuff} has now several interpretations and implications, where we denote with $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ the equivalence class of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ inherited by $\delta$:
-\begin{enumerate}
-	\item The field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is about picking any other representative for $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$.
-	\item Every other representative of $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ is not just multiplicative, but also a Yang-Mills connection, that is,
-	\bas
-	\delta \widetilde{\mu_{\mathcal{G}}^{\mathrm{tot}}}^{\lambda} &= 0,\\
-	\widetilde{F_{\mathcal{G}}}^{\lambda} &= \delta\widetilde{\zeta}^{\lambda},
-	\eas
-	where $\widetilde{F_{\mathcal{G}}}^{\lambda}$ is defined like $F_{\mathcal{G}}$ but using $\widetilde{\mu_{\mathcal{G}}^{\mathrm{tot}}}^{\lambda}$ instead of $\mu_{\mathcal{G}}^{\mathrm{tot}}$.
-	\item Regarding the choice of $\mu_{\mathcal{G}}^{\mathrm{tot}}$, the Lagrangian only depends on the choice of class $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$. However, the explicit choice of $\zeta$ may still matter: One could vary $\zeta$ with centre-valued forms while keeping $\mu_{\mathcal{G}}^{\mathrm{tot}}$ fixed, this is in general not totally covered by the field redefinitions and may affect the Lagrangian as discussed in \cite{MyThesis} (or \cite{My1stpaper}).
-\end{enumerate}
-\end{remarks}
-
-As a next step one can then investigate whether there is a curved Yang-Mills gauge theory which cannot be transformed to a classical infinitesimal gauge theory via a field redefinition, this has be done in the mentioned references whose results will be used in the following examples.
+Let us first point out the obvious:
 
 \begin{examples}{Classical examples}{ClassicalYMTheoriesRecovered}
 By Ex.\ \ref{ex:ClassicalYangMillsConnection}, we just recover the classical formalism of gauge theory if having a classical principal bundle $P$ on which a trivial LGB $\mathcal{G} = M \times G$ acts on the right, where $G$ is a Lie group with Lie algebra $\mathfrak{g}$. $\mathrm{H}\mathcal{G}$ is the canonical flat Yang-Mills connection, $\nabla^{\mathrm{YM}}=\nabla^{\mathrm{cYM}}$ is the canonical flat connection on $\mathcal{g} = M \times \mathfrak{g}$, and $\zeta \equiv 0$. Then every example known in the classical formalism carries over.
@@ -9347,7 +9297,7 @@ By Ex.\ \ref{ex:ClassicalYangMillsConnection}, we just recover the classical for
 Furthermore, starting with such a classical example, by \cite[\S 6, Cor.\ 6.2]{My1stpaper} we know that if $\mathfrak{g}$ has a non-zero centre (and if $M$ is at least three-dimensional), then one can always add a centre-valued $\zeta$ to this gauge theory, transforming it into a flat pre-classical gauge theory, $\nabla^{\mathrm{YM}} = \nabla^{\mathrm{pYM}}$, with non-trivial $\zeta$. If $\mathrm{d}^{\nabla^{\mathrm{pYM}}} \zeta \neq 0$, then there is no $\lambda \in \Omega^1(M; \mathcal{g})$ with $\widetilde{\zeta}^\lambda = 0$.
 \end{examples}
 
-This shows that there are examples with non-trivial $\zeta$, stable w.r.t.\ field redefinitions. However, as shown in \cite[\S 5.2, Thm.\ 5.16]{My1stpaper} (or alternatively \cite[\S 5.1.5, Thm.\ 5.1.33]{MyThesis}), if $M$ is contractible, then there is $\lambda \in \Omega^1(M; \mathcal{g})$ so that $\widetilde{\nabla^{\mathrm{YM}}}^\lambda$ is flat. Thus, if $M$ is contractible, then every curved Yang-Mills Lagrangian is equivalent to a Lagrangian of a pre-classical gauge theory ($\zeta$ may be non-vanishing). This may be due to that $\mathcal{G}$ is a trivial fibre bundle, and then the LGB action breaks down to Lie group action; recall all our discussions related to classical principal bundles equipped with an LGB action of a trivial LGB as in the previous example. 
+This shows that there are examples with non-trivial $\zeta$, stable w.r.t.\ field redefinitions. However, as shown in \cite[\S 5.2, Thm.\ 5.16]{My1stpaper} (or alternatively \cite[\S 5.1.5, Thm.\ 5.1.33]{MyThesis}), if $M$ is contractible, then there is $\lambda \in \Omega^1(M; \mathcal{g})$ so that $\nabla^{\mathrm{YM}, \lambda}$ is flat. Thus, if $M$ is contractible, then every curved Yang-Mills Lagrangian is equivalent to a Lagrangian of a pre-classical gauge theory ($\zeta$ may be non-vanishing). This may be due to that $\mathcal{G}$ is a trivial fibre bundle, and then the LGB action breaks down to Lie group action; recall all our discussions related to classical principal bundles equipped with an LGB action of a trivial LGB as in the previous example. 
 Hence we conjecture:
 
 \begin{conjectures}{Trivial LGBs are associated with pre-classical theories}{TrivialLGBIsPreclassical}

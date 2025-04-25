@@ -6,36 +6,38 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Database file #1: Literatur.bib
 Warning--empty school in MyThesis
-You've used 20 entries,
+Warning--empty journal in Fischer:2401.05966
+Warning--empty journal in Fischer:2024vak
+You've used 22 entries,
             1791 wiz_defined-function locations,
-            597 strings with 7447 characters,
-and the built_in function-call counts, 4353 in all, are:
-= -- 412
-> -- 157
+            608 strings with 7942 characters,
+and the built_in function-call counts, 4689 in all, are:
+= -- 438
+> -- 179
 < -- 2
-+ -- 61
-- -- 41
-* -- 294
-:= -- 708
-add.period$ -- 77
-call.type$ -- 20
-change.case$ -- 16
++ -- 69
+- -- 47
+* -- 309
+:= -- 770
+add.period$ -- 85
+call.type$ -- 22
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 172
-empty$ -- 436
-format.name$ -- 41
-if$ -- 954
+cite$ -- 25
+duplicate$ -- 188
+empty$ -- 464
+format.name$ -- 47
+if$ -- 1024
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 20
-newline$ -- 120
-num.names$ -- 20
-pop$ -- 35
+int.to.str$ -- 22
+missing$ -- 22
+newline$ -- 132
+num.names$ -- 22
+pop$ -- 43
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 65
+skip$ -- 72
 stack$ -- 0
 substring$ -- 322
 swap$ -- 22
@@ -43,8 +45,8 @@ text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 40
-width$ -- 22
-write$ -- 251
-(There was 1 warning)
+warning$ -- 3
+while$ -- 42
+width$ -- 24
+write$ -- 273
+(There were 3 warnings)
