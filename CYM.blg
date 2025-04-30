@@ -8,36 +8,37 @@ Database file #1: Literatur.bib
 Warning--empty school in MyThesis
 Warning--empty journal in Fischer:2401.05966
 Warning--empty journal in Fischer:2024vak
-You've used 22 entries,
+Warning--empty journal in Fischer:2024hqy
+You've used 23 entries,
             1791 wiz_defined-function locations,
-            608 strings with 7942 characters,
-and the built_in function-call counts, 4689 in all, are:
-= -- 438
-> -- 179
+            613 strings with 8191 characters,
+and the built_in function-call counts, 4870 in all, are:
+= -- 451
+> -- 193
 < -- 2
-+ -- 69
-- -- 47
-* -- 309
-:= -- 770
-add.period$ -- 85
-call.type$ -- 22
-change.case$ -- 18
++ -- 74
+- -- 51
+* -- 319
+:= -- 804
+add.period$ -- 89
+call.type$ -- 23
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 188
-empty$ -- 464
-format.name$ -- 47
-if$ -- 1024
+cite$ -- 27
+duplicate$ -- 196
+empty$ -- 478
+format.name$ -- 51
+if$ -- 1061
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 22
-newline$ -- 132
-num.names$ -- 22
-pop$ -- 43
+int.to.str$ -- 23
+missing$ -- 23
+newline$ -- 138
+num.names$ -- 23
+pop$ -- 47
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 72
+skip$ -- 75
 stack$ -- 0
 substring$ -- 322
 swap$ -- 22
@@ -45,8 +46,8 @@ text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
-while$ -- 42
-width$ -- 24
-write$ -- 273
-(There were 3 warnings)
+warning$ -- 4
+while$ -- 43
+width$ -- 25
+write$ -- 284
+(There were 4 warnings)

@@ -163,7 +163,7 @@
 
 \makecommand{fr}{\mathfrak}{{der,gl,sl,so,osp,brst,su,sp,spin,string,Poisson,inn,at}}
 
-\makecommand{sf}{\mathsf}{\latinalphabet}
+\makecommand{sf}{}{\latinalphabet}
 
 \makecommand{sf}{\mathsf}{{id,String,Lie,Hom,SU,inv,SO,Map,Diff,HSymp,id,inn,Inn,CE,hom,Gpd,Bibun,pr}}
 
@@ -175,7 +175,7 @@
 
 \makecommand{I}{\mathbbm}{{N,Z,R,C}}
 
-\makecommand{sc}{\mathscr}{\latinalphabet}
+\makecommand{sc}{\mathcal}{\latinalphabet}
 
 \makecommand{tt}{\mathtt}{\latinalphabet}
 
@@ -744,8 +744,8 @@ for all $x \in M$, $X \in \mathrm{T}_xM$ and $\nu \in \Gamma(\mathcal{g})$, is a
 
 In fact, $\nabla^{\mathcal{G}}$ will play the role of $\nabla$ from the beginning of this introduction. Furthermore, this connection will allow us to define the generalized Maurer-Cartan equation in Thm.\ \ref{thm:GenMCEq} and Def.\ \ref{def:NowReallyYangMillsConnectio}.
 
-\begin{definitions*}{Yang-Mills connection, simplified notation}
-We say that $\mathrm{H}\mathcal{G}$, and $\mu_{\mathcal{G}}^{\mathrm{tot}}$, is a \textbf{Yang-Mills connection (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$)}, if it satisfies the \textbf{compatibility conditions}:
+\begin{definitions*}{Multiplicative Yang-Mills connection, simplified notation}
+We say that $\mathrm{H}\mathcal{G}$, and $\mu_{\mathcal{G}}^{\mathrm{tot}}$, is a \textbf{multiplicative Yang-Mills connection (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$)}, if it satisfies the \textbf{compatibility conditions}:
 \begin{enumerate}
 	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative (\textit{i.e.}\ $\mathrm{H}\mathcal{G}$ is an Ehresmann connection),
 	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies the \textbf{generalized Maurer-Cartan equation}, that is,
@@ -769,7 +769,7 @@ We say that $\mathrm{H}\mathcal{G}$, and $\mu_{\mathcal{G}}^{\mathrm{tot}}$, is 
 Making a pull-back of the generalized Maurer-Cartan equation w.r.t.\ a section $\sigma \in \Gamma(\mathcal{G})$ is straight-forward and will be provided in Cor.\ \ref{cor:PullbackOfMCSupperEquation}.
 
 \begin{corollaries*}{Pullback of generalized Maurer-Cartan equation}
-Let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection w.r.t.\ a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then
+Let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection w.r.t.\ a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then
 \bas
 \mathrm{d}^{\nabla^{\mathcal{G}}} \Delta \sigma 
 	+ \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} 
@@ -808,8 +808,8 @@ for all $X, Y \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathcal{g})$, where $R_{
 
 The condition about the curvature is in fact the second infinitesimal compatibility condition proposed by Alexei Kotov and Thomas Strobl, so that we can conclude that Yang-Mills connections on LGBs serve as an integral of the infinitesimal compatibility conditions which we will point out in Def.\ \ref{def:YangMillsConnection} and Rem.\ \ref{rem:YangMillsEqualsInfYM}.
 
-\begin{theorems*}{Yang-Mills connections satisfy the infinitesimal compatibility conditions}
-Every Yang-Mills connection (w.r.t.\ $\zeta \in \Omega^2(M; \mathcal{g})$) $\mathrm{H}\mathcal{G}$ is an \textbf{infinitesimal Yang-Mills connection (on $\mathcal{G}$)}, that is, it satisfies the \textbf{infinitesimal compatibility conditions}
+\begin{theorems*}{multiplicative Yang-Mills connections satisfy the infinitesimal compatibility conditions}
+Every multiplicative Yang-Mills connection (w.r.t.\ $\zeta \in \Omega^2(M; \mathcal{g})$) $\mathrm{H}\mathcal{G}$ is an \textbf{infinitesimal multiplicative Yang-Mills connection (on $\mathcal{G}$)}, that is, it satisfies the \textbf{infinitesimal compatibility conditions}
 \bas
 \nabla^{\mathcal{G}}\mleft( \mleft[ \mu, \nu \mright]_{\mathcal{g}} \mright)
 &=
@@ -825,7 +825,7 @@ for all $\mu, \nu \in \Gamma(\mathcal{g})$ and $X, Y \in \mathfrak{X}(M)$.
 
 We will denote such connections $\nabla^{\mathcal{G}}$ by $\nabla^{\mathrm{YM}}$. Additionally we will mention in Rem.\ \ref{rem:SimplicialDifferentialStuff} that multiplicativity of the total Maurer-Cartan form is in fact a closedness condition w.r.t.\ a certain simplicial differential $\delta$, introduced in \cite[beginning of \S 1.2]{crainic2003differentiable}. The generalized Maurer-Cartan equation is then an exactness-condition of the "classical" curvature for the total Maurer-Cartan form, its $\delta$-primitive given by $\zeta$. This is in alignment with the infinitesimal compatibility conditions which are also equivalent to statements about closedness and exactness w.r.t.\ the Chevalley-Eilenberg complex.
 
-This will finish the discussion about the connection on $\mathcal{G}$, and it will be important for defining the field strength which will be discussed afterwards, starting with Def.\ \ref{def:NewFieldStrength}. For this we will always assume now that $\mathrm{H}\mathcal{G}$ is a Yang-Mills connection w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$ (while $\mathrm{H}\mathcal{P}$ is still an Ehresmann connection).
+This will finish the discussion about the connection on $\mathcal{G}$, and it will be important for defining the field strength which will be discussed afterwards, starting with Def.\ \ref{def:NewFieldStrength}. For this we will always assume now that $\mathrm{H}\mathcal{G}$ is a multiplicative Yang-Mills connection w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$ (while $\mathrm{H}\mathcal{P}$ is still an Ehresmann connection).
 
 \begin{definitions*}{(Generalized) Field strength}
 We define the \textbf{(generalized) curvature} or \textbf{(generalized) field strength $F$ (of $A$)} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
@@ -845,7 +845,7 @@ F(X, Y)
 for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
 \end{definitions*}
 
-With a lengthy calculation evolving around that $\mathrm{H}\mathcal{G}$ is a Yang-Mills connection, especially using the generalized Maurer-Cartan equation, we will show in Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} that $F$ transforms in a suitable way when making a pull-back w.r.t.\ the modified right-pushforward, which is the last step needed for defining the physical theory and its associated Lagrangian.
+With a lengthy calculation evolving around that $\mathrm{H}\mathcal{G}$ is a multiplicative Yang-Mills connection, especially using the generalized Maurer-Cartan equation, we will show in Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} that $F$ transforms in a suitable way when making a pull-back w.r.t.\ the modified right-pushforward, which is the last step needed for defining the physical theory and its associated Lagrangian.
 
 \begin{propositions*}{Properties of the generalized field strength, simplified notation}
 We have the following properties of the field strength:
@@ -942,7 +942,7 @@ We have
 for all principal bundle automorphisms $H$.
 \end{theorems*}
 
-As the final part of statements we will discuss new examples of gauge theory in Subsection \ref{CYMExamples}, after pointing out that this gauge theory generalizes the classical formalism. We will also discuss this matter in the context of my previously-mentioned Ph.D.\ thesis, \cite{MyThesis}, and the field redefinitions. Especially, the paper concludes with the reason why this project started: The inner group bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$ is an example of curved Yang-Mills gauge theory, so that $\nabla^{\mathrm{YM}}$ is not curved; we will present this in Ex.\ \ref{ex:HopfEx}. We will point out that this is indeed due to the fact that involved LGB is non-trivial, so that we also conjecture that trivial LGBs imply the existence of a field redefinition flattening $\nabla^{\mathrm{YM}}$.
+As the final part of statements we will discuss new examples of gauge theory in Subsection \ref{CYMExamples}, after pointing out that this gauge theory generalizes the classical formalism. We will also discuss this matter in the context of my previously-mentioned Ph.D.\ thesis, \cite{MyThesis}, and the field redefinitions. Especially, the paper concludes with the reason why this project started: The inner group bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$ is one of many examples of curved Yang-Mills gauge theory, so that $\nabla^{\mathrm{YM}}$ is not curved; we will present this in Ex.\ \ref{ex:Hopf}. We will point out that this is indeed due to the fact that involved LGB is non-trivial, so that we also conjecture that trivial LGBs imply the existence of a field redefinition flattening $\nabla^{\mathrm{YM}}$.
 
 \begin{examples*}{Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$ giving rise to a curved Yang-Mills gauge theory}
 Let $P$ be the Hopf bundle
@@ -7217,14 +7217,14 @@ Alexei's and Thomas's theory also generalizes the curvature/field strength relat
 
 \subsection{Generalized curvature/field strength}\label{CurvatureSubsection}
 
-\subsubsection{Yang-Mills connections on LGBs}\label{MultiplicativeForms}
+\subsubsection{multiplicative Yang-Mills connections on LGBs}\label{MultiplicativeForms}
 
 In the following we will introduce the curvature; in order to achieve gauge invariance later in the physical gauge theory, we will now need to assume what we will call \textbf{compatibility conditions} on the horizontal distribution of the structural LGB $\mathcal{G}$. Here in this work we will just present these compatibility conditions, and you will be able to see in the proofs why this leads to gauge invariance later. However, if you want to understand the following conditions coming from a point of view not knowing the solution beforehand, then either see \cite{CurvedYMH} or \cite{MyThesis}; the latter also provides a physical motivation using what I called the \textbf{field redefinitions} which naturally motivate the gauge theory presented here by transforming a classical gauge theory in such a way that the physics is preserved; now recall Def.\ \ref{def:ConnectionOnLAB} for the following.
 
 We start with the infinitesimal version of the compatibility conditions, already known and pointed out in the previously-mentioned references.
 
-\begin{definitions}{Infinitesimal Yang-Mills connection}{YangMillsConnection}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is an \textbf{infinitesimal Yang-Mills connection (on $\mathcal{G}$)} if there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that the $\mathcal{G}$-connection $\nabla^{\mathcal{G}}$ on the associated LAB $\mathcal{g}$ with bracket $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ satisfies the \textbf{infinitesimal compatibility conditions}
+\begin{definitions}{Infinitesimal multiplicative Yang-Mills connection}{YangMillsConnection}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is an \textbf{infinitesimal multiplicative Yang-Mills connection (on $\mathcal{G}$)} if there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that the $\mathcal{G}$-connection $\nabla^{\mathcal{G}}$ on the associated LAB $\mathcal{g}$ with bracket $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ satisfies the \textbf{infinitesimal compatibility conditions}
 \ba\label{CondSGleichNullLAB}
 \nabla^{\mathcal{G}}\mleft( \mleft[ \mu, \nu \mright]_{\mathcal{g}} \mright)
 &=
@@ -7235,7 +7235,7 @@ R_{\nabla^{\mathcal{G}}}(X, Y)\mu
 &=
 \mleft[ \zeta(X, Y), \mu \mright]_{\mathcal{g}}\label{CondKruemmungmitBLAB}
 \ea
-for all $\mu, \nu \in \Gamma(\mathcal{g})$ and $X, Y \in \mathfrak{X}(M)$, where $R_{\nabla^{\mathcal{G}}}$ is the curvature of $\nabla^{\mathcal{G}}$. We then also call $\nabla^{\mathcal{G}}$ an \textbf{(infinitesimal) Yang-Mills connection} and denote it by $\nabla^{\mathrm{YM}}$.
+for all $\mu, \nu \in \Gamma(\mathcal{g})$ and $X, Y \in \mathfrak{X}(M)$, where $R_{\nabla^{\mathcal{G}}}$ is the curvature of $\nabla^{\mathcal{G}}$. We then also call $\nabla^{\mathcal{G}}$ an \textbf{(infinitesimal) multiplicative Yang-Mills connection} and denote it by $\nabla^{\mathrm{YM}}$.
 
 In the following, $\zeta$ is always such a 2-form as given here, and even though it is not uniquely given we will treat it as if it is fixed for a given $\nabla^{\mathrm{YM}}$. 
 \end{definitions}
@@ -7244,12 +7244,10 @@ In the following, $\zeta$ is always such a 2-form as given here, and even though
 \leavevmode\newline
 As illustrated in \cite[\S 5.1]{MyThesis} and \cite{My1stpaper} such connections also arise in \cite[\S 7.2, page 271ff.]{mackenzieGeneralTheory}: There these connections are called \textbf{Lie derivation laws covering a coupling} due to the fact that these are important in the construction of "coupling" an LAB to a Lie algebroid via a Whitney sum in such a way that the outcome is again a Lie algebroid. There is a strong relationship of this study with the gauge theory we are going to define, however, we will not need this so that we will not repeat what has been discussed in \cite[\S 5.1]{MyThesis} and \cite{My1stpaper}. 
 
-One may want to write that $\mleft( \nabla^{\mathrm{YM}}, \zeta \mright)$ is a Yang-Mills connection, giving an emphasis on the non-uniqueness of $\zeta$. However, we are not going to do so, and the mentioned references and relations to Mackenzie's work actually show that there is just one object behind all of that describing this Yang-Mills connection and its relation to the following gauge theory. It would take too much time introducing all of this again; see the references.
-
-The relation to Mackenzie's study can be useful for the interested reader to understand the importance of these compatibility conditions, too. In my opinion, the compatibility conditions together with a trivial what Mackenzie calls the obstruction class (and an ad-invariant fibre metric on the LAB) are needed to define infinitesimal Yang-Mills gauge theories from an axiomatic point of view. If the reader is interested into that, then I would appreciate an email so that I can send these details.
+One may want to write that $\mleft( \nabla^{\mathrm{YM}}, \zeta \mright)$ is a multiplicative Yang-Mills connection, giving an emphasis on the non-uniqueness of $\zeta$. However, we are not going to do so, and the mentioned references and relations to Mackenzie's work actually show that there is just one object behind all of that describing this multiplicative Yang-Mills connection and its relation to the following gauge theory. It would take too much time introducing all of this again; see the references.
 \end{remark}
 %For this we will start 
-%We will need several auxiliary result, also related to the Darboux derivative w.r.t.\ Yang-Mills connections. Especially also recall all the discussion around the modified push-forward $\mathcal{r}$ via right-translations, Def.\ \ref{def:WeModTheRIghtPush}.
+%We will need several auxiliary result, also related to the Darboux derivative w.r.t.\ multiplicative Yang-Mills connections. Especially also recall all the discussion around the modified push-forward $\mathcal{r}$ via right-translations, Def.\ \ref{def:WeModTheRIghtPush}.
 
 We want to integrate these infinitesimal compatibility conditions to conditions on $\mathrm{H}\mathcal{G}$ directly.
 Let us initially focus on the first infinitesmal compatibility condition \eqref{CondSGleichNullLAB}. In the following we will also view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle which is equipped with the same horizontal distribution as $\mathcal{G}$ as LGB; related notions and notations carry over. One can show that Ehresmann connections satisfy \eqref{CondSGleichNullLAB}, and in fact Ehresmann connections on LGBs (and Lie groupoids) were already discussed in \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. \textbf{Special thanks to Camille Laurent-Gengoux for pointing out these references and discussing related subjects, this helped me tremendously.}
@@ -7526,7 +7524,7 @@ thus, concluding the proof with
 
 The Leibniz rule of the Darboux derivative extends to $\nabla^{\mathcal{G}}$.
 
-\begin{lemmata}{The conjugation of the canonical LAB connection is a Yang-Mills connection}{FieldRedefViaLGBSection}
+\begin{lemmata}{The conjugation of the canonical LAB connection is a multiplicative Yang-Mills connection}{FieldRedefViaLGBSection}
 Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then we have
 \ba\label{SpecialFieldRedef}
 \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathcal{G}} \circ \mathrm{Ad}_\sigma
@@ -7542,7 +7540,7 @@ for all $\sigma \in \Gamma(\mathcal{G})$, that is,
 	+ \mleft[ \Delta\sigma(X), \nu \mright]_{\mathcal{g}}
 \eas
 for all $\nu \in \Gamma(\mathcal{g})$ and $X \in \mathfrak{X}(M)$.
-If $\mathrm{H}\mathcal{G}$ is an infinitesimal Yang-Mills connection, $\nabla^{\mathcal{G}} = \nabla^{\mathrm{YM}}$, especially $R_{\nabla^{\mathrm{YM}}} = \mathrm{ad}_\zeta$ for $\zeta \in \Omega^2(M; \mathcal{g})$, then $\widetilde{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathrm{YM}} \circ \mathrm{Ad}_\sigma$ is also an infinitesimal Yang-Mills connection with
+If $\mathrm{H}\mathcal{G}$ is an infinitesimal multiplicative Yang-Mills connection, $\nabla^{\mathcal{G}} = \nabla^{\mathrm{YM}}$, especially $R_{\nabla^{\mathrm{YM}}} = \mathrm{ad}_\zeta$ for $\zeta \in \Omega^2(M; \mathcal{g})$, then $\widetilde{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathrm{YM}} \circ \mathrm{Ad}_\sigma$ is also an infinitesimal multiplicative Yang-Mills connection with
 \bas
 R_{\widetilde{\nabla}^\sigma}
 &=
@@ -8117,7 +8115,7 @@ R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
 \eas
 for all $\nu \in \Gamma(\mathcal{g})$, which is the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB}.
 
-$\bullet$ On the other hand, if $\mathrm{H}\mathcal{G}$ satisfies the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB}, $R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu = \mleft[ \zeta, \cdot \mright]_{\mathcal{g}}$, then $\mathrm{H}\mathcal{G}$ is an infinitesimal Yang-Mills connection by Lemma \ref{lem:YangMillsConnAnEhresmann}, $\nabla^{\mathcal{G}} = \nabla^{\mathrm{YM}}$, and we know by Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation} (Lemma \ref{lem:FieldRedefViaLGBSection}) that 
+$\bullet$ On the other hand, if $\mathrm{H}\mathcal{G}$ satisfies the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB}, $R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu = \mleft[ \zeta, \cdot \mright]_{\mathcal{g}}$, then $\mathrm{H}\mathcal{G}$ is an infinitesimal multiplicative Yang-Mills connection by Lemma \ref{lem:YangMillsConnAnEhresmann}, $\nabla^{\mathcal{G}} = \nabla^{\mathrm{YM}}$, and we know by Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation} (Lemma \ref{lem:FieldRedefViaLGBSection}) that 
 \bas
 \mleft[ \mathrm{d}^{\nabla^{\mathrm{YM}}} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} - \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, ~ \nu \mright]_{\mathcal{g}}
 &=
@@ -8198,23 +8196,23 @@ Keeping the same notation as in the proof of Thm.\ \ref{thm:GenMCEq}, we have de
 
 Thus, we can finally define the connection we need on the LGB.
 
-\begin{definitions}{Yang-Mills connection}{NowReallyYangMillsConnectio}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is a \textbf{Yang-Mills connection (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$)}, if it satisfies the \textbf{compatibility conditions}:
+\begin{definitions}{multiplicative Yang-Mills connection}{NowReallyYangMillsConnectio}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is a \textbf{multiplicative Yang-Mills connection (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$)}, if it satisfies the \textbf{compatibility conditions}:
 \begin{enumerate}
 	\item $\mathrm{H}\mathcal{G}$ is an Ehresmann connection,
 	\item the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies the generalized Maurer-Cartan equation (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$).
 \end{enumerate}
-By Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} we can equivalently define $\mathrm{H}\mathcal{G}$ as a Yang-Mills connection if
+By Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} we can equivalently define $\mathrm{H}\mathcal{G}$ as a multiplicative Yang-Mills connection if
 \begin{enumerate}
 	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is multiplicative,
 	\item $\mu_{\mathcal{G}}^{\mathrm{tot}}$ satisfies the generalized Maurer-Cartan equation (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$).
 \end{enumerate}
 
-We then label $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a Yang-Mills connection, too.
+We then label $\mu_{\mathcal{G}}^{\mathrm{tot}}$ as a multiplicative Yang-Mills connection, too.
 \end{definitions}
 
-\begin{remarks}{Yang-Mills connections integrate infinitesimal Yang-Mills connections}{YangMillsEqualsInfYM}
-By Lemma \ref{lem:YangMillsConnAnEhresmann} and Thm.\ \ref{thm:GenMCEq}, every Yang-Mills connection is also an infinitesimal Yang-Mills connections, \textit{i.e.}\ the infinitesimal compatibility conditions are also satisfied.
+\begin{remarks}{Multiplicative Yang-Mills connections integrate infinitesimal multiplicative Yang-Mills connections}{YangMillsEqualsInfYM}
+By Lemma \ref{lem:YangMillsConnAnEhresmann} and Thm.\ \ref{thm:GenMCEq}, every multiplicative Yang-Mills connection is also an infinitesimal multiplicative Yang-Mills connections, \textit{i.e.}\ the infinitesimal compatibility conditions are also satisfied.
 \end{remarks}
 
 \begin{remarks}{Relation to simplicial differential}{SimplicialDifferentialStuff}
@@ -8288,21 +8286,21 @@ It is straight-forward to check that $\delta F_{\mathcal{G}} = 0$ (see \textit{e
 	\label{tab:CompatibilityConditionsOnLGBAndItsLAB}
 \end{table}
 
-To conclude this subsubsection, let us provide canonical examples of Yang-Mills connections; we will make use of Thm.\ \ref{thm:GenMCEq} in order to prove that the generalized Maurer-Cartan equation is satisfied.
+To conclude this subsubsection, let us provide canonical examples of multiplicative Yang-Mills connections; we will make use of Thm.\ \ref{thm:GenMCEq} in order to prove that the generalized Maurer-Cartan equation is satisfied.
 
-\begin{examples}{(Pre-)Classical Yang-Mills connection}{ClassicalYangMillsConnection}
+\begin{examples}{(Pre-)Classical multiplicative Yang-Mills connection}{ClassicalYangMillsConnection}
 Let us look at a classical principal bundle $P$ with trivial LGB $\mathcal{G} = M \times G$, $G$ a Lie group; recall Ex.\ \ref{ex:TheCLassicalPrincAsEx} and \ref{ex:OurConnectionIsReallyMoreGeneral}. The canonical flat connection $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$ induces the canonical flat connection $\nabla^{\mathcal{G}}$ on its LAB $\mathcal{g} = M \times \mathfrak{g}$, recall Ex.\ \ref{ex:CanonicalFlatGConnection}. Thus,
 \bas
 R_{\nabla^{\mathcal{G}}} &= 0
 \eas
 and so we can set $\zeta \equiv 0$. By Ex.\ \ref{ex:OurConnectionIsReallyMoreGeneral} (viewing $\mathcal{G}$ also as a principal bundle equipped with the same horizontal distribution) we know that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, so that its total Maurer-Cartan form is multiplicative.
 
-We therefore call flat $\nabla^{\mathrm{cYM}} \coloneqq \nabla^{\mathcal{G}}$ a \textbf{classical Yang-Mills connection}, regardless of whether or not $\mathcal{G}$ is trivial.
+We therefore call flat $\nabla^{\mathrm{cYM}} \coloneqq \nabla^{\mathcal{G}}$ a \textbf{classical multiplicative Yang-Mills connection}, regardless of whether or not $\mathcal{G}$ is trivial.
 
-However, observe that $\zeta$ can be centre-valued and non-zero while $\nabla^{\mathcal{G}}$ is still flat. In such an occasion we speak of a \textbf{pre-classical Yang-Mills connection}, denoted by $\nabla^{\mathrm{pYM}}$.
+However, observe that $\zeta$ can be centre-valued and non-zero while $\nabla^{\mathcal{G}}$ is still flat. In such an occasion we speak of a \textbf{pre-classical multiplicative Yang-Mills connection}, denoted by $\nabla^{\mathrm{pYM}}$.
 \end{examples}
 
-\begin{examples}{Associated connections of inner group bundles are Yang-Mills connections}{OurVeryImportantExample}
+\begin{examples}{Associated connections of inner group bundles are multiplicative Yang-Mills connections}{OurVeryImportantExample}
 Recall Ex.\ \ref{ex:AssociatedLGBsAndTheirCanonicalConnection}, its setup and notation. We have discussed a canonical connection on associated LGBs $\mathcal{H} = P \times_\psi H$, called associated connection which is an Ehresmann connection. 
 
 As it is well-known, the curvature measures the holonomy, that is, the parallel transport over closed (contractible) curves. Together with Eq.\ \eqref{CondKruemmungmitBLAB}, the parallel transport over a closed (contractible) curve $\alpha$ should act as conjugation with some group element. Let us see whether this holds here; there is a unique $g \in G$ for $p \in P$ such that
@@ -8329,10 +8327,10 @@ Thus, if $\mathcal{H} = c_G(P)$, the inner group bundle of Ex.\ \ref{ex:InnerLGB
 \mleft[p, h\mright] \cdot
 \mleft[p, g^{-1}\mright],
 \eas
-the conjugation of $[p, h]$ with $[p, g]$ in $c_G(P)$. It follows that there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that Eq.\ \eqref{CondKruemmungmitBLAB} is satisfied. This also implies that the associated connection of an inner group bundle is a Yang-Mills connection. We will not prove this approach, instead the next approach provides an alternative proof with an explicit expression for $\zeta$.
+the conjugation of $[p, h]$ with $[p, g]$ in $c_G(P)$. It follows that there is a $\zeta \in \Omega^2(M; \mathcal{g})$ such that Eq.\ \eqref{CondKruemmungmitBLAB} is satisfied. This also implies that the associated connection of an inner group bundle is a multiplicative Yang-Mills connection. We will not prove this approach, instead the next approach provides an alternative proof with an explicit expression for $\zeta$.
 \end{examples}
 
-\begin{examples}{Yang-Mills connections on inner group bundles: Alternative point of view and explanation}{NablaYMAsAdjointConnection}
+\begin{examples}{multiplicative Yang-Mills connections on inner group bundles: Alternative point of view and explanation}{NablaYMAsAdjointConnection}
 Alternatively one can prove that the total Maurer-Cartan form solves the generalized Maurer-Cartan equation in Ex.\ \ref{ex:OurVeryImportantExample} by using the aforementioned relationship of the compatibility conditions with Mackenzie's study about extending Lie algebroids via LABs; recall Remark \ref{MackenziesStuffRelation}. The following is an information for the experienced reader: The LAB of $c_G(P)$ is given by the adjoint bundle $\mathrm{Ad}(P)$; recall Ex.\ \ref{ex:AssociatedLABsFromAssocLGBs}. $\mathrm{Ad}(P)$ is the kernel of the Atiyah sequence (see \textit{e.g.}\ \cite[\S 3.2, page 90ff.]{mackenzieGeneralTheory}), a short exact sequence of Lie algebroids over $M$
 \begin{center}
 	\begin{tikzcd}
@@ -8345,7 +8343,7 @@ where $\mathrm{At}(P)$ is the Atiyah bundle of $P$. A connection on $P$ in the "
 &=
 \mleft[ \chi(X), \nu \mright]_{\mathrm{At}(P)}
 \eas
-for all $X \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathrm{Ad}(P))$. It follows by straight-forward calculations as in \cite[\S 7.3, Prop.\ 7.3.2 and Lemma 7.3.3, page 278]{mackenzieGeneralTheory} that $\nabla^{\mathrm{YM}}$ is indeed a Yang-Mills connection with $\zeta \in \Omega^2(M;\mathrm{Ad}(P))$ for example given by 
+for all $X \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathrm{Ad}(P))$. It follows by straight-forward calculations as in \cite[\S 7.3, Prop.\ 7.3.2 and Lemma 7.3.3, page 278]{mackenzieGeneralTheory} that $\nabla^{\mathrm{YM}}$ is indeed a multiplicative Yang-Mills connection with $\zeta \in \Omega^2(M;\mathrm{Ad}(P))$ for example given by 
 \bas
 \zeta(Y, Z)
 &\coloneqq
@@ -8357,17 +8355,17 @@ for all $Y, Z \in \mathfrak{X}(M)$. In other words, $\nabla^{\mathrm{YM}}$ is th
 &\coloneqq
 \mleft[ \mathrm{PT}^{P}(p), v \mright]
 \eas
-for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal parallel transport inherited by $\mathrm{PT}^{c_G(P)}$, so that we can conclude that $\nabla^{\mathrm{YM}}$ corresponds to the Yang-Mills connection on $c_G(P)$ in sense of Def.\ \ref{def:ConnectionOnLAB} (also recall Rem.\ \ref{PTLABComingFromPTLGB}).
+for all $[p, v] \in \mathrm{Ad}(P)$. This is clearly just the infinitesimal parallel transport inherited by $\mathrm{PT}^{c_G(P)}$, so that we can conclude that $\nabla^{\mathrm{YM}}$ corresponds to the multiplicative Yang-Mills connection on $c_G(P)$ in sense of Def.\ \ref{def:ConnectionOnLAB} (also recall Rem.\ \ref{PTLABComingFromPTLGB}).
 
-This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$ (as a field strength with values in the adjoint bundle). Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle, thence also the label as Yang-Mills connection to reflect its relation to the classical theory.
+This proof gives a certain interpretation of $\nabla^{\mathrm{YM}}$ and $\zeta$: In the case of $\mathcal{G}$ being the inner group bundle of a typical gauge theory related to a principal $G$-bundle $P$, one can view $\nabla^{\mathrm{YM}}$ as the adjoint connection on the adjoint bundle, induced by $\chi$ a classical connection on $P$, this implies by Eq.\ \eqref{CondKruemmungmitBLAB} that $\zeta$ is the field strength related to $\chi$ (as a field strength with values in the adjoint bundle). Thus one may say in this case that the generalised sense of connection as in Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is modified by a classical connection from a classical principal bundle, thence also the label as multiplicative Yang-Mills connection to reflect its relation to the classical theory.
 \end{examples}
 
-\subsubsection{Field strength related to Yang-Mills connections}
+\subsubsection{Field strength related to multiplicative Yang-Mills connections}
 
 Let us now introduce and discuss the field strength.
 
 \begin{definitions}{(Generalized) Field strength}{NewFieldStrength}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we define the \textbf{(generalized) curvature} or \textbf{(generalized) field strength $F$ (of $A$)} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we define the \textbf{(generalized) curvature} or \textbf{(generalized) field strength $F$ (of $A$)} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
 \bas
 F
 &\coloneqq
@@ -8387,7 +8385,7 @@ for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
 Of course, we expect certain properties, naturally generalized by our previous discussions:
 
 \begin{propositions}{Properties of the generalized field strength}{NewFieldStrengthWithCoolProps}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
 \begin{itemize}
 	\item \textbf{(Form of type $\sAd$)}
 	\bas
@@ -8408,7 +8406,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \end{itemize}
 \end{propositions}
 
-However, despite the easy proof in the classical theory, the proof of the first property in Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} will be rather involved; most of the proof is straight-forward calculation, and then use our discussion about Yang-Mills connections; the quintessence will be about using Lemma \ref{lem:BracketVertHor} (for first order terms w.r.t.\ $\sigma$) and Cor.\ \ref{cor:PullbackOfMCSupperEquation} (for second order terms w.r.t.\ $\sigma$).
+However, despite the easy proof in the classical theory, the proof of the first property in Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} will be rather involved; most of the proof is straight-forward calculation, and then use our discussion about multiplicative Yang-Mills connections; the quintessence will be about using Lemma \ref{lem:BracketVertHor} (for first order terms w.r.t.\ $\sigma$) and Cor.\ \ref{cor:PullbackOfMCSupperEquation} (for second order terms w.r.t.\ $\sigma$).
 %Now we can finally prove Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}.
 
 \begin{proof}[Proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}]
@@ -8764,7 +8762,7 @@ Finally, we can conclude this proof by combining the previous result with our fi
 We achieve of course also a structure equation.
 
 \begin{theorems}{Structure equation of the generalized field strength}{StructureEq}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the \textbf{structure equation}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the \textbf{structure equation}
 \bas
 F
 =
@@ -8911,7 +8909,7 @@ F\mleft(X, \widetilde{\nu}\mright)
 Concluding this subsubsection, we also achieve a generalized Bianchi identity, which we already have proven in \cite[\S 7, Thm.\ 7.3]{My1stpaper} and \cite[\S 5, Thm.\ 5.1.42]{MyThesis}; the proof is straightforward to show, making use of the infinitesimal compatibility conditions, Def.\ \ref{def:YangMillsConnection}.
 
 \begin{theorems}{Generalized Bianchi identity, \cite[\S 5, Thm.\ 5.1.42]{MyThesis}}{GenBianchi}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the \textbf{(generalized) Bianchi identity}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the \textbf{(generalized) Bianchi identity}
 \bas
 \mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}}F
 	+ \mleft[ A \stackrel{\wedge}{,} F \mright]_{\pi^*\mathcal{g}}
@@ -8925,7 +8923,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 Similar to Subsection \ref{GaugeTrafoForA} we will now discuss the gauge transformation of the generalized field strength $F$; recall Thm.\ \ref{thm:GaugeTrafoOfGaugeBoson}.
 
 \begin{theorems}{Gauge transformation of the generalized field strength}{GaugeTrafoOfCurv}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. We then have that $H^!F$ is the field strength related to $H^!A$ and
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. We then have that $H^!F$ is the field strength related to $H^!A$ and
 \bas
 H^!F
 &=
@@ -8984,7 +8982,7 @@ for all $X, Y \in \mathrm{T}_p \mathcal{P}$; this finishes the proof.
 We will now extend this again to a local change of gauges (sections of $\mathcal{P}$).
 
 \begin{definitions}{Local field strength}{LocalFieldStrength}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we define the \textbf{local curvature} of \textbf{local field strength $F_s \in \Omega^2\mleft(U; \mleft.\mathcal{g}\mright|_U\mright)$ (w.r.t.\ $s$)} by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we define the \textbf{local curvature} of \textbf{local field strength $F_s \in \Omega^2\mleft(U; \mleft.\mathcal{g}\mright|_U\mright)$ (w.r.t.\ $s$)} by
 \bas
 F_s
 &\coloneqq
@@ -8995,7 +8993,7 @@ s^!F.
 In previous calculations for the total Maurer-Cartan form and the generalized Maurer-Cartan equation we have basically already shown the pullback of the structure equation.
 
 \begin{corollaries}{Pullback of the structure equation}{PullbackOfStructureEq}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we can express the local field strength as the pullback of the structure equation, that is,
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we can express the local field strength as the pullback of the structure equation, that is,
 \bas
 F_s
 &=
@@ -9013,7 +9011,7 @@ This follows quickly by the same calculation as for proving Eq.\ \eqref{Pullback
 The gauge transformation of the field strength $F$ describes the behaviour of $F$ under a change of gauge.
 
 \begin{theorems}{Gauge transformations again as a change of gauge}{LocalGaugeTrafoChangeGaugeFieldStrength}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
 
 Then we have for the fields strength of $A$ over $U_i \cap U_j$ that
 \bas
@@ -9047,7 +9045,7 @@ We eventually are able to conclude this paper with the definition of what we wil
 for all $g \in \mathcal{G}_x$ ($x \in M$) and $\mu, \nu \in \mathcal{g}_x$.
 
 \begin{corollaries}{Contraction of local field strength with Ad-invariant fibre metric is well-defined}{ContractionOfLocalFIeldWellDefined}
-Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $\mleft( U_i \mright)_i$ be an open covering of $M$ so that there are subordinate gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$.
+Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $\mleft( U_i \mright)_i$ be an open covering of $M$ so that there are subordinate gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$.
 
 Then the top-degree form $\mathfrak{L}_{\mathrm{CYM}}[A] \in \Omega^{\mathrm{dim}(M)}(M; \mathbb{R})$, defined locally by
 \bas
@@ -9072,7 +9070,7 @@ using the $\mathrm{Ad}$-invariance of $\kappa$. This concludes the proof.
 \end{proof}
 
 \begin{definitions}{Curved Yang-Mills gauge theory}{CYMGTFinally}
-Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
+Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
 
 Then the functional $A \mapsto \mathfrak{L}_{\mathrm{CYM}}[A]$ is called the \textbf{curved Yang-Mills Lagrangian}, where $\mathfrak{L}_{\mathrm{CYM}}[A]$ is defined in Cor.\ \ref{cor:ContractionOfLocalFIeldWellDefined}.
 \end{definitions}
@@ -9080,7 +9078,7 @@ Then the functional $A \mapsto \mathfrak{L}_{\mathrm{CYM}}[A]$ is called the \te
 By construction, this Lagrangian is gauge-invariant.
 
 \begin{theorems}{Gauge invariance of the curved Yang-Mills Lagrangian}{GaugeInvarianceOfLagrangian}
-Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
+Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
 
 Then we have
 \bas
@@ -9122,7 +9120,7 @@ As we have seen previously, the compatibility conditions (Def.\ \ref{def:NowReal
 As developed in \cite[the latter reference developed the following for Lie algebroids and groupoids as structure]{My1stpaper, MyThesis}: There is an equivalence relation of curved Yang-Mills gauge theories, preserving the dynamics and kinematics of this theory. Let us recapitulate and integrate these:
 
 \begin{definitions}{Field redefinitions on the LGB}{FieldRedefsAsDefIntegrated}
-Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$ with LAB $\mathcal{g}$; furthermore let $\mu_{\mathcal{G}}^{\mathrm{tot}}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \cag)$). We then define \textbf{field redefinitions w.r.t.\ $\lambda \in \Omega^1(M; \mathcal{g})$} of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ by
+Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$ with LAB $\mathcal{g}$; furthermore let $\mu_{\mathcal{G}}^{\mathrm{tot}}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \cag)$). We then define \textbf{field redefinitions w.r.t.\ $\lambda \in \Omega^1(M; \mathcal{g})$} of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ by
 \bes
 \mleft.\mu_{\mathcal{G}}^{\mathrm{tot}, \lambda}\mright|_g
 \coloneqq
@@ -9158,8 +9156,8 @@ where $\widetilde{\pi_{\mathcal{G}^!} \lambda}^r$ denotes the fundamental vector
 for all $g \in \mathcal{G}_x$, and $\widetilde{\pi_{\mathcal{G}}^! \lambda}^l$ is just the typical definition for fundamental vector fields, with an emphasis on that it is via left-multiplication. 
 \end{remark}
 
-\begin{propositions}{Field redefined Yang-Mills connection a Yang-Mills connection}{YMStaysYM}
-Given the context of Def.\ \ref{def:FieldRedefsAsDefIntegrated}, the field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a Yang-Mills connection w.r.t.\ $\widetilde{\zeta}^\lambda$.
+\begin{propositions}{Field redefined multiplicative Yang-Mills connection a multiplicative Yang-Mills connection}{YMStaysYM}
+Given the context of Def.\ \ref{def:FieldRedefsAsDefIntegrated}, the field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is a multiplicative Yang-Mills connection w.r.t.\ $\widetilde{\zeta}^\lambda$.
 \end{propositions}
 
 \begin{proof}
@@ -9184,7 +9182,7 @@ In fact, a simple field redefinition of an Ehresmann connection preserves the co
 \ees
 
 \begin{theorems}{Field redefinition of Ehresmann connections}{EhresmannTransformedEhresmann}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mu_{\mathcal{G}}^{\mathrm{tot}}$ be a Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \cag)$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$ w.r.t.\ $\mu_{\mathcal{G}}^{\mathrm{tot}}$. We define the \textbf{field redefinitions w.r.t.\ $\lambda \in \Omega^1(M; \mathcal{g})$ of $A$} by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mu_{\mathcal{G}}^{\mathrm{tot}}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \cag)$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$ w.r.t.\ $\mu_{\mathcal{G}}^{\mathrm{tot}}$. We define the \textbf{field redefinitions w.r.t.\ $\lambda \in \Omega^1(M; \mathcal{g})$ of $A$} by
 \bes
 A^\lambda
 \coloneqq
@@ -9273,7 +9271,7 @@ The field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ can be written as
 Prop.\ \ref{prop:YMStaysYM} and Thm.\ \ref{thm:EhresmannTransformedEhresmann} has now several interpretations and implications, where we denote with $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ the equivalence class of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ inherited by $\delta$:
 \begin{enumerate}
 	\item The field redefinition of $\mu_{\mathcal{G}}^{\mathrm{tot}}$ is about picking any other representative for $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$.
-	\item Every other representative of $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ is not just multiplicative, but also a Yang-Mills connection, that is,
+	\item Every other representative of $\mleft[\mu_{\mathcal{G}}^{\mathrm{tot}}\mright]_{\delta}$ is not just multiplicative, but also a multiplicative Yang-Mills connection, that is,
 	\bas
 	\delta \mu_{\mathcal{G}}^{\mathrm{tot}, \lambda} &= 0,\\
 	F_{\mathcal{G}}^{\lambda} &= \delta\zeta^{\lambda},
@@ -9292,7 +9290,7 @@ First examples which cannot be flattened by field redefinitions were found in \c
 Let us first point out the obvious:
 
 \begin{examples}{Classical examples}{ClassicalYMTheoriesRecovered}
-By Ex.\ \ref{ex:ClassicalYangMillsConnection}, we just recover the classical formalism of gauge theory if having a classical principal bundle $P$ on which a trivial LGB $\mathcal{G} = M \times G$ acts on the right, where $G$ is a Lie group with Lie algebra $\mathfrak{g}$. $\mathrm{H}\mathcal{G}$ is the canonical flat Yang-Mills connection, $\nabla^{\mathrm{YM}}=\nabla^{\mathrm{cYM}}$ is the canonical flat connection on $\mathcal{g} = M \times \mathfrak{g}$, and $\zeta \equiv 0$. Then every example known in the classical formalism carries over.
+By Ex.\ \ref{ex:ClassicalYangMillsConnection}, we just recover the classical formalism of gauge theory if having a classical principal bundle $P$ on which a trivial LGB $\mathcal{G} = M \times G$ acts on the right, where $G$ is a Lie group with Lie algebra $\mathfrak{g}$. $\mathrm{H}\mathcal{G}$ is the canonical flat multiplicative Yang-Mills connection, $\nabla^{\mathrm{YM}}=\nabla^{\mathrm{cYM}}$ is the canonical flat connection on $\mathcal{g} = M \times \mathfrak{g}$, and $\zeta \equiv 0$. Then every example known in the classical formalism carries over.
 
 Furthermore, starting with such a classical example, by \cite[\S 6, Cor.\ 6.2]{My1stpaper} we know that if $\mathfrak{g}$ has a non-zero centre (and if $M$ is at least three-dimensional), then one can always add a centre-valued $\zeta$ to this gauge theory, transforming it into a flat pre-classical gauge theory, $\nabla^{\mathrm{YM}} = \nabla^{\mathrm{pYM}}$, with non-trivial $\zeta$. If $\mathrm{d}^{\nabla^{\mathrm{pYM}}} \zeta \neq 0$, then there is no $\lambda \in \Omega^1(M; \mathcal{g})$ with $\widetilde{\zeta}^\lambda = 0$.
 \end{examples}
@@ -9301,40 +9299,93 @@ This shows that there are examples with non-trivial $\zeta$, stable w.r.t.\ fiel
 Hence we conjecture:
 
 \begin{conjectures}{Trivial LGBs are associated with pre-classical theories}{TrivialLGBIsPreclassical}
-Let $\mathcal{G} \to M$ be a trivial LGB over a smooth manifold $M$; furthermore let $\mu_{\mathcal{G}}^{\mathrm{tot}}$ be a Yang-Mills connection on $\mathcal{G}$. Then there is a $\lambda \in \Omega^1(M; \mathcal{g})$ so that $\mu_{\mathcal{G}}^{\mathrm{tot}, \lambda}$ is flat.
+Let $\mathcal{G} \to M$ be a trivial LGB over a smooth manifold $M$; furthermore let $\mu_{\mathcal{G}}^{\mathrm{tot}}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$. Then there is a $\lambda \in \Omega^1(M; \mathcal{g})$ so that $\mu_{\mathcal{G}}^{\mathrm{tot}, \lambda}$ is flat.
 \end{conjectures}
 
-However, we will not have time to attempt proving this, but as a first step one may integrate the field redefinitions to a redefinition of the horizontal bundle on the LGB $\mathcal{G}$ itself, not just of the connection on its LAB; basically proving Rem.\ \ref{rem:FieldRedefIntegrated}.
+For semisimple Lie group bundles this turns out to be true, see \cite{Fischer:2024vak}. Obviously, non-trivial LGBs are not used in the classical formalism, and by the previous discussion one may ask if there is a (global) example with a curved multiplicative Yang-Mills connection starting with a non-trivial LGB. Let us describe these examples, already presented in \cite{MyThesis, Fischer:2024vak}.
 
-Obviously, non-trivial LGBs are not used in the classical formalism, and by the previous discussion one may ask if there is a (global) example with a curved Yang-Mills connection starting with a non-trivial LGB. In fact, there is one related to a Hopf fibration, as already argued in \cite[\S 5.3, Ex.\ 5.18]{My1stpaper} and \cite[\S 5.1.5, Ex.\ 5.1.35]{MyThesis}.
-
-\begin{examples}{Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$ giving rise to a curved Yang-Mills gauge theory}{HopfEx}
-By Ex.\ \ref{ex:NablaYMAsAdjointConnection} (recall also \ref{ex:OurVeryImportantExample}) we know that $c_G(P)$ is an LGB admitting a Yang-Mills connection $\nabla^{\mathrm{YM}}$, where $P$ is a classical principal $G$-bundle, and $G$ a Lie group with Lie algebra $\mathfrak{g}$. We define $\mathcal{P}$ to be $c_G(P)$ itself now, but $A$ is arbitrary and does not need to be related to the horizontal distribution of $\nabla^{\mathrm{YM}}$.
-
-Now define $P$ as the Hopf bundle
-\begin{center}
+There is a natural class of multiplicative Yang-Mills connections which cannot be flattened via field redefinitions. In order to understand this, we follow similar arguments as in the construction recipe I of~\cite[see Ex.\ 1.12]{Fischer:2401.05966}: Assume an ordinary principal $\sfH$-bundle $P$, where $\sfH$ is a Lie group. Also assume that we have a manifold $\sfT$ on which $\sfH$ acts (from the left).\footnote{$\sfT$ and its related constructions and assumptions are only needed to provide an extra geometric interpretation as in \ref{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}.} Then we have two associated bundles: 
+    \begin{equation}
+        \begin{aligned}
+            c_\sfH(P) &\coloneqq (P \times \sfH) \Big/ \sfH~,
+            \\
+            \scT &\coloneqq (P \times \sfT) \Big/ \sfH~.
+        \end{aligned}
+    \end{equation}
+		As discussed, we have a canonical left-action, $c_\sfH(P) \curvearrowright \scT$, and an Ehresmann connection on $P$ (in the usual sense) induces associated connections on $c_\sfH(P)$ and $\scT$. The one on $c_\sfH(P)$ is a multiplicative Yang-Mills connection on $c_\sfH(P)$ whose primitive is given by the corresponding curvature on $P$, and the one on $\scT$ is a connection that has been called \emph{compatible Yang--Mills connection}~\cite{Fischer:2401.05966}. That is, this is an Ehresmann connection on $\scT$ w.r.t.~the $c_\sfH(P)$-action and the adjustment on $c_\sfH(P)$, which satisfies a certain curvature equation.
+    
+    The following remark provides further motivation for considering Lie group bundles like $c_\sfH(P)$ beyond the existence of natural multiplicative Yang-Mills connections.
+    
+    \begin{remark}\label{rem:JustifyingExample}
+        For similar reasons as in ordinary gauge theory, it is useful to assume that the structural Lie group bundle has a compact Lie group $\sfH$ as structural Lie group. It is then natural to study abelian and semi-simple $\sfH$ separately, ignoring possible mixed terms appearing in the extra terms as a first step. The abelian part requires flatness of the multiplicative Yang-Mills connection, and we are therefore led to focusing on semi-simple situations in order to find curved examples. As proven in~\cite[Prop.\ 7.3.6, Cor.\ 7.3.9 and the comment afterwards, Cor.\ 8.3.7]{mackenzieGeneralTheory} every Lie group bundle with semi-simple structure group is the inner group bundle of some principal $\sfH$-bundle, unique up to principal bundle automorphisms.
+    \end{remark}
+    
+    As a result of the discussion in~\cite{mackenzieGeneralTheory} we have the following, extending \ref{rem:JustifyingExample}:
+    
+    \begin{lemmata}{Semi-simple Lie group bundles, \cite{mackenzieGeneralTheory}}{SemiSimpleLGBAdjust}
+        If $\sfH$ is semi-simple, then all multiplicative Yang-Mills connections on $c_\sfH(P)$ are associated to an Ehresmann connection on $P$, and their primitive is the corresponding curvature on $P$.
+    \end{lemmata}
+		
+		Semi-simplicity also implies that the correspondence in \ref{lem:SemiSimpleLGBAdjust} is one-to-one. Slightly generalized, assuming that $\sfH$ has a trivial center implies that the associated connection on $c_\sfH(P)$ is in one-to-one correspondence with the Ehresmann connection on $P$. Thus, let us now assume that $\sfH$ and hence $c_\sfH(P)$ have a trivial center; furthermore assume that $\sfT = \mathbb{R}^d$, and that $\sfH$ acts faithfully on $\sfT$ with 0 as fixed point. Then there is a canonical singular foliation $\scF$ on $\scT$ with $M$ as a leaf generated by vector fields of the form
+    \begin{equation}\label{anchor}
+        \chi_\scT(X) + \overline{\nu}
+    \end{equation}
+    for all $X \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathrm{ad}(P))$, where $\chi_\scT$ is the projectable horizontal lift of the associated connection on $\scT$, and $\nu \mapsto \overline{\nu}$ denotes the inherited Lie algebra bundle action. The connection on $\scT$ is then also what one calls an $\scF$-connection.
+    
+    Because the action is faithful, there is the following one-to-one correspondence between:
+    \begin{itemize}
+        \item the multiplicative Yang-Mills connection on $c_\sfH(P)$~;
+        \item the Ehresmann connection on $P$~;
+        \item the $\scF$-connection on $\scT$~.
+    \end{itemize}
+    The major result of~\cite{Fischer:2401.05966} implies that (in a formal setting, and in a neighborhood around a leaf) every foliation can be modeled like this; however $P$ is then in general infinite-dimensional.\footnote{In our context we simply assume a finite-dimensional $P$ so that the arguments of~\cite{Fischer:2401.05966} carry over to a smooth setting.} Altogether, we can study multiplicative Yang-Mills connections on such $c_\sfH(P)$ as structure group bundle by looking at $\scF$ and $P$. In particular, $c_\sfH(P)$ admits a flat multiplicative Yang-Mills connection if and only if $\scF$ admits a flat $\scF$-connection, which is the case if and only if $P$ is flat. Furthermore,~\cite{Fischer:2401.05966} provides a clear geometric interpretation of the field redefinitions, extending the discussion of~\cite{My1stpaper} and~\cite[\S 5.1]{MyThesis}.
+    
+    \begin{table*}[htbp]
+        \centering
+        \begin{tabular}{l|l|l}
+            Lie group bundle $c_\sfH(P)$ & Singular foliations $\scF$ & principal $\sfH$-bundle $P$\\ \hline
+            multiplicative YM conn.\ $\mu^{\mathrm{tot}}$ & $\scF$-connection & Ehresmann connection \\
+            $c_\sfH(P)$ admits flat $\mu^{\mathrm{tot}}$ & $\scF$ is flat & $P$ is flat \\
+            field redefinition of $\mu^{\mathrm{tot}}$ & change of $\scF$-connection & change of Ehresmann connection
+        \end{tabular}
+        \caption{Comparing the geometry of multiplicative Yang-Mills connections (YM conn.) with the geometry of singular foliations.}
+        \label{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}
+    \end{table*}
+    
+    Thus, in order to find non-trivial multiplicative Yang-Mills connections which cannot be flattened by field redefinitions one only needs to apply the previous construction on principal bundles $P$ which do not admit flat connections; alternatively search for foliations $\scF$ which do not admit flat $\scF$-connections. There is plenty of literature on both cases.
+    
+    \begin{examples}{Cooking recipe}{Hopf}
+        Using a non-trivial principal bundle $P$ over a simply connected base manifold, such as the Hopf fibration $\mathbb{S}^7 \to \mathbb{S}^4$, leads to curved multiplicative Yang-Mills connections on $c_\sfH(P)$ in the above construction.
+    \end{examples}
+		
+		What about the full theory now? For this we need to require the existence of an $\mathrm{Ad}$-invariant connection on $c_H(P)$ which is simply given by assuming that $H$ is semisimple what is covered by the previous discussion; recall Rem.\ \ref{rem:JustifyingExample}. Thus, it is only left to find a principal $c_H(P)$-bundle $\scP$; for this we have several canonical choices:
+		\begin{itemize}
+			\item $\scP = c_H(P)$ itself;
+			\item $\scP = P$ via the action of gauge transformations; recall Rem.\ \ref{rem:ClassGaugeTrafosAndcgPMulti};
+			\item $\scP = (P \times P) \Big/ H$, the Atiyah groupoid of $P$, where $H$ acts diagonally on $P \times P$.
+		\end{itemize}
+		
+		About the last bullet point, for the experienced reader: We have a short exact sequence of Lie groupoids
+		\begin{equation*}
+        \begin{tikzcd}
+            c_\sfH(P) \arrow[hook]{r} &
+            (P \times P) \Big/ H \arrow[two heads]{r} &
+            \scP\mathrm{air}(M)~,
+        \end{tikzcd}
+    \end{equation*}
+		where $\scP\mathrm{air}(M)$ is the pair groupoid of $M$. It is a straightforward task to show that the Atiyah groupoid is a principal $c_H(P)$-bundle,
+\begin{equation*}
 	\begin{tikzcd}
-		\mathrm{SU}(2) \cong \mathds{S}^3 \arrow{r}	& \mathds{S}^7 \arrow{d} \\
-			& \mathds{S}^4
+		\mathcal{P} = (P \times P) \Big/ H \arrow{d}{\pi_{\mathcal{P}}} \arrow{dr}{s_{\scP}} & \arrow[bend right]{l} c_H(P) \arrow{d} \\
+		\scP\mathrm{air}(M) \arrow[swap]{r}{s_{\scP\mathrm{air}(M)}} & M
 	\end{tikzcd}
-\end{center}
-where $\mathds{S}^n$ ($n \in \mathbb{N}$) denotes the $n$-dimensional sphere.
-For the inner bundle
-\bas
-\mathcal{P}
-\coloneqq
-\mathcal{G}
-&\coloneqq
-c_{\mathrm{SU}(2)}(P)
-\eas
-we then have that its associated Yang-Mills connection $\nabla^{\mathrm{YM}}$, as constructed previously in Ex.\ \ref{ex:NablaYMAsAdjointConnection}, is non-flat, and there is also no $\lambda \in \Omega^1(M; \mathrm{ad}(P))$ such that $\widetilde{\nabla^{\mathrm{YM}}}^\lambda$ is flat. As argued in the mentioned references, this is due to a discussion in \cite[Example 7.3.20; page 287]{mackenzieGeneralTheory}: $\mathds{S}^4$ is not contractible, but simply connected. Due to the fact that $\mathrm{SU}(2)$ is semisimple and following Ex.\ \ref{ex:NablaYMAsAdjointConnection}, a flat $\widetilde{\nabla^{\mathrm{YM}}}^\lambda$ would be equivalent to a flat connection on $P$, inducing a trivialization for $P$ since $\mathds{S}^4$ is simply connected. But $P$ cannot be trivial due to it being a Hopf fibration, so that we arrive at a contradiction, proving the statement. This argument is independent of the field redefinitions, and it shows that all possible Yang-Mills connections are curved here (globally).
+\end{equation*}
+where $s_\scP$ and $s_{\scP\mathrm{air}(M)}$ are the source arrows of $(P \times P) \Big/ H$ and $\scP\mathrm{air}(M)$, respectively. Here one needs the notion of LGB-actions along a moment map, here $s_\scP$, which we did not discuss here, but it is straight-forward to extend the previous constructions to such setups; see \cite{Fischer:2024vak}.
 
-An $\mathrm{Ad}$-invariant fibre metric exists clearly, so that we have all ingredients to define a truly curved Yang-Mills gauge theory with Lagrangian as given in Def.\ \ref{def:CYMGTFinally}.
-\end{examples}
 
 \section{Future prospects}\label{conclusions}
 
-We already summarized the results given here in the introduction. So, let us discuss the future prospects of this theory. Since a curved connection $\nabla^{\mathrm{YM}}$ only exists globally, one might say that this theory may be just a toy model for physics, but thinking of symplectic geometry, the global aspects may be at least interesting in mathematics; as already mentioned here several times, there are papers from other authors (than the ones directly working with curved gauge theories) with somewhat similar subjects, \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}, \cite{OtherPreprintAboutConnection}, and \cite{FernandesMarcutMultiplicativeForms}. Alternatively, gauge theory is also a theory about connections, so one could investigate what the sense of connection and curvature given here implies for the plethora of other theories based on connections.
+We already summarized the results given here in the introduction. So, let us discuss the future prospects of this theory. Since a curved connection $\nabla^{\mathrm{YM}}$ only exists globally, one might say that this theory may be just a toy model for physics, but thinking of symplectic geometry, the global aspects may be at least interesting in mathematics; as already mentioned here several times, there are papers with somewhat similar subjects, \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}, \cite{OtherPreprintAboutConnection}, and \cite{FernandesMarcutMultiplicativeForms}; and these connections helped classifying singular foliations and symmetry breaking (\cite{Fischer:2401.05966, Fischer:2024hqy}). Alternatively, gauge theory is also a theory about connections, so one could investigate what the sense of connection and curvature given here implies for the plethora of other theories based on connections.
 
 As a next step one could now define minimal couplings. Given a vector bundle $V \to M$, equipped with a LGB representation $\rho: \mathcal{G} \to \mathrm{Aut}(V)$, we should be able to define associated vector bundles $\mathcal{V} \coloneqq ( \mathcal{P} \times_M V ) \Big/ \mathcal{G}$, as we already mentioned before. W.r.t.\ a local gauge $s$ of $\mathcal{P}$ every section $\Psi \in \Gamma(\mathcal{V})$ has locally the form
 \bas

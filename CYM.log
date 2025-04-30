@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.7)  25 APR 2025 23:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.7)  30 APR 2025 18:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1352,22 +1352,22 @@ es/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips
 ogram Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/
 enc/dvips/lm/lm-mathsy.enc}] (CYM.toc
 Overfull \hbox (1.09496pt too wide) detected at line 37
- []\T1/lmss/bx/n/10.95 154
+ []\T1/lmss/bx/n/10.95 155
  []
 
 [2]
 Overfull \hbox (1.09496pt too wide) detected at line 41
- []\T1/lmss/bx/n/10.95 161
+ []\T1/lmss/bx/n/10.95 164
  []
 
 
 Overfull \hbox (1.09496pt too wide) detected at line 42
- []\T1/lmss/bx/n/10.95 163
+ []\T1/lmss/bx/n/10.95 165
  []
 
 
 Overfull \hbox (1.09496pt too wide) detected at line 43
- []\T1/lmss/bx/n/10.95 165
+ []\T1/lmss/bx/n/10.95 167
  []
 
 )
@@ -1408,27 +1408,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 1830--1833
 [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60]
 [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75]
 [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90]
-[91] [92] [93] [94] [95] [96] [97] [98]
+[91] [92] [93] [94] [95] [96] [97] [98] [99]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 5552.
 
-[99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
+[100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
 [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123]
 [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135]
-[136]
-Overfull \hbox (2.67805pt too wide) in paragraph at lines 7923--7930
+[136] [137]
+Overfull \hbox (2.67805pt too wide) in paragraph at lines 7921--7928
 \T1/lmr/m/n/10.95 using Rem. [][]5.19[][] (bracket of fundamental/left-invarian
 t vec-tor fields is fundamental/left-invariant)
  []
 
-[137] [138] [139] [140] [141] [142] [143] [144] [145] [146] [147]
-Overfull \hbox (3.1053pt too wide) detected at line 8611
+[138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148]
+Overfull \hbox (3.1053pt too wide) detected at line 8609
 []
  []
 
-[148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159]
-[160] [161] [162]
+[149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160]
+[161] [162] [163] [164]
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
 )
@@ -1470,7 +1470,7 @@ Underfull \hbox (badness 1215) in paragraph at lines 41--46
 y Lec-ture Note Se-ries\T1/lmr/m/n/10.95 , 213:xxxviii+501, 2005.
  []
 
-
+[165]
 Underfull \hbox (badness 10000) in paragraph at lines 54--58
 []\T1/lmr/m/n/10.95 Camille Laurent-Gengoux, Math-ieu Stiénon, and Ping Xu.  No
 n-abelian
@@ -1482,7 +1482,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--58
 th-e-mat-ics\T1/lmr/m/n/10.95 , 220(5):1357--1427, 2009.
  []
 
-[163]
+
 Underfull \hbox (badness 5756) in paragraph at lines 65--69
 []\T1/lmr/m/n/10.95 Marius Crainic, Maria Amelia Salazar, and Ivan Struchiner. 
  Mul-ti-plica-tive
@@ -1530,13 +1530,13 @@ Underfull \hbox (badness 7273) in paragraph at lines 116--121
  arXiv:2401.05966,
  []
 
-
-Underfull \hbox (badness 1867) in paragraph at lines 131--135
+[166]
+Underfull \hbox (badness 1867) in paragraph at lines 139--143
 \T1/lmr/m/n/10.95 sym-plec-tic man-i-folds.  \T1/lmr/m/it/10.95 Jour-nal of Ge-
 om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
  []
 
-[164]) [165] [166] [167] [168] [169] [170] [171] [172] [173] (CYM.aux)
+) [167] [168] [169] [170] [171] [172] [173] [174] [175] (CYM.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1549,10 +1549,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 38589 strings out of 474542
- 797723 string characters out of 5754265
- 1968978 words of memory out of 5000000
- 59537 multiletter control sequences out of 15000+600000
+ 38665 strings out of 474542
+ 799466 string characters out of 5754265
+ 1959978 words of memory out of 5000000
+ 59603 multiletter control sequences out of 15000+600000
  692286 words of font info for 187 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,107p,10920b,1359s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1606,9 +1606,9 @@ ype1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
 symbols/msam10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols
 /msbm10.pfb><C:/Users/User/AppData/Roaming/MiKTeX/fonts/type1/public/stix/stix-
 mathscr.pfb>
-Output written on CYM.pdf (175 pages, 1698548 bytes).
+Output written on CYM.pdf (177 pages, 1713342 bytes).
 PDF statistics:
- 2720 PDF objects out of 2984 (max. 8388607)
- 558 named destinations out of 1000 (max. 500000)
+ 2752 PDF objects out of 2984 (max. 8388607)
+ 568 named destinations out of 1000 (max. 500000)
  441 words of extra memory for PDF output out of 10000 (max. 10000000)
 
