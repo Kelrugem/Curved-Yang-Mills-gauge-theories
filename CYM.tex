@@ -15,6 +15,7 @@
 %\usepackage{bm} %use \bm to get bold math symbols
 \usepackage{amssymb} %even more mathematical symbols
 \usepackage{amsthm} %theorem style usually needed for AMS (american mathematical society)
+\usepackage{float} %For H positioning
 \usepackage{amsmath} %important stuff like equation structures and so on
 \usepackage{amsfonts} %new mathematical symbols like fractals
 %\usepackage{amscd}
@@ -38,6 +39,13 @@
 \usepackage[headsepline=.5pt,footsepline=.5pt,automark]{scrlayer-scrpage}
 \usepackage{pdfpages} %For \includepdf etc
 %\usepackage{trfsigns} % Fourier and Laplacesymbols for engineering und für \e für \exp
+
+\usepackage{tabularx} %Automatic line break of tables using X instead c l r
+%\usepackage{longtable} %table auf mehreren Seiten
+%\usepackage{ltxtable} %Combination of both above
+\usepackage{makecell} %For making larger cells in tables
+\usepackage{colortbl}
+
 \newcommand{\e}{\ensuremath{\mathrm{e\;\!}}}
 \newcommand\fibtimes[2]{\mathbin{_{#1}\times_{#2}}}
 %\usepackage{wasysym} %Smiley
@@ -187,6 +195,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Definitionen %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\definecolor{Gray}{gray}{0.85}
 %\renewcommand{\chapterheadstartvskip}{\vspace{0cm}} %für bookklasse
 
 \def\be{\begin{equation}}
@@ -407,7 +416,7 @@
 \author{Simon-Raphael Fischer\footnote{Email: \href{mailto:sfischer@ncts.tw}{sfischer@ncts.tw}; ORCiD: \href{https://orcid.org/0000-0002-5859-2825}{0000-0002-5859-2825}} }
 \title{Integrating curved Yang-Mills gauge theories} 
 \subtitle{Gauge theories related to principal bundles equipped with Lie group bundle actions}
-\date{\today} 
+\date{\today; first version: October 6, 2022} 
 \maketitle
 \thispagestyle{empty}
 
@@ -426,9 +435,11 @@ No.\ 1, Sec.\ 4, Roosevelt Rd., Taipei City 106, Room 407, Cosmology Building, T
 %\footnote[2]{Abbreviations used in this paper: \textbf{(C)YMH GT} for (curved) Yang-Mills-Higgs gauge theory.}
 \begin{abstract}
   \small{
-	We construct a gauge theory based on principal bundles $\mathcal{P}$ equipped with a right $\mathcal{G}$-action, where $\mathcal{G}$ is a Lie group bundle instead of a Lie group. Due to the fact that a $\mathcal{G}$-action acts fibre by fibre, pushforwards of tangent vectors via a right-translation act now only on the vertical structure of $\mathcal{P}$. Thus, we generalize pushforwards using a connection on $\mathcal{G}$, which will modify the pushforward. A horizontal distribution on $\mathcal{P}$ invariant under such a modified pushforward will provide a proper notion of Ehresmann connection. For achieving gauge invariance we impose conditions on the connection 1-form $\mu$ on $\mathcal{G}$: $\mu$ has to be a multiplicative form, \textit{i.e.}\ closed w.r.t.\ a certain simplicial differential $\delta$ on $\mathcal{G}$, and the curvature $R_\mu$ of $\mu$ has to be $\delta$-exact with primitive $\zeta$; $\mu$ will be the generalization of the Maurer-Cartan form of the classical gauge theory, while the $\delta$-exactness of $R_\mu$ will generalize the role of the Maurer-Cartan equation. For allowing curved connections on $\mathcal{G}$ we will need to generalize the typical definition of the curvature/field strength $F$ on $\mathcal{P}$ by adding $\zeta$ to $F$.
+	We construct a gauge theory based on principal bundles $\mathcal{P}$ equipped with a right $\mathcal{G}$-action, where $\mathcal{G}$ is a Lie group bundle instead of a Lie group. Due to the fact that a $\mathcal{G}$-action acts fibre by fibre, pushforwards of tangent vectors via a right-translation act now only on the vertical structure of $\mathcal{P}$. Thus, we generalize pushforwards using a connection on $\mathcal{G}$ which will modify the pushforward. A horizontal distribution on $\mathcal{P}$ invariant under such a modified pushforward will provide a proper notion of Ehresmann connection. For achieving gauge invariance we impose conditions on the connection 1-form $\mu$ on $\mathcal{G}$: $\mu$ has to be a multiplicative form, \textit{i.e.}\ closed w.r.t.\ a certain simplicial differential $\delta$ on $\mathcal{G}$, and the curvature $R_\mu$ of $\mu$ has to be $\delta$-exact with primitive $\zeta$; $\mu$ will be the generalization of the Maurer-Cartan form of the classical gauge theory, while the $\delta$-exactness of $R_\mu$ will generalize the role of the Maurer-Cartan equation. This introduces the notion of multiplicative Yang-Mills connections, a connection which helped classifying singular foliations and symmetry breaking. For allowing curved connections on $\mathcal{G}$ in the dynamical theory we will need to generalize the typical definition of the curvature/field strength $F$ on $\mathcal{P}$ by adding $\zeta$ to $F$.
 	
-Several examples for a gauge theory with a curved Maurer-Cartan form $\mu$ will be provided, including the inner group bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$, and a classification for semisimple group bundles will be provided. We conclude that this gauge theory is an integral of an infinitesimal gauge theory developed by Alexei Kotov and Thomas Strobl.
+Several examples for a gauge theory with a curved $\mu$ will be provided, including the inner group bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$, and a classification for gauge theories with structural semisimple group bundles will be provided, including a classification for whether these theories admit a classical description.
+
+Last but not least, this paper aims to accessible for beginners which is why it only assumes knowledge of classical gauge theory.
 }
  \end{abstract}
 \end{center}
@@ -505,13 +516,80 @@ for $(p, v) \in E$, and Lie bracket
 
 As it is shown in the mentioned references for this type of infinitesimal gauge theory, one gets back to the standard Yang-Mills-Higgs gauge theory if additionally $\zeta \equiv 0$. Thus, the theory represents a covariantized version of gauge theory equipped with an additional 2-form $\zeta$. If $\nabla$ is flat we say in general that we have a \textbf{pre-classical} gauge theory, and if additionally $\zeta \equiv 0$ we have a \textbf{classical} gauge theory.
 
-The 2-form $\zeta$ is needed to allow non-flat $\nabla$, because otherwise only flat $\nabla$ could satisfy the compatibility conditions. But $\zeta$ is not just an auxiliary map, in \cite{MyThesis} I have shown that there is also a class of \textbf{field redefinitions} for the classical formulation of gauge theory. This field redefinition breaks the gauge invariance; so, in order to keep gauge invariance, one needs to add $\zeta$ to the field strength, and at the same time one achieves a richer framework for gauge theories. It is then natural to study whether there is an infinitesimal gauge theory where $\zeta$ is non-zero and cannot be transformed to zero by the mentioned field redefinition.
+The 2-form $\zeta$ is needed to allow non-flat $\nabla$, because otherwise only flat $\nabla$ could satisfy the compatibility conditions. But $\zeta$ is not just an auxiliary map, in \cite{MyThesis} I have shown that there is also a class of \textbf{field redefinitions}\footnote{So far, there is no proper name for them.} for the classical formulation of gauge theory. This field redefinition breaks the gauge invariance; so, in order to keep gauge invariance, one needs to add $\zeta$ to the field strength, and at the same time one achieves a richer framework for gauge theories. 
+In fact, these field redefinitions are not just any transformation preserving the physics. As pointed out in \cite{MyThesis}, curved Yang-Mills gauge theory is a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions, similar to how one reformulates Classical Mechanics so that it is form-invariant w.r.t.\ Galilei or Lorentz transformations. This reformulation precisely introduces those extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength. Thus, this gauge theory is not just a ``simple'' generalisation where one simply adds extra terms, and henceforth it is natural to study whether there is an infinitesimal gauge theory where $\zeta$ is non-zero and cannot be transformed to zero by the mentioned field redefinition; see the Tables \ref{tab:ClassicalCov}, \ref{tab:cYM}, and \ref{tab:cYMH}.
+
+{\renewcommand{\arraystretch}{2}
+\begin{table}[H]
+	\caption{The idea of covariantisation as for classical mechanics; the classical and covariantised flat theory are equivalent.}
+	\label{tab:ClassicalCov}
+		\begin{tabularx}{\textwidth}{c c c}
+			\rowcolor{gray}
+			Classical theory & Covariantised flat theory & Curved Theory \\
+			Vector space $V$ & Trivial vector bundle $M \times V$ & Vector bundle $V \to M$ \\
+			\rowcolor{Gray}
+			$\frac{\partial}{\partial x^i}$ & Canonical flat connection $\nabla^0$ & Vector bundle connection $\nabla$ \\ 
+			\multicolumn{1}{X}{Coordinate changes may lead to extra terms} & 
+			\multicolumn{2}{c}{Coordinate expressions form-invariant under coordinate changes}
+		\end{tabularx}
+\end{table}
+}
+\vspace{-30pt}
+\begin{tikzcd}[ampersand replacement=\&]
+\phantom{Coordinate changes may lead} \arrow[bend right, equal]{r} \& \phantom{Coordinate}
+	\end{tikzcd}
+	
+	{\renewcommand{\arraystretch}{2}
+\begin{table}[H]
+\caption{Similarly, one can covariantise gauge theory w.r.t.\ the structural Lie group, leading to the notion of curved Yang-Mills (YM) gauge theory.}
+	\label{tab:cYM}
+		\begin{tabularx}{\textwidth}{c c c}
+			\rowcolor{gray}
+			YM theory & Covariantised YM theory & Curved YM theory \\
+			Lie group $G$ & Trivial Lie group bundle $M \times G$ & Lie group bundle $G \to M$ \\
+			\rowcolor{Gray}
+			Maurer-Cartan form & Fibre-wise Maurer-Cartan & Multiplicative YM connection \\ 
+			\multicolumn{1}{X}{Field redefinitions lead to extra terms in gauge transformations and field strength} & 
+			\multicolumn{2}{c}{\makecell{Expressions form-invariant under field redefinitions, \\ \textbf{but curvature transforms non-trivially}}}
+		\end{tabularx}
+\end{table}}
+\vspace{-30pt}
+\begin{tikzcd}[ampersand replacement=\&]
+\phantom{Coordinate changes may lead} \arrow[bend right, equal]{r} \& \phantom{Coordinate}
+	\end{tikzcd}
+	
+	{\renewcommand{\arraystretch}{2}
+\begin{table}[H]
+\caption{The same can be done for Yang-Mills-Higgs theories, leading to the notion of curved Yang-Mills-Higgs (YMH) theory; see also \cite{Fischer:2024vak}.}
+	\label{tab:cYMH}
+		\begin{tabularx}{\textwidth}{c c c}
+			\rowcolor{gray}
+			YMH theory & Covariantised YMH theory & Curved YMH theory \\
+			Lie group $G$ with right-action on $N$ & Action groupoid $N \times G$ & Lie groupoid $G \rightrightarrows N$ \\
+			\rowcolor{Gray}
+			Maurer-Cartan form & Fibre-wise Maurer-Cartan & Covariant adjustments \\ 
+			\multicolumn{1}{X}{Field redefinitions lead to extra terms in gauge transformations and field strength} & 
+			\multicolumn{2}{c}{\makecell{Expressions form-invariant under field redefinitions, \\ \textbf{but curvature transforms non-trivially}}}
+		\end{tabularx}
+\end{table}}
+\vspace{-30pt}
+\begin{tikzcd}[ampersand replacement=\&]
+\phantom{Coordinate changes may lead} \arrow[bend right, equal]{r} \& \phantom{Expressions form-invariant}
+	\end{tikzcd}
+	
+	In particular, we will study and introduce the notions for curved Yang-Mills gauge theories (Table \ref{tab:cYM}), and we will provide a full family of examples of new gauge theories which cannot be flattened via the field redefinitions. For completeness, gauge theories with a structural groupoid, curved Yang-Mills-Higgs theory, were introduced in \cite{Fischer:2024vak} after this work. In fact, many of the examples provided here were first introduced in \cite{Fischer:2024vak}, and later added to this work; these examples are a direct consequence of \cite{Fischer:2401.05966}, a first application of curved Yang-Mills gauge theories.
+	
+	\begin{remarks}{References for connections on principal LGB-bundles}{AnotherPreprintWork}
+It is important to mention beforehand that there is another great paper, \cite{OtherPreprintAboutConnection}, which also discusses the notion of connections on principal LGB-bundles. When I wrote this paper, I was not aware of this paper so that there will be some shared results which I found independently of the other authors. This will be obvious due to the fact that our approach is different. Both, this and the other paper, lead to the same sense of connection (based on the same idea of the behaviour of the parallel transport), but are explicitly not directly the same formulation. More like equivalent definitions of the same object, two sides of the same coin, so that it should be worth it to read both research works. \cite{OtherPreprintAboutConnection} sole purpose was in defining connections, while we want to discuss this sense of connection in the context of Yang-Mills gauge theory, also pinpointing what happens for Yang-Mills-Higgs gauge theories. Hence, our approach will be different with some shared and some different results. Furthermore, our field strength on the principal bundle will be different and more general as already pointed out previously.
+\end{remarks}
 
 In \cite{MyThesis} I first focused on Lie algebroids where the anchor map is an isomorphism and, thus, the Lie algebroid is just the tangent bundle of $M$. Locally, such examples can be excluded: The curvature can be always transformed to zero by the field redefinitions. However, globally, this is not always true: I have shown that the tangent bundle of the seven-dimensional sphere $\mathds{S}^7$ is an example of a curved gauge theory which cannot be transformed to a flat pre-classical gauge theory, otherwise it would be a Lie group which is not possible.
 
 However, I also studied the other edge case of having Lie algebra bundles (LABs) instead of Lie algebroids: \cite{MyThesis} (also in \cite{My1stpaper}) points out that locally, \textit{i.e.}~over a contractible base manifold $N$, there is always a field redefinition transforming the initial gauge theory to a pre-classical one. Hence, we arrive at a similar situation as for tangent bundles. But globally there are examples given by the adjoint bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$, where $\mathds{S}^n$ ($n \in \mathbb{N}$) denotes the $n$-dimensional sphere.
 
-This is now the starting point of this paper. We want to understand why the adjoint bundle of $\mathds{S}^7 \to \mathds{S}^4$ works as a curved example, and where it differs from the classical formalism of gauge theory. To truly understand this, and also to possibly get new information about the general case regarding Lie algebroids, we will integrate curved Yang-Mills-Higgs theories in the case of LABs in this paper. Using LABs means that there is no coupling to a Higgs field in the usual sense and therefore we will now just speak instead of a curved Yang-Mills gauge theory. In the following we will start outlining the paper's main results; we will focus on an easy presentation in the introduction, especially we will not always restate our assumptions, and the notation will be simplified w.r.t.\ the actual formulation.
+This is now the starting point of this paper. We want to understand why the adjoint bundle of $\mathds{S}^7 \to \mathds{S}^4$ as a structural LAB gives rise to a gauge theory which cannot be described classically, and where it differs from the classical formalism of gauge theory. To truly understand this, and also to possibly get new information about the general case regarding Lie algebroids, we will integrate curved Yang-Mills-Higgs theories in the case of LABs in this paper. Using LABs means that there is no coupling to a Higgs field in the usual sense and therefore we will now just speak instead of a curved Yang-Mills gauge theory. It will turn out, that the Hopf fibration is not just a nice coincidence, but a member of a family of canonical examples: The adjoint bundles of semisimple non-flat principal bundles as structural Lie group bundles.
+
+Due to the length of this paper, we will start outlining the paper's main results in a summary; we will focus on an easy presentation in the introduction, especially we will not always restate our assumptions, and the notation will be simpler than the actual formulation.
 
 \subsection{Summary}
 
@@ -713,7 +791,7 @@ A_{s_i}
 \eas
 \end{theorems*}
 
-This finished the discussion about $A$, but of course we also needs its field strength $F$ and a certain shape of gauge transformation for $F$. Up until now $\mathrm{H}\mathcal{G}$ was an arbitrary horizontal distribution, but we will need to fix certain conditions on it to assure gauge invariance later. We will discuss this in Subsection \ref{CurvatureSubsection}. On one hand, viewing $\mathcal{G}$ as the principal $\mathcal{G}$-bundle $\mathcal{P}$ itself whose horizontal distribution $\mathrm{H}\mathcal{P}$ aligns with $\mathrm{H}\mathcal{G}$, it is natural to guess that $\mathrm{H}\mathcal{G}$ should be an Ehresmann connection itself. Ehresmann connections on LGBs were already discussed in works like \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; and there is also a rather recent preprint related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. One of the results of these works is that an Ehresmann connection on LGBs is characterized by the fact that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ has to be a multiplicative form:
+This finished the discussion about $A$, but of course we also needs its field strength $F$ and a certain shape of gauge transformation for $F$. Up until now $\mathrm{H}\mathcal{G}$ was an arbitrary horizontal distribution, but we will need to fix certain conditions on it to assure gauge invariance later. We will discuss this in Subsection \ref{CurvatureSubsection}. On one hand, viewing $\mathcal{G}$ as the principal $\mathcal{G}$-bundle $\mathcal{P}$ itself whose horizontal distribution $\mathrm{H}\mathcal{P}$ aligns with $\mathrm{H}\mathcal{G}$, it is natural to guess that $\mathrm{H}\mathcal{G}$ should be an Ehresmann connection itself. Ehresmann connections on LGBs were already discussed in works like \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}; there is also a rather recent paper related to a similar subject, see \cite{FernandesMarcutMultiplicativeForms}. One of the results of these works is that an Ehresmann connection on LGBs is characterized by the fact that the total Maurer-Cartan form $\mu_{\mathcal{G}}^{\mathrm{tot}}$ has to be a multiplicative form:
 
 \begin{definitions*}{Multiplicative forms, simplified situation, \newline \cite[\S 2.1, special situation of Def.\ 2.1]{crainic2015multiplicative}}
 We call an $\omega \in \Omega^1\mleft( \mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g} \mright)$ a \textbf{multiplicative form} if
@@ -942,10 +1020,10 @@ We have
 for all principal bundle automorphisms $H$.
 \end{theorems*}
 
-As the final part of statements we will discuss new examples of gauge theory in Subsection \ref{CYMExamples}, after pointing out that this gauge theory generalizes the classical formalism. We will also discuss this matter in the context of my previously-mentioned Ph.D.\ thesis, \cite{MyThesis}, and the field redefinitions. Especially, the paper concludes with the reason why this project started: The inner group bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$ is one of many examples of curved Yang-Mills gauge theory, so that $\nabla^{\mathrm{YM}}$ is not curved; we will present this in Ex.\ \ref{ex:Hopf}. We will point out that this is indeed due to the fact that involved LGB is non-trivial, so that we also conjecture that trivial LGBs imply the existence of a field redefinition flattening $\nabla^{\mathrm{YM}}$.
+As the final part of statements we will discuss new examples of gauge theory in Subsection \ref{CYMExamples}, after pointing out that this gauge theory generalizes the classical formalism. We will also discuss this matter in the context of my previously-mentioned Ph.D.\ thesis, \cite{MyThesis}, and the field redefinitions. Especially, the paper concludes with the reason why this project started: The inner group bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$ is one of many examples of curved Yang-Mills gauge theory, so that $\nabla^{\mathrm{YM}}$ is not curved; we will present this in Ex.\ \ref{ex:Hopf}.
 
-\begin{examples*}{Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$ giving rise to a curved Yang-Mills gauge theory}
-Let $P$ be the Hopf bundle
+\begin{examples*}{How to cook new gauge theories}
+First an explicit example: Let $P$ be the Hopf bundle
 \begin{center}
 	\begin{tikzcd}
 		\mathrm{SU}(2) \cong \mathds{S}^3 \arrow{r}	& \mathds{S}^7 \arrow{d} \\
@@ -962,10 +1040,16 @@ c_{\mathrm{SU}(2)}(P)
 \coloneqq 
 (P\times G) \Big/ G,
 \eas
-where $(P\times G) \Big/ G$ is the associated Lie group bundle, where the action of $G$ on $G$ is given by its conjugation, $c_g(q) = gqg^{-1}$ for all $g, q \in G$. This principal $c_{\mathrm{SU}(2)}(P)$-bundle admits the structure as curved Yang-Mills gauge theory, which is neither classical nor pre-classical. Furthermore, all possible (curved) Yang-Mills gauge theory structures lead to a curved $\nabla^{\mathrm{YM}}$ and non-zero $\zeta$, which also implies that this gauge theory cannot be described with the typical formalism of gauge theory.
+where $(P\times G) \Big/ G$ is the associated Lie group bundle, where the action of $G$ on $G$ is given by its conjugation, $c_g(q) = gqg^{-1}$ for all $g, q \in G$. This principal $c_{\mathrm{SU}(2)}(P)$-bundle admits the structure as curved Yang-Mills gauge theory, which is neither classical nor pre-classical. Furthermore, all possible (curved) Yang-Mills gauge theory structures lead to a curved multiplicative Yang-Mills connection and non-zero $\zeta$, which also implies that this gauge theory cannot be described with the typical formalism of gauge theory.
+
+Similarly, using non-flat principal $H$-bundles $P$ for a Lie group $H$ with no centre leads to curved multiplicative Yang-Mills connections on $c_\sfH(P)$ given by associated connections; those cannot be flattened by field redefinitions. Thus, one quickly achieves curved Yang-Mills gauge theories on other principal $c_H(P)$-bundles like $c_H(P)$ itself, but also $P$ or the Atiyah groupoid of $P$, both of which can also be viewed as principal $c_H(P)$-bundles.
 \end{examples*}
 
- We will finish this paper with a short discussion about future prospects in Section \ref{conclusions}, highlighting further constructions and conjecturing how to integrate the full formalism of the gauge theory developed by Alexei Kotov and Thomas Strobl.
+The example section will also provide a neat geometric interpretation using the notion of singular foliations; see Table \ref{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}.
+
+\subsection{Conclusion}
+
+Since a curved Yang-Mills connection which cannot be flattened by redefinitions only exists globally, one might say that this theory may be just a toy model for physics, but thinking of symplectic geometry, the global aspects may be at least interesting in mathematics; as already mentioned, these connections helped classifying singular foliations and symmetry breaking (\cite{Fischer:2401.05966, Fischer:2024hqy}). Alternatively, gauge theory is also a theory about connections, so one could investigate what the sense of connection and curvature given here implies for the plethora of other theories based on connections. More applications will follow, pointing out the importance of such constructions like the generalised Maurer-Cartan equation.
 
 \subsection{Basic notations and remarks}\label{BasicNotations}
 
@@ -4353,10 +4437,6 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \
 By Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}, a gauge corresponds to a "$\mathcal{G}$-ization" of $\mathcal{P}$, not necessarily a trivialization.
 
 \subsection{Generalized distributions and connections}\label{ConnectionSubsection}
-
-\begin{remarks}{References for connections on principal LGB-bundles}{AnotherPreprintWork}
-It is important to mention beforehand that there is another great paper, \cite{OtherPreprintAboutConnection}, which also discusses the notion of connections on principal LGB-bundles. When I wrote this subsection about the connection, I was not aware of this preprint so that there will be some shared results which I found independently of the other authors. This will be obvious due to the fact that our approach is different. Both, this and the other paper, lead to the same sense of connection (based on the same idea of the behaviour of the parallel transport), but are explicitly not directly the same formulation. More like equivalent definitions of the same object, two sides of the same coin, so that it should be worth it to read both research works. \cite{OtherPreprintAboutConnection} sole purpose was in defining connections, while we want to discuss this sense of connection in the context of Yang-Mills gauge theory, also pinpointing what happens for Yang-Mills-Higgs gauge theories. Hence, our approach will be different, we will use sections of the LGB to formulate connections, simplifying certain explicit formulas; while \cite{OtherPreprintAboutConnection} avoids using sections and rather uses formulations just looking on the vertical parts of a vector or by rephrasing the notions via the total derivative of the LGB action. Another example of difference is that we are also introducing a generalisation of the Darboux derivative and phrasing important formulas with this derivative. Furthermore, we are not going to fix a specific connection on $\mathcal{G}$ for the principal bundle's connection (other than a horizontal distribution), while \cite{OtherPreprintAboutConnection} did fix a more specific type of connection on $\mathcal{G}$, and our curvature will be different and more general as already pointed out in research like \cite{CurvedYMH} and \cite{MyThesis}.
-\end{remarks}
 
 Finally, let us now define the gauge theory, starting with horizontal distributions. 
 %For readability, we start with a very easy toy model which should help in understanding the general definitions. 
@@ -9281,7 +9361,7 @@ Prop.\ \ref{prop:YMStaysYM} and Thm.\ \ref{thm:EhresmannTransformedEhresmann} ha
 \end{enumerate}
 \end{remarks}
 
-Last but not least, these field redefinitions are not just any transformation preserving the physics. As pointed out in \cite{MyThesis}, curved Yang-Mills gauge theory is a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions, similar to how one reformulates Classical Mechanics so that it is form-invariant w.r.t.\ Galilei or Lorentz transformations. This reformulation introduces extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength. From that point of view it is tempting to ask whether there are examples which cannot be flattened by field redefinitions:
+Last but not least, as also mentioned in the introduction, these field redefinitions are not just any transformation preserving the physics. Curved Yang-Mills gauge theory is a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions. This reformulation introduces extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength. From that point of view it is tempting to ask whether there are examples which cannot be flattened by field redefinitions:
 
 \subsection{Examples}\label{CYMExamples}
 
@@ -9341,6 +9421,8 @@ There is a natural class of multiplicative Yang-Mills connections which cannot b
     The major result of~\cite{Fischer:2401.05966} implies that (in a formal setting, and in a neighborhood around a leaf) every foliation can be modeled like this; however $P$ is then in general infinite-dimensional.\footnote{In our context we simply assume a finite-dimensional $P$ so that the arguments of~\cite{Fischer:2401.05966} carry over to a smooth setting.} Altogether, we can study multiplicative Yang-Mills connections on such $c_\sfH(P)$ as structure group bundle by looking at $\scF$ and $P$. In particular, $c_\sfH(P)$ admits a flat multiplicative Yang-Mills connection if and only if $\scF$ admits a flat $\scF$-connection, which is the case if and only if $P$ is flat. Furthermore,~\cite{Fischer:2401.05966} provides a clear geometric interpretation of the field redefinitions, extending the discussion of~\cite{My1stpaper} and~\cite[\S 5.1]{MyThesis}.
     
     \begin{table*}[htbp]
+        \caption{Comparing the geometry of multiplicative Yang-Mills connections (YM conn.) with the geometry of singular foliations.}
+        \label{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}
         \centering
         \begin{tabular}{l|l|l}
             Lie group bundle $c_\sfH(P)$ & Singular foliations $\scF$ & principal $\sfH$-bundle $P$\\ \hline
@@ -9348,17 +9430,15 @@ There is a natural class of multiplicative Yang-Mills connections which cannot b
             $c_\sfH(P)$ admits flat $\mu^{\mathrm{tot}}$ & $\scF$ is flat & $P$ is flat \\
             field redefinition of $\mu^{\mathrm{tot}}$ & change of $\scF$-connection & change of Ehresmann connection
         \end{tabular}
-        \caption{Comparing the geometry of multiplicative Yang-Mills connections (YM conn.) with the geometry of singular foliations.}
-        \label{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}
     \end{table*}
     
     Thus, in order to find non-trivial multiplicative Yang-Mills connections which cannot be flattened by field redefinitions one only needs to apply the previous construction on principal bundles $P$ which do not admit flat connections; alternatively search for foliations $\scF$ which do not admit flat $\scF$-connections. There is plenty of literature on both cases.
     
     \begin{examples}{Cooking recipe}{Hopf}
-        Using a non-trivial principal bundle $P$ over a simply connected base manifold, such as the Hopf fibration $\mathbb{S}^7 \to \mathbb{S}^4$, leads to curved multiplicative Yang-Mills connections on $c_\sfH(P)$ in the above construction.
+        Using non-flat principal bundles, for example a non-trivial principal bundle $P$ over a simply connected base manifold, such as the Hopf fibration $\mathbb{S}^7 \to \mathbb{S}^4$, leads to curved multiplicative Yang-Mills connections on $c_\sfH(P)$ in the above construction which cannot be flattened by field redefinitions.
     \end{examples}
 		
-		What about the full theory now? For this we need to require the existence of an $\mathrm{Ad}$-invariant connection on $c_H(P)$ which is simply given by assuming that $H$ is semisimple what is covered by the previous discussion; recall Rem.\ \ref{rem:JustifyingExample}. Thus, it is only left to find a principal $c_H(P)$-bundle $\scP$; for this we have several canonical choices:
+		What about the full theory? For this we need to require the existence of an $\mathrm{Ad}$-invariant connection on $c_H(P)$ which is simply given by assuming that $H$ is semisimple what is covered by the previous discussion; recall Rem.\ \ref{rem:JustifyingExample}. Thus, it is only left to find a principal $c_H(P)$-bundle $\scP$; for this we have several canonical choices:
 		\begin{itemize}
 			\item $\scP = c_H(P)$ itself;
 			\item $\scP = P$ via the action of gauge transformations; recall Rem.\ \ref{rem:ClassGaugeTrafosAndcgPMulti};
@@ -9380,14 +9460,13 @@ There is a natural class of multiplicative Yang-Mills connections which cannot b
 		\scP\mathrm{air}(M) \arrow[swap]{r}{s_{\scP\mathrm{air}(M)}} & M
 	\end{tikzcd}
 \end{equation*}
-where $s_\scP$ and $s_{\scP\mathrm{air}(M)}$ are the source arrows of $(P \times P) \Big/ H$ and $\scP\mathrm{air}(M)$, respectively. Here one needs the notion of LGB-actions along a moment map, here $s_\scP$, which we did not discuss here, but it is straight-forward to extend the previous constructions to such setups; see \cite{Fischer:2024vak}.
+where $s_\scP$ and $s_{\scP\mathrm{air}(M)}$ are the source arrows of $(P \times P) \Big/ H$ and $\scP\mathrm{air}(M)$, respectively. Here one needs the notion of LGB-actions along a moment map, here $s_\scP$, which we did not discuss here, but it is straight-forward to extend the previous constructions to such setups; see \cite{Fischer:2024vak}. Observe however, that the base manifold of the Atiyah groupoid as such a principal bundle is the pair groupoid.
 
+Using such principal bundles thence lead to a curved Yang-Mills gauge theory which cannot be described in a classical way.
 
-\section{Future prospects}\label{conclusions}
+\subsection{Future prospects}\label{conclusions}
 
-We already summarized the results given here in the introduction. So, let us discuss the future prospects of this theory. Since a curved connection $\nabla^{\mathrm{YM}}$ only exists globally, one might say that this theory may be just a toy model for physics, but thinking of symplectic geometry, the global aspects may be at least interesting in mathematics; as already mentioned here several times, there are papers with somewhat similar subjects, \cite{LAURENTGENGOUXStienonXuMultiplicativeForms}, \cite{OtherPreprintAboutConnection}, and \cite{FernandesMarcutMultiplicativeForms}; and these connections helped classifying singular foliations and symmetry breaking (\cite{Fischer:2401.05966, Fischer:2024hqy}). Alternatively, gauge theory is also a theory about connections, so one could investigate what the sense of connection and curvature given here implies for the plethora of other theories based on connections.
-
-As a next step one could now define minimal couplings. Given a vector bundle $V \to M$, equipped with a LGB representation $\rho: \mathcal{G} \to \mathrm{Aut}(V)$, we should be able to define associated vector bundles $\mathcal{V} \coloneqq ( \mathcal{P} \times_M V ) \Big/ \mathcal{G}$, as we already mentioned before. W.r.t.\ a local gauge $s$ of $\mathcal{P}$ every section $\Psi \in \Gamma(\mathcal{V})$ has locally the form
+As a next step one could now define minimal couplings. Given a vector bundle $V \to M$, equipped with a LGB representation $\rho \colon \mathcal{G} \to \mathrm{Aut}(V)$, we should be able to define associated vector bundles $\mathcal{V} \coloneqq ( \mathcal{P} \times_M V ) \Big/ \mathcal{G}$, as we already mentioned before. W.r.t.\ a local gauge $s$ of $\mathcal{P}$ every section $\Psi \in \Gamma(\mathcal{V})$ has locally the form
 \bas
 [s, \psi_s],
 \eas
@@ -9409,19 +9488,7 @@ R_\nabla
 \rho_* \circ \zeta
 \eas
 for all $\sigma \in \Gamma(\mathcal{G})$.
-Observe the similarity with the infinitesimal compatibility conditions Def.\ \ref{def:YangMillsConnection} and Lemma \ref{lem:FieldRedefViaLGBSection}; the first condition should lead to that that $\nabla^A \Psi$ is well-defined and independent of the choice of $s$. The second condition should imply that the curvature of $\nabla^A$ is given by the generalised field strength of $A$. After showing this one could try to construct all the other obvious analogues of the classical formalism.
-
-However, as already highlighted in the introduction, Alexei Kotov and Thomas Strobl have constructed an infinitesimal gauge theory based on Lie algebroids, and the anchor of the involved Lie algebroid is describing the minimal coupling. Thus, as a next step one may actually attempt to integrate this infinitesimal gauge theory. In the context of this work, this gauge theory should probably be based on principal $\mathcal{G}$-bundles where $\mathcal{G}$ is now a Lie groupoid and not a Lie group. Such principal bundles were already constructed in \cite[beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}. The corresponding Lie groupoid will be over $N$ and the principal bundle can be viewed as a bundle with two "projections", one over $M$ and one other over the target manifold $N$, the target of the Higgs field $\Xi$,
-
-\begin{center}
-	\begin{tikzcd}
-		& \mathcal{P} \arrow{dr}\arrow{dl} & \\
-		M & & N
-	\end{tikzcd}
-\end{center}
-
-and for every $\Xi$ there should be a section of the left arrow so that $\Xi$ is the composition of the right projection with this section.
-I may start with such a research project now, and if successful, such a type of gauge theory should actually lead to a notion of a principal bundle for Yang-Mills-Higgs gauge theories. So, the involved principal bundle is not only describing the Yang-Mills part, we would achieve a principal bundle analogue for the whole Yang-Mills-Higgs Lagrangian. Last, such a Lie groupoid based gauge theory may help to answer whether or not Alexei Kotov's and Thomas Strobl's theory provide new physical examples, especially examples "stable" w.r.t.\ the field redefinitions constructed in \cite{MyThesis}.
+Observe the similarity with the infinitesimal compatibility conditions Def.\ \ref{def:YangMillsConnection} and Lemma \ref{lem:FieldRedefViaLGBSection}; the first condition should lead to that that $\nabla^A \Psi$ is well-defined and independent of the choice of $s$. The second condition should imply that the curvature of $\nabla^A$ is given by the generalised field strength of $A$. After showing this one could try to construct all the other obvious analogues of the classical formalism and discuss their applications. Essentially, one achieves a special type of curved Yang-Mills-Higgs theory as introduced in \cite{Fischer:2024vak}.
 
 \textbf{Acknowledgements:} I want to thank Siye Wu, Camille Laurent-Gengoux, Mark John David Hamilton and Alessandra Frabetti for their great help and support in making this paper. Also big thanks to my mother, father, Dennis, Gregor, Marco, Nico, Jakob, Kathi, Konstantin, Lukas, Locki, Gareth, Philipp, Ramona, Annerose, Michael, Maxim, Anna, and my girlfriend Rachelle for all their love.
 
