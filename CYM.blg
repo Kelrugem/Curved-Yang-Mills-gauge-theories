@@ -9,45 +9,45 @@ Warning--empty school in MyThesis
 Warning--empty journal in Fischer:2024vak
 Warning--empty journal in Fischer:2401.05966
 Warning--empty journal in Fischer:2024hqy
-You've used 23 entries,
+You've used 25 entries,
             1791 wiz_defined-function locations,
-            617 strings with 8254 characters,
-and the built_in function-call counts, 4993 in all, are:
-= -- 467
-> -- 193
+            630 strings with 8572 characters,
+and the built_in function-call counts, 5450 in all, are:
+= -- 512
+> -- 208
 < -- 2
-+ -- 74
-- -- 51
-* -- 340
-:= -- 830
-add.period$ -- 91
-call.type$ -- 23
-change.case$ -- 19
++ -- 80
+- -- 55
+* -- 377
+:= -- 902
+add.period$ -- 97
+call.type$ -- 25
+change.case$ -- 21
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 204
-empty$ -- 483
-format.name$ -- 51
-if$ -- 1084
+cite$ -- 29
+duplicate$ -- 222
+empty$ -- 529
+format.name$ -- 55
+if$ -- 1182
 int.to.chr$ -- 0
-int.to.str$ -- 23
-missing$ -- 25
-newline$ -- 140
-num.names$ -- 23
-pop$ -- 33
+int.to.str$ -- 25
+missing$ -- 27
+newline$ -- 150
+num.names$ -- 25
+pop$ -- 35
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 75
+skip$ -- 81
 stack$ -- 0
-substring$ -- 346
-swap$ -- 22
+substring$ -- 390
+swap$ -- 24
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 45
-width$ -- 25
-write$ -- 290
+while$ -- 51
+width$ -- 27
+write$ -- 312
 (There were 4 warnings)
