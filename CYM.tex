@@ -9382,9 +9382,9 @@ Hence we conjecture:
 Let $\mathcal{G} \to M$ be a trivial LGB over a smooth manifold $M$; furthermore let $\mu_{\mathcal{G}}^{\mathrm{tot}}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$. Then there is a $\lambda \in \Omega^1(M; \mathcal{g})$ so that $\mu_{\mathcal{G}}^{\mathrm{tot}, \lambda}$ is flat.
 \end{conjectures}
 
-For centerless simple Lie group bundles over connected and simply connected $M$ this turns out to be true, see \cite{Fischer:2024vak}. Obviously, non-trivial LGBs are not used in the classical formalism, and by the previous discussion one may ask if there is a (global) example with a curved multiplicative Yang-Mills connection starting with a non-trivial LGB. Let us describe these examples, already presented in \cite{MyThesis, Fischer:2024vak}.
+For centerless simple Lie group bundles over connected $M$ this turns out to be true, see \cite{Fischer:2024vak}. Obviously, non-trivial LGBs are not used in the classical formalism, and by the previous discussion one may ask if there is a (global) example with a curved multiplicative Yang-Mills connection starting with a non-trivial LGB. Let us describe these examples, already presented in \cite{MyThesis, Fischer:2024vak}.
 
-There is a natural class of multiplicative Yang-Mills connections which cannot be flattened via field redefinitions. In order to understand this, we follow similar arguments as in the construction recipe I of~\cite[see Ex.\ 1.12]{Fischer:2401.05966}: Assume an ordinary principal $\sfH$-bundle $P$, where $\sfH$ is a Lie group. Also assume that we have a manifold $\sfT$ on which $\sfH$ acts (from the left).\footnote{$\sfT$ and its related constructions and assumptions are only needed to provide an extra geometric interpretation as in \ref{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}.} Then we have two associated bundles: 
+There is a natural class of multiplicative Yang-Mills connections which cannot be flattened via field redefinitions. In order to understand this, we follow similar arguments as in the construction recipe I of~\cite[see Ex.\ 1.12]{Fischer:2401.05966}: Assume an ordinary principal $\sfH$-bundle $P$, where $\sfH$ is a Lie group, and assume that $M$ is connected. Also assume that we have a manifold $\sfT$ on which $\sfH$ acts (from the left).\footnote{$\sfT$ and its related constructions and assumptions are only needed to provide an extra geometric interpretation as in \ref{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}.} Then we have two associated bundles: 
     \begin{equation}
         \begin{aligned}
             c_\sfH(P) &\coloneqq (P \times \sfH) \Big/ \sfH~,
@@ -9397,16 +9397,16 @@ There is a natural class of multiplicative Yang-Mills connections which cannot b
     The following remark provides further motivation for considering Lie group bundles like $c_\sfH(P)$ beyond the existence of natural multiplicative Yang-Mills connections.
     
     \begin{remark}\label{rem:JustifyingExample}
-        As argued in the appendix of \cite{Fischer:2401.05966} every Lie group bundle $\scH$ with a covariant adjustment and whose structural Lie group $\sfH$ has a discrete center is associated to some principal bundle $P$ (whose structural Lie group $\sfK$ is the extension of a Galois group by $\sfH$); see also \cite{meinrenken2021integration} for similar arguments. That is, $\scH \cong (P \times \sfH) \Big/ K$, and the covariant adjustment is given as an associated connection.
+        As argued in the appendix of \cite{Fischer:2401.05966} every Lie group bundle $\scH$ with a covariant adjustment and whose structural Lie group $\sfH$ has a trivial center is associated to some principal bundle $P$ (whose structural Lie group $\sfK$ is the extension of a Galois group by $\sfH$); see also \cite{meinrenken2021integration} for similar arguments. That is, $\scH \cong (P \times \sfH) \Big/ K$, and the covariant adjustment is given as an associated connection.
     \end{remark}
     
     In particular \cite{Fischer:2401.05966} provides the following (a modification of \cite{blazquez2022group}):
     
     \begin{lemmata}{Simple Lie group bundles, \cite{mackenzieGeneralTheory}}{SemiSimpleLGBAdjust}
-        If $\sfH$ is simple and centerless, and $M$ is connected and simply connected, then all covariant adjustments on $\scH$ are associated to an Ehresmann connection of a unique principal $\sfH$-bundle $P$, and their primitive is the corresponding curvature on $P$.
+        If $\sfH$ is simple and centerless, then all covariant adjustments on $\scH$ are associated to an Ehresmann connection of a unique principal $\sfH$-bundle $P$, and their primitive is the corresponding curvature on $P$.
     \end{lemmata}
 		
-		Simplicity also implies that the correspondence in Lemma \ref{lem:SemiSimpleLGBAdjust} is one-to-one. Slightly generalized, assuming that $\sfH$ has a discrete center implies that the associated connection on $c_\sfH(P)$ is in one-to-one correspondence with the Ehresmann connection on $P$. Thus, let us now assume that $\sfH$ and hence $c_\sfH(P)$ have a discrete center; furthermore assume that $\sfT = \mathbb{R}^d$, and that $\sfH$ acts faithfully on $\sfT$ with 0 as fixed point. Then there is a canonical singular foliation $\scF$ on $\scT$ with $M$ as a leaf generated by vector fields of the form
+		Simplicity also implies that the correspondence in Lemma \ref{lem:SemiSimpleLGBAdjust} is one-to-one. Slightly generalized, assuming that $\sfH$ has a trivial center implies that the associated connection on $c_\sfH(P)$ is in one-to-one correspondence with the Ehresmann connection on $P$. Thus, let us now assume that $\sfH$ and hence $c_\sfH(P)$ have a trivial center; furthermore assume that $\sfT = \mathbb{R}^d$, and that $\sfH$ acts faithfully on $\sfT$ with 0 as fixed point. Then there is a canonical singular foliation $\scF$ on $\scT$ with $M$ as a leaf generated by vector fields of the form
     \begin{equation}\label{anchor}
         \chi_\scT(X) + \overline{\nu}
     \end{equation}
