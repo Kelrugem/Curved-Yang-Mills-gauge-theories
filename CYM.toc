@@ -40,6 +40,6 @@
 \contentsline {subsection}{\numberline {7.2}Field redefinitions}{159}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Examples}{162}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}Future prospects}{166}{subsection.7.4}%
-\contentsline {section}{\nonumberline List of References}{166}{section*.3}%
-\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{168}{appendix.A}%
+\contentsline {section}{\nonumberline List of References}{167}{section*.3}%
+\contentsline {section}{\numberline {A}Double tangent bundle and its canonical flip map}{169}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

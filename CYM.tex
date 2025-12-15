@@ -9384,7 +9384,7 @@ Let $\mathcal{G} \to M$ be a trivial LGB over a smooth manifold $M$; furthermore
 
 For centerless simple Lie group bundles over connected $M$ this turns out to be true, see \cite{Fischer:2024vak}. Obviously, non-trivial LGBs are not used in the classical formalism, and by the previous discussion one may ask if there is a (global) example with a curved multiplicative Yang-Mills connection starting with a non-trivial LGB. Let us describe these examples, already presented in \cite{MyThesis, Fischer:2024vak}.
 
-There is a natural class of multiplicative Yang-Mills connections which cannot be flattened via field redefinitions. In order to understand this, we follow similar arguments as in the construction recipe I of~\cite[see Ex.\ 1.12]{Fischer:2401.05966}: Assume an ordinary principal $\sfH$-bundle $P$, where $\sfH$ is a Lie group, and assume that $M$ is connected. Also assume that we have a manifold $\sfT$ on which $\sfH$ acts (from the left).\footnote{$\sfT$ and its related constructions and assumptions are only needed to provide an extra geometric interpretation as in \ref{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}.} Then we have two associated bundles: 
+There is a natural class of multiplicative Yang-Mills connections which cannot be flattened via field redefinitions. In order to understand this, we follow and use results of~\cite[in particular the appendix]{Fischer:2401.05966}: Assume an ordinary principal $\sfH$-bundle $P$, where $\sfH$ is a Lie group, and assume that $M$ is connected. Also assume that we have a manifold $\sfT$ on which $\sfH$ acts (from the left).\footnote{$\sfT$ and its related constructions and assumptions are only needed to provide an extra geometric interpretation as in \ref{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}.} Then we have two associated bundles: 
     \begin{equation}
         \begin{aligned}
             c_\sfH(P) &\coloneqq (P \times \sfH) \Big/ \sfH~,
@@ -9421,7 +9421,7 @@ There is a natural class of multiplicative Yang-Mills connections which cannot b
     The major result of~\cite{Fischer:2401.05966} implies that (in a formal setting, and in a neighborhood around a leaf) every foliation can be modeled like this; however $P$ is then in general infinite-dimensional.\footnote{In our context we simply assume a finite-dimensional $P$ so that the arguments of~\cite{Fischer:2401.05966} carry over to a smooth setting.} Altogether, we can study multiplicative Yang-Mills connections on such $c_\sfH(P)$ as structure group bundle by looking at $\scF$ and $P$. In particular, $c_\sfH(P)$ admits a flat multiplicative Yang-Mills connection if and only if $\scF$ admits a flat $\scF$-connection, which is the case if and only if $P$ is flat. Furthermore,~\cite{Fischer:2401.05966} provides a clear geometric interpretation of the field redefinitions, extending the discussion of~\cite{My1stpaper} and~\cite[\S 5.1]{MyThesis}.
     
     \begin{table*}[htbp]
-        \caption{Comparing the geometry of multiplicative Yang-Mills connections (YM conn.) with the geometry of singular foliations.}
+        \caption{Comparing the geometry of multiplicative Yang-Mills connections (YM conn.) with the geometry of singular foliations. Here, $\scF$-connections only serve to highlight a geometric interpretation, but we actually provided a notion only defined as associated to $P$; however, the general notion of $\scF$-connections allows for more than such connections if $H$ is not simple; this will not matter here, see~\cite{Fischer:2401.05966} for the general classification of $\scF$-connections and their relation to multiplicative Yang-Mills connections.}
         \label{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}
         \centering
         \begin{tabular}{l|l|l}
@@ -9680,11 +9680,11 @@ X_0
 As for tangent vectors, the class $[\alpha]$ of all such $\alpha$ uniquely describes $\xi$, in fact giving rise to an equivalence relation so that $[\alpha]$ is an equivalence class.
 
 In the context of Schwarz's Theorem one may find it natural to define the \textbf{canonical involution (or flip) on $\mathrm{TT}M$} as a map $S: \mathrm{TT}M \to \mathrm{TT}M$ by
-\ba\label{definitionOfFlipMap}
+\begin{align}\label{definitionOfFlipMap}
 S(\xi)
 &\coloneqq
 \mleft.\frac{\mathrm{d}}{\mathrm{d}s}\mright|_{s=0} \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \alpha.
-\ea
+\end{align}
 By \cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory} one has that $S$ is an isomorphism of double vector bundles with certain "special" properties; we will not need the general definition of these. What we need of this, is that $S$ is a base-preserving vector bundle isomorphism as both maps, from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa. Let us prove this, by starting with showing the well-definedness of $S$:
 
 W.l.o.g.\ we can put $J = I$ for simplicity. By construction, the equivalence class $[\beta]$ of $S(\xi)$ is represented by $\beta: I^2 \to M$ given by $\beta(t, s) \coloneqq \alpha(s,t)$ with 
