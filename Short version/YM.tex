@@ -1,0 +1,482 @@
+\documentclass[reqno,a4paper,oneside]{amsart}
+%\pdfoutput=1
+
+\usepackage{CJKutf8}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[textwidth = 430 pt, textheight = 630 pt]{geometry}
+
+\definecolor{MyDarkBlue}{rgb}{0.15,0.25,0.45}
+\definecolor{Cred}{rgb}{0,0,0}
+\usepackage{epsfig,rotating}
+\usepackage{amsmath,amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage[normalem]{ulem}
+\usepackage{mleftright} %Distanz zu \left \right weg
+\usepackage[low-sup]{subdepth} %Subscripts now always at lower position (unified), while usually subscripts are situated higher if there is no superscript
+\usepackage{latexsym}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usetikzlibrary{matrix,cd,arrows}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem} %Improving enumerate
+\usepackage{setspace} %individual linespacing
+
+\usepackage[all,knot]{xy}
+\xyoption{arc}
+
+
+\usepackage{tikz}
+\usetikzlibrary{graphs,decorations.pathmorphing,decorations.markings}
+\usepackage{mathtools}
+\usepackage[all,knot]{xy}
+\xyoption{arc}
+
+\newcommand{\triend}{\mbox{\hspace{0.2mm}}\hfill$\triangle$}
+\newcommand{\black}{\mbox{\hspace{0.2mm}}\hfill$\blacksquare$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Pseudo-jHEP/harvMac Anfang
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bracket siz
+%\delimiterfactor=1000
+%%\delimitershortfall=0pt
+%\delimitershortfall-1sp
+
+%\linespread{1.09}
+
+%\setlength{\footnotesep}{3.5mm}
+%\let\fn\footnote
+%\renewcommand{\footnote}[1]{\linespread{1.1}\fn{#1}\linespread{1.29}}
+
+%\makeatletter\renewcommand{\section}{\@startsection
+    %{section}{1}{\z@}{-3.5ex plus -1ex minus
+        %-.2ex}{2.3ex plus .2ex}{\bf }}
+%\makeatletter\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}{-3.25ex
+        %plus -1ex minus
+        %-.2ex}{1.5ex plus .2ex}{\bf }}
+%\makeatletter\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{-2.45ex}{-3.25ex
+        %plus -1ex minus -.2ex}{1.5ex plus .2ex}{\it }}
+%\renewcommand{\thesection}{\arabic{section}}
+%\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+%\renewcommand{\@seccntformat}[1]{\@nameuse{the#1}.~~}
+%\renewcommand{\thesubsubsection}{}
+%\renewcommand{\theequation}{\thesection.\arabic{equation}}
+%\makeatletter \@addtoreset{equation}{section}
+%\def\Ddots{\mathinner{\mkern1mu\raise\p@
+        %\vbox{\kern7\p@\hbox{.}}\mkern2mu
+        %\raise4\p@\hbox{.}\mkern2mu\raise7\p@\hbox{.}\mkern1mu}}
+%\setcounter{tocdepth}{2}
+
+\usepackage[toc,page]{appendix}
+
+\renewcommand{\appendices}{
+    \section*{Appendix}\label{appendices}\setcounter{subsection}{0}
+    \addcontentsline{toc}{section}{Appendix}
+    \setcounter{equation}{0}
+    \crefalias{subsection}{appendix}
+    \makeatletter
+    \renewcommand{\theequation}{\Alph{subsection}.\arabic{equation}}
+    \renewcommand{\thesubsection}{\Alph{subsection}}
+    \renewcommand{\thethm}{\Alph{subsection}.\arabic{thm}}
+    \@addtoreset{equation}{subsection}
+    \@addtoreset{thm}{subsection}
+    \makeatother
+}
+%
+%\makeatother
+
+%% Fix cref to ref and correct things
+\let\oldref\ref
+\AtBeginDocument{\renewcommand{\ref}[1]{\cref{#1}}}
+\AtBeginDocument{\renewcommand{\eqref}[1]{{\rm (\oldref{#1})}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Pseudo-Harvmac Ende
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\connectiononeform{\vartheta^{\mathrm{tot}}}
+
+%% Quick macros
+
+\newcommand{\makecommand}[3]{%
+    \foreach \i in #3 {%
+        \expandafter\xdef\csname #1\i\endcsname{\noexpand#2{\unexpanded\expandafter{\i}}}%
+    }%
+}
+
+\newcommand{\latinalphabet}{A,a,B,b,C,c,d,D,E,e,F,f,G,g,H,h,I,i,J,j,K,k,L,l,M,m,N,n,O,o,P,p,Q,q,R,r,S,s,T,t,U,u,V,v,W,w,X,x,Y,y,Z,z}
+
+\makecommand{fr}{\mathfrak}{\latinalphabet}
+
+\makecommand{fr}{\mathfrak}{{der,gl,sl,so,osp,brst,su,sp,spin,string,Poisson,inn,at}}
+
+\makecommand{sf}{\mathsf}{\latinalphabet}
+
+\makecommand{sf}{\mathsf}{{id,String,Lie,Hom,SU,inv,SO,Map,Diff,HSymp,id,inn,Inn,CE,hom,Gpd,Bibun,pr}}
+
+\makecommand{rm}{\mathrm}{\latinalphabet}
+
+\makecommand{rm}{\mathrm}{{Ham,ad,id,dim,Ad,im,deg}}
+
+\makecommand{ca}{\mathcal}{\latinalphabet}
+
+\makecommand{I}{\mathbbm}{{N,Z,R,C}}
+
+\makecommand{sc}{\mathscr}{\latinalphabet}
+
+\makecommand{tt}{\mathtt}{\latinalphabet}
+
+\newcommand{\ihom}{\underline{\sfhom}}
+
+\newcommand{\iGpd}{\underline{\sfGpd}}
+
+\newcommand{\basicc}{\nabla^{\rm{bas}}}
+
+\newcommand{\basiccu}{R_{\nabla}^{\rm{bas}}}
+\newcommand{\todo}[1]{{\color{red} #1}}
+%\newcommand{\remCS}[1]{{\leavevmode\color{blue} #1}}
+%\newcommand{\cut}[1]{{\leavevmode\color{olive} #1}}
+\newcommand\fibtimes[2]{\mathbin{_{#1}\times_{#2}}}
+
+%\usepackage{thmtools}
+
+\usepackage{hyperref}
+\hypersetup{
+    hypertexnames=false,
+    colorlinks=true,
+    citecolor=MyDarkBlue,
+    linkcolor=MyDarkBlue,
+    urlcolor=MyDarkBlue,
+    pdfauthor={Simon-Raphael Fischer},
+    pdftitle={Extension of algebroids I},
+    pdfsubject={math.DG},
+    breaklinks=true
+}
+
+
+
+%Pagebreak for equations
+\allowdisplaybreaks
+
+
+%For proper hyphenation over linebreaks
+\def\hyph{-\penalty0\hskip0pt\relax}
+
+%Boxes
+\usepackage[many]{tcolorbox} %Coloured boxes around theorems etc
+\tcbuselibrary{theorems} % siehe oben
+%\usepackage{thmtools}
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref} %First letter is then a capital letter
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+%\newtcbtheorem[number within=section]{theorem}{Theorem}
+%{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={lemma}{lemmata},crefname={Lemma}{lemmata}]% init options
+  {lemmata}% name
+  {Lemma}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {lem}% prefix
+\newtheorem{proposition}[theorem]{Proposition}
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={proposition}{propositions},crefname={Proposition}{propositions}]% init options
+  {propositions}% name
+  {Proposition}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {prop}% prefix
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={theorem}{theorems},crefname={Theorem}{theorems}]% init options
+  {theorems}% name
+  {Theorem}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize,
+		%environment lower=proof
+		}
+  }% options
+  {thm}% prefix
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={corollary}{corollaries},crefname={Corollary}{corollaries}]% init options
+  {corollaries}% name
+  {Corollary}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {cor}% prefix
+
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={conjecture}{conjectures},crefname={Conjecture}{conjectures}]% init options
+  {conjectures}% name
+  {Conjecture}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {con}% prefix
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+
+\theoremstyle{remark}
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={remark}{remarks},crefname={Remark}{remarks}]% init options
+  {remarks}% name
+  {Remark}% title
+  {%
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {rem}% prefix
+\newtheorem*{note}{Note}
+\newtheorem{remark}[theorem]{Remarks}
+\newtheorem{motivation}[theorem]{Motivation} 
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={definition}{definitions},crefname={Definition}{definitions}]% init options
+  {definitions}% name
+  {Definition}% title
+  {%
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {def}% prefix
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={example}{examples},crefname={Example}{examples}]% init options
+  {examples}% name
+  {Example}% title
+  {%colback=black!5,colframe=red!35!black
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {ex}% prefix
+\newtheorem{example}[theorem]{Example}
+
+
+
+
+
+%TOC
+\makeatletter
+\renewcommand{\tocsection}[3]{%
+  \indentlabel{\@ifnotempty{#2}{\bfseries\ignorespaces#1 #2\quad}}\bfseries#3}
+% Remove . after numbers in \subsection
+\renewcommand{\tocsubsection}[3]{%
+  \indentlabel{\@ifnotempty{#2}{\ignorespaces#1 #2\quad}}#3}
+
+  \def\l@subsection{\@tocline{2}{0pt}{2.5pc}{5pc}{}}
+	
+	\makeatother 
+
+%\newtheorem{cor}{Corollary}
+%\newtheorem{ad}{Theorem}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{theorem}{Theorem}
+
+%\includeonly{PhysicalBasics/f(R)gravity} %nur das kompilieren
+
+%\let\endtitlepage\relax %No page break after titlepage
+
+\begin{document}
+\pagenumbering{Roman}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{titlepage}
+        \vspace*{2cm}
+        \begin{center}
+            {{\LARGE \bf
+                Curved Yang-Mills gauge theories}
+								%\\[0.2cm]
+								%\bf via the obstruction of a special kind of action algebroids
+            }
+            \vskip1cm
+            {
+						{\Large {Simon-Raphael \textsc{Fischer}\textsuperscript*}}
+						\vskip0.5cm
+						\today; first version: October 6, 2022
+            \vskip0.5cm
+            {
+                \textsuperscript* National Center for Theoretical Sciences (\begin{CJK*}{UTF8}{bkai}國家理論科學研究中心\end{CJK*}),
+Mathematics Division,
+National Taiwan University
+\\
+No.\ 1, Sec.\ 4, Roosevelt Rd., Taipei City 106, Room 407, Cosmology Building, Taiwan
+\ \\
+\begin{CJK*}{UTF8}{bkai}106319 臺北市羅斯福路四段1號　(國立臺灣大學次震宇宙館407室)\end{CJK*}\\[0.3cm]
+            {\href{mailto:sfischer@ncts.tw}{\texttt{sfischer@ncts.tw}}; ORCiD: \href{https://orcid.org/0000-0002-5859-2825}{0000-0002-5859-2825}} }
+                }
+        \end{center}
+        \vskip0.8cm
+        \begin{center}
+            \textbf{Abstract}\footnote{Abbreviations used in this paper: \textbf{LGB(s)} for Lie group bundle(s), \textbf{LAB(s)} for Lie algebra bundle(s).}
+        \end{center}
+        \begin{quote}
+				We construct a gauge theory based on principal bundles $\scP$ equipped with a right $\scG$-action, where $\scG$ is a Lie group bundle instead of a Lie group. Due to the fact that a $\scG$-action acts fibre by fibre, pushforwards of tangent vectors via a right-translation act now only on the vertical structure of $\scP$. Thus, we generalize pushforwards using a connection on $\scG$ which will modify the pushforward. A horizontal distribution on $\scP$ invariant under such a modified pushforward will provide a proper notion of Ehresmann connection. For achieving gauge invariance we impose conditions on the connection 1-form $\mu$ on $\scG$: $\mu$ has to be a multiplicative form, \textit{i.e.}\ closed w.r.t.\ a certain simplicial differential $\delta$ on $\scG$, and the curvature $R_\mu$ of $\mu$ has to be $\delta$-exact with primitive $\zeta$; $\mu$ will be the generalization of the Maurer-Cartan form of the classical gauge theory, while the $\delta$-exactness of $R_\mu$ will generalize the role of the Maurer-Cartan equation. This introduces the notion of multiplicative Yang-Mills connections, a connection which helped classifying singular foliations and symmetry breaking. For allowing curved connections on $\scG$ in the dynamical theory we will need to generalize the typical definition of the curvature/field strength $F$ on $\scP$ by adding $\zeta$ to $F$.
+	
+				Several examples for a gauge theory with a curved $\mu$ will be provided, including the inner group bundle of the Hopf fibration $\mathbb{S}^7 \to \mathbb{S}^4$, and a classification for gauge theories with structural simple group bundles will be provided, including a classification for whether these theories admit a classical description.
+
+				Last but not least, this paper aims to accessible for beginners which is why it only assumes knowledge of classical gauge theory.
+        \end{quote}
+    \end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Inhaltsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\tableofcontents
+
+\pagenumbering{arabic}
+
+%\thispagestyle{empty}\hspace{1em}\newpage
+% \thispagestyle{empty}\hspace{1em}\newpage
+
+
+\renewcommand{\thefootnote}{\arabic{footnote}}
+%
+\setlength{\parindent}{12 pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hier beginnt der Hauptteil %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cleardoublepage
+% für die leere(n) Seite(n)
+
+
+\section{Introduction and summary}
+
+
+\section{Lie group bundles with connection}
+
+We will construct a gauge theory on a principal bundle equipped with an LGB-action. Thus let us first study LGBs; since we will also generalise the Maurer-Cartan form, we will study connections on LGBs with a suitable curvature equation.
+
+\textbf{Acknowledgements:} I want to thank Siye Wu, Camille Laurent-Gengoux, Mark John David Hamilton and Alessandra Frabetti for their great help and support in making this paper. Also big thanks to my mother, father, Dennis, Gregor, Marco, Nico, Jakob, Kathi, Konstantin, Lukas, Locki, Gareth, Philipp, Ramona, Annerose, Michael, Maxim, Anna, and my girlfriend Rachelle for all their love.
+
+\textbf{Funding:} The paper is part of my post-doc fellowship at the National Center for Theoretical Sciences (NCTS, \begin{CJK*}{UTF8}{bkai}國家理論科學研究中心\end{CJK*}), which is why I also want to thank the NCTS.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hier beginnt der Anhang %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+
+%\listoftables % Tabellenverzeichnis
+
+%\listoffigures %Abbildungsverzeichnis
+
+\appendix
+\setcounter{equation}{0}
+\renewcommand{\theequation}{\Alph{section}.\arabic{equation}} %Reset first and then add section to number
+
+\renewcommand\refname{List of References}
+
+%\begin{thebibliography}{99}
+%\bibitem[I]{Anl01} \url{http://adsabs.harvard.edu/abs/1971ApJ...170..319D}, Datum: 01.11.2014
+%\end{thebibliography}
+
+%\printbibliography 
+\bibliography{Literatur}
+\bibliographystyle{unsrt}
+
+%\newpage\thispagestyle{empty}\hspace{1em}\newpage
+
+
+\end{document}
