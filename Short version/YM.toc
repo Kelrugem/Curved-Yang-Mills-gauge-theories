@@ -1,3 +1,5 @@
 \contentsline {section}{\tocsection {}{1}{Introduction and summary}}{1}{section.3}%
-\contentsline {section}{\tocsection {}{2}{The setup}}{1}{section.4}%
-\contentsline {section}{\tocsection {Appendix}{}{List of References}}{1}{section*.5}%
+\contentsline {section}{\tocsection {}{2}{Lie group bundles with connection}}{1}{section.4}%
+\contentsline {subsection}{\tocsubsection {}{2.1}{Ehresmann connections ...}}{1}{subsection.5}%
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.1}{... as parallel transport}}{1}{subsubsection.6}%
+\contentsline {section}{\tocsection {Appendix}{}{List of References}}{1}{section*.7}%

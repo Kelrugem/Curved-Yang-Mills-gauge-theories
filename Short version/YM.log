@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  31 MAR 2026 13:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  1 APR 2026 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1480,60 +1480,73 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `YM.out' has not changed.
-(rerunfilecheck)             Checksum: 7627AC438ABD93967357427423DD6C80;436.
+
+
+Package rerunfilecheck Warning: File `YM.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `YM.out':
+(rerunfilecheck)             Before: 54BD35919250A085798CAC50640B417C;835
+(rerunfilecheck)             After:  D0681A6087CFF0DB6A660DD16422D53F;779.
  ) 
 Here is how much of TeX's memory you used:
- 38937 strings out of 467866
- 773789 string characters out of 5418325
- 1278974 words of memory out of 5000000
- 66846 multiletter control sequences out of 15000+600000
- 687410 words of font info for 166 fonts, out of 8000000 for 9000
+ 38964 strings out of 467866
+ 774266 string characters out of 5418325
+ 1279974 words of memory out of 5000000
+ 66864 multiletter control sequences out of 15000+600000
+ 687703 words of font info for 169 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 88i,6n,94p,3229b,990s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu3
-0.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bk
-aiu4e.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkai
-u/bkaiu53.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/
-bkaiu/bkaiu56.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arp
-hic/bkaiu/bkaiu57.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1
-/arphic/bkaiu/bkaiu59.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/arphic/bkaiu/bkaiu5b.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fon
-ts/type1/arphic/bkaiu/bkaiu5e.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX
-/fonts/type1/arphic/bkaiu/bkaiu5f.pfb><C:/Users/kelru/AppData/Local/Programs/Mi
-KTeX/fonts/type1/arphic/bkaiu/bkaiu65.pfb><C:/Users/kelru/AppData/Local/Program
-s/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu6b.pfb><C:/Users/kelru/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu70.pfb><C:/Users/kelru/AppData/Local
-/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu74.pfb><C:/Users/kelru/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu78.pfb><C:/Users/kelru/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu79.pfb><C:/Users/kelru/A
-ppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu7a.pfb><C:/Users/kel
-ru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu7f.pfb><C:/Users
-/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu81.pfb><C:/U
-sers/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu86.pfb><
-C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu8a.p
-fb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu
-8d.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/b
-kaiu97.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bka
-iu/bkaiu99.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/lm/lmbx10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/lm/lmbx12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/lm/lmbx8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmcsc10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/lm/lmmi10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/lm/lmmi7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmr10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
-m/lmr12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
-/lmr7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mr8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
-i10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lms
-y10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmt
-t10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/rsfs/rsfs10.pfb>
-Output written on YM.pdf (2 pages, 386701 bytes).
+ 88i,10n,94p,3229b,990s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{section*.18} has been referenced but does not exist
+, replaced by a fixed one
+
+<C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu30.
+pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkai
+u4e.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/
+bkaiu53.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bk
+aiu/bkaiu56.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphi
+c/bkaiu/bkaiu57.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/a
+rphic/bkaiu/bkaiu59.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/arphic/bkaiu/bkaiu5b.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts
+/type1/arphic/bkaiu/bkaiu5e.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/f
+onts/type1/arphic/bkaiu/bkaiu5f.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
+eX/fonts/type1/arphic/bkaiu/bkaiu65.pfb><C:/Users/kelru/AppData/Local/Programs/
+MiKTeX/fonts/type1/arphic/bkaiu/bkaiu6b.pfb><C:/Users/kelru/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu70.pfb><C:/Users/kelru/AppData/Local/P
+rograms/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu74.pfb><C:/Users/kelru/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu78.pfb><C:/Users/kelru/AppData
+/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu79.pfb><C:/Users/kelru/App
+Data/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu7a.pfb><C:/Users/kelru
+/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu7f.pfb><C:/Users/k
+elru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu81.pfb><C:/Use
+rs/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu86.pfb><C:
+/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu8a.pfb
+><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu8d
+.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bka
+iu97.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu
+/bkaiu99.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmbx10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmbx12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmbx8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmcsc10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmmi10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmmi7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmr10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmr12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mr7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
+8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri1
+0.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy1
+0.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7
+.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10
+.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/rsfs/rsfs7.pfb>
+Output written on YM.pdf (2 pages, 405811 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
- 29313 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 280 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
+ 29321 words of extra memory for PDF output out of 29859 (max. 10000000)
 
