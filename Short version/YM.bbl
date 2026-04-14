@@ -1,3 +1,10 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{mackenzieGeneralTheory}
+Kirill C.~H. Mackenzie.
+\newblock General theory of {L}ie groupoids and {L}ie algebroids.
+\newblock {\em London Mathematical Society Lecture Note Series},
+  213:xxxviii+501, 2005.
+\newblock https://doi.org/10.1017/CBO9781107325883.
 
 \end{thebibliography}
