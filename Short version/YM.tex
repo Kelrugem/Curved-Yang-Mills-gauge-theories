@@ -5,6 +5,7 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage[textwidth = 430 pt, textheight = 630 pt]{geometry}
+\usepackage{dsfont}
 
 \definecolor{MyDarkBlue}{rgb}{0.15,0.25,0.45}
 \definecolor{Cred}{rgb}{0,0,0}
@@ -454,7 +455,71 @@ That is, we will consider LGBs $\pi_\scG\colon \scG \to M$ over a smooth manifol
 
 \begin{definitions}{Lie group bundle actions}{LGBaction}
 \tcbsubtitle[before skip=\baselineskip]{for example \cite[\S 1.6, special case of Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}}
+Let $M, N$ be smooth manifolds, $\pi_\scG \colon \mathscr{G} \to M$ an LGB over $M$, and $\Phi \colon N \to M$ a smooth map. Then a \textbf{right-action of $\mathscr{G}$ on $N$} is a smooth map 
+\begin{align*}
+N \fibtimes\Phi{\pi_\scG} \scG &\to N,\\
+(p, g) &\mapsto p \cdot g,
+\end{align*}
+satisfying the following properties:
+\begin{align*}
+\Phi(p \cdot g) &= \pi(g),\\
+(p \cdot g) \cdot h &= p \cdot (gh),\\
+p \cdot \mathds{1}_{\Phi(p)} &= p
+\end{align*}
+for all $p \in N$ and $g, h \in \mathscr{G}_{\Phi(p)}$, where $\mathds{1}$ is the neutral section of $\mathscr{G}$. Similarly one defines left actions.
 \end{definitions}
+
+In this work we will need to apply the tangent map to an LGB action, and for doing so the following proposition will be useful; for this remember that it is a standard exercise to show that the tangent bundle of the pullback $N \fibtimes\Phi{\pi_\scG} \scG$ is given by just applying the tangent functor $\rmT$ on all components, that is,
+\begin{equation*}
+	\rmT \mleft( N \fibtimes\Phi{\pi_\scG} \scG \mright)
+	=
+	\rmT N \fibtimes{\rmT\Phi}{\rmT\pi_\scG} \rmT \scG~.
+\end{equation*}
+
+\begin{propositions}{Differential of smooth LGB actions}{DiffOfLGBAction}
+Let $M$ and $N$ be smooth manifolds, $\pi_\scG \colon \mathscr{G} \to M$ an LGB over $M$, $\Phi \colon N \to M$ a smooth map, and assume we have a right $\mathscr{G}$-action on $N$, $\Psi\colon N \fibtimes\Phi{\pi_\scG} \scG \to N$. Then we have
+\begin{align*}
+\mathrm{T}_{(p, g)}\Psi(X, Y)
+&=
+\mathrm{T}_pr_\sigma(X)
+	+ \mleft.{\overline{\mleft( \mu_{\mathscr{G}}\mright)_g \mleft(Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x \mathds{1} (\omega) \bigr)\mright)}}\mright|_{p \cdot g}
+\end{align*}
+for all $(p, g) \in N \fibtimes\Phi{\pi_\scG} \scG$ and $(X, Y) \in \rmT N \fibtimes{\rmT\Phi}{\rmT\pi_\scG} \rmT \scG$, where $x \coloneqq \Phi(p) = \pi_\scG(g)$, $\sigma$ is any (local) section of $\mathscr{G}$ with $\sigma_{x} = g$, $\mathds{1}$ is the identity section of $\mathscr{G}$, and $\omega$ is an element of $\mathrm{T}_xM$ given by
+\begin{align*}
+\omega
+&\coloneqq
+\mathrm{T}_p \Phi(X)
+= 
+\mathrm{T}_g\pi_\scG(Y)~.
+\end{align*}
+We can also write
+\begin{align*}
+\mathrm{T}_{(p, g)}\Psi(X, Y)
+&=
+\mathrm{T}_pr_\sigma(X)
+	+ \mleft.{\overline{\mleft( \mu_{\mathscr{G}}\mright)_g \bigl(Y - \mathrm{T}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}.
+\end{align*}
+
+If $\Phi$ is a surjective submersion, then we can also write
+\begin{align*}
+\mathrm{T}_{(p, g)}\Psi(X, Y)
+&=
+\mathrm{T}_pr_\sigma(X)
+	+ \mathrm{T}_g\Psi_\tau (Y)
+	- \mathrm{T}_{e_x}(\Psi_\tau \circ R_\sigma)\bigl( \mathrm{T}_x \mathds{1}(\omega) \bigr)
+\end{align*}
+and
+\begin{align*}
+\mathrm{T}_{(p, g)}\Psi(X, Y)
+&=
+\mathrm{T}_pr_g\Bigl( X - \mathrm{T}_{\mathds{1}_x}\Psi_\tau\bigl( \mathrm{T}_x\mathds{1}(\omega) \bigr) \Bigr)
+	+ \mathrm{T}_g\Psi_p \Bigl( Y - \mathrm{D}_{\mathds{1}_x}R_\sigma \bigl( \mathrm{T}_x \mathds{1} (\omega) \bigr) \Bigr)
+\nonumber\\
+&\hspace{1cm}
+	+ \mathrm{T}_{\mathds{1}_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{T}_x\mathds{1}(\omega) \bigr),
+\end{align*}
+where $\tau$ is any (local) section of $\Phi$ with $\tau_x = p$, and $\Psi_\tau$ is the orbit map through $\tau$.
+\end{propositions}
 
 \subsection{Ehresmann connections ...}
 

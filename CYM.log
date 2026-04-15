@@ -1,36 +1,37 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.23)  6 FEB 2026 14:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  15 APR 2026 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./CYM.tex
 (CYM.tex
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-09-02>
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrartcl.cl
 s
-Document Class: scrartcl 2025/09/09 v3.48 KOMA-Script document class (article)
+Document Class: scrartcl 2026/02/02 v3.49.2 KOMA-Script document class (article
+)
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.st
 y
-Package: scrkbase 2025/09/09 v3.48 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
+Package: scrkbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-dependent
+ basics and keyval usage)
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
-Package: scrbase 2025/09/09 v3.48 KOMA-Script package (KOMA-Script-independent 
-basics and keyval usage)
+Package: scrbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-independen
+t basics and keyval usage)
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
 y
-Package: scrlfile 2025/09/09 v3.48 KOMA-Script package (file load hooks)
+Package: scrlfile 2026/02/02 v3.49.2 KOMA-Script package (file load hooks)
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
 ok.sty
-Package: scrlfile-hook 2025/09/09 v3.48 KOMA-Script package (using LaTeX hooks)
-
+Package: scrlfile-hook 2026/02/02 v3.49.2 KOMA-Script package (using LaTeX hook
+s)
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
-Package: scrlogo 2025/09/09 v3.48 KOMA-Script package (logo)
+Package: scrlogo 2026/02/02 v3.49.2 KOMA-Script package (logo)
 ))) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
@@ -41,7 +42,7 @@ Already applied: [0000/00/00] Usage of raw or classic option list on input line
 ))
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.st
 y
-Package: tocbasic 2025/09/09 v3.48 KOMA-Script package (handling toc-files)
+Package: tocbasic 2026/02/02 v3.49.2 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip49
 \scr@dte@tocline@numbox=\box53
 )
@@ -61,16 +62,16 @@ Package scrartcl Info: You've used standard option `11pt'.
 (scrartcl)             you'd have to use `fontsize=11pt' there
 (scrartcl)             instead of `11pt', too.
 Class scrartcl Info: File `scrsize11pt.clo' used to setup font sizes on input l
-ine 2486.
+ine 2489.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize11pt
 .clo
-File: scrsize11pt.clo 2025/09/09 v3.48 KOMA-Script font size class option (11pt
-)
+File: scrsize11pt.clo 2026/02/02 v3.49.2 KOMA-Script font size class option (11
+pt)
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.st
 y
-Package: typearea 2025/09/09 v3.48 KOMA-Script package (type area)
+Package: typearea 2026/02/02 v3.49.2 KOMA-Script package (type area)
 \ta@bcor=\skip50
 \ta@div=\count275
 Package typearea Info: You've used standard option `a4paper'.
@@ -105,7 +106,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1807.
+(typearea)              on input line 1810.
 )
 \c@part=\count276
 \c@section=\count277
@@ -115,46 +116,46 @@ Package typearea Info: These are the values describing the layout:
 \c@subparagraph=\count281
 \scr@dte@section@maxnumwidth=\skip55
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\section on input line 5161.
+(scrartcl)           for `\section on input line 5015.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\section on input line 5161.
+(scrartcl)           for `\section on input line 5015.
 \scr@dte@part@maxnumwidth=\skip56
 Class scrartcl Info: using compatibility default `afterindent=false'
-(scrartcl)           for `\part on input line 5169.
+(scrartcl)           for `\part on input line 5023.
 \scr@dte@subsection@maxnumwidth=\skip57
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsection on input line 5179.
+(scrartcl)           for `\subsection on input line 5033.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsection on input line 5179.
+(scrartcl)           for `\subsection on input line 5033.
 \scr@dte@subsubsection@maxnumwidth=\skip58
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsubsection on input line 5189.
+(scrartcl)           for `\subsubsection on input line 5043.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsubsection on input line 5189.
+(scrartcl)           for `\subsubsection on input line 5043.
 \scr@dte@paragraph@maxnumwidth=\skip59
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\paragraph on input line 5200.
+(scrartcl)           for `\paragraph on input line 5054.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\paragraph on input line 5200.
+(scrartcl)           for `\paragraph on input line 5054.
 \scr@dte@subparagraph@maxnumwidth=\skip60
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subparagraph on input line 5210.
+(scrartcl)           for `\subparagraph on input line 5064.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subparagraph on input line 5210.
+(scrartcl)           for `\subparagraph on input line 5064.
 \abovecaptionskip=\skip61
 \belowcaptionskip=\skip62
 \c@pti@nb@sid@b@x=\box54
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 6410.
+(tocbasic)             for `lof' on input line 6287.
 \scr@dte@figure@maxnumwidth=\skip63
 \c@figure=\count282
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 6422.
+(tocbasic)             for `lot' on input line 6299.
 \scr@dte@table@maxnumwidth=\skip64
 \c@table=\count283
-Class scrartcl Info: Redefining `\numberline' on input line 6592.
+Class scrartcl Info: Redefining `\numberline' on input line 6469.
 \bibindent=\dimen148
 ) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk\CJKutf8.sty
 Package: CJKutf8 2021/10/16 4.8.5
@@ -246,35 +247,38 @@ Now handling font encoding C62 ...
 \CJK@indent=\box55
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 ))
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLa
-TeX and XeLaTeX
+Package: babel 2026/01/26 v26.2 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
 \babel@savecnt=\count284
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2045.
+ne 2078.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2047.
+ne 2080.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2049.
+e 2082.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2050.
+e 2083.
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2051.
+on input line 2084.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2053.
+on input line 2086.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2078.
+on input line 2111.
 \U@D=\dimen149
 \l@unhyphenated=\language79
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count285
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4206.
 
 *************************************
 * Local config file bblopts.cfg used
@@ -283,15 +287,14 @@ on input line 2078.
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
+-english.tex)
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 4330.
+
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.l
 df
 Language: english 2017/06/06 v3.3r English support from the babel system
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
--english.tex
-Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 12.
-)
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
@@ -315,7 +318,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 106.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen150
 \Gin@req@width=\dimen151
@@ -347,21 +350,21 @@ Package: amsthm 2020/05/29 v2.20.6
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2025-09-02 L3 programming layer (loader) 
+Package: expl3 2026-01-19 L3 programming layer (loader) 
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
-File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count286
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
 e.sty
-Package: xparse 2024-08-16 L3 Experimental document command parser
+Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count287
 ))
 Class scrartcl Info: amsthm's \deferred@thm@head patched.
@@ -374,7 +377,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@floatcapt=\box57
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2025/06/16 v2.17y AMS math features
+Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip68
 
 For additional information on amsmath, use the `?' option.
@@ -438,8 +441,8 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \multlinegap=\skip69
 \multlinetaggap=\skip70
 \mathdisplay@stack=\toks33
-LaTeX Info: Redefining \[ on input line 2949.
-LaTeX Info: Redefining \] on input line 2950.
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
@@ -514,7 +517,7 @@ Package: fixcmex 2015/11/10 v1.0 Scalable math extensions font (Enrico Gregorio
 )
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
@@ -547,7 +550,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
@@ -570,7 +573,7 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 \Hy@linkcounter=\count306
 \Hy@pagecounter=\count307
  (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 ) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
@@ -578,25 +581,25 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count308
  (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4066.
-Package hyperref Info: Hyper figures OFF on input line 4195.
-Package hyperref Info: Link nesting OFF on input line 4200.
-Package hyperref Info: Hyper index ON on input line 4203.
-Package hyperref Info: Plain pages OFF on input line 4210.
-Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4072.
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4462.
+Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count309
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4801.
+LaTeX Info: Redefining \url on input line 4807.
 \XeTeXLinkMargin=\dimen176
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
@@ -610,13 +613,13 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 \Fld@menulength=\count310
 \Field@Width=\dimen177
 \Fld@charsize=\dimen178
-Package hyperref Info: Hyper figures OFF on input line 6078.
-Package hyperref Info: Link nesting OFF on input line 6083.
-Package hyperref Info: Hyper index ON on input line 6086.
-Package hyperref Info: backreferencing OFF on input line 6093.
-Package hyperref Info: Link coloring ON on input line 6096.
-Package hyperref Info: Link coloring with OCG OFF on input line 6103.
-Package hyperref Info: PDF/A mode OFF on input line 6108.
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring ON on input line 6102.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
 \Hy@abspage=\count311
 \c@Item=\count312
 \c@Hfootnote=\count313
@@ -624,7 +627,7 @@ Package hyperref Info: PDF/A mode OFF on input line 6108.
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
 \Fld@listcount=\count314
 \c@bookmark@seq@number=\count315
 
@@ -647,13 +650,13 @@ Package: esint
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer-sc
 rpage.sty
-Package: scrlayer-scrpage 2025/09/09 v3.48 KOMA-Script package (end user interf
-ace for scrlayer)
+Package: scrlayer-scrpage 2026/02/02 v3.49.2 KOMA-Script package (end user inte
+rface for scrlayer)
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer.st
 y
-Package: scrlayer 2025/09/09 v3.48 KOMA-Script package (defining layers and pag
-e styles)
+Package: scrlayer 2026/02/02 v3.49.2 KOMA-Script package (defining layers and p
+age styles)
 Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 217
 9.
 )
@@ -680,7 +683,7 @@ LaTeX Info: Redefining \addtolength on input line 87.
 \calc@Cskip=\skip74
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
-Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
 \ESO@tempdima=\dimen181
 \ESO@tempdimb=\dimen182
 
@@ -721,7 +724,7 @@ File: pppdftex.def 2025/07/23 v0.6g Pdfpages driver for pdfTeX (AM)
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen186
 \ar@mcellbox=\box64
 \extrarowheight=\dimen187
@@ -1089,7 +1092,7 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
-Package: tcolorbox 2025/09/09 version 6.8.0 text color boxes
+Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks57
@@ -1119,7 +1122,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbraster.cod
 e.tex
-Library (tcolorbox): 'tcbraster.code.tex' version '6.8.0'
+Library (tcolorbox): 'tcbraster.code.tex' version '6.9.0'
 \c@tcbrastercolumn=\count350
 \c@tcbrasterrow=\count351
 \c@tcbrasternum=\count352
@@ -1127,7 +1130,7 @@ Library (tcolorbox): 'tcbraster.code.tex' version '6.8.0'
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.code
 .tex
-Library (tcolorbox): 'tcbskins.code.tex' version '6.8.0'
+Library (tcolorbox): 'tcbskins.code.tex' version '6.9.0'
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill.image
 .sty
@@ -1144,11 +1147,11 @@ File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
 ))
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsa
 w.code.tex
-Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.8.0'
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
 ))
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbbreakable.
 code.tex
-Library (tcolorbox): 'tcbbreakable.code.tex' version '6.8.0'
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pdfcol\pdfcol.sty
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
@@ -1159,15 +1162,15 @@ Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbhooks.code
 .tex
-Library (tcolorbox): 'tcbhooks.code.tex' version '6.8.0'
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.9.0'
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbtheorems.c
 ode.tex
-Library (tcolorbox): 'tcbtheorems.code.tex' version '6.8.0'
+Library (tcolorbox): 'tcbtheorems.code.tex' version '6.9.0'
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbfitting.co
 de.tex
-Library (tcolorbox): 'tcbfitting.code.tex' version '6.8.0'
+Library (tcolorbox): 'tcbfitting.code.tex' version '6.9.0'
 \tcbfitdim=\dimen309
 \tcb@lowerfitdim=\dimen310
 \tcb@upperfitdim=\dimen311
@@ -1476,9 +1479,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
 49.
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-
-[1
+) [1
 
 
 {C:/Users/kelru/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/kelr
@@ -1486,9 +1487,7 @@ u/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/kelru/Ap
 pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/kelru/AppDa
 ta/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/kelru/AppDa
 ta/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/kelru/AppData/L
-ocal/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] (CYM.toc
-
-[2]
+ocal/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] (CYM.toc [2]
 Overfull \hbox (1.09496pt too wide) detected at line 38
  []\T1/lmss/bx/n/10.95 157
  []
@@ -1512,58 +1511,18 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 493
  (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-
-[1]
-
-[2]
+[1] [2]
 Underfull \hbox (badness 3612) in paragraph at lines 554--554
 []|\T1/lmr/m/n/10.95 Field re-def-i-ni-tions lead
  []
-
-
 
 [3]
 Underfull \hbox (badness 1394) in paragraph at lines 573--573
 \T1/lmr/m/n/10.95 in gauge trans-for-ma-tions and field
  []
 
-
-
-[4]
-
-[5]
-
-[6]
-
-[7]
-
-[8]
-
-[9]
-
-[10]
-
-[11]
-
-[12]
-
-[13]
-
-[14]
-
-[15]
-
-[16]
-
-[17]
-
-[18]
-
-[19]
-
-[20]
-
-[21]
+[4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
+[20] [21]
 Underfull \hbox (badness 10000) in paragraph at lines 1376--1378
 
  []
@@ -1573,330 +1532,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 1390--1393
 
  []
 
-
-
-[22]
-
-[23]
-
-[24]
+[22] [23] [24]
 Underfull \hbox (badness 10000) in paragraph at lines 1512--1515
 
  []
 
-
-
-[25]
-
-[26]
-
-[27]
-
-[28]
-
-[29]
-
-[30]
-
-[31]
+[25] [26] [27] [28] [29] [30] [31]
 Underfull \hbox (badness 10000) in paragraph at lines 1897--1900
 
  []
-
-
 
 [32]
 Underfull \hbox (badness 10000) in paragraph at lines 1914--1917
 
  []
 
-
-
-[33]
-
-[34]
-
-[35]
-
-[36]
-
-[37]
-
-[38]
-
-[39]
-
-[40]
-
-[41]
-
-[42]
-
-[43]
-
-[44]
-
-[45]
-
-[46]
-
-[47]
-
-[48]
-
-[49]
-
-[50]
-
-[51]
-
-[52]
-
-[53]
-
-[54]
-
-[55]
-
-[56]
-
-[57]
-
-[58]
-
-[59]
-
-[60]
-
-[61]
-
-[62]
-
-[63]
-
-[64]
-
-[65]
-
-[66]
-
-[67]
-
-[68]
-
-[69]
-
-[70]
-
-[71]
-
-[72]
-
-[73]
-
-[74]
-
-[75]
-
-[76]
-
-[77]
-
-[78]
-
-[79]
-
-[80]
-
-[81]
-
-[82]
-
-[83]
-
-[84]
-
-[85]
-
-[86]
-
-[87]
-
-[88]
-
-[89]
-
-[90]
-
-[91]
-
-[92]
-
-[93]
-
-[94]
-
-[95]
-
-[96]
-
-[97]
-
-[98]
-
-[99]
-
-[100]
-
-[101]
+[33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47]
+[48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62]
+[63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]
+[78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]
+[93] [94] [95] [96] [97] [98] [99] [100] [101]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 5632.
 
-
-
-[102]
-
-[103]
-
-[104]
-
-[105]
-
-[106]
-
-[107]
-
-[108]
-
-[109]
-
-[110]
-
-[111]
-
-[112]
-
-[113]
-
-[114]
-
-[115]
-
-[116]
-
-[117]
-
-[118]
-
-[119]
-
-[120]
-
-[121]
-
-[122]
-
-[123]
-
-[124]
-
-[125]
-
-[126]
-
-[127]
-
-[128]
-
-[129]
-
-[130]
-
-[131]
-
-[132]
-
-[133]
-
-[134]
-
-[135]
-
-[136]
-
-[137]
-
-[138]
-
-[139]
+[102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113]
+[114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125]
+[126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137]
+[138] [139]
 Overfull \hbox (2.67805pt too wide) in paragraph at lines 8001--8008
 \T1/lmr/m/n/10.95 using Rem. [][]5.19[][] (bracket of fundamental/left-invarian
 t vec-tor fields is fundamental/left-invariant)
  []
 
-
-
-[140]
-
-[141]
-
-[142]
-
-[143]
-
-[144]
-
-[145]
-
-[146]
-
-[147]
-
-[148]
-
-[149]
-
-[150]
+[140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150]
 Overfull \hbox (3.1053pt too wide) detected at line 8689
 []
  []
 
-
-
-[151]
-
-[152]
-
-[153]
-
-[154]
-
-[155]
-
-[156]
-
-[157]
-
-[158]
-
-[159]
-
-[160]
-
-[161]
-
-[162]
-
-[163]
-
-[164]
-
-[165]
-
-[166] (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
+[151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162]
+[163] [164] [165] [166]
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
-) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.chr
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
 (CYM.bbl
@@ -1953,8 +1632,6 @@ Underfull \hbox (badness 1215) in paragraph at lines 62--67
 y Lec-ture Note Se-ries\T1/lmr/m/n/10.95 , 213:xxxviii+501, 2005.
  []
 
-
-
 [167]
 Underfull \hbox (badness 10000) in paragraph at lines 75--79
 []\T1/lmr/m/n/10.95 Camille Laurent-Gengoux, Math-ieu Stiénon, and Ping Xu.  No
@@ -2009,11 +1686,7 @@ Underfull \hbox (badness 1867) in paragraph at lines 150--154
 om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
  []
 
-
-
-[168])
-
-[169]
+[168]) [169]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
 has been already used, duplicate ignored
 <to be read again> 
@@ -2043,9 +1716,7 @@ has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.9687 \end{align}
-                  
-
-[170]
+                   [170]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) 
 has been already used, duplicate ignored
 <to be read again> 
@@ -2057,35 +1728,21 @@ has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.9764 \ea
-          
-
-[171]
+           [171]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.9775 \ea
-          
-
-[172]
-
-[173]
-
-[174]
+           [172] [173] [174]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.10040 \ea
-           
-
-[175]
-
-[176]
-
-[177] (CYM.aux)
+            [175] [176] [177] (CYM.aux)
  ***********
-LaTeX2e <2025-06-01> patch level 1
+LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
 
@@ -2094,13 +1751,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 39591 strings out of 468130
- 827394 string characters out of 5430633
- 1377981 words of memory out of 5000000
- 66903 multiletter control sequences out of 15000+600000
- 761042 words of font info for 191 fonts, out of 8000000 for 9000
+ 39679 strings out of 467866
+ 830238 string characters out of 5418325
+ 1385641 words of memory out of 5000000
+ 67256 multiletter control sequences out of 15000+600000
+ 763038 words of font info for 193 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,25n,107p,11228b,1342s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,25n,107p,11228b,1338s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu3
 0.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bk
 aiu4e.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkai
@@ -2162,9 +1819,9 @@ ru/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symb
 ols/msbm10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /stix/stix-mathscr.pfb>
-Output written on CYM.pdf (179 pages, 1708231 bytes).
+Output written on CYM.pdf (179 pages, 2050464 bytes).
 PDF statistics:
- 2771 PDF objects out of 2984 (max. 8388607)
- 571 named destinations out of 1000 (max. 500000)
+ 2768 PDF objects out of 2984 (max. 8388607)
+ 569 named destinations out of 1000 (max. 500000)
  449 words of extra memory for PDF output out of 10000 (max. 10000000)
 
