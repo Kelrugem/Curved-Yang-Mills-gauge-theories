@@ -482,9 +482,9 @@ Let $M$ and $N$ be smooth manifolds, $\pi_\scG \colon \mathscr{G} \to M$ an LGB 
 \mathrm{T}_{(p, g)}\Psi(X, Y)
 &=
 \mathrm{T}_pr_\sigma(X)
-	+ \mleft.{\overline{\mleft( \mu_{\mathscr{G}}\mright)_g \mleft(Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x \mathds{1} (\omega) \bigr)\mright)}}\mright|_{p \cdot g}
+	+ \mleft.{\overline{\mleft( \mu_{\mathscr{G}}\mright)_g \bigl(Y - \mathrm{T}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
 \end{align*}
-for all $(p, g) \in N \fibtimes\Phi{\pi_\scG} \scG$ and $(X, Y) \in \rmT N \fibtimes{\rmT\Phi}{\rmT\pi_\scG} \rmT \scG$, where $x \coloneqq \Phi(p) = \pi_\scG(g)$, $\sigma$ is any (local) section of $\mathscr{G}$ with $\sigma_{x} = g$, $\mathds{1}$ is the identity section of $\mathscr{G}$, and $\omega$ is an element of $\mathrm{T}_xM$ given by
+for all $(p, g) \in N \fibtimes\Phi{\pi_\scG} \scG$ and $(X, Y) \in \rmT N \fibtimes{\rmT\Phi}{\rmT\pi_\scG} \rmT \scG$, where $x \coloneqq \Phi(p) = \pi_\scG(g)$, $\sigma$ is any (local) section of $\mathscr{G}$ with $\sigma_{x} = g$, and $\omega$ is an element of $\mathrm{T}_xM$ given by
 \begin{align*}
 \omega
 &\coloneqq
@@ -492,33 +492,24 @@ for all $(p, g) \in N \fibtimes\Phi{\pi_\scG} \scG$ and $(X, Y) \in \rmT N \fibt
 = 
 \mathrm{T}_g\pi_\scG(Y)~.
 \end{align*}
-We can also write
-\begin{align*}
-\mathrm{T}_{(p, g)}\Psi(X, Y)
-&=
-\mathrm{T}_pr_\sigma(X)
-	+ \mleft.{\overline{\mleft( \mu_{\mathscr{G}}\mright)_g \bigl(Y - \mathrm{T}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}.
-\end{align*}
-
-If $\Phi$ is a surjective submersion, then we can also write
-\begin{align*}
-\mathrm{T}_{(p, g)}\Psi(X, Y)
-&=
-\mathrm{T}_pr_\sigma(X)
-	+ \mathrm{T}_g\Psi_\tau (Y)
-	- \mathrm{T}_{e_x}(\Psi_\tau \circ R_\sigma)\bigl( \mathrm{T}_x \mathds{1}(\omega) \bigr)
-\end{align*}
-and
-\begin{align*}
-\mathrm{T}_{(p, g)}\Psi(X, Y)
-&=
-\mathrm{T}_pr_g\Bigl( X - \mathrm{T}_{\mathds{1}_x}\Psi_\tau\bigl( \mathrm{T}_x\mathds{1}(\omega) \bigr) \Bigr)
-	+ \mathrm{T}_g\Psi_p \Bigl( Y - \mathrm{D}_{\mathds{1}_x}R_\sigma \bigl( \mathrm{T}_x \mathds{1} (\omega) \bigr) \Bigr)
-\nonumber\\
-&\hspace{1cm}
-	+ \mathrm{T}_{\mathds{1}_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{T}_x\mathds{1}(\omega) \bigr),
-\end{align*}
-where $\tau$ is any (local) section of $\Phi$ with $\tau_x = p$, and $\Psi_\tau$ is the orbit map through $\tau$.
+%
+%If $\Phi$ is a surjective submersion, then we can also write
+%\begin{align*}
+%\mathrm{T}_{(p, g)}\Psi(X, Y)
+%&=
+%\mathrm{T}_pr_\sigma(X)
+	%+ \mathrm{T}_g\Psi_\tau (Y)
+	%- \mathrm{T}_{\mathds{1}_x}(\tau \sigma)(\omega)
+%\end{align*}
+%and
+%\begin{align*}
+%\mathrm{T}_{(p, g)}\Psi(X, Y)
+%&=
+%\mathrm{T}_pr_g\mleft( X - \mathrm{T}_{\mathds{1}_x}\tau(\omega)  \mright)
+	%+ \mathrm{T}_g\Psi_p \mleft( Y -  \mathrm{T}_{\mathds{1}_x}\sigma(\omega) \mright)
+	%+ \mathrm{T}_{\mathds{1}_x}(\tau \sigma)(\omega)~,
+%\end{align*}
+%where $\tau$ is any (local) section of $\Phi$ with $\tau_x = p$, and $\Psi_\tau$ is the orbit map through $\tau$.
 \end{propositions}
 
 \subsection{Ehresmann connections ...}

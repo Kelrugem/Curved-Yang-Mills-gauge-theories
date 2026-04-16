@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  15 APR 2026 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  16 APR 2026 14:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1495,13 +1495,13 @@ Package rerunfilecheck Info: File `YM.out' has not changed.
 (rerunfilecheck)             Checksum: 386D4B387174B611B8EF677445070054;779.
  ) 
 Here is how much of TeX's memory you used:
- 39148 strings out of 467866
- 778321 string characters out of 5418325
- 1292126 words of memory out of 5000000
- 67013 multiletter control sequences out of 15000+600000
- 693568 words of font info for 184 fonts, out of 8000000 for 9000
+ 39141 strings out of 467866
+ 778129 string characters out of 5418325
+ 1290126 words of memory out of 5000000
+ 67008 multiletter control sequences out of 15000+600000
+ 693441 words of font info for 183 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 88i,19n,94p,3229b,1424s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,17n,94p,3229b,1424s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu3
 0.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bk
 aiu4e.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkai
@@ -1528,31 +1528,29 @@ fb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu
 kaiu97.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bka
 iu/bkaiu99.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /doublestroke/dsrom10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/doublestroke/dsrom8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmex10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmmi7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/lm/lmr10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/lm/lmr12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/lm/lmr7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/lm/lmr8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/lm/lmri10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/lm/lmri8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/lm/lmsy10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/lm/lmsy7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/symbols/msbm10.pfb><C:/Users/kelru/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on YM.pdf (3 pages, 473728 bytes).
+ype1/public/lm/lmbx10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmbx12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmbx8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmcsc10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmex10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmmi10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmmi7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmr10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/lm/lmr12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmr7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/lm/lmr8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/lm/lmri10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/lm/lmri8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmsy10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmsy7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/rsfs/rsfs7.pfb>
+Output written on YM.pdf (3 pages, 462900 bytes).
 PDF statistics:
- 322 PDF objects out of 1000 (max. 8388607)
+ 312 PDF objects out of 1000 (max. 8388607)
  14 named destinations out of 1000 (max. 500000)
  33417 words of extra memory for PDF output out of 35830 (max. 10000000)
 
