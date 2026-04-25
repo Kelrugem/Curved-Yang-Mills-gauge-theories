@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  16 APR 2026 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  23 APR 2026 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1479,29 +1479,65 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/7'
 (microtype)             (new value: 7.0pt) on input line 468.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/5'
 (microtype)             (new value: 5.0pt) on input line 468.
+
+LaTeX Warning: Reference `lem:PullbackFibreBundleItsTangentSp' on page 1 undefi
+ned on input line 519.
+
 [1{C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
-c}] (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
+c}]
+
+LaTeX Warning: Reference `rem:LocalLGBAction' on page 1 undefined on input line
+ 523.
+
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/8'
+(microtype)             (new value: 8.0pt) on input line 523.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/6'
+(microtype)             (new value: 6.0pt) on input line 523.
+
+LaTeX Warning: Reference `def:LRTranslations' on page 1 undefined on input line
+ 541.
+
+
+LaTeX Warning: Reference `def:LeftRightTranslationConjugation' on page 1 undefi
+ned on input line 541.
+
+
+LaTeX Warning: Reference `lem:PullbackFibreBundleItsTangentSp' on page 1 undefi
+ned on input line 558.
+
+
+LaTeX Warning: Reference `def:MCFormOnLGBs' on page 1 undefined on input line 6
+00.
+
+
+LaTeX Warning: Reference `def:FundVecs' on page 1 undefined on input line 600.
+
+[2] (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
-(YM.bbl) [2] (YM.aux)
+(YM.bbl) [3] (YM.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `YM.out' has not changed.
-(rerunfilecheck)             Checksum: 386D4B387174B611B8EF677445070054;779.
+(rerunfilecheck)             Checksum: F9EB007B1987092918FCDB3AC5A92664;781.
  ) 
 Here is how much of TeX's memory you used:
- 39141 strings out of 467866
- 778129 string characters out of 5418325
- 1290126 words of memory out of 5000000
- 67008 multiletter control sequences out of 15000+600000
- 693441 words of font info for 183 fonts, out of 8000000 for 9000
+ 39167 strings out of 467866
+ 778773 string characters out of 5418325
+ 1293126 words of memory out of 5000000
+ 67028 multiletter control sequences out of 15000+600000
+ 693716 words of font info for 186 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 88i,17n,94p,3229b,1424s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,19n,94p,3229b,1424s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu3
 0.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bk
 aiu4e.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkai
@@ -1528,29 +1564,35 @@ fb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu
 kaiu97.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bka
 iu/bkaiu99.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /doublestroke/dsrom10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmbx10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmbx12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmbx8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/lm/lmcsc10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmex10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmmi10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmmi7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/lm/lmr10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmr12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/lm/lmr7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/lm/lmr8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/lm/lmri10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/lm/lmri8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/lm/lmsy10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/lm/lmsy7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/symbols/msbm10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on YM.pdf (3 pages, 462900 bytes).
+ype1/public/doublestroke/dsrom8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmex10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmmi7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/lm/lmmi8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/lm/lmr10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/lm/lmr12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/lm/lmr5.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/font
+s/type1/public/lm/lmr7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/lm/lmr8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmri10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmri8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/lm/lmsy10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/lm/lmsy5.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmsy7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/kelru/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb>
+Output written on YM.pdf (4 pages, 526819 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
+ 351 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
  33417 words of extra memory for PDF output out of 35830 (max. 10000000)
 

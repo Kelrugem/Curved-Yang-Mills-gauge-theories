@@ -473,8 +473,11 @@ In this work we will need to apply the tangent map to an LGB action, and for doi
 \begin{equation*}
 	\rmT \mleft( N \fibtimes\Phi{\pi_\scG} \scG \mright)
 	=
-	\rmT N \fibtimes{\rmT\Phi}{\rmT\pi_\scG} \rmT \scG~.
+	\rmT N \fibtimes{\rmT\Phi}{\rmT\pi_\scG} \rmT \scG~,
 \end{equation*}
+where the right hand side is naturally viewed as a bundle over $N \fibtimes\Phi{\pi_\scG} \scG$.
+
+
 
 \begin{propositions}{Differential of smooth LGB actions}{DiffOfLGBAction}
 Let $M$ and $N$ be smooth manifolds, $\pi_\scG \colon \mathscr{G} \to M$ an LGB over $M$, $\Phi \colon N \to M$ a smooth map, and assume we have a right $\mathscr{G}$-action on $N$, $\Psi\colon N \fibtimes\Phi{\pi_\scG} \scG \to N$. Then we have
@@ -511,6 +514,167 @@ for all $(p, g) \in N \fibtimes\Phi{\pi_\scG} \scG$ and $(X, Y) \in \rmT N \fibt
 %\end{align*}
 %where $\tau$ is any (local) section of $\Phi$ with $\tau_x = p$, and $\Psi_\tau$ is the orbit map through $\tau$.
 \end{propositions}
+
+\begin{proof}
+Due to $N*\mathcal{G} = f^*\mathcal{G}$ we are going to use Lemma \ref{lem:PullbackFibreBundleItsTangentSp}. That is, fix $(p, g) \in N*\mathcal{G}$ and $X \in \mathrm{T}_pN$, $Y \in \mathrm{T}_g \mathcal{G}$ with
+\begin{align*}
+\mathrm{D}_p f(X) &= \mathrm{D}_g\pi(Y) \eqqcolon \omega \in \mathrm{T}_{f(p)}M.
+\end{align*}
+Recall that we can localize LGB actions in sense of Rem.\ \ref{rem:LocalLGBAction}; so, let $x \coloneqq f(p) = \pi(g)$, and fix a trivialization of $\mathcal{G}$ around $x$. Then it is clear that there is a (local)\footnote{For simplicity of notation we omit the notation of restricting on some open subset of $M$.} section $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$. Observe that we can write
+\begin{align*}
+Y
+&=
+Y 
+	- \mathrm{D}_x \sigma (\omega)
+	+ \mathrm{D}_x \sigma (\omega).
+\end{align*}
+The two first summands result into a vertical tangent vector due to
+\begin{align*}
+\mathrm{D}_g\pi\bigl( Y - \mathrm{D}_x\sigma(\omega) \bigr)
+&=
+\mathrm{D}_g\pi( Y ) - \mathrm{D}_x\underbrace{(\pi \circ \sigma)}_{= \mathds{1}_M}(\omega)
+=
+\mathrm{D}_g \pi (Y) - \omega
+=
+0.
+\end{align*}
+For the following recall the notations introduced in Def.\ \ref{def:LRTranslations} and \ref{def:LeftRightTranslationConjugation}; we can derive that
+\begin{align*}
+\mathrm{D}_{e_x}R_\sigma \circ \mathrm{D}_x e
+&=
+\mathrm{D}_x \underbrace{\mleft( R_\sigma \circ e \mright)}
+	_{\mathclap{x \mapsto e_x \sigma_x = \sigma_x}}
+=
+\mathrm{D}_x \sigma.
+\end{align*}
+So, we can also write 
+\begin{align*}
+Y^v
+&\coloneqq
+Y - \mathrm{D}_x \sigma(\omega)
+=
+Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr).
+\end{align*}
+We have proven that $Y^v \in \mathrm{V}_g\mathcal{G}$, and thus $(0_p, Y^v) \in \mathrm{T}_{(p, g)}(f^*\mathcal{G})$ by Lemma \ref{lem:PullbackFibreBundleItsTangentSp}, where $0_p$ is the zero tangent vector of $\mathrm{T}_pN$. In the same fashion we also have
+\begin{align*}
+\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+&\in \mathrm{T}_{(p, g)}(f^*\mathcal{G})
+\end{align*}
+because of
+\begin{align*}
+\mathrm{D}_g\pi \Bigl( \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
+&=
+\mathrm{D}_g \pi (Y - Y^v)
+=
+\mathrm{D}_g \pi (Y)
+=
+\mathrm{D}_p f (X),
+\end{align*}
+thence we can write in $\mathrm{T}_{(p, g)}(f^*\mathcal{G})$
+\begin{align*}
+(X, Y)
+&=
+\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) + Y^v \mright)
+=
+\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+	+ (0_p, Y^v).
+\end{align*}
+Hence also
+\begin{align}\label{DifferentialOfActionSplitFirst}
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_{(p, g)}\Phi\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+	+ \mathrm{D}_{(p, g)}\Phi(0_p, Y^v)
+\end{align}
+The second summand is quickly calculated as
+\begin{align*}
+\mathrm{D}_{(p, g)}\Phi(0_p, Y^v)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Phi(p, \gamma)
+=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \underbrace{(p \cdot \gamma)}
+	_{\Phi_p(\gamma)}
+=
+\mathrm{D}_{g}\Phi_p (Y^v)
+\end{align*}
+where $\gamma: I \to \mathcal{G}_x$ ($I$ open interval of $\mathbb{R}$ containing 0) is a curve with $\gamma(0) = g$ and $\mathrm{d}/\mathrm{d}t|_{t=0} \gamma = Y^v$; this is due to the verticality of $Y^v$, and so $\mathrm{D}_g\Phi_p(Y^v)$ is also well-defined since $\Phi_p$ is a map $\mathcal{G}_x \to N$. Now recall Def.\ \ref{def:MCFormOnLGBs} and \ref{def:FundVecs}, and then observe that we can write
+\begin{align}\label{ClassicalWayToWriteLeibnizRuleWithLeftPushForwardInsteadOfMCForm}
+\mathrm{D}_{g}\Phi_p (Y^v)
+&=
+\mleft(\mathrm{D}_{g}\Phi_p \circ \mathrm{D}_{e_x}L_g \circ \mathrm{D}_g L_{g^{-1}} \mright)(Y^v)
+=
+\mathrm{D}_{e_x}\underbrace{\mleft( \Phi_p \circ L_g \mright)}
+	_{\mathclap{ \mathcal{G} \ni q \mapsto p \cdot gq = \Phi_{p \cdot g}(q) }}
+	\mleft(\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v) \mright)
+=
+\mleft.{\overline{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g}
+%\mleft.{\widetilde{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g},
+\end{align}
+making use of the verticality of $Y^v$ such that operators like $\mathrm{D}L_g$ can act on $Y^v$.
+
+For the first summand in Eq.\ \eqref{DifferentialOfActionSplitFirst} we use
+\begin{align*}
+\mathrm{D}_{(p, g)}\Phi\Bigl(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
+&=
+\mathrm{D}_{(p, e_x)} \underbrace{\bigl( \Phi \circ \mleft( \mathds{1}_N, R_\sigma \mright) \bigr)}_{\mathclap{ N * \mathcal{G} \ni (p, g) \mapsto p \cdot g \sigma_x = r_\sigma(p \cdot g) }}
+	\bigl( X, \mathrm{D}_x e(\omega) \bigr)
+\\
+&=
+\mathrm{D}_{(p, e_x)}( r_\sigma \circ \Phi ) \bigl( X, \mathrm{D}_x e(\omega) \bigr)
+\\
+&=
+\mathrm{D}_p r_\sigma \Bigl(
+	\mathrm{D}_{(p, e_x)} \Phi \bigl( X, \mathrm{D}_x e(\omega) \bigr)
+\Bigr)
+\\
+&=
+\mathrm{D}_p r_\sigma \Bigl(
+	\mathrm{D}_{(p, e_x)} \Phi \bigl( X, \mathrm{D}_p (e \circ f) (X) \bigr)
+\Bigr)
+\\
+&=
+\mathrm{D}_p r_\sigma \Bigl(
+	\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathds{1}_N, e\circ f)\bigr)( X, X )
+\Bigr),
+\end{align*}
+but on the diagonal $\mathrm{diag}(N\times N)$ of $N\times N$ we have
+\begin{align*}
+\Bigl[
+\mathrm{diag}(N \times N) \ni (p,p)
+\mapsto
+\bigl(\Phi \circ (\mathds{1}_N, e\circ f)\bigr)(p,p)
+=
+\Phi\mleft(p, e_{f(p)}\mright)
+=
+p \cdot e_{f(p)}
+=
+p
+\Bigr]
+&=
+\mleft.\mathrm{pr}_i\mright|_{\mathrm{diag}(N \times N)},
+\end{align*}
+where $\mathrm{pr}_i$ is just the projection onto any of both $i$-th components ($i \in \{1,2\}$) in $N \times N$. Due to $(X, X) \in \mathrm{T}_{(p,p)}\bigl( \mathrm{diag}(N\times N) \bigr)$ we derive
+\begin{align*}
+\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathds{1}_N, e\circ f)\bigr)( X, X )
+&=
+\mathrm{D}_{(p,p)} \mathrm{pr}_i( X, X )
+=
+X.
+\end{align*}
+So, we get in total
+\begin{align*}
+\mathrm{D}_{(p, g)}\Phi\Bigl(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
+&=
+\mathrm{D}_pr_\sigma(X),
+\end{align*}
+therefore
+\begin{align*}
+\mathrm{D}_{(p, g)}\Phi(X, Y)
+&=
+\mathrm{D}_pr_\sigma(X)
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g}.
+\end{align*}
+\end{proof}
 
 \subsection{Ehresmann connections ...}
 
