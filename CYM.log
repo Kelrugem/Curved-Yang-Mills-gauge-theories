@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  7 MAY 2026 19:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  8 MAY 2026 15:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1484,17 +1484,17 @@ ta/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/kelru/AppDa
 ta/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/kelru/AppData/L
 ocal/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] (CYM.toc [2]
 Overfull \hbox (1.09496pt too wide) detected at line 38
- []\T1/lmss/bx/n/10.95 157
+ []\T1/lmss/bx/n/10.95 156
  []
 
 
 Overfull \hbox (1.09496pt too wide) detected at line 43
- []\T1/lmss/bx/n/10.95 167
+ []\T1/lmss/bx/n/10.95 166
  []
 
 
 Overfull \hbox (1.09496pt too wide) detected at line 44
- []\T1/lmss/bx/n/10.95 169
+ []\T1/lmss/bx/n/10.95 168
  []
 
 )
@@ -1518,27 +1518,27 @@ Underfull \hbox (badness 1394) in paragraph at lines 571--571
 
 [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
 [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1374--1376
+Underfull \hbox (badness 10000) in paragraph at lines 1378--1380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1391
+Underfull \hbox (badness 10000) in paragraph at lines 1392--1395
 
  []
 
 [22] [23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1510--1513
+Underfull \hbox (badness 10000) in paragraph at lines 1514--1517
 
  []
 
 [25] [26] [27] [28] [29] [30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1895--1898
+Underfull \hbox (badness 10000) in paragraph at lines 1899--1902
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1912--1915
+Underfull \hbox (badness 10000) in paragraph at lines 1916--1919
 
  []
 
@@ -1546,27 +1546,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 1912--1915
 [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62]
 [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]
 [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]
-[93] [94] [95] [96] [97] [98] [99] [100] [101]
+[93] [94] [95] [96] [97] [98] [99] [100]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 5630.
+(Font)              using `U/stmry/m/n' instead on input line 5634.
 
-[102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113]
-[114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125]
-[126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137]
-[138] [139]
-Overfull \hbox (2.67805pt too wide) in paragraph at lines 7999--8006
+[101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112]
+[113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124]
+[125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136]
+[137] [138]
+Overfull \hbox (2.67805pt too wide) in paragraph at lines 8003--8010
 \T1/lmr/m/n/10.95 using Rem. [][]5.19[][] (bracket of fundamental/left-invarian
 t vec-tor fields is fundamental/left-invariant)
  []
 
-[140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150]
-Overfull \hbox (3.1053pt too wide) detected at line 8687
+[139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149]
+Overfull \hbox (3.1053pt too wide) detected at line 8691
 []
  []
 
-[151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162]
-[163] [164] [165] [166]
+[150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161]
+[162] [163] [164] [165]
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
 )
@@ -1597,7 +1597,7 @@ Underfull \hbox (badness 3635) in paragraph at lines 27--32
 -e-try and Physics\T1/lmr/m/n/10.95 , 162:104104, 2021.
  []
 
-
+[166]
 Underfull \hbox (badness 1838) in paragraph at lines 49--54
 []\T1/lmr/m/n/10.95 Simon-Raphael Fis-cher and Camille Laurent-Gengoux.  A clas
 -si-fi-ca-tion of neigh-
@@ -1627,7 +1627,7 @@ Underfull \hbox (badness 1215) in paragraph at lines 62--67
 y Lec-ture Note Se-ries\T1/lmr/m/n/10.95 , 213:xxxviii+501, 2005.
  []
 
-[167]
+
 Underfull \hbox (badness 10000) in paragraph at lines 75--79
 []\T1/lmr/m/n/10.95 Camille Laurent-Gengoux, Math-ieu Stiénon, and Ping Xu.  No
 n-abelian
@@ -1663,7 +1663,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--112
 ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
  []
 
-
+[167]
 Underfull \hbox (badness 5533) in paragraph at lines 128--132
 []\T1/lmr/m/n/10.95 Christoph Mayer and Thomas Strobl.  Lie al-ge-broid Yang--M
 ills with mat-
@@ -1681,61 +1681,61 @@ Underfull \hbox (badness 1867) in paragraph at lines 150--154
 om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
  []
 
-[168]) [169]
+) [168]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.9637 \be
+l.9641 \be
           \label{DoubleTangentAsDiagram}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.9637 \be
+l.9641 \be
           \label{DoubleTangentAsDiagram}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.9637 \be
+l.9641 \be
           \label{DoubleTangentAsDiagram}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.9637 \be
-          \label{DoubleTangentAsDiagram}
+l.9641 \be
+          \label{DoubleTangentAsDiagram} [169]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.9685 \end{align}
+l.9689 \end{align}
                    [170]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.9745 \ea
+l.9749 \ea
           
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.9762 \ea
-           [171]
+l.9766 \ea
+          
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.9773 \ea
-           [172] [173] [174]
+l.9777 \ea
+           [171] [172] [173] [174]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.10038 \ea
-            [175] [176] [177] (CYM.aux)
+l.10042 \ea
+            [175] [176] (CYM.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -1746,10 +1746,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 39676 strings out of 467866
- 830201 string characters out of 5418325
- 1385606 words of memory out of 5000000
- 67253 multiletter control sequences out of 15000+600000
+ 39670 strings out of 467866
+ 830108 string characters out of 5418325
+ 1378606 words of memory out of 5000000
+ 67248 multiletter control sequences out of 15000+600000
  763038 words of font info for 193 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,107p,11228b,1338s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1814,9 +1814,9 @@ ru/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symb
 ols/msbm10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /stix/stix-mathscr.pfb>
-Output written on CYM.pdf (179 pages, 2051753 bytes).
+Output written on CYM.pdf (178 pages, 2052472 bytes).
 PDF statistics:
- 2768 PDF objects out of 2984 (max. 8388607)
- 569 named destinations out of 1000 (max. 500000)
+ 2765 PDF objects out of 2984 (max. 8388607)
+ 568 named destinations out of 1000 (max. 500000)
  449 words of extra memory for PDF output out of 10000 (max. 10000000)
 
