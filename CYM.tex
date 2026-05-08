@@ -1,161 +1,105 @@
-\documentclass[a4paper,oneside,bibliography=totoc]{scrartcl}
-%Use bibliography=totoc or bibliography=totocnumbered to show the List of References in the table of contents, numbered if using the latter
+\documentclass[reqno,a4paper,oneside]{amsart}
+%\pdfoutput=1
+
 \usepackage{CJKutf8}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-%\usepackage{exscale}
-%\newcommand\hmmax{0}
-%\newcommand\bmmax{1}
-%\newcommand{\Plus}{\mathord{\tikz\draw[line width=0.3ex, x=1ex, y=1ex] (0.75,0) -- (0.75,1.5)(0,0.75) -- (1.5,0.75);}} 
-\def\RPlus{\ensuremath{\mathbin{\rule[.13em]{.66em}{.22em}\hspace{-.44em}\rule[-.08em]{.22em}{.66em}\,}}} %Fat plus symbol
-\usepackage[english]{babel}
-\usepackage{graphicx} %extended \includegraphics options
-%\usepackage{CJKutf8} %Kanji signs
-\usepackage{dsfont}%even more mathematical symbols
-%\usepackage{bm} %use \bm to get bold math symbols
-\usepackage{amssymb} %even more mathematical symbols
-\usepackage{amsthm} %theorem style usually needed for AMS (american mathematical society)
-\usepackage{float} %For H positioning
-\usepackage{amsmath} %important stuff like equation structures and so on
-\usepackage{amsfonts} %new mathematical symbols like fractals
-%\usepackage{amscd}
-%\usepackage{amstext}
-%\usepackage{mathabx}
-\usepackage{booktabs} %enhanced table stuff
-%\usepackage{amsbsy} %bold mathematical symbols, also loaded in amsmath
-\usepackage{fancybox} %for theorem boxes
-%\usepackage[hypcap=false]{caption} %new captions for floating options
-%\captionsetup{font={small,sf},labelfont=bf,textfont=rm} 
-%\usepackage{float} %provides H for images-here
-%\usepackage{subfigure} %citing subfigures in a figure
-\usepackage{lmodern} %latin modern font
-\usepackage{fixcmex} %Fixing the issue with scaling brackets etc. in lmodern
-%\renewcommand\familydefault{lmr}% uses lm only for text
-%\usepackage[numbib,nottoc]{tocbibind} %Options for including the bibliography to content list etc.; nottoc prevents listing of Contents in the list of contents, numbib also numbers the section of the biblio
-%\usepackage[pdfstartview={FitH},linkbordercolor={0 1 0}]{hyperref}
-\usepackage[pdfstartview={FitH},linkbordercolor={0 1 0},colorlinks]{hyperref}
-\usepackage{esint} %für \oiint und andere Integralformen
-%\usepackage{fancyhdr} %Different handling for footers and headers
-\usepackage[headsepline=.5pt,footsepline=.5pt,automark]{scrlayer-scrpage}
-\usepackage{pdfpages} %For \includepdf etc
-%\usepackage{trfsigns} % Fourier and Laplacesymbols for engineering und für \e für \exp
-
-\usepackage{tabularx} %Automatic line break of tables using X instead c l r
-%\usepackage{longtable} %table auf mehreren Seiten
-%\usepackage{ltxtable} %Combination of both above
-\usepackage{makecell} %For making larger cells in tables
-\usepackage{colortbl}
-
-\newcommand{\e}{\ensuremath{\mathrm{e\;\!}}}
-\newcommand\fibtimes[2]{\mathbin{_{#1}\times_{#2}}}
-%\usepackage{wasysym} %Smiley
-%\usepackage{siunitx} %SI Einheiten
-%\usepackage{eqnarray} %Gleichungen in Tabellenform
-\usepackage{mathtools} %for mathclap and coloneqq
-\usepackage{relsize} %Integralgröße
-\usepackage{scrhack} %Warnung bei book bezüglich toc
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[textwidth = 430 pt, textheight = 630 pt]{geometry}
+\usepackage{float}
+\definecolor{MyDarkBlue}{rgb}{0.15,0.25,0.45}
+\definecolor{Cred}{rgb}{0,0,0}
+\usepackage{epsfig,rotating}
+\usepackage{amsmath,amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage[normalem]{ulem}
 \usepackage{mleftright} %Distanz zu \left \right weg
-\usepackage{tikz} %Diagramme
-\usepackage{stmaryrd} % fuer llbracket usw.
-\usepackage[many]{tcolorbox} %Coloured boxes around theorems etc
-\tcbuselibrary{theorems} % siehe oben
-%\usepackage{float} %For H descriptor in figure, but also for allowing figure in minipages
-%\usepackage{xfrac}    %for \sfrac quotient of sets
+\usepackage[low-sup]{subdepth} %Subscripts now always at lower position (unified), while usually subscripts are situated higher if there is no superscript
+\usepackage{latexsym}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usetikzlibrary{matrix,cd,arrows}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem} %Improving enumerate
+\usepackage{setspace} %individual linespacing
 
-\usetikzlibrary{cd}
-%For small mathcal letters:
-\makeatletter
-\DeclareFontEncoding{LS1}{}{}
-\DeclareFontSubstitution{LS1}{stix}{m}{n}
-\DeclareMathAlphabet{\mathKel}{LS1}{stixscr}{m}{n}
-\DeclareMathAlphabet{\mathcal}{LS1}{stixscr}{m}{n}
-%Big tilde
-\def\oversortoftilde#1{\mathop{\vbox{\m@th\ialign{##\crcr\noalign{\kern3\p@}%
-      \sortoftildefill\crcr\noalign{\kern3\p@\nointerlineskip}%
-      $\hfil\displaystyle{#1}\hfil$\crcr}}}\limits}
-
-\def\sortoftildefill{$\m@th \setbox\z@\hbox{$\braceld$}%
-  \braceld\leaders\vrule \@height\ht\z@ \@depth\z@\hfill\braceru$}
-\makeatother
-\DeclareMathOperator{\sAut}{\mathKel{A\mkern-5.5mu u\mkern-4mu t\mkern-1.5mu}}
-\DeclareMathOperator{\sAd}{\mathKel{A\mkern-5.5mu d}}
-\DeclareMathOperator{\saut}{\mathKel{a\mkern-4.5mu u\mkern-4mu t\mkern-1.5mu}}
-\DeclareMathOperator{\sEnd}{\mathKel{E\mkern-4mu n\mkern-4.5mu d\mkern-1mu}}
-
-%\tikzset{every node/.style={align=center}}
-%\usepackage{pst-node} %Diagramme
-%\usepackage{auto-pst-pdf}
-%\usepackage{stackengine} %Kommawedge
-%\usepackage{mathabx}
-%\usepackage{here}
-%\usepackage[style=authortitle-icomp]{biblatex}
-%\usepackage[babel,german=guillemets]{csquotes}
-
-\setcounter{tocdepth}{4}
-\setcounter{tocdepth}{5}
-\setcounter{secnumdepth}{4}
-\setcounter{secnumdepth}{5}
-\setlength{\jot}{12pt} % Zeilenabstand in der Align-Umgebung
-\allowdisplaybreaks % mit \displaybreak einen Seitenumbruch in align-Umgebung erzeugen
-
-%\pagestyle{headings}
-\pagestyle{scrheadings}
-%\pagestyle{fancy} %eigener Seitenstil
-%\fancyhf{}
-%\lhead{\leftmark} %\nouppercase, um auch Kleinbuchstaben zu bekommen
-%\renewcommand{\sectionmark}[1]{\markright{#1}{}}
-%  \markboth{\thesection{} #1}} 
-%\fancyhead[L]{Titel} %Kopfzeile links
-\clearpairofpagestyles
-\ihead{\headmark} %Kopfzeile links, automark has to be loaded in the package scrlayer-scrpage
-\ohead{Simon-Raphael Fischer} %Kopfzeile rechts
-%\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
-%\fancyfoot[C]{\thepage} %Seitennummer
-\cfoot{\pagemark}
-%\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
-
-\renewcommand{\theequation}{\arabic{equation}}
+\usepackage[all,knot]{xy}
+\xyoption{arc}
 
 
-%\renewcommand*{\chapterpagestyle}{scrheadings}
+\usepackage{tikz}
+\usetikzlibrary{graphs,decorations.pathmorphing,decorations.markings}
+\usepackage{mathtools}
+\usepackage[all,knot]{xy}
+\xyoption{arc}
+
+\newcommand{\triend}{\mbox{\hspace{0.2mm}}\hfill$\triangle$}
+\newcommand{\black}{\mbox{\hspace{0.2mm}}\hfill$\blacksquare$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Pseudo-jHEP/harvMac Anfang
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bracket siz
+%\delimiterfactor=1000
+%%\delimitershortfall=0pt
+%\delimitershortfall-1sp
+
+%\linespread{1.09}
+
+%\setlength{\footnotesep}{3.5mm}
+%\let\fn\footnote
+%\renewcommand{\footnote}[1]{\linespread{1.1}\fn{#1}\linespread{1.29}}
+
+%\makeatletter\renewcommand{\section}{\@startsection
+    %{section}{1}{\z@}{-3.5ex plus -1ex minus
+        %-.2ex}{2.3ex plus .2ex}{\bf }}
+%\makeatletter\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}{-3.25ex
+        %plus -1ex minus
+        %-.2ex}{1.5ex plus .2ex}{\bf }}
+%\makeatletter\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{-2.45ex}{-3.25ex
+        %plus -1ex minus -.2ex}{1.5ex plus .2ex}{\it }}
+%\renewcommand{\thesection}{\arabic{section}}
+%\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+%\renewcommand{\@seccntformat}[1]{\@nameuse{the#1}.~~}
+%\renewcommand{\thesubsubsection}{}
+%\renewcommand{\theequation}{\thesection.\arabic{equation}}
+%\makeatletter \@addtoreset{equation}{section}
+%\def\Ddots{\mathinner{\mkern1mu\raise\p@
+        %\vbox{\kern7\p@\hbox{.}}\mkern2mu
+        %\raise4\p@\hbox{.}\mkern2mu\raise7\p@\hbox{.}\mkern1mu}}
+%\setcounter{tocdepth}{2}
+
+\usepackage[toc,page]{appendix}
+
+\renewcommand{\appendices}{
+    \section*{Appendix}\label{appendices}\setcounter{subsection}{0}
+    \addcontentsline{toc}{section}{Appendix}
+    \setcounter{equation}{0}
+    \crefalias{subsection}{appendix}
+    \makeatletter
+    \renewcommand{\theequation}{\Alph{subsection}.\arabic{equation}}
+    \renewcommand{\thesubsection}{\Alph{subsection}}
+    \renewcommand{\thethm}{\Alph{subsection}.\arabic{thm}}
+    \@addtoreset{equation}{subsection}
+    \@addtoreset{thm}{subsection}
+    \makeatother
+}
+%
+%\makeatother
+
+%% Fix cref to ref and correct things
+\let\oldref\ref
+\AtBeginDocument{\renewcommand{\ref}[1]{\cref{#1}}}
+\AtBeginDocument{\renewcommand{\eqref}[1]{{\rm (\oldref{#1})}}}
 
 
-%Folgender Befehl dafür da, dass sections auf ungeraden Seiten anfangen
-%\let\Section\section
-%\renewcommand\section[2][]{%
-  %\cleardoublepage
-  %\def\myTEMP{#1}\ifx\myTEMP\empty\Section{#2}\else\Section[#1]{#2}\fi}
-	
-	
-%\usepackage[automark]{scrlayer-scrpage}
-%\ohead{\pagemark}
-%\ihead{\leftmark}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Pseudo-Harvmac Ende
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\renewcommand{\listoffigures}{\begingroup
-\tocsection
-\tocfile{\listfigurename}{lof}
-\endgroup} 
-
-\renewcommand{\listoftables}{\begingroup
-\tocsection
-\tocfile{\listtablename}{lot}
-\endgroup} 
-
-\oddsidemargin -0.0 cm
-\evensidemargin -0.5 cm
-\topmargin -1.5 cm
-\headheight 1.2 cm
-\headsep 1.3 cm
-\topskip 0.5 cm
-\textheight 23.0 cm
-\textwidth 16.0 cm
-\parindent 0.0 cm
-\renewcommand{\baselinestretch}{1.2}
-%\renewcommand{\arraystretch}{1.6}
-\setcounter{totalnumber}{2}
-
-\def\tp{^{^{^{\leftrightarrow}}}\!\!\!\!\!\!\!}
+\newcommand\connectiononeform{\vartheta^{\mathrm{tot}}}
 
 %% Quick macros
 
@@ -165,13 +109,13 @@
     }%
 }
 
-\newcommand{\latinalphabet}{A,a,B,b,C,c,d,D,E,e,F,f,G,g,H,h,I,i,J,j,K,k,L,l,M,m,N,n,O,o,P,Q,q,R,r,S,s,T,t,U,u,V,v,W,w,X,x,Y,y,Z,z}
+\newcommand{\latinalphabet}{A,a,B,b,C,c,d,D,E,e,F,f,G,g,H,h,I,i,J,j,K,k,L,l,M,m,N,n,O,o,P,p,Q,q,R,r,S,s,T,t,U,u,V,v,W,w,X,x,Y,y,Z,z}
 
 \makecommand{fr}{\mathfrak}{\latinalphabet}
 
 \makecommand{fr}{\mathfrak}{{der,gl,sl,so,osp,brst,su,sp,spin,string,Poisson,inn,at}}
 
-\makecommand{sf}{}{\latinalphabet}
+\makecommand{sf}{\mathsf}{\latinalphabet}
 
 \makecommand{sf}{\mathsf}{{id,String,Lie,Hom,SU,inv,SO,Map,Diff,HSymp,id,inn,Inn,CE,hom,Gpd,Bibun,pr}}
 
@@ -183,7 +127,7 @@
 
 \makecommand{I}{\mathbbm}{{N,Z,R,C}}
 
-\makecommand{sc}{\mathcal}{\latinalphabet}
+\makecommand{sc}{\mathscr}{\latinalphabet}
 
 \makecommand{tt}{\mathtt}{\latinalphabet}
 
@@ -191,21 +135,257 @@
 
 \newcommand{\iGpd}{\underline{\sfGpd}}
 
-\DeclareMathOperator{\tr}{tr}
+\newcommand{\basicc}{\nabla^{\rm{bas}}}
+
+\newcommand{\basiccu}{R_{\nabla}^{\rm{bas}}}
+\newcommand{\todo}[1]{{\color{red} #1}}
+%\newcommand{\remCS}[1]{{\leavevmode\color{blue} #1}}
+%\newcommand{\cut}[1]{{\leavevmode\color{olive} #1}}
+\newcommand{\e}{\ensuremath{\mathrm{e\;\!}}}
+\newcommand\fibtimes[2]{\mathbin{_{#1}\times_{#2}}}
+
+%\usepackage{thmtools}
+
+\usepackage{hyperref}
+\hypersetup{
+    hypertexnames=false,
+    colorlinks=true,
+    citecolor=MyDarkBlue,
+    linkcolor=MyDarkBlue,
+    urlcolor=MyDarkBlue,
+    pdfauthor={Simon-Raphael Fischer},
+    pdftitle={Extension of algebroids I},
+    pdfsubject={math.DG},
+    breaklinks=true
+}
+
+
+
+%Pagebreak for equations
+\allowdisplaybreaks
+
+
+%For proper hyphenation over linebreaks
+\def\hyph{-\penalty0\hskip0pt\relax}
+
+%Boxes
+\usepackage[many]{tcolorbox} %Coloured boxes around theorems etc
+\tcbuselibrary{theorems} % siehe oben
+%\usepackage{thmtools}
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref} %First letter is then a capital letter
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+%\newtcbtheorem[number within=section]{theorem}{Theorem}
+%{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={lemma}{lemmata},crefname={Lemma}{lemmata}]% init options
+  {lemmata}% name
+  {Lemma}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {lem}% prefix
+\newtheorem{proposition}[theorem]{Proposition}
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={proposition}{propositions},crefname={Proposition}{propositions}]% init options
+  {propositions}% name
+  {Proposition}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {prop}% prefix
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={theorem}{theorems},crefname={Theorem}{theorems}]% init options
+  {theorems}% name
+  {Theorem}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize,
+		%environment lower=proof
+		}
+  }% options
+  {thm}% prefix
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={corollary}{corollaries},crefname={Corollary}{corollaries}]% init options
+  {corollaries}% name
+  {Corollary}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {cor}% prefix
+
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={conjecture}{conjectures},crefname={Conjecture}{conjectures}]% init options
+  {conjectures}% name
+  {Conjecture}% title
+  {%
+		fontupper=\itshape,
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {con}% prefix
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+
+\theoremstyle{remark}
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={remark}{remarks},crefname={Remark}{remarks}]% init options
+  {remarks}% name
+  {Remark}% title
+  {%
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {rem}% prefix
+\newtheorem*{note}{Note}
+\newtheorem{remark}[theorem]{Remarks}
+\newtheorem{motivation}[theorem]{Motivation} 
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={definition}{definitions},crefname={Definition}{definitions}]% init options
+  {definitions}% name
+  {Definition}% title
+  {%
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {def}% prefix
+\newtcbtheorem
+  [use counter*=theorem,number within=section,crefname={example}{examples},crefname={Example}{examples}]% init options
+  {examples}% name
+  {Example}% title
+  {%colback=black!5,colframe=red!35!black
+		breakable,
+		enhanced,
+		sidebyside adapt=both,
+		attach boxed title to top center={yshift=-2mm},
+    colback=gray!25,
+    colframe=gray!70!black,
+    fonttitle=\bfseries,
+		subtitle style={boxrule=0.3pt,
+		colback=gray!25,
+		colupper=black,
+		fontupper=\normalfont\footnotesize
+		}
+  }% options
+  {ex}% prefix
+\newtheorem{example}[theorem]{Example}
+
+
+
+
+
+%TOC
+\makeatletter
+\renewcommand{\tocsection}[3]{%
+  \indentlabel{\@ifnotempty{#2}{\bfseries\ignorespaces#1 #2\quad}}\bfseries#3}
+% Remove . after numbers in \subsection
+\renewcommand{\tocsubsection}[3]{%
+  \indentlabel{\@ifnotempty{#2}{\ignorespaces#1 #2\quad}}#3}
+
+  \def\l@subsection{\@tocline{2}{0pt}{2.5pc}{5pc}{}}
+	
+	\makeatother 
+%\usepackage{trfsigns} % Fourier and Laplacesymbols for engineering und für \e für \exp
+
+\usepackage{tabularx} %Automatic line break of tables using X instead c l r
+%\usepackage{longtable} %table auf mehreren Seiten
+%\usepackage{ltxtable} %Combination of both above
+\usepackage{makecell} %For making larger cells in tables
+\usepackage{colortbl}
+
+%\usepackage{wasysym} %Smiley
+%\usepackage{siunitx} %SI Einheiten
+%\usepackage{eqnarray} %Gleichungen in Tabellenform
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Definitionen %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\definecolor{Gray}{gray}{0.85}
-%\renewcommand{\chapterheadstartvskip}{\vspace{0cm}} %für bookklasse
 
-\def\be{\begin{equation}}
-\def\ee{\end{equation}}
-\def\bs{\begin{subequations}}
-\def\es{\end{subequations}}
-\def\ba#1\ea{\begin{align}#1\end{align}}
-\def\bes{\begin{equation*}}
-\def\ees{\end{equation*}}
-\def\bas#1\eas{\begin{align*}#1\end{align*}}
 
 
 %um die Theoreme etc. in das Inhaltsverzeichnis zu packen
@@ -218,152 +398,7 @@
 %%\@ifnotempty{#2}{\addcontentsline{toc}{subsection}{#2 ~ #3}}{}}
 %\makeatother
 
-\renewcommand{\qedsymbol}{$\blacksquare$}
 
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[section]
-%\newtcbtheorem[number within=section]{theorem}{Theorem}
-%{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtcbtheorem
-  [use counter*=theorem,number within=section]% init options
-  {lemmata}% name
-  {Lemma}% title
-  {%
-		fontupper=\itshape,
-		breakable,
-		enhanced,
-    colback=gray!25,
-    colframe=gray!0!black,
-    fonttitle=\bfseries,
-  }% options
-  {lem}% prefix
-\newtheorem{proposition}[theorem]{Proposition}
-\newtcbtheorem
-  [use counter*=theorem,number within=section]% init options
-  {propositions}% name
-  {Proposition}% title
-  {%
-		fontupper=\itshape,
-		breakable,
-		enhanced,
-    colback=gray!25,
-    colframe=gray!0!black,
-    fonttitle=\bfseries,
-  }% options
-  {prop}% prefix
-\newtcbtheorem
-  [use counter*=theorem,number within=section]% init options
-  {theorems}% name
-  {Theorem}% title
-  {%
-		fontupper=\itshape,
-		breakable,
-		enhanced,
-    colback=gray!25,
-    colframe=gray!0!black,
-    fonttitle=\bfseries,
-  }% options
-  {thm}% prefix
-\newtcbtheorem
-  [use counter*=theorem,number within=section]% init options
-  {corollaries}% name
-  {Corollary}% title
-  {%
-		fontupper=\itshape,
-		breakable,
-		enhanced,
-    colback=gray!25,
-    colframe=gray!0!black,
-    fonttitle=\bfseries,
-  }% options
-  {cor}% prefix
-\newtcbtheorem
-  [use counter*=theorem,number within=section]% init options
-  {conjectures}% name
-  {Conjecture}% title
-  {%
-		fontupper=\itshape,
-		breakable,
-		enhanced,
-    colback=gray!25,
-    colframe=gray!0!black,
-    fonttitle=\bfseries,
-  }% options
-  {con}% prefix
-\newtheorem{conjecture}[theorem]{Conjecture}
-
-
-\theoremstyle{remark}
-\newtcbtheorem
-  [use counter*=theorem,number within=section]% init options
-  {remarks}% name
-  {Remark}% title
-  {%
-		breakable,
-		enhanced,
-    colback=gray!5,
-    colframe=gray!50!black,
-    fonttitle=\bfseries,
-  }% options
-  {rem}% prefix
-\newtheorem*{note}{Note}
-\newtheorem{remark}[theorem]{Remarks}
-\newtheorem{motivation}[theorem]{Motivation} 
-
-
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtcbtheorem
-  [use counter*=theorem,number within=section]% init options
-  {definitions}% name
-  {Definition}% title
-  {%
-		breakable,
-		enhanced,
-    colback=gray!25,
-    colframe=gray!0!black,
-    fonttitle=\bfseries,
-  }% options
-  {def}% prefix
-\newtcbtheorem
-  [use counter*=theorem,number within=section]% init options
-  {examples}% name
-  {Example}% title
-  {%colback=black!5,colframe=red!35!black
-		breakable,
-		enhanced,
-    colback=gray!5,
-    colframe=gray!50!black,
-    fonttitle=\bfseries,
-  }% options
-  {ex}% prefix
-\newtcbtheorem
-  [use counter*=theorem,number within=section]% init options
-  {situations}% name
-  {Situation}% title
-  {%colback=black!5,colframe=red!35!black
-		breakable,
-		enhanced,
-    colback=gray!5,
-    colframe=gray!50!black,
-    fonttitle=\bfseries,
-  }% options
-  {sit}% prefix
-\newtcbtheorem
-  [use counter*=theorem,number within=section]% init options
-  {fieldredefinitions}% name
-  {Theorem}% title
-  {%colback=black!5,colframe=red!35!black
-		breakable,
-		enhanced,
-    colback=gray!25,
-    colframe=gray!0!black,
-    fonttitle=\bfseries,
-  }% options
-  {fieldredef}% prefix
-\newtheorem{example}[theorem]{Example}
 
 
 % hier Namen etc. einsetzen
@@ -406,47 +441,120 @@
 
 %\let\endtitlepage\relax %No page break after titlepage
 
+\definecolor{Gray}{gray}{0.85}
+%\renewcommand{\chapterheadstartvskip}{\vspace{0cm}} %für bookklasse
+
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bs{\begin{subequations}}
+\def\es{\end{subequations}}
+\def\ba#1\ea{\begin{align}#1\end{align}}
+\def\bes{\begin{equation*}}
+\def\ees{\end{equation*}}
+\def\bas#1\eas{\begin{align*}#1\end{align*}}
+\def\RPlus{\ensuremath{\mathbin{\rule[.13em]{.66em}{.22em}\hspace{-.44em}\rule[-.08em]{.22em}{.66em}\,}}} %Fat plus symbol
+
+\makeatletter
+\DeclareFontEncoding{LS1}{}{}
+\DeclareFontSubstitution{LS1}{stix}{m}{n}
+\DeclareMathAlphabet{\mathKel}{LS1}{stixscr}{m}{n}
+%\DeclareMathAlphabet{\mathcal}{LS1}{stixscr}{m}{n}
+%Big tilde
+%\def\oversortoftilde#1{\mathop{\vbox{\m@th\ialign{##\crcr\noalign{\kern3\p@}%
+      %\sortoftildefill\crcr\noalign{\kern3\p@\nointerlineskip}%
+      %$\hfil\displaystyle{#1}\hfil$\crcr}}}\limits}
+%
+%\def\sortoftildefill{$\m@th \setbox\z@\hbox{$\braceld$}%
+  %\braceld\leaders\vrule \@height\ht\z@ \@depth\z@\hfill\braceru$}
+\makeatother
+\DeclareMathOperator{\sAut}{\mathKel{A\mkern-5.5mu u\mkern-4mu t\mkern-1.5mu}}
+\DeclareMathOperator{\sAd}{\mathKel{A\mkern-5.5mu d}}
+\DeclareMathOperator{\saut}{\mathKel{a\mkern-4.5mu u\mkern-4mu t\mkern-1.5mu}}
+\DeclareMathOperator{\sEnd}{\mathKel{E\mkern-4mu n\mkern-4.5mu d\mkern-1mu}}
+
 \begin{document}
 \pagenumbering{Roman}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
-\begin{titlepage}
+%\begin{titlepage}
+%%\thispagestyle{empty}
+%
+%\author{Simon-Raphael Fischer\footnote{Email: \href{mailto:sfischer@ncts.tw}{sfischer@ncts.tw}; ORCiD: \href{https://orcid.org/0000-0002-5859-2825}{0000-0002-5859-2825}} }
+%\title{Integrating curved Yang-Mills gauge theories} 
+%\subtitle{Gauge theories related to principal bundles equipped with Lie group bundle actions}
+%\date{\small October 6, 2022: First version \\ May 2, 2025: More examples and classifying setup with simple Lie group bundles \\ \today: Major rewrite to prepare for concise version} 
+%\maketitle
 %\thispagestyle{empty}
-
-\author{Simon-Raphael Fischer\footnote{Email: \href{mailto:sfischer@ncts.tw}{sfischer@ncts.tw}; ORCiD: \href{https://orcid.org/0000-0002-5859-2825}{0000-0002-5859-2825}} }
-\title{Integrating curved Yang-Mills gauge theories} 
-\subtitle{Gauge theories related to principal bundles equipped with Lie group bundle actions}
-\date{\small October 6, 2022: First version \\ May 2, 2025: More examples and classifying setup with simple Lie group bundles \\ \today: Major rewrite to prepare for concise version} 
-\maketitle
-\thispagestyle{empty}
-
-\begin{center}
-National Center for Theoretical Sciences (\begin{CJK*}{UTF8}{bkai}國家理論科學研究中心\end{CJK*}),
-Mathematics Division,
-\\
-National Taiwan University
-\\
-No.\ 1, Sec.\ 4, Roosevelt Rd., Taipei City 106, Room 407, Cosmology Building, Taiwan
-\ \\
-\begin{CJK*}{UTF8}{bkai}106319 臺北市羅斯福路四段1號　(國立臺灣大學次震宇宙館407室)\end{CJK*}
-\ \\
+%
+%\begin{center}
+%National Center for Theoretical Sciences (\begin{CJK*}{UTF8}{bkai}國家理論科學研究中心\end{CJK*}),
+%Mathematics Division,
+%\\
+%National Taiwan University
+%\\
+%No.\ 1, Sec.\ 4, Roosevelt Rd., Taipei City 106, Room 407, Cosmology Building, Taiwan
 %\ \\
-\textbf{Abstract}\footnote[2]{Abbreviations used in this paper: \textbf{LGB(s)} for Lie group bundle(s), \textbf{LAB(s)} for Lie algebra bundle(s).}
-%\footnote[2]{Abbreviations used in this paper: \textbf{(C)YMH GT} for (curved) Yang-Mills-Higgs gauge theory.}
-\begin{abstract}
-  \small{
-	We construct a gauge theory based on principal bundles $\mathcal{P}$ equipped with a right $\mathcal{G}$-action, where $\mathcal{G}$ is a Lie group bundle instead of a Lie group. Due to the fact that a $\mathcal{G}$-action acts fibre by fibre, pushforwards of tangent vectors via a right-translation act now only on the vertical structure of $\mathcal{P}$. Thus, we generalize pushforwards using a connection on $\mathcal{G}$ which will modify the pushforward. A horizontal distribution on $\mathcal{P}$ invariant under such a modified pushforward will provide a proper notion of Ehresmann connection. For achieving gauge invariance we impose conditions on the connection 1-form $\mu$ on $\mathcal{G}$: $\mu$ has to be a multiplicative form, \textit{i.e.}\ closed w.r.t.\ a certain simplicial differential $\delta$ on $\mathcal{G}$, and the curvature $R_\mu$ of $\mu$ has to be $\delta$-exact with primitive $\zeta$; $\mu$ will be the generalization of the Maurer-Cartan form of the classical gauge theory, while the $\delta$-exactness of $R_\mu$ will generalize the role of the Maurer-Cartan equation. This introduces the notion of multiplicative Yang-Mills connections, a connection which helped classifying singular foliations and (topological) symmetry breaking. For allowing curved connections on $\mathcal{G}$ in the dynamical theory we will need to generalize the typical definition of the curvature/field strength $F$ on $\mathcal{P}$ by adding $\zeta$ to $F$.
+%\begin{CJK*}{UTF8}{bkai}106319 臺北市羅斯福路四段1號　(國立臺灣大學次震宇宙館407室)\end{CJK*}
+%\ \\
+%%\ \\
+%\textbf{Abstract}\footnote[2]{Abbreviations used in this paper: \textbf{LGB(s)} for Lie group bundle(s), \textbf{LAB(s)} for Lie algebra bundle(s).}
+%%\footnote[2]{Abbreviations used in this paper: \textbf{(C)YMH GT} for (curved) Yang-Mills-Higgs gauge theory.}
+%\begin{abstract}
+  %\small{
+	%We construct a gauge theory based on principal bundles $\mathcal{P}$ equipped with a right $\mathcal{G}$-action, where $\mathcal{G}$ is a Lie group bundle instead of a Lie group. Due to the fact that a $\mathcal{G}$-action acts fibre by fibre, pushforwards of tangent vectors via a right-translation act now only on the vertical structure of $\mathcal{P}$. Thus, we generalize pushforwards using a connection on $\mathcal{G}$ which will modify the pushforward. A horizontal distribution on $\mathcal{P}$ invariant under such a modified pushforward will provide a proper notion of Ehresmann connection. For achieving gauge invariance we impose conditions on the connection 1-form $\mu$ on $\mathcal{G}$: $\mu$ has to be a multiplicative form, \textit{i.e.}\ closed w.r.t.\ a certain simplicial differential $\delta$ on $\mathcal{G}$, and the curvature $R_\mu$ of $\mu$ has to be $\delta$-exact with primitive $\zeta$; $\mu$ will be the generalization of the Maurer-Cartan form of the classical gauge theory, while the $\delta$-exactness of $R_\mu$ will generalize the role of the Maurer-Cartan equation. This introduces the notion of multiplicative Yang-Mills connections, a connection which helped classifying singular foliations and (topological) symmetry breaking. For allowing curved connections on $\mathcal{G}$ in the dynamical theory we will need to generalize the typical definition of the curvature/field strength $F$ on $\mathcal{P}$ by adding $\zeta$ to $F$.
+	%
+	%Several examples for a gauge theory with a curved $\mu$ will be provided, including the inner group bundle of the Hopf fibration $\mathbb{S}^7 \to \mathbb{S}^4$, including a classification for whether these theories admit a classical description.
+%}
+ %\end{abstract}
+%\end{center}
+%
+%\textit{2010 MSC:} Primary 53D17; Secondary 81T13, 22E99.
+%
+%\textit{Keywords:} \texttt{Mathematical Gauge Theory}, Differential Geometry, High Energy Physics - Theory, Mathematical Physics
+%
+%\end{titlepage}
+
+\pagenumbering{Roman}
+    \begin{titlepage}
+        \vspace*{2cm}
+        \begin{center}
+            {{\LARGE \bf
+                Integrating curved Yang-Mills gauge theories}
+								\\[0.2cm]
+								\bf Gauge theories related to principal bundles equipped with Lie group bundle actions
+            }
+            \vskip1cm
+            {
+						{\Large {Simon-Raphael \textsc{Fischer}\textsuperscript*\textsuperscript{$\dagger$}}}
+						\vskip0.5cm
+						October 6, 2022: First version \\ May 2, 2025: More examples and classifying setup with simple Lie group bundles \\ \today: Major rewrite without adding new statements, in particular for shortening the paper
+            \vskip0.5cm
+            {
+                \textsuperscript* 2021 - 2024: National Center for Theoretical Sciences (\begin{CJK*}{UTF8}{bkai}國家理論科學研究中心\end{CJK*}),
+								\\
+								Mathematics Division,
+								National Taiwan University
+								\\
+								No.\ 1, Sec.\ 4, Roosevelt Rd., Taipei City 106, Room 407, Cosmology Building, Taiwan
+								\ \\
+								\begin{CJK*}{UTF8}{bkai}106319 臺北市羅斯福路四段1號　(國立臺灣大學次震宇宙館407室)\end{CJK*}
+								\vskip0.5cm
+								\textsuperscript{$\dagger$} 2024 to today: Mathematical Institute, Georg-August University Göttingen\\
+                Bunsenstr. 3-5, 37073 Göttingen, Germany\\[0.3cm]
+            {\href{mailto:simon.fischer@mathematik.uni-goettingen.de}{\texttt{simon.fischer@mathematik.uni-goettingen.de}}}
+                }}
+        \end{center}
+        \vskip0.8cm
+        \begin{center}
+            \textbf{Abstract}\footnote{Abbreviations used in this paper: \textbf{LGB(s)} for Lie group bundle(s), \textbf{LAB(s)} for Lie algebra bundle(s).}
+        \end{center}
+        \begin{quote}
+				We construct a gauge theory based on principal bundles $\mathcal{P}$ equipped with a right $\mathcal{G}$-action, where $\mathcal{G}$ is a Lie group bundle instead of a Lie group. Due to the fact that a $\mathcal{G}$-action acts fibre by fibre, pushforwards of tangent vectors via a right-translation act now only on the vertical structure of $\mathcal{P}$. Thus, we generalize pushforwards using a connection on $\mathcal{G}$ which will modify the pushforward. A horizontal distribution on $\mathcal{P}$ invariant under such a modified pushforward will provide a proper notion of Ehresmann connection. For achieving gauge invariance we impose conditions on the connection 1-form $\mu$ on $\mathcal{G}$: $\mu$ has to be a multiplicative form, \textit{i.e.}\ closed w.r.t.\ a certain simplicial differential $\delta$ on $\mathcal{G}$, and the curvature $R_\mu$ of $\mu$ has to be $\delta$-exact with primitive $\zeta$; $\mu$ will be the generalization of the Maurer-Cartan form of the classical gauge theory, while the $\delta$-exactness of $R_\mu$ will generalize the role of the Maurer-Cartan equation. This introduces the notion of multiplicative Yang-Mills connections, a connection which helped classifying singular foliations and (topological) symmetry breaking. For allowing curved connections on $\mathcal{G}$ in the dynamical theory we will need to generalize the typical definition of the curvature/field strength $F$ on $\mathcal{P}$ by adding $\zeta$ to $F$.
 	
-	Several examples for a gauge theory with a curved $\mu$ will be provided, including the inner group bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$, including a classification for whether these theories admit a classical description.
-}
- \end{abstract}
-\end{center}
+				Several examples for a gauge theory with a curved $\mu$ will be provided, including the inner group bundle of the Hopf fibration $\mathbb{S}^7 \to \mathbb{S}^4$, including a classification for whether these theories admit a classical description.
+        \end{quote}
+    \end{titlepage}
 
-\textit{2010 MSC:} Primary 53D17; Secondary 81T13, 22E99.
-
-\textit{Keywords:} \texttt{Mathematical Gauge Theory}, Differential Geometry, High Energy Physics - Theory, Mathematical Physics
-
-\end{titlepage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Inhaltsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -581,11 +689,11 @@ In fact, these field redefinitions are not just any transformation preserving th
 It is important to mention beforehand that there is another great paper, \cite{OtherPreprintAboutConnection}, which also discusses the notion of connections on principal LGB-bundles. When I wrote this paper, I was not aware of this paper so that there will be some shared results which I found independently of the other authors. This will be obvious due to the fact that our approach is different. Both, this and the other paper, lead to the same sense of Ehresmann connection (based on the same idea of the behaviour of the parallel transport), but are explicitly not directly the same formulation. More like equivalent definitions of the same object, two sides of the same coin, so that it should be worth it to read both research works. Hence, our approach will be different with some shared and some different results. \cite{OtherPreprintAboutConnection} sole purpose was in defining connections on principal bundles with Lie group bundle action (with an application in variational calculus), while we will also introduce and discuss Darboux derivatives, Yang-Mills gauge theory, and related concepts in this context, also pinpointing what happens for Yang-Mills-Higgs theories. Furthermore, our field strength on the principal bundle will be different and more general as already pointed out previously; it will consist of the typical curvature measuring the failure of a distribution to be integrable, plus an adjustment term $\zeta$.
 \end{remarks}
 
-In \cite{MyThesis} I first focused on Lie algebroids where the anchor map is an isomorphism and, thus, the Lie algebroid is just the tangent bundle of $M$. Locally, such examples can be excluded: The curvature can be always transformed to zero by the field redefinitions. However, globally, this is not always true: I have shown that the tangent bundle of the seven-dimensional sphere $\mathds{S}^7$ is an example of a curved gauge theory which cannot be transformed to a flat pre-classical gauge theory, otherwise it would be a Lie group which is not possible.
+In \cite{MyThesis} I first focused on Lie algebroids where the anchor map is an isomorphism and, thus, the Lie algebroid is just the tangent bundle of $M$. Locally, such examples can be excluded: The curvature can be always transformed to zero by the field redefinitions. However, globally, this is not always true: I have shown that the tangent bundle of the seven-dimensional sphere $\mathbb{S}^7$ is an example of a curved gauge theory which cannot be transformed to a flat pre-classical gauge theory, otherwise it would be a Lie group which is not possible.
 
-However, I also studied the other edge case of having Lie algebra bundles (LABs) instead of Lie algebroids: \cite{MyThesis} (also in \cite{My1stpaper}) points out that locally, \textit{i.e.}~over a contractible base manifold $N$, there is always a field redefinition transforming the initial gauge theory to a pre-classical one. Hence, we arrive at a similar situation as for tangent bundles. But globally there are examples like the adjoint bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$, where $\mathds{S}^n$ ($n \in \mathbb{N}$) denotes the $n$-dimensional sphere.
+However, I also studied the other edge case of having Lie algebra bundles (LABs) instead of Lie algebroids: \cite{MyThesis} (also in \cite{My1stpaper}) points out that locally, \textit{i.e.}~over a contractible base manifold $N$, there is always a field redefinition transforming the initial gauge theory to a pre-classical one. Hence, we arrive at a similar situation as for tangent bundles. But globally there are examples like the adjoint bundle of the Hopf fibration $\mathbb{S}^7 \to \mathbb{S}^4$, where $\mathbb{S}^n$ ($n \in \mathbb{N}$) denotes the $n$-dimensional sphere.
 
-This is now the starting point of this paper. We want to understand why the adjoint bundle of $\mathds{S}^7 \to \mathds{S}^4$ as a structural LAB gives rise to a gauge theory which cannot be described classically, and where it differs from the classical formalism of gauge theory. To truly understand this, and also to possibly get new information about the general case regarding Lie algebroids, we will integrate curved Yang-Mills-Higgs theories in the case of LABs in this paper. Using LABs means that there is no coupling to a Higgs field in the usual sense and therefore we will now just speak instead of a curved Yang-Mills gauge theory. It will turn out, that the Hopf fibration is not just a nice coincidence, but a member of a family of canonical examples: The adjoint bundles of simple non-flat principal bundles as structural Lie group bundles.
+This is now the starting point of this paper. We want to understand why the adjoint bundle of $\mathbb{S}^7 \to \mathbb{S}^4$ as a structural LAB gives rise to a gauge theory which cannot be described classically, and where it differs from the classical formalism of gauge theory. To truly understand this, and also to possibly get new information about the general case regarding Lie algebroids, we will integrate curved Yang-Mills-Higgs theories in the case of LABs in this paper. Using LABs means that there is no coupling to a Higgs field in the usual sense and therefore we will now just speak instead of a curved Yang-Mills gauge theory. It will turn out, that the Hopf fibration is not just a nice coincidence, but a member of a family of canonical examples: The adjoint bundles of simple non-flat principal bundles as structural Lie group bundles.
 
 Due to the length of this paper, we will start outlining the paper's main results in a summary; we will focus on an easy presentation in the introduction, especially we will not always restate our assumptions, and the notation will be simpler than the actual formulation.
 
@@ -610,9 +718,9 @@ We have
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
 \mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}}\mright)_g \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
 \eas
-for all $(p, g) \in \mathcal{P} * \mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(p, g)}(\mathcal{P}*\mathcal{G})$, where $x \coloneqq \pi(p)$, $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_{x} = g$ and $r_\sigma$ denotes the right-translation of $\sigma$ in $\mathcal{P}$, $\mu_{\mathcal{G}}$ is the fibre-wise defined Maurer-Cartan form of the fibres, $\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g(\dotsc)}$ denotes its generated fundamental vector field on $\mathcal{P}_x$, and $\omega$ is an element of $\mathrm{T}_xM$ given by
+for all $(p, g) \in \mathcal{P} * \mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(p, g)}(\mathcal{P}*\mathcal{G})$, where $x \coloneqq \pi(p)$, $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_{x} = g$ and $r_\sigma$ denotes the right-translation of $\sigma$ in $\mathcal{P}$, $\mu_{\mathcal{G}}$ is the fibre-wise defined Maurer-Cartan form of the fibres, $\overline{\mleft( \mu_{\mathcal{G}} \mright)_g(\dotsc)}$ denotes its generated fundamental vector field on $\mathcal{P}_x$, and $\omega$ is an element of $\mathrm{T}_xM$ given by
 \bas
 \omega
 &\coloneqq
@@ -658,7 +766,7 @@ X
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
-	- \mleft.{\oversortoftilde{
+	- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	}}\mright|_{p \cdot g},
 \eas
@@ -1022,14 +1130,14 @@ We have
 for all principal bundle automorphisms $H$.
 \end{theorems*}
 
-As the final part of statements we will discuss new examples of gauge theory in Subsection \ref{CYMExamples}, after pointing out that this gauge theory generalizes the classical formalism. We will also discuss this matter in the context of my previously-mentioned Ph.D.\ thesis, \cite{MyThesis}, and the field redefinitions. Especially, the paper concludes with the reason why this project started: The inner group bundle of the Hopf fibration $\mathds{S}^7 \to \mathds{S}^4$ is one of many examples of curved Yang-Mills gauge theory, so that $\nabla^{\mathrm{YM}}$ is not curved; we will present this in Ex.\ \ref{ex:Hopf}.
+As the final part of statements we will discuss new examples of gauge theory in Subsection \ref{CYMExamples}, after pointing out that this gauge theory generalizes the classical formalism. We will also discuss this matter in the context of my previously-mentioned Ph.D.\ thesis, \cite{MyThesis}, and the field redefinitions. Especially, the paper concludes with the reason why this project started: The inner group bundle of the Hopf fibration $\mathbb{S}^7 \to \mathbb{S}^4$ is one of many examples of curved Yang-Mills gauge theory, so that $\nabla^{\mathrm{YM}}$ is not curved; we will present this in Ex.\ \ref{ex:Hopf}.
 
 \begin{examples*}{How to cook new gauge theories}
 First an explicit example: Let $P$ be the Hopf bundle
 \begin{center}
 	\begin{tikzcd}
-		\mathrm{SU}(2) \cong \mathds{S}^3 \arrow{r}	& \mathds{S}^7 \arrow{d} \\
-			& \mathds{S}^4
+		\mathrm{SU}(2) \cong \mathbb{S}^3 \arrow{r}	& \mathbb{S}^7 \arrow{d} \\
+			& \mathbb{S}^4
 	\end{tikzcd}
 \end{center}
 We define the principal bundle $\mathcal{P}$ and LGB $\mathcal{G}$ as the inner group bundle of $P$
@@ -1855,12 +1963,12 @@ Assume we have another underlying LGB atlas in sense of Cor.\ \ref{cor:PullbackL
 \bas
 \phi_i \circ \pi_2 \circ \psi_i^{-1}
 &=
-\underbrace{\phi_i \circ \pi_2 \circ \mleft( f^*\phi_i \mright)^{-1}}_{= (f, \mathds{1}_G)} \circ f^*\phi_i \circ \psi_i^{-1}
+\underbrace{\phi_i \circ \pi_2 \circ \mleft( f^*\phi_i \mright)^{-1}}_{= (f, \mathbb{1}_G)} \circ f^*\phi_i \circ \psi_i^{-1}
 =
-(f, \mathds{1}_G) \circ
+(f, \mathbb{1}_G) \circ
 f^*\phi_i \circ \psi_i^{-1},
 \eas
-$(f, \mathds{1}_G)$ is clearly a Lie group isomorphism $f^{-1}(U_i) \times G \cong U_i \times G$ of trivial LGBs, and thus the condition about $\pi_2|_x$ being a Lie group isomorphism enforces that we can write
+$(f, \mathbb{1}_G)$ is clearly a Lie group isomorphism $f^{-1}(U_i) \times G \cong U_i \times G$ of trivial LGBs, and thus the condition about $\pi_2|_x$ being a Lie group isomorphism enforces that we can write
 \bas
 \mleft(f^*\phi_i \circ \psi_i^{-1}\mright)(x, g)
 &=
@@ -1964,7 +2072,7 @@ N &\to N,\\
 p &\mapsto p \cdot \sigma_{f(p)}.
 \eas
 
-If one has a section of $f$, \textit{i.e.}\ a smooth map $\tau: M \to N$, $x \mapsto \tau_x$, with $f \circ \tau = \mathds{1}_M$, then we can define the \textbf{orbit map} through $\tau$ as a map $\Phi_\tau$ given by
+If one has a section of $f$, \textit{i.e.}\ a smooth map $\tau: M \to N$, $x \mapsto \tau_x$, with $f \circ \tau = \mathbb{1}_M$, then we can define the \textbf{orbit map} through $\tau$ as a map $\Phi_\tau$ given by
 \bas
 \mathcal{G} &\to N,\\
 g &\mapsto \tau_{\pi(g)} \cdot g.
@@ -2228,7 +2336,7 @@ Therefore this describes an action.
 \begin{remarks}{Relation to automorphisms of principal bundles and gauge transformations}{ClassGaugeTrafosAndcgPMulti}
 Recall that gauge transformations are related to principal bundle automorphisms $f$ of the principal bundle $P$; see \textit{e.g.}\ \cite[\S 5.3, Def.\ 5.3.1, page 256f.]{Hamilton}\ and \cite[\S 5.4, Thm.\ 5.4.4, page 273]{Hamilton}. That is, $f$ is a diffeomorphism $P \to P$ with
 \bas
-\pi_P \circ f &= \mathds{1}_M,\\
+\pi_P \circ f &= \mathbb{1}_M,\\
 f(p \cdot g) &= f(p) \cdot g
 \eas
 for all $p \in P$ and $g \in G$. The group of such maps will be denoted by $\sAut(P)$. One can identify such automorphisms with certain $G$-valued maps on $P$, following \cite[\S 5.3, Def.\ 5.3.2 \& Prop.\ 5.3.3, page 266f.]{Hamilton}: We define the following set of smooth maps $P \to G$ by
@@ -2719,7 +2827,7 @@ e^*(fX)
 &=
 e^*( \pi^*f ~ X)
 =
-(f\circ \underbrace{\pi \circ e}_{= \mathds{1}_M}) ~ e^*X
+(f\circ \underbrace{\pi \circ e}_{= \mathbb{1}_M}) ~ e^*X
 =
 f~ e^*X
 \eas
@@ -2791,7 +2899,7 @@ where $\psi: \Gamma(e^*\mathrm{V}\mathcal{G}) \to L(\mathcal{G}), \nu \mapsto X_
 &=
 \mleft.e^*X_\nu\mright|_x
 =
-\underbrace{\mathrm{D}_{e_x}L_{e_x}}_{= \mathds{1}_{\mathrm{V}_{e_x}\mathcal{G}}}(\nu_x)
+\underbrace{\mathrm{D}_{e_x}L_{e_x}}_{= \mathbb{1}_{\mathrm{V}_{e_x}\mathcal{G}}}(\nu_x)
 =
 \nu_x
 \eas
@@ -3126,15 +3234,15 @@ and it is fibre-wise a Lie group isomorphism such that
 is a Lie algebra isomorphism for all $p \in N$, where $e_x$ is the neutral element of $\mathcal{G}_x$ for $x \coloneqq f(p)$, and $\mathcal{h}$ and $\mathcal{g}$ are the LABs of $f^*\mathcal{G}$ and $\mathcal{G}$, respectively; for all of that recall that $\mleft(f^*\mathcal{G}\mright)_p$ and $\mathcal{G}_x$ are Lie groups. Hence, we have a vector bundle morphism over $f$ given by the following commuting diagram
 \begin{center}
 	\begin{tikzcd}[column sep=huge]
-		\mathcal{h} \arrow{d} \arrow{r}{\mathrm{D}_{\mleft( \mathds{1}_N, e_f \mright)} \pi_2} & \mathcal{g} \arrow{d} \\
+		\mathcal{h} \arrow{d} \arrow{r}{\mathrm{D}_{\mleft( \mathbb{1}_N, e_f \mright)} \pi_2} & \mathcal{g} \arrow{d} \\
 		N \arrow{r}{f} & M
 	\end{tikzcd}
 \end{center}
 which describes fibre-wise a Lie algebra isomorphism, where 
 \bas
-\mathrm{D}_{\mleft( \mathds{1}_N, e_f \mright)} \pi_2
+\mathrm{D}_{\mleft( \mathbb{1}_N, e_f \mright)} \pi_2
 &\coloneqq
-\mathrm{D}\pi_2 \circ \mleft( \mathds{1}_N, e_f \mright)
+\mathrm{D}\pi_2 \circ \mleft( \mathbb{1}_N, e_f \mright)
 =
 \mleft[
 	N \ni p \mapsto \mathrm{D}_{\mleft( p, e_{f(p)} \mright)} \pi_2
@@ -3574,7 +3682,7 @@ However, if $f$ is \textit{e.g.}\ the projection of a bundle, then we have a $\m
 
 For long expressions we use the following different font 
 \bas
-\oversortoftilde{\nu}
+\overline{\nu}
 \eas
 instead of $\widetilde{\nu}$.
 \end{remarks}
@@ -3659,7 +3767,7 @@ Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an 
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
 \mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g \mleft(Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr)\mright)}}\mright|_{p \cdot g}
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}}\mright)_g \mleft(Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr)\mright)}}\mright|_{p \cdot g}
 \ea
 for all $(p, g) \in N * \mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(p, g)}(N*\mathcal{G})$, where $x \coloneqq f(p) = \pi(g)$, $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_{x} = g$, $e$ is the identity section of $\mathcal{G}$, and $\omega$ is an element of $\mathrm{T}_xM$ given by
 \bas
@@ -3674,7 +3782,7 @@ We can also write instead
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
 \mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}.
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}}\mright)_g \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}.
 \ea
 
 If $f$ is a surjective submersion, then we can also write
@@ -3695,7 +3803,7 @@ and
 &\hspace{1cm}
 	+ \mathrm{D}_{e_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{D}_xe(\omega) \bigr),
 \ea
-where $\tau$ is any (local) section\footnote{That is, $f \circ \tau = \mathds{1}_M$ (locally).} of $f$ with $\tau_x = p$, and $\Phi_\tau$ is the orbit map through $\tau$.
+where $\tau$ is any (local) section\footnote{That is, $f \circ \tau = \mathbb{1}_M$ (locally).} of $f$ with $\tau_x = p$, and $\Phi_\tau$ is the orbit map through $\tau$.
 \end{theorems}
 
 \begin{remark}
@@ -3721,7 +3829,7 @@ The two first summands result into a vertical tangent vector due to
 \bas
 \mathrm{D}_g\pi\bigl( Y - \mathrm{D}_x\sigma(\omega) \bigr)
 &=
-\mathrm{D}_g\pi( Y ) - \mathrm{D}_x\underbrace{(\pi \circ \sigma)}_{= \mathds{1}_M}(\omega)
+\mathrm{D}_g\pi( Y ) - \mathrm{D}_x\underbrace{(\pi \circ \sigma)}_{= \mathbb{1}_M}(\omega)
 =
 \mathrm{D}_g \pi (Y) - \omega
 =
@@ -3796,7 +3904,7 @@ where $\gamma: I \to \mathcal{G}_x$ ($I$ open interval of $\mathbb{R}$ containin
 	_{\mathclap{ \mathcal{G} \ni q \mapsto p \cdot gq = \Phi_{p \cdot g}(q) }}
 	\mleft(\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v) \mright)
 =
-\mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g}
+\mleft.{\overline{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g}
 %\mleft.{\widetilde{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g},
 \ea
 making use of the verticality of $Y^v$ such that operators like $\mathrm{D}L_g$ can act on $Y^v$.
@@ -3805,7 +3913,7 @@ For the first summand in Eq.\ \eqref{DifferentialOfActionSplitFirst} we use
 \bas
 \mathrm{D}_{(p, g)}\Phi\Bigl(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
 &=
-\mathrm{D}_{(p, e_x)} \underbrace{\bigl( \Phi \circ \mleft( \mathds{1}_N, R_\sigma \mright) \bigr)}_{\mathclap{ N * \mathcal{G} \ni (p, g) \mapsto p \cdot g \sigma_x = r_\sigma(p \cdot g) }}
+\mathrm{D}_{(p, e_x)} \underbrace{\bigl( \Phi \circ \mleft( \mathbb{1}_N, R_\sigma \mright) \bigr)}_{\mathclap{ N * \mathcal{G} \ni (p, g) \mapsto p \cdot g \sigma_x = r_\sigma(p \cdot g) }}
 	\bigl( X, \mathrm{D}_x e(\omega) \bigr)
 \\
 &=
@@ -3823,7 +3931,7 @@ For the first summand in Eq.\ \eqref{DifferentialOfActionSplitFirst} we use
 \\
 &=
 \mathrm{D}_p r_\sigma \Bigl(
-	\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathds{1}_N, e\circ f)\bigr)( X, X )
+	\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathbb{1}_N, e\circ f)\bigr)( X, X )
 \Bigr),
 \eas
 but on the diagonal $\mathrm{diag}(N\times N)$ of $N\times N$ we have
@@ -3831,7 +3939,7 @@ but on the diagonal $\mathrm{diag}(N\times N)$ of $N\times N$ we have
 \Bigl[
 \mathrm{diag}(N \times N) \ni (p,p)
 \mapsto
-\bigl(\Phi \circ (\mathds{1}_N, e\circ f)\bigr)(p,p)
+\bigl(\Phi \circ (\mathbb{1}_N, e\circ f)\bigr)(p,p)
 =
 \Phi\mleft(p, e_{f(p)}\mright)
 =
@@ -3844,7 +3952,7 @@ p
 \eas
 where $\mathrm{pr}_i$ is just the projection onto any of both $i$-th components ($i \in \{1,2\}$) in $N \times N$. Due to $(X, X) \in \mathrm{T}_{(p,p)}\bigl( \mathrm{diag}(N\times N) \bigr)$ we derive
 \bas
-\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathds{1}_N, e\circ f)\bigr)( X, X )
+\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathbb{1}_N, e\circ f)\bigr)( X, X )
 &=
 \mathrm{D}_{(p,p)} \mathrm{pr}_i( X, X )
 =
@@ -3861,10 +3969,10 @@ therefore
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
 \mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g}.
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}}\mright)_g (Y^v)}}\mright|_{p \cdot g}.
 \eas
 
-If $f$ is a surjective submersion, then $x$ is a regular value and thus $f^{-1}(\{x\})$ is an embedded submanifold, and we can assure the existence of a smooth local section $\tau: U \to N$ of $f$ ($U$ an open neighbourhood of $x \in M$), \textit{i.e.}\ $f \circ \tau = \mathds{1}_U$ with $\tau_x = p$; in case of doubt, this can be shown as in \cite[\S 3.7, Lemma 3.7.4, page 152f.]{Hamilton}\ via the Regular Point Theorem. Recalling the arguments of Rem. \ref{rem:AbstractNotationTwoForLeftInvarVfs}, we can rewrite the second summand of Eq.\ \eqref{DifferentialOfActionSplitFirst} instead to
+If $f$ is a surjective submersion, then $x$ is a regular value and thus $f^{-1}(\{x\})$ is an embedded submanifold, and we can assure the existence of a smooth local section $\tau: U \to N$ of $f$ ($U$ an open neighbourhood of $x \in M$), \textit{i.e.}\ $f \circ \tau = \mathbb{1}_U$ with $\tau_x = p$; in case of doubt, this can be shown as in \cite[\S 3.7, Lemma 3.7.4, page 152f.]{Hamilton}\ via the Regular Point Theorem. Recalling the arguments of Rem. \ref{rem:AbstractNotationTwoForLeftInvarVfs}, we can rewrite the second summand of Eq.\ \eqref{DifferentialOfActionSplitFirst} instead to
 \bas
 \mathrm{D}_g\Phi_p (Y^v)
 &=
@@ -3946,7 +4054,7 @@ Eq.\ \eqref{NewDIffACtionwithMCForm} is very similar to the "classical" formula 
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
 \mathrm{D}_pr_g(X)
-	+ \mleft.\oversortoftilde{(\mu_G)_g(Y)}\mright|_{p \cdot g}
+	+ \mleft.\overline{(\mu_G)_g(Y)}\mright|_{p \cdot g}
 \eas
 for all $p \in N$, $g \in G$, $X \in \mathrm{T}_pN$ and $Y \in \mathrm{T}_g G$.
 However, in our general case the vector $Y$ is deformed by $\omega$, due to the fact that the action $\Phi$ has no "constant" Lie group factor anymore. This will be important later when we are going to derive the gauge transformations. Furthermore, already the first summand is now different than the classical formula, because we need to use LGB sections in order to define the push-forward of tangent vectors which are not vertical, that is, $X$ may not be a tangent vector of $f^{-1}(\{x\})$ (which is in the general case not even an embedded submanifold) such that $\mathrm{D}_p r_g(X)$ is in general not well-defined anymore.
@@ -4052,7 +4160,7 @@ We often refer to principal bundles related to trivial LGBs as \textbf{typical} 
 \end{examples}
 
 \begin{examples}{The "trivial" principal $\mathcal{G}$-bundle}{TrivialPrincAsLGB}
-$\mathcal{G}$ itself is a principal $\mathcal{G}$-bundle, equipped with its canonical right-action inherited by its multiplication $\mathcal{G}*\mathcal{G} \to \mathcal{G}$. The principal bundle atlas then just consists of the identity map $\mathds{1}_{\mathcal{G}}$.
+$\mathcal{G}$ itself is a principal $\mathcal{G}$-bundle, equipped with its canonical right-action inherited by its multiplication $\mathcal{G}*\mathcal{G} \to \mathcal{G}$. The principal bundle atlas then just consists of the identity map $\mathbb{1}_{\mathcal{G}}$.
 
 By Ex.\ \ref{ex:TheCLassicalPrincAsEx}, it may be natural to call this the \textbf{trivial $\mathcal{G}$-principal bundle} even if $\mathcal{G}$ itself might not be trivial. It will be clearer later why one may choose to do so.
 
@@ -4075,7 +4183,7 @@ for all $(p, h) \in \mathcal{P}^\prime * \mathcal{H} = \mleft(\pi^\prime\mright)
 
 We speak of a \textbf{principal bundle isomorphism (over $f$, w.r.t.\ $F$)} if $H$ is a diffeomorphism. 
 
-If $H$ is a base-preserving isomorphism $\mathcal{P} \to \mathcal{P}$ w.r.t.\ $F = \mathds{1}_{\mathcal{G}}$, then we say that $H$ is a \textbf{(global) gauge transformation} or \textbf{principal bundle automorphism}, and the set of all such automorphisms is denoted by $\sAut(\mathcal{P})$. If $H$ is defined on an open subset of $M$, then we may also speak of a \textbf{local gauge transformation}.
+If $H$ is a base-preserving isomorphism $\mathcal{P} \to \mathcal{P}$ w.r.t.\ $F = \mathbb{1}_{\mathcal{G}}$, then we say that $H$ is a \textbf{(global) gauge transformation} or \textbf{principal bundle automorphism}, and the set of all such automorphisms is denoted by $\sAut(\mathcal{P})$. If $H$ is defined on an open subset of $M$, then we may also speak of a \textbf{local gauge transformation}.
 \end{definitions}
 %Following remark is wrong, an equivalent statement may be related to the quotient space
 %\begin{remarks}{Equivalent definition}{EquivalentDefinitionForPrincMorphisms}
@@ -4154,9 +4262,9 @@ Thence, Def.\ \ref{def:MorphOfPrincBundles} is a valid definition for a principa
 \mleft(F^{-1} \circ \varphi_i \circ H\mright)|_{f^{-1}(U_i)}.
 \eas
 
-$\bullet$ Finally, observe that we have locally an isomorphism of every principal bundle $\mathcal{P}$ to $\mathcal{G}$: Fix a principal bundle chart $\varphi: \mathcal{P}|_U \to \mathcal{G}|_U$ ($U$ some open subset of $M$). Then take $H \coloneqq \varphi$, $F \coloneqq \mathds{1}_{\mathcal{G}|_U}$ and $f \coloneqq \mathds{1}_U$; by the definition of a principal bundle chart this gives a principal bundle isomorphism. Therefore one could say that every principal bundle is locally "trivial" in the sense of being an LGB; recall Ex.\ \ref{ex:TrivialPrincAsLGB}. 
+$\bullet$ Finally, observe that we have locally an isomorphism of every principal bundle $\mathcal{P}$ to $\mathcal{G}$: Fix a principal bundle chart $\varphi: \mathcal{P}|_U \to \mathcal{G}|_U$ ($U$ some open subset of $M$). Then take $H \coloneqq \varphi$, $F \coloneqq \mathbb{1}_{\mathcal{G}|_U}$ and $f \coloneqq \mathbb{1}_U$; by the definition of a principal bundle chart this gives a principal bundle isomorphism. Therefore one could say that every principal bundle is locally "trivial" in the sense of being an LGB; recall Ex.\ \ref{ex:TrivialPrincAsLGB}. 
 
-Additionally using Remark \ref{rem:LGBPrincDefDiscussion} we have locally an isomorphism of $\mathcal{P}$ to a trivial LGB; keeping the same notation as in Remark \ref{rem:LGBPrincDefDiscussion}, choose $H \coloneqq \xi_i$, $F \coloneqq \phi_i$ and $f \coloneqq \mathds{1}_{U_i}$. Hence, locally every principal bundle is also classical in the sense of Ex.\ \ref{ex:TheCLassicalPrincAsEx}.
+Additionally using Remark \ref{rem:LGBPrincDefDiscussion} we have locally an isomorphism of $\mathcal{P}$ to a trivial LGB; keeping the same notation as in Remark \ref{rem:LGBPrincDefDiscussion}, choose $H \coloneqq \xi_i$, $F \coloneqq \phi_i$ and $f \coloneqq \mathbb{1}_{U_i}$. Hence, locally every principal bundle is also classical in the sense of Ex.\ \ref{ex:TheCLassicalPrincAsEx}.
 \end{remark}
 
 As expected, there is a natural isomorphism induced by local sections of $\mathcal{P}$, which are, however, no trivializations in general. In other words, by Remark \ref{rem:LGBPrincDefDiscussion} we know that orbit maps through the fibres of $\mathcal{P}$ are equivariant diffeomorphisms, we want to show the same for the orbit map through a section of $\mathcal{P}$.
@@ -4167,7 +4275,7 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 \mathcal{G}|_U &\to \mathcal{P}|_U,\\
 g &\mapsto s_{\pi_{\mathcal{G}}(g)} \cdot g,
 \eas
-is a base-preserving principal bundle isomorphism w.r.t.\ $\mathds{1}_{\mathcal{G}|_U}$.
+is a base-preserving principal bundle isomorphism w.r.t.\ $\mathbb{1}_{\mathcal{G}|_U}$.
 \end{lemmata}
 
 \begin{remark}
@@ -4179,16 +4287,16 @@ The nomenclature about calling LGBs "trivial" principal bundles is also introduc
 
 \begin{proof}[Proof of Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}]
 \leavevmode\newline
-The proof is similar to the "classical" statement as \textit{e.g.}\ given in \cite[\S 4.2, proof of Lemma 4.2.7, page 210ff.]{Hamilton}, but generalized since we have to treat a possible non-triviality of $\mathcal{G}|_U$. As already discussed, the orbit map $\Phi_s$ is well-defined because of $\pi_{\mathcal{P}} \circ s = \mathds{1}_{U}$ such that $\mleft(s_{\pi_{\mathcal{G}}(g)}, g\mright) \in \mathcal{P}*\mathcal{G}$. Via Rem.\ \ref{SmoothnessOfACtionTranslations} we also know that $\Phi_s$ is also smooth,
+The proof is similar to the "classical" statement as \textit{e.g.}\ given in \cite[\S 4.2, proof of Lemma 4.2.7, page 210ff.]{Hamilton}, but generalized since we have to treat a possible non-triviality of $\mathcal{G}|_U$. As already discussed, the orbit map $\Phi_s$ is well-defined because of $\pi_{\mathcal{P}} \circ s = \mathbb{1}_{U}$ such that $\mleft(s_{\pi_{\mathcal{G}}(g)}, g\mright) \in \mathcal{P}*\mathcal{G}$. Via Rem.\ \ref{SmoothnessOfACtionTranslations} we also know that $\Phi_s$ is also smooth,
  %Let us denote with $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{G}$ the right $\mathcal{G}$-action $(p, g) \mapsto p \cdot g$ on $\mathcal{P}$, then
 %\ba\label{RewritingLocalTrivOfPrinc}
 %\Phi_s(g)
 %&=
 %\Phi\mleft( s_{\pi_{\mathcal{G}}(g)}, g\mright)
 %=
-%\bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathds{1}_{\mathcal{G}} \mright) \bigr) (g,g).
+%\bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathbb{1}_{\mathcal{G}} \mright) \bigr) (g,g).
 %\ea
-%Thence, $\Phi_s$ is clearly a smooth map as the composition of smooth maps, that is, $\Phi$ is composed with the restriction of the smooth map $\mleft( \pi_{\mathcal{G}}^*s, \mathds{1}_{\mathcal{G}} \mright): \mathcal{G} \times \mathcal{G} \to \mathcal{G}$, which is given by $(g, q) \mapsto \mleft( s_{\pi_{\mathcal{G}(g)}} , q \mright)$, and it is clearly smooth if restricted to the diagonal as embedded submanifold.
+%Thence, $\Phi_s$ is clearly a smooth map as the composition of smooth maps, that is, $\Phi$ is composed with the restriction of the smooth map $\mleft( \pi_{\mathcal{G}}^*s, \mathbb{1}_{\mathcal{G}} \mright): \mathcal{G} \times \mathcal{G} \to \mathcal{G}$, which is given by $(g, q) \mapsto \mleft( s_{\pi_{\mathcal{G}(g)}} , q \mright)$, and it is clearly smooth if restricted to the diagonal as embedded submanifold.
 %By Def.\ \ref{def:LiegroupACtion} we have
 %\bas
 %\mleft( \pi_{\mathcal{P}} \circ \Phi_s \mright)(g)
@@ -4197,13 +4305,13 @@ The proof is similar to the "classical" statement as \textit{e.g.}\ given in \ci
 %=
 %\pi_{\mathcal{G}}(g),
 %\eas
-%thus, $\Phi_s$ is base-preserving, similarly it follows that $\Phi_s$ is $\mathcal{G}$-equivariant w.r.t.\ $\mathds{1}_{\mathcal{G}}$ by making use of $\pi_{\mathcal{G}}(g q) = \pi_{\mathcal{G}}(g)$ for all $g, q \in \mathcal{G}*\mathcal{G}$. Furthermore, $\Phi_s$ is bijective since the right $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive, that is, when we restrict $\Phi_s$ to an $x \in U$, then it is a map
+%thus, $\Phi_s$ is base-preserving, similarly it follows that $\Phi_s$ is $\mathcal{G}$-equivariant w.r.t.\ $\mathbb{1}_{\mathcal{G}}$ by making use of $\pi_{\mathcal{G}}(g q) = \pi_{\mathcal{G}}(g)$ for all $g, q \in \mathcal{G}*\mathcal{G}$. Furthermore, $\Phi_s$ is bijective since the right $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive, that is, when we restrict $\Phi_s$ to an $x \in U$, then it is a map
 %\bas
 %\mathcal{G}_x &\to \mathcal{P}_x,\\
 %g &\mapsto s_x \cdot g,
 %\eas
 %thence, as expected 
-and it is point-wise the orbit map $\Phi_{s_x}$ through $s_x$ which is a $\mathcal{G}_x$-equivariant diffeomorphism by Remark \ref{rem:LGBPrincDefDiscussion}. So, $\Phi_s$ is fibre-wise bijective and therefore bijective as a whole since it is base-preserving, and it is $\mathcal{G}$-equivariant w.r.t.\ $\mathds{1}_{\mathcal{G}}$.
+and it is point-wise the orbit map $\Phi_{s_x}$ through $s_x$ which is a $\mathcal{G}_x$-equivariant diffeomorphism by Remark \ref{rem:LGBPrincDefDiscussion}. So, $\Phi_s$ is fibre-wise bijective and therefore bijective as a whole since it is base-preserving, and it is $\mathcal{G}$-equivariant w.r.t.\ $\mathbb{1}_{\mathcal{G}}$.
 
 Now we want to use the inverse function theorem to show that its inverse is also smooth. Once we know that the tangent map/total derivative $\mathrm{D}_g\Phi_s: \mathrm{T}_g \mathcal{G} \to \mathrm{T}_{s_{x} \cdot g}\mathcal{P}$ is an isomorphism of vector spaces for all $g \in \mathcal{G}|_U$, then we know by the inverse function theorem that $\Phi_s^{-1}$ is smooth. Hence, we will now show that $\mathrm{D}_g\Phi_s$ is injective, then it has to bijective by dimensional reasons ($\mathrm{dim}(\mathcal{G}) = \mathrm{dim}(\mathcal{P})$) so that we are done. Let us denote with $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{G}$ the right $\mathcal{G}$-action $(p, g) \mapsto p \cdot g$ on $\mathcal{P}$, then
 \bas
@@ -4211,18 +4319,18 @@ Now we want to use the inverse function theorem to show that its inverse is also
 &=
 \Phi\mleft( s_{\pi_{\mathcal{G}}(g)}, g\mright)
 =
-\bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathds{1}_{\mathcal{G}} \mright) \bigr) (g,g).
+\bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathbb{1}_{\mathcal{G}} \mright) \bigr) (g,g).
 \eas
 Then $\mathrm{D}_g\Phi_s$ is given by Thm.\ \ref{thm:DiffOfLGBAction},
 \ba
 \mathrm{D}_g \Phi_s (Y)
 &=
 \mathrm{D}_{s_x}r_\sigma\bigl( \mathrm{D}_x s(\omega) \bigr)
-	+ \mleft.\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y - \mathrm{D}_x \sigma(\omega) \bigr) }\mright|_{s_x \cdot g}
+	+ \mleft.\overline{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y - \mathrm{D}_x \sigma(\omega) \bigr) }\mright|_{s_x \cdot g}
 \nonumber\\
 &=
 \mathrm{D}_x \mleft( r_\sigma \circ s \mright)(\omega)
-	+ \mleft.\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y - \mathrm{D}_x \sigma(\omega) \bigr) }\mright|_{s_x \cdot g}
+	+ \mleft.\overline{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y - \mathrm{D}_x \sigma(\omega) \bigr) }\mright|_{s_x \cdot g}
 	\label{DiffOfOrbitMap}
 \ea
 for all $Y \in \mathrm{T}_g \mathcal{G}$, where $x \coloneqq \pi_{\mathcal{G}}(g)$, $\sigma \in \Gamma(\mathcal{G}|_U)$\footnote{W.l.o.g.\ we assume that $\sigma$ is defined on $U$, otherwise "make $U$ smaller around $x$".} with $\sigma_{x} = g$ and $\omega \coloneqq \mathrm{D}_{g}\pi_{\mathcal{G}}(Y) \in \mathrm{T}_xM$. We want to decompose $\Phi_s$ now. Observe that $Y - \mathrm{D}_x \sigma(\omega) \in \mathrm{V}_g \mathcal{G}$, \textit{i.e.}\ it is vertical in $\mathcal{G}$ due to the fact that
@@ -4239,15 +4347,15 @@ because of
 \bas
 \pi_{\mathcal{G}} \circ \sigma
 &=
-\mathds{1}_U
+\mathbb{1}_U
 \eas
 such that
 \ba\label{DsigmaIsASPlitting}
 \mathrm{D}\pi_{\mathcal{G}} \circ \mathrm{D}\sigma
 &=
-\mathds{1}_{\mathrm{T}M|_U}.
+\mathbb{1}_{\mathrm{T}M|_U}.
 \ea
-Usually, we just make use of that without further mention; we repeat this trivial fact in order to emphasize that $\mathrm{D}\sigma$ is injective because $\mathds{1}_{\mathrm{T}M|_U}$ is bijective, and to emphasize that we have
+Usually, we just make use of that without further mention; we repeat this trivial fact in order to emphasize that $\mathrm{D}\sigma$ is injective because $\mathbb{1}_{\mathrm{T}M|_U}$ is bijective, and to emphasize that we have
 \bas
 %\mathrm{T}_g\mathcal{G}
 %&=
@@ -4293,7 +4401,7 @@ so that we have $\sigma^*\mathrm{T}\mathcal{G} \cong \mathrm{Im}(\mathrm{D}\sigm
 \mathrm{T}_xM \oplus \mathrm{V}_g \mathcal{G} &\to \mathrm{T}_{s_{x} \cdot g}\mathcal{P},\\
 \mleft(\omega,~ Y^v\mright) &\mapsto
 \mathrm{D}_x \mleft( r_\sigma \circ s \mright)(\omega)
-	+ \mleft.\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y^v \bigr) }\mright|_{s_x \cdot g}.
+	+ \mleft.\overline{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y^v \bigr) }\mright|_{s_x \cdot g}.
 \eas
 
 These arguments apply to any section of a bundle, hence, we repeat this now. Observe that $r_\sigma \circ s$ is also a section of $\mathcal{P}|_U$ due to Def.\ \ref{def:LiegroupACtion}, that is,
@@ -4320,7 +4428,7 @@ and we identify $\mathrm{T}_xM \cong \mathrm{Im}\bigl( \mathrm{D}_x(r_\sigma\cir
 \mleft(\omega, ~Y^v\mright) &\mapsto
 \mleft(
 	\omega,~
-	\mleft.\oversortoftilde{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y^v \bigr) }\mright|_{s_x \cdot g}
+	\mleft.\overline{\mleft( \mu_{\mathcal{G}} \mright)_g\bigl( Y^v \bigr) }\mright|_{s_x \cdot g}
 \mright).
 \eas
 Thus, $\mathrm{D}_g\Phi_s$ is the pair of two linear independent maps $\mathrm{T}_x M \to \mathrm{T}_xM$ and $\mathrm{V}_g\mathcal{G} \to \mathrm{V}_{s_x \cdot g}\mathcal{P}$. The former is clearly an isomorphism, and the latter is by definition of fundamental vector fields and the Maurer-Cartan form of the shape as in Eq.\ \eqref{ClassicalWayToWriteLeibnizRuleWithLeftPushForwardInsteadOfMCForm}, \textit{i.e.}\
@@ -4367,7 +4475,7 @@ A principal bundle atlas can be constructed by a pullback of principal bundle ch
 \coloneqq
 \mleft( x, \mleft.\mleft(\varphi_i\mright)\mright|_{f(x)}(p) \mright),
 \eas
-which is well-defined and by construction a base-preserving $f^*\mathcal{G}$-equivariant smooth map, and this map is equivalent to $\mleft(\mathds{1}_{f^{-1}(U_i)}, \varphi_i\mright): N \times \mathcal{P} \to N \times \mathcal{G}$ restricted onto $f^*\mathcal{P}$ as an embedded submanifold of $N \times \mathcal{P}$. Therefore it is clearly a diffeomorphism, so that we can conclude that $f^*\mathcal{P}$ admits the structure as a principal $f^*\mathcal{G}$-bundle.
+which is well-defined and by construction a base-preserving $f^*\mathcal{G}$-equivariant smooth map, and this map is equivalent to $\mleft(\mathbb{1}_{f^{-1}(U_i)}, \varphi_i\mright): N \times \mathcal{P} \to N \times \mathcal{G}$ restricted onto $f^*\mathcal{P}$ as an embedded submanifold of $N \times \mathcal{P}$. Therefore it is clearly a diffeomorphism, so that we can conclude that $f^*\mathcal{P}$ admits the structure as a principal $f^*\mathcal{G}$-bundle.
 
 The last part of the proof about the uniqueness of the structure is precisely as in the proof of Cor.\ \ref{cor:PullbackLGB}, just replace the property of being an LGB morphism with being a principal bundle morphism w.r.t.\ the LGB morphism $\pi_2^{\mathcal{G}}$ (essentially, replace homomorphism with equivariance). Keeping the same notation as in the proof of Cor.\ \ref{cor:PullbackLGB}, we get analogously
 \bas
@@ -4425,7 +4533,7 @@ is a closed map. In our case, $N = \mathcal{P}$, we clearly have a free action, 
 \mathcal{P} * \mathcal{G} &\to \pi^*\mathcal{P} \to \mathcal{P} \times \mathcal{P},\\
 (p, g) &\mapsto (p, p \cdot g) \mapsto (p, p \cdot g).
 \eas
-By Remark \ref{AlternativePrincBdlDef} the first arrow is a diffeomorphism and thence a closed map. The second arrow is the inclusion, an embedding because $\pi^*\mathcal{P}$ is a closed embedded submanifold of $\mathcal{P} \times \mathcal{P}$ as the restriction of the fibre bundle $\mathcal{P} \times \mathcal{P} \stackrel{\mathds{1}_{\mathcal{P}} \times \pi}{\to} \mathcal{P} \times M$ along the graph of $\pi$; see \textit{e.g.}\ \cite[\S 4.1, proof of Thm.\ 4.1.17, page 204ff.]{Hamilton}. Additionally, by the continuity of $\pi$, the graph $\Gamma$ of $\pi$ is closed and thus $\pi^*\mathcal{P} = \mleft(\mathds{1}_{\mathcal{P}} \times \pi\mright)^{-1}(\Gamma)$, too. Using this, it is a quick exercise to show that a set closed in $\pi^*\mathcal{P}$ is also closed in $\mathcal{P} \times \mathcal{P}$, thus the second arrow as inclusion is also closed. Hence, the whole composition is closed.
+By Remark \ref{AlternativePrincBdlDef} the first arrow is a diffeomorphism and thence a closed map. The second arrow is the inclusion, an embedding because $\pi^*\mathcal{P}$ is a closed embedded submanifold of $\mathcal{P} \times \mathcal{P}$ as the restriction of the fibre bundle $\mathcal{P} \times \mathcal{P} \stackrel{\mathbb{1}_{\mathcal{P}} \times \pi}{\to} \mathcal{P} \times M$ along the graph of $\pi$; see \textit{e.g.}\ \cite[\S 4.1, proof of Thm.\ 4.1.17, page 204ff.]{Hamilton}. Additionally, by the continuity of $\pi$, the graph $\Gamma$ of $\pi$ is closed and thus $\pi^*\mathcal{P} = \mleft(\mathbb{1}_{\mathcal{P}} \times \pi\mright)^{-1}(\Gamma)$, too. Using this, it is a quick exercise to show that a set closed in $\pi^*\mathcal{P}$ is also closed in $\mathcal{P} \times \mathcal{P}$, thus the second arrow as inclusion is also closed. Hence, the whole composition is closed.
 
 This knowledge should allow us to carry over a lot of similar results related to principal actions, as in \cite[\S 3.7.5, page 159ff.]{Hamilton}\ and \cite[\S 4.2.2, page 212ff.]{Hamilton}. Essentially Remark \ref{AlternativePrincBdlDef} allows us to look at the quotient $\mathcal{P} \Big/ \mathcal{G}$ by using Godement's Theorem as given in \cite[\S 3.7, Thm.\ 3.7.10, page 155]{Hamilton}, leading to a manifold structure on $\mathcal{P} \Big/ \mathcal{G}$ and maybe similarly leading to a principal bundle structure on $\mathcal{P} \to \mathcal{P} \Big/ \mathcal{G}$.
 \end{remarks}
@@ -4738,7 +4846,7 @@ We want to use Thm.\ \ref{thm:DiffOfLGBAction} now in order to understand what E
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_g \Bigl(
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}}\mright)_g \Bigl(
 		Y
 		- \mathrm{D}_x \sigma \bigl( \dot{\alpha}(0) \bigr)
 	\Bigr)}}\mright|_{p \cdot g}
@@ -4779,7 +4887,7 @@ It may not surprise that $\mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}, \mathcal{G
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
-	- \mleft.{\oversortoftilde{
+	- \mleft.{\overline{
 		\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g \bigl(
 		\mathrm{D}_p (\sigma \circ \pi)(X)
 	\bigr)
@@ -5012,7 +5120,7 @@ by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry beh
 %\bigl(
 	%X_x, -\omega_x(X_x) ~ g \sigma_{x}
 %\bigr)
-	%+  \mleft.\oversortoftilde{\mu_{\mathcal{G}}^{\mathrm{tot}}\bigl( \mathrm{D}_x\sigma(X_x) \bigr)}\mright|_{(x, g \sigma_x)},
+	%+  \mleft.\overline{\mu_{\mathcal{G}}^{\mathrm{tot}}\bigl( \mathrm{D}_x\sigma(X_x) \bigr)}\mright|_{(x, g \sigma_x)},
 %\eas
 %where 
 %\bas
@@ -5023,7 +5131,7 @@ by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry beh
 %for all $Y \in \mathrm{T}\mathcal{G}$, were $\pi^{\mathrm{flat}}$ is the projection onto $\mathrm{V}\mathcal{G}$ along the canonically flat horizontal distribution. The notation $\mu_{\mathcal{G}}^{\mathrm{tot}}$ comes from that it is essentially the Maurer-Cartan form but defined on the \textbf{tot}al tangent bundle of $\mathcal{G}$; in fact, by construction, it is \textbf{the} connection-1-form corresponding to the canonical flat connection on $\mathcal{G}$. So, in total we get that
 %\bas
 %\mathrm{D}_{(x, g)}r_\sigma(X)
-	%- \mleft.\oversortoftilde{\mu_{\mathcal{G}}^{\mathrm{tot}}\bigl( \mathrm{D}_x\sigma(X_x) \bigr)}\mright|_{(x, g \sigma_x)}
+	%- \mleft.\overline{\mu_{\mathcal{G}}^{\mathrm{tot}}\bigl( \mathrm{D}_x\sigma(X_x) \bigr)}\mright|_{(x, g \sigma_x)}
 %\eas
 %is horizontal. 
 %
@@ -5197,7 +5305,7 @@ Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \colone
 where $\mathrm{pr}_2: M \times G \to G$ is the projection onto the second component,
 and the projection onto the vertical bundle is then equivalent to $\mathrm{Dpr}_2 \in \Omega^1\mleft(\mathcal{G}; \mathrm{pr}_2^*\mathrm{T}G\mright)$. 
 
-Now let us view $G$ as an LGB over a point $\{*\}$, then $\mathcal{G} = f^*G$, where $f: M \to \{*\}$. Making use of the uniqueness of $\pi^{\mathrm{vert}} = \mathds{1}_{\mathrm{T}G}$ for $G \to \{*\}$, we have for the pullback connection $\mathrm{pr}_2^!\pi^{\mathrm{vert}} = \mathrm{Dpr}_2$ which is precisely the projection for $\mathcal{G}$, and therefore we can use Remark \ref{rem:PullbackTotMCForm} to derive
+Now let us view $G$ as an LGB over a point $\{*\}$, then $\mathcal{G} = f^*G$, where $f: M \to \{*\}$. Making use of the uniqueness of $\pi^{\mathrm{vert}} = \mathbb{1}_{\mathrm{T}G}$ for $G \to \{*\}$, we have for the pullback connection $\mathrm{pr}_2^!\pi^{\mathrm{vert}} = \mathrm{Dpr}_2$ which is precisely the projection for $\mathcal{G}$, and therefore we can use Remark \ref{rem:PullbackTotMCForm} to derive
 \bas
 \mu^{\mathrm{tot}}_{\mathcal{G}}
 &=
@@ -5454,26 +5562,26 @@ Recall Thm.\ \ref{thm:DiffOfLGBAction}; keeping the same notation as in this the
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
 \mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}\mright)_{g} \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}}\mright)_{g} \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
 \\
 &=
 \mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}}\mright)_{g} \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}}\mright)_{g} \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
 \\
 &=
 \mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}}\mright)_{g} (Y)}}\mright|_{p \cdot g}
-	- \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}}\mright)_{\sigma_x} \bigl( \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}}\mright)_{g} (Y)}}\mright|_{p \cdot g}
+	- \mleft.{\overline{\mleft( \mu_{\mathcal{G}} \circ \pi^{\mathrm{vert}}\mright)_{\sigma_x} \bigl( \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
 \\
 &=
 \mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g} (Y)}}\mright|_{p \cdot g}
-	- \mleft.{\oversortoftilde{ \mleft.(\Delta \sigma)\mright|_x (\omega)}}\mright|_{p \cdot g}
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g} (Y)}}\mright|_{p \cdot g}
+	- \mleft.{\overline{ \mleft.(\Delta \sigma)\mright|_x (\omega)}}\mright|_{p \cdot g}
 \\
 &=
 \mathrm{D}_pr_\sigma(X)
-	- \mleft.{\oversortoftilde{ \mleft.\mleft(\pi^!\Delta \sigma\mright)\mright|_p (X)}}\mright|_{p \cdot g}
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g} (Y)}}\mright|_{p \cdot g}
+	- \mleft.{\overline{ \mleft.\mleft(\pi^!\Delta \sigma\mright)\mright|_p (X)}}\mright|_{p \cdot g}
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{g} (Y)}}\mright|_{p \cdot g}
 \eas
 If $\mathcal{G}$ is a trivial LGB, then this emphasizes again that we recover the typical Leibniz rule by choosing a constant section $\sigma$, using Remarks \ref{rem:TrivialLGBsAndTheirMCForm} and \ref{rem:DarbouxOnCanonFlat}.
 \end{remarks}
@@ -5484,7 +5592,7 @@ Recall the notation and discussion around the terms in Eq.\ \eqref{OiTHatIsHowWe
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
-	- \mleft.{\oversortoftilde{
+	- \mleft.{\overline{
 		\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_g \bigl(
 		\mathrm{D}_p (\sigma \circ \pi)(X)
 	\bigr)
@@ -5493,7 +5601,7 @@ Recall the notation and discussion around the terms in Eq.\ \eqref{OiTHatIsHowWe
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
-	- \mleft.{\oversortoftilde{
+	- \mleft.{\overline{
 		\bigl(\mleft(\Delta\sigma\mright)_x \circ \mathrm{D}_p\pi\bigr) (X)
 	}}\mright|_{p \cdot g}
 \\
@@ -5501,7 +5609,7 @@ Recall the notation and discussion around the terms in Eq.\ \eqref{OiTHatIsHowWe
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
-	- \mleft.{\oversortoftilde{
+	- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	}}\mright|_{p \cdot g}.
 \eas
@@ -5999,7 +6107,7 @@ X
 \mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
-	- \mleft.{\oversortoftilde{
+	- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	}}\mright|_{p \cdot g},
 \eas
@@ -6063,7 +6171,7 @@ where we split again $X = X^{\mathrm{H}} + X^{\mathrm{V}}$ for all $X\in\mathrm{
 \mleft(
 	\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright),~
 		\mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright)
-		- \mleft.{\oversortoftilde{
+		- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( X^{\mathrm{H}} \mright)
 	}}\mright|_{p \cdot g}
 \mright).
@@ -6079,7 +6187,7 @@ X^{\mathrm{H}}
 &\mapsto 
 \mleft(
 	\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright),~
-		- \mleft.{\oversortoftilde{
+		- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( X^{\mathrm{H}} \mright)
 	}}\mright|_{p \cdot g}
 \mright),
@@ -6107,7 +6215,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \mathcal{r}_{g*}(X)
 &\coloneqq
 \mathrm{D}_pr_\sigma\mleft( X \mright)
-	- \mleft.{\oversortoftilde{
+	- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	}}\mright|_{p \cdot g}
 \eas
@@ -6120,7 +6228,7 @@ Similarly, for a (local) section $\sigma$ of $\mathcal{G}$ we define the \textbf
 \mathcal{r}_{\sigma_x*}(X)
 =
 \mathrm{D}_pr_\sigma\mleft( X \mright)
-	- \mleft.{\oversortoftilde{
+	- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	}}\mright|_{p \cdot \sigma_{x}}
 \eas
@@ -6343,7 +6451,7 @@ for all $\nu \in \Gamma(\mathcal{g})$ and $p \in \mathcal{P}_x$ ($x \in M$). The
 &=
 r_{g*}\mleft( \widetilde{v} \mright)
 =
-\oversortoftilde{\mathrm{Ad}_{g^{-1}}(v)}
+\overline{\mathrm{Ad}_{g^{-1}}(v)}
 \eas
 for all $g \in \mathcal{G}_x$, also using Remark \ref{rem:ModRightPushOnVertic}.\footnote{This is very straightforward to prove.} Thus,
 \bas
@@ -6682,7 +6790,7 @@ $\bullet$ We then have
 	\mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
-	- \mleft.{\oversortoftilde{
+	- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	}}\mright|_{p \cdot \sigma_{x}}
 \mright)
@@ -6692,7 +6800,7 @@ A_{H\mleft(p \cdot \sigma_x\mright)}\mleft( \mathrm{D}_{p \cdot \sigma_x}H\mleft
 	\mathrm{D}_pr_\sigma\mleft( 
 	X 
 \mright)
-	- \mleft.{\oversortoftilde{
+	- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	}}\mright|_{p \cdot \sigma_{x}}
 \mright)\mright)
@@ -6747,7 +6855,7 @@ In total we get
 &=
 A_{H(p) \cdot \sigma_x}\mleft( 
 	\mathrm{D}_{H(p)}r_\sigma \bigl(\mathrm{D}_pH( X )\bigr)
-	- \mleft.{\oversortoftilde{
+	- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_{H(p)}\bigl( \mathrm{D}_pH(X) \bigr)
 	}}\mright|_{H(p) \cdot \sigma_{x}}
 \mright)
@@ -6808,7 +6916,7 @@ p \cdot \mathrm{pr}_2\mleft(\sigma^H_p\mright)
 =
 \Phi\mleft(p, \mathrm{pr}_2\mleft(\sigma^H_p \mright)\mright)
 =
-\Bigl( \Phi \circ \mleft( \mathds{1}_{\mathcal{P}}, \mathrm{pr}_2\circ\sigma^H \mright) \Bigr)(p)
+\Bigl( \Phi \circ \mleft( \mathbb{1}_{\mathcal{P}}, \mathrm{pr}_2\circ\sigma^H \mright) \Bigr)(p)
 \eas
 for all $p \in \mathcal{P}_x$ ($x\in M$), where $\Phi$ is the right $\mathcal{G}$-action on $\mathcal{P}$, also recall Def.\ \ref{MultiWithPulli}, that is, $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. Define $\widetilde{\sigma} \coloneqq \mathrm{pr}_2 \circ \sigma^H$, $\mathcal{P} \ni p \mapsto \widetilde{\sigma}_p \in \mathcal{G}$; by Remark \ref{rem:PullbackTotMCForm}, \ref{rem:PullBackDarboux} and Thm.\ \ref{thm:DiffOfLGBAction}, especially Remark \ref{rem:DarbouxInActionInfinit}, we can calculate
 \ba\label{DiffOfPrincAutom}
@@ -6819,33 +6927,33 @@ for all $p \in \mathcal{P}_x$ ($x\in M$), where $\Phi$ is the right $\mathcal{G}
 \\
 &=
 \mathrm{D}_pr_\sigma(X)
-	- \mleft.{\oversortoftilde{ \mleft.\mleft(\pi^!\Delta \sigma\mright)\mright|_p (X)}}\mright|_{p \cdot \widetilde{\sigma}_p}
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\widetilde{\sigma}_p} \bigl(\mathrm{D}_p\widetilde{\sigma}(X) \bigr)}}\mright|_{p \cdot \widetilde{\sigma}_p}
+	- \mleft.{\overline{ \mleft.\mleft(\pi^!\Delta \sigma\mright)\mright|_p (X)}}\mright|_{p \cdot \widetilde{\sigma}_p}
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\widetilde{\sigma}_p} \bigl(\mathrm{D}_p\widetilde{\sigma}(X) \bigr)}}\mright|_{p \cdot \widetilde{\sigma}_p}
 \nonumber
 \\
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\mathrm{pr}_2\mleft(\sigma^H_p\mright)} \mleft(\mleft(\mathrm{D}_{\sigma^H_p}\mathrm{pr}_2 \circ \mathrm{D}_p\sigma^H\mright)(X) \mright)}}\mright|_{H(p)}
+	+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\mathrm{pr}_2\mleft(\sigma^H_p\mright)} \mleft(\mleft(\mathrm{D}_{\sigma^H_p}\mathrm{pr}_2 \circ \mathrm{D}_p\sigma^H\mright)(X) \mright)}}\mright|_{H(p)}
 \nonumber
 \\
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mathrm{pr}_2^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma^H_p} \mleft(\mathrm{D}_p\sigma^H(X) \mright)}}\mright|_{H(p)}
+	+ \mleft.{\overline{\mleft( \mathrm{pr}_2^!\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma^H_p} \mleft(\mathrm{D}_p\sigma^H(X) \mright)}}\mright|_{H(p)}
 \nonumber
 \\
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
-	+ \mleft.{\oversortoftilde{\mleft( \mu_{\pi^*\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma^H_p} \mleft(\mathrm{D}_p\sigma^H(X) \mright)}}\mright|_{H(p)}
+	+ \mleft.{\overline{\mleft( \mu_{\pi^*\mathcal{G}}^{\mathrm{tot}}\mright)_{\sigma^H_p} \mleft(\mathrm{D}_p\sigma^H(X) \mright)}}\mright|_{H(p)}
 \nonumber
 \\
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
-	+ \mleft.{\oversortoftilde{ \mleft(\Delta^{\pi^*\mathcal{G}}\sigma^H\mright)_p(X) }}\mright|_{H(p)}
+	+ \mleft.{\overline{ \mleft(\Delta^{\pi^*\mathcal{G}}\sigma^H\mright)_p(X) }}\mright|_{H(p)}
 \nonumber
 \\
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
-	+ \mleft.{\oversortoftilde{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
+	+ \mleft.{\overline{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
 \ea
 for all $X \in \mathrm{T}_p\mathcal{P}$, where $\sigma$ is a (local) section of $\mathcal{G}$ so that $\sigma_x = \widetilde{\sigma}_p = \mathrm{pr}_2\mleft( \sigma^H_p \mright)$.
 
@@ -6858,7 +6966,7 @@ A_{H(p)}\bigl( \mathrm{D}_pH(X) \bigr)
 &=
 A_{H(p)}\mleft( 
 	\mathcal{r}_{\widetilde{\sigma}_p*}(X)
-	+ \mleft.{\oversortoftilde{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
+	+ \mleft.{\overline{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
 \mright)
 \\
 &=
@@ -6888,7 +6996,7 @@ which finishes the proof, where we used the trivial relation (alternatively reca
 %where we used the previously-mentioned isomorphism $H^*\pi^*\mathcal{g} \cong \pi^*\mathcal{g}$ to write
 %\bas
 %A_{H(p)}\mleft( 
-	%\mleft.{\oversortoftilde{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
+	%\mleft.{\overline{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
 %\mright)
 %&=
 %\mleft(  \mright)
@@ -6908,7 +7016,7 @@ s^!A.
 
 \begin{remark}\label{PullBackGaugeFieldRemark}
 \leavevmode\newline
-$A$ has values in $\pi^*\mathcal{g}$, and thus $A_s$ has values in $s^*\pi^*\mathcal{g} \cong (\pi \circ s)^*\mathcal{g} = \mathds{1}_U^*\mathcal{g} \cong \mleft.\mathcal{g}\mright|_U$.
+$A$ has values in $\pi^*\mathcal{g}$, and thus $A_s$ has values in $s^*\pi^*\mathcal{g} \cong (\pi \circ s)^*\mathcal{g} = \mathbb{1}_U^*\mathcal{g} \cong \mleft.\mathcal{g}\mright|_U$.
 \end{remark}
 
 Gauge transformations now naturally arise in a change of the gauge $s$. So, let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$. For two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$ there is then a unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ such that
@@ -6979,7 +7087,7 @@ with $\Phi_s$ being the orbit map through $s$.
 \end{propositions}
 
 \begin{remarks}{Other notation}{OtherNotationForLGBSectionsAsGaugeTrafo}
-Due to the fact that $s^*\pi^*\mathcal{G} \cong (\pi \circ s)^*\mathcal{G} = \mathds{1}_U^*\mathcal{G} \cong \mleft.\mathcal{G}\mright|_U$, and due to what we discussed in Subsection \ref{BasicNotations} about pullback sections, we could rewrite the first map to
+Due to the fact that $s^*\pi^*\mathcal{G} \cong (\pi \circ s)^*\mathcal{G} = \mathbb{1}_U^*\mathcal{G} \cong \mleft.\mathcal{G}\mright|_U$, and due to what we discussed in Subsection \ref{BasicNotations} about pullback sections, we could rewrite the first map to
 \bas
 C^\infty \mleft( \mleft.\mathcal{P}\mright|_U; \mleft.\mathcal{G}\mright|_U \mright)^{\mleft.\mathcal{G}\mright|_U} 
 &\to 
@@ -6999,7 +7107,7 @@ For $\sigma \in C^\infty \mleft( \mleft.\mathcal{P}\mright|_U; \mleft.\mathcal{G
 =
 \pi \circ s
 =
-\mathds{1}_U,
+\mathbb{1}_U,
 \eas
 where $\mathrm{pr}_1: \pi^*\mathcal{G} \to \mathcal{P}$ is the projection onto the first component.
 For the supposed inverse we have similarly that $\sigma^\tau$ is a section of $\Gamma(\pi^*\mleft.\mathcal{G}\mright|_U)$ by construction; then observe, using Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv},
@@ -7421,8 +7529,8 @@ By additionally using Thm.\ \ref{thm:DiffOfLGBAction} (especially the associated
 &=
 \mleft(\mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{gq}\mleft(
 	\mathrm{D}_gR_\sigma(X)
-		- \mleft.{\oversortoftilde{ \mleft.\mleft(\pi_{\mathcal{G}}^!\Delta \sigma\mright)\mright|_g (X)}}\mright|_{gq}
-		+ \mleft.{\oversortoftilde{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{q} (Y)}}\mright|_{gq}
+		- \mleft.{\overline{ \mleft.\mleft(\pi_{\mathcal{G}}^!\Delta \sigma\mright)\mright|_g (X)}}\mright|_{gq}
+		+ \mleft.{\overline{\mleft( \mu_{\mathcal{G}}^{\mathrm{tot}}\mright)_{q} (Y)}}\mright|_{gq}
 \mright)
 \\
 &=
@@ -7533,17 +7641,17 @@ Hence,
 %\\
 %&=
 %\mathcal{r}_{\tau_x*}\bigl( \mathrm{D}_x\sigma(X) \bigr)
-	%+ \mleft.{\oversortoftilde{
+	%+ \mleft.{\overline{
 		%\mleft. \mleft( \pi_{\mathcal{G}}^!\Delta\tau \mright) \mright|_{\sigma_x}\bigl( \mathrm{D}_x\sigma(X) \bigr)
 	%}}\mright|_{\sigma_x \cdot \tau_x}
 %\\
 %&=
 %\mathcal{r}_{\tau_x*}\bigl( \mathrm{D}_x\sigma(X) \bigr)
-	%+ \mleft.{\oversortoftilde{
+	%+ \mleft.{\overline{
 		%\mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
 	%}}\mright|_{\sigma_x \cdot \tau_x}
 %\eas
-%for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$, where we used that $\pi_{\mathcal{G}} \circ \sigma = \mathds{1}_M$. Viewing $\mathcal{G}$ as a principal $\mathcal{G}$-bundle we can apply Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj}. Together with recalling Def.\ \ref{def:FundVecs} we derive
+%for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$, where we used that $\pi_{\mathcal{G}} \circ \sigma = \mathbb{1}_M$. Viewing $\mathcal{G}$ as a principal $\mathcal{G}$-bundle we can apply Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj}. Together with recalling Def.\ \ref{def:FundVecs} we derive
 %\bas
 %\Delta(\sigma\tau)_x(X)
 %&=
@@ -7788,14 +7896,14 @@ and by rewriting in sense of Def.\ \ref{def:WeModTheRIghtPush} we achieve
 &=
 - \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft(
 	\mathrm{D}_{p \cdot \e^{t\nu_x}}r_{\e^{-t\nu}} \mleft(X_{p \cdot \e^{t\nu_x}}\mright)
-	- \mleft.{\oversortoftilde{
+	- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta \e^{-t\nu} \mright) \mright|_{p \cdot \e^{t\nu_x}}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)
 	}}\mright|_{p}
 \mright)
 \\
 &\hspace{1cm}
 - \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft(
-	\mleft.{\oversortoftilde{
+	\mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta \e^{-t\nu} \mright) \mright|_{p \cdot \e^{t\nu_x}}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)
 	}}\mright|_{p}
 \mright)
@@ -7807,7 +7915,7 @@ and by rewriting in sense of Def.\ \ref{def:WeModTheRIghtPush} we achieve
 \\
 &\hspace{1cm}
 - \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft(
-	\mleft.{\oversortoftilde{
+	\mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta \e^{-t\nu} \mright) \mright|_{p \cdot \e^{t\nu_x}}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)
 	}}\mright|_{p}
 \mright).
@@ -7827,13 +7935,13 @@ is a curve with values in $\mathcal{g}_x$, and therefore its fundamental vector 
 =
 \mathrm{D}_{e_x}\Phi_p \mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \eta(-t)\mright)
 =
-\mleft.\oversortoftilde{\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \eta(-t)}\mright|_p
+\mleft.\overline{\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \eta(-t)}\mright|_p
 \eas
 where we substituted $t \leftrightarrow -t$ after the first equality sign. In total we achieve
 \bas
 A_p\mleft( \mleft[ X, \widetilde{\nu} \mright]_p \mright)
 &=
-A_p\mleft( \mleft.\oversortoftilde{\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \eta(-t)}\mright|_p \mright)
+A_p\mleft( \mleft.\overline{\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \eta(-t)}\mright|_p \mright)
 =
 \mleft( 
 	p,
@@ -8019,11 +8127,11 @@ where $\nu$ is any section of $\mathcal{g}$ and $\sigma \in \Gamma(\mathcal{G})$
 \bas
 \gamma(t)^!\pi_{\mathcal{G}}^!\zeta
 &=
-{\underbrace{\bigl( \pi_{\mathcal{G}} \circ \gamma(t) \bigr)^!}_{\equiv \mathds{1}_M^!}}\zeta
+{\underbrace{\bigl( \pi_{\mathcal{G}} \circ \gamma(t) \bigr)^!}_{\equiv \mathbb{1}_M^!}}\zeta
 =
 \zeta
 \eas
-and under the identification $\gamma^*\pi_{\mathcal{G}}^*\mathcal{g} \cong (\pi_{\mathcal{G}} \circ \gamma)^*\mathcal{g} = \mathds{1}_M^*\mathcal{g} \cong \mathcal{g}$ we get similarly
+and under the identification $\gamma^*\pi_{\mathcal{G}}^*\mathcal{g} \cong (\pi_{\mathcal{G}} \circ \gamma)^*\mathcal{g} = \mathbb{1}_M^*\mathcal{g} \cong \mathcal{g}$ we get similarly
 \bas
 \mleft( \gamma(t)^!\mleft( g, \mathrm{Ad}_{g^{-1}}\circ \zeta_{\pi_{\mathcal{G}}(g)} \circ \mathrm{D}_g\pi_{\mathcal{G}} \mright) \mright)_x
 &\cong
@@ -8550,7 +8658,7 @@ for all $p \in \mathcal{P}_x$ ($x \in M$) and $X, Y \in \mathrm{T}_p\mathcal{P}$
 %\mleft(\mleft(r_\sigma^*\mathrm{d}^{\pi^*\nabla^{\mathrm{YM}}} A\mright) \circ \mleft( r_\sigma^*\pi_h, r_\sigma^*\pi_h \mright)\mright)
 %\mleft(
 %\mathrm{D}_pr_\sigma\mleft( X \mright)
-	%- \mleft.{\oversortoftilde{
+	%- \mleft.{\overline{
 		%\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	%}}\mright|_{p \cdot \sigma_{x}}, 
 	%\mathcal{r}_{\sigma*}Y
@@ -8562,7 +8670,7 @@ We also rewrite
 \mathcal{r}_{\sigma*}(X)
 &=
 \mathrm{D}r_{\sigma}(X)
-	- r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) (X)}}\mright)
+	- r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) (X)}}\mright)
 \in
 \Gamma\mleft( r_\sigma^* \mathrm{T}\mathcal{P} \mright) \cong \mathfrak{X}(\mathcal{P}).
 \eas
@@ -8615,19 +8723,19 @@ r_\sigma^*\biggl(
 \\
 &\hspace{2.5cm}
 	+ A\mleft(
-	\mleft[\mathrm{D}r_\sigma\mleft(X^h\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
+	\mleft[\mathrm{D}r_\sigma\mleft(X^h\mright), r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
 	\mright)
 \nonumber
 \\
 &\hspace{2.5cm}
 	+ A\mleft(
-	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright) }}\mright), \mathrm{D}r_\sigma\mleft(Y^h\mright) \mright]
+	\mleft[r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright) }}\mright), \mathrm{D}r_\sigma\mleft(Y^h\mright) \mright]
 	\mright)
 \nonumber
 \\
 &\hspace{2.5cm}
 	- A\mleft(
-	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
+	\mleft[r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
 	\mright)
 \Biggr).
 \ea
@@ -8647,7 +8755,7 @@ making use of that $r_\sigma$ is an isomorphism, and thus we get for the first s
 \\
 &\hspace{1cm}=
 -\mleft( r_\sigma^*A \mright)\mleft( \mathcal{r}_{\sigma*} \mleft( \mleft[ X^h, Y^h\mright] \mright)\mright)
-	- \mleft( r_\sigma^* A \mright) \mleft( r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)}}\mright) \mright)
+	- \mleft( r_\sigma^* A \mright) \mleft( r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)}}\mright) \mright)
 \\
 &\hspace{1cm}=
 -\mleft( \mathcal{r}_\sigma^!A \mright)\mleft( \mleft[ X^h, Y^h\mright] \mright)
@@ -8671,10 +8779,10 @@ We know by Remark \ref{rem:FundVecsAreLABActions} that the map to fundamental ve
 %\eas
 %for all $\mu, \nu \in \mathcal{g}_x$. This naturally extends to fundamental vector fields over $\mathcal{P}$, so that
 \bas
-\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
+\mleft[r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
 &=
 r_\sigma^*\mleft(
-{\oversortoftilde{
+{\overline{
 	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]_{\mathcal{\pi^*\mathcal{g}}}
 }}
 \mright),
@@ -8682,7 +8790,7 @@ r_\sigma^*\mleft(
 and therefore we can derive for the fourth term in Eq.\ \eqref{TransformedClassicStrengthTerm} that
 \bas
 \mleft( r_\sigma^*A \mright)\mleft(
-	\mleft[r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
+	\mleft[r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
 	\mright)
 &=
 r_\sigma^*\mleft(
@@ -8692,17 +8800,17 @@ r_\sigma^*\mleft(
 For the second and third summands in Eq.\ \eqref{TransformedClassicStrengthTerm} we want to use Lemma \ref{lem:BracketVertHor} and our result of the fourth summand to show
 \bas
 &\mleft( r_\sigma^*A \mright)\mleft(
-	\mleft[\mathrm{D}r_\sigma\mleft(X^h\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
+	\mleft[\mathrm{D}r_\sigma\mleft(X^h\mright), r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
 	\mright)
 \\ 
 &\hspace{0.5cm}
 =
 \mleft( r_\sigma^*A \mright)\mleft(
-	\mleft[\mathcal{r}_{\sigma*}\mleft(X^h\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
+	\mleft[\mathcal{r}_{\sigma*}\mleft(X^h\mright), r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
 	\mright)
 \\&\hspace{1.5cm}
 	+ \mleft( r_\sigma^*A \mright)\mleft(\mleft[
-	r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright) }}\mright), r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
+	r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright) }}\mright), r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
 	\mright)
 \\ 
 &\hspace{0.5cm}
@@ -8729,7 +8837,7 @@ and
 \mathrm{D}\pi\mleft( \mathcal{r}_{\sigma*}\mleft(X^h\mright) \mright)
 &=
 \mathrm{D}\pi\mleft( \mathrm{D}r_{\sigma}\mleft(X^h\mright)
-	- r_{\sigma}^*\mleft({\oversortoftilde{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright)}}\mright) \mright)
+	- r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright)}}\mright) \mright)
 =
 \mathrm{D}{\underbrace{\mleft( \pi \circ r_\sigma \mright)}_{= \pi}}\mleft(X^h\mright)
 =
@@ -9041,7 +9149,7 @@ which is the field strength of $H^!A$. Now recall Eq.\ \eqref{DiffOfPrincAutom},
 \mathrm{D}_p H(X)
 &=
 \mathcal{r}_{\widetilde{\sigma}_p*}(X)
-	+ \mleft.{\oversortoftilde{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
+	+ \mleft.{\overline{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
 \eas
 for all $X \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$), where $\widetilde{\sigma}_p \coloneqq \mathrm{pr}_2\mleft( \sigma^H_p \mright)$. Thus, by Prop.\ \ref{prop:NewFieldStrengthWithCoolProps},
 \bas
@@ -9766,7 +9874,7 @@ X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mri
 \ea
 It is now clear that $S(\xi)$ is independent of the choice of $\alpha$ and just depends on $[\alpha]$. Furthermore, due to what we have shown for $\beta$, it is also clear that $S$ is a base-preserving map either from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ or vice versa. 
 %Let $[\gamma] \in \mathrm{TT}M$, then by the same calculation as for the properties of $\beta$ we have $S([\tau]) = [\gamma]$, where $\tau(t, s) \coloneqq \gamma(s, t)$; thence, surjectivity of $S$ follows. Similarly, again by the properties of $\beta(t, s)$ above, if we have $S([\alpha]) = S\mleft( \mleft[ \alpha^\prime \mright] \mright)$, then we clearly get $[\alpha] = [\alpha^\prime]$, and hence injectivity. Alternatively, 
-Bijectivity follows by $S\circ S = \mathds{1}_{\mathrm{TT}M}$.
+Bijectivity follows by $S\circ S = \mathbb{1}_{\mathrm{TT}M}$.
 
 It is only left to show that we have linearity for $S$ as a map from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa. For this we use the derived coordinate expressions. Let $\eta \in \mathrm{TT}M$ be defined as before with associated area function $\gamma$ such that $\eta = [\gamma]$. Then one can derive by using what we have shown in the discussion about $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ as vector bundle that
 \ba\label{LinearStructureOfProlongInCoordinates}
@@ -9985,9 +10093,9 @@ Let $X \in \mathfrak{X}(M)$, then its total derivative is a map $\mathrm{D}X: \m
 \bas
 \mathrm{D}\pi_{\mathrm{T}M} \circ \mathrm{D}X
 &=
-\mathrm{D}\underbrace{\mleft( \pi_{\mathrm{T}M} \circ X \mright)}_{= \mathds{1}_M}
+\mathrm{D}\underbrace{\mleft( \pi_{\mathrm{T}M} \circ X \mright)}_{= \mathbb{1}_M}
 =
-\mathds{1}_{\mathrm{T}M},
+\mathbb{1}_{\mathrm{T}M},
 \eas
 so that $\mathrm{D}X$ is a section of $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$. Due to the fact that $S = S_M$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ (and vice versa), we have a vector field $X_T \in \mathfrak{X}(\mathrm{T}M)$ given by
 \bas

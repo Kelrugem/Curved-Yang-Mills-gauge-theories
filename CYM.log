@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  8 MAY 2026 15:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  8 MAY 2026 18:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,153 +6,119 @@ entering extended mode
 (CYM.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsart.cls
+Document Class: amsart 2020/05/29 v2.20.6
+\linespacing=\dimen148
+\normalparindent=\dimen149
+\normaltopskip=\skip49
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip50
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrartcl.cl
-s
-Document Class: scrartcl 2026/02/02 v3.49.2 KOMA-Script document class (article
-)
+For additional information on amsmath, use the `?' option.
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.st
-y
-Package: scrkbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-dependent
- basics and keyval usage)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
-Package: scrbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-independen
-t basics and keyval usage)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
-y
-Package: scrlfile 2026/02/02 v3.49.2 KOMA-Script package (file load hooks)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
-ok.sty
-Package: scrlfile-hook 2026/02/02 v3.49.2 KOMA-Script package (using LaTeX hook
-s)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
-Package: scrlogo 2026/02/02 v3.49.2 KOMA-Script package (logo)
-))) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
-)
-Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
-Already applied: [0000/00/00] Usage of raw or classic option list on input line
- 370.
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen150
 ))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.st
-y
-Package: tocbasic 2026/02/02 v3.49.2 KOMA-Script package (handling toc-files)
-\scr@dte@tocline@numberwidth=\skip49
-\scr@dte@tocline@numbox=\box53
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen151
 )
-Package tocbasic Info: omitting babel extension for `toc'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 141.
-Class scrartcl Info: You've used standard option `oneside'.
-(scrartcl)           This is correct!
-(scrartcl)           Internally I'm using `twoside=false'.
-(scrartcl)           If you'd like to set the option with \KOMAoptions,
-(scrartcl)           you'd have to use `twoside=false' there
-(scrartcl)           instead of `oneside', too.
-Class scrartcl Info: File `scrsize11pt.clo' used instead of
-(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 248
-9.
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count275
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count276
+\leftroot@=\count277
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count278
+\DOTSCASE@=\count279
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen152
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count280
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count281
+\dotsspace@=\muskip17
+\c@parentequation=\count282
+\dspbrk@lvl=\count283
+\tag@help=\toks18
+\row@=\count284
+\column@=\count285
+\maxfields@=\count286
+\andhelp@=\toks19
+\eqnshift@=\dimen153
+\alignsep@=\dimen154
+\tagshift@=\dimen155
+\tagwidth@=\dimen156
+\totwidth@=\dimen157
+\lineht@=\dimen158
+\@envbody=\toks20
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 397
+.
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize11pt
-.clo
-File: scrsize11pt.clo 2026/02/02 v3.49.2 KOMA-Script font size class option (11
-pt)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.st
-y
-Package: typearea 2026/02/02 v3.49.2 KOMA-Script package (type area)
-\ta@bcor=\skip50
-\ta@div=\count275
-Package typearea Info: You've used standard option `a4paper'.
-(typearea)             This is correct!
-(typearea)             Internally I'm using `paper=a4'.
-(typearea)             If you'd like to set the option with \KOMAoptions,
-(typearea)             you'd have to use `paper=a4' there
-(typearea)             instead of `a4paper', too.
-Package typearea Info: You've used standard option `oneside'.
-(typearea)             This is correct!
-(typearea)             Internally I'm using `twoside=false'.
-(typearea)             If you'd like to set the option with \KOMAoptions,
-(typearea)             you'd have to use `twoside=false' there
-(typearea)             instead of `oneside', too.
-\ta@hblk=\skip51
-\ta@vblk=\skip52
-\ta@temp=\skip53
-\footheight=\skip54
-Package typearea Info: These are the values describing the layout:
-(typearea)             DIV  = 10
-(typearea)             BCOR = 0.0pt
-(typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 418.25555pt
-(typearea)              DIV departure   = -6%
-(typearea)              \evensidemargin = 17.3562pt
-(typearea)              \oddsidemargin  = 17.3562pt
-(typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 595.80026pt
-(typearea)              \topmargin      = -25.16531pt
-(typearea)              \headheight     = 17.0pt
-(typearea)              \headsep        = 20.40001pt
-(typearea)              \topskip        = 11.0pt
-(typearea)              \footskip       = 47.6pt
-(typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1810.
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-\c@part=\count276
-\c@section=\count277
-\c@subsection=\count278
-\c@subsubsection=\count279
-\c@paragraph=\count280
-\c@subparagraph=\count281
-\scr@dte@section@maxnumwidth=\skip55
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\section on input line 5015.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\section on input line 5015.
-\scr@dte@part@maxnumwidth=\skip56
-Class scrartcl Info: using compatibility default `afterindent=false'
-(scrartcl)           for `\part on input line 5023.
-\scr@dte@subsection@maxnumwidth=\skip57
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsection on input line 5033.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsection on input line 5033.
-\scr@dte@subsubsection@maxnumwidth=\skip58
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsubsection on input line 5043.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsubsection on input line 5043.
-\scr@dte@paragraph@maxnumwidth=\skip59
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\paragraph on input line 5054.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\paragraph on input line 5054.
-\scr@dte@subparagraph@maxnumwidth=\skip60
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subparagraph on input line 5064.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subparagraph on input line 5064.
-\abovecaptionskip=\skip61
-\belowcaptionskip=\skip62
-\c@pti@nb@sid@b@x=\box54
-Package tocbasic Info: omitting babel extension for `lof'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 6287.
-\scr@dte@figure@maxnumwidth=\skip63
-\c@figure=\count282
-Package tocbasic Info: omitting babel extension for `lot'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 6299.
-\scr@dte@table@maxnumwidth=\skip64
-\c@table=\count283
-Class scrartcl Info: Redefining `\numberline' on input line 6469.
-\bibindent=\dimen148
-) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk\CJKutf8.sty
+\copyins=\insert252
+\abstractbox=\box55
+\listisep=\skip53
+\c@part=\count287
+\c@section=\count288
+\c@subsection=\count289
+\c@subsubsection=\count290
+\c@paragraph=\count291
+\c@subparagraph=\count292
+\c@figure=\count293
+\c@table=\count294
+\abovecaptionskip=\skip54
+\belowcaptionskip=\skip55
+\captionindent=\dimen159
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
+\thm@preskip=\skip56
+\thm@postskip=\skip57
+\thm@headsep=\skip58
+\dth@everypar=\toks27
+)
+LaTeX Info: Redefining \markboth on input line 3.
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk\CJKutf8.sty
 Package: CJKutf8 2021/10/16 4.8.5
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
@@ -163,8 +129,8 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
-\inpenc@prehook=\toks18
-\inpenc@posthook=\toks19
+\inpenc@prehook=\toks28
+\inpenc@posthook=\toks29
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk\CJK.sty
 Package: CJK 2021/10/16 4.8.5
@@ -239,67 +205,38 @@ Now handling font encoding C41 ...
 Now handling font encoding C62 ...
 ... no UTF-8 mapping file for font encoding C62
 )
-\CJK@indent=\box55
+\CJK@indent=\box56
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 ))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2026/01/26 v26.2 The multilingual framework for LuaLaTeX, pdfLaT
-eX and XeLaTeX
-\babel@savecnt=\count284
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2078.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2080.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2082.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2083.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2084.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2086.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2111.
-\U@D=\dimen149
-\l@unhyphenated=\language79
+Package xcolor Info: Driver file: pdftex.def on input line 274.
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
-\bbl@readstream=\read2
-\bbl@dirlevel=\count285
-Package babel Info: Configuration files are deprecated, as
-(babel)             they can break document portability.
-(babel)             Reported on input line 4206.
-
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 )
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
--english.tex)
-Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 4330.
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.l
-df
-Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: Hyphen rules for 'canadian' set to \l@english
-(babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 108.
-))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
-
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks30
+)
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
@@ -311,168 +248,430 @@ fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen150
-\Gin@req@width=\dimen151
 )
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\dsfont.sty
-Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
-) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks20
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
-Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks21
-\thm@bodyfont=\toks22
-\thm@headfont=\toks23
-\thm@notefont=\toks24
-\thm@headpunct=\toks25
-\thm@preskip=\skip65
-\thm@postskip=\skip66
-\thm@headsep=\skip67
-\dth@everypar=\toks26
+\Gin@req@height=\dimen160
+\Gin@req@width=\dimen161
 )
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2026-01-19 L3 programming layer (loader) 
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count286
-))
-Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
-e.sty
-Package: xparse 2025-10-09 L3 Experimental document command parser
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count287
-))
-Class scrartcl Info: amsthm's \deferred@thm@head patched.
+\Gm@cnth=\count295
+\Gm@cntv=\count296
+\c@Gm@tempcnt=\count297
+\Gm@bindingoffset=\dimen162
+\Gm@wd@mp=\dimen163
+\Gm@odd@mp=\dimen164
+\Gm@even@mp=\dimen165
+\Gm@layoutwidth=\dimen166
+\Gm@layoutheight=\dimen167
+\Gm@layouthoffset=\dimen168
+\Gm@layoutvoffset=\dimen169
+\Gm@dimlist=\toks31
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count288
-\float@exts=\toks27
-\float@box=\box56
-\@float@everytoks=\toks28
-\@floatcapt=\box57
+\c@float@type=\count298
+\float@exts=\toks32
+\float@box=\box57
+\@float@everytoks=\toks33
+\@floatcapt=\box58
 )
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2025/07/09 v2.17z AMS math features
-\@mathmargin=\skip68
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics\epsfig.sty
+Package: epsfig 2024/01/14 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen170
+\epsfysize=\dimen171
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
+Package: rotating 2025/01/14 v2.16e rotated objects in LaTeX
 
-For additional information on amsmath, use the `?' option.
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
-Package: amstext 2024/11/17 v2.01 AMS text
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count299
+\rotFPtop=\skip59
+\rotFPbot=\skip60
+\rot@float@box=\box59
+\rot@mess@toks=\toks34
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/bbm\bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
+\UL@box=\box60
+\UL@hyphenbox=\box61
+\UL@skip=\skip61
+\UL@hook=\toks35
+\UL@height=\dimen172
+\UL@pe=\count300
+\UL@pixel=\dimen173
+\ULC@box=\box62
+Package: ulem 2019/11/18
+\ULdepth=\dimen174
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/mleftright\mleftright
+.sty
+Package: mleftright 2019/12/03 v1.2 Math left/right delim. as open/close (HO)
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks29
-\ex@=\dimen152
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/subdepth\subdepth.st
+y
+Package: subdepth 2007/09/02 v0.1 Unify subscript depths
+) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/base\latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
+\pgfutil@everybye=\toks36
+\pgfutil@tempdima=\dimen175
+\pgfutil@tempdimb=\dimen176
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
+\pgfutil@abb=\box63
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen153
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
-Package: amsopn 2022/04/08 v2.04 operator names
-)
-\inf@bad=\count289
-LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count290
-\leftroot@=\count291
-LaTeX Info: Redefining \overline on input line 398.
-LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count292
-\DOTSCASE@=\count293
-LaTeX Info: Redefining \ldots on input line 495.
-LaTeX Info: Redefining \dots on input line 498.
-LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box58
-\strutbox@=\box59
-LaTeX Info: Redefining \big on input line 721.
-LaTeX Info: Redefining \Big on input line 722.
-LaTeX Info: Redefining \bigg on input line 723.
-LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen154
-LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count294
-LaTeX Info: Redefining \bmod on input line 904.
-LaTeX Info: Redefining \pmod on input line 909.
-LaTeX Info: Redefining \smash on input line 939.
-LaTeX Info: Redefining \relbar on input line 969.
-LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count295
-\dotsspace@=\muskip17
-\c@parentequation=\count296
-\dspbrk@lvl=\count297
-\tag@help=\toks30
-\row@=\count298
-\column@=\count299
-\maxfields@=\count300
-\andhelp@=\toks31
-\eqnshift@=\dimen155
-\alignsep@=\dimen156
-\tagshift@=\dimen157
-\tagwidth@=\dimen158
-\totwidth@=\dimen159
-\lineht@=\dimen160
-\@envbody=\toks32
-\multlinegap=\skip69
-\multlinetaggap=\skip70
-\mathdisplay@stack=\toks33
-LaTeX Info: Redefining \[ on input line 2950.
-LaTeX Info: Redefining \] on input line 2951.
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen161
-\lightrulewidth=\dimen162
-\cmidrulewidth=\dimen163
-\belowrulesep=\dimen164
-\belowbottomsep=\dimen165
-\aboverulesep=\dimen166
-\abovetopsep=\dimen167
-\cmidrulesep=\dimen168
-\cmidrulekern=\dimen169
-\defaultaddspace=\dimen170
-\@cmidla=\count301
-\@cmidlb=\count302
-\@aboverulesep=\dimen171
-\@belowrulesep=\dimen172
-\@thisruleclass=\count303
-\@lastruleclass=\count304
-\@thisrulewidth=\dimen173
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/fancybox\fancybox.sty
-Package: fancybox 2010/05/15 1.4
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
 
-Style option: `fancybox' v1.4 <2010/05/15> (tvz)
-\@fancybox=\box60
-\shadowsize=\dimen174
-\@Sbox=\box61
-\do@VerbBox=\toks34
-\the@fancyput=\toks35
-\this@fancyput=\toks36
-\EndVerbatimTokens=\toks37
-\Verbatim@Outfile=\write3
-\Verbatim@Infile=\read3
-) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks37
+\pgfkeys@temptoks=\toks38
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks39
+))
+\pgf@x=\dimen177
+\pgf@y=\dimen178
+\pgf@xa=\dimen179
+\pgf@ya=\dimen180
+\pgf@xb=\dimen181
+\pgf@yb=\dimen182
+\pgf@xc=\dimen183
+\pgf@yc=\dimen184
+\pgf@xd=\dimen185
+\pgf@yd=\dimen186
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count301
+\c@pgf@countb=\count302
+\c@pgf@countc=\count303
+\c@pgf@countd=\count304
+\t@pgf@toka=\toks40
+\t@pgf@tokb=\toks41
+\t@pgf@tokc=\toks42
+\pgf@sys@id@count=\count305
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count306
+\pgfsyssoftpath@bigbuffer@items=\count307
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen187
+\pgfmath@count=\count308
+\pgfmath@box=\box64
+\pgfmath@toks=\toks43
+\pgfmath@stack@operand=\toks44
+\pgfmath@stack@operation=\toks45
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count309
+))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen188
+\pgf@picmaxx=\dimen189
+\pgf@picminy=\dimen190
+\pgf@picmaxy=\dimen191
+\pgf@pathminx=\dimen192
+\pgf@pathmaxx=\dimen193
+\pgf@pathminy=\dimen194
+\pgf@pathmaxy=\dimen195
+\pgf@xx=\dimen196
+\pgf@xy=\dimen197
+\pgf@yx=\dimen198
+\pgf@yy=\dimen199
+\pgf@zx=\dimen256
+\pgf@zy=\dimen257
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen258
+\pgf@path@lasty=\dimen259
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen260
+\pgf@shorten@start@additional=\dimen261
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box65
+\pgf@hbox=\box66
+\pgf@layerbox@main=\box67
+\pgf@picture@serial@count=\count310
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen262
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen263
+\pgf@pt@y=\dimen264
+\pgf@pt@temp=\dimen265
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen266
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen267
+\pgf@sys@shading@range@num=\count311
+\pgf@shadingcount=\count312
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box68
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box69
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen268
+\pgf@nodesepend=\dimen269
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen270
+\pgffor@skip=\dimen271
+\pgffor@stack=\toks46
+\pgffor@toks=\toks47
+))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count313
+\pgfplotmarksize=\dimen272
+)
+\tikz@lastx=\dimen273
+\tikz@lasty=\dimen274
+\tikz@lastxsaved=\dimen275
+\tikz@lastysaved=\dimen276
+\tikz@lastmovetox=\dimen277
+\tikz@lastmovetoy=\dimen278
+\tikzleveldistance=\dimen279
+\tikzsiblingdistance=\dimen280
+\tikz@figbox=\box70
+\tikz@figbox@bg=\box71
+\tikz@tempbox=\box72
+\tikz@tempbox@bg=\box73
+\tikztreelevel=\count314
+\tikznumberofchildren=\count315
+\tikznumberofcurrentchild=\count316
+\tikz@fig@count=\count317
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count318
+\pgfmatrixcurrentcolumn=\count319
+\pgf@matrix@numberofcolumns=\count320
+)
+\tikz@expandcount=\count321
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikzlibrarycd.c
+ode.tex
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen281
+\pgfarrowlength=\dimen282
+\pgfarrowwidth=\dimen283
+\pgfarrowlinewidth=\dimen284
+))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.code.tex
+File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\arrowsize=\dimen285
+))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -507,9 +706,237 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/fixcmex\fixcmex.sty
-Package: fixcmex 2015/11/10 v1.0 Scalable math extensions font (Enrico Gregorio
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count322
 )
+\MT@toks=\toks48
+\MT@tempbox=\box74
+\MT@count=\count323
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
+\MT@prot@toks=\toks49
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen286
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count324
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
+tex.def
+File: microtype-pdftex.def 2025/07/09 v3.2b Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip62
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip63
+\enit@outerparindent=\dimen287
+\enit@toks=\toks50
+\enit@inbox=\box75
+\enit@count@id=\count325
+\enitdp@description=\count326
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy.sty
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy.tex
+Bootstrap'ing: catcodes, docmode,
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyrecat.tex)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyidioms.tex)
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen288
+\Y@c=\dimen289
+\U@c=\dimen290
+\D@c=\dimen291
+\L@c=\dimen292
+\R@c=\dimen293
+\Edge@c=\toks51
+\X@p=\dimen294
+\Y@p=\dimen295
+\U@p=\dimen296
+\D@p=\dimen297
+\L@p=\dimen298
+\R@p=\dimen299
+\Edge@p=\toks52
+\X@origin=\dimen300
+\Y@origin=\dimen301
+\X@xbase=\dimen302
+\Y@xbase=\dimen303
+\X@ybase=\dimen304
+\Y@ybase=\dimen305
+\X@min=\dimen306
+\Y@min=\dimen307
+\X@max=\dimen308
+\Y@max=\dimen309
+\lastobjectbox@=\box76
+\zerodotbox@=\box77
+\almostz@=\dimen310
+ direction,
+\d@X=\dimen311
+\d@Y=\dimen312
+\K@=\count327
+\KK@=\count328
+\Direction=\count329
+\K@dXdY=\dimen313
+\K@dYdX=\dimen314
+\xyread@=\read3
+\xywrite@=\write4
+\csp@=\count330
+\quotPTK@=\dimen315
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks53
+\connectobjectbox@@=\box78
+ objects,
+\styletoks@=\toks54
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+Package: xy 2013/10/06 Xy-pic version 3.8.9
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyall.tex
+ Xy-pic option: All features v.3.8
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycurve.tex
+ Xy-pic option: Curve and Spline extension v.3.12 curve,
+\crv@cnt@=\count331
+\crvpts@=\toks55
+\splinebox@=\box79
+\splineval@=\dimen316
+\splinedepth@=\dimen317
+\splinetol@=\dimen318
+\splinelength@=\dimen319
+ circles,
+\L@=\dimen320
+ loaded)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyframe.tex
+ Xy-pic option: Frame and Bracket extension v.3.14 loaded)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycmtip.tex
+ Xy-pic option: Computer Modern tip extension v.3.7
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xytips.tex
+ Xy-pic option: More Tips extension v.3.11 loaded) loaded)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyline.tex
+ Xy-pic option: Line styles extension v.3.10
+\xylinethick@=\dimen321
+ loaded)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyrotate.tex
+ Xy-pic option: Rotate and Scale extension v.3.8 loaded)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycolor.tex
+ Xy-pic option: Colour extension v.3.11 loaded)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xymatrix.tex
+ Xy-pic option: Matrix feature v.3.14
+\Row=\count332
+\Col=\count333
+\queue@=\toks56
+\queue@@=\toks57
+\qcount@=\count334
+\qcount@@=\count335
+\matrixsize@=\count336
+ loaded)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyarrow.tex
+ Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xygraph.tex
+ Xy-pic option: Graph feature v.3.11 loaded) loaded)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyknot.tex
+ Xy-pic option: Knots and Links feature v.3.9 knots and links, loaded)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf.tex
+ Xy-pic option: PDF driver v.1.7 Xy-pic pdf driver: `color' extension support
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-co.tex
+loaded) Xy-pic pdf driver: `curve' extension support
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-cu.tex
+loaded) Xy-pic pdf driver: `frame' extension support
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-fr.tex
+loaded) Xy-pic pdf driver: `line' extension support
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-li.tex
+loaded) Xy-pic pdf driver: `rotate' extension support
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-ro.tex
+loaded) loaded))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyarc.tex
+ Xy-pic option: Circle, Ellipse, Arc feature v.3.8 circles, ellipses,
+elliptical arcs, loaded)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries/graphs\tikzlibrarygraphs.code.tex
+File: tikzlibrarygraphs.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\tikz@lib@auto@number=\count337
+\tikz@qnode@count=\count338
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+decorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen322
+\pgfdecoratedremainingdistance=\dimen323
+\pgfdecoratedinputsegmentcompleteddistance=\dimen324
+\pgfdecoratedinputsegmentremainingdistance=\dimen325
+\pgf@decorate@distancetomove=\dimen326
+\pgf@decorate@repeatstate=\count339
+\pgfdecorationsegmentamplitude=\dimen327
+\pgfdecorationsegmentlength=\dimen328
+)
+\tikz@lib@dec@box=\box80
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.markings.code.tex
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.markings.code.tex))
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count340
+\calc@Bcount=\count341
+\calc@Adimen=\dimen329
+\calc@Bdimen=\dimen330
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count342
+\calc@Cskip=\skip66
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count343
+\l_MT_multwidth_dim=\dimen331
+\origjot=\skip67
+\l_MT_shortvdotswithinadjustabove_dim=\dimen332
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen333
+\l_MT_above_intertext_sep=\dimen334
+\l_MT_below_intertext_sep=\dimen335
+\l_MT_above_shortintertext_sep=\dimen336
+\l_MT_below_shortintertext_sep=\dimen337
+\xmathstrut@box=\box81
+\xmathstrut@dim=\dimen338
+) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyarc.tex
+ Xy-pic option: Circle, Ellipse, Arc feature v.3.8 not reloaded)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count344
+\c@@ppsavesec=\count345
+\c@@ppsaveapp=\count346
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
@@ -525,17 +952,9 @@ Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
 .sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
-ty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -557,16 +976,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count305
+\c@section@level=\count347
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
 ty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen175
-\Hy@linkcounter=\count306
-\Hy@pagecounter=\count307
+\@linkdim=\dimen339
+\Hy@linkcounter=\count348
+\Hy@pagecounter=\count349
  (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -574,13 +993,12 @@ Now handling font encoding PD1 ...
 ) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count308
+\Hy@SavedSpaceFactor=\count350
  (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4072.
 Package hyperref Info: Hyper figures OFF on input line 4201.
 Package hyperref Info: Link nesting OFF on input line 4206.
 Package hyperref Info: Hyper index ON on input line 4209.
@@ -588,14 +1006,14 @@ Package hyperref Info: Plain pages OFF on input line 4216.
 Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
-\c@Hy@tempcnt=\count309
+\c@Hy@tempcnt=\count351
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4807.
-\XeTeXLinkMargin=\dimen176
+\XeTeXLinkMargin=\dimen340
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -605,26 +1023,26 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count310
-\Field@Width=\dimen177
-\Fld@charsize=\dimen178
+\Fld@menulength=\count352
+\Field@Width=\dimen341
+\Fld@charsize=\dimen342
 Package hyperref Info: Hyper figures OFF on input line 6084.
 Package hyperref Info: Link nesting OFF on input line 6089.
 Package hyperref Info: Hyper index ON on input line 6092.
 Package hyperref Info: backreferencing OFF on input line 6099.
-Package hyperref Info: Link coloring ON on input line 6102.
+Package hyperref Info: Link coloring OFF on input line 6104.
 Package hyperref Info: Link coloring with OCG OFF on input line 6109.
 Package hyperref Info: PDF/A mode OFF on input line 6114.
-\Hy@abspage=\count311
-\c@Item=\count312
-\c@Hfootnote=\count313
+\Hy@abspage=\count353
+\c@Item=\count354
+\c@Hfootnote=\count355
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
-\Fld@listcount=\count314
-\c@bookmark@seq@number=\count315
+\Fld@listcount=\count356
+\c@bookmark@seq@number=\count357
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -637,462 +1055,19 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip71
+\Hy@SectionHShift=\skip68
 )
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/esint\esint.sty
-Package: esint 
-\symlargesymbolsA=\mathgroup6
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer-sc
-rpage.sty
-Package: scrlayer-scrpage 2026/02/02 v3.49.2 KOMA-Script package (end user inte
-rface for scrlayer)
+Package hyperref Info: Option `hypertexnames' set `false' on input line 160.
+Package hyperref Info: Option `colorlinks' set `true' on input line 160.
+Package hyperref Info: Option `breaklinks' set `true' on input line 160.
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer.st
-y
-Package: scrlayer 2026/02/02 v3.49.2 KOMA-Script package (defining layers and p
-age styles)
-Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 217
-9.
-)
-Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
-(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1106.
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
-Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
-Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count316
-\calc@Bcount=\count317
-\calc@Adimen=\dimen179
-\calc@Bdimen=\dimen180
-\calc@Askip=\skip72
-\calc@Bskip=\skip73
-LaTeX Info: Redefining \setlength on input line 86.
-LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count318
-\calc@Cskip=\skip74
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
-Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
-\ESO@tempdima=\dimen181
-\ESO@tempdimb=\dimen182
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
-Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 274.
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
-Package xcolor Info: Model `RGB' extended on input line 1365.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-))
-\AM@pagewidth=\dimen183
-\AM@pageheight=\dimen184
-\AM@fboxrule=\dimen185
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
-File: pppdftex.def 2025/07/23 v0.6g Pdfpages driver for pdfTeX (AM)
-)
-\pdfpages@includegraphics@status=\count319
-\AM@pagebox=\box62
-\AM@global@opts=\toks38
-\AM@pagecnt=\count320
-\AM@toc@title=\toks39
-\AM@lof@heading=\toks40
-\c@AM@survey=\count321
-\AM@templatesizebox=\box63
-) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
-Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen186
-\ar@mcellbox=\box64
-\extrarowheight=\dimen187
-\NC@list=\toks41
-\extratabsurround=\skip75
-\backup@length=\skip76
-\ar@cellbox=\box65
-)
-\TX@col@width=\dimen188
-\TX@old@table=\dimen189
-\TX@old@col=\dimen190
-\TX@target=\dimen191
-\TX@delta=\dimen192
-\TX@cols=\count322
-\TX@ftn=\toks42
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
-Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen193
-\c@nlinenum=\count323
-\TeXr@lab=\toks43
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
-Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
-\everycr=\toks44
-\minrowclearance=\skip77
-\rownum=\count324
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
-Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
-Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
-)
-\g_MT_multlinerow_int=\count325
-\l_MT_multwidth_dim=\dimen194
-\origjot=\skip78
-\l_MT_shortvdotswithinadjustabove_dim=\dimen195
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen196
-\l_MT_above_intertext_sep=\dimen197
-\l_MT_below_intertext_sep=\dimen198
-\l_MT_above_shortintertext_sep=\dimen199
-\l_MT_below_shortintertext_sep=\dimen256
-\xmathstrut@box=\box66
-\xmathstrut@dim=\dimen257
-) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/relsize\relsize.sty
-Package: relsize 2013/03/29 ver 4.1
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/scrhack\scrhack.sty
-Package: scrhack 2024-09-04 v3.42 scrhack emulation package
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/floatbytocbasic\floatby
-tocbasic.sty
-Package: floatbytocbasic 2023-08-16 v1.0 improved float package using tocbasic
-))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/mleftright\mleftright
-.sty
-Package: mleftright 2019/12/03 v1.2 Math left/right delim. as open/close (HO)
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
-sty
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
-y
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
--common.tex
-\pgfutil@everybye=\toks45
-\pgfutil@tempdima=\dimen258
-\pgfutil@tempdimb=\dimen259
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
--latex.def
-\pgfutil@abb=\box67
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
-code.tex
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
-Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
-))
-Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
-sty
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
-sty
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s.code.tex
-Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
-.code.tex
-\pgfkeys@pathtoks=\toks46
-\pgfkeys@temptoks=\toks47
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
-libraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks48
-))
-\pgf@x=\dimen260
-\pgf@y=\dimen261
-\pgf@xa=\dimen262
-\pgf@ya=\dimen263
-\pgf@xb=\dimen264
-\pgf@yb=\dimen265
-\pgf@xc=\dimen266
-\pgf@yc=\dimen267
-\pgf@xd=\dimen268
-\pgf@yd=\dimen269
-\w@pgf@writea=\write4
-\r@pgf@reada=\read4
-\c@pgf@counta=\count326
-\c@pgf@countb=\count327
-\c@pgf@countc=\count328
-\c@pgf@countd=\count329
-\t@pgf@toka=\toks49
-\t@pgf@tokb=\toks50
-\t@pgf@tokc=\toks51
-\pgf@sys@id@count=\count330
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
-fg
-File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
-)
-Driver file for pgf: pgfsys-pdftex.def
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s-pdftex.def
-File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s-common-pdf.def
-File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-ssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count331
-\pgfsyssoftpath@bigbuffer@items=\count332
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-sprotocol.code.tex
-File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-e.code.tex
-Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
-.tex
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
-code.tex)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
-r.code.tex
-\pgfmath@dimen=\dimen270
-\pgfmath@count=\count333
-\pgfmath@box=\box68
-\pgfmath@toks=\toks52
-\pgfmath@stack@operand=\toks53
-\pgfmath@stack@operation=\toks54
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.code.tex)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.basic.code.tex)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.trigonometric.code.tex)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.random.code.tex)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.comparison.code.tex)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.base.code.tex)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.round.code.tex)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.misc.code.tex)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.integerarithmetics.code.tex)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
-code.tex)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
-.code.tex
-\c@pgfmathroundto@lastzeros=\count334
-))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
-tex)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-epoints.code.tex
-File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen271
-\pgf@picmaxx=\dimen272
-\pgf@picminy=\dimen273
-\pgf@picmaxy=\dimen274
-\pgf@pathminx=\dimen275
-\pgf@pathmaxx=\dimen276
-\pgf@pathminy=\dimen277
-\pgf@pathmaxy=\dimen278
-\pgf@xx=\dimen279
-\pgf@xy=\dimen280
-\pgf@yx=\dimen281
-\pgf@yy=\dimen282
-\pgf@zx=\dimen283
-\pgf@zy=\dimen284
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-epathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen285
-\pgf@path@lasty=\dimen286
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-epathusage.code.tex
-File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen287
-\pgf@shorten@start@additional=\dimen288
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-escopes.code.tex
-File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box69
-\pgf@hbox=\box70
-\pgf@layerbox@main=\box71
-\pgf@picture@serial@count=\count335
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-egraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen289
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-etransformations.code.tex
-File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen290
-\pgf@pt@y=\dimen291
-\pgf@pt@temp=\dimen292
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-equick.code.tex
-File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-eobjects.code.tex
-File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-epathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-earrows.code.tex
-File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen293
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-eshade.code.tex
-File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen294
-\pgf@sys@shading@range@num=\count336
-\pgf@shadingcount=\count337
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-eimage.code.tex
-File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-eexternal.code.tex
-File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box72
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-elayers.code.tex
-File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-etransparency.code.tex
-File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-epatterns.code.tex
-File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-erdf.code.tex
-File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
-shapes.code.tex
-File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box73
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
-plot.code.tex
-File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
-mp-version-0-65.sty
-Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen295
-\pgf@nodesepend=\dimen296
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
-mp-version-1-18.sty
-Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
-))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
-y
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
-ty
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
-.code.tex))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
-.tex))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
-code.tex
-Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen297
-\pgffor@skip=\dimen298
-\pgffor@stack=\toks55
-\pgffor@toks=\toks56
-))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z\tikz.code.tex
-Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
-aryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count338
-\pgfplotmarksize=\dimen299
-)
-\tikz@lastx=\dimen300
-\tikz@lasty=\dimen301
-\tikz@lastxsaved=\dimen302
-\tikz@lastysaved=\dimen303
-\tikz@lastmovetox=\dimen304
-\tikz@lastmovetoy=\dimen305
-\tikzleveldistance=\dimen306
-\tikzsiblingdistance=\dimen307
-\tikz@figbox=\box74
-\tikz@figbox@bg=\box75
-\tikz@tempbox=\box76
-\tikz@tempbox@bg=\box77
-\tikztreelevel=\count339
-\tikznumberofchildren=\count340
-\tikznumberofcurrentchild=\count341
-\tikz@fig@count=\count342
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
-matrix.code.tex
-File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count343
-\pgfmatrixcurrentcolumn=\count344
-\pgf@matrix@numberofcolumns=\count345
-)
-\tikz@expandcount=\count346
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\stmaryrd.sty
-Package: stmaryrd 1994/03/03 St Mary's Road symbol package
-\symstmry=\mathgroup7
-LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
-(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
-)
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
 Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks57
-\verbatim@line=\toks58
-\verbatim@in@stream=\read5
+\every@verbatim=\toks58
+\verbatim@line=\toks59
+\verbatim@in@stream=\read4
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
@@ -1101,27 +1076,27 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 ty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box78
-\tcb@upperbox=\box79
-\tcb@lowerbox=\box80
-\tcb@phantombox=\box81
-\c@tcbbreakpart=\count347
-\c@tcblayer=\count348
-\c@tcolorbox@number=\count349
-\l__tcobox_tmpa_box=\box82
-\l__tcobox_tmpa_dim=\dimen308
-\tcb@temp=\box83
-\tcb@temp=\box84
-\tcb@temp=\box85
-\tcb@temp=\box86
+\tcb@titlebox=\box82
+\tcb@upperbox=\box83
+\tcb@lowerbox=\box84
+\tcb@phantombox=\box85
+\c@tcbbreakpart=\count358
+\c@tcblayer=\count359
+\c@tcolorbox@number=\count360
+\l__tcobox_tmpa_box=\box86
+\l__tcobox_tmpa_dim=\dimen343
+\tcb@temp=\box87
+\tcb@temp=\box88
+\tcb@temp=\box89
+\tcb@temp=\box90
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbraster.cod
 e.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.9.0'
-\c@tcbrastercolumn=\count350
-\c@tcbrasterrow=\count351
-\c@tcbrasternum=\count352
-\c@tcbraster=\count353
+\c@tcbrastercolumn=\count361
+\c@tcbrasterrow=\count362
+\c@tcbrasternum=\count363
+\c@tcbraster=\count364
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.code
 .tex
@@ -1138,7 +1113,7 @@ Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzlibraryfil
 l.image.code.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box87
+\l__tikzfill_img_box=\box91
 ))
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsa
 w.code.tex
@@ -1151,9 +1126,9 @@ Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box88
-\tcb@totalupperbox=\box89
-\tcb@totallowerbox=\box90
+\tcb@testbox=\box92
+\tcb@totalupperbox=\box93
+\tcb@totallowerbox=\box94
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbhooks.code
 .tex
@@ -1166,173 +1141,238 @@ Library (tcolorbox): 'tcbtheorems.code.tex' version '6.9.0'
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbfitting.co
 de.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '6.9.0'
-\tcbfitdim=\dimen309
-\tcb@lowerfitdim=\dimen310
-\tcb@upperfitdim=\dimen311
-\tcb@cur@hbadness=\count354
+\tcbfitdim=\dimen344
+\tcb@lowerfitdim=\dimen345
+\tcb@upperfitdim=\dimen346
+\tcb@cur@hbadness=\count365
 ))
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikzlibrarycd.c
-ode.tex
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibrarymatrix.code.tex
-File: tikzlibrarymatrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cleveref\cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+25.
+Package cleveref Info: include cross-reference names in hyperlinks on input lin
+e 7836.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+52.
+Package cleveref Info: include cross-reference names in hyperlinks on input lin
+e 7852.
+Package cleveref Info: no abbreviation of names on input line 7852.
 )
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibraryquotes.code.tex
-File: tikzlibraryquotes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+==> First Aid for cleveref.sty applied!
+\c@theorem=\count366
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen347
+\ar@mcellbox=\box95
+\extrarowheight=\dimen348
+\NC@list=\toks60
+\extratabsurround=\skip69
+\backup@length=\skip70
+\ar@cellbox=\box96
 )
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
-aryarrows.meta.code.tex
-File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowinset=\dimen312
-\pgfarrowlength=\dimen313
-\pgfarrowwidth=\dimen314
-\pgfarrowlinewidth=\dimen315
-))
+\TX@col@width=\dimen349
+\TX@old@table=\dimen350
+\TX@old@col=\dimen351
+\TX@target=\dimen352
+\TX@delta=\dimen353
+\TX@cols=\count367
+\TX@ftn=\toks61
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen354
+\c@nlinenum=\count368
+\TeXr@lab=\toks62
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+\everycr=\toks63
+\minrowclearance=\skip71
+\rownum=\count369
+)
+\symmathx=\mathgroup8
 Now handling font encoding LS1 ...
 ... no UTF-8 mapping file for font encoding LS1
-LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 71.
-\c@theorem=\count355
-\symmathx=\mathgroup8
-Class scrartcl Info: loading recommended package `bookmark'.
-(scrartcl)           Using `bookmark' together with `hyperref' is recommended,
-(scrartcl)           because of handling of possible bookmark level gaps.
-(scrartcl)           You can avoid loading `bookmark' with KOMA-Script option
-(scrartcl)           `bookmarkpackage=false' before \begin{document} and
-(scrartcl)           you can avoid this message adding:
-(scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 409.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
+75.
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
-Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
-File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-\BKM@id=\count356
-))
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 40
-9.
- (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-(CYM.aux)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count370
+) (CYM.aux)
 \openout1 = `CYM.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 409.
-LaTeX Font Info:    ... okay on input line 409.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 409.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 475.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 475.
 LaTeX Font Info:    Trying to load font information for LS1+stix on input line 
-409.
+475.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stix.fd
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 409.
-Package scrbase Info: activating english \abstractname on input line 409.
-Package scrbase Info: activating english \partname on input line 409.
-Package scrbase Info: activating english \figurename on input line 409.
-Package scrbase Info: activating english \tablename on input line 409.
-Package scrbase Info: activating english \contentsname on input line 409.
-Package scrbase Info: activating english \listfigurename on input line 409.
-Package scrbase Info: activating english \listtablename on input line 409.
-Package scrbase Info: activating english \refname on input line 409.
-Package scrbase Info: activating english \indexname on input line 409.
+LaTeX Font Info:    ... okay on input line 475.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
+75.
 
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+475.
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+475.
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 475.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 475.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 475.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 475
+.
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 475
+.
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 47
+5.
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 47
+5.
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count357
-\scratchdimen=\dimen316
-\scratchbox=\box91
-\nofMPsegments=\count358
-\nofMParguments=\count359
-\everyMPshowfont=\toks59
-\MPscratchCnt=\count360
-\MPscratchDim=\dimen317
-\MPnumerator=\count361
-\makeMPintoPDFobject=\count362
-\everyMPtoPDFconversion=\toks60
+\scratchcounter=\count371
+\scratchdimen=\dimen355
+\scratchbox=\box97
+\nofMPsegments=\count372
+\nofMParguments=\count373
+\everyMPshowfont=\toks64
+\MPscratchCnt=\count374
+\MPscratchDim=\dimen356
+\MPnumerator=\count375
+\makeMPintoPDFobject=\count376
+\everyMPtoPDFconversion=\toks65
 )
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -1344,96 +1384,84 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
-09.
- (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
-09.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(83.75394pt, 430.0pt, 83.75394pt)
+* v-part:(T,H,B)=(86.01874pt, 630.0pt, 129.0281pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=430.0pt
+* \textheight=630.0pt
+* \oddsidemargin=11.48395pt
+* \evensidemargin=11.48395pt
+* \topmargin=-8.25125pt
+* \headheight=8.0pt
+* \headsep=14.0pt
+* \topskip=10.0pt
+* \footskip=12.0pt
+* \marginparwidth=90.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=7.0pt plus 11.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-409.
+LaTeX Info: Redefining \microtypecontext on input line 475.
+Package microtype Info: Applying patch `item' on input line 475.
+Package microtype Info: Applying patch `toc' on input line 475.
+Package microtype Info: Applying patch `eqnum' on input line 475.
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-409.
+Package microtype Warning: Unable to apply patch `footnote' on input line 475.
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+Package microtype Info: Applying patch `verbatim' on input line 475.
+LaTeX Info: Redefining \microtypesetup on input line 475.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+Package microtype Info: Patching command `\showhyphens'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 409.
+(Font)              <10> on input line 475.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 409.
+(Font)              <7> on input line 475.
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Package xypdf Info: Line width: 0.39998pt on input line 475.
+Package hyperref Info: Link coloring ON on input line 475.
+
+(CYM.out) (CYM.out)
+\@outlinefile=\write5
+\openout5 = `CYM.out'.
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 409.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 409
-.
+(Font)              <12> on input line 528.
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 409
-.
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+esint on input line 4
-09.
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/esint\uesint.fd
-File: uesint.fd 
-)
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 4
-09.
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 409.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 409.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 409.
-Package hyperref Info: Link coloring ON on input line 409.
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
-Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nom
-etadata.sty
-Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
-F (HO)
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lscapeenhanced\lscapeen
-hanced.sty
-Package: lscapeenhanced 2024-04-16 v1.0 improved lscape package
-Package lscapeenhanced Info: \landscape patched to make \textheight change opti
-onal on input line 72.
-\@lscapeenhanced@textheight=\skip79
-)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-))
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 4
-21.
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
-File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
-21.
-
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.bdg
 File: UTF8.bdg 2021/10/16 4.8.5
 )
@@ -1444,7 +1472,7 @@ File: UTF8.enc 2021/10/16 4.8.5
 File: UTF8.chr 2021/10/16 4.8.5
 )
 LaTeX Font Info:    Trying to load font information for C70+bkai on input line 
-424.
+533.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\c70bkai.fd
 File: c70bkai.fd 2021/10/16 4.8.5
@@ -1458,115 +1486,159 @@ File: UTF8.enc 2021/10/16 4.8.5
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
-LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 438.
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
+544.
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixscr.fd
-File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
+File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 4
-40.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
+49.
 
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
-47.
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [1
-
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [0
 
 {C:/Users/kelru/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/kelr
-u/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/kelru/Ap
-pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/kelru/AppDa
-ta/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/kelru/AppDa
-ta/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/kelru/AppData/L
-ocal/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] (CYM.toc [2]
-Overfull \hbox (1.09496pt too wide) detected at line 38
- []\T1/lmss/bx/n/10.95 156
- []
+u/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/kelru/Ap
+pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}{C:/Users/kelru/AppD
+ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/kelru/AppD
+ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/kelru/AppDat
+a/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/kelru/AppData/L
+ocal/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] (CYM.toc)
+\tf@toc=\write6
+\openout6 = `CYM.toc'.
 
-
-Overfull \hbox (1.09496pt too wide) detected at line 43
- []\T1/lmss/bx/n/10.95 166
- []
-
-
-Overfull \hbox (1.09496pt too wide) detected at line 44
- []\T1/lmss/bx/n/10.95 168
- []
-
-)
-\tf@toc=\write5
-\openout5 = `CYM.toc'.
-
-LaTeX Font Info:    Trying to load font information for U+euf on input line 491
+ [1]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 599
 .
- (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
+
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-[1] [2]
-Underfull \hbox (badness 3612) in paragraph at lines 552--552
-[]|\T1/lmr/m/n/10.95 Field re-def-i-ni-tions lead
+(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+
+)
+Underfull \vbox (badness 1824) has occurred while \output is active []
+
+ [2{C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.e
+nc}]
+Underfull \vbox (badness 2126) has occurred while \output is active []
+
+ [3]
+[4] [5] [6] [7]
+Underfull \vbox (badness 1681) has occurred while \output is active []
+
+ [8]
+Underfull \vbox (badness 1348) has occurred while \output is active []
+
+ [9]
+[10]
+Underfull \vbox (badness 2970) has occurred while \output is active []
+
+ [11]
+[12]
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+1155.
+ (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
+File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \vbox (badness 1184) has occurred while \output is active []
+
+ [13]
+[14] [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 1486--1488
+
  []
 
-[3]
-Underfull \hbox (badness 1394) in paragraph at lines 571--571
-\T1/lmr/m/n/10.95 in gauge trans-for-ma-tions and field
- []
 
-[4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
-[20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1378--1380
+Underfull \hbox (badness 10000) in paragraph at lines 1500--1503
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1392--1395
-
- []
-
-[22] [23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1514--1517
+[17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 1622--1625
 
  []
 
-[25] [26] [27] [28] [29] [30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1899--1902
+[19] [20] [21] [22] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 2007--2010
 
  []
 
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 1916--1919
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 2024--2027
 
  []
 
-[33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47]
-[48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62]
-[63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]
-[78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]
-[93] [94] [95] [96] [97] [98] [99] [100]
+[25] [26] [27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 5634.
+ [28]
+[29]
+LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
+ne 2342.
+ (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixscr.fd
+File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
+) [30] [31] [32] [33] [34] [35] [36] [37]
+Overfull \vbox (4.95639pt too high) has occurred while \output is active []
 
-[101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112]
-[113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124]
-[125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136]
-[137] [138]
-Overfull \hbox (2.67805pt too wide) in paragraph at lines 8003--8010
-\T1/lmr/m/n/10.95 using Rem. [][]5.19[][] (bracket of fundamental/left-invarian
-t vec-tor fields is fundamental/left-invariant)
+
+[38] [39] [40] [41] [42] [43] [44] [45] [46]
+Underfull \vbox (badness 1331) has occurred while \output is active []
+
+ [47]
+[48] [49] [50]
+Underfull \vbox (badness 1484) has occurred while \output is active []
+
+ [51]
+[52] [53] [54] [55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56]
+Underfull \vbox (badness 1348) has occurred while \output is active []
+
+ [57]
+[58] [59] [60] [61] [62] [63] [64]
+Overfull \hbox (16.30904pt too wide) in paragraph at lines 4683--4685
+ [] 
  []
 
-[139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149]
-Overfull \hbox (3.1053pt too wide) detected at line 8691
-[]
+
+Overfull \hbox (16.30904pt too wide) in paragraph at lines 4747--4748
+ [] 
  []
 
-[150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161]
-[162] [163] [164] [165]
+[65] [66] [67] [68]
+Underfull \vbox (badness 3049) has occurred while \output is active []
+
+ [69]
+Underfull \vbox (badness 4291) has occurred while \output is active []
+
+ [70]
+[71]
+Underfull \vbox (badness 1226) has occurred while \output is active []
+
+ [72]
+[73] [74]
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 5742.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 5742.
+ [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87]
+[88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101]
+[102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113]
+[114] [115] [116] [117] [118] [119]
+Underfull \vbox (badness 2326) has occurred while \output is active []
+
+ [120]
+[121] [122] [123]
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
 )
@@ -1574,185 +1646,68 @@ File: UTF8.enc 2021/10/16 4.8.5
 File: UTF8.chr 2021/10/16 4.8.5
 )
 (CYM.bbl
-Underfull \hbox (badness 5533) in paragraph at lines 21--25
-[]\T1/lmr/m/n/10.95 Christoph Mayer and Thomas Strobl.  Lie al-ge-broid Yang--M
-ills with mat-
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
+[]\OT1/lmr/m/n/8 (+20) Thomas Strobl. Al-ge-broid Yang-Mills the-o-ries. \OT1/l
+mr/m/it/8 (+20) Phys-i-cal re-view let-ters\OT1/lmr/m/n/8 (+20) , 93(21):211601
+, 2004.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--25
-\T1/lmr/m/n/10.95 ter fields.  \T1/lmr/m/it/10.95 Jour-nal of Ge-om-e-try and P
-hysics\T1/lmr/m/n/10.95 , 59(12):1613--1623, 2009.
+Underfull \hbox (badness 3386) in paragraph at lines 100--106
+[]\OT1/lmr/m/n/8 (+20) Simon-Raphael Fis-cher, Mehran Jalali Fara-hani, Hyun-gr
+ok Kim, and Chris-tian Sae-mann. Topo-
  []
 
 
-Underfull \hbox (badness 1609) in paragraph at lines 27--32
-[]\T1/lmr/m/n/10.95 Simon-Raphael Fis-cher.  Curved Yang^^UMills^^UHiggs gauge 
-the-o-ries in the case of
+Underfull \hbox (badness 10000) in paragraph at lines 100--106
+\OT1/lmr/m/n/8 (+20) log-i-cal clas-si-fi-ca-tion of sym-me-try break-ing and v
+ac-uum de-gen-er-acy. 2024. arXiv:2406.17634,
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 27--32
-\T1/lmr/m/n/10.95 mass-less gauge bosons.  \T1/lmr/m/it/10.95 Jour-nal of Ge-om
--e-try and Physics\T1/lmr/m/n/10.95 , 162:104104, 2021.
- []
-
-[166]
-Underfull \hbox (badness 1838) in paragraph at lines 49--54
-[]\T1/lmr/m/n/10.95 Simon-Raphael Fis-cher and Camille Laurent-Gengoux.  A clas
--si-fi-ca-tion of neigh-
+Underfull \hbox (badness 1917) in paragraph at lines 114--119
+[]\OT1/lmr/m/n/8 (+20) K Ajayku-mar, B. S. Ki-ranagi, and R Ran-gara-jan. Pull-
+back of Lie al-ge-bra and Lie group bun-
  []
 
 
-Underfull \hbox (badness 7273) in paragraph at lines 49--54
-\T1/lmr/m/n/10.95 bor-hoods around leaves of a sin-gu-lar fo-li-a-tion.  2024. 
- arXiv:2401.05966,
+Underfull \hbox (badness 3460) in paragraph at lines 114--119
+\OT1/lmr/m/n/8 (+20) dles, and their ho-mo-topy in-vari-ance. \OT1/lmr/m/it/8 (
++20) Jour-nal of Al-ge-bra and Re-lated Top-ics\OT1/lmr/m/n/8 (+20) , 8(1):15--
+26, 2020.
  []
 
 
-Underfull \hbox (badness 1558) in paragraph at lines 56--60
-\T1/lmr/m/n/10.95 nec-tions mod-elled by Lie group bun-dles.  \T1/lmr/m/it/10.9
-5 Ge-ome-triae Ded-i-cata\T1/lmr/m/n/10.95 , 217(2):32, 2023.
+Underfull \hbox (badness 1325) in paragraph at lines 121--126
+\OT1/lmr/m/n/8 (+20) els, and off-shell closed gauge sym-me-tries. \OT1/lmr/m/i
+t/8 (+20) Jour-nal of Ge-om-e-try and Physics\OT1/lmr/m/n/8 (+20) , 54(4):400--
+426, 2005.
  []
 
+[124]) [125] [126] [127]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \hbox (badness 7238) in paragraph at lines 62--67
-[]\T1/lmr/m/n/10.95 Kirill C. H. Macken-zie.  Gen-eral the-ory of Lie groupoids
- and Lie al-ge-
- []
+ [128]
+[129]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \hbox (badness 1215) in paragraph at lines 62--67
-\T1/lmr/m/n/10.95 broids.  \T1/lmr/m/it/10.95 Lon-don Math-e-mat-i-cal So-ci-et
-y Lec-ture Note Se-ries\T1/lmr/m/n/10.95 , 213:xxxviii+501, 2005.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--79
-[]\T1/lmr/m/n/10.95 Camille Laurent-Gengoux, Math-ieu Stiénon, and Ping Xu.  No
-n-abelian
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--79
-\T1/lmr/m/n/10.95 dif-fer-en-tiable gerbes.  \T1/lmr/m/it/10.95 Ad-vances in Ma
-th-e-mat-ics\T1/lmr/m/n/10.95 , 220(5):1357--1427, 2009.
- []
-
-
-Underfull \hbox (badness 5756) in paragraph at lines 87--91
-[]\T1/lmr/m/n/10.95 Marius Crainic, Maria Amelia Salazar, and Ivan Struchiner. 
- Mul-ti-plica-tive
- []
-
-
-Underfull \hbox (badness 2970) in paragraph at lines 87--91
-\T1/lmr/m/n/10.95 forms and Spencer op-er-a-tors.  \T1/lmr/m/it/10.95 Math-e-ma
--tis-che Zeitschrift\T1/lmr/m/n/10.95 , 279(3):939--979, 2015.
- []
-
-
-Underfull \hbox (badness 1552) in paragraph at lines 93--98
-[]\T1/lmr/m/n/10.95 Marius Crainic.  Dif-fer-en-tiable and al-ge-broid co-ho-mo
-l-ogy, van Est iso-mor-phisms,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--112
-[]\T1/lmr/m/n/10.95 Mark JD Hamil-ton.  \T1/lmr/m/it/10.95 Math-e-mat-i-cal Gau
-ge The-ory\T1/lmr/m/n/10.95 .  Springer, 2017.
- []
-
-[167]
-Underfull \hbox (badness 5533) in paragraph at lines 128--132
-[]\T1/lmr/m/n/10.95 Christoph Mayer and Thomas Strobl.  Lie al-ge-broid Yang--M
-ills with mat-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--132
-\T1/lmr/m/n/10.95 ter fields.  \T1/lmr/m/it/10.95 Jour-nal of Ge-om-e-try and P
-hysics\T1/lmr/m/n/10.95 , 59(12):1613--1623, 2009.
- []
-
-
-Underfull \hbox (badness 1867) in paragraph at lines 150--154
-\T1/lmr/m/n/10.95 sym-plec-tic man-i-folds.  \T1/lmr/m/it/10.95 Jour-nal of Ge-
-om-e-try and Physics\T1/lmr/m/n/10.95 , 59(9):1285--1305, 2009.
- []
-
-) [168]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9641 \be
-          \label{DoubleTangentAsDiagram}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9641 \be
-          \label{DoubleTangentAsDiagram}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9641 \be
-          \label{DoubleTangentAsDiagram}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9641 \be
-          \label{DoubleTangentAsDiagram} [169]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9689 \end{align}
-                   [170]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9749 \ea
-          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9766 \ea
-          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9777 \ea
-           [171] [172] [173] [174]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.10042 \ea
-            [175] [176] (CYM.aux)
+ [130]
+[131] (CYM.aux)
  ***********
 LaTeX2e <2025-11-01>
-L3 programming layer <2020/03/25>
+L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
+Package rerunfilecheck Info: File `CYM.out' has not changed.
+(rerunfilecheck)             Checksum: 05A867CD243DAB66EB84745A90DB4C4E;6934.
  ) 
 Here is how much of TeX's memory you used:
- 39670 strings out of 467866
- 830108 string characters out of 5418325
- 1378606 words of memory out of 5000000
- 67248 multiletter control sequences out of 15000+600000
- 763038 words of font info for 193 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 108i,25n,107p,11228b,1338s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 43045 strings out of 467866
+ 855763 string characters out of 5418325
+ 1354570 words of memory out of 5000000
+ 70052 multiletter control sequences out of 15000+600000
+ 748027 words of font info for 367 fonts, out of 8000000 for 9000
+ 1302 hyphenation exceptions out of 8191
+ 88i,22n,94p,3230b,1558s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu3
 0.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bk
 aiu4e.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkai
@@ -1778,45 +1733,49 @@ fb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu
 8d.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/b
 kaiu97.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bka
 iu/bkaiu99.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmex10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/kelru/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/kelru/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/doublestroke/dsrom10.pfb><C:/Users/kelru/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/doublestroke/dsrom8.pfb><C:/User
-s/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.
-pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbsy10
-.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10
-.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.
-pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10
-.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10
-.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.
-pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.p
-fb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pf
-b><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb
-><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb>
-<C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><
-C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C
-:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/
-Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Us
-ers/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/User
-s/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/
-kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/
-kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/k
-elru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Users/ke
-lru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Users/ke
-lru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/
-kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/
-kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/k
-elru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/ke
-lru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/kel
-ru/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kel
-ru/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb
-><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symb
-ols/msbm10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (178 pages, 2052472 bytes).
+/amsfonts/euler/eufm10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/euler/eufm7.pfb><C:/Users/kelru/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmbsy10.pfb><C:/Users/kelru/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/kelru/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kelru/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/kelru/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/kelru/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/kelru/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/kelru/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/kelru/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/kelru/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/kelru/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/kelru/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmr12.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/lm/lmr5.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/lm/lmr6.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/lm/lmr7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/lm/lmr8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmri10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmri7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmri8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/lm/lmss10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/lm/lmss8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmsy10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmsy5.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmsy6.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/lm/lmsy7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmsy8.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/lm/lmtt10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/symbols/msam10.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/kelru/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm5.pfb><C:/Users/kelru/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Us
+ers/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/
+Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:
+/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb><C
+:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsc
+r.pfb>
+Output written on CYM.pdf (132 pages, 2734736 bytes).
 PDF statistics:
- 2765 PDF objects out of 2984 (max. 8388607)
- 568 named destinations out of 1000 (max. 500000)
- 449 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2517 PDF objects out of 2984 (max. 8388607)
+ 529 named destinations out of 1000 (max. 500000)
+ 54129 words of extra memory for PDF output out of 61914 (max. 10000000)
 
