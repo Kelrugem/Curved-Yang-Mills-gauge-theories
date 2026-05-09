@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.20)  8 MAY 2026 22:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.20)  9 MAY 2026 13:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -963,9 +963,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip68
 )
-Package hyperref Info: Option `hypertexnames' set `false' on input line 160.
-Package hyperref Info: Option `colorlinks' set `true' on input line 160.
-Package hyperref Info: Option `breaklinks' set `true' on input line 160.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 161.
+Package hyperref Info: Option `colorlinks' set `true' on input line 161.
+Package hyperref Info: Option `breaklinks' set `true' on input line 161.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
 Package: tcolorbox 2025/09/09 version 6.8.0 text color boxes
@@ -1094,8 +1094,8 @@ Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
 \symmathx=\mathgroup8
 Now handling font encoding LS1 ...
 ... no UTF-8 mapping file for font encoding LS1
-LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 461.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 475.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 462.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 476.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1106,132 +1106,132 @@ File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 ) (CYM.aux)
 \openout1 = `CYM.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 475.
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 475.
-LaTeX Font Info:    Trying to load font information for LS1+stix on input line 475.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 476.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 476.
+LaTeX Font Info:    Trying to load font information for LS1+stix on input line 476.
 
 (C:\Users\kelru\AppData\Roaming\MiKTeX\tex/latex/stix\ls1stix.fd
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 475.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 475.
+LaTeX Font Info:    ... okay on input line 476.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 476.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 475.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 476.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 475.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 476.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 475.
+(Font)              <8> on input line 476.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 475.
+(Font)              <6> on input line 476.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 475.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 475.
+(Font)              <5> on input line 476.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 476.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 475.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 476.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 475.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 476.
 
 (C:\Users\kelru\AppData\Roaming\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 475.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 476.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1290,13 +1290,13 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 475.
-Package microtype Info: Applying patch `item' on input line 475.
-Package microtype Info: Applying patch `toc' on input line 475.
-Package microtype Info: Applying patch `eqnum' on input line 475.
-Package microtype Info: Applying patch `footnote' on input line 475.
-Package microtype Info: Applying patch `verbatim' on input line 475.
-LaTeX Info: Redefining \microtypesetup on input line 475.
+LaTeX Info: Redefining \microtypecontext on input line 476.
+Package microtype Info: Applying patch `item' on input line 476.
+Package microtype Info: Applying patch `toc' on input line 476.
+Package microtype Info: Applying patch `eqnum' on input line 476.
+Package microtype Info: Applying patch `footnote' on input line 476.
+Package microtype Info: Applying patch `verbatim' on input line 476.
+LaTeX Info: Redefining \microtypesetup on input line 476.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1307,7 +1307,7 @@ Package microtype Info: Using default expansion set `alltext-nott'.
 LaTeX Warning: Command \showhyphens   has changed.
                Check if current package is valid.
 
-LaTeX Info: Redefining \showhyphens on input line 475.
+LaTeX Info: Redefining \showhyphens on input line 476.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1315,9 +1315,9 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 475.
+(Font)              <10> on input line 476.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 475.
+(Font)              <7> on input line 476.
 
 (C:\Users\kelru\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -1325,14 +1325,14 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (C:\Users\kelru\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Package xypdf Info: Line width: 0.39998pt on input line 475.
-Package hyperref Info: Link coloring ON on input line 475.
+Package xypdf Info: Line width: 0.39998pt on input line 476.
+Package hyperref Info: Link coloring ON on input line 476.
  (CYM.out) (CYM.out)
 \@outlinefile=\write5
 \openout5 = `CYM.out'.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 528.
+(Font)              <12> on input line 529.
 
 (C:\Users\kelru\AppData\Roaming\MiKTeX\tex/latex/cjk/UTF8\UTF8.bdg
 File: UTF8.bdg 2021/10/16 4.8.5
@@ -1343,7 +1343,7 @@ File: UTF8.enc 2021/10/16 4.8.5
 (C:\Users\kelru\AppData\Roaming\MiKTeX\tex/latex/cjk/UTF8\UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
-LaTeX Font Info:    Trying to load font information for C70+bkai on input line 533.
+LaTeX Font Info:    Trying to load font information for C70+bkai on input line 534.
 
 (C:\Users\kelru\AppData\Roaming\MiKTeX\tex/latex/cjk/UTF8\c70bkai.fd
 File: c70bkai.fd 2021/10/16 4.8.5
@@ -1357,7 +1357,7 @@ File: UTF8.enc 2021/10/16 4.8.5
 (C:\Users\kelru\AppData\Roaming\MiKTeX\tex/latex/cjk/UTF8\UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 544.
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 545.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1366,12 +1366,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 552.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 553.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for LS1+stixscr on input line 555.
+LaTeX Font Info:    Trying to load font information for LS1+stixscr on input line 556.
 
 (C:\Users\kelru\AppData\Roaming\MiKTeX\tex/latex/stix\ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
@@ -1390,7 +1390,7 @@ rograms/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] (CYM.toc)
 
 
 [1]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 602.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 603.
  (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
@@ -1425,7 +1425,7 @@ Underfull \vbox (badness 2126) has occurred while \output is active []
 [11]
 
 [12]
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 1158.
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 1159.
  (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1440,12 +1440,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 [14]
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1489--1491
+Underfull \hbox (badness 10000) in paragraph at lines 1490--1492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1503--1506
+Underfull \hbox (badness 10000) in paragraph at lines 1504--1507
 
  []
 
@@ -1456,7 +1456,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1503--1506
 [17]
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1625--1628
+Underfull \hbox (badness 10000) in paragraph at lines 1626--1629
 
  []
 
@@ -1471,12 +1471,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1625--1628
 [22]
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 2010--2013
+Underfull \hbox (badness 10000) in paragraph at lines 2011--2014
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2027--2030
+Underfull \hbox (badness 10000) in paragraph at lines 2028--2031
 
  []
 
@@ -1573,14 +1573,14 @@ Underfull \vbox (badness 2269) has occurred while \output is active []
 [62]
 
 [63]
-Overfull \hbox (18.01428pt too wide) in paragraph at lines 4686--4688
+Overfull \hbox (18.01428pt too wide) in paragraph at lines 4687--4689
  [] 
  []
 
 
 
 [64]
-Overfull \hbox (18.01428pt too wide) in paragraph at lines 4750--4751
+Overfull \hbox (18.01428pt too wide) in paragraph at lines 4751--4752
  [] 
  []
 
@@ -1607,9 +1607,9 @@ Underfull \vbox (badness 2698) has occurred while \output is active []
 
 [73]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 5745.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 5746.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 5745.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 5746.
 
 
 [74]
@@ -1783,17 +1783,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: 05A867CD243DAB66EB84745A90DB4C4E;6934.
  ) 
 Here is how much of TeX's memory you used:
  42997 strings out of 468133
  852727 string characters out of 5430712
- 1350560 words of memory out of 5000000
+ 1349558 words of memory out of 5000000
  69734 multiletter control sequences out of 15000+600000
  747515 words of font info for 368 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -1839,9 +1835,9 @@ Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/k
 ls/msbm7.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/r
 sfs/rsfs7.pfb><C:/Users/kelru/AppData/Roaming/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (131 pages, 1729895 bytes).
+Output written on CYM.pdf (131 pages, 1729638 bytes).
 PDF statistics:
- 2514 PDF objects out of 2984 (max. 8388607)
+ 2513 PDF objects out of 2984 (max. 8388607)
  528 named destinations out of 1000 (max. 500000)
  54129 words of extra memory for PDF output out of 61914 (max. 10000000)
 
