@@ -1,10 +1,10 @@
 \contentsline {section}{\tocsection {}{1}{Introduction and summary}}{1}{section.3}%
 \contentsline {subsection}{\tocsubsection {}{1.1}{Summary}}{5}{subsection.10}%
 \contentsline {subsection}{\tocsubsection {}{1.2}{Conclusion}}{13}{subsection.13}%
-\contentsline {subsection}{\tocsubsection {}{1.3}{Basic notations and remarks}}{14}{subsection.14}%
-\contentsline {subsection}{\tocsubsection {}{1.4}{Assumed background knowledge}}{16}{subsection.19}%
-\contentsline {section}{\tocsection {}{2}{Lie group bundles (LGBs)}}{16}{section.21}%
-\contentsline {subsection}{\tocsubsection {}{2.1}{Definition}}{16}{Item.25}%
+\contentsline {subsection}{\tocsubsection {}{1.3}{Basic notations and remarks}}{13}{subsection.14}%
+\contentsline {subsection}{\tocsubsection {}{1.4}{Assumed background knowledge}}{15}{subsection.19}%
+\contentsline {section}{\tocsection {}{2}{Lie group bundles (LGBs)}}{15}{section.21}%
+\contentsline {subsection}{\tocsubsection {}{2.1}{Definition}}{15}{Item.25}%
 \contentsline {subsection}{\tocsubsection {}{2.2}{Associated Lie group bundles}}{18}{subsection.33}%
 \contentsline {section}{\tocsection {}{3}{LGB actions, part I}}{22}{section.47}%
 \contentsline {subsection}{\tocsubsection {}{3.1}{Definition}}{22}{subsection.48}%
@@ -13,10 +13,10 @@
 \contentsline {subsection}{\tocsubsection {}{4.1}{Definition}}{32}{subsection.79}%
 \contentsline {subsection}{\tocsubsection {}{4.2}{From LGBs to LABs}}{34}{subsection.93}%
 \contentsline {subsection}{\tocsubsection {}{4.3}{Vertical Maurer-Cartan form of LGBs}}{40}{subsection.111}%
-\contentsline {subsection}{\tocsubsection {}{4.4}{Exponential map of LGBs}}{42}{subsection.117}%
+\contentsline {subsection}{\tocsubsection {}{4.4}{Exponential map of LGBs}}{41}{subsection.117}%
 \contentsline {subsection}{\tocsubsection {}{4.5}{LABs of pullback LGBs}}{43}{subsection.121}%
-\contentsline {section}{\tocsection {}{5}{LGB actions, part II}}{45}{section.125}%
-\contentsline {subsection}{\tocsubsection {}{5.1}{LGB and LAB representations}}{45}{subsection.126}%
+\contentsline {section}{\tocsection {}{5}{LGB actions, part II}}{44}{section.125}%
+\contentsline {subsection}{\tocsubsection {}{5.1}{LGB and LAB representations}}{44}{subsection.126}%
 \contentsline {subsection}{\tocsubsection {}{5.2}{Fundamental vector fields}}{50}{subsection.147}%
 \contentsline {subsection}{\tocsubsection {}{5.3}{Differential of smooth LGB actions}}{51}{theorem.152}%
 \contentsline {section}{\tocsection {}{6}{Connections and curvature on principal LGB-bundles}}{55}{section.164}%
@@ -32,10 +32,10 @@
 \contentsline {subsection}{\tocsubsection {}{6.3}{Gauge transformations}}{86}{subsection.261}%
 \contentsline {subsection}{\tocsubsection {}{6.4}{Generalized curvature/field strength}}{95}{subsection.278}%
 \contentsline {subsubsection}{\tocsubsubsection {}{6.4.1}{multiplicative Yang-Mills connections on LGBs}}{95}{subsubsection.279}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.4.2}{Field strength related to multiplicative Yang-Mills connections}}{109}{subsubsection.318}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.4.2}{Field strength related to multiplicative Yang-Mills connections}}{108}{subsubsection.318}%
 \contentsline {subsubsection}{\tocsubsubsection {}{6.4.3}{Gauge transformation of the generalized field strength}}{114}{subsubsection.326}%
-\contentsline {section}{\tocsection {}{7}{Curved Yang-Mills gauge theory}}{116}{section.332}%
-\contentsline {subsection}{\tocsubsection {}{7.1}{Definition and gauge invariance}}{116}{subsection.333}%
+\contentsline {section}{\tocsection {}{7}{Curved Yang-Mills gauge theory}}{115}{section.332}%
+\contentsline {subsection}{\tocsubsection {}{7.1}{Definition and gauge invariance}}{115}{subsection.333}%
 \contentsline {subsection}{\tocsubsection {}{7.2}{Field redefinitions}}{117}{subsection.338}%
 \contentsline {subsection}{\tocsubsection {}{7.3}{Examples}}{119}{subsection.347}%
 \contentsline {subsection}{\tocsubsection {}{7.4}{Future prospects}}{122}{subsection.358}%
