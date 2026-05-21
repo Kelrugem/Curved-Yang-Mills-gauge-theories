@@ -28,7 +28,8 @@
 
 \usepackage[all,knot]{xy}
 \xyoption{arc}
-
+\newcounter{access}
+\setcounter{access}{0}
 
 \usepackage{tikz}
 \usetikzlibrary{graphs,decorations.pathmorphing,decorations.markings}
@@ -1222,7 +1223,7 @@ One can extend all of this similarly for more specific types of morphisms like v
 
 \item We also need to extend contractions of tensors to graded extensions:
 \begin{definitions}{Graded extension of products}{GradingOfProducts}
-\tcbsubtitle[before skip=\baselineskip]{\cite[generalization of Definition 5.5.3; page 275]{Hamilton}}
+%\tcbsubtitle[before skip=\baselineskip]{\cite[generalization of Definition 5.5.3; page 275]{Hamilton}}
 Let $l \in \mathbb{N}$ and $E_1, \dots E_{l+1} \to M$ be vector bundles over a smooth manifold $M$, and $F \in \Gamma\left( \left(\bigotimes_{m=1}^{l} E_m^*\right) \otimes E_{l+1} \right)$. Then we define the \textbf{graded extension of $F$} as
 	\bas
 \Omega^{k_1}(M; E_1) \times \dots \times \Omega^{k_l}(M; E_l)
@@ -1265,7 +1266,7 @@ for all $A \in \Omega^k(N; E_1)$ and $B \in \Omega^m(N; E_1)$ ($k,m \in \mathbb{
 
 \begin{remark}
 \leavevmode\newline
-This is a generalization of similar relations just using the Lie algebra bracket $\mleft[ \cdot, \cdot\mright]_{\mathfrak{g}}$ of a Lie algebra $\mathfrak{g}$, see \cite[\S 5, first statement of Exercise 5.15.14; page 316]{Hamilton}.
+These are a common definitions and identities; see for example similar relations for the Lie algebra bracket $\mleft[ \cdot, \cdot\mright]_{\mathfrak{g}}$ of a Lie algebra $\mathfrak{g}$, see \cite[\S 5]{Hamilton}.
 \end{remark}
 
 \begin{proof}
@@ -1308,11 +1309,12 @@ is called a \textbf{Lie group bundle (LGB)} if:
 	are Lie group isomorphisms, where $I$ is an (index) set, $U_i$ are open sets covering $M$, $\phi_i: \mathcal{G}|_U \to U \times G$ subordinate trivializations, and $\mathrm{pr}_2$ the projection onto the second factor. This atlas will be called \textbf{Lie group bundle atlas} or \textbf{LGB atlas}.
 \end{enumerate}
 
-We also often say that \textbf{$\mathcal{G}$ is an LGB (over $M$)}, whose structural Lie group is either clear by context or not explicitly needed; and we may also denote LGBs by $G \to \mathcal{G} \stackrel{\pi}{\to} M$.
+We also often say that \textbf{$\mathcal{G}$ is an LGB (over $M$)}, whose structural Lie group is either clear by context or not explicitly needed; and we may also denote LGBs by $G \to \mathcal{G} \stackrel{\pi}{\to} M$ or $\pi \colon \caG \to M$.
 
 The global section $e$ of $\mathcal{G}$ so that $e_p$ is the neutral element of $\mathcal{G}_p$ will be labelled as the \textbf{neutral (element)/identity section (of $\mathcal{G}$)}; we may also denote it by $e^{\mathcal{G}}$.
 \end{definitions}
 
+\ifnum\theaccess=1
 \begin{remarks}{Principal and Lie group bundles}{LiegroupbundlesNotPrincipalBundles}
 Beware, a Lie group bundle is \textbf{not} the same as a principal bundle $P \to M$ with the same fibre type $G$. First of all, the fibres of $P$ are just diffeomorphic to a Lie group, a priori they carry no Lie group structure, while the fibres of $\mathcal{G}$ carry a Lie group structure.
 \newline
@@ -1334,6 +1336,7 @@ also clearly simply transitive. Observe, the second factor is not "constant", \t
 
 All of that is also resembled in the existence of sections. The existence of a section of $P$ has a 1:1 correspondence to trivializations of $P$, which is why $P$ in general only admits sections locally; see \textit{e.g.}\ \cite[\S 4.2, Thm.\ 4.2.19; page 219f.]{Hamilton}. $\mathcal{G}$ clearly admits always a global section, even if $\mathcal{G}$ is non-trivial; just take the section which assigns each base point the neutral element of its fibre.
 \end{remarks}
+\fi
 
 If $M$ is a point we recover the notion of Lie groups, and, as usual, we have the notion of trivial LGBs:
 
@@ -1341,9 +1344,10 @@ If $M$ is a point we recover the notion of Lie groups, and, as usual, we have th
 The \textbf{trivial LGB} is given as the product manifold $M \times G \to M$ with canonical multiplication $(x, g) \cdot (x, q) \coloneqq (x, gq)$.
 \end{examples}
 
-We are also interested into LGB bundle morphisms:
+In a straightforward manner one defines LGB bundle morphisms:
 
-\begin{definitions}{LGB morphism, \newline \cite[\S 1.2, special situation of Def.\ 1.2.1 \& 1.2.3, page 12]{mackenzieGeneralTheory}}{LGB morphism}
+\begin{definitions}{LGB morphism}{LGB morphism}
+\tcbsubtitle[before skip=\baselineskip]{\cite[\S 1.2, special situation of Def.\ 1.2.1 \& 1.2.3, page 12]{mackenzieGeneralTheory}}
 Let $\mathcal{H} \stackrel{\pi_{\mathcal{H}}}{\to} N$ and $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be two LGBs over two smooth manifolds $N$ and $M$. An \textbf{LGB morphism $F$ over $f$} is a pair of smooth maps $F: \mathcal{H} \to \mathcal{G}$ and $f: N \to M$ such that
 \ba\label{FibreRelationOverf}
 \pi_{\mathcal{G}} \circ F &= f \circ \pi_{\mathcal{H}},\\
@@ -1354,8 +1358,15 @@ for all $g, q \in \mathcal{H}$ with $\pi_{\mathcal{H}}(g) = \pi_{\mathcal{H}}(q)
 We speak of an \textbf{LGB isomorphism (over $f$)} if $F$ is a diffeomorphism.
 \end{definitions}
 
-\begin{remark}\label{LGBMOrphismRemark}
-\leavevmode\newline
+\begin{remarks}{}{LGBMOrphismRemark}
+%\leavevmode\newline
+As usual we have
+\begin{itemize}
+	\item It is clear that condition 2 in Def.\ \ref{def:LieGroupBundle} is equivalent to say that $\mathcal{G}$ is locally isomorphic to a trivial LGB; as one may have expected already.
+
+	\item If $F$ is a diffeomorphism, then also $f$, and $F^{-1}$ is an LGB isomorphism, too.
+\end{itemize}
+\ifnum\theaccess=1
 \indent $\bullet$ The right hand side of Eq.\ \eqref{LGBHomomorph} is well-defined because of Eq.\ \eqref{FibreRelationOverf}.
 
 $\bullet$ It is clear that condition 2 in Def.\ \ref{def:LieGroupBundle} is equivalent to say that $\mathcal{G}$ is locally isomorphic to a trivial LGB; as one may have expected already.
@@ -1375,7 +1386,8 @@ Then we have $e^{\mathcal{H}}_x = e^{\mathcal{H}}_{x^\prime}$ due to that $F$ is
 \pi_{\mathcal{H}} \circ F^{-1} &= f^{-1} \circ \pi_{\mathcal{G}}.
 \eas
 Since $\pi_{\mathcal{H}} \circ F^{-1}$ is smooth and $\pi_{\mathcal{G}}$ is a smooth surjective submersion, it follows that $f^{-1}$ is smooth; this is a well-known fact for right-compositions with surjective submersions, see \textit{e.g.}\ \cite[\S 3.7.2, Lemma 3.7.5, page 153]{Hamilton}. We can conclude that $f$ is a diffeomorphism. Observe that we concluded that $F^{-1}$ is an LGB isomorphism, too.
-\end{remark}
+\fi
+\end{remarks}
 
 Similar to the case of Lie groups, \textit{the} example of an LGB are the automorphisms of a vector bundle.
 
@@ -2411,13 +2423,13 @@ We speak of an \textbf{LAB isomorphism (over $f$)} if $F$ is a diffeomorphism.
 \end{definitions}
 
 \begin{remarks}{Smooth field of Lie brackets}{FieldOfLieBrackets}
-We have similar remarks as in Rem.\ \ref{LGBMOrphismRemark}. Additionally, we have locally a canonical smooth field of Lie brackets which restricts to a Lie bracket on each fibre because every LAB is locally isomorphic to a trivial LAB as in Ex.\ \ref{ex:TrivialLABs}. Define a field of Lie brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$, by
+We have similar remarks as in Rem.\ \ref{rem:LGBMOrphismRemark}. Additionally, we have locally a canonical smooth field of Lie brackets which restricts to a Lie bracket on each fibre because every LAB is locally isomorphic to a trivial LAB as in Ex.\ \ref{ex:TrivialLABs}. Define a field of Lie brackets $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}: \Gamma(\mathcal{g}) \times \Gamma(\mathcal{g}) \to \Gamma(\mathcal{g})$, \textit{i.e.}\ $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}} \in \Gamma\mleft(\bigwedge^2 \mathcal{g}^* \otimes \mathcal{g} \mright)$, by
 \ba
 \mleft[ X, Y \mright]_{\mathcal{g}}
 &\coloneqq
 \mleft[ X, Y \mright]_{\mathcal{g}_x}
 \ea
-for all $X, Y \in \mathcal{g}_x$ ($x \in M$). Using a local trivialization, this bracket is locally of the form as in Rem.\ \ref{LGBMOrphismRemark} such that smoothness follows.
+for all $X, Y \in \mathcal{g}_x$ ($x \in M$). Using a local trivialization, this bracket is locally of the form as in Rem.\ \ref{rem:LGBMOrphismRemark} such that smoothness follows.
 
 In fact, as also argued in \cite[\S 16.2, Example 2, page 114; but speaking in the context of Lie algebroids there, a generalization of LABs]{DaSilva}, every vector bundle equipped with a smooth field of Lie brackets is an LAB.
 \end{remarks}
@@ -4064,7 +4076,7 @@ F\mleft(h^\prime h\mright)
 F\mleft(h^\prime\mright) ~ F(h).
 \eas
 
-$\bullet$ Assume $H$ is a diffeomorphism, then $F$ is an LGB isomorphism. For this we only have to show that $F$ is a diffeomorphism by Def.\ \ref{def:LGB morphism}; by Remark \ref{LGBMOrphismRemark}, also $f$ is then a diffeomorphism. Thence, let us show that $F$ is a diffeomorphism. This follows by the fact that the LGB actions are simply transitive on the fibres of $\mathcal{P}^\prime$ and $\mathcal{P}$, \textit{i.e.}\ orbit maps are diffeomorphisms, also recall Remark \ref{rem:LGBPrincDefDiscussion}. Denoting the orbit maps inherited by the action on $\mathcal{P}^\prime$ and $\mathcal{P}$ by $\Phi^{\mathcal{P}^\prime}$ and $\Phi^{\mathcal{P}}$, respectively, we can write
+$\bullet$ Assume $H$ is a diffeomorphism, then $F$ is an LGB isomorphism. For this we only have to show that $F$ is a diffeomorphism by Def.\ \ref{def:LGB morphism}; by Remark \ref{rem:LGBMOrphismRemark}, also $f$ is then a diffeomorphism. Thence, let us show that $F$ is a diffeomorphism. This follows by the fact that the LGB actions are simply transitive on the fibres of $\mathcal{P}^\prime$ and $\mathcal{P}$, \textit{i.e.}\ orbit maps are diffeomorphisms, also recall Remark \ref{rem:LGBPrincDefDiscussion}. Denoting the orbit maps inherited by the action on $\mathcal{P}^\prime$ and $\mathcal{P}$ by $\Phi^{\mathcal{P}^\prime}$ and $\Phi^{\mathcal{P}}$, respectively, we can write
 \bas
 F(h)
 &=
