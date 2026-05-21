@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  21 MAY 2026 19:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  21 MAY 2026 19:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1677,13 +1677,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: E6E873E48BEEE0327BA0EC5E6FAE6CB0;6934.
  ) 
 Here is how much of TeX's memory you used:
  43044 strings out of 467866
  855775 string characters out of 5418325
- 1354254 words of memory out of 5000000
+ 1353254 words of memory out of 5000000
  70051 multiletter control sequences out of 15000+600000
  748805 words of font info for 369 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -1753,7 +1757,7 @@ Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:
 /Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb><C
 :/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsc
 r.pfb>
-Output written on CYM.pdf (130 pages, 2714237 bytes).
+Output written on CYM.pdf (130 pages, 2714240 bytes).
 PDF statistics:
  2498 PDF objects out of 2984 (max. 8388607)
  526 named destinations out of 1000 (max. 500000)
