@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  21 MAY 2026 19:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  22 MAY 2026 14:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1544,17 +1544,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [12]
 [13] [14] [15] [16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 1465--1468
+Underfull \hbox (badness 10000) in paragraph at lines 1466--1469
 
  []
 
 [18] [19] [20] [21] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1850--1853
+Underfull \hbox (badness 10000) in paragraph at lines 1851--1854
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1867--1870
+Underfull \hbox (badness 10000) in paragraph at lines 1868--1871
 
  []
 
@@ -1583,12 +1583,12 @@ Underfull \vbox (badness 1072) has occurred while \output is active []
 
  [55]
 [56] [57] [58] [59] [60] [61] [62] [63]
-Overfull \hbox (18.01428pt too wide) in paragraph at lines 4526--4528
+Overfull \hbox (18.01428pt too wide) in paragraph at lines 4527--4529
  [] 
  []
 
 
-Overfull \hbox (18.01428pt too wide) in paragraph at lines 4590--4591
+Overfull \hbox (18.01428pt too wide) in paragraph at lines 4591--4592
  [] 
  []
 
@@ -1605,9 +1605,9 @@ Underfull \vbox (badness 5403) has occurred while \output is active []
  [70]
 [71] [72]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 5585.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 5586.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 5585.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 5586.
  [73] [74] [75] [76] [77] [78] [79] [80]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1685,10 +1685,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: E6E873E48BEEE0327BA0EC5E6FAE6CB0;6934.
  ) 
 Here is how much of TeX's memory you used:
- 43044 strings out of 467866
- 855775 string characters out of 5418325
- 1353254 words of memory out of 5000000
- 70051 multiletter control sequences out of 15000+600000
+ 43046 strings out of 467866
+ 855809 string characters out of 5418325
+ 1353286 words of memory out of 5000000
+ 70053 multiletter control sequences out of 15000+600000
  748805 words of font info for 369 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  88i,22n,94p,3230b,1556s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1757,7 +1757,7 @@ Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:
 /Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb><C
 :/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsc
 r.pfb>
-Output written on CYM.pdf (130 pages, 2714240 bytes).
+Output written on CYM.pdf (130 pages, 2714596 bytes).
 PDF statistics:
  2498 PDF objects out of 2984 (max. 8388607)
  526 named destinations out of 1000 (max. 500000)
