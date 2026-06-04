@@ -1363,7 +1363,7 @@ We speak of an \textbf{LGB isomorphism (over $f$)} if $F$ is a diffeomorphism.
 %\leavevmode\newline
 As usual we have
 \begin{itemize}
-	\item It is clear that condition 2 in Def.\ \ref{def:LieGroupBundle} is equivalent to say that $\mathcal{G}$ is locally isomorphic to a trivial LGB; as one may have expected already.
+	\item It is clear that condition 2 in \ref{def:LieGroupBundle} is equivalent to say that $\mathcal{G}$ is locally isomorphic to a trivial LGB; as one may have expected already.
 
 	\item If $F$ is a diffeomorphism, then also $f$, and $F^{-1}$ is an LGB isomorphism, too.
 \end{itemize}
@@ -1392,7 +1392,8 @@ Since $\pi_{\mathcal{H}} \circ F^{-1}$ is smooth and $\pi_{\mathcal{G}}$ is a sm
 
 Similar to the case of Lie groups, \textit{the} example of an LGB are the automorphisms of a vector bundle.
 
-\begin{examples}{Automorphisms of a vector bundle,\newline \cite[\S 1.1, special situation of Ex.\ 1.1.12, page 8]{mackenzieGeneralTheory}}{AutOfVectorBundleAnLGB}
+\begin{examples}{Automorphisms of a vector bundle}{AutOfVectorBundleAnLGB}
+\tcbsubtitle[before skip=\baselineskip]{\cite[\S 1.1, special situation of Ex.\ 1.1.12, page 8]{mackenzieGeneralTheory}}
 Let $V\to M$ be a vector bundle and $\mathrm{Aut}(V) \to M$ its bundle of fibre-wise automorphisms (not to be confused with the sections of $\mathrm{Aut}(V)$ which are the base-preserving automorphisms of $V$). Denote with $W$ the structural vector space of $V$, then $\mathrm{Aut}(V)$ is an LGB with structural Lie group $\mathrm{Aut}(W)$. It is clear that each fibre of $\mathrm{Aut}(V)$ is a Lie group, and the LGB atlas is directly inherited by a vector bundle atlas $\mleft\{ \mleft( U_i, L_i \mright) \mright\}_{i \in I}$ of $V$, where we use a similar notation as for LGB atlases, especially we have vector bundle trivializations $L_{i}: \mleft.V\mright|_{U_i} \to U_i \times W$. Then define an LGB atlas over the same open covering $\mleft( U_i \mright)_i$ by
 \bas
 \mleft. \mathrm{Aut}(V) \mright|_{U_i} &\to U_i \times \mathrm{Aut}(W),\\
@@ -1404,7 +1405,7 @@ and $U_i \times \mathrm{Aut}(W)$ acts canonically on $U_i \times W$ in a fibre-w
 
 \subsection{Associated Lie group bundles}\label{AssocLGBsSubSection}
 
-For another important example recall that there is the notion of associated fibre bundles; following and stating the results of \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$ over a smooth manifold $M$, $N$ another smooth manifold, and $\Psi$ a smooth left $G$-action denoted by
+For another important example recall that there is the notion of associated fibre bundles; following \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$ over a smooth manifold $M$, $N$ another smooth manifold, and $\Psi$ a smooth left $G$-action denoted by
 \bas
 G \times N &\to N,\\
 (g, v) &\mapsto \Psi(g, v) \coloneqq g \cdot v.
@@ -1430,7 +1431,9 @@ where the projection $\pi_{P\times_\Psi N}: P\times_\Psi N \to M$ is given by
 \eas
 for all $[p, v] \in P\times_\Psi N$. For $x \in M$, the fibre $\mleft(P\times_\Psi N\mright)_x$ is given by $\mleft( P_x \times N  \mright) \Big/ G = P_x \times_\Psi N$, and the fibre is diffeomorphic to $N$ by $N \ni v \mapsto [p, v] \in \mleft(P\times_\Psi N\mright)_x$ for a fixed $p \in P_x$. We will frequently use this diffeomorphism in the following without further notice.
 
-A very important example are of course associated vector bundles, related to $N$ being a vetor space. We need a similar concept for Lie groups.
+A very important example are of course associated vector bundles, related to $N$ being a vector space, and $\Psi$ a Lie group representation. Similarly one has associated Lie group bundles: 
+
+We need a similar concept for Lie groups.
 
 \begin{definitions}{Lie group representation on Lie groups, \newline \cite[special situation of the comment after Ex.\ 1.7.14, page 47]{mackenzieGeneralTheory}}{LieGroupActingOnLieGroup}
 Let $G, H$ be Lie groups. Then a \textbf{Lie group representation of $G$ on $H$} is a smooth left action $\psi$ of $G$ on $H$
