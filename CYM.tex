@@ -1405,7 +1405,7 @@ and $U_i \times \mathrm{Aut}(W)$ acts canonically on $U_i \times W$ in a fibre-w
 
 \subsection{Associated Lie group bundles}\label{AssocLGBsSubSection}
 
-For another important example recall that there is the notion of associated fibre bundles; following \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$ over a smooth manifold $M$, $N$ another smooth manifold, and $\Psi$ a smooth left $G$-action denoted by
+For another important example recall that there is the notion of associated fibre bundles and related concepts; following references like \cite[\S1, Construction 1.3.8, page 20]{mackenzieGeneralTheory} and \cite[\S 4.7, page 237ff.; see also Rem.\ 4.7.8, page 242f.]{Hamilton}: Let $P \stackrel{\pi_P}{\to} M$ be a principal bundle with structural Lie group $G$ over a smooth manifold $M$, $N$ another smooth manifold, and $\Psi$ a smooth left $G$-action denoted by
 \bas
 G \times N &\to N,\\
 (g, v) &\mapsto \Psi(g, v) \coloneqq g \cdot v.
@@ -1431,301 +1431,320 @@ where the projection $\pi_{P\times_\Psi N}: P\times_\Psi N \to M$ is given by
 \eas
 for all $[p, v] \in P\times_\Psi N$. For $x \in M$, the fibre $\mleft(P\times_\Psi N\mright)_x$ is given by $\mleft( P_x \times N  \mright) \Big/ G = P_x \times_\Psi N$, and the fibre is diffeomorphic to $N$ by $N \ni v \mapsto [p, v] \in \mleft(P\times_\Psi N\mright)_x$ for a fixed $p \in P_x$. We will frequently use this diffeomorphism in the following without further notice.
 
-A very important example are of course associated vector bundles, related to $N$ being a vector space, and $\Psi$ a Lie group representation. Similarly one has associated Lie group bundles: 
-
-We need a similar concept for Lie groups.
-
-\begin{definitions}{Lie group representation on Lie groups, \newline \cite[special situation of the comment after Ex.\ 1.7.14, page 47]{mackenzieGeneralTheory}}{LieGroupActingOnLieGroup}
-Let $G, H$ be Lie groups. Then a \textbf{Lie group representation of $G$ on $H$} is a smooth left action $\psi$ of $G$ on $H$
-\bas
-G \times H
-&\to H,\\
-(g,h)
-&\mapsto
-\psi_g(h)
-\coloneqq
-\psi(g, h)
-\eas
-such that
-\ba
-\psi_g(hq)
-&=
-\psi_g(h)
-~ \psi_g(q)
-\ea
-for all $g \in G$ and $h,q \in H$.
-\end{definitions}
-
-\begin{remarks}{Note about labeling}{WhyRepresentation}
-Observe that we have by the definition of group actions
-\bas
-\psi_{gg^\prime}
-&=
-\psi_g \circ \psi_{g^\prime}
-\eas
-for all $g, g^\prime \in G$, viewing $\psi_g$ as a map $H \to H$. Therefore we can view the action $\psi$ as a group homomorphism
-\bas
-G &\to \mathrm{Aut}(H),
-\eas
-where $\mathrm{Aut}(H)$ is the set of Lie group automorphisms. The similarity to Lie group representations on vector spaces is obvious, thence the name. In fact, these integrate Lie group representations on Lie algebras: Observe that $\mathrm{D}_{e}\psi_g$ is a Lie algebra homomorphism $\mathfrak{h} \to \mathfrak{h}$ due to that $\psi_g$ is a Lie group homomorphism, where $\mathfrak{h}$ is the Lie algebra of $H$ and $e$ is the neutral element of $H$. $\mathrm{D}_{e}\psi_g$ is an automorphism because $\psi_g$ is, and it is a homomorphism in $g$ due to that $\psi_{gg^\prime} = \psi_g \circ \psi_{g^\prime}$ implies $\mathrm{D}_e\psi_{gg^\prime} = \mathrm{D}_e\psi_g \circ \mathrm{D}_e\psi_{g^\prime}$, and thus $g \mapsto \mathrm{D}_e\psi_g$ is a $G$-representation on $\mathfrak{h}$ with values in automorphisms of Lie algebras (not just vector spaces).
-\newline
-
-This definition is of course also motivated by various references pointing out that Lie group representations define Lie group actions with extra properties; see for example \cite[\S 3, Ex.\ 3.4.2, page 143f.]{Hamilton}. In \cite[comments after Ex.\ 1.7.14, page 47]{mackenzieGeneralTheory} this definition is also called \textit{action by Lie group isomorphisms}.
-\end{remarks}
-
-With this we can discuss and define associated Lie group bundles; the following definition is clearly motivated by the definition of associated vector bundles as \textit{e.g.}\ provided in \cite[\S 4, Thm.\ 4.7.2, page 239f.]{Hamilton}.
-
-\begin{theorems}{Associated Lie group bundle as quotient}{AssociatedGroupBundlesHaveGroupStructure}
-Let $G, H$ be Lie groups, $P \stackrel{\pi_P}{\to} M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then $\mathcal{H} \coloneqq P \times_\psi H$ is an LGB 
-\begin{center}
-	\begin{tikzcd}
-		H \arrow{r} & \mathcal{H} \arrow{d}{\pi} \\
-		& M
-	\end{tikzcd}
-\end{center}
-with projection $\pi$ given by
-\ba
-\mathcal{H} &\to M,\nonumber\\
-[p, h] &\mapsto \pi_P(p),
-\ea
-and fibres
-\ba
-\mathcal{H}_x
-&=
-P_x \times_\psi H
-\ea
-for all $x \in M$, which are isomorphic to $H$ as Lie groups. The Lie group structure on each fibre $\mathcal{H}_x$ is defined by
-\ba\label{LiegroupStructureOnFibresofAssociated}
+A very important example are of course associated vector bundles, related to $N$ being a vector space, and $\Psi$ a Lie group representation. Similarly one has associated Lie group bundles: If $G$ acts on another Lie group $H$ by Lie group automorphisms, then $P \times_\psi H$ canonically admits an LGB structure given by
+\begin{equation}\label{LiegroupStructureOnFibresofAssociated}
 [p, h] \cdot \mleft[p, q\mright]
-&\coloneqq
-\mleft[ p, hq \mright]
-\ea
-for all $h, q \in H$ and $p \in P_x$ (that is, $\pi_P(p) = x$).
-\end{theorems}
-
-\begin{remarks}{Neutral and inverse elements}{NeutralAndInverseInAssocLGB}
-The neutral element for $\mathcal{H}_x$ ($x \in M$) is given by
-\bas
-e_x
-&=
-[p, e],
-\eas
-where $p \in P_x$ is arbitrary and $e$ is the neutral element of $H$. This is clearly independent of the choice of $p$ due to
-\bas
-\mleft[ p, e \mright]
-&=
-\mleft[ p \cdot g, \psi_{g^{-1}}(e) \mright]
-=
-\mleft[ p \cdot g, e \mright]
-\eas
-for all $g \in G$. Thence, the fact that $e_x$ is the neutral element follows immediately.
-
-By Def.\ \eqref{LiegroupStructureOnFibresofAssociated} the inverse of $[p, h] \in \mathcal{H}_x$ is clearly given by
-\bas
-\mleft( [p, h] \mright)^{-1}
-&=
-\mleft[ p, h^{-1} \mright].
-\eas
-\end{remarks}
-
-\begin{proof}[Proof of Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}]
-\leavevmode\newline
-\indent $\bullet$ That $\pi$ is the well-defined projection and that the fibres are precisely $P_x \times_\psi H$ for all $x \in M$ is well-known, see our discussion before Def.\ \ref{def:LieGroupActingOnLieGroup} and the references therein; it is also very straightforward to check. We also discussed that $\mathcal{H}$ is a fibre bundle with structural fibre $H$. Hence, if one knows that the proposed group structure in Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined, then the smoothness of the group structure is implied by the smoothness structures of $H$ and $\mathcal{H}$. Thence, let us check whether Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined. Let $x \in M$, $p \in P_x$ and $p^\prime \coloneqq p \cdot g^\prime$ be another element of $P_x$, where $g^\prime \in G$. Also let $[p_1,h_1], [p_2, h_2] \in P_x \times_\psi H$; then we have unique elements $q_i, q_i^\prime$ of $G$ such that ($i \in \{1,2\}$)
-\bas
-p_i &= p \cdot q_i,&
-p_i &= p^\prime \cdot q_i^\prime,
-\eas
-especially, it follows $q_i = g^\prime q_i^\prime$.
-On the one hand, if we use $p$ as fixed element of $P_x$ to calculate the multiplication, we get
-\ba\label{MultiPlicationInAssocGroup}
-[p_1,h_1] \cdot [p_2,h_2]
-&=
-\mleft[ p, \psi_{q_1}(h_1) \mright]
-\cdot \mleft[ p, \psi_{q_2}(h_2) \mright]
-=
-\mleft[ p, \psi_{q_1}(h_1) ~ \psi_{q_2}(h_2) \mright],
-\ea
-on the other hand, using Def.\ \ref{def:LieGroupActingOnLieGroup} and $p^\prime = p \cdot g^\prime$ instead of $p$,
-\bas
-[p_1,h_1] \cdot [p_2,h_2]
-&=
-\mleft[ p \cdot g^\prime, \psi_{q_1^\prime}(h_1) ~ \psi_{q_2^\prime}(h_2) \mright]
-\\
-&=
-\Bigl[ p, \underbrace{\psi_{g^\prime} \mleft( \psi_{q_1^\prime}(h_1) ~ \psi_{q_2^\prime}(h_2) \mright)}_{= \psi_{g^\prime} \mleft( \psi_{q_1^\prime}(h_1) \mright) ~ \psi_{g^\prime} \mleft( \psi_{q_2^\prime}(h_2) \mright)} \Bigr]
-\\
-&=
-\mleft[ p, \psi_{g^\prime q_1^\prime}(h_1) ~ \psi_{g^\prime q_2^\prime}(h_2) \mright]
-\\
-&=
-\mleft[ p, \psi_{q_1}(h_1) ~ \psi_{q_2}(h_2) \mright],
-\eas
-which implies that Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined, and thus defines a Lie group structure on each fibre of $\mathcal{H}$.
-
-$\bullet$ That the fibres $\mathcal{H}_x$ are isomorphic to $H$ as Lie groups for all $x \in M$ also quickly follows. Recall by our discussion before Def.\ \ref{def:LieGroupActingOnLieGroup} that the fibres are diffeormorphic to $H$ by $H \ni h \mapsto [p, h] \in \mathcal{H}_x$ for a fixed $p \in P_x$. By Def.\ \eqref{LiegroupStructureOnFibresofAssociated} it is clear that this map is a Lie group homomorphism and hence a Lie group isomorphism.
-
-$\bullet$ Let us now construct an LGB atlas for $\mathcal{H}$, denoting its maps by $\phi_U$ w.r.t.\ an open subset $U \subset M$. For this we will use a principal bundle atlas for $P$, that is, for some $U \subset M$ open and a local trivialization $\varphi_U: P_U \to U \times G$ of $P$ we write
-\bas
-\varphi_U(p)
-&=
-\bigl( \pi_P(p), \beta_U(p) \bigr)
-\eas
-for all $p \in P$, where $\beta_U: P_U \to G$ is an equivariant map, \textit{i.e.}\ $\beta_U(p \cdot g) = \beta_U(p) ~ g$ for all $g \in G$. Then define $\phi_U$ as a map by 
-\bas
-\mathcal{H}_U
-&\to
-U \times H,\\
-[p, h]
-&\mapsto
-\mleft(
-	\pi_P(p), \psi_{\beta_U(p)} (h)
-\mright).
-\eas
-$\phi_U$ is well-defined: Let $\mleft[p^\prime, h^\prime\mright] \in \mathcal{H}_U$ with $\mleft[p^\prime, h^\prime\mright] = \mleft[p, h\mright]$. Then there is a $g \in G$ such that
-\bas
-\mleft(p^\prime, h^\prime\mright)
-&=
-\mleft( p \cdot g, \psi_{g^{-1}}(h) \mright),
-\eas
-hence, using the equivariance of $\beta_U$ and Def.\ \ref{def:LieGroupActingOnLieGroup},
-\bas
-\phi_U\mleft( \mleft[p^\prime, h^\prime\mright] \mright)
-&=
-\Bigl(
-	\underbrace{\pi_P\mleft(p \cdot g\mright)}_{= \pi_P(p)}, \underbrace{\mleft(\psi_{\beta_U\mleft(p \cdot g\mright)} \circ \psi_{g^{-1}} \mright)}_{= \psi_{\beta_U(p)} \circ \psi_g \circ \psi_{g^{-1}} } (h)
-\Bigr)
-=
-\mleft(
-	\pi_P(p), \psi_{\beta_U(p)} (h)
-\mright)
-=
-\phi_U\bigl( [p, h] \bigr),
-\eas
-which proves that $\phi_U$ is well-defined. Denote the projection onto equivalence classes $P \times H \to \mathcal{H}$ by $\varpi$, then observe
-\bas
-\phi_U \circ \varpi
-&=
-L,
-\eas
-where $L_U: P_U \times H \to U \times H$ is given by $L_U(p,h) \coloneqq \mleft( \pi_P(p), \psi_{\beta_U(p)} (h) \mright)$ for all $(p, h) \in P_U \times H$. $L_U$ is clearly smooth and recall that $\varpi$ is a smooth surjective submersion, therefore $\phi_U$ is smooth; this is a well-known fact for right-compositions with surjective submersions, see \textit{e.g.}\ \cite[\S 3.7.2, Lemma 3.7.5, page 153]{Hamilton}. We define a candidate of the inverse $\phi_U^{-1}: U \times H \to \mathcal{H}_U$ by
-\bas
-\phi_U^{-1}(x, h)
-&=
-\mleft[ \varphi_U^{-1}\mleft(x, e\mright), h \mright]
-\eas
-for all $(x, h) \in U \times H$, where $e$ is the neutral element of $G$.
-By the definition of $\varphi_U$ we immediately get
-\bas
-(x, e)
-&=
-\mleft( \varphi_U \circ \varphi^{-1}_U \mright)(x, e)
-=
-\Bigl(
-	\pi_P\mleft( \varphi_U^{-1}(x, e) \mright), \beta_U\mleft( \varphi_U^{-1}(x, e) \mright)
-\Bigr),
-\eas
-for all $x \in U$, and, also using again the equivariance of $\beta_U$,
-\bas
-\varphi^{-1}_U\mleft(\pi_P(p), e\mright)
-&=
-\varphi^{-1}_U\Bigl(\pi_P\mleft(p \cdot \beta_U^{-1}(p) \mright), \beta_U(p)~\beta_U^{-1}(p)\Bigr)
-\\
-&=
-\varphi^{-1}_U\Bigl(\pi_P\mleft(p \cdot \beta_U^{-1}(p) \mright), \beta_U\mleft(p \cdot \beta_U^{-1}(p)\mright)\Bigr)
-\\
-&=
-\mleft(\varphi^{-1}_U \circ \varphi_U\mright)\mleft( p \cdot \beta_U^{-1}(p) \mright)
-\\
-&=
-p \cdot \beta_U^{-1}(p)
-\eas
-for all $p \in P_U$.
-Then altogether
-\bas
-\mleft(\phi_U \circ \phi_U^{-1}\mright)(x, h)
-&=
-\mleft(
-	\pi_P\mleft( \varphi^{-1}_U(x, e) \mright), \psi_{\beta_U\mleft( \varphi^{-1}_U(x, e) \mright)} (h)
-\mright)
-=
-\bigl(
-	x, \psi_e(h)
-\bigr)
-=
-(x, h),
-\eas
-for all $(x, h) \in U \times H$, and
-\bas
-\mleft(\phi_U^{-1} \circ \phi_U\mright)([p, h])
-&=
-\bigl[
-	\underbrace{\varphi_U^{-1}\mleft( \pi_P(p), e \mright)}_{= p \cdot \beta_U^{-1}(p) },
-	\psi_{\beta_U(p)}(h)
-\bigr]
-=
-\mleft[
-	p, h
-\mright]
-\eas
-for all $[p, h] \in \mathcal{H}_U$. Thus, $\phi_U$ is bijective; additionally observe
-\bas
-\phi_U^{-1}(x, h)
-&=
-\varpi\mleft( \varphi_U^{-1}(x, e), h \mright)
-\eas
-such that $\phi_U^{-1}$ is clearly smooth as the composition of smooth maps, and we therefore conclude that $\phi_U$ is a diffeomorphism. Finally, derive with Def.\ \ref{def:LieGroupActingOnLieGroup} and Eq.\ \eqref{MultiPlicationInAssocGroup} that
-\bas
-\mleft(\mathrm{pr}_2 \circ \phi_U\mright)\bigl( [p_1, h_1] \cdot [p_2, h_2] \bigr)
-&=
-\mleft(\mathrm{pr}_2 \circ \phi_U\mright)\bigl( \mleft[ p, \psi_{q_1}(h_1) \cdot \psi_{q_2}(h_2) \mright] \bigr)
-\\
-&=
-\psi_{\beta_U(p)} \bigl( \psi_{q_1}(h_1) \cdot \psi_{q_2}(h_2) \bigr)
-\\
-&=
-\underbrace{\psi_{\beta_U(p)} \bigl( \psi_{q_1}(h_1) \bigr)}_{= \psi_{\beta_U(p) \cdot q_1} (h_1)}
-	\cdot ~ \psi_{\beta_U(p)} \bigl( \psi_{q_2}(h_2) \bigr)
-\\
-&=
-\psi_{\beta_U(p_1)} (h_1) \cdot \psi_{\beta_U(p_2)} (h_2)
-\\
-&=
-\mleft( \mathrm{pr}_2 \circ \phi_U \mright)\bigl( [p_1, h_1] \bigr)
-	\cdot \mleft( \mathrm{pr}_2 \circ \phi_U \mright)\bigl( [p_1, h_1] \bigr)
-\eas
-for all $[p_1, h_1], [p_2, h_2] \in \mathcal{H}_x$, where we used again the equivariance of $\beta_U$ and the same notation as introduced for Eq.\ \eqref{MultiPlicationInAssocGroup}, and $\mathrm{pr}_2$ denotes the projection onto the second factor. Thence, $\mathrm{pr}_2 \circ \phi_U$ induces Lie group isomorphisms $\mathcal{H}_x \to H$ for all $x \in U$; by Def.\ \ref{def:LieGroupBundle} we can finally conclude that $\mathcal{H}$ is an LGB.
-\end{proof}
-
-Hence, we define:
-
-\begin{definitions}{Associated Lie group bundle, \newline labeling similar to \cite[\S 4.7, Def.\ 4.7.3, page 240]{Hamilton}}{AssociatedLGB}
-Let $G, H$ be Lie groups, $P \stackrel{\pi_P}{\to} M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then we call the LGB
-\bas
-\mathcal{H}
-&\coloneqq
-\mleft( P \times H \mright) \Big/ G
 \coloneqq
-P \times_\psi H
-\eas
-the \textbf{Lie group bundle (LGB) associated} to the principal bundle $P$ and the representation $\psi$ on $H$:
-\begin{center}
-	\begin{tikzcd}
-	H \arrow{r}& P \times_\psi H \arrow{d}{\pi_{\mathcal{H}}}\\
-	& M
-	\end{tikzcd}
-\end{center}
-\end{definitions}
+\mleft[ p, hq \mright]
+\end{equation}
+for all $h, q \in H$ and $p \in P_x$ (that is, $\pi_P(p) = x$). The structural Lie group is given by $H$, and one can check that the identity section is point-wise well-defined by
+\begin{equation*}
+e_x
+=
+[p, e]~,
+\end{equation*}
+where $p \in P_x$ is arbitrary and $e$ is the neutral element of $H$; the inverse of $[p, h] \in \mathcal{H}_x$ is clearly given by
+\begin{equation*}
+\mleft( [p, h] \mright)^{-1}
+=
+\mleft[ p, h^{-1} \mright]~.
+\end{equation*}
+
+
+%We need a similar concept for Lie groups.
+%
+%\begin{definitions}{Lie group representation on Lie groups, \newline \cite[special situation of the comment after Ex.\ 1.7.14, page 47]{mackenzieGeneralTheory}}{LieGroupActingOnLieGroup}
+%Let $G, H$ be Lie groups. Then a \textbf{Lie group representation of $G$ on $H$} is a smooth left action $\psi$ of $G$ on $H$
+%\bas
+%G \times H
+%&\to H,\\
+%(g,h)
+%&\mapsto
+%\psi_g(h)
+%\coloneqq
+%\psi(g, h)
+%\eas
+%such that
+%\ba
+%\psi_g(hq)
+%&=
+%\psi_g(h)
+%~ \psi_g(q)
+%\ea
+%for all $g \in G$ and $h,q \in H$.
+%\end{definitions}
+%
+%\begin{remarks}{Note about labeling}{WhyRepresentation}
+%Observe that we have by the definition of group actions
+%\bas
+%\psi_{gg^\prime}
+%&=
+%\psi_g \circ \psi_{g^\prime}
+%\eas
+%for all $g, g^\prime \in G$, viewing $\psi_g$ as a map $H \to H$. Therefore we can view the action $\psi$ as a group homomorphism
+%\bas
+%G &\to \mathrm{Aut}(H),
+%\eas
+%where $\mathrm{Aut}(H)$ is the set of Lie group automorphisms. The similarity to Lie group representations on vector spaces is obvious, thence the name. In fact, these integrate Lie group representations on Lie algebras: Observe that $\mathrm{D}_{e}\psi_g$ is a Lie algebra homomorphism $\mathfrak{h} \to \mathfrak{h}$ due to that $\psi_g$ is a Lie group homomorphism, where $\mathfrak{h}$ is the Lie algebra of $H$ and $e$ is the neutral element of $H$. $\mathrm{D}_{e}\psi_g$ is an automorphism because $\psi_g$ is, and it is a homomorphism in $g$ due to that $\psi_{gg^\prime} = \psi_g \circ \psi_{g^\prime}$ implies $\mathrm{D}_e\psi_{gg^\prime} = \mathrm{D}_e\psi_g \circ \mathrm{D}_e\psi_{g^\prime}$, and thus $g \mapsto \mathrm{D}_e\psi_g$ is a $G$-representation on $\mathfrak{h}$ with values in automorphisms of Lie algebras (not just vector spaces).
+%\newline
+%
+%This definition is of course also motivated by various references pointing out that Lie group representations define Lie group actions with extra properties; see for example \cite[\S 3, Ex.\ 3.4.2, page 143f.]{Hamilton}. In \cite[comments after Ex.\ 1.7.14, page 47]{mackenzieGeneralTheory} this definition is also called \textit{action by Lie group isomorphisms}.
+%\end{remarks}
+%
+%With this we can discuss and define associated Lie group bundles; the following definition is clearly motivated by the definition of associated vector bundles as \textit{e.g.}\ provided in \cite[\S 4, Thm.\ 4.7.2, page 239f.]{Hamilton}.
+%
+%\begin{theorems}{Associated Lie group bundle as quotient}{AssociatedGroupBundlesHaveGroupStructure}
+%Let $G, H$ be Lie groups, $P \stackrel{\pi_P}{\to} M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then $\mathcal{H} \coloneqq P \times_\psi H$ is an LGB 
+%\begin{center}
+	%\begin{tikzcd}
+		%H \arrow{r} & \mathcal{H} \arrow{d}{\pi} \\
+		%& M
+	%\end{tikzcd}
+%\end{center}
+%with projection $\pi$ given by
+%\ba
+%\mathcal{H} &\to M,\nonumber\\
+%[p, h] &\mapsto \pi_P(p),
+%\ea
+%and fibres
+%\ba
+%\mathcal{H}_x
+%&=
+%P_x \times_\psi H
+%\ea
+%for all $x \in M$, which are isomorphic to $H$ as Lie groups. The Lie group structure on each fibre $\mathcal{H}_x$ is defined by
+%\ba
+%[p, h] \cdot \mleft[p, q\mright]
+%&\coloneqq
+%\mleft[ p, hq \mright]
+%\ea
+%for all $h, q \in H$ and $p \in P_x$ (that is, $\pi_P(p) = x$).
+%\end{theorems}
+%
+%\begin{remarks}{Neutral and inverse elements}{NeutralAndInverseInAssocLGB}
+%The neutral element for $\mathcal{H}_x$ ($x \in M$) is given by
+%\bas
+%e_x
+%&=
+%[p, e],
+%\eas
+%where $p \in P_x$ is arbitrary and $e$ is the neutral element of $H$. This is clearly independent of the choice of $p$ due to
+%\bas
+%\mleft[ p, e \mright]
+%&=
+%\mleft[ p \cdot g, \psi_{g^{-1}}(e) \mright]
+%=
+%\mleft[ p \cdot g, e \mright]
+%\eas
+%for all $g \in G$. Thence, the fact that $e_x$ is the neutral element follows immediately.
+%
+%By Def.\ \eqref{LiegroupStructureOnFibresofAssociated} the inverse of $[p, h] \in \mathcal{H}_x$ is clearly given by
+%\bas
+%\mleft( [p, h] \mright)^{-1}
+%&=
+%\mleft[ p, h^{-1} \mright].
+%\eas
+%\end{remarks}
+%
+%\begin{proof}[Proof of Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}]
+%\leavevmode\newline
+%\indent $\bullet$ That $\pi$ is the well-defined projection and that the fibres are precisely $P_x \times_\psi H$ for all $x \in M$ is well-known, see our discussion before Def.\ \ref{def:LieGroupActingOnLieGroup} and the references therein; it is also very straightforward to check. We also discussed that $\mathcal{H}$ is a fibre bundle with structural fibre $H$. Hence, if one knows that the proposed group structure in Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined, then the smoothness of the group structure is implied by the smoothness structures of $H$ and $\mathcal{H}$. Thence, let us check whether Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined. Let $x \in M$, $p \in P_x$ and $p^\prime \coloneqq p \cdot g^\prime$ be another element of $P_x$, where $g^\prime \in G$. Also let $[p_1,h_1], [p_2, h_2] \in P_x \times_\psi H$; then we have unique elements $q_i, q_i^\prime$ of $G$ such that ($i \in \{1,2\}$)
+%\bas
+%p_i &= p \cdot q_i,&
+%p_i &= p^\prime \cdot q_i^\prime,
+%\eas
+%especially, it follows $q_i = g^\prime q_i^\prime$.
+%On the one hand, if we use $p$ as fixed element of $P_x$ to calculate the multiplication, we get
+%\ba\label{MultiPlicationInAssocGroup}
+%[p_1,h_1] \cdot [p_2,h_2]
+%&=
+%\mleft[ p, \psi_{q_1}(h_1) \mright]
+%\cdot \mleft[ p, \psi_{q_2}(h_2) \mright]
+%=
+%\mleft[ p, \psi_{q_1}(h_1) ~ \psi_{q_2}(h_2) \mright],
+%\ea
+%on the other hand, using Def.\ \ref{def:LieGroupActingOnLieGroup} and $p^\prime = p \cdot g^\prime$ instead of $p$,
+%\bas
+%[p_1,h_1] \cdot [p_2,h_2]
+%&=
+%\mleft[ p \cdot g^\prime, \psi_{q_1^\prime}(h_1) ~ \psi_{q_2^\prime}(h_2) \mright]
+%\\
+%&=
+%\Bigl[ p, \underbrace{\psi_{g^\prime} \mleft( \psi_{q_1^\prime}(h_1) ~ \psi_{q_2^\prime}(h_2) \mright)}_{= \psi_{g^\prime} \mleft( \psi_{q_1^\prime}(h_1) \mright) ~ \psi_{g^\prime} \mleft( \psi_{q_2^\prime}(h_2) \mright)} \Bigr]
+%\\
+%&=
+%\mleft[ p, \psi_{g^\prime q_1^\prime}(h_1) ~ \psi_{g^\prime q_2^\prime}(h_2) \mright]
+%\\
+%&=
+%\mleft[ p, \psi_{q_1}(h_1) ~ \psi_{q_2}(h_2) \mright],
+%\eas
+%which implies that Def.\ \eqref{LiegroupStructureOnFibresofAssociated} is well-defined, and thus defines a Lie group structure on each fibre of $\mathcal{H}$.
+%
+%$\bullet$ That the fibres $\mathcal{H}_x$ are isomorphic to $H$ as Lie groups for all $x \in M$ also quickly follows. Recall by our discussion before Def.\ \ref{def:LieGroupActingOnLieGroup} that the fibres are diffeormorphic to $H$ by $H \ni h \mapsto [p, h] \in \mathcal{H}_x$ for a fixed $p \in P_x$. By Def.\ \eqref{LiegroupStructureOnFibresofAssociated} it is clear that this map is a Lie group homomorphism and hence a Lie group isomorphism.
+%
+%$\bullet$ Let us now construct an LGB atlas for $\mathcal{H}$, denoting its maps by $\phi_U$ w.r.t.\ an open subset $U \subset M$. For this we will use a principal bundle atlas for $P$, that is, for some $U \subset M$ open and a local trivialization $\varphi_U: P_U \to U \times G$ of $P$ we write
+%\bas
+%\varphi_U(p)
+%&=
+%\bigl( \pi_P(p), \beta_U(p) \bigr)
+%\eas
+%for all $p \in P$, where $\beta_U: P_U \to G$ is an equivariant map, \textit{i.e.}\ $\beta_U(p \cdot g) = \beta_U(p) ~ g$ for all $g \in G$. Then define $\phi_U$ as a map by 
+%\bas
+%\mathcal{H}_U
+%&\to
+%U \times H,\\
+%[p, h]
+%&\mapsto
+%\mleft(
+	%\pi_P(p), \psi_{\beta_U(p)} (h)
+%\mright).
+%\eas
+%$\phi_U$ is well-defined: Let $\mleft[p^\prime, h^\prime\mright] \in \mathcal{H}_U$ with $\mleft[p^\prime, h^\prime\mright] = \mleft[p, h\mright]$. Then there is a $g \in G$ such that
+%\bas
+%\mleft(p^\prime, h^\prime\mright)
+%&=
+%\mleft( p \cdot g, \psi_{g^{-1}}(h) \mright),
+%\eas
+%hence, using the equivariance of $\beta_U$ and Def.\ \ref{def:LieGroupActingOnLieGroup},
+%\bas
+%\phi_U\mleft( \mleft[p^\prime, h^\prime\mright] \mright)
+%&=
+%\Bigl(
+	%\underbrace{\pi_P\mleft(p \cdot g\mright)}_{= \pi_P(p)}, \underbrace{\mleft(\psi_{\beta_U\mleft(p \cdot g\mright)} \circ \psi_{g^{-1}} \mright)}_{= \psi_{\beta_U(p)} \circ \psi_g \circ \psi_{g^{-1}} } (h)
+%\Bigr)
+%=
+%\mleft(
+	%\pi_P(p), \psi_{\beta_U(p)} (h)
+%\mright)
+%=
+%\phi_U\bigl( [p, h] \bigr),
+%\eas
+%which proves that $\phi_U$ is well-defined. Denote the projection onto equivalence classes $P \times H \to \mathcal{H}$ by $\varpi$, then observe
+%\bas
+%\phi_U \circ \varpi
+%&=
+%L,
+%\eas
+%where $L_U: P_U \times H \to U \times H$ is given by $L_U(p,h) \coloneqq \mleft( \pi_P(p), \psi_{\beta_U(p)} (h) \mright)$ for all $(p, h) \in P_U \times H$. $L_U$ is clearly smooth and recall that $\varpi$ is a smooth surjective submersion, therefore $\phi_U$ is smooth; this is a well-known fact for right-compositions with surjective submersions, see \textit{e.g.}\ \cite[\S 3.7.2, Lemma 3.7.5, page 153]{Hamilton}. We define a candidate of the inverse $\phi_U^{-1}: U \times H \to \mathcal{H}_U$ by
+%\bas
+%\phi_U^{-1}(x, h)
+%&=
+%\mleft[ \varphi_U^{-1}\mleft(x, e\mright), h \mright]
+%\eas
+%for all $(x, h) \in U \times H$, where $e$ is the neutral element of $G$.
+%By the definition of $\varphi_U$ we immediately get
+%\bas
+%(x, e)
+%&=
+%\mleft( \varphi_U \circ \varphi^{-1}_U \mright)(x, e)
+%=
+%\Bigl(
+	%\pi_P\mleft( \varphi_U^{-1}(x, e) \mright), \beta_U\mleft( \varphi_U^{-1}(x, e) \mright)
+%\Bigr),
+%\eas
+%for all $x \in U$, and, also using again the equivariance of $\beta_U$,
+%\bas
+%\varphi^{-1}_U\mleft(\pi_P(p), e\mright)
+%&=
+%\varphi^{-1}_U\Bigl(\pi_P\mleft(p \cdot \beta_U^{-1}(p) \mright), \beta_U(p)~\beta_U^{-1}(p)\Bigr)
+%\\
+%&=
+%\varphi^{-1}_U\Bigl(\pi_P\mleft(p \cdot \beta_U^{-1}(p) \mright), \beta_U\mleft(p \cdot \beta_U^{-1}(p)\mright)\Bigr)
+%\\
+%&=
+%\mleft(\varphi^{-1}_U \circ \varphi_U\mright)\mleft( p \cdot \beta_U^{-1}(p) \mright)
+%\\
+%&=
+%p \cdot \beta_U^{-1}(p)
+%\eas
+%for all $p \in P_U$.
+%Then altogether
+%\bas
+%\mleft(\phi_U \circ \phi_U^{-1}\mright)(x, h)
+%&=
+%\mleft(
+	%\pi_P\mleft( \varphi^{-1}_U(x, e) \mright), \psi_{\beta_U\mleft( \varphi^{-1}_U(x, e) \mright)} (h)
+%\mright)
+%=
+%\bigl(
+	%x, \psi_e(h)
+%\bigr)
+%=
+%(x, h),
+%\eas
+%for all $(x, h) \in U \times H$, and
+%\bas
+%\mleft(\phi_U^{-1} \circ \phi_U\mright)([p, h])
+%&=
+%\bigl[
+	%\underbrace{\varphi_U^{-1}\mleft( \pi_P(p), e \mright)}_{= p \cdot \beta_U^{-1}(p) },
+	%\psi_{\beta_U(p)}(h)
+%\bigr]
+%=
+%\mleft[
+	%p, h
+%\mright]
+%\eas
+%for all $[p, h] \in \mathcal{H}_U$. Thus, $\phi_U$ is bijective; additionally observe
+%\bas
+%\phi_U^{-1}(x, h)
+%&=
+%\varpi\mleft( \varphi_U^{-1}(x, e), h \mright)
+%\eas
+%such that $\phi_U^{-1}$ is clearly smooth as the composition of smooth maps, and we therefore conclude that $\phi_U$ is a diffeomorphism. Finally, derive with Def.\ \ref{def:LieGroupActingOnLieGroup} and Eq.\ \eqref{MultiPlicationInAssocGroup} that
+%\bas
+%\mleft(\mathrm{pr}_2 \circ \phi_U\mright)\bigl( [p_1, h_1] \cdot [p_2, h_2] \bigr)
+%&=
+%\mleft(\mathrm{pr}_2 \circ \phi_U\mright)\bigl( \mleft[ p, \psi_{q_1}(h_1) \cdot \psi_{q_2}(h_2) \mright] \bigr)
+%\\
+%&=
+%\psi_{\beta_U(p)} \bigl( \psi_{q_1}(h_1) \cdot \psi_{q_2}(h_2) \bigr)
+%\\
+%&=
+%\underbrace{\psi_{\beta_U(p)} \bigl( \psi_{q_1}(h_1) \bigr)}_{= \psi_{\beta_U(p) \cdot q_1} (h_1)}
+	%\cdot ~ \psi_{\beta_U(p)} \bigl( \psi_{q_2}(h_2) \bigr)
+%\\
+%&=
+%\psi_{\beta_U(p_1)} (h_1) \cdot \psi_{\beta_U(p_2)} (h_2)
+%\\
+%&=
+%\mleft( \mathrm{pr}_2 \circ \phi_U \mright)\bigl( [p_1, h_1] \bigr)
+	%\cdot \mleft( \mathrm{pr}_2 \circ \phi_U \mright)\bigl( [p_1, h_1] \bigr)
+%\eas
+%for all $[p_1, h_1], [p_2, h_2] \in \mathcal{H}_x$, where we used again the equivariance of $\beta_U$ and the same notation as introduced for Eq.\ \eqref{MultiPlicationInAssocGroup}, and $\mathrm{pr}_2$ denotes the projection onto the second factor. Thence, $\mathrm{pr}_2 \circ \phi_U$ induces Lie group isomorphisms $\mathcal{H}_x \to H$ for all $x \in U$; by Def.\ \ref{def:LieGroupBundle} we can finally conclude that $\mathcal{H}$ is an LGB.
+%\end{proof}
+
+%Hence, we define:
+%
+%\begin{definitions}{Associated Lie group bundle, \newline labeling similar to \cite[\S 4.7, Def.\ 4.7.3, page 240]{Hamilton}}{AssociatedLGB}
+%Let $G, H$ be Lie groups, $P \stackrel{\pi_P}{\to} M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then we call the LGB
+%\bas
+%\mathcal{H}
+%&\coloneqq
+%\mleft( P \times H \mright) \Big/ G
+%\coloneqq
+%P \times_\psi H
+%\eas
+%the \textbf{Lie group bundle (LGB) associated} to the principal bundle $P$ and the representation $\psi$ on $H$:
+%\begin{center}
+	%\begin{tikzcd}
+	%H \arrow{r}& P \times_\psi H \arrow{d}{\pi_{\mathcal{H}}}\\
+	%& M
+	%\end{tikzcd}
+%\end{center}
+%\end{definitions}
 
 The special situation of $H = G$ is already an important example:
 
-\begin{examples}{Inner group bundle, \newline \cite[\S1, paragraph after Def.\ 1.1.19, page 11; comment after Construction 1.3.8, page 20]{mackenzieGeneralTheory}}{InnerLGBs}
+\begin{examples}{Inner group bundle}{InnerLGBs}
+\tcbsubtitle[before skip=\baselineskip]{\cite[\S1, paragraph after Def.\ 1.1.19, page 11; comment after Construction 1.3.8, page 20]{mackenzieGeneralTheory}}
 The \textbf{inner group bundle} or \textbf{inner LGB} of a principal bundle $P \to M$, denoted by $c_G(P)$, is defined by
 \ba
 c_G(P)
 &\coloneqq
 P \times_{c_G} G,
 \ea
-where $c_G: G \times G \to G$ is the left action of $G$ on itself given by the very well-known \textbf{conjugation}
+where $c_G: G \times G \to G$ is the left action of $G$ on itself given by \textbf{conjugation}
 \ba
 c_G(g,h)
 &\coloneqq
@@ -1735,18 +1754,15 @@ c_g (h)
 =
 ghg^{-1}
 \ea
-for all $g, h \in G$, where we also denote left- and right-multiplications (with $g$) by $L_g$ and $R_g$, respectively; see \textit{e.g.}\ \cite[beginning of \S 1.5.2, page 40f.]{Hamilton}\ for its common properties. It is well-known that $c_G$ satsfies the properties of a Lie group representation of $G$ on itself in the sense of Def.\ \ref{def:LieGroupActingOnLieGroup}.
-
-$c_G(P)$ is an LGB by Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}.
+for all $g, h \in G$, where we also denote left- and right-multiplications (with $g$) by $L_g$ and $R_g$, respectively. 
+%It is well-known that $c_G$ satsfies the properties of a Lie group representation of $G$ on itself in the sense of Def.\ \ref{def:LieGroupActingOnLieGroup}.
+%
+%$c_G(P)$ is an LGB by Thm.\ \ref{thm:AssociatedGroupBundlesHaveGroupStructure}.
 \end{examples}
 
-\section{LGB actions, part I}
+\subsection{Pullbacks of LGBs}
 
-\subsection{Definition}
-
-As for Lie groups, we are interested into their actions. The idea is the following, similar to \cite[\S 1.6, discussion around Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}: We have an LGB $\mathcal{G} \to M$ over a smooth manifold $M$, and we want to construct an action of $\mathcal{G}$ on another smooth manifold $N$. Each fibre of $\mathcal{G}$ is a Lie group, and we have a notion of Lie groups acting on a manifold $N$. Therefore one could define an LGB action as a collection of Lie group actions, that is, only sections of $\mathcal{G}$ act on $N$; however, one then expects that the general outcome of a product of $\Gamma(\mathcal{G})$ on $N$ would be smooth maps from $M$ to $N$. In order to recover a typical structure of action one could instead introduce a "multiplication rule", \textit{i.e.}~each point $p \in N$ can only be multiplied with elements of a specific fibre of $\mathcal{G}$. This "multiplication rule" will be described by a smooth map $f: N \to M$ in the sense of that the fibre over $f(p)$ will act on $p$.
-
-For this recall that there is the notion of pullbacks of fibre bundles, see \textit{e.g.}\ \cite[\S 4.1.4, page 203ff.; especially Thm.\ 4.1.17, page 204f.]{Hamilton}. That is, if we additionally have a smooth manifold $N$ and a smooth map $f: M \to N$, then we have the pullback $f^*\mathcal{G}$ of $\mathcal{G}$ as a fibre bundle defined as usual by
+For this recall that there is the notion of pullbacks of fibre bundles, see \textit{e.g.}\ \cite[\S 4.1.4, page 203ff.; especially Thm.\ 4.1.17, page 204f.]{Hamilton}. That is, if we additionally have a smooth manifold $N$ and a smooth map $f\colon N \to M$, then we have the pullback $f^*\mathcal{G}$ of an LGB $\mathcal{G} \to M$ as a fibre bundle defined as usual by
 \ba
 f^*\mathcal{G}
 &\coloneqq
@@ -1767,91 +1783,94 @@ That is, the following diagram commutes
 \end{center}
 where $\pi_1$ and $\pi_2$ are the projections onto the first and second factor, respectively, of $N \times \mathcal{G}$. Actually, $f^*\mathcal{G}$ carries a natural structure as an LGB.
 
-\begin{corollaries}{Pullbacks of LGBs are LGBs, \newline \cite[\S 2.3, simplified situation of the discussion around Prop.\ 2.3.1, page 63ff.]{mackenzieGeneralTheory}}{PullbackLGB}
-Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then $f^*\mathcal{G}$ has a unique (up to isomorphisms) LGB structure such that the projection $\pi_2: f^*\mathcal{G} \to \mathcal{G}$ onto the second factor is an LGB morphism over $f$ with $\pi_2|_x: (f^*\mathcal{G})_x \to \mathcal{G}_{f(x)}$ being a Lie group isomorphism for all $x \in N$.
+\begin{corollaries}{Pullbacks of LGBs are LGBs}{PullbackLGB}
+\tcbsubtitle[before skip=\baselineskip]{\cite[\S 2.3, simplified situation of the discussion around Prop.\ 2.3.1, page 63ff.]{mackenzieGeneralTheory}}
+Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f\colon N \to M$ a smooth map. Then $f^*\mathcal{G}$ has a unique (up to isomorphisms) LGB structure such that the projection $\pi_2\colon f^*\mathcal{G} \to \mathcal{G}$ onto the second factor is an LGB morphism over $f$ with $\pi_2|_x \colon (f^*\mathcal{G})_x \to \mathcal{G}_{f(x)}$ being a Lie group isomorphism for all $x \in N$.
 %
 %$f^*\mathcal{G}$ is the \textbf{pullback LGB of $\mathcal{G}$ (under $f$)}.
 \end{corollaries}
 
-\begin{remark}
-\leavevmode\newline
-The mentioned reference, \cite[\S 2.3, discussion around Prop.\ 2.3.1, page 63ff.]{mackenzieGeneralTheory}, is rather general, formulated for Lie groupoids. If the reader is only interested into LGBs, then see \textit{e.g.}\ \cite[\S 3, Thm.\ 3.1]{PullbackLGBLAB}.
-\end{remark}
-
-\begin{proof}
-\leavevmode\newline
-By construction, the structural fibre of $f^*\mathcal{G}$ is the same Lie group $G$ as for $\mathcal{G}$, and for all $x \in N$ we have $\mleft(f^*\mathcal{G}\mright)_x \cong \mathcal{G}_{f(x)}$, thence, the fibres are Lie groups and the fibrewise group multiplication has the form
-\ba\label{MultiplicationForPullbackLGBs}
-(x, g) \cdot (x, q) &= (x, gq)
-\ea
-for all $x \in N$ and $g,q \in \mleft(f^*\mathcal{G}\mright)_x$.
-We are left to show the existence of an LGB atlas. For this fix an LGB atlas $\{(U_i, \phi_i \}_{i \in I}$ of $\mathcal{G}$, where $I$ is an (index) set, $(U_i)_{i \in I}$ an open covering of $M$, and $\phi_i: \mathcal{G}|_{U_i} \to U_i \times G$ are LGB isomorphisms. Then $f^{-1}(U_i)$ gives rise to an open covering of $N$, and we get 
-\bas
-f^*\phi_i: \mleft.f^*\mathcal{G}\mright|_{f^{-1}(U_i)} &\to f^{-1}(U_i) \times G,\\
-(x, g) &\mapsto \mleft( x, \phi_{i, f(x)}(g) \mright),
-\eas
-where $\phi_{i, f(x)}: \mathcal{G}_{f(x)} \to G$ are the Lie group isomorphisms as defined in Def.\ \ref{def:LieGroupBundle}. It is immediate by construction that this gives an LGB atlas.
-
-That this is the unique (up to isomorphisms) LGB structure such that $\pi_2: f^*\mathcal{G} \to \mathcal{G}$ is an LGB morphism over $f$ inducing a Lie group isomorphism on each fibre simply follows by construction; observe for all $x \in N$ that $\pi_2|_x$ is clearly bijective. Furthermore, LGB morphisms need to be homomorphisms, which means here
-\bas
-\pi_2\bigl(
-	(x, g) \cdot (x, q)
-\bigr)
-&\stackrel{!}{=}
-\pi_2\bigl( (x, g) \bigr) \cdot \pi_2\bigl( (x, q) \bigr)
-=
-gq
-=
-\pi_2\bigl( (x, gq) \bigr)
-\eas
-for all $x \in N$ and $g,q \in \mleft(f^*\mathcal{G}\mright)_x$. By using the bijectivity of $\pi_2|_x$, the group structure leading to this equation is uniquely the one provided in Eq.\ \eqref{MultiplicationForPullbackLGBs}. 
-%Especially, $\pi_2$ is a homomorphism with the provided structure. 
-Assume we have another underlying LGB atlas in sense of Cor.\ \ref{cor:PullbackLGB} with an LGB chart $\psi_i$ on $\mleft.f^*\mathcal{G}\mright|_{f^{-1}(U_i)}$ (or just w.r.t.\ a subset of $U_i$), then
-\bas
-\phi_i \circ \pi_2 \circ \psi_i^{-1}
-&=
-\underbrace{\phi_i \circ \pi_2 \circ \mleft( f^*\phi_i \mright)^{-1}}_{= (f, \mathbb{1}_G)} \circ f^*\phi_i \circ \psi_i^{-1}
-=
-(f, \mathbb{1}_G) \circ
-f^*\phi_i \circ \psi_i^{-1},
-\eas
-$(f, \mathbb{1}_G)$ is clearly a Lie group isomorphism $f^{-1}(U_i) \times G \cong U_i \times G$ of trivial LGBs, and thus the condition about $\pi_2|_x$ being a Lie group isomorphism enforces that we can write
-\bas
-\mleft(f^*\phi_i \circ \psi_i^{-1}\mright)(x, g)
-&=
-\bigl( x, L_i(x, g) \bigr)
-\eas
-for all $(x, g) \in f^{-1}(U) \times G$, where $L_i(x, \cdot): G \to G$ is a Lie group automorphism. So, in total
-\bas
-\phi_i \circ \pi_2 \circ \psi_i^{-1}
-&=
-\bigl(
-	f, L
-\bigr),
-\eas
-and since $f$ and the left hand side are smooth, $L$ has to be smooth. We can conclude that $\psi_i$ gives rise to an LGB atlas compatible with the one defined by $f^*\phi_i$. This finalizes the proof.
-\end{proof}
+\begin{remarks}{Other references}{referencesPullbackLGB}
+The mentioned reference, \cite{mackenzieGeneralTheory}, is rather general, formulated for Lie groupoids. If the reader is only interested into LGBs, then see \textit{e.g.}\ \cite[\S 3, Thm.\ 3.1]{PullbackLGBLAB}.
+\end{remarks}
+%
+%\begin{proof}
+%\leavevmode\newline
+%By construction, the structural fibre of $f^*\mathcal{G}$ is the same Lie group $G$ as for $\mathcal{G}$, and for all $x \in N$ we have $\mleft(f^*\mathcal{G}\mright)_x \cong \mathcal{G}_{f(x)}$, thence, the fibres are Lie groups and the fibrewise group multiplication has the form
+%\ba\label{MultiplicationForPullbackLGBs}
+%(x, g) \cdot (x, q) &= (x, gq)
+%\ea
+%for all $x \in N$ and $g,q \in \mleft(f^*\mathcal{G}\mright)_x$.
+%We are left to show the existence of an LGB atlas. For this fix an LGB atlas $\{(U_i, \phi_i \}_{i \in I}$ of $\mathcal{G}$, where $I$ is an (index) set, $(U_i)_{i \in I}$ an open covering of $M$, and $\phi_i: \mathcal{G}|_{U_i} \to U_i \times G$ are LGB isomorphisms. Then $f^{-1}(U_i)$ gives rise to an open covering of $N$, and we get 
+%\bas
+%f^*\phi_i: \mleft.f^*\mathcal{G}\mright|_{f^{-1}(U_i)} &\to f^{-1}(U_i) \times G,\\
+%(x, g) &\mapsto \mleft( x, \phi_{i, f(x)}(g) \mright),
+%\eas
+%where $\phi_{i, f(x)}: \mathcal{G}_{f(x)} \to G$ are the Lie group isomorphisms as defined in Def.\ \ref{def:LieGroupBundle}. It is immediate by construction that this gives an LGB atlas.
+%
+%That this is the unique (up to isomorphisms) LGB structure such that $\pi_2: f^*\mathcal{G} \to \mathcal{G}$ is an LGB morphism over $f$ inducing a Lie group isomorphism on each fibre simply follows by construction; observe for all $x \in N$ that $\pi_2|_x$ is clearly bijective. Furthermore, LGB morphisms need to be homomorphisms, which means here
+%\begin{equation*}
+%\pi_2\bigl(
+	%(x, g) \cdot (x, q)
+%\bigr)
+%\stackrel{!}{=}
+%\pi_2\bigl( (x, g) \bigr) \cdot \pi_2\bigl( (x, q) \bigr)
+%=
+%gq
+%=
+%\pi_2\bigl( (x, gq) \bigr)
+%\end{equation*}
+%for all $x \in N$ and $g,q \in \mleft(f^*\mathcal{G}\mright)_x$. By using the bijectivity of $\pi_2|_x$, the group structure leading to this equation is uniquely the one provided in Eq.\ \eqref{MultiplicationForPullbackLGBs}. 
+%%Especially, $\pi_2$ is a homomorphism with the provided structure. 
+%Assume we have another underlying LGB atlas in sense of Cor.\ \ref{cor:PullbackLGB} with an LGB chart $\psi_i$ on $\mleft.f^*\mathcal{G}\mright|_{f^{-1}(U_i)}$ (or just w.r.t.\ a subset of $U_i$), then
+%\bas
+%\phi_i \circ \pi_2 \circ \psi_i^{-1}
+%&=
+%\underbrace{\phi_i \circ \pi_2 \circ \mleft( f^*\phi_i \mright)^{-1}}_{= (f, \mathbb{1}_G)} \circ f^*\phi_i \circ \psi_i^{-1}
+%=
+%(f, \mathbb{1}_G) \circ
+%f^*\phi_i \circ \psi_i^{-1},
+%\eas
+%$(f, \mathbb{1}_G)$ is clearly a Lie group isomorphism $f^{-1}(U_i) \times G \cong U_i \times G$ of trivial LGBs, and thus the condition about $\pi_2|_x$ being a Lie group isomorphism enforces that we can write
+%\bas
+%\mleft(f^*\phi_i \circ \psi_i^{-1}\mright)(x, g)
+%&=
+%\bigl( x, L_i(x, g) \bigr)
+%\eas
+%for all $(x, g) \in f^{-1}(U) \times G$, where $L_i(x, \cdot): G \to G$ is a Lie group automorphism. So, in total
+%\bas
+%\phi_i \circ \pi_2 \circ \psi_i^{-1}
+%&=
+%\bigl(
+	%f, L
+%\bigr),
+%\eas
+%and since $f$ and the left hand side are smooth, $L$ has to be smooth. We can conclude that $\psi_i$ gives rise to an LGB atlas compatible with the one defined by $f^*\phi_i$. This finalizes the proof.
+%\end{proof}
 
 \begin{definitions}{Pullback LGB}{PullbackLGBDef}
-Let $M, N$ be smooth manifolds, $\mathcal{G} \to M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then we call the LGB structure on $f^*\mathcal{G}$ as given in Cor.\ \ref{cor:PullbackLGB} the \textbf{pullback LGB of $\mathcal{G}$ (under $f$)}.
-
-With writing $f^*\mathcal{G}$ we will often refer to this structure without further mention.
+Let $M, N$ be smooth manifolds, $\mathcal{G} \to M$ an LGB over $M$ and $f\colon N \to M$ a smooth map. Then we call the LGB structure on $f^*\mathcal{G}$ as given in Cor.\ \ref{cor:PullbackLGB} the \textbf{pullback LGB of $\mathcal{G}$ (under $f$)}. By writing $f^*\mathcal{G}$ we will often refer to this structure without further mention.
 \end{definitions}
 
-Let us now define $\mathcal{G}$-actions.
+\section{LGB actions, part I}
 
-\begin{definitions}{Lie group bundle actions, \newline \cite[\S 1.6, special case of Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}}{LiegroupACtion}
-Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then a \textbf{right-action of $\mathcal{G}$ on $N$} is a smooth map 
-\bas
-f^*\mathcal{G} &\to N,\\
-(p, g) &\mapsto p \cdot g,
-\eas
+\subsection{Definition}
+
+As for Lie groups, we are interested into their actions: We have an LGB $\mathcal{G} \to M$ over a smooth manifold $M$, and we want to construct an action of $\mathcal{G}$ on another smooth manifold $N$. Each fibre of $\mathcal{G}$ is a Lie group, and we have a notion of Lie groups acting on a manifold $N$. Therefore one could define an LGB action as a collection of Lie group actions, that is, only sections of $\mathcal{G}$ act on $N$; however, one then expects that the general outcome of a product of $\Gamma(\mathcal{G})$ on $N$ would be smooth maps from $M$ to $N$. In order to recover a typical structure of action one could instead introduce a "multiplication rule," i.e.\ each point $p \in N$ can only be multiplied with elements of a specific fibre of $\mathcal{G}$. This "multiplication rule" will be described by a smooth map $f\colon N \to M$ in the sense that only the fibre over $f(p)$ will act on $p$.
+
+\begin{definitions}{Lie group bundle actions}{LiegroupACtion}
+\tcbsubtitle[before skip=\baselineskip]{\cite[\S 1.6, special case of Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}}
+Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f\colon N \to M$ a smooth map. Then a \textbf{right-action of $\mathcal{G}$ on $N$} is a smooth map 
+\begin{align*}
+f^*\mathcal{G} &\to N~,\\
+(p, g) &\mapsto p \cdot g~,
+\end{align*}
 satisfying the following properties:
-\ba\label{InvarianceOffUnderGAction}
-f(p \cdot g) &= \pi(g),\\
-(p \cdot g) \cdot h &= p \cdot (gh),\label{ActionAssociative}\\
-p \cdot e_{f(p)} &= p\label{ActionNeutralElement}
-\ea
+\begin{align*}
+f(p \cdot g) &= \pi(g)~,\\
+(p \cdot g) \cdot h &= p \cdot (gh)~,\\
+p \cdot e_{f(p)} &= p
+\end{align*}
 for all $p \in N$ and $g, h \in \mathcal{G}_{f(p)}$, where $e$ is the neutral section of $\mathcal{G}$.
 \newline
 
@@ -1864,12 +1883,12 @@ f^*\mathcal{G},
 such that the action's notation has the typical shape $N * \mathcal{G} \to N$; one may also write $N * \mathcal{G} = N \times_M \mathcal{G}$. For left actions similarly $\mathcal{G} * N \to N$; even though $\mathcal{G} * N$ is the same pullback LGB as for right-actions; we also change the order of notation in this case, that is, $(g, p) \in \mathcal{G} * N$ reads $g \in \mathcal{G}_{f(p)}$ and $p \in N$. 
 \end{definitions}
 
-\begin{remarks}{Relation to the structure of the canonical pullback Lie group bundle over $N$}{ActionAndPullbackLGBs}
+\begin{remarks}{Relation to the structure of the canonical pullback $f^*\caG$}{ActionAndPullbackLGBs}
 Observe that by the definition of $f^*\mathcal{G}$ we can also write
 \bas
 f(p \cdot g) &= f(p),
 \eas
-so, the $\mathcal{G}$-action is defined in such a way that $f$ is invariant under it. If $f$ is the projection of $N$ as a bundle over $M$, then this means that an LGB action is fibre-preserving. Moreover, the fibre-wise group structure on $\mathcal{G}$ naturally defines a $\mathcal{G}$-action on $\mathcal{G}$; in this situation $f$ would be $\pi$ itself, see also Ex.\ \ref{ex:LGBActingOnItself} later. Furthermore, having $M = \{*\}$ recovers the notion of a Lie group action and condition \eqref{InvarianceOffUnderGAction} is then trivial.
+so, the $\mathcal{G}$-action is defined in such a way that $f$ is invariant under it. If $f$ is the projection of $N$ as a bundle over $M$, then this means that an LGB action is fibre-preserving. Moreover, the fibre-wise group structure on $\mathcal{G}$ naturally defines a $\mathcal{G}$-action on $\mathcal{G}$; in this situation $f$ would be $\pi$ itself, see also \ref{ex:LGBActingOnItself} later. Furthermore, having $M = \{*\}$ recovers the notion of a Lie group action.
 \newline
 
 The other conditions are the typical conditions for actions, especially such that we get a $\mathcal{G}$-action on $f^*\mathcal{G}$ by
@@ -1878,32 +1897,31 @@ The other conditions are the typical conditions for actions, especially such tha
 &\coloneqq
 \mleft( p \cdot q, q^{-1} g \mright)
 \ea
-for all $p \in N$ and $g, q \in \mathcal{G}_{f(p)}$.\footnote{In alignment to Def.\ \ref{def:LiegroupACtion}, this action is a map $(f \circ \pi_1)^*\mathcal{G} \to f^*\mathcal{G}$, where $\pi_1$ is the projection onto the first factor in $f^*\mathcal{G}$.}
-As usual, this gives rise to an equivalence relation, whose set of equivalence classes denoted by $f^*\mathcal{G} \Big/ \mathcal{G}$ is isomorphic to $N$ (as a set) by $[p, g] \mapsto p \cdot g$, where we denote equivalence classes of $(p, g) \in f^*\mathcal{G}$ by $[p, g]$. All of this is straight-forward to check. Finally, observe the similarity to associated fibre bundles.
+for all $p \in N$ and $g, q \in \mathcal{G}_{f(p)}$.\footnote{In alignment to \ref{def:LiegroupACtion}, this action is a map $(f \circ \pi_1)^*\mathcal{G} \to f^*\mathcal{G}$, where $\pi_1$ is the projection onto the first factor in $f^*\mathcal{G}$.}
+As usual, this gives rise to an equivalence relation, whose set of equivalence classes denoted by $f^*\mathcal{G} \Big/ \mathcal{G}$ is isomorphic to $N$ (as a set) by $[p, g] \mapsto p \cdot g$, where we denote equivalence classes of $(p, g) \in f^*\mathcal{G}$ by $[p, g]$.
 \end{remarks}
 
 \begin{remarks}{Localizing LGB actions}{LocalLGBAction}
-We can actually localize the LGB action, but in general not with respect to any open neighbourhood of $N$ since that is in general not possible in a non-trivial way, \textit{i.e.}\ the action cannot be brought into the form $(N*\mathcal{G})|_U \to U$ for arbitrary $U$ because $p \cdot g$ may for example leave an neighbourhood $U$ of $p$. However, with respect to $M$ this is possible:
-
-Fix any open neighbourhood $U$ of $M$. Then $f^{-1}(U)$ is an open neighbourhood of $N$, and we can restrict the action to $f^{-1}(U)$, resulting into a map
+We can localize the LGB action in the following sense: Fix any open neighbourhood $U$ of $M$. Then $f^{-1}(U)$ is an open neighbourhood of $N$, and we can restrict the action to $f^{-1}(U)$, resulting into a map
 \bas
 \mleft.(N*\mathcal{G})\mright|_{f^{-1}(U)} \to f^{-1}(U),
 \eas
-because of $f(p \cdot g) \stackrel{\text{Eq.\ \eqref{InvarianceOffUnderGAction}}}{=} \pi(g) = f(p)$, that is, if $(p, g) \in \mleft.(N*\mathcal{G})\mright|_{f^{-1}(U)}$, then $p \in f^{-1}(U)$ and so $p \cdot g \in f^{-1}(U)$. In fact, by the definition of $N*\mathcal{G}$ as $f^*\mathcal{G}$, this describes a $\mathcal{G}|_{U}$-action on $f^{-1}(U)$
+because of $f(p \cdot g) = \pi(g) = f(p)$, that is, if $(p, g) \in \mleft.(N*\mathcal{G})\mright|_{f^{-1}(U)}$, then $p \in f^{-1}(U)$ and so $p \cdot g \in f^{-1}(U)$. In fact, by the definition of $N*\mathcal{G}$ as $f^*\mathcal{G}$, this describes a $\mathcal{G}|_{U}$-action on $f^{-1}(U)$
 \bas
 f^{-1}(U) * \mleft.\mathcal{G}\mright|_{U} \coloneqq \mleft( f|_{f^{-1}(U)}\mright)^*(\mathcal{G}|_U) = \mleft.(N*\mathcal{G})\mright|_{f^{-1}(U)} &\to f^{-1}(U).
 \eas
-If $x \in M$ is a regular value of $f$, then $f^{-1}(\{x\})$ is an embedded submanifold of $N$ due to the regular value theorem (for this see \textit{e.g.}\ \cite[\S A.1, Thm.\ A.1.32, page 611]{Hamilton}). In that case one could apply the same arguments to restrict the action on $f^{-1}(\{x\})$. Since $\mathcal{G}_x$ is a Lie group one actually gets a typical Lie group action on $f^{-1}(\{x\})$. For more details about this see Ex.\ \ref{ex:TrivialLGBAction} later.
+If $x \in M$ is a regular value of $f$, then $f^{-1}(\{x\})$ is an embedded submanifold of $N$ due to the regular value theorem. In that case one could apply the same arguments to restrict the action on $f^{-1}(\{x\})$. Since $\mathcal{G}_x$ is a Lie group this describes a Lie group action on $f^{-1}(\{x\})$.
 \end{remarks}
 
-\begin{remarks}{Left- and right-actions}{LeftRightAction}
-In the following we usually define everything with respect to right-actions; however, one can of course define the following notions for left actions in a similar manner. If we ever speak of a left action, then we assume precisely this. Some subtle changes like a sign change will be pointed out though. 
-\end{remarks}
+%\begin{remarks}{Left- and right-actions}{LeftRightAction}
+%In the following we usually define everything with respect to right-actions; however, one can of course define the following notions for left actions in a similar manner. 
+%\end{remarks}
 
 One can probably see that it is straightforward to extend a lot of the typical notions of Lie group actions to LGB actions; hence, we mainly focus on the definitions and properties which we need in this paper. 
 
-\begin{definitions}{Left and right translations, \newline \cite[\S 3.2, notation similar to Def.\ 3.2.3, page 131]{Hamilton} \newline \cite[\S 1.4, special situation of Def.\ 1.4.1 and its discussion, page 22]{mackenzieGeneralTheory}}{LRTranslations}
-Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Furthermore assume that we have a right action $N * \mathcal{G} \to N$. We define the \textbf{right translation} over $x \in M$ with $g \in \mathcal{G}_x$ as a map $r_g$ defined by
+\begin{definitions}{Left and right translations}{LRTranslations}
+\tcbsubtitle[before skip=\baselineskip]{\cite[\S 1.4, special situation of Def.\ 1.4.1 and its discussion, page 22]{mackenzieGeneralTheory}}
+Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f \colon N \to M$ a smooth map. Furthermore assume that we have a right action $N * \mathcal{G} \to N$. We define the \textbf{right translation} over $x \in M$ with $g \in \mathcal{G}_x$ as a map $r_g$ defined by
 \bas
 f^{-1}(\{x\}) &\to f^{-1}(\{x\}),\\
 p &\mapsto p \cdot g,
@@ -1919,7 +1937,7 @@ N &\to N,\\
 p &\mapsto p \cdot \sigma_{f(p)}.
 \eas
 
-If one has a section of $f$, \textit{i.e.}\ a smooth map $\tau: M \to N$, $x \mapsto \tau_x$, with $f \circ \tau = \mathbb{1}_M$, then we can define the \textbf{orbit map} through $\tau$ as a map $\Phi_\tau$ given by
+If one has a section of $f$, \textit{i.e.}\ a smooth map $\tau: M \to N$, $x \mapsto \tau_x$, with $f \circ \tau = \mathrm{id}_M$, then we can define the \textbf{orbit map} through $\tau$ as a map $\Phi_\tau$ given by
 \bas
 \mathcal{G} &\to N,\\
 g &\mapsto \tau_{\pi(g)} \cdot g.
@@ -1927,7 +1945,7 @@ g &\mapsto \tau_{\pi(g)} \cdot g.
 \end{definitions}
 
 \begin{remarks}{Left action and translation}{LeftTranslation}
-Similarly we define left translations for left actions, which we similarly denote by $l_g$ and $l_\sigma$. By Rem.\ \ref{rem:LocalLGBAction} we can define $r_\sigma$ (and $l_\sigma$) also for local sections $\sigma \in \Gamma(\mathcal{G}|_U)$ by restricting $N$ onto $f^{-1}(U)$, where $U$ is some open subset of $M$; then $r_\sigma, l_\sigma: f^{-1}(U) \to f^{-1}(U)$. In the same manner one achieves a restriction for $\Phi_\tau: \mathcal{G}|_U \to f^{-1}(U)$, if $\tau: U \to f^{-1}(U)$.
+Similarly we define left translations for left actions, which we similarly denote by $l_g$ and $l_\sigma$. By \ref{rem:LocalLGBAction} we can define $r_\sigma$ (and $l_\sigma$) also for local sections $\sigma \in \Gamma(\mathcal{G}|_U)$ by restricting $N$ onto $f^{-1}(U)$, where $U$ is some open subset of $M$; then $r_\sigma, l_\sigma: f^{-1}(U) \to f^{-1}(U)$. In the same manner one achieves a restriction for $\Phi_\tau \colon \mathcal{G}|_U \to f^{-1}(U)$, if $\tau: U \to f^{-1}(U)$.
 
 In case of $N$ being $\mathcal{G}$ itself we will introduce right (and left) translations later via capital letters.
 \end{remarks}
@@ -1939,7 +1957,7 @@ Assume that $N$ is a fibre bundle over $M$ with $f$ as its projection. Also obse
 &\coloneqq
 \tau_x \cdot \sigma_x
 \eas
-for all $\tau \in \Gamma(N)$, $\sigma \in \Gamma(\mathcal{G})$, and $x \in M$. It is straightforward to show that this is well-defined. We will make use of this action without further mention.
+for all $\tau \in \Gamma(N)$, $\sigma \in \Gamma(\mathcal{G})$, and $x \in M$. It is straightforward to show that this is well-defined.
 \end{remarks}
 
 \begin{remark}\label{SmoothnessOfACtionTranslations}
