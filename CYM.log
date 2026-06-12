@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  12 JUN 2026 18:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  12 JUN 2026 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1571,34 +1571,37 @@ Underfull \vbox (badness 3713) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [35]
-[36] [37] [38] [39] [40] [41] [42] [43]
+Underfull \vbox (badness 1168) has occurred while \output is active []
+
+ [36]
+[37] [38] [39] [40] [41] [42] [43]
 
 LaTeX Warning: Reference `LABActionAlongFibres' on page 44 undefined on input l
-ine 4703.
+ine 4705.
 
 
-Overfull \hbox (18.01428pt too wide) in paragraph at lines 4773--4775
+Overfull \hbox (18.01428pt too wide) in paragraph at lines 4775--4777
  [] 
  []
 
 
 LaTeX Warning: Reference `rem:AbstractNotationTwoForLeftInvarVfs' on page 1 und
-efined on input line 4779.
+efined on input line 4781.
 
 
-Overfull \hbox (18.01428pt too wide) in paragraph at lines 4837--4838
+Overfull \hbox (18.01428pt too wide) in paragraph at lines 4839--4840
  [] 
  []
 
 [44] [45] [46]
 
 LaTeX Warning: Reference `rem:AbstractNotationTwoForLeftInvarVfs' on page 1 und
-efined on input line 5000.
+efined on input line 5002.
 
 [47]
 
 LaTeX Warning: Reference `cor:VertMCVormIsWellDefined' on page 1 undefined on i
-nput line 5309.
+nput line 5311.
 
 
 Underfull \vbox (badness 3312) has occurred while \output is active []
@@ -1613,32 +1616,32 @@ Underfull \vbox (badness 4416) has occurred while \output is active []
  [51]
 [52] [53]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 5832.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 5834.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 5832.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 5834.
  [54] [55] [56]
 
 LaTeX Warning: Reference `InvarianceOffUnderGAction' on page 57 undefined on in
-put line 6107.
+put line 6109.
 
 
 LaTeX Warning: Reference `cor:LGBRepAsLGBMorph' on page 1 undefined on input li
-ne 6147.
+ne 6149.
 
 [57] [58]
 
 LaTeX Warning: Reference `rem:AbstractNotationTwoForLeftInvarVfs' on page 1 und
-efined on input line 6229.
+efined on input line 6231.
 
 [59] [60]
 
 LaTeX Warning: Reference `def:AssociatedLGB' on page 1 undefined on input line 
-6371.
+6373.
 
 [61] [62] [63] [64]
 
 LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
-on input line 6662.
+on input line 6664.
 
 [65] [66] [67] [68] [69] [70] [71] [72] [73] [74]
 Underfull \vbox (badness 1038) has occurred while \output is active []
@@ -1655,7 +1658,7 @@ Underfull \vbox (badness 2680) has occurred while \output is active []
 [93] [94] [95] [96] [97] [98] [99] [100] [101]
 
 LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
-on input line 9644.
+on input line 9646.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
@@ -1722,11 +1725,11 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: 1930A11E9C6F634CD9F33B3735B7D8E0;6904.
  ) 
 Here is how much of TeX's memory you used:
- 42647 strings out of 467866
- 846774 string characters out of 5418325
- 1351237 words of memory out of 5000000
- 69753 multiletter control sequences out of 15000+600000
- 748265 words of font info for 361 fonts, out of 8000000 for 9000
+ 42648 strings out of 467866
+ 846809 string characters out of 5418325
+ 1352192 words of memory out of 5000000
+ 69756 multiletter control sequences out of 15000+600000
+ 748200 words of font info for 360 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  88i,21n,94p,3230b,1556s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu3
@@ -1792,9 +1795,9 @@ Data/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb><C:/Users/kelru
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (110 pages, 2401104 bytes).
+Output written on CYM.pdf (110 pages, 2400186 bytes).
 PDF statistics:
- 2159 PDF objects out of 2487 (max. 8388607)
+ 2158 PDF objects out of 2487 (max. 8388607)
  443 named destinations out of 1000 (max. 500000)
  56177 words of extra memory for PDF output out of 61914 (max. 10000000)
 

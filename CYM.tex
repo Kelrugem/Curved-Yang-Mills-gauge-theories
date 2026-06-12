@@ -4164,8 +4164,9 @@ By Ex.\ \ref{ex:TrivialLGBAction} we expect still a typical Leibniz rule once a 
 
 The principal bundle $\mathcal{P}$ we are interested into is still a fibre bundle related to the same Lie group as the one behind the LGB $\mathcal{G}$, especially also $\mathrm{dim}(\mathcal{P}) = \mathrm{dim}(\mathcal{G})$, but it is equipped with an LGB action.
 
-\begin{definitions}{Principal bundles with structural LGB, \newline \cite[simplification of the beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}}{PrinciBdleWithStruLGB}
-Let $G$ be a Lie group, $M$ a smooth manifold, and an LGB $\mathcal{G} \to M$ which acts on the right on another $G$-fibre bundle $\mathcal{P} \to M$
+\begin{definitions}{Principal bundles with structural LGB}{PrinciBdleWithStruLGB}
+\reference{\cite[simplification of the beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}}
+Let $G$ be a Lie group, $M$ a smooth manifold, and an LGB $\mathcal{G} \to M$ which acts on the right on another fibre bundle $\mathcal{P} \to M$ with structural fibre $G$
 \begin{center}
 	\begin{tikzcd}
 	G \arrow{r} & \mathcal{P} \arrow{d}{\pi_{\mathcal{P}}} & \arrow[bend right]{l} \mathcal{G} \arrow{d}{\pi_{\mathcal{G}}} & \arrow{l} G \\
@@ -4175,23 +4176,25 @@ Let $G$ be a Lie group, $M$ a smooth manifold, and an LGB $\mathcal{G} \to M$ wh
 where the right-action is defined on $\mathcal{P} * \mathcal{G}$ given by $\pi_{\mathcal{P}}^*\mathcal{G}$.
 Then we call $\mathcal{P}$ a \textbf{principal $\mathcal{G}$-bundle} if 
 \begin{enumerate}
-	\item The right $\mathcal{G}$-action on $\mathcal{P}$ \textbf{is simply transitive on the fibres}, that is, the restriction of $\mathcal{P}*\mathcal{G} \to \mathcal{P}$ on $x\in M$
-	\bas
-	\mathcal{P}_x \times \mathcal{G}_x &\to \mathcal{P}_x
-	\eas
+	\item The right $\mathcal{G}$-action on $\mathcal{P}$ \textbf{is simply transitive on the fibres}, that is, the restriction of $\mathcal{P}*\mathcal{G} \to \mathcal{P}$ to $x\in M$
+	\begin{equation*}
+	\mathcal{P}_x \times \mathcal{G}_x \to \mathcal{P}_x
+	\end{equation*}
 	induces bijective orbit maps
-	\bas
-	\mathcal{G}_x &\to \mathcal{P}_x,\\
+	\begin{align*}
+	\mathcal{G}_x &\to \mathcal{P}_x,
+	\\
 	g &\mapsto p \cdot g
-	\eas
+	\end{align*}
 	for $p \in \mathcal{P}_x$.
 	\item There exist base-preserving \textbf{$\mathcal{G}$-equivariant diffeomorphisms $\varphi_i: \mathcal{P}|_{U_i} \to \mathcal{G}|_{U_i}$}	subordinate to an open covering $\mleft( U_i \mright)_i$ of $M$, that is,
-	\bas
-	\pi_{\mathcal{G}} \circ \varphi_i &= \pi_{\mathcal{P}},\\
+	\begin{align*}
+	\pi_{\mathcal{G}} \circ \varphi_i &= \pi_{\mathcal{P}},
+	\\
 	\varphi_i(p \cdot g)
 	&=
 	\varphi_i(p) \cdot g,
-	\eas
+	\end{align*}
 	where the multiplication on the right hand side is inherited by $\mathcal{G} * \mathcal{G} \to \mathcal{G}$, the multiplication on $\mathcal{G}$.
 	%\textbf{bundle atlas of $\mathcal{G}$-equivariant bundle charts $\varphi_i: \mathcal{P}|_{U_i} \to U_i \times G$}, where $\mleft(U_i\mright)_i$ is an open covering of $M$ also subordinate to LGB charts $\vartheta_i: \mathcal{G}|_{U_i} \to U_i \times G$ of $\mathcal{G}$, that is, we have
 	%\bas
@@ -4216,25 +4219,25 @@ The LGB $\mathcal{G}$ is the \textbf{structural LGB} of the principal bundle $\m
 \begin{remarks}{Discussion about the definition of $\mathcal{G}$-principal bundles}{LGBPrincDefDiscussion}
 There are several things in need to be discussed:
 \begin{enumerate}
-	\item The mentioned reference, \cite[simplification of the beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}, introduces these principal bundles in a different manner; we will come back later to this in Remark \ref{AlternativePrincBdlDef}.
-	\item By Remark \ref{rem:ActionAndPullbackLGBs} the $\mathcal{G}$-action on $\mathcal{P}$ is fibre-preserving, thus, the restriction of $\mathcal{P}*\mathcal{G} \to \mathcal{P}$ is indeed a map $\mathcal{P}_x \times \mathcal{G}_x \to \mathcal{P}_x$.
-	\item The $\mathcal{G}$-equivariant diffeomorphisms $\varphi_i$ give rise to a \textbf{bundle atlas of $\mathcal{G}$-equivariant bundle charts $\xi_i: \mathcal{P}|_{U_i} \to U_i \times G$}. Assume w.l.o.g.\ that $U_i$ is small enough so that there is an LGB chart $\phi_i: \mathcal{G}|_{U_i} \to U_i \times G$ of $\mathcal{G}$; recall Def.\ \ref{def:LieGroupBundle}. Then $\xi_i \coloneqq \phi_i \circ \varphi_i$, which clearly satisfies
+	\item The mentioned reference, \cite{GroupoidBasedPrincipalBundles}, introduces these principal bundles in a different manner; we will come back later to this in \ref{rem:AlternativePrincBdlDef}.
+	\item By \ref{rem:ActionAndPullbackLGBs} the $\mathcal{G}$-action on $\mathcal{P}$ is fibre-preserving, thus, the restriction of $\mathcal{P}*\mathcal{G} \to \mathcal{P}$ to $x \in M$ is indeed a map $\mathcal{P}_x \times \mathcal{G}_x \to \mathcal{P}_x$.
+	\item The $\mathcal{G}$-equivariant diffeomorphisms $\varphi_i$ give rise to a \textbf{bundle atlas of $\mathcal{G}$-equivariant bundle charts $\xi_i\colon \mathcal{P}|_{U_i} \to U_i \times G$}. Assume w.l.o.g.\ that $U_i$ is small enough so that there is an LGB chart $\phi_i\colon \mathcal{G}|_{U_i} \to U_i \times G$ of $\mathcal{G}$; recall \ref{def:LieGroupBundle}. Then $\xi_i \coloneqq \phi_i \circ \varphi_i$, which clearly satisfies
 	\bas
 	\xi_i(p \cdot g)
 	&=
 	\xi_i(p) \cdot \phi_i(g),
 	\eas
-	where the multiplication on the right hand side is the canonical one for $U_i \times G$ as a trivial LGB (recall Ex.\ \ref{ex:TrivialLGBundle}),
+	where the multiplication on the right hand side is the canonical one for $U_i \times G$ as a trivial LGB (recall \ref{ex:TrivialLGBundle}),
 	and this can be viewed as $\mathcal{G}$-equivariance (under the trivialization induced by $\phi_i$). We usually then speak of \textbf{$\mathcal{G}$-equivariance w.r.t.\ the LGB morphism $\phi_i$}.
 	
 	We will call such an atlas and its charts a \textbf{principal bundle atlas} and \textbf{principal bundle charts} for $\mathcal{P}$, respectively. For simplicity we may also refer to $\varphi_i$ as principal bundle chart giving rise to the principal bundle atlas.
-	\item Due to the existence of $\varphi_i$ one does not need to claim upfront that $\mathcal{P}$ is a $G$-fibre bundle. However, for readability, we decided to structure the definition like this. We kept a similar style as for "typical" principal bundles as provided in \cite[\S 4.2, Def.\ 4.2.1, page 207f.]{Hamilton}.
-	\item Since $\pi_{\mathcal{P}}$ is a surjective submersion we know by Remark \ref{rem:SmoothnessOfACtionTranslations} that right-translations $r_g$ ($g \in \mathcal{G}_x$) are diffeomorphisms on $\mathcal{P}_{x}$. Furthermore, following \cite[\S 4.2, discussion after Def.\ 4.2.1, page 208f.]{Hamilton}, by definition we have a simply transitive $\mathcal{G}_x$-action (as a Lie group) on $\mathcal{P}_x$, and the isotropy group for each $p \in \mathcal{P}_x$ is trivial; the isotropy group consists in general of $g \in \mathcal{G}_x$ with $p \cdot g = p$, see \textit{e.g.}\ \cite[\S 3.2, third part of Def.\ 3.2.4, page 132]{Hamilton}. Therefore, and by \cite[\S 3.8, Thm.\ 3.8.8, page 165]{Hamilton}, the orbit map $\Phi_p$ gives rise to a $\mathcal{G}_x$-equivariant diffeomorphism
+	\item Due to the existence of $\varphi_i$ one does not need to claim upfront that $\mathcal{P}$ is a $G$-fibre bundle. However, for readability, we decided to structure the definition like this. We kept a similar ``lecture-type-style'' as for ``ordinary'' principal bundles as provided in \cite[\S 4.2, Def.\ 4.2.1, page 207f.]{Hamilton}.
+	\item Since $\pi_{\mathcal{P}}$ is a surjective submersion we know by \ref{rem:SmoothnessOfACtionTranslations} that right-translations $r_g$ ($g \in \mathcal{G}_x$) are diffeomorphisms on $\mathcal{P}_{x}$. Furthermore, following \cite[\S 4.2, discussion after Def.\ 4.2.1, page 208f.]{Hamilton}, by definition we have a simply transitive $\mathcal{G}_x$-action (as a Lie group) on $\mathcal{P}_x$, and the isotropy group for each $p \in \mathcal{P}_x$ is trivial. Henceforth, the orbit map $\Phi_p$ gives rise to a $\mathcal{G}_x$-equivariant diffeomorphism
 	\bas
 	\mathcal{G}_x &\to \mathcal{P}_x,
 	\eas
-	where the action on $\mathcal{G}_x$ is the right-action on itself regarding the $\mathcal{G}_x$-equivariance. 
-	\item Similarly by definition, for each $x \in U_i$ we know that $\mleft.\mleft(\varphi_i\mright)\mright|_x: \mathcal{P}_x \to \mathcal{G}_x$ is a $\mathcal{G}_x$-equivariant diffeomorphism. In fact, together with $\pi_{\mathcal{G}} \circ \varphi_i = \pi_{\mathcal{P}}$ this clearly gives an equivalent definition of $\varphi_i$ which we may make use in the following without further mention.
+	where the action on $\mathcal{G}_x$ is the right-action on itself regarding the $\mathcal{G}_x$-equivariance; see for example \cite[\S 3.8, Thm.\ 3.8.8, page 165]{Hamilton}.
+	\item Similarly by definition, for each $x \in U_i$ we know that $\mleft.\mleft(\varphi_i\mright)\mright|_x: \mathcal{P}_x \to \mathcal{G}_x$ is a $\mathcal{G}_x$-equivariant diffeomorphism. In fact, together with $\pi_{\mathcal{G}} \circ \varphi_i = \pi_{\mathcal{P}}$ this clearly gives an equivalent definition of $\varphi_i$.
 \end{enumerate}
 \end{remarks}
 
@@ -4602,15 +4605,14 @@ p &\mapsto (p, p).
 This is clearly a well-defined global section of $\pi^*\mathcal{P}$, so that by Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} we achieve the desired isomorphism $\pi^*\mathcal{P} \cong \pi^*\mathcal{G} = \mathcal{P} * \mathcal{G}$.
 \end{proof}
 
-\begin{remark}\label{AlternativePrincBdlDef}
-\leavevmode\newline
-By Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} this isomorphism is explicitly given by
+\begin{remarks}{Alternative definition of principal bundles}{AlternativePrincBdlDef}
+By \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} this isomorphism is explicitly given by
 \bas
 \mathcal{P}*\mathcal{G} &\to \pi^*\mathcal{P},\\
 (p, g) &\mapsto (p,p) \cdot (p, g) = (p, p \cdot g).
 \eas
-In fact, the cited reference of Def.\ \ref{def:PrinciBdleWithStruLGB}, \cite[simplification of the beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}, takes the existence of such a diffeomorphism as the essential sole part of defining principal bundles. Such an approach essentially avoids the second part of Def.\ \ref{def:PrinciBdleWithStruLGB}.
-\end{remark}
+In fact, the cited reference of \ref{def:PrinciBdleWithStruLGB}, \cite[simplification of the beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}, takes the existence of such a diffeomorphism as the essential sole part of defining principal bundles. Such an approach essentially avoids the second part of Def.\ \ref{def:PrinciBdleWithStruLGB}.
+\end{remarks}
 
 \begin{remarks}{Why "principal"?}{ItIsAPrincipalAction}
 The last result and remark also outline why we are speaking of a \textit{principal} bundle; this is similar to \cite[\S 4.2.2, page 212ff.]{Hamilton}. As in \cite[\S 3.7, Def.\ 3.7.24, page 159]{Hamilton} one could say that a \textbf{principal} $\mathcal{G}$-action on a manifold $N$ (recall Def.\ \ref{def:LiegroupACtion}) is a \textbf{free} action, \textit{i.e.}\ orbit maps are injective, such that 
@@ -4623,9 +4625,9 @@ is a closed map. In our case, $N = \mathcal{P}$, we clearly have a free action, 
 \mathcal{P} * \mathcal{G} &\to \pi^*\mathcal{P} \to \mathcal{P} \times \mathcal{P},\\
 (p, g) &\mapsto (p, p \cdot g) \mapsto (p, p \cdot g).
 \eas
-By Remark \ref{AlternativePrincBdlDef} the first arrow is a diffeomorphism and thence a closed map. The second arrow is the inclusion, an embedding because $\pi^*\mathcal{P}$ is a closed embedded submanifold of $\mathcal{P} \times \mathcal{P}$ as the restriction of the fibre bundle $\mathcal{P} \times \mathcal{P} \stackrel{\mathbb{1}_{\mathcal{P}} \times \pi}{\to} \mathcal{P} \times M$ along the graph of $\pi$; see \textit{e.g.}\ \cite[\S 4.1, proof of Thm.\ 4.1.17, page 204ff.]{Hamilton}. Additionally, by the continuity of $\pi$, the graph $\Gamma$ of $\pi$ is closed and thus $\pi^*\mathcal{P} = \mleft(\mathbb{1}_{\mathcal{P}} \times \pi\mright)^{-1}(\Gamma)$, too. Using this, it is a quick exercise to show that a set closed in $\pi^*\mathcal{P}$ is also closed in $\mathcal{P} \times \mathcal{P}$, thus the second arrow as inclusion is also closed. Hence, the whole composition is closed.
+By Remark \ref{rem:AlternativePrincBdlDef} the first arrow is a diffeomorphism and thence a closed map. The second arrow is the inclusion, an embedding because $\pi^*\mathcal{P}$ is a closed embedded submanifold of $\mathcal{P} \times \mathcal{P}$ as the restriction of the fibre bundle $\mathcal{P} \times \mathcal{P} \stackrel{\mathbb{1}_{\mathcal{P}} \times \pi}{\to} \mathcal{P} \times M$ along the graph of $\pi$; see \textit{e.g.}\ \cite[\S 4.1, proof of Thm.\ 4.1.17, page 204ff.]{Hamilton}. Additionally, by the continuity of $\pi$, the graph $\Gamma$ of $\pi$ is closed and thus $\pi^*\mathcal{P} = \mleft(\mathbb{1}_{\mathcal{P}} \times \pi\mright)^{-1}(\Gamma)$, too. Using this, it is a quick exercise to show that a set closed in $\pi^*\mathcal{P}$ is also closed in $\mathcal{P} \times \mathcal{P}$, thus the second arrow as inclusion is also closed. Hence, the whole composition is closed.
 
-This knowledge should allow us to carry over a lot of similar results related to principal actions, as in \cite[\S 3.7.5, page 159ff.]{Hamilton}\ and \cite[\S 4.2.2, page 212ff.]{Hamilton}. Essentially Remark \ref{AlternativePrincBdlDef} allows us to look at the quotient $\mathcal{P} \Big/ \mathcal{G}$ by using Godement's Theorem as given in \cite[\S 3.7, Thm.\ 3.7.10, page 155]{Hamilton}, leading to a manifold structure on $\mathcal{P} \Big/ \mathcal{G}$ and maybe similarly leading to a principal bundle structure on $\mathcal{P} \to \mathcal{P} \Big/ \mathcal{G}$.
+This knowledge should allow us to carry over a lot of similar results related to principal actions, as in \cite[\S 3.7.5, page 159ff.]{Hamilton}\ and \cite[\S 4.2.2, page 212ff.]{Hamilton}. Essentially Remark \ref{rem:AlternativePrincBdlDef} allows us to look at the quotient $\mathcal{P} \Big/ \mathcal{G}$ by using Godement's Theorem as given in \cite[\S 3.7, Thm.\ 3.7.10, page 155]{Hamilton}, leading to a manifold structure on $\mathcal{P} \Big/ \mathcal{G}$ and maybe similarly leading to a principal bundle structure on $\mathcal{P} \to \mathcal{P} \Big/ \mathcal{G}$.
 \end{remarks}
 
 Let us conclude our discussion about principal bundles by introducing a typical label.
@@ -6763,7 +6765,7 @@ for all $(p, g) \in \mathcal{P}*\mathcal{G}$, where $\Phi$ denotes the right $\m
 L: \mathcal{P}*\mathcal{G} &\to \pi^*\mathcal{P},\\
 (p, g) &\mapsto \bigl( p, \Phi(p, g) \bigr),
 \eas
-is a base-preserving principal bundle isomorphism (w.r.t.\ the LGB isomorphism given as the identity map on $\mathcal{P} * \mathcal{G}$), recall Cor.\ \ref{cor:ProductSpaceIsPItself} and Remark \ref{AlternativePrincBdlDef}. Thus, we have in total
+is a base-preserving principal bundle isomorphism (w.r.t.\ the LGB isomorphism given as the identity map on $\mathcal{P} * \mathcal{G}$), recall Cor.\ \ref{cor:ProductSpaceIsPItself} and Remark \ref{rem:AlternativePrincBdlDef}. Thus, we have in total
 \bas
 \Phi^{-1} \circ L
 &=
