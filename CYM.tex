@@ -377,6 +377,13 @@
 	\makeatother 
 %\usepackage{trfsigns} % Fourier and Laplacesymbols for engineering und für \e für \exp
 
+%Solving the underbrace spacing
+\newcommand{\ubrace}[3][3]{{% to force ordinary symbol
+  \mspace{#1mu}%
+  \underbrace{\mspace{-#1mu}#2\mspace{-#1mu}}_{#3}%
+  \mspace{#1mu}%
+}}
+
 \usepackage{tabularx} %Automatic line break of tables using X instead c l r
 %\usepackage{longtable} %table auf mehreren Seiten
 %\usepackage{ltxtable} %Combination of both above
@@ -2815,7 +2822,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and denote with $e
 \begin{equation*}
 \mleft[ \mu_x, \nu_x \mright]_{\cag}
 \coloneqq
-\mleft.\mleft[ X_\mu, X_\nu \mright]_{\rmT\caG}\mright|_{e_x}
+\mleft.\mleft[ X_\mu, X_\nu \mright]\mright|_{e_x}
 \end{equation*}
 for all $x \in M$ and $\mu_x, \nu_x \in \rmV_{e_x}\caG$.
 \end{definitions}
@@ -3033,7 +3040,7 @@ for all $x \in M$ and $\nu \in \Gamma(\mathcal{g})$. Usually, the LGB is given b
 
 The exponential map is smooth because it describes the flow of left-invariant vector fields as it also happens for Lie groups. Recall that we denote left-invariant vector fields by $X_\nu$ where $\nu \in \Gamma(\mathcal{g})$.
 
-\begin{corollaries}{The exponential map as flow of $L(\mathcal{G})$}{ExpAsFlow}
+\begin{corollaries}{The exponential map as flow}{ExpAsFlow}
 \tcbsubtitle[before skip=\baselineskip]{\cite[discussion at the beginning of \S 3.6, Prop.\ 3.6.1 and its discussion afterwards; page 132f.]{mackenzieGeneralTheory}}
 Let $\mathcal{G} \stackrel{\pi}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{g} \to M$ its LAB. Then the flow of a left-invariant vector field $X_\nu \in L(\mathcal{G})$ ($\nu \in \Gamma(\mathcal{g})$) is a complete flow $\phi: \mathbb{R} \times \mathcal{G} \to \mathcal{G}$ given by
 \begin{equation*}
@@ -3249,35 +3256,36 @@ Let $\mathcal{g}$ be an LAB over the smooth manifold $M$. We denote with $\mathr
 The notation of $\mathrm{Aut}(\mathcal{g})$ may be confusing with the notation for vector bundle automorphisms. We usually refer to LAB automorphism when speaking of LABs, and state it explicitly if we just mean the vector bundle version.
 \end{examples}
 
-Recall the notation introduced in Def.\ \ref{def:LeftRightTranslationConjugation}:
+Recall the notation introduced in \ref{def:LeftRightTranslationConjugation}:
  %and Cor.\ \ref{cor:LGBToLABHomomorphis}. 
 
-\begin{examples}{Adjoint LGB representation, \newline \cite[\S 3.5, special situation of Prop.\ 3.5.20, page 131]{mackenzieGeneralTheory}}{LGBAdjointRep}
-For $g \in \mathcal{G}_x$ ($x \in M$) we have the conjugation $c_g$ which is a $\mathcal{G}_x$-automorphism. In the usual way we define the \textbf{adjoint representation of $\mathcal{G}$} as a base-preserving LGB morphism $\mathcal{G} \to \mathrm{Aut}(\mathcal{g})$ by
+\begin{examples}{Adjoint LGB representation}{LGBAdjointRep}
+\reference{\cite[\S 3.5, special situation of Prop.\ 3.5.20, page 131]{mackenzieGeneralTheory}}
+For $g \in \mathcal{G}_x$ ($x \in M$) we have the conjugation $c_g$ which is a $\mathcal{G}_x$-automorphism. In the usual way we define the \textbf{adjoint representation of $\mathcal{G}$} as a base-preserving LGB morphism $\mathcal{G} \to \mathrm{Aut}(\mathcal{g})$ given by
 \bas
 \mathrm{Ad}_g &\coloneqq \mathrm{D}_{e_x} c_g
 \eas
-for all $g \in \mathcal{G}_x$ ($x \in M$). 
-
-That this is a $\mathcal{G}$-representation on $\mathcal{g}$ follows quickly: By construction $\mathrm{Ad}_g \in \mathrm{Aut}(\mathcal{g}_x) = \mleft.\mathrm{Aut}(\mathcal{g})\mright|_x$ so that the adjoint representation is clearly well-defined. As in the Lie group case, due to the fact that $c_{gq} = c_{g} \circ c_q$ for all $g, q\in \mathcal{G}_x$ and $c_g(e_x) = e_x$ we have
-\bas
-\mathrm{Ad}_{gq}
-&=
-\mathrm{D}_{e_x}\mleft( c_g \circ c_q \mright)
-=
-\mathrm{D}_{e_x} c_g \circ \mathrm{D}_{e_x} c_q
-=
-\mathrm{Ad}_{g} \circ \mathrm{Ad}_{q}.
-\eas
-Smoothness could either be shown in a bit more generalized way than the proof in \cite[\S 2.1, Thm.\ 2.1.45, page 101f.]{Hamilton}, but that would be a bit tedious; instead let us use the already-known smoothness of the adjoint representation in each fibre. Fix an open subset $U$ of $M$ such that $\mathcal{G}$ and $\mathcal{g}$ are trivial, that is, $\mathcal{G}|_U \cong U \times G$ and $\mathcal{g}|_U \cong U \times \mathfrak{g}$ as LGB and LAB, respectively, where $G$ is the structural Lie group with its Lie algebra $\mathfrak{g}$. Then also clearly $\mathrm{Aut}(\mathcal{g})|_U \cong U \times \mathrm{Aut}(\mathfrak{g})$ as LGBs. By construction we then have w.r.t.\ these trivializations
-\bas
-\mathrm{Ad}_{(x, g)} 
-&= 
-\Bigl( x, \mathrm{D}_{e_G} c^G_g \Bigr)
-=
-\Bigl( x, \mathrm{Ad}^G_g \Bigr)
-\eas
-for all $(x, g) \in U \times G$, where $\mathrm{Ad}^G_g: G \to \mathrm{Aut}(\mathfrak{g})$ is the adjoint representation of $G$ on $\mathfrak{g}$. Smoothness now follows trivially by the canonical manifold structure of product manifolds and the smoothness of $\mathrm{Ad}^G$.
+for all $g \in \mathcal{G}_x$ ($x \in M$), which restrict fibre-wise to the typical adjoint representation (\ref{ex:LGRepsOnVecs}).
+%
+%That this is a $\mathcal{G}$-representation on $\mathcal{g}$ follows quickly: By construction $\mathrm{Ad}_g \in \mathrm{Aut}(\mathcal{g}_x) = \mleft.\mathrm{Aut}(\mathcal{g})\mright|_x$ so that the adjoint representation is clearly well-defined. As in the Lie group case, due to the fact that $c_{gq} = c_{g} \circ c_q$ for all $g, q\in \mathcal{G}_x$ and $c_g(e_x) = e_x$ we have
+%\bas
+%\mathrm{Ad}_{gq}
+%&=
+%\mathrm{D}_{e_x}\mleft( c_g \circ c_q \mright)
+%=
+%\mathrm{D}_{e_x} c_g \circ \mathrm{D}_{e_x} c_q
+%=
+%\mathrm{Ad}_{g} \circ \mathrm{Ad}_{q}.
+%\eas
+%Smoothness could either be shown in a bit more generalized way than the proof in \cite[\S 2.1, Thm.\ 2.1.45, page 101f.]{Hamilton}, but that would be a bit tedious; instead let us use the already-known smoothness of the adjoint representation in each fibre. Fix an open subset $U$ of $M$ such that $\mathcal{G}$ and $\mathcal{g}$ are trivial, that is, $\mathcal{G}|_U \cong U \times G$ and $\mathcal{g}|_U \cong U \times \mathfrak{g}$ as LGB and LAB, respectively, where $G$ is the structural Lie group with its Lie algebra $\mathfrak{g}$. Then also clearly $\mathrm{Aut}(\mathcal{g})|_U \cong U \times \mathrm{Aut}(\mathfrak{g})$ as LGBs. By construction we then have w.r.t.\ these trivializations
+%\bas
+%\mathrm{Ad}_{(x, g)} 
+%&= 
+%\Bigl( x, \mathrm{D}_{e_G} c^G_g \Bigr)
+%=
+%\Bigl( x, \mathrm{Ad}^G_g \Bigr)
+%\eas
+%for all $(x, g) \in U \times G$, where $\mathrm{Ad}^G_g: G \to \mathrm{Aut}(\mathfrak{g})$ is the adjoint representation of $G$ on $\mathfrak{g}$. Smoothness now follows trivially by the canonical manifold structure of product manifolds and the smoothness of $\mathrm{Ad}^G$.
 %\eas
 %However, smoothness has to be shown in a bit more generalized way than the proof in \cite[\S 2.1, Thm.\ 2.1.45, page 101f.]{Hamilton}, that is, we equivalently view $\mathrm{Ad}$ as a linear left action $\mathcal{G} * \mathcal{g} \to \mathcal{g}$ as in Def.\ \ref{def:LGBRep} given by
 %\bas
@@ -3316,47 +3324,49 @@ for all $(x, g) \in U \times G$, where $\mathrm{Ad}^G_g: G \to \mathrm{Aut}(\mat
 
 Infinitesimally, we have LAB actions and representations; recall Cor.\ \ref{cor:PullBackLABIsLAB}.
 
-\begin{definitions}{LAB actions, \newline \cite[\S 4.1, reformulated version for LABs of Def.\ 4.1.1, page 149]{mackenzieGeneralTheory}}{LABACtions}
-Let $M, N$ be smooth manifolds, $\mathcal{g} \stackrel{\pi}{\to} M$ an LAB, and $f: N \to M$ a smooth map. Then a \textbf{$\mathcal{g}$-action on $N$} is a base-preserving vector bundle morphism 
-\bas
-f^*\mathcal{g} &\to \mathrm{T}N,\\
-\nu &\mapsto \rho(\nu),
-\eas
+\begin{definitions}{LAB actions}{LABACtions}
+\reference{\cite[\S 4.1, reformulated version for LABs of Def.\ 4.1.1, page 149]{mackenzieGeneralTheory}}
+Let $M, N$ be smooth manifolds, $\mathcal{g} \stackrel{\pi}{\to} M$ an LAB, and $f\colon N \to M$ a smooth map. Then a \textbf{$\mathcal{g}$-action on $N$} is a base-preserving vector bundle morphism 
+\begin{align*}
+f^*\mathcal{g} &\to \mathrm{T}N~,\\
+\nu &\mapsto \rho(\nu)~,
+\end{align*}
 satisfying
-\ba\label{LABActionAlongFibres}
+\begin{equation*}
 \mathrm{D}f \circ \rho
-&=
+=
 0
-\ea
+\end{equation*}
 and such that the induced map
-\bas
-\Gamma(\mathcal{g}) &\to \Gamma(f^*\mathcal{g}) \to \mathfrak{X}(N),\\
+\begin{align*}
+\Gamma(\mathcal{g}) &\to \Gamma(f^*\mathcal{g}) \to \mathfrak{X}(N)~,\\
 \mu &\mapsto f^*\mu \mapsto \rho\mleft( f^*\mu \mright)
-\eas
+\end{align*}
 is a homomorphism of Lie algebras, that is,
-\ba\label{ActionLieAlgebroidButNonTrivial}
+\begin{equation*}
 \rho\biggl( f^*\mleft(\mleft[ \mu, \nu \mright]_{\mathcal{g}}\mright) \biggr)
-&=
+=
 \bigl[ \rho\mleft(f^*\mu\mright), \rho\mleft(f^*\nu\mright) \bigr]
-\ea
+\end{equation*}
 for all $\mu, \eta \in \Gamma(\mathcal{g})$.
 \end{definitions}
 
-\begin{remark}
-\leavevmode\newline
-For the readers familiar with Lie algebroids, especially action Lie algebroid structures on trivial LABs, Eq.\ \eqref{ActionLieAlgebroidButNonTrivial} should look familiar; in fact, as shown in \cite[\S 4.1, Prop.\ 4.1.2, page 149f.]{mackenzieGeneralTheory}, given an LAB action one can construct a Lie algebroid structure on $f^*\mathcal{g}$. This leads to an action Lie algebroid structure on a possibly non-trivial bundle.
-\end{remark}
+%\begin{remark}
+%\leavevmode\newline
+%For the readers familiar with Lie algebroids, especially action Lie algebroid structures on trivial LABs, Eq.\ \eqref{ActionLieAlgebroidButNonTrivial} should look familiar; in fact, as shown in \cite[\S 4.1, Prop.\ 4.1.2, page 149f.]{mackenzieGeneralTheory}, given an LAB action one can construct a Lie algebroid structure on $f^*\mathcal{g}$. This leads to an action Lie algebroid structure on a possibly non-trivial bundle.
+%\end{remark}
 
 As for Lie group and algebra actions, an LGB action induces an LAB action.
 
-\begin{lemmata}{LGB actions induce LAB actions, \newline \cite[\S 4.1, special situation of Thm.\ 4.1.6, page 152]{mackenzieGeneralTheory}}{LGBInduceLABAction}
-Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f: N \to M$ a smooth map. Then any right $\mathcal{G}$-action $\Phi: N * \mathcal{G} = f^*\mathcal{G} \to N$ on $N$ induces a $\mathcal{g}$-action $\rho$ on $N$ by 
+\begin{lemmata}{LGB actions induce LAB actions}{LGBInduceLABAction}
+\reference{\cite[\S 4.1, special situation of Thm.\ 4.1.6, page 152]{mackenzieGeneralTheory}}
+Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f\colon N \to M$ a smooth map. Then any right $\mathcal{G}$-action $\Phi\colon N * \mathcal{G} = f^*\mathcal{G} \to N$ on $N$ induces a $\mathcal{g}$-action $\rho$ on $N$ by 
 \bas
 \rho
 &\coloneqq
-\mleft.\mathrm{D}\Phi\mright|_{f^*\mathcal{g}},
+\mleft.\mathrm{D}\Phi\mright|_{f^*\mathcal{g}}~,
 \eas
-\textit{i.e.}\
+i.e.\
 \bas
 \rho(\eta)
 &=
@@ -3365,175 +3375,181 @@ Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over 
 for all $\eta \in (f^*\mathcal{g})_p$ ($p\in N$).
 \end{lemmata}
 
-\begin{remark}\label{LeftActionsAndTheirSignProblem}
-\leavevmode\newline
+\begin{remarks}{Induced LAB action by left LGB actions}{LeftActionsAndTheirSignProblem}
 Similarly to the discussion as in \cite[\S 3.4, page 141ff.]{Hamilton}, one can show the same for left actions, but one has to use the multiplication with the inverse, that is, 
-\bas
+\begin{equation*}
 \rho
-&\coloneqq
-\mleft.\mathrm{D}\Phi^\prime\mright|_{f^*\mathcal{g}},
-\eas
+\coloneqq
+\mleft.\mathrm{D}\Phi^\prime\mright|_{f^*\mathcal{g}}~,
+\end{equation*}
 where
-\bas
-\Phi^\prime: \mathcal{G} * N &\to N,\\
-(g, p) &\mapsto g^{-1} \cdot p.
-\eas
-\end{remark}
-
-\begin{proof}[Proof of Lemma \ref{lem:LGBInduceLABAction}]
-\leavevmode\newline
-We generalize the proof as provided in \cite[\S 3.4, proof of Prop.\ 3.4.4, page 144f.]{Hamilton}. Observe that we have
-\bas
-\rho(p, \nu)
-&=
-\mathrm{D}_{\mleft( p, e_{f(p)} \mright)}\Phi(p,\nu)
-\in
-\mathrm{T}_p N
-\eas
-for all $(p, \nu) \in f^*\mathcal{g}$, and thus describes a base-preserving vector bundle morphism $f^*\mathcal{g} \to \mathrm{T}N$. We can rewrite Eq.\ \eqref{InvarianceOffUnderGAction} to
-\bas
-f \circ \Phi
-&=
-\pi \circ \mathrm{pr}_2^{f^*\mathcal{G}},
-\eas
-where $\mathrm{pr}_2^{f^*\mathcal{G}}$ is the projection onto the second factor in $f^*\mathcal{G}\subset N \times \mathcal{G}$. Thence, we have
-\bas
-\mathrm{D}f \circ \rho
-&=
-\mathrm{D}f \circ \mleft.\mathrm{D}\Phi\mright|_{f^*\mathcal{g}}
-=
-\mleft.\mathrm{D}(f \circ \Phi)\mright|_{f^*\mathcal{g}}
-=
-\mleft.\mleft(\mathrm{D}\pi \circ \mathrm{Dpr}_2^{f^*\mathcal{G}}\mright)\mright|_{f^*\mathcal{g}}
-=
-\mleft.\mathrm{D}\pi\mright|_{\mathcal{g}} \circ \mathrm{pr}_2^{f^*\mathcal{g}}
-= 0,
-\eas
-making use of that $\mathcal{g}$ consists of vertical vectors, and where $\mathrm{pr}_2^{f^*\mathcal{g}}$ is the projection onto the second factor in $f^*\mathcal{g} \subset N \times \mathcal{g}$.
-
-The proof of Eq.\ \eqref{ActionLieAlgebroidButNonTrivial} is as straightforward as usual, as a quick argument for the experienced reader observe that Eq.\ \eqref{ActionNeutralElement} and \eqref{ActionAssociative} imply that $\Phi$ induces a Lie group homomorphism $\Gamma(\mathcal{G}) \to \mathrm{Diff}(M)$ ($\mathrm{Diff}$ the group of diffeomorphisms) so that we have the desired Lie algebra homomorphism on an infinitesimal scale.\footnote{We use the notion of sections to avoid the possible lack of smooth structure on the preimages of $f$.} Let $\mu, \nu \in \Gamma(\mathcal{g})$, then we know that 
-\bas
-\bigl[ \mathrm{D}\Phi(f^*\mu), \mathrm{D}\Phi(f^*\nu) \bigr]
-&=
-\mathrm{D}\Phi\mleft(
-	\mleft[ f^*\mu, f^*\nu \mright]_{f^*\mathcal{g}}
-\mright),
-\eas
-if we can show that $\mathrm{D}\Phi(f^*\mu)$ and $\mathrm{D}\Phi(f^*\nu)$ are $\Phi$-related to $f^*\mu$ and $f^*\nu$, respectively; this is a common procedure, see for example \cite[\S A.1, Prop.\ A.1.49, page 615]{Hamilton}. That is, we need to show now that
-\ba\label{PhiRelatedSections}
-\mleft.\mathrm{D}\Phi(f^*\mu)\mright|_{\Phi(p, g) = p \cdot g}
-&\stackrel{!}{=}
-\mathrm{D}_{(p, g)}\Phi\mleft( \mleft.\mleft(f^*\mu\mright)\mright|_{(p,g)} \mright)
-\ea
-for all $(p, g) \in N*\mathcal{G}$, similarly for $\nu$; here we understand the LABs of LGBs as left-invariant vector fields as in Cor.\ \ref{cor:LeftInvVfToLAB}. Observe that we have in general for $\eta \in \Gamma(f^*\mathcal{g}) \cong L(f^*\mathcal{G})$, using the definition of $\rho$,
-%($N$ canonically embedded into $f^*\mathcal{G}$ via the neutral section)
-\bas
-\mleft.\mathrm{D}\phi(\eta)\mright|_{p\cdot g}
-&=
-\mathrm{D}_{(p\cdot g, e_x)}\Phi\mleft( \eta_{(p \cdot g, e_x)} \mright)
-=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\Phi \mleft( p \cdot g, \e^{t \xi_{p \cdot g}} \mright)
-=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\mleft( p \cdot g \e^{t \xi_{p \cdot g}} \mright)
-\eas
-for all $(p, g) \in N* \mathcal{G}$,
-where $t \in \mathbb{R}$ and we write in general $\eta_{(p, e_x)} = \mleft(p, \xi_{p}\mright)$ with $\xi_{p} \in \mathcal{g}_x$ ($x \coloneqq f(p)$), and the exponential $\e$ is the one of $\mathcal{G}$. But we also have similarly
-\bas
-\mathrm{D}_{(p,g)}\Phi\bigl(\underbrace{\eta_{(p, g)}}_{\mathclap{ = \mathrm{D}_{(p, e_x)}L_{(p, g)}\mleft( \eta_{(p, e_x)} \mright) }} \bigr)
-&=
-\mathrm{D}_{(p, e_x)}\mleft( \Phi \circ L_{(p, g)} \mright)\mleft( p, \xi_p \mright)
-=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Phi\mleft(
-	p, g \e^{t \xi_p}
-\mright)
-=
-\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft(
-	p \cdot g \e^{t \xi_p}
-\mright),
-\eas
-where $L$ is the left-multiplication in $f^*\mathcal{G}$. So, in order to achieve Eq.\ \eqref{PhiRelatedSections} we now set $\eta = f^*\mu$. That is,
-$
-\eta_{(p, e_x)}
-=
-\mleft( p, \mu_{f(p)} \mright),
-$
-therefore $\xi_p = \mu_{f(p)}$,
-and due to Eq.\ \eqref{InvarianceOffUnderGAction} and Rem.\ \ref{rem:ActionAndPullbackLGBs} we derive $\xi_p = \xi_{p\cdot g}$. In total, we see that Eq.\ \eqref{PhiRelatedSections} is satisfied.
-
-Finally, as argued earlier, we can prove
-\bas
-\bigl[ \mathrm{D}\Phi(f^*\mu), \mathrm{D}\Phi(f^*\nu) \bigr]
-&=
-\mathrm{D}\Phi\mleft(
-	\mleft[ f^*\mu, f^*\nu \mright]_{f^*\mathcal{g}}
-\mright)
-=
-\mathrm{D}\Phi\mleft( f^*\mleft(
-	\mleft[ \mu, \nu \mright]_{\mathcal{g}}
-\mright) \mright),
-\eas
-making use of that the field of Lie brackets of $f^*\mathcal{g}$ is the $f$-pullback of $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ as a section. This finishes the proof.
-\end{proof}
-
-\begin{remarks}{Variants of the LAB action as Lie algebra homomorphism}{LABHomomorpInActionVariants}
-It is clear that one has a local version of Eq.\ \eqref{ActionLieAlgebroidButNonTrivial}. In fact, as one sees in the proof of Lemma \ref{lem:LGBInduceLABAction}, the argument for Eq.\ \eqref{ActionLieAlgebroidButNonTrivial} works pointwise in $M$, so, one may also think of a homomorphism of Lie algebras
-\bas
-\mathcal{g}_{x} &\to \mathfrak{X}\mleft( f^{-1}(\{x\}) \mright),\\
-\nu &\mapsto \mleft[ f^{-1}(\{x\}) \ni p \mapsto \rho(p, \nu) \mright]
-\eas
-for all $x \in M$, where we also used Eq.\ \eqref{LABActionAlongFibres}; that is, we expect that an LAB action is fibre-wise a Lie algebra action. Due to a possible lack of manifold structure on $f^{-1}(\{x\})$ we did not restrict to $x\in M$ to avoid technical difficulties. However, $f$ will be the projection of a bundle later, and in that case the fibre $f^{-1}(\{x\})$ is an embedded submanifold of $N$. As argued in Remark \ref{rem:LocalLGBAction}, the $\mathcal{G}$-action is a $\mathcal{G}_x$-action restricted on $f^{-1}(\{x\})$. By what we know about Lie group actions we immediately know that we have the aforementioned Lie algebra homomorphism, and so also Eq.\ \eqref{ActionLieAlgebroidButNonTrivial}, in total a vector bundle morphism $f^*\mathcal{g} \to \mathrm{T}N$ which gives fibre-wise over $x$ rise to a Lie algebra action.
+\begin{align*}
+\Phi^\prime: \mathcal{G} * N &\to N~,\\
+(g, p) &\mapsto g^{-1} \cdot p~.
+\end{align*}
 \end{remarks}
 
-An important example will be fundamental vector fields which we will introduce later. Another example are LAB representations induced by LGB representations; hence let us introduce LAB representations. We will introduce them in a reverted order than the LGB representations, that is, first defining them as certain LAB morphisms, and then trivially concluding a relation to LAB actions; for the following recall Ex.\ \ref{ex:EndVAnLAB}.
+%\begin{proof}[Proof of Lemma \ref{lem:LGBInduceLABAction}]
+%\leavevmode\newline
+%We generalize the proof as provided in \cite[\S 3.4, proof of Prop.\ 3.4.4, page 144f.]{Hamilton}. Observe that we have
+%\bas
+%\rho(p, \nu)
+%&=
+%\mathrm{D}_{\mleft( p, e_{f(p)} \mright)}\Phi(p,\nu)
+%\in
+%\mathrm{T}_p N
+%\eas
+%for all $(p, \nu) \in f^*\mathcal{g}$, and thus describes a base-preserving vector bundle morphism $f^*\mathcal{g} \to \mathrm{T}N$. We can rewrite Eq.\ \eqref{InvarianceOffUnderGAction} to
+%\bas
+%f \circ \Phi
+%&=
+%\pi \circ \mathrm{pr}_2^{f^*\mathcal{G}},
+%\eas
+%where $\mathrm{pr}_2^{f^*\mathcal{G}}$ is the projection onto the second factor in $f^*\mathcal{G}\subset N \times \mathcal{G}$. Thence, we have
+%\bas
+%\mathrm{D}f \circ \rho
+%&=
+%\mathrm{D}f \circ \mleft.\mathrm{D}\Phi\mright|_{f^*\mathcal{g}}
+%=
+%\mleft.\mathrm{D}(f \circ \Phi)\mright|_{f^*\mathcal{g}}
+%=
+%\mleft.\mleft(\mathrm{D}\pi \circ \mathrm{Dpr}_2^{f^*\mathcal{G}}\mright)\mright|_{f^*\mathcal{g}}
+%=
+%\mleft.\mathrm{D}\pi\mright|_{\mathcal{g}} \circ \mathrm{pr}_2^{f^*\mathcal{g}}
+%= 0,
+%\eas
+%making use of that $\mathcal{g}$ consists of vertical vectors, and where $\mathrm{pr}_2^{f^*\mathcal{g}}$ is the projection onto the second factor in $f^*\mathcal{g} \subset N \times \mathcal{g}$.
+%
+%The proof of Eq.\ \eqref{ActionLieAlgebroidButNonTrivial} is as straightforward as usual, as a quick argument for the experienced reader observe that Eq.\ \eqref{ActionNeutralElement} and \eqref{ActionAssociative} imply that $\Phi$ induces a Lie group homomorphism $\Gamma(\mathcal{G}) \to \mathrm{Diff}(M)$ ($\mathrm{Diff}$ the group of diffeomorphisms) so that we have the desired Lie algebra homomorphism on an infinitesimal scale.\footnote{We use the notion of sections to avoid the possible lack of smooth structure on the preimages of $f$.} Let $\mu, \nu \in \Gamma(\mathcal{g})$, then we know that 
+%\bas
+%\bigl[ \mathrm{D}\Phi(f^*\mu), \mathrm{D}\Phi(f^*\nu) \bigr]
+%&=
+%\mathrm{D}\Phi\mleft(
+	%\mleft[ f^*\mu, f^*\nu \mright]_{f^*\mathcal{g}}
+%\mright),
+%\eas
+%if we can show that $\mathrm{D}\Phi(f^*\mu)$ and $\mathrm{D}\Phi(f^*\nu)$ are $\Phi$-related to $f^*\mu$ and $f^*\nu$, respectively; this is a common procedure, see for example \cite[\S A.1, Prop.\ A.1.49, page 615]{Hamilton}. That is, we need to show now that
+%\ba\label{PhiRelatedSections}
+%\mleft.\mathrm{D}\Phi(f^*\mu)\mright|_{\Phi(p, g) = p \cdot g}
+%&\stackrel{!}{=}
+%\mathrm{D}_{(p, g)}\Phi\mleft( \mleft.\mleft(f^*\mu\mright)\mright|_{(p,g)} \mright)
+%\ea
+%for all $(p, g) \in N*\mathcal{G}$, similarly for $\nu$; here we understand the LABs of LGBs as left-invariant vector fields as in Cor.\ \ref{cor:LeftInvVfToLAB}. Observe that we have in general for $\eta \in \Gamma(f^*\mathcal{g}) \cong L(f^*\mathcal{G})$, using the definition of $\rho$,
+%%($N$ canonically embedded into $f^*\mathcal{G}$ via the neutral section)
+%\bas
+%\mleft.\mathrm{D}\phi(\eta)\mright|_{p\cdot g}
+%&=
+%\mathrm{D}_{(p\cdot g, e_x)}\Phi\mleft( \eta_{(p \cdot g, e_x)} \mright)
+%=
+%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\Phi \mleft( p \cdot g, \e^{t \xi_{p \cdot g}} \mright)
+%=
+%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\mleft( p \cdot g \e^{t \xi_{p \cdot g}} \mright)
+%\eas
+%for all $(p, g) \in N* \mathcal{G}$,
+%where $t \in \mathbb{R}$ and we write in general $\eta_{(p, e_x)} = \mleft(p, \xi_{p}\mright)$ with $\xi_{p} \in \mathcal{g}_x$ ($x \coloneqq f(p)$), and the exponential $\e$ is the one of $\mathcal{G}$. But we also have similarly
+%\bas
+%\mathrm{D}_{(p,g)}\Phi\bigl(\underbrace{\eta_{(p, g)}}_{\mathclap{ = \mathrm{D}_{(p, e_x)}L_{(p, g)}\mleft( \eta_{(p, e_x)} \mright) }} \bigr)
+%&=
+%\mathrm{D}_{(p, e_x)}\mleft( \Phi \circ L_{(p, g)} \mright)\mleft( p, \xi_p \mright)
+%=
+%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Phi\mleft(
+	%p, g \e^{t \xi_p}
+%\mright)
+%=
+%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mleft(
+	%p \cdot g \e^{t \xi_p}
+%\mright),
+%\eas
+%where $L$ is the left-multiplication in $f^*\mathcal{G}$. So, in order to achieve Eq.\ \eqref{PhiRelatedSections} we now set $\eta = f^*\mu$. That is,
+%$
+%\eta_{(p, e_x)}
+%=
+%\mleft( p, \mu_{f(p)} \mright),
+%$
+%therefore $\xi_p = \mu_{f(p)}$,
+%and due to Eq.\ \eqref{InvarianceOffUnderGAction} and Rem.\ \ref{rem:ActionAndPullbackLGBs} we derive $\xi_p = \xi_{p\cdot g}$. In total, we see that Eq.\ \eqref{PhiRelatedSections} is satisfied.
+%
+%Finally, as argued earlier, we can prove
+%\bas
+%\bigl[ \mathrm{D}\Phi(f^*\mu), \mathrm{D}\Phi(f^*\nu) \bigr]
+%&=
+%\mathrm{D}\Phi\mleft(
+	%\mleft[ f^*\mu, f^*\nu \mright]_{f^*\mathcal{g}}
+%\mright)
+%=
+%\mathrm{D}\Phi\mleft( f^*\mleft(
+	%\mleft[ \mu, \nu \mright]_{\mathcal{g}}
+%\mright) \mright),
+%\eas
+%making use of that the field of Lie brackets of $f^*\mathcal{g}$ is the $f$-pullback of $\mleft[ \cdot, \cdot \mright]_{\mathcal{g}}$ as a section. This finishes the proof.
+%\end{proof}
 
-\begin{definitions}{LAB representations, \cite[\S 3.3, Def.\ 3.3.13, page 107]{mackenzieGeneralTheory}}{LABReps}
-Let $\mathcal{g} \to M$ be an LAB over a smooth manifold $M$, and $V \to M$ be a vector bundle. A \textbf{$\mathcal{g}$-representation on $V$} is an LAB morphism $\psi: \mathcal{g} \to \mathrm{End}(V)$.
+\begin{remarks}{LAB actions as fibrewise actions}{LABHomomorpInActionVariants}
+If $f$ is a submersion, then one can think of the LAB action as a ``collection'' of Lie algebra actions on the fibres $f^{-1}(\{x\})$ ($x \in M$).
+%It is clear that one has a local version of Eq.\ \eqref{ActionLieAlgebroidButNonTrivial}. In fact, as one sees in the proof of Lemma \ref{lem:LGBInduceLABAction}, the argument for Eq.\ \eqref{ActionLieAlgebroidButNonTrivial} works pointwise in $M$, so, one may also think of a homomorphism of Lie algebras
+%\bas
+%\mathcal{g}_{x} &\to \mathfrak{X}\mleft( f^{-1}(\{x\}) \mright),\\
+%\nu &\mapsto \mleft[ f^{-1}(\{x\}) \ni p \mapsto \rho(p, \nu) \mright]
+%\eas
+%for all $x \in M$, where we also used Eq.\ \eqref{LABActionAlongFibres}; that is, we expect that an LAB action is fibre-wise a Lie algebra action. Due to a possible lack of manifold structure on $f^{-1}(\{x\})$ we did not restrict to $x\in M$ to avoid technical difficulties. However, $f$ will be the projection of a bundle later, and in that case the fibre $f^{-1}(\{x\})$ is an embedded submanifold of $N$. As argued in Remark \ref{rem:LocalLGBAction}, the $\mathcal{G}$-action is a $\mathcal{G}_x$-action restricted on $f^{-1}(\{x\})$. By what we know about Lie group actions we immediately know that we have the aforementioned Lie algebra homomorphism, and so also Eq.\ \eqref{ActionLieAlgebroidButNonTrivial}, in total a vector bundle morphism $f^*\mathcal{g} \to \mathrm{T}N$ which gives fibre-wise over $x$ rise to a Lie algebra action.
+\end{remarks}
+
+%An important example will be fundamental vector fields which we will introduce later. Another example are LAB representations induced by LGB representations; hence let us introduce LAB representations. We will introduce them in a reverted order than the LGB representations, that is, first defining them as certain LAB morphisms, and then trivially concluding a relation to LAB actions; for the following recall \ref{ex:EndVAnLAB}.
+
+Of course, by restricting to linear vector fields one achieves representations.
+
+\begin{definitions}{LAB representations}{LABReps}
+\reference{\cite[\S 3.3, Def.\ 3.3.13, page 107]{mackenzieGeneralTheory}}
+Let $\mathcal{g} \to M$ be an LAB over a smooth manifold $M$, and $V \to M$ be a vector bundle. A \textbf{$\mathcal{g}$-representation on $V$} is an LAB morphism $\psi \colon \mathcal{g} \to \mathrm{End}(V)$.
 \end{definitions}
 
-\begin{corollaries}{LAB representations are specific LAB actions, \newline \cite[\S 4.1, special consequence of Prop.\ 4.1.7 but we do not assume integrability of the LAB, page 153]{mackenzieGeneralTheory}}{LABRepsAreLABActions}
-Let $\mathcal{g} \to M$ be an LAB over a smooth manifold $M$, $V \stackrel{p}{\to} M$ be a vector bundle, and $\psi: \mathcal{g} \to \mathrm{End}(V)$ a $\mathcal{g}$-representation on $V$. Then $\psi$ defines an LAB action $\widetilde{\psi}: p^*\mathcal{g} \to \mathrm{T}V$ by
-\bas
-\widetilde{\psi}(v, \nu)
-&\coloneqq
+\begin{corollaries}{LAB representations are specific LAB actions}{LABRepsAreLABActions}
+\reference{\cite[\S 4.1, special consequence of Prop.\ 4.1.7, page 153]{mackenzieGeneralTheory}}
+Let $\mathcal{g} \to M$ be an LAB over a smooth manifold $M$, $V \stackrel{p}{\to} M$ be a vector bundle, and $\psi \colon \mathcal{g} \to \mathrm{End}(V)$ a $\mathcal{g}$-representation on $V$. Then $\psi$ defines an LAB action $\overline{\psi} \colon p^*\mathcal{g} \to \mathrm{T}V$ by
+\begin{equation*}
+\overline{\psi}(v, \nu)
+\coloneqq
 -\psi(\nu)(v)
-\eas
-for all $(v, \nu) \in p^*\mathcal{g}$, where one makes use of the identification $\mathrm{T}_vV_x = \mathrm{V}_vV \cong V_x$ ($x \coloneqq p(v)$), so that $V_x \subset \mathrm{T}_vV$.
+\end{equation*}
+for all $(v, \nu) \in p^*\mathcal{g}$, where one makes use of the identification $\mathrm{T}_vV_x = \mathrm{V}_vV \cong V_x$ ($x \coloneqq p(v)$).
 \end{corollaries}
+%
+%\begin{remark}
+%\leavevmode\newline
+%In fact, similar to LGBs we could have defined LAB representations as a certain type of LAB action with values in certain \textit{linear vector fields}. However, it would exceed this work to introduce these vector fields; start with \cite[\S 3.4, page 110]{mackenzieGeneralTheory} for more elaborated details on how to do this.
+%
+%As for LGB representations and linear actions, we denote both, LAB representation and its associated sense of action, in the same fashion.
+%\end{remark}
 
-\begin{remark}
-\leavevmode\newline
-In fact, similar to LGBs we could have defined LAB representations as a certain type of LAB action with values in certain \textit{linear vector fields}. However, it would exceed this work to introduce these vector fields; start with \cite[\S 3.4, page 110]{mackenzieGeneralTheory} for more elaborated details on how to do this.
+This is a known relationship in the case of Lie algebra representations on vector spaces and their associated actions; usually this is proven by assuming a Lie group representation, however, one can show it without assuming integrability of the Lie algebra action. See for example \cite[\S 2.1, proof of Prop.\ 2.1.16, page 22]{MyThesis} and extend this to LABs.
+ %Hence, we will just show that the proof of Cor.\ \ref{cor:LABRepsAreLABActions} breaks down to proving it for Lie algebras acting on vector spaces and refer to this reference for the remaining part of the proof.
 
-As for LGB representations and linear actions, we denote both, LAB representation and its associated sense of action, in the same fashion.
-\end{remark}
+%\begin{proof}[Proof of Cor.\ \ref{cor:LABRepsAreLABActions}]
+%\leavevmode\newline
+%By construction we have that $\overline{\psi}$ has values in the vertical bundle $\mathrm{V}V$ of $V$, hence Eq.\ \eqref{LABActionAlongFibres} follows. 
+%Making use of $\mathrm{V}_vV \cong V_x$ for all $v\in V_x$ ($x \in M$), it is clear that $p^*V \cong \mathrm{V}V$ as vector bundles, and so it is trivial to see that $\overline{\psi}$ as a map $p^*\mathcal{g} \to p^*V$ is a smooth and base-preserving vector bundle morphism due to that $\psi$ is a smooth map with values in $\mathrm{End}(V)$ (making again use of that $p^*\mathcal{g}$ is an embedded submanifold of $V \times \mathcal{g}$, similarly for $p^*V$ as embedded submanifold of $V \times V$).
+%
+%As argued in Rem.\ \ref{rem:LABHomomorpInActionVariants}, since $\mathcal{g}$ acts via a representation on a bundle $V$, $\overline{\psi}: p^*\mathcal{g} \to \mathrm{V}V$ will be an LAB action, if it induces a Lie algebra action over each base point $x \in M$ via
+%\bas
+%\mathcal{g}_x &\to \mathfrak{X}(V_x),\\
+%\nu &\mapsto \mleft[ V_x \ni v \mapsto \overline{\psi}\mleft(v, \nu\mright) \mright].
+%\eas
+%Since $\psi$ is just a $\mathcal{g}_x$-representation on $V_x$ over $x$ we know by \cite[\S 2.1, proof of Prop.\ 2.1.16, page 22]{MyThesis} that $\psi$ indeed gives rise to a $\mathcal{g}_x$-action on $V_x$ by
+%\bas
+%\overline{\psi}\mleft(v, \nu\mright)
+%&=
+%- \psi(\nu)(v)
+%\eas
+%for all $v \in V_x$ and $\nu \in \mathcal{g}_x$, which is precisely the form of $\overline{\psi}$. Thus, $\overline{\psi}$ is an LAB action.
+%\end{proof}
 
-This is a known relationship in the case of Lie algebra representations on vector spaces and their associated actions; usually this is proven by assuming a Lie group representation, however, one can show it without assuming integrability of the Lie algebra action. See for example \cite[\S 2.1, proof of Prop.\ 2.1.16, page 22]{MyThesis}. Hence, we will just show that the proof of Cor.\ \ref{cor:LABRepsAreLABActions} breaks down to proving it for Lie algebras acting on vector spaces and refer to this reference for the remaining part of the proof.
+%Usually statements like Cor.\ \ref{cor:LABRepsAreLABActions} are proven by assuming integrability: LGB representations as linear actions $V*\mathcal{G} \to V$ and as LGB morphisms $\mathcal{G} \to \mathrm{Aut}(V)$ are the same by Cor.\ \ref{cor:LGBRepAsLGBMorph}; the former induces LAB actions $p^*\mathcal{g} \to \mathrm{T}V$ by Lemma \ref{lem:LGBInduceLABAction}, and in the same manner the latter implies LAB morphisms $\mathcal{g} \to \mathrm{End}(V)$ by Cor.\ \ref{cor:LGBToLABHomomorphis}. Either way, LAB representations can be viewed as certain LAB actions. 
 
-\begin{proof}[Proof of Cor.\ \ref{cor:LABRepsAreLABActions}]
-\leavevmode\newline
-By construction we have that $\widetilde{\psi}$ has values in the vertical bundle $\mathrm{V}V$ of $V$, hence Eq.\ \eqref{LABActionAlongFibres} follows. 
-Making use of $\mathrm{V}_vV \cong V_x$ for all $v\in V_x$ ($x \in M$), it is clear that $p^*V \cong \mathrm{V}V$ as vector bundles, and so it is trivial to see that $\widetilde{\psi}$ as a map $p^*\mathcal{g} \to p^*V$ is a smooth and base-preserving vector bundle morphism due to that $\psi$ is a smooth map with values in $\mathrm{End}(V)$ (making again use of that $p^*\mathcal{g}$ is an embedded submanifold of $V \times \mathcal{g}$, similarly for $p^*V$ as embedded submanifold of $V \times V$).
+Of course, the adjoint representation is an important example inherited by an LGB representation.
 
-As argued in Rem.\ \ref{rem:LABHomomorpInActionVariants}, since $\mathcal{g}$ acts via a representation on a bundle $V$, $\widetilde{\psi}: p^*\mathcal{g} \to \mathrm{V}V$ will be an LAB action, if it induces a Lie algebra action over each base point $x \in M$ via
-\bas
-\mathcal{g}_x &\to \mathfrak{X}(V_x),\\
-\nu &\mapsto \mleft[ V_x \ni v \mapsto \widetilde{\psi}\mleft(v, \nu\mright) \mright].
-\eas
-Since $\psi$ is just a $\mathcal{g}_x$-representation on $V_x$ over $x$ we know by \cite[\S 2.1, proof of Prop.\ 2.1.16, page 22]{MyThesis} that $\psi$ indeed gives rise to a $\mathcal{g}_x$-action on $V_x$ by
-\bas
-\widetilde{\psi}\mleft(v, \nu\mright)
-&=
-- \psi(\nu)(v)
-\eas
-for all $v \in V_x$ and $\nu \in \mathcal{g}_x$, which is precisely the form of $\widetilde{\psi}$. Thus, $\widetilde{\psi}$ is an LAB action.
-\end{proof}
-
-Usually statements like Cor.\ \ref{cor:LABRepsAreLABActions} are proven by assuming integrability: LGB representations as linear actions $V*\mathcal{G} \to V$ and as LGB morphisms $\mathcal{G} \to \mathrm{Aut}(V)$ are the same by Cor.\ \ref{cor:LGBRepAsLGBMorph}; the former induces LAB actions $p^*\mathcal{g} \to \mathrm{T}V$ by Lemma \ref{lem:LGBInduceLABAction}, and in the same manner the latter implies LAB morphisms $\mathcal{g} \to \mathrm{End}(V)$ by Cor.\ \ref{cor:LGBToLABHomomorphis}. Either way, LAB representations can be viewed as certain LAB actions. 
-
-The adjoint representation is an important example inherited by an LGB representation; this example will conclude this subsection.
-
-\begin{examples}{Adjoint LAB representations, \newline \cite[\S 3.3, special situation of Ex.\ 3.3.15, page 108]{mackenzieGeneralTheory}}{LABAdjointRep}
-Let us assume the same situation as in Ex.\ \ref{ex:LGBAdjointRep}, especially we have the adjoint representation of the LGB $\mathcal{G}\to M$, $\mathrm{Ad}: \mathcal{G} \to \mathrm{Aut}(\mathcal{g})$. As discussed earlier, its infinitesimal version is a $\mathcal{g}$-representation on itself, the \textbf{adjoint representation $\mathrm{ad}$ of $\mathcal{g}$}. By construction,
+\begin{examples}{Adjoint LAB representations}{LABAdjointRep}
+\reference{\cite[\S 3.3, special situation of Ex.\ 3.3.15, page 108]{mackenzieGeneralTheory}}
+Let us assume the same situation as in \ref{ex:LGBAdjointRep} for the adjoint representation of the LGB $\mathcal{G}\to M$, $\mathrm{Ad}\colon \mathcal{G} \to \mathrm{Aut}(\mathcal{g})$. As discussed earlier, its infinitesimal version is a $\mathcal{g}$-representation on itself, the \textbf{adjoint representation $\mathrm{ad}$ of $\mathcal{g}$}. By construction,
 \bas
 \mathrm{ad}_\nu(\mu)
 &\coloneqq
@@ -3549,44 +3565,42 @@ for all $\nu, \mu \in \mathcal{g}_x$ ($x\in M$).
 The LAB actions inherited by LGB actions are also called fundamental vector fields; we are following \cite[\S 3.4, generalization of Def.\ 3.4.1, page 143]{Hamilton} for the labelling:
 
 \begin{definitions}{Fundamental vector fields}{FundVecs}
-Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \to M$ an LGB over $M$, $f: N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, denoted as $\Phi: N * \mathcal{G} \to N$. For $\nu \in \Gamma(\mathcal{g})$ we define its induced \textbf{fundamental vector field $\widetilde{\nu}$} as an element of $\mathfrak{X}(N)$ by
-\bas
-\widetilde{\nu}_p
-&\coloneqq
+Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \to M$ an LGB over $M$, $f\colon N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, denoted as $\Phi\colon N * \mathcal{G} \to N$. For $\nu \in \Gamma(\mathcal{g})$ we define its induced \textbf{fundamental vector field $\overline{\nu}$} as an element of $\mathfrak{X}(N)$ by
+\begin{equation*}
+\overline{\nu}_p
+\coloneqq
 \mathrm{D}_{e_{f(p)}}\Phi_p\mleft(\nu_{f(p)}\mright)
-\eas 
-for all $p \in N$, where $\Phi_p$ is the orbit map defined in Def.\ \ref{def:LRTranslations} and $e_{f(p)}$ the neutral element of $\mathcal{G}_{f(p)}$. 
-
-For left actions we define fundamental vector fields similarly by
-\bas
-\widetilde{\nu}_p
-&\coloneqq
+\end{equation*}
+for all $p \in N$, where $\Phi_p$ is the orbit map defined in \ref{def:LRTranslations}. For left actions we define fundamental vector fields similarly by
+\begin{equation*}
+\overline{\nu}_p
+\coloneqq
 \mathrm{D}_{e_{f(p)}}\Phi^\prime_p\mleft(\nu_{f(p)}\mright)
-\eas
+\end{equation*}
 for all $p \in N$,
 where $\Phi^\prime_p$ is a slightly adjusted orbit map given by
-\bas
-\mathcal{G}_{f(p)} &\to N,\\
-g &\mapsto g^{-1} \cdot p.
-\eas
+\begin{align*}
+\mathcal{G}_{f(p)} &\to N~,\\
+g &\mapsto g^{-1} \cdot p~.
+\end{align*}
 \end{definitions}
 
-\begin{remarks}{Notation}{FundVecsNotations}
-Again, point-wise over $x \coloneqq f(p)$ this is just the typical definition of a fundamental vector field with respect to $\nu_x \in \mathcal{g}_x$ (except that $f^{-1}(\{x\})$ may not be a manifold). Hence, one has also a point-wise definition which we will also denote similarly by $\widetilde{\nu_x}$. If $f^{-1}(\{x\})$ is not a manifold, then $\mleft.\widetilde{\nu_x}\mright|_p$ is just a formal notation, and it only defines an element of $\mathrm{T}_pN$ which may not be related to a vector field on $f^{-1}(\{x\})$, not even to a vector field on $N$ if $\nu_x$ does not formally come from a fixed section of $\mathcal{g}$.
+\begin{remarks}{Fundamental vectors pointwise}{FundVecsNotations}
+Again, point-wise over $x \coloneqq f(p)$ this is just the typical definition of a fundamental vector field with respect to $\nu_x \in \mathcal{g}_x$ (except that $f^{-1}(\{x\})$ may not be a manifold). Hence, one has also a point-wise definition which we will also denote similarly by $\overline{\nu_x}$. If $f^{-1}(\{x\})$ is not a manifold, then $\mleft.\overline{\nu_x}\mright|_p$ is just a formal notation, and it only defines an element of $\mathrm{T}_pN$ which may not be related to a vector field tangent to $f^{-1}(\{x\})$, not even to a vector field on $N$ if $\nu_x$ does not formally come from a fixed section of $\mathcal{g}$.
 
-However, if $f$ is \textit{e.g.}\ the projection of a bundle, then we have a $\mathcal{G}$-action on the fibre $f^{-1}(\{x\})$ as manifold, and therefore $\widetilde{\nu}|_{f^{-1}(\{x\})}$ and $\widetilde{\nu_x}$ give rise to a vector field on $f^{-1}(\{x\})$. In other words, fundamental vector fields are vertical vector fields as expected and are fibre-wise fundamental vector fields coming from a Lie group action.
-
-For long expressions we use the following different font 
-\bas
-\overline{\nu}
-\eas
-instead of $\widetilde{\nu}$.
+However, if $f$ is \textit{e.g.}\ the projection of a bundle, then we have a $\mathcal{G}$-action on the fibre $f^{-1}(\{x\})$ as manifold, and therefore $\overline{\nu}|_{f^{-1}(\{x\})}$ and $\overline{\nu_x}$ give rise to a vector field on $f^{-1}(\{x\})$. In other words, fundamental vector fields are vertical vector fields as expected and are fibre-wise fundamental vector fields coming from a Lie group action.
+%
+%For long expressions we use the following different font 
+%\bas
+%\overline{\nu}
+%\eas
+%instead of $\overline{\nu}$.
 \end{remarks}
 
 \begin{remarks}{Map to fundamental vector fields an LAB action}{FundVecsAreLABActions}
-As anticipated, this is related to the LAB action coming from the right $\mathcal{G}$-action $\Phi: N*\mathcal{G} \to N$. The following can also be shown for left actions in a similar manner by recalling Rem.\ \ref{LeftActionsAndTheirSignProblem}.
+As anticipated, this is related to the LAB action coming from the right $\mathcal{G}$-action $\Phi: N*\mathcal{G} \to N$. The following can also be shown for left actions in a similar manner by recalling \ref{rem:LeftActionsAndTheirSignProblem}.
 
-By Lemma \ref{lem:LGBInduceLABAction} we have an LAB action $\rho: f^*\mathcal{g} \to \mathrm{T}N$ given by $\mleft.\rho \coloneqq \mathrm{D}\Phi\mright|_{f^*\mathcal{g}}$. We have
+By Lemma \ref{lem:LGBInduceLABAction} we have an LAB action $\rho\colon f^*\mathcal{g} \to \mathrm{T}N$ given by $\mleft.\rho \coloneqq \mathrm{D}\Phi\mright|_{f^*\mathcal{g}}$. We have
 \bas
 \rho(p, \nu)
 &=
@@ -3596,25 +3610,27 @@ By Lemma \ref{lem:LGBInduceLABAction} we have an LAB action $\rho: f^*\mathcal{g
 =
 \mathrm{D}_{e_{f(p)}}\Phi_p(\nu)
 =
-\widetilde{\nu}_p
+\overline{\nu}_p
 \eas
-for all $(p, \nu) \in f^*\mathcal{g}$, where $t \in \mathbb{R}$, $\e$ is the exponential map of $\mathcal{G}$, and $e_{f(p)}$ the neutral element of $\mathcal{G}_{f(p)}$. Thus, the map to fundamental vector fields
+for all $(p, \nu) \in f^*\mathcal{g}$, where $t \in \mathbb{R}$, and $\e$ is the exponential map of $\mathcal{G}$. Thus, the map to fundamental vector fields
 \bas
 \Gamma(\mathcal{g}) &\mapsto \mathfrak{X}(N),\\
-\nu &\mapsto \widetilde{\nu},
+\nu &\mapsto \overline{\nu},
 \eas
 is equivalent to the map
 \bas
 \Gamma(\mathcal{g}) &\to \mathfrak{X}(N),\\
 \nu &\mapsto \rho\mleft( f^*\nu \mright)
 \eas
-induced by $\rho$ as in Def.\ \ref{def:LABACtions}, which also implies that the map to the fundamental vector fields is a homomorphism of Lie algebras. Last but not least, by Def.\ \ref{def:LABACtions} it follows that fundamental vector fields are in the kernel of $\mathrm{D}f$.
+induced by $\rho$ as in \ref{def:LABACtions}, which also implies that the map to the fundamental vector fields is a homomorphism of Lie algebras. Last but not least, by \ref{def:LABACtions} it follows that fundamental vector fields are in the kernel of $\mathrm{D}f$.
 \end{remarks}
 
 \subsection{Differential of smooth LGB actions}
 
+We will often need to differentiate LGB actions, and thus we have to understand the tangent space of pullback manifolds:
+
 \begin{lemmata}{Tangent bundle of pullback fibre bundles}{PullbackFibreBundleItsTangentSp}
-Let $M$ and $N$ be two smooth manifolds, $F \stackrel{\pi}{\to} M$ a fibre bundle over $M$, and $f: N \to M$ a smooth map. Then we have for its tangent spaces
+Let $M$ and $N$ be two smooth manifolds, $F \stackrel{\pi}{\to} M$ a fibre bundle over $M$, and $f\colon N \to M$ a smooth map. Then we have for its tangent spaces
 \bas
 \mathrm{T}_{(p, v)}\mleft( f^*F \mright)
 &=
@@ -3629,158 +3645,175 @@ Let $M$ and $N$ be two smooth manifolds, $F \stackrel{\pi}{\to} M$ a fibre bundl
 for all $(p, v) \in f^*F$.
 \end{lemmata}
 
-\begin{proof}
-\leavevmode\newline
-Recall that $(p, v) \in f^*F$ implies that
-\bas
-f(p) &= \pi(v)
-\eas
-such that we can immediately derive its infinitesimal version as
-\bas
-\mathrm{D}_pf(X) = \mathrm{D}_v\pi(Y)
-\eas
-for all $X \in \mathrm{T}_pN, Y\in \mathrm{T}_vF$. Hence, we have derived that $\mathrm{T}_{(p, v)}\mleft( f^*F \mright)$ is a subset of the set of such pairs $(X, Y)$. That this is an equivalent description quickly follows by the fact that $f$ and $\pi$ are transversal to each other (trivially, because $\pi$ is a surjective submersion). This means, the following linear map
-\bas
-\mathrm{T}_pN \times \mathrm{T}_vF&\to \mathrm{T}_{f(p)}M,\\
-(X, Y) &\mapsto \mathrm{D}_pf(X) - \mathrm{D}_v\pi(Y)
-\eas
-is surjective because $\pi$ is a submersion; it is also well-defined because of $f(p) = \pi(v)$. Hence, the dimension of the kernel of this map has the dimension
-\bas
-\mathrm{dim}(N) + \mathrm{dim}(F) - \mathrm{dim}(M)
-&=
-\mathrm{dim}(N) + \mathrm{rk}(F)
-=
-\mathrm{dim}(f^*N),
-\eas
-where $\mathrm{dim}$ denotes the dimension as a manifold and $\mathrm{rk}$ the rank of a bundle (the dimension of its structural fibre). Its dimension is precisely the dimension of $f^*F$, and since it is about finite dimensions we can therefore identify $\mathrm{T}_{(p, v)}\mleft( f^*F \mright)$ with this kernel. This concludes the proof due to the fact that the kernel consists of $(X, Y)$ with $\mathrm{D}_pf(X) = \mathrm{D}_v\pi(Y)$.
-\end{proof}
-
-With this we can finally show the following theorem; also recall the notations introduced in Def.\ \ref{def:LRTranslations}, \ref{def:LeftRightTranslationConjugation}, \ref{def:MCFormOnLGBs} and \ref{def:FundVecs}.
+This is a straight-forward exercise to show by making use of the fact that $f$ and $\pi$ are transverse to each other.
+%
+%\begin{proof}
+%\leavevmode\newline
+%Recall that $(p, v) \in f^*F$ implies that
+%\bas
+%f(p) &= \pi(v)
+%\eas
+%such that we can immediately derive its infinitesimal version as
+%\bas
+%\mathrm{D}_pf(X) = \mathrm{D}_v\pi(Y)
+%\eas
+%for all $X \in \mathrm{T}_pN, Y\in \mathrm{T}_vF$. Hence, we have derived that $\mathrm{T}_{(p, v)}\mleft( f^*F \mright)$ is a subset of the set of such pairs $(X, Y)$. That this is an equivalent description quickly follows by the fact that $f$ and $\pi$ are transversal to each other (trivially, because $\pi$ is a surjective submersion). This means, the following linear map
+%\bas
+%\mathrm{T}_pN \times \mathrm{T}_vF&\to \mathrm{T}_{f(p)}M,\\
+%(X, Y) &\mapsto \mathrm{D}_pf(X) - \mathrm{D}_v\pi(Y)
+%\eas
+%is surjective because $\pi$ is a submersion; it is also well-defined because of $f(p) = \pi(v)$. Hence, the dimension of the kernel of this map has the dimension
+%\bas
+%\mathrm{dim}(N) + \mathrm{dim}(F) - \mathrm{dim}(M)
+%&=
+%\mathrm{dim}(N) + \mathrm{rk}(F)
+%=
+%\mathrm{dim}(f^*N),
+%\eas
+%where $\mathrm{dim}$ denotes the dimension as a manifold and $\mathrm{rk}$ the rank of a bundle (the dimension of its structural fibre). Its dimension is precisely the dimension of $f^*F$, and since it is about finite dimensions we can therefore identify $\mathrm{T}_{(p, v)}\mleft( f^*F \mright)$ with this kernel. This concludes the proof due to the fact that the kernel consists of $(X, Y)$ with $\mathrm{D}_pf(X) = \mathrm{D}_v\pi(Y)$.
+%\end{proof}
+%
+With this we can finally show the following proposition; also recall the notations introduced in \ref{def:LRTranslations}, \ref{def:LeftRightTranslationConjugation}, \ref{def:MCFormOnLGBs} and \ref{def:FundVecs}.
 
 \begin{propositions}{Differential of smooth LGB actions}{DiffOfLGBAction}
-Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$, $f: N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, $\Phi: N * \mathcal{G} \to N$. Then we have
-\ba\label{NewDIffACtionwithMCForm}
-\mathrm{D}_{(p, g)}\Phi(X, Y)
+Let $M$ and $N$ be smooth manifolds, $\pi_\scG \colon \mathscr{G} \to M$ an LGB over $M$, $\Phi \colon N \to M$ a smooth map, and assume we have a right $\mathscr{G}$-action on $N$, $\Psi\colon N * \scG \to N$. Then we have
+\begin{align*}
+\mathrm{D}_{(p, g)}\Psi(X, Y)
 &=
 \mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\overline{\mleft( \MC\mright)_g \mleft(Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr)\mright)}}\mright|_{p \cdot g}
-\ea
-for all $(p, g) \in N * \mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(p, g)}(N*\mathcal{G})$, where $x \coloneqq f(p) = \pi(g)$, $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_{x} = g$, $e$ is the identity section of $\mathcal{G}$, and $\omega$ is an element of $\mathrm{T}_xM$ given by
-\bas
+	+ \mleft.{\overline{\mleft( \MC\mright)_g \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}
+\end{align*}
+for all $(p, g) \in N \fibtimes\Phi{\pi_\scG} \scG$ and $(X, Y) \in \rmT N \fibtimes{\rmT\Phi}{\rmT\pi_\scG} \rmT \scG$, where $x \coloneqq \Phi(p) = \pi_\scG(g)$, $\sigma$ is any (local) section of $\mathscr{G}$ with $\sigma_{x} = g$, and $\omega$ is an element of $\mathrm{T}_xM$ given by
+\begin{align*}
 \omega
 &\coloneqq
-\mathrm{D}_p f(X)
+\mathrm{D}_p \Phi(X)
 = 
-\mathrm{D}_g\pi(Y).
-\eas
-We can also write instead
-\ba
-\mathrm{D}_{(p, g)}\Phi(X, Y)
-&=
-\mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\overline{\mleft( \MC\mright)_g \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}.
-\ea
-
-If $f$ is a surjective submersion, then we can also write
-\ba\label{DIFfActionSimilarToTangenGroupoid}
-\mathrm{D}_{(p, g)}\Phi(X, Y)
-&=
-\mathrm{D}_pr_\sigma(X)
-	+ \mathrm{D}_g\Phi_\tau (Y)
-	- \mathrm{D}_{e_x}(\Phi_\tau \circ R_\sigma)\bigl( \mathrm{D}_xe(\omega) \bigr)
-\ea
-and
-\ba\label{DiffActionAsClassicalButWithExtraContribution}
-\mathrm{D}_{(p, g)}\Phi(X, Y)
-&=
-\mathrm{D}_pr_g\Bigl( X - \mathrm{D}_{e_x}\Phi_\tau\bigl( \mathrm{D}_xe(\omega) \bigr) \Bigr)
-	+ \mathrm{D}_g\Phi_p \Bigl( Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
-\nonumber\\
-&\hspace{1cm}
-	+ \mathrm{D}_{e_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{D}_xe(\omega) \bigr),
-\ea
-where $\tau$ is any (local) section\footnote{That is, $f \circ \tau = \mathbb{1}_M$ (locally).} of $f$ with $\tau_x = p$, and $\Phi_\tau$ is the orbit map through $\tau$.
+\mathrm{D}_g\pi_\scG(Y)~.
+\end{align*}
+%
+%Let $M$ and $N$ be two smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$, $f: N \to M$ a smooth map, and assume we have a right $\mathcal{G}$-action on $N$, $\Phi: N * \mathcal{G} \to N$. Then we have
+%\ba\label{NewDIffACtionwithMCForm}
+%\mathrm{D}_{(p, g)}\Phi(X, Y)
+%&=
+%\mathrm{D}_pr_\sigma(X)
+	%+ \mleft.{\overline{\mleft( \MC\mright)_g \mleft(Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr)\mright)}}\mright|_{p \cdot g}
+%\ea
+%for all $(p, g) \in N * \mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(p, g)}(N*\mathcal{G})$, where $x \coloneqq f(p) = \pi(g)$, $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_{x} = g$, $e$ is the identity section of $\mathcal{G}$, and $\omega$ is an element of $\mathrm{T}_xM$ given by
+%\bas
+%\omega
+%&\coloneqq
+%\mathrm{D}_p f(X)
+%= 
+%\mathrm{D}_g\pi(Y).
+%\eas
+%We can also write instead
+%\ba
+%\mathrm{D}_{(p, g)}\Phi(X, Y)
+%&=
+%\mathrm{D}_pr_\sigma(X)
+	%+ \mleft.{\overline{\mleft( \MC\mright)_g \bigl(Y - \mathrm{D}_{x}\sigma (\omega)\bigr)}}\mright|_{p \cdot g}.
+%\ea
+%
+%If $f$ is a surjective submersion, then we can also write
+%\ba\label{DIFfActionSimilarToTangenGroupoid}
+%\mathrm{D}_{(p, g)}\Phi(X, Y)
+%&=
+%\mathrm{D}_pr_\sigma(X)
+	%+ \mathrm{D}_g\Phi_\tau (Y)
+	%- \mathrm{D}_{e_x}(\Phi_\tau \circ R_\sigma)\bigl( \mathrm{D}_xe(\omega) \bigr)
+%\ea
+%and
+%\ba\label{DiffActionAsClassicalButWithExtraContribution}
+%\mathrm{D}_{(p, g)}\Phi(X, Y)
+%&=
+%\mathrm{D}_pr_g\Bigl( X - \mathrm{D}_{e_x}\Phi_\tau\bigl( \mathrm{D}_xe(\omega) \bigr) \Bigr)
+	%+ \mathrm{D}_g\Phi_p \Bigl( Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
+%\nonumber\\
+%&\hspace{1cm}
+	%+ \mathrm{D}_{e_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{D}_xe(\omega) \bigr),
+%\ea
+%where $\tau$ is any (local) section\footnote{That is, $f \circ \tau = \mathbb{1}_M$ (locally).} of $f$ with $\tau_x = p$, and $\Phi_\tau$ is the orbit map through $\tau$.
 \end{propositions}
 
-\begin{remark}
-\leavevmode\newline
-The assumption about $f$ being a surjective submersion is being stated in order to assure the existence of $\tau$ and the manifold structure on $f^{-1}(\{x\})$ as an embedded submanifold of $N$; see the proof for more details. If the existence of $\tau$ and the embedded submanifold structure is known otherwise, then those equations can still be derived. Following the proof, one may also just need the structure of an immersed submanifold.
-\end{remark}
+%\begin{remark}
+%\leavevmode\newline
+%The assumption about $f$ being a surjective submersion is being stated in order to assure the existence of $\tau$ and the manifold structure on $f^{-1}(\{x\})$ as an embedded submanifold of $N$; see the proof for more details. If the existence of $\tau$ and the embedded submanifold structure is known otherwise, then those equations can still be derived. Following the proof, one may also just need the structure of an immersed submanifold.
+%\end{remark}
 
-\begin{proof}[Proof of \ref{prop:DiffOfLGBAction}]
-\leavevmode\newline
-We want to calculate the derivative of $\Phi$, and due to $N*\mathcal{G} = f^*\mathcal{G}$ we are going to use Lemma \ref{lem:PullbackFibreBundleItsTangentSp}. That is, fix $(p, g) \in N*\mathcal{G}$ and $X \in \mathrm{T}_pN$, $Y \in \mathrm{T}_g \mathcal{G}$ with
-\bas
+\begin{proof}
+Due to $N*\mathcal{G} = f^*\mathcal{G}$ we are going to use \ref{lem:PullbackFibreBundleItsTangentSp}. That is, fix $(p, g) \in N*\mathcal{G}$ and $X \in \mathrm{T}_pN$, $Y \in \mathrm{T}_g \mathcal{G}$ with
+\begin{align*}
 \mathrm{D}_p f(X) &= \mathrm{D}_g\pi(Y) \eqqcolon \omega \in \mathrm{T}_{f(p)}M.
-\eas
-Recall that we can localize LGB actions in sense of Rem.\ \ref{rem:LocalLGBAction}; so, let $x \coloneqq f(p) = \pi(g)$, and fix a trivialization of $\mathcal{G}$ around $x$. Then it is clear that there is a (local)\footnote{For simplicity of notation we omit the notation of restricting on some open subset of $M$.} section $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$. Observe that we can write
-\bas
+\end{align*}
+Recall that we can localize LGB actions in sense of \ref{rem:LocalLGBAction}; so, let $x \coloneqq f(p) = \pi(g)$, and fix a trivialization of $\mathcal{G}$ around $x$. Then it is clear that there is a (local)\footnote{For simplicity of notation we omit the notation of restricting on some open subset of $M$.} section $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$. Observe that we can write
+\begin{align*}
 Y
 &=
 Y 
 	- \mathrm{D}_x \sigma (\omega)
 	+ \mathrm{D}_x \sigma (\omega).
-\eas
+\end{align*}
 The two first summands result into a vertical tangent vector due to
-\bas
+\begin{align*}
 \mathrm{D}_g\pi\bigl( Y - \mathrm{D}_x\sigma(\omega) \bigr)
 &=
-\mathrm{D}_g\pi( Y ) - \mathrm{D}_x\underbrace{(\pi \circ \sigma)}_{= \mathbb{1}_M}(\omega)
+\mathrm{D}_g\pi( Y ) - \mathrm{D}_x\underbrace{(\pi \circ \sigma)}_{= \mathrm{id}_M}(\omega)
 =
 \mathrm{D}_g \pi (Y) - \omega
 =
 0.
-\eas
-For the following recall the notations introduced in Def.\ \ref{def:LRTranslations} and \ref{def:LeftRightTranslationConjugation}; we can derive that
-\bas
-\mathrm{D}_{e_x}R_\sigma \circ \mathrm{D}_x e
-&=
-\mathrm{D}_x \underbrace{\mleft( R_\sigma \circ e \mright)}
-	_{\mathclap{x \mapsto e_x \sigma_x = \sigma_x}}
-=
-\mathrm{D}_x \sigma.
-\eas
-So, we can also write 
-\bas
+\end{align*}
+%We can derive that
+%\begin{align*}
+%\mathrm{D}_{e_x}R_\sigma \circ \mathrm{D}_x e
+%&=
+%\mathrm{D}_x \underbrace{\mleft( R_\sigma \circ e \mright)}
+	%_{\mathclap{x \mapsto e_x \sigma_x = \sigma_x}}
+%=
+%\mathrm{D}_x \sigma.
+%\end{align*}
+So, we write 
+\begin{align*}
 Y^v
 &\coloneqq
 Y - \mathrm{D}_x \sigma(\omega)
-=
-Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr).
-\eas
-We have proven that $Y^v \in \mathrm{V}_g\mathcal{G}$, and thus $(0_p, Y^v) \in \mathrm{T}_{(p, g)}(f^*\mathcal{G})$ by Lemma \ref{lem:PullbackFibreBundleItsTangentSp}, where $0_p$ is the zero tangent vector of $\mathrm{T}_pN$. In the same fashion we also have
-\bas
-\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+%=
+%Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr).
+\end{align*}
+We have proven that $Y^v \in \mathrm{V}_g\mathcal{G}$, and thus $(0_p, Y^v) \in \mathrm{T}_{(p, g)}(f^*\mathcal{G})$ by \ref{lem:PullbackFibreBundleItsTangentSp}, where $0_p$ is the zero tangent vector of $\mathrm{T}_pN$. In the same fashion we also have
+\begin{align*}
+\mleft(X,  \mathrm{D}_x \sigma (\omega) \mright)
 &\in \mathrm{T}_{(p, g)}(f^*\mathcal{G})
-\eas
+\end{align*}
 because of
-\bas
-\mathrm{D}_g\pi \Bigl( \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
+\begin{align*}
+\mathrm{D}_g\pi \Bigl( \mathrm{D}_x \sigma (\omega)  \Bigr)
 &=
-\mathrm{D}_g \pi (Y - Y^v)
+\omega
 =
 \mathrm{D}_g \pi (Y)
 =
 \mathrm{D}_p f (X),
-\eas
+\end{align*}
 thence we can write in $\mathrm{T}_{(p, g)}(f^*\mathcal{G})$
-\bas
+\begin{align*}
 (X, Y)
 &=
-\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) + Y^v \mright)
+\mleft(X, \mathrm{D}_x \sigma (\omega) + Y^v \mright)
 =
-\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+\mleft(X, \mathrm{D}_x \sigma (\omega) \mright)
 	+ (0_p, Y^v).
-\eas
+\end{align*}
 Hence also
-\ba\label{DifferentialOfActionSplitFirst}
+\begin{align}\label{DifferentialOfActionSplitFirst}
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
-\mathrm{D}_{(p, g)}\Phi\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+\mathrm{D}_{(p, g)}\Phi\mleft(X, \mathrm{D}_x \sigma (\omega) \bigr) \mright)
 	+ \mathrm{D}_{(p, g)}\Phi(0_p, Y^v)
-\ea
+\end{align}
 The second summand is quickly calculated as
-\bas
+\begin{align*}
 \mathrm{D}_{(p, g)}\Phi(0_p, Y^v)
 &=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Phi(p, \gamma)
@@ -3789,9 +3822,9 @@ The second summand is quickly calculated as
 	_{\Phi_p(\gamma)}
 =
 \mathrm{D}_{g}\Phi_p (Y^v)
-\eas
-where $\gamma: I \to \mathcal{G}_x$ ($I$ open interval of $\mathbb{R}$ containing 0) is a curve with $\gamma(0) = g$ and $\mathrm{d}/\mathrm{d}t|_{t=0} \gamma = Y^v$; this is due to the verticality of $Y^v$, and so $\mathrm{D}_g\Phi_p(Y^v)$ is also well-defined since $\Phi_p$ is a map $\mathcal{G}_x \to N$. Now recall Def.\ \ref{def:MCFormOnLGBs} and \ref{def:FundVecs}, and then observe that we can write
-\ba\label{ClassicalWayToWriteLeibnizRuleWithLeftPushForwardInsteadOfMCForm}
+\end{align*}
+where $\gamma: I \to \mathcal{G}_x$ ($I$ open interval of $\mathbb{R}$ containing 0) is a curve with $\gamma(0) = g$ and $\mathrm{d}/\mathrm{d}t|_{t=0} \gamma = Y^v$; this is due to the verticality of $Y^v$, and so $\mathrm{D}_g\Phi_p(Y^v)$ is also well-defined since $\Phi_p$ is a map $\mathcal{G}_x \to N$. Now recall \ref{def:MCFormOnLGBs} and \ref{def:FundVecs}, and then observe that we can write
+\begin{align}\label{ClassicalWayToWriteLeibnizRuleWithLeftPushForwardInsteadOfMCForm}
 \mathrm{D}_{g}\Phi_p (Y^v)
 &=
 \mleft(\mathrm{D}_{g}\Phi_p \circ \mathrm{D}_{e_x}L_g \circ \mathrm{D}_g L_{g^{-1}} \mright)(Y^v)
@@ -3800,167 +3833,328 @@ where $\gamma: I \to \mathcal{G}_x$ ($I$ open interval of $\mathbb{R}$ containin
 	_{\mathclap{ \mathcal{G} \ni q \mapsto p \cdot gq = \Phi_{p \cdot g}(q) }}
 	\mleft(\mleft( \MC\mright)_g (Y^v) \mright)
 =
-\mleft.{\overline{\mleft( \MC\mright)_g (Y^v)}}\mright|_{p \cdot g}
+\mleft.{\overline{\mleft( \MC \mright)_g (Y^v)}}\mright|_{p \cdot g}
 %\mleft.{\widetilde{\mleft( \MC\mright)_g (Y^v)}}\mright|_{p \cdot g},
-\ea
-making use of the verticality of $Y^v$ such that operators like $\mathrm{D}L_g$ can act on $Y^v$.
-
-For the first summand in Eq.\ \eqref{DifferentialOfActionSplitFirst} we use
-\bas
-\mathrm{D}_{(p, g)}\Phi\Bigl(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
+\end{align}
+making use of the verticality of $Y^v$ such that operators like $\mathrm{D}L_g$ can act on $Y^v$. For the first summand in Eq.\ \eqref{DifferentialOfActionSplitFirst} we use
+\begin{align*}
+\mathrm{D}_{(p, g)}\Phi\bigl(X, \mathrm{D}_x \sigma (\omega) \bigr)
 &=
-\mathrm{D}_{(p, e_x)} \underbrace{\bigl( \Phi \circ \mleft( \mathbb{1}_N, R_\sigma \mright) \bigr)}_{\mathclap{ N * \mathcal{G} \ni (p, g) \mapsto p \cdot g \sigma_x = r_\sigma(p \cdot g) }}
-	\bigl( X, \mathrm{D}_x e(\omega) \bigr)
+\mathrm{D}_{(p, g)}\Phi\mleft(X, \mathrm{D}_x \sigma \mleft( \rmD_pf(X) \mright) \mright)
 \\
 &=
-\mathrm{D}_{(p, e_x)}( r_\sigma \circ \Phi ) \bigl( X, \mathrm{D}_x e(\omega) \bigr)
+	\rmD_p \ubrace[0]{\mleft( \Phi \circ \mleft( {{\rm id}}_N, \sigma_f \mright) \mright)}{p \mapsto p \cdot \sigma_{f(p)} = r_\sigma(p)}(X)
 \\
 &=
-\mathrm{D}_p r_\sigma \Bigl(
-	\mathrm{D}_{(p, e_x)} \Phi \bigl( X, \mathrm{D}_x e(\omega) \bigr)
-\Bigr)
-\\
-&=
-\mathrm{D}_p r_\sigma \Bigl(
-	\mathrm{D}_{(p, e_x)} \Phi \bigl( X, \mathrm{D}_p (e \circ f) (X) \bigr)
-\Bigr)
-\\
-&=
-\mathrm{D}_p r_\sigma \Bigl(
-	\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathbb{1}_N, e\circ f)\bigr)( X, X )
-\Bigr),
-\eas
-but on the diagonal $\mathrm{diag}(N\times N)$ of $N\times N$ we have
-\bas
-\Bigl[
-\mathrm{diag}(N \times N) \ni (p,p)
-\mapsto
-\bigl(\Phi \circ (\mathbb{1}_N, e\circ f)\bigr)(p,p)
-=
-\Phi\mleft(p, e_{f(p)}\mright)
-=
-p \cdot e_{f(p)}
-=
-p
-\Bigr]
-&=
-\mleft.\mathrm{pr}_i\mright|_{\mathrm{diag}(N \times N)},
-\eas
-where $\mathrm{pr}_i$ is just the projection onto any of both $i$-th components ($i \in \{1,2\}$) in $N \times N$. Due to $(X, X) \in \mathrm{T}_{(p,p)}\bigl( \mathrm{diag}(N\times N) \bigr)$ we derive
-\bas
-\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathbb{1}_N, e\circ f)\bigr)( X, X )
-&=
-\mathrm{D}_{(p,p)} \mathrm{pr}_i( X, X )
-=
-X.
-\eas
+\mathrm{D}_pr_\sigma(X)~.
+%\mathrm{D}_{(p, e_x)} \underbrace{\bigl( \Phi \circ \mleft( \mathrm{id}_N, R_\sigma \mright) \bigr)}_{\mathclap{ N * \mathcal{G} \ni (p, g) \mapsto p \cdot g \sigma_x = r_\sigma(p \cdot g) }}
+	%\bigl( X, \mathrm{D}_x e(\omega) \bigr)
+%\\
+%&=
+%\mathrm{D}_{(p, e_x)}( r_\sigma \circ \Phi ) \bigl( X, \mathrm{D}_x e(\omega) \bigr)
+%\\
+%&=
+%\mathrm{D}_p r_\sigma \Bigl(
+	%\mathrm{D}_{(p, e_x)} \Phi \bigl( X, \mathrm{D}_x e(\omega) \bigr)
+%\Bigr)
+%\\
+%&=
+%\mathrm{D}_p r_\sigma \Bigl(
+	%\mathrm{D}_{(p, e_x)} \Phi \bigl( X, \mathrm{D}_p (e \circ f) (X) \bigr)
+%\Bigr)
+%\\
+%&=
+%\mathrm{D}_p r_\sigma \Bigl(
+	%\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathrm{id}_N, e\circ f)\bigr)( X, X )
+%\Bigr),
+\end{align*}
+%but on the diagonal $\mathrm{diag}(N\times N)$ of $N\times N$ we have
+%\begin{align*}
+%\Bigl[
+%\mathrm{diag}(N \times N) \ni (p,p)
+%\mapsto
+%\bigl(\Phi \circ (\mathrm{id}_N, e\circ f)\bigr)(p,p)
+%=
+%\Phi\mleft(p, e_{f(p)}\mright)
+%=
+%p \cdot e_{f(p)}
+%=
+%p
+%\Bigr]
+%&=
+%\mleft.\mathrm{pr}_i\mright|_{\mathrm{diag}(N \times N)},
+%\end{align*}
+%where $\mathrm{pr}_i$ is just the projection onto any of both $i$-th components ($i \in \{1,2\}$) in $N \times N$. Due to $(X, X) \in \mathrm{T}_{(p,p)}\bigl( \mathrm{diag}(N\times N) \bigr)$ we derive
+%\begin{align*}
+%\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathrm{id}_N, e\circ f)\bigr)( X, X )
+%&=
+%\mathrm{D}_{(p,p)} \mathrm{pr}_i( X, X )
+%=
+%X.
+%\end{align*}
 So, we get in total
-\bas
-\mathrm{D}_{(p, g)}\Phi\Bigl(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
-&=
-\mathrm{D}_pr_\sigma(X),
-\eas
-therefore
-\bas
+%\begin{align*}
+%\mathrm{D}_{(p, g)}\Phi\bigl(X, \mathrm{D}_x \sigma (\omega) \bigr)
+%&=
+%\mathrm{D}_pr_\sigma(X),
+%\end{align*}
+%therefore
+\begin{align*}
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
 \mathrm{D}_pr_\sigma(X)
-	+ \mleft.{\overline{\mleft( \MC\mright)_g (Y^v)}}\mright|_{p \cdot g}.
-\eas
-
-If $f$ is a surjective submersion, then $x$ is a regular value and thus $f^{-1}(\{x\})$ is an embedded submanifold, and we can assure the existence of a smooth local section $\tau: U \to N$ of $f$ ($U$ an open neighbourhood of $x \in M$), \textit{i.e.}\ $f \circ \tau = \mathbb{1}_U$ with $\tau_x = p$; in case of doubt, this can be shown as in \cite[\S 3.7, Lemma 3.7.4, page 152f.]{Hamilton}\ via the Regular Point Theorem. Recalling the arguments of Rem. \ref{rem:AbstractNotationTwoForLeftInvarVfs}, we can rewrite the second summand of Eq.\ \eqref{DifferentialOfActionSplitFirst} instead to
-\bas
-\mathrm{D}_g\Phi_p (Y^v)
-&=
-\mathrm{D}_g\Phi_\tau (Y^v)
-\\
-&=
-\mathrm{D}_g\Phi_\tau (Y)
-	- \mathrm{D}_g\Phi_\tau \mleft(\mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr)\mright)
-\\
-&=
-\mathrm{D}_g\Phi_\tau (Y)
-	- \mathrm{D}_{e_x}(\Phi_\tau \circ R_\sigma)\bigl( \mathrm{D}_xe(\omega) \bigr)
-\eas
-making use of that $\mathrm{D}_g\Phi_\tau$ is linear map $\mathrm{T}_g\mathcal{G} \to \mathrm{T}_{p \cdot g}N$. In that case we would get in total
-\bas
-\mathrm{D}_{(p, g)}\Phi(X, Y)
-&=
-\mathrm{D}_pr_\sigma(X)
-	+ \mathrm{D}_g\Phi_\tau (Y)
-	- \mathrm{D}_{e_x}(\Phi_\tau \circ R_\sigma)\bigl( \mathrm{D}_xe(\omega) \bigr).
-\eas
-Alternatively, we do not rewrite Eq.\ \eqref{DifferentialOfActionSplitFirst} with the Maurer-Cartan form and instead apply the same trick to $X$ as for $Y$, that is,
-\bas
-X &= X^v + \mathrm{D}_{e_x}\Phi_\tau\bigl( \mathrm{D}_xe(\omega) \bigr),
-\eas
-where
-\bas
-X^v
-&\coloneqq
-X
-	- \mathrm{D}_x \tau(\omega)
-=
-X
-	- \mathrm{D}_{e_x}\Phi_\tau\bigl( \mathrm{D}_xe(\omega) \bigr),
-\eas
-and $X^v$ is vertical, too, that is,
-\bas
-\mathrm{D}_p f (X^v)
-&=
-\mathrm{D}_p f (X)
-	- \mathrm{D}_x (f \circ \tau) (\omega)
-=
-\omega - \omega
-=
-0,
-\eas
-especially $X^v \in \mathrm{T}_p\mleft( f^{-1}(\{x\}) \mright)$ and so we can apply a similar argument as in Rem. \ref{rem:AbstractNotationTwoForLeftInvarVfs} to derive
-\bas
-\mathrm{D}_p r_\sigma(X)
-&=
-\mathrm{D}_p r_\sigma(X^v)
-	+ \mathrm{D}_p r_\sigma\Bigl( \mathrm{D}_{e_x}\Phi_\tau\bigl( \mathrm{D}_xe(\omega) \bigr) \Bigr)
-\\
-&=
-\mathrm{D}_p r_g(X^v)
-	+ \mathrm{D}_{e_x} \mleft( r_\sigma \circ \Phi_\tau \mright)\bigl( \mathrm{D}_xe(\omega) \bigr).
-\eas
-Finally, using these expressions, the total formula would look like
-\bas
-\mathrm{D}_{(p, g)}\Phi(X, Y)
-&=
-\mathrm{D}_pr_g(X^v)
-	+ \mathrm{D}_g\Phi_p (Y^v)
-	+ \mathrm{D}_{e_x} \underbrace{\mleft( r_\sigma \circ \Phi_\tau \mright)}
-		_{\mathclap{ \mathcal{G} \ni g \mapsto \tau_{\pi(g)} \cdot g \sigma_{\pi(g)} = (\Phi_\tau \circ R_\sigma)(g) }}
-		\bigl( \mathrm{D}_xe(\omega) \bigr)
-\\
-&=
-\mathrm{D}_pr_g(X^v)
-	+ \mathrm{D}_g\Phi_p (Y^v)
-	+ \mathrm{D}_{e_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{D}_xe(\omega) \bigr).
-\eas
+	+ \mleft.{\overline{\mleft( \MC\mright)_g (Y^v)}}\mright|_{p \cdot g}~.
+\end{align*}
+%We want to calculate the derivative of $\Phi$, and due to $N*\mathcal{G} = f^*\mathcal{G}$ we are going to use Lemma \ref{lem:PullbackFibreBundleItsTangentSp}. That is, fix $(p, g) \in N*\mathcal{G}$ and $X \in \mathrm{T}_pN$, $Y \in \mathrm{T}_g \mathcal{G}$ with
+%\bas
+%\mathrm{D}_p f(X) &= \mathrm{D}_g\pi(Y) \eqqcolon \omega \in \mathrm{T}_{f(p)}M.
+%\eas
+%Recall that we can localize LGB actions in sense of Rem.\ \ref{rem:LocalLGBAction}; so, let $x \coloneqq f(p) = \pi(g)$, and fix a trivialization of $\mathcal{G}$ around $x$. Then it is clear that there is a (local)\footnote{For simplicity of notation we omit the notation of restricting on some open subset of $M$.} section $\sigma \in \Gamma(\mathcal{G})$ with $\sigma_x = g$. Observe that we can write
+%\bas
+%Y
+%&=
+%Y 
+	%- \mathrm{D}_x \sigma (\omega)
+	%+ \mathrm{D}_x \sigma (\omega).
+%\eas
+%The two first summands result into a vertical tangent vector due to
+%\bas
+%\mathrm{D}_g\pi\bigl( Y - \mathrm{D}_x\sigma(\omega) \bigr)
+%&=
+%\mathrm{D}_g\pi( Y ) - \mathrm{D}_x\underbrace{(\pi \circ \sigma)}_{= \mathbb{1}_M}(\omega)
+%=
+%\mathrm{D}_g \pi (Y) - \omega
+%=
+%0.
+%\eas
+%For the following recall the notations introduced in Def.\ \ref{def:LRTranslations} and \ref{def:LeftRightTranslationConjugation}; we can derive that
+%\bas
+%\mathrm{D}_{e_x}R_\sigma \circ \mathrm{D}_x e
+%&=
+%\mathrm{D}_x \underbrace{\mleft( R_\sigma \circ e \mright)}
+	%_{\mathclap{x \mapsto e_x \sigma_x = \sigma_x}}
+%=
+%\mathrm{D}_x \sigma.
+%\eas
+%So, we can also write 
+%\bas
+%Y^v
+%&\coloneqq
+%Y - \mathrm{D}_x \sigma(\omega)
+%=
+%Y - \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr).
+%\eas
+%We have proven that $Y^v \in \mathrm{V}_g\mathcal{G}$, and thus $(0_p, Y^v) \in \mathrm{T}_{(p, g)}(f^*\mathcal{G})$ by Lemma \ref{lem:PullbackFibreBundleItsTangentSp}, where $0_p$ is the zero tangent vector of $\mathrm{T}_pN$. In the same fashion we also have
+%\bas
+%\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+%&\in \mathrm{T}_{(p, g)}(f^*\mathcal{G})
+%\eas
+%because of
+%\bas
+%\mathrm{D}_g\pi \Bigl( \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
+%&=
+%\mathrm{D}_g \pi (Y - Y^v)
+%=
+%\mathrm{D}_g \pi (Y)
+%=
+%\mathrm{D}_p f (X),
+%\eas
+%thence we can write in $\mathrm{T}_{(p, g)}(f^*\mathcal{G})$
+%\bas
+%(X, Y)
+%&=
+%\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) + Y^v \mright)
+%=
+%\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+	%+ (0_p, Y^v).
+%\eas
+%Hence also
+%\ba\label{DifferentialOfActionSplitFirst}
+%\mathrm{D}_{(p, g)}\Phi(X, Y)
+%&=
+%\mathrm{D}_{(p, g)}\Phi\mleft(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \mright)
+	%+ \mathrm{D}_{(p, g)}\Phi(0_p, Y^v)
+%\ea
+%The second summand is quickly calculated as
+%\bas
+%\mathrm{D}_{(p, g)}\Phi(0_p, Y^v)
+%&=
+%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Phi(p, \gamma)
+%=
+%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \underbrace{(p \cdot \gamma)}
+	%_{\Phi_p(\gamma)}
+%=
+%\mathrm{D}_{g}\Phi_p (Y^v)
+%\eas
+%where $\gamma: I \to \mathcal{G}_x$ ($I$ open interval of $\mathbb{R}$ containing 0) is a curve with $\gamma(0) = g$ and $\mathrm{d}/\mathrm{d}t|_{t=0} \gamma = Y^v$; this is due to the verticality of $Y^v$, and so $\mathrm{D}_g\Phi_p(Y^v)$ is also well-defined since $\Phi_p$ is a map $\mathcal{G}_x \to N$. Now recall Def.\ \ref{def:MCFormOnLGBs} and \ref{def:FundVecs}, and then observe that we can write
+%\ba\label{ClassicalWayToWriteLeibnizRuleWithLeftPushForwardInsteadOfMCForm}
+%\mathrm{D}_{g}\Phi_p (Y^v)
+%&=
+%\mleft(\mathrm{D}_{g}\Phi_p \circ \mathrm{D}_{e_x}L_g \circ \mathrm{D}_g L_{g^{-1}} \mright)(Y^v)
+%=
+%\mathrm{D}_{e_x}\underbrace{\mleft( \Phi_p \circ L_g \mright)}
+	%_{\mathclap{ \mathcal{G} \ni q \mapsto p \cdot gq = \Phi_{p \cdot g}(q) }}
+	%\mleft(\mleft( \MC\mright)_g (Y^v) \mright)
+%=
+%\mleft.{\overline{\mleft( \MC\mright)_g (Y^v)}}\mright|_{p \cdot g}
+%%\mleft.{\overline{\mleft( \MC\mright)_g (Y^v)}}\mright|_{p \cdot g},
+%\ea
+%making use of the verticality of $Y^v$ such that operators like $\mathrm{D}L_g$ can act on $Y^v$.
+%
+%For the first summand in Eq.\ \eqref{DifferentialOfActionSplitFirst} we use
+%\bas
+%\mathrm{D}_{(p, g)}\Phi\Bigl(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
+%&=
+%\mathrm{D}_{(p, e_x)} \underbrace{\bigl( \Phi \circ \mleft( \mathbb{1}_N, R_\sigma \mright) \bigr)}_{\mathclap{ N * \mathcal{G} \ni (p, g) \mapsto p \cdot g \sigma_x = r_\sigma(p \cdot g) }}
+	%\bigl( X, \mathrm{D}_x e(\omega) \bigr)
+%\\
+%&=
+%\mathrm{D}_{(p, e_x)}( r_\sigma \circ \Phi ) \bigl( X, \mathrm{D}_x e(\omega) \bigr)
+%\\
+%&=
+%\mathrm{D}_p r_\sigma \Bigl(
+	%\mathrm{D}_{(p, e_x)} \Phi \bigl( X, \mathrm{D}_x e(\omega) \bigr)
+%\Bigr)
+%\\
+%&=
+%\mathrm{D}_p r_\sigma \Bigl(
+	%\mathrm{D}_{(p, e_x)} \Phi \bigl( X, \mathrm{D}_p (e \circ f) (X) \bigr)
+%\Bigr)
+%\\
+%&=
+%\mathrm{D}_p r_\sigma \Bigl(
+	%\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathbb{1}_N, e\circ f)\bigr)( X, X )
+%\Bigr),
+%\eas
+%but on the diagonal $\mathrm{diag}(N\times N)$ of $N\times N$ we have
+%\bas
+%\Bigl[
+%\mathrm{diag}(N \times N) \ni (p,p)
+%\mapsto
+%\bigl(\Phi \circ (\mathbb{1}_N, e\circ f)\bigr)(p,p)
+%=
+%\Phi\mleft(p, e_{f(p)}\mright)
+%=
+%p \cdot e_{f(p)}
+%=
+%p
+%\Bigr]
+%&=
+%\mleft.\mathrm{pr}_i\mright|_{\mathrm{diag}(N \times N)},
+%\eas
+%where $\mathrm{pr}_i$ is just the projection onto any of both $i$-th components ($i \in \{1,2\}$) in $N \times N$. Due to $(X, X) \in \mathrm{T}_{(p,p)}\bigl( \mathrm{diag}(N\times N) \bigr)$ we derive
+%\bas
+%\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathbb{1}_N, e\circ f)\bigr)( X, X )
+%&=
+%\mathrm{D}_{(p,p)} \mathrm{pr}_i( X, X )
+%=
+%X.
+%\eas
+%So, we get in total
+%\bas
+%\mathrm{D}_{(p, g)}\Phi\Bigl(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
+%&=
+%\mathrm{D}_pr_\sigma(X),
+%\eas
+%therefore
+%\bas
+%\mathrm{D}_{(p, g)}\Phi(X, Y)
+%&=
+%\mathrm{D}_pr_\sigma(X)
+	%+ \mleft.{\overline{\mleft( \MC\mright)_g (Y^v)}}\mright|_{p \cdot g}.
+%\eas
+%
+%If $f$ is a surjective submersion, then $x$ is a regular value and thus $f^{-1}(\{x\})$ is an embedded submanifold, and we can assure the existence of a smooth local section $\tau: U \to N$ of $f$ ($U$ an open neighbourhood of $x \in M$), \textit{i.e.}\ $f \circ \tau = \mathbb{1}_U$ with $\tau_x = p$; in case of doubt, this can be shown as in \cite[\S 3.7, Lemma 3.7.4, page 152f.]{Hamilton}\ via the Regular Point Theorem. Recalling the arguments of Rem. \ref{rem:AbstractNotationTwoForLeftInvarVfs}, we can rewrite the second summand of Eq.\ \eqref{DifferentialOfActionSplitFirst} instead to
+%\bas
+%\mathrm{D}_g\Phi_p (Y^v)
+%&=
+%\mathrm{D}_g\Phi_\tau (Y^v)
+%\\
+%&=
+%\mathrm{D}_g\Phi_\tau (Y)
+	%- \mathrm{D}_g\Phi_\tau \mleft(\mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr)\mright)
+%\\
+%&=
+%\mathrm{D}_g\Phi_\tau (Y)
+	%- \mathrm{D}_{e_x}(\Phi_\tau \circ R_\sigma)\bigl( \mathrm{D}_xe(\omega) \bigr)
+%\eas
+%making use of that $\mathrm{D}_g\Phi_\tau$ is linear map $\mathrm{T}_g\mathcal{G} \to \mathrm{T}_{p \cdot g}N$. In that case we would get in total
+%\bas
+%\mathrm{D}_{(p, g)}\Phi(X, Y)
+%&=
+%\mathrm{D}_pr_\sigma(X)
+	%+ \mathrm{D}_g\Phi_\tau (Y)
+	%- \mathrm{D}_{e_x}(\Phi_\tau \circ R_\sigma)\bigl( \mathrm{D}_xe(\omega) \bigr).
+%\eas
+%Alternatively, we do not rewrite Eq.\ \eqref{DifferentialOfActionSplitFirst} with the Maurer-Cartan form and instead apply the same trick to $X$ as for $Y$, that is,
+%\bas
+%X &= X^v + \mathrm{D}_{e_x}\Phi_\tau\bigl( \mathrm{D}_xe(\omega) \bigr),
+%\eas
+%where
+%\bas
+%X^v
+%&\coloneqq
+%X
+	%- \mathrm{D}_x \tau(\omega)
+%=
+%X
+	%- \mathrm{D}_{e_x}\Phi_\tau\bigl( \mathrm{D}_xe(\omega) \bigr),
+%\eas
+%and $X^v$ is vertical, too, that is,
+%\bas
+%\mathrm{D}_p f (X^v)
+%&=
+%\mathrm{D}_p f (X)
+	%- \mathrm{D}_x (f \circ \tau) (\omega)
+%=
+%\omega - \omega
+%=
+%0,
+%\eas
+%especially $X^v \in \mathrm{T}_p\mleft( f^{-1}(\{x\}) \mright)$ and so we can apply a similar argument as in Rem. \ref{rem:AbstractNotationTwoForLeftInvarVfs} to derive
+%\bas
+%\mathrm{D}_p r_\sigma(X)
+%&=
+%\mathrm{D}_p r_\sigma(X^v)
+	%+ \mathrm{D}_p r_\sigma\Bigl( \mathrm{D}_{e_x}\Phi_\tau\bigl( \mathrm{D}_xe(\omega) \bigr) \Bigr)
+%\\
+%&=
+%\mathrm{D}_p r_g(X^v)
+	%+ \mathrm{D}_{e_x} \mleft( r_\sigma \circ \Phi_\tau \mright)\bigl( \mathrm{D}_xe(\omega) \bigr).
+%\eas
+%Finally, using these expressions, the total formula would look like
+%\bas
+%\mathrm{D}_{(p, g)}\Phi(X, Y)
+%&=
+%\mathrm{D}_pr_g(X^v)
+	%+ \mathrm{D}_g\Phi_p (Y^v)
+	%+ \mathrm{D}_{e_x} \underbrace{\mleft( r_\sigma \circ \Phi_\tau \mright)}
+		%_{\mathclap{ \mathcal{G} \ni g \mapsto \tau_{\pi(g)} \cdot g \sigma_{\pi(g)} = (\Phi_\tau \circ R_\sigma)(g) }}
+		%\bigl( \mathrm{D}_xe(\omega) \bigr)
+%\\
+%&=
+%\mathrm{D}_pr_g(X^v)
+	%+ \mathrm{D}_g\Phi_p (Y^v)
+	%+ \mathrm{D}_{e_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{D}_xe(\omega) \bigr).
+%\eas
 \end{proof}
 
-\begin{remark}
-\leavevmode\newline
-Eq.\ \eqref{NewDIffACtionwithMCForm} is very similar to the "classical" formula used in gauge theory, see \textit{e.g.}\ \cite[\S 3.5, Prop.\ 3.5.4, page 149]{Hamilton}: In the case of a Lie group action on $N$ we have
+\begin{remarks}{Comparison to ``classical'' formula}{ComparingToClassicalLeibniz}
+\ref{prop:DiffOfLGBAction} is very similar to the "classical" formula used in gauge theory, see e.g.\ \cite[\S 3.5, Prop.\ 3.5.4, page 149]{Hamilton}: In the case of a Lie group action on $N$ we have
 \bas
 \mathrm{D}_{(p, g)}\Phi(X, Y)
 &=
 \mathrm{D}_pr_g(X)
 	+ \mleft.\overline{(\mu_G)_g(Y)}\mright|_{p \cdot g}
 \eas
-for all $p \in N$, $g \in G$, $X \in \mathrm{T}_pN$ and $Y \in \mathrm{T}_g G$.
-However, in our general case the vector $Y$ is deformed by $\omega$, due to the fact that the action $\Phi$ has no "constant" Lie group factor anymore. This will be important later when we are going to derive the gauge transformations. Furthermore, already the first summand is now different than the classical formula, because we need to use LGB sections in order to define the push-forward of tangent vectors which are not vertical, that is, $X$ may not be a tangent vector of $f^{-1}(\{x\})$ (which is in the general case not even an embedded submanifold) such that $\mathrm{D}_p r_g(X)$ is in general not well-defined anymore.
+for all $p \in N$, $g \in G$, $X \in \mathrm{T}_pN$ and $Y \in \mathrm{T}_g G$, where $\mu_G$ is the Maurer-Cartan form of $G$. However, in our general case the vector $Y$ is deformed by $\omega$, due to the fact that the action $\Phi$ has no "constant" Lie group factor anymore. This will be important later when we are going to derive the gauge transformations. Furthermore, already the first summand is now different than the classical formula, because we need to use LGB sections in order to define the push-forward of tangent vectors which are not vertical, that is, $X$ may not be a tangent vector of $f^{-1}(\{x\})$ (which is in the general case not even an embedded submanifold) such that $\mathrm{D}_p r_g(X)$ is in general not well-defined anymore.
 
-The other two equations in the case of $f$ being a surjective submersion are mainly for reference; the last equation, Eq.\ \eqref{DiffActionAsClassicalButWithExtraContribution}, emphasises the contribution of non-vertical vectors measured by $\omega$. While the first two summands are the classical product rule on the vertical parts, the third summand shows the deformation of the product rule because of the new structure of an action without a "constant" Lie group factor.
+%The other two equations in the case of $f$ being a surjective submersion are mainly for reference; the last equation, Eq.\ \eqref{DiffActionAsClassicalButWithExtraContribution}, emphasises the contribution of non-vertical vectors measured by $\omega$. While the first two summands are the classical product rule on the vertical parts, the third summand shows the deformation of the product rule because of the new structure of an action without a "constant" Lie group factor.
+%
+%Eq.\ \eqref{DIFfActionSimilarToTangenGroupoid} may be the most elegant formulation, making use of local sections $\sigma$ and $\tau$ and their advantage that these can act on all tangent vectors, not just the vertical ones; the reader who knows Lie groupoids may recognize this equation's structure with the one as given in \cite[\S 1.4, Thm.\ 1.4.14, page 28]{mackenzieGeneralTheory}, where it is about the induced multiplication structure on the tangent bundle of a Lie groupoid making use of bisections playing a similar role like $\sigma$ and $\tau$.
 
-Eq.\ \eqref{DIFfActionSimilarToTangenGroupoid} may be the most elegant formulation, making use of local sections $\sigma$ and $\tau$ and their advantage that these can act on all tangent vectors, not just the vertical ones; the reader who knows Lie groupoids may recognize this equation's structure with the one as given in \cite[\S 1.4, Thm.\ 1.4.14, page 28]{mackenzieGeneralTheory}, where it is about the induced multiplication structure on the tangent bundle of a Lie groupoid making use of bisections playing a similar role like $\sigma$ and $\tau$.
-
-Those equations additionally show that we have a more general Leibniz rule with a third summand. However, by Ex.\ \ref{ex:TrivialLGBAction} we expect still a typical Leibniz rule once a trivialization of $\mathcal{G}$ around $g$ is fixed. Indeed, as we will understand and see also later, this is the case; fix such a trivialization, equip it with a canonical flat connection, and take $\sigma$ to be a parallel section, that is, $g$ as a constant section. Then one can calculate that the typical Leibniz rule is recovered. Hence, one can view this Leibniz rule as the "covariantized" version of the "classical" Leibniz rule, independent of a choice of "coordinate"/section on $\mathcal{G}$. 
-\end{remark}
+By Ex.\ \ref{ex:TrivialLGBAction} we expect still a typical Leibniz rule once a trivialization of $\mathcal{G}$ around $g$ is fixed. Indeed, as we will understand and see also later, this is the case; fix such a trivialization, equip it with a canonical flat connection, and take $\sigma$ to be a parallel section, that is, $g$ as a constant section. Then one can calculate that the typical Leibniz rule is recovered. Hence, one can view this Leibniz rule as the ``covariantized'' version of the ``classical'' Leibniz rule, independent of a choice of ``coordinate''/section on $\mathcal{G}$. 
+\end{remarks}
 
 \section{Connections and curvature on principal LGB-bundles}\label{ConnCurvOnPrincLGBBundle}
 
@@ -4478,16 +4672,16 @@ for all $(p, g) \in \mathcal{P} * \mathcal{G}$, and we have an isomorphism of ve
 given by
 \ba
 \pi^*\mathcal{g} &\to \mathrm{V}\mathcal{P},\nonumber\\
-(p, \nu) &\mapsto \widetilde{\nu}_p.\label{FundVecAsMapIsIsom}
+(p, \nu) &\mapsto \overline{\nu}_p.\label{FundVecAsMapIsIsom}
 \ea
 \end{corollaries}
 
 \begin{remarks}{Extending the notation of fundamental vector fields}{FundVecNotationOnPullbackBundle}
 For $\mu \coloneqq (p, \nu)$ we may also write
 \bas
-\widetilde{\mu}_p
+\overline{\mu}_p
 &\coloneqq
-\widetilde{\nu}_p,
+\overline{\nu}_p,
 \eas
 which simplifies the notation in certain circumstances.
 \end{remarks}
@@ -4667,28 +4861,28 @@ especially parallel transport is a diffeomorphism between the fibres, where $\al
 &=
 \mleft.\mathrm{PT}_\alpha^{\mathcal{P}}(p)\mright|_t \cdot g.
 \ea
-Thinking of the associated $\mathcal{G}$-action, $g$ is an element of $\mathcal{G}_x$ such that the right hand side is in general not well-defined\footnote{Also here one could work with trivializations, especially since $\alpha^*\mathcal{P}$ is trivial as a fibre bundle due to the fact that the image of $\alpha$ is contractible. As before, this would just lead to other problems on a global scale, and we aim to provide a definition of connections on $\mathcal{P}$ without making use of trivializations.} anymore due to the fact that $\mleft.\mathrm{PT}_\alpha^{\mathcal{P}}(p)\mright|_t \in \mathcal{P}_{\alpha(t)}$; it is well-defined if interpreting $g$ as a constant section of $\mathcal{G} = M \times G$, denoted now by $\widetilde{g} \in \Gamma(\mathcal{G})$ for bookkeeping reasons. The left hand side uses $\widetilde{g}_{\alpha(0)} = \widetilde{g}_{x} = (x, g)$, the right hand side $\widetilde{g}_{\alpha(t)} = (\alpha(t), g)$, and by Ex.\ \ref{ex:TrivialLGBAction} we rewrite the $G$-action to a $\mathcal{G}$-action:
+Thinking of the associated $\mathcal{G}$-action, $g$ is an element of $\mathcal{G}_x$ such that the right hand side is in general not well-defined\footnote{Also here one could work with trivializations, especially since $\alpha^*\mathcal{P}$ is trivial as a fibre bundle due to the fact that the image of $\alpha$ is contractible. As before, this would just lead to other problems on a global scale, and we aim to provide a definition of connections on $\mathcal{P}$ without making use of trivializations.} anymore due to the fact that $\mleft.\mathrm{PT}_\alpha^{\mathcal{P}}(p)\mright|_t \in \mathcal{P}_{\alpha(t)}$; it is well-defined if interpreting $g$ as a constant section of $\mathcal{G} = M \times G$, denoted now by $\overline{g} \in \Gamma(\mathcal{G})$ for bookkeeping reasons. The left hand side uses $\overline{g}_{\alpha(0)} = \overline{g}_{x} = (x, g)$, the right hand side $\overline{g}_{\alpha(t)} = (\alpha(t), g)$, and by Ex.\ \ref{ex:TrivialLGBAction} we rewrite the $G$-action to a $\mathcal{G}$-action:
 \bas
 p \cdot g
 &=
 p \cdot (x, g)
 =
-p \cdot \widetilde{g}_x,&
+p \cdot \overline{g}_x,&
 \mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot g
 &=
 \mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot (\alpha, g)
 =
-\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \alpha^*\widetilde{g},
+\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \alpha^*\overline{g},
 \eas
 where we recall that $\alpha^*\mathcal{P}$ is a principal $\alpha^*\mathcal{G}$-bundle in sense of Def.\ \ref{def:PullbackPrincBundleDef}. 
 
-Now we equip $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ with its \textbf{canonical flat connection} $\mathrm{H}\mathcal{G} \coloneqq \pi^*_{\mathcal{G}}\mathrm{T}M$ which induces a parallel transport $\mathrm{PT}_\alpha^{\mathcal{G}}: \mathcal{G}_{x} \to \Gamma\mleft(\alpha^*\mathcal{G}\mright)$ with $\mleft.\mathrm{PT}_\alpha^{\mathcal{G}}\mright|_t(x, g) = ( \alpha(t), g)$, especially $\mathrm{PT}_\alpha^{\mathcal{G}}\mleft( \widetilde{g}_x \mright) = \alpha^*\widetilde{g}$. In total, we can rewrite Eq.\ \eqref{ClassicalSymmetryofPTs} to
+Now we equip $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ with its \textbf{canonical flat connection} $\mathrm{H}\mathcal{G} \coloneqq \pi^*_{\mathcal{G}}\mathrm{T}M$ which induces a parallel transport $\mathrm{PT}_\alpha^{\mathcal{G}}: \mathcal{G}_{x} \to \Gamma\mleft(\alpha^*\mathcal{G}\mright)$ with $\mleft.\mathrm{PT}_\alpha^{\mathcal{G}}\mright|_t(x, g) = ( \alpha(t), g)$, especially $\mathrm{PT}_\alpha^{\mathcal{G}}\mleft( \overline{g}_x \mright) = \alpha^*\overline{g}$. In total, we can rewrite Eq.\ \eqref{ClassicalSymmetryofPTs} to
 \bas
-\mathrm{PT}_\alpha^{\mathcal{P}}\mleft(p \cdot \widetilde{g}_x\mright)
+\mathrm{PT}_\alpha^{\mathcal{P}}\mleft(p \cdot \overline{g}_x\mright)
 &=
-\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \alpha^*\widetilde{g}
+\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \alpha^*\overline{g}
 =
-\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}\mleft( \widetilde{g}_x \mright).
+\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}\mleft( \overline{g}_x \mright).
 \eas
 This opens a gateway to define Eq.\ \eqref{ClassicalSymmetryofPTs} on general principal $\mathcal{G}$-bundles. That is, now let $\mathcal{P}$ be again a general principal $\mathcal{G}$-bundle. Fix any horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$ inducing a parallel transport $\mathrm{PT}_\alpha^{\mathcal{G}}$, then a connection on $\mathcal{P}$ should be equivalent to a parallel transport $\mathrm{PT}_\alpha^{\mathcal{P}}$ on $\mathcal{P}$ satisfying Eq.\ \eqref{PTProp1}, \eqref{PTProp2} and
 \ba\label{PTHomomNEw}
@@ -4968,7 +5162,7 @@ by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}. Thence, the symmetry beh
 %&=
 %\mathrm{H}\mathcal{P} \oplus \mathrm{V}\mathcal{P}.
 %\eas
-%Let us now investigate the behaviour of this horizontal distribution under push-forwards of right-multiplications; as we already discussed before, we are interested into such push-forwards using sections of $\mathcal{G}$. That is, let $\widetilde{\sigma}$ a (local) section of $\mathcal{G}$; for the section we also write $\widetilde{\sigma}_x = (x, \sigma_x)$, where $\sigma$ is a (locally) defined map with values in $\mathbb{R}^*$; for simplicity we also write $\sigma$ for $\widetilde{\sigma}$, it should be clear by context what we mean. Then
+%Let us now investigate the behaviour of this horizontal distribution under push-forwards of right-multiplications; as we already discussed before, we are interested into such push-forwards using sections of $\mathcal{G}$. That is, let $\overline{\sigma}$ a (local) section of $\mathcal{G}$; for the section we also write $\overline{\sigma}_x = (x, \sigma_x)$, where $\sigma$ is a (locally) defined map with values in $\mathbb{R}^*$; for simplicity we also write $\sigma$ for $\overline{\sigma}$, it should be clear by context what we mean. Then
 %\bas
 %\mathrm{D}_{(x, g)}r_\sigma(v_x, v_g)
 %&=
@@ -5437,7 +5631,7 @@ f^!\mleft( \Delta^0 g\mright)
 \eas
 for all $g \in G$ viewed as a section of $G \to \{0\}$, so $f^*g$ are the constant sections of $\mathcal{G}$. In sense of Remark \ref{rem:MCAsDerivativePartII} it makes sense to say that \textbf{$\sigma$ is parallel w.r.t.\ $\Delta$}. Since constant sections generate all sections of $\mathcal{G}$, we then speak of the \textbf{canonical flat Darboux derivative}, and constant sections are its parallel sections.
 
-However, just because $\Delta^0$ is a zero map, does not mean that also $\Delta^{\mathcal{G}}$ is zero. On one hand because of a Leibniz rule which we will discuss later in more detail, and on the other hand, as mentioned in Subsection \ref{BasicNotations}, we can view general sections $\sigma \in \Gamma(\mathcal{G})$ (not necessarily constant) equivalently as a smooth map $\mathrm{pr}_2 \circ \sigma: M \to G$, denoted by $\widetilde{\sigma}$ for bookkeeping reasons. By Remark \ref{rem:TrivialLGBsAndTheirMCForm} we then get
+However, just because $\Delta^0$ is a zero map, does not mean that also $\Delta^{\mathcal{G}}$ is zero. On one hand because of a Leibniz rule which we will discuss later in more detail, and on the other hand, as mentioned in Subsection \ref{BasicNotations}, we can view general sections $\sigma \in \Gamma(\mathcal{G})$ (not necessarily constant) equivalently as a smooth map $\mathrm{pr}_2 \circ \sigma: M \to G$, denoted by $\overline{\sigma}$ for bookkeeping reasons. By Remark \ref{rem:TrivialLGBsAndTheirMCForm} we then get
 \bas
 \Delta^{\mathcal{G}} \sigma
 &=
@@ -5445,7 +5639,7 @@ However, just because $\Delta^0$ is a zero map, does not mean that also $\Delta^
 =
 \mleft( \mathrm{pr}_2 \circ \sigma \mright)^!\mu_G
 =
-\Delta^G \widetilde{\sigma}
+\Delta^G \overline{\sigma}
 \eas
 for all $\sigma \in \Gamma(\mathcal{G})$, where $\Delta^G$ is the "classical" Darboux derivative as in Remark \ref{rem:MCFormAGeneralizationOfDerivative} related to $\mu_G$. This emphasizes why we can speak of a canonical flat derivative due to the fact that $\mu_G$ is flat (Maurer-Cartan equation), and we may simply write $\Delta^{\mathcal{G}} = \Delta^G$.
 \end{remarks}
@@ -5631,11 +5825,11 @@ so that smoothness of $\nabla^{\mathcal{G}} \nu$ follows.
 In order to understand whether $\nabla^{\mathcal{G}}$ is a vector bundle connection we are hence interested into the restriction of Diagram \eqref{DiagramForNablaConn} onto
 \begin{center}
 	\begin{tikzcd}
-		 \mathrm{V}\mathcal{g} \arrow{r}{\mathrm{D}\pi_{\mathrm{T}\mathcal{G}}} \arrow{d}{\pi_{\mathrm{TT}\mathcal{G}}} & \widetilde{M} \arrow{d}{\cong} \\
+		 \mathrm{V}\mathcal{g} \arrow{r}{\mathrm{D}\pi_{\mathrm{T}\mathcal{G}}} \arrow{d}{\pi_{\mathrm{TT}\mathcal{G}}} & \overline{M} \arrow{d}{\cong} \\
 		\mathcal{g} \arrow[r, "\pi_{\mathrm{T}\mathcal{G}}"]& M
 	\end{tikzcd}
 \end{center}
-where $M$ is canonically embedded into $\mathcal{G}$ by $e$, and $\widetilde{M}$ is the further canonical embedding of this (the image of $e$) into $\mathrm{T}\mathcal{G}$ by the zero section. As in Appendix \ref{DoubleTangentFlip}, the addition of vectors and the scalar multiplication of the left vertical arrow is denoted as usual, while the one of the upper horizontal arrow will be denoted by $\RPlus$ and $\boldsymbol{\cdot}$, respectively. For $Y \in \mathrm{T}_xM$ we now have
+where $M$ is canonically embedded into $\mathcal{G}$ by $e$, and $\overline{M}$ is the further canonical embedding of this (the image of $e$) into $\mathrm{T}\mathcal{G}$ by the zero section. As in Appendix \ref{DoubleTangentFlip}, the addition of vectors and the scalar multiplication of the left vertical arrow is denoted as usual, while the one of the upper horizontal arrow will be denoted by $\RPlus$ and $\boldsymbol{\cdot}$, respectively. For $Y \in \mathrm{T}_xM$ we now have
 \bas
 \mleft.\nabla^{\mathcal{G}}_{\lambda X + \kappa Y} \nu \mright|_x
 &=
@@ -5892,7 +6086,7 @@ we have a right $\mathcal{G}$-action given by
 \mleft(\mathcal{P} \times_M N\mright) * \mathcal{G} &\to \mathcal{P} \times_M N,\\
 (p, x, g) &\mapsto (p, x) \cdot g \coloneqq \mleft( p \cdot g, g^{-1} \cdot x \mright)
 \eas
-where $\mleft(\mathcal{P} \times_M N\mright) * \mathcal{G}$ is given as pullback of $\mathcal{G}$ w.r.t.\ the map $\widetilde{\pi}: \mathcal{P} \times_M N \to M$, $(p,x) \mapsto \pi(p)$.
+where $\mleft(\mathcal{P} \times_M N\mright) * \mathcal{G}$ is given as pullback of $\mathcal{G}$ w.r.t.\ the map $\overline{\pi}: \mathcal{P} \times_M N \to M$, $(p,x) \mapsto \pi(p)$.
 \end{propositions}
 
 \begin{proof}
@@ -5904,7 +6098,7 @@ By Def.\ \ref{def:LiegroupACtion} it is clear that this action is well-defined, 
 for all $(p,x,g) \in \mleft(\mathcal{P} \times_M N\mright) * \mathcal{G}$,
 and this also implies
 \bas
-\widetilde{\pi}\bigl( (p, x) \cdot g \bigr)
+\overline{\pi}\bigl( (p, x) \cdot g \bigr)
 &=
 \pi(p\cdot g)
 =
@@ -6261,7 +6455,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 	for all (local) $\sigma \in \Gamma(\mathcal{G})$.
 	\item \textbf{(Identity on $\mathrm{V}\mathcal{P}$)}
 	\bas
-	A\mleft(\widetilde{\nu}\mright)
+	A\mleft(\overline{\nu}\mright)
 	&=
 	\pi^*\nu
 	\eas
@@ -6287,19 +6481,19 @@ where we wrote $A_p = \mleft(p, \hat{A}_p\mright)$ with $\hat{A}_p \in \Gamma\ml
 
 The identity on $\mathrm{V}\mathcal{P}$ reads pointwise
 \bas
-A_p(\widetilde{v_p})
+A_p(\overline{v_p})
 &=
 (p, v_p)
 \eas
 for all $v_p \in \mathcal{g}_x$. For readability we may also omit the basepoint information and just write
 \bas
-A_p(\widetilde{v_p})
+A_p(\overline{v_p})
 &\equiv
 v_p.
 \eas
 Furthermore, recall the notation introduced in Remark \ref{rem:FundVecNotationOnPullbackBundle}, then for $\mu \coloneqq (p, v_p)$ we can therefore write
 \bas
-A_p\mleft( \widetilde{\mu}_p \mright)
+A_p\mleft( \overline{\mu}_p \mright)
 &=
 \mu.
 \eas
@@ -6312,7 +6506,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \begin{itemize}
 	\item Let $\mathrm{H}\mathcal{P}$ be an Ehresmann connection on $\mathcal{P}$. Then $\mathrm{H}\mathcal{P}$ defines a connection 1-form $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ by
 	\bas
-	A_p\bigl( \widetilde{v}_p + X_p \bigr)
+	A_p\bigl( \overline{v}_p + X_p \bigr)
 	&=
 	(p, v)
 	\eas
@@ -6333,29 +6527,29 @@ The proof is very similar to the proof of "typical connections", as \textit{e.g.
 
 $\bullet$ For the first bullet point we need to show that Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is satisfied, and the identity behaviour on $\mathrm{V}\mathcal{P}$ quickly follows by definition: We have
 \bas
-\mleft.A\mleft( \widetilde{\nu} \mright)\mright|_{p}
+\mleft.A\mleft( \overline{\nu} \mright)\mright|_{p}
 &=
-A_p\mleft( \widetilde{\nu}_p \mright)
+A_p\mleft( \overline{\nu}_p \mright)
 =
 (p, \nu_x)
 =
 \mleft.\mleft(\pi^*\nu\mright)\mright|_p
 \eas
-for all $\nu \in \Gamma(\mathcal{g})$ and $p \in \mathcal{P}_x$ ($x \in M$). Therefore it is only left to show the $\mathcal{G}$-equivariance. As mentioned in Remark \ref{rem:FundVecsNotations}, for $v\in \mathcal{g}_x$ the vector field $\widetilde{v}$ on $\mathcal{P}_x$ is a fundamental vector field coming from the $\mathcal{G}_x$-action on $\mathcal{P}_x$. Hence, we know by \cite[\S 3.4, Prop.\ 3.4.6, page 145f.]{Hamilton}\ that
+for all $\nu \in \Gamma(\mathcal{g})$ and $p \in \mathcal{P}_x$ ($x \in M$). Therefore it is only left to show the $\mathcal{G}$-equivariance. As mentioned in Remark \ref{rem:FundVecsNotations}, for $v\in \mathcal{g}_x$ the vector field $\overline{v}$ on $\mathcal{P}_x$ is a fundamental vector field coming from the $\mathcal{G}_x$-action on $\mathcal{P}_x$. Hence, we know by \cite[\S 3.4, Prop.\ 3.4.6, page 145f.]{Hamilton}\ that
 \bas
-\mathcal{r}_{g*}\mleft( \widetilde{v} \mright)
+\mathcal{r}_{g*}\mleft( \overline{v} \mright)
 &=
-r_{g*}\mleft( \widetilde{v} \mright)
+r_{g*}\mleft( \overline{v} \mright)
 =
 \overline{\mathrm{Ad}_{g^{-1}}(v)}
 \eas
 for all $g \in \mathcal{G}_x$, also using Remark \ref{rem:ModRightPushOnVertic}.\footnote{This is very straightforward to prove.} Thus,
 \bas
-\mleft.\mleft(\mathcal{r}^!_\sigma A\mright)\mright|_p\bigl( \widetilde{v}_p + X_p \bigr)
+\mleft.\mleft(\mathcal{r}^!_\sigma A\mright)\mright|_p\bigl( \overline{v}_p + X_p \bigr)
 &=
 A_{p \cdot \sigma_x}\bigl( 
-	\underbrace{\mathcal{r}_{\sigma_x*}\mleft(\widetilde{v}_p\mright)}
-		_{= \mleft. \mathcal{r}_{\sigma_x*}\mleft( \widetilde{v} \mright) \mright|_{p \cdot  \sigma_x}}
+	\underbrace{\mathcal{r}_{\sigma_x*}\mleft(\overline{v}_p\mright)}
+		_{= \mleft. \mathcal{r}_{\sigma_x*}\mleft( \overline{v} \mright) \mright|_{p \cdot  \sigma_x}}
 	+ \underbrace{\mathcal{r}_{\sigma_x*}(X_p) }_{\in \mathrm{H}_{p \cdot \sigma_x}\mathcal{P}}
 \bigr)
 \\
@@ -6366,16 +6560,16 @@ A_{p \cdot \sigma_x}\bigl(
 \sAd_{\sigma_x^{-1}}(p, v)
 \\
 &=
-\sAd_{\sigma_x^{-1}}\mleft(A_p\bigl( \widetilde{v}_p + X_p \bigr)\mright)
+\sAd_{\sigma_x^{-1}}\mleft(A_p\bigl( \overline{v}_p + X_p \bigr)\mright)
 \\
 &=
-\mleft.\mleft(\sAd_{\sigma^{-1}} \circ A\mright)\mright|_p \bigl( \widetilde{v}_p + X_p \bigr)
+\mleft.\mleft(\sAd_{\sigma^{-1}} \circ A\mright)\mright|_p \bigl( \overline{v}_p + X_p \bigr)
 \eas
 for all $p \in \mathcal{P}_x$, $\sigma \in \Gamma(\mathcal{G})$, $v \in \mathcal{g}_x$ and $X_p \in \mathrm{H}_p\mathcal{P}$. This finishes the proof for the first bullet point.
 
 $\bullet$ For the second bullet point we make use of Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} and
 \bas
-A\mleft( \widetilde{\nu} \mright)
+A\mleft( \overline{\nu} \mright)
 &=
 \pi^*\nu
 \eas
@@ -6385,13 +6579,13 @@ A
 &=
 A^a \otimes \pi^*e_a,
 \eas
-where $A^a \in \Omega^1\mleft( \mathcal{P}|_U \mright)$. Due to $A\mleft( \widetilde{\nu} \mright) = \pi^*\nu$ we get
+where $A^a \in \Omega^1\mleft( \mathcal{P}|_U \mright)$. Due to $A\mleft( \overline{\nu} \mright) = \pi^*\nu$ we get
 \bas
-A^a\mleft( \widetilde{e_b} \mright)
+A^a\mleft( \overline{e_b} \mright)
 &=
 \delta^a_b,
 \eas
-where $\delta^a_b$ is the Kronecker delta. Hence, $\mleft( A^a \mright)_a$ is the dual frame of $\mleft( \widetilde{e_a} \mright)_a$, which is a frame of $\mathrm{V}\mathcal{P}$ by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}, and so the $A^a$ are linear independent to each other. Fix an auxiliary fibre metric $\langle \cdot, \cdot \rangle$ on $\mathrm{T}\mathcal{P}$, and denote with $\mleft(V^a\mright)_a$ the $\langle \cdot, \cdot \rangle$-dual frame to $\mleft(A^a\mright)_a$, \textit{i.e.}\
+where $\delta^a_b$ is the Kronecker delta. Hence, $\mleft( A^a \mright)_a$ is the dual frame of $\mleft( \overline{e_a} \mright)_a$, which is a frame of $\mathrm{V}\mathcal{P}$ by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}, and so the $A^a$ are linear independent to each other. Fix an auxiliary fibre metric $\langle \cdot, \cdot \rangle$ on $\mathrm{T}\mathcal{P}$, and denote with $\mleft(V^a\mright)_a$ the $\langle \cdot, \cdot \rangle$-dual frame to $\mleft(A^a\mright)_a$, \textit{i.e.}\
 \bas
 A^a 
 &=
@@ -6725,7 +6919,7 @@ and thus
 \eas
 Now also observe that
 \ba\label{GaugeTrafoDiffOnFUndVect}
-\mathrm{D}_p H \mleft( \widetilde{\nu}_p \mright)
+\mathrm{D}_p H \mleft( \overline{\nu}_p \mright)
 &=
 \mleft(\mathrm{D}_p H \circ \mathrm{D}_{e_x}\Phi_p\mright) (\nu)
 =
@@ -6733,7 +6927,7 @@ Now also observe that
 =
 \mathrm{D}_{e_x} \Phi_{H(p)} (\nu)
 =
-\widetilde{\nu}_{H(p)}
+\overline{\nu}_{H(p)}
 \ea
 for all $\nu \in \mathcal{g}_x$, where $\Phi_p$ is the orbit map through $p$. Due to that $H$ is base-preserving we derive
 \bas
@@ -6784,15 +6978,15 @@ where we wrote $A = \mleft( p, \widehat{A}_p \mright)$ with $\widehat{A} \colone
 &=
 \sAd_{\sigma^{-1}}\circ~ H^!A.
 \eas
-By Eq.\ \eqref{GaugeTrafoDiffOnFUndVect} we also get $\mathrm{D}H(\widetilde{\nu}) = H^*\widetilde{\nu}$ for all (local) $\nu \in \Gamma(\mathcal{g})$ and thus
+By Eq.\ \eqref{GaugeTrafoDiffOnFUndVect} we also get $\mathrm{D}H(\overline{\nu}) = H^*\overline{\nu}$ for all (local) $\nu \in \Gamma(\mathcal{g})$ and thus
 \bas
-\mleft(H^!A\mright)\mleft( \widetilde{\nu} \mright)
+\mleft(H^!A\mright)\mleft( \overline{\nu} \mright)
 &=
-\mleft(H^*A\mright)\bigl( \mathrm{D}H\mleft( \widetilde{\nu} \mright) \bigr)
+\mleft(H^*A\mright)\bigl( \mathrm{D}H\mleft( \overline{\nu} \mright) \bigr)
 =
-\mleft(H^*A\mright)\mleft( H^*\widetilde{\nu} \mright)
+\mleft(H^*A\mright)\mleft( H^*\overline{\nu} \mright)
 =
-H^*\bigl( A\mleft( \widetilde{\nu}\mright) \bigr)
+H^*\bigl( A\mleft( \overline{\nu}\mright) \bigr)
 =
 H^*\pi^*\nu
 =
@@ -6814,44 +7008,44 @@ p \cdot \mathrm{pr}_2\mleft(\sigma^H_p\mright)
 =
 \Bigl( \Phi \circ \mleft( \mathbb{1}_{\mathcal{P}}, \mathrm{pr}_2\circ\sigma^H \mright) \Bigr)(p)
 \eas
-for all $p \in \mathcal{P}_x$ ($x\in M$), where $\Phi$ is the right $\mathcal{G}$-action on $\mathcal{P}$, also recall Def.\ \ref{MultiWithPulli}, that is, $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. Define $\widetilde{\sigma} \coloneqq \mathrm{pr}_2 \circ \sigma^H$, $\mathcal{P} \ni p \mapsto \widetilde{\sigma}_p \in \mathcal{G}$; by Remark \ref{rem:PullbackTotMCForm}, \ref{rem:PullBackDarboux} and Thm.\ \ref{prop:DiffOfLGBAction}, especially Remark \ref{rem:DarbouxInActionInfinit}, we can calculate
+for all $p \in \mathcal{P}_x$ ($x\in M$), where $\Phi$ is the right $\mathcal{G}$-action on $\mathcal{P}$, also recall Def.\ \ref{MultiWithPulli}, that is, $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. Define $\overline{\sigma} \coloneqq \mathrm{pr}_2 \circ \sigma^H$, $\mathcal{P} \ni p \mapsto \overline{\sigma}_p \in \mathcal{G}$; by Remark \ref{rem:PullbackTotMCForm}, \ref{rem:PullBackDarboux} and Thm.\ \ref{prop:DiffOfLGBAction}, especially Remark \ref{rem:DarbouxInActionInfinit}, we can calculate
 \ba\label{DiffOfPrincAutom}
 \mathrm{D}_p H(X)
 &=
-\mathrm{D}_{\mleft(p, \widetilde{\sigma}_p\mright)}\Phi \bigl( X, \mathrm{D}_p\widetilde{\sigma}(X) \bigr)
+\mathrm{D}_{\mleft(p, \overline{\sigma}_p\mright)}\Phi \bigl( X, \mathrm{D}_p\overline{\sigma}(X) \bigr)
 \nonumber
 \\
 &=
 \mathrm{D}_pr_\sigma(X)
-	- \mleft.{\overline{ \mleft.\mleft(\pi^!\Delta \sigma\mright)\mright|_p (X)}}\mright|_{p \cdot \widetilde{\sigma}_p}
-	+ \mleft.{\overline{\mleft( \mutot\mright)_{\widetilde{\sigma}_p} \bigl(\mathrm{D}_p\widetilde{\sigma}(X) \bigr)}}\mright|_{p \cdot \widetilde{\sigma}_p}
+	- \mleft.{\overline{ \mleft.\mleft(\pi^!\Delta \sigma\mright)\mright|_p (X)}}\mright|_{p \cdot \overline{\sigma}_p}
+	+ \mleft.{\overline{\mleft( \mutot\mright)_{\overline{\sigma}_p} \bigl(\mathrm{D}_p\overline{\sigma}(X) \bigr)}}\mright|_{p \cdot \overline{\sigma}_p}
 \nonumber
 \\
 &=
-\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+\mathcal{r}_{\overline{\sigma}_p*}(X)
 	+ \mleft.{\overline{\mleft( \mutot\mright)_{\mathrm{pr}_2\mleft(\sigma^H_p\mright)} \mleft(\mleft(\mathrm{D}_{\sigma^H_p}\mathrm{pr}_2 \circ \mathrm{D}_p\sigma^H\mright)(X) \mright)}}\mright|_{H(p)}
 \nonumber
 \\
 &=
-\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+\mathcal{r}_{\overline{\sigma}_p*}(X)
 	+ \mleft.{\overline{\mleft( \mathrm{pr}_2^!\mutot\mright)_{\sigma^H_p} \mleft(\mathrm{D}_p\sigma^H(X) \mright)}}\mright|_{H(p)}
 \nonumber
 \\
 &=
-\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+\mathcal{r}_{\overline{\sigma}_p*}(X)
 	+ \mleft.{\overline{\mleft( \mu_{\pi^*\mathcal{G}}\mright)_{\sigma^H_p} \mleft(\mathrm{D}_p\sigma^H(X) \mright)}}\mright|_{H(p)}
 \nonumber
 \\
 &=
-\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+\mathcal{r}_{\overline{\sigma}_p*}(X)
 	+ \mleft.{\overline{ \mleft(\Delta^{\pi^*\mathcal{G}}\sigma^H\mright)_p(X) }}\mright|_{H(p)}
 \nonumber
 \\
 &=
-\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+\mathcal{r}_{\overline{\sigma}_p*}(X)
 	+ \mleft.{\overline{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
 \ea
-for all $X \in \mathrm{T}_p\mathcal{P}$, where $\sigma$ is a (local) section of $\mathcal{G}$ so that $\sigma_x = \widetilde{\sigma}_p = \mathrm{pr}_2\mleft( \sigma^H_p \mright)$.
+for all $X \in \mathrm{T}_p\mathcal{P}$, where $\sigma$ is a (local) section of $\mathcal{G}$ so that $\sigma_x = \overline{\sigma}_p = \mathrm{pr}_2\mleft( \sigma^H_p \mright)$.
 
 Then
 \bas
@@ -6861,22 +7055,22 @@ A_{H(p)}\bigl( \mathrm{D}_pH(X) \bigr)
 \\
 &=
 A_{H(p)}\mleft( 
-	\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+	\mathcal{r}_{\overline{\sigma}_p*}(X)
 	+ \mleft.{\overline{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
 \mright)
 \\
 &=
-A_{p \cdot \widetilde{\sigma}_p}\mleft( 
-	\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+A_{p \cdot \overline{\sigma}_p}\mleft( 
+	\mathcal{r}_{\overline{\sigma}_p*}(X)
 \mright)
 	+ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X)
 \\
 &=
-\mleft(\mathcal{r}_{\widetilde{\sigma}_p}^!A\mright)_p(X)
+\mleft(\mathcal{r}_{\overline{\sigma}_p}^!A\mright)_p(X)
 	+ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X)
 \\
 &=
-\sAd_{\widetilde{\sigma}_p^{-1}}\bigl(A_p(X)\bigr)
+\sAd_{\overline{\sigma}_p^{-1}}\bigl(A_p(X)\bigr)
 	+ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X)
 \\
 &=
@@ -7414,7 +7608,7 @@ The general approach in the mentioned reference is different to ours; hence, let
 %Let us first assume that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, therefore we now initially show that the associated total Maurer-Cartan form is multiplicative. 
 To answer whether or not $\mathrm{H}\mathcal{G}$ is an Ehresmann connection we just need to discuss whether $\mutot$ is a connection 1-form on $\mathcal{G}$ due to the fact that $\mathrm{H}\mathcal{G}$ is the kernel of $\mutot$ by definition (see also Cor.\ \ref{cor:TotMCFormIsConnectionForm}), also using Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}. Also by definition, $\mutot$ already satisfies
 \bas
-\mutot\mleft( \widetilde{\nu} \mright)
+\mutot\mleft( \overline{\nu} \mright)
 &=
 \pi_{\mathcal{G}}^*\nu.
 \eas
@@ -7626,9 +7820,9 @@ for all $\sigma \in \Gamma(\mathcal{G})$, that is,
 	+ \mleft[ \Delta\sigma(X), \nu \mright]_{\mathcal{g}}
 \eas
 for all $\nu \in \Gamma(\mathcal{g})$ and $X \in \mathfrak{X}(M)$.
-If $\mathrm{H}\mathcal{G}$ is an infinitesimal multiplicative Yang-Mills connection, $\nabla^{\mathcal{G}} = \nabla^\caG$, especially $R_{\nabla^\caG} = \mathrm{ad}_\zeta$ for $\zeta \in \Omega^2(M; \mathcal{g})$, then $\widetilde{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^\caG \circ \mathrm{Ad}_\sigma$ is also an infinitesimal multiplicative Yang-Mills connection with
+If $\mathrm{H}\mathcal{G}$ is an infinitesimal multiplicative Yang-Mills connection, $\nabla^{\mathcal{G}} = \nabla^\caG$, especially $R_{\nabla^\caG} = \mathrm{ad}_\zeta$ for $\zeta \in \Omega^2(M; \mathcal{g})$, then $\overline{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^\caG \circ \mathrm{Ad}_\sigma$ is also an infinitesimal multiplicative Yang-Mills connection with
 \bas
-R_{\widetilde{\nabla}^\sigma}
+R_{\overline{\nabla}^\sigma}
 &=
 \mathrm{ad}_{\mathrm{Ad}_{\sigma^{-1}}(\zeta)},
 \eas
@@ -7690,13 +7884,13 @@ making use of that this calculation is pointwise at $x \in M$ just a standard de
 \nabla^{\mathcal{G}}
 	+ \mathrm{ad}_{\Delta \sigma}.
 \eas
-In order to show $R_{\widetilde{\nabla}^\sigma} = \mathrm{ad}_{\mathrm{Ad}_{\sigma^{-1}}(\zeta)}$ one uses the definition $\widetilde{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^\caG \circ \mathrm{Ad}_\sigma$ to calculate the curvature, 
+In order to show $R_{\overline{\nabla}^\sigma} = \mathrm{ad}_{\mathrm{Ad}_{\sigma^{-1}}(\zeta)}$ one uses the definition $\overline{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^\caG \circ \mathrm{Ad}_\sigma$ to calculate the curvature, 
 \bas
-R_{\widetilde{\nabla}^\sigma} (X, Y) \nu
+R_{\overline{\nabla}^\sigma} (X, Y) \nu
 &=
-\widetilde{\nabla}^\sigma_X \widetilde{\nabla}^\sigma_Y \nu
-	- \widetilde{\nabla}^\sigma_Y \widetilde{\nabla}^\sigma_X \nu
-	- \widetilde{\nabla}^\sigma_{[X, Y]} \nu
+\overline{\nabla}^\sigma_X \overline{\nabla}^\sigma_Y \nu
+	- \overline{\nabla}^\sigma_Y \overline{\nabla}^\sigma_X \nu
+	- \overline{\nabla}^\sigma_{[X, Y]} \nu
 \\
 &=
 \mleft(\mathrm{Ad}_{\sigma^{-1}} \circ \mleft( \nabla^\caG_X \circ \nabla^\caG_Y 
@@ -7714,13 +7908,13 @@ R_{\widetilde{\nabla}^\sigma} (X, Y) \nu
 &=
 \mleft[ \mathrm{Ad}_{\sigma^{-1}}\bigl(\zeta(X, Y)\bigr), \nu \mright]_{\mathcal{g}}
 \eas
-for all $X, Y \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathcal{g})$. The remaining parts of the statement are trivial and straight-forward calculations, making use of Def.\ \ref{def:YangMillsConnection}; in fact, we have proven all the remaining statements already in \cite[\S 3, part of Thm.\ 3.6]{My1stpaper} and in a more general manner in \cite[\S 4.6, Thm.\ 4.6.9]{MyThesis}: That $\widetilde{\nabla}^\sigma$ is a Lie bracket derivation is trivial to show, and one uses identity \eqref{SpecialFieldRedef} to show another identity of its curvature,
+for all $X, Y \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathcal{g})$. The remaining parts of the statement are trivial and straight-forward calculations, making use of Def.\ \ref{def:YangMillsConnection}; in fact, we have proven all the remaining statements already in \cite[\S 3, part of Thm.\ 3.6]{My1stpaper} and in a more general manner in \cite[\S 4.6, Thm.\ 4.6.9]{MyThesis}: That $\overline{\nabla}^\sigma$ is a Lie bracket derivation is trivial to show, and one uses identity \eqref{SpecialFieldRedef} to show another identity of its curvature,
 \bas
-R_{\widetilde{\nabla}^\sigma} 
+R_{\overline{\nabla}^\sigma} 
 &=
 \mleft[ \mathrm{d}^{\nabla^\caG} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} + \zeta, \cdot \mright]_{\mathcal{g}}.
 \eas
-Combining both identities for $R_{\widetilde{\nabla}^\sigma}$ we conclude with a proof of Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation}. 
+Combining both identities for $R_{\overline{\nabla}^\sigma}$ we conclude with a proof of Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation}. 
 \end{proof}
 
 We also get a generalization of statements like \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}:
@@ -7728,7 +7922,7 @@ We also get a generalization of statements like \cite[\S 5.5, Lemma 5.5.5, page 
 \begin{lemmata}{Lie bracket of horizontal and vertical vector}{BracketVertHor}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have
 \bas
-A\mleft( \mleft[ X, \widetilde{\nu} \mright] \mright)
+A\mleft( \mleft[ X, \overline{\nu} \mright] \mright)
 &=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
 		\mleft( \pi^! \Delta \e^{t\nu} \mright)\mleft(X\mright) \circ r_{\e^{-t\nu}}
@@ -7736,7 +7930,7 @@ A\mleft( \mleft[ X, \widetilde{\nu} \mright] \mright)
 \eas
 for all $\nu \in \Gamma(\mathcal{g})$ and horizontal vector fields $X \in \mathfrak{X}(\mathcal{P})$. If there is an $\omega \in \mathfrak{X}(M)$ such that $\mathrm{D}\pi(X) = \pi^*\omega$, then
 \bas
-A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
+A\bigl( \mleft[ X, \overline{\nu} \mright] \bigr)
 &=
 \mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu)
 =
@@ -7745,7 +7939,7 @@ A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
 
 If $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, then we can conclude for all horizontal vector fields $X$ that
 \bas
-A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
+A\bigl( \mleft[ X, \overline{\nu} \mright] \bigr)
 &=
 \mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu).
 \eas
@@ -7765,9 +7959,9 @@ First of all recall the very basic fact (see \textit{e.g.}\ \cite[\S A.1, Thm.\ 
 -\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}
 	\mathrm{D}_{\phi_t(p)}\phi_{-t} \mleft(X_{\phi_t(p)}\mright)
 \eas
-for all $p \in \mathcal{P}$, where $\phi_t$ is the local flow of $Y$ (with parameter $t$ in an open interval of $\mathbb{R}$ containing 0). Now let $X$ be a horizontal vector field and $Y = \widetilde{\nu}$. For such a $Y$ we know by Def.\ \ref{def:FundVecs} that
+for all $p \in \mathcal{P}$, where $\phi_t$ is the local flow of $Y$ (with parameter $t$ in an open interval of $\mathbb{R}$ containing 0). Now let $X$ be a horizontal vector field and $Y = \overline{\nu}$. For such a $Y$ we know by Def.\ \ref{def:FundVecs} that
 \bas
-\widetilde{\nu}_p
+\overline{\nu}_p
 &=
 \mathrm{D}_{e_{x}}\Phi_p\mleft(\nu_{x}\mright)
 =
@@ -7784,7 +7978,7 @@ r_{\e^{t\nu}}(p),
 \eas
 and by rewriting in sense of Def.\ \ref{def:WeModTheRIghtPush} we achieve
 \bas
-\mleft[ X, \widetilde{\nu} \mright]_p
+\mleft[ X, \overline{\nu} \mright]_p
 &=
 -\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}
 	\mathrm{D}_{p \cdot \e^{t\nu_x}}r_{\e^{-t\nu}} \mleft(X_{p \cdot \e^{t\nu_x}}\mright)
@@ -7825,7 +8019,7 @@ t &\mapsto \eta(t) \coloneqq
 \eas
 is a curve with values in $\mathcal{g}_x$, and therefore its fundamental vector field at $p$ is a curve with values in $\mathrm{V}_p\mathcal{P}$. Hence, we can calculate in the sense of vector spaces to derive
 \bas
-- \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \widetilde{\eta(t)}_p
+- \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \overline{\eta(t)}_p
 &=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mathrm{D}_{e_x}\Phi_p \bigl(\eta(-t)\bigr) \Bigr)
 =
@@ -7835,7 +8029,7 @@ is a curve with values in $\mathcal{g}_x$, and therefore its fundamental vector 
 \eas
 where we substituted $t \leftrightarrow -t$ after the first equality sign. In total we achieve
 \bas
-A_p\mleft( \mleft[ X, \widetilde{\nu} \mright]_p \mright)
+A_p\mleft( \mleft[ X, \overline{\nu} \mright]_p \mright)
 &=
 A_p\mleft( \mleft.\overline{\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \eta(-t)}\mright|_p \mright)
 =
@@ -7848,7 +8042,7 @@ A_p\mleft( \mleft.\overline{\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} 
 \eas
 and thus
 \bas
-A\mleft( \mleft[ X, \widetilde{\nu} \mright] \mright)
+A\mleft( \mleft[ X, \overline{\nu} \mright] \mright)
 &=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
 		\mleft( \pi^! \Delta \e^{t\nu} \mright)\mleft(X\mright) \circ r_{\e^{-t\nu}}
@@ -7856,7 +8050,7 @@ A\mleft( \mleft[ X, \widetilde{\nu} \mright] \mright)
 \eas
 If there is an $\omega \in \mathfrak{X}(M)$ such that $\mathrm{D}\pi(X) = \pi^*\omega$, then
 \bas
-A_p\mleft( \mleft[ X, \widetilde{\nu} \mright]_p \mright)
+A_p\mleft( \mleft[ X, \overline{\nu} \mright]_p \mright)
 &=
 \mleft( 
 	p,
@@ -7867,7 +8061,7 @@ A_p\mleft( \mleft[ X, \widetilde{\nu} \mright]_p \mright)
 \eas
 and therefore by Def.\ \ref{def:ConnectionOnLAB}
 \bas
-A_p\mleft( \mleft[ X, \widetilde{\nu} \mright]_p \mright)
+A_p\mleft( \mleft[ X, \overline{\nu} \mright]_p \mright)
 &=
 \mleft( 
 	p,
@@ -7878,7 +8072,7 @@ A_p\mleft( \mleft[ X, \widetilde{\nu} \mright]_p \mright)
 \eas
 By the definition of pullback connections we could also write
 \bas
-A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
+A\bigl( \mleft[ X, \overline{\nu} \mright] \bigr)
 &=
 \mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu).
 \eas
@@ -7904,7 +8098,7 @@ and, again, $t \mapsto \mleft( \Delta \e^{t\nu} \mright)_x$ and $t \mapsto \math
 \eas
 and as before we conclude
 \bas
-A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
+A\bigl( \mleft[ X, \overline{\nu} \mright] \bigr)
 &=
 \mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu).
 \eas
@@ -7962,11 +8156,11 @@ The idea of the proof is similar to the proof of a statement about when two mult
 \eas
 is constant along the fibres of $\mathcal{G}$, that is, constant along the flows of vertical tangent vectors, the left-invariant vector fields (recall Cor.\ \ref{cor:TLGBAsLGB}). 
 
-$\bullet$ First of all observe that $\omega$ vanishes if at least one tangent vector is vertical. Let $Y \in \mathrm{V}_g\mathcal{G}$ ($g \in \mathcal{G}_x$, $x \in M$), and write $Y = \mleft.\widetilde{\nu_x}\mright|_g$ for a $\nu_x \in \mathcal{g}_x$. Due to $\mathrm{D}\pi_{\mathcal{G}} \mleft( Y \mright) = 0$ it is clear that the contraction of $\pi_{\mathcal{G}}^! \zeta$ with $Y$ is 0. Let $Z \in \mathrm{T}_g\mathcal{G}$ for which we write
+$\bullet$ First of all observe that $\omega$ vanishes if at least one tangent vector is vertical. Let $Y \in \mathrm{V}_g\mathcal{G}$ ($g \in \mathcal{G}_x$, $x \in M$), and write $Y = \mleft.\overline{\nu_x}\mright|_g$ for a $\nu_x \in \mathcal{g}_x$. Due to $\mathrm{D}\pi_{\mathcal{G}} \mleft( Y \mright) = 0$ it is clear that the contraction of $\pi_{\mathcal{G}}^! \zeta$ with $Y$ is 0. Let $Z \in \mathrm{T}_g\mathcal{G}$ for which we write
 \bas
 Z 
 &\coloneqq
-\mleft.\widetilde{\mu_x}\mright|_g
+\mleft.\overline{\mu_x}\mright|_g
 	+ X_g
 \eas
 for a $\mu_x \in \mathcal{g}_x$ and $X_g \in \mathrm{H}_g\mathcal{G}$;
@@ -7989,13 +8183,13 @@ Extend $Y$ and $Z$ naturally to vector fields on $\mathcal{G}$ (for simplicity a
 	- \mleft(\mutot\mright)_g\mleft( [Y, Z] \mright)
 \\
 &=
-{\underbrace{\mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{\widetilde{\nu}_g} \mleft( \pi^*_{\mathcal{G}}\mu \mright)}
-	_{\mathclap{ = \mleft. \pi^*_{\mathcal{G}}\mleft( \nabla^{\mathcal{G}}_{\mathrm{D} \pi_{\mathcal{G}} \mleft( \widetilde{\nu} \mright)} \mu \mright) \mright|_g = 0 }}}
-	- \mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{\widetilde{\mu}_g + X_g} \mleft( \pi^*_{\mathcal{G}}\nu \mright)
+{\underbrace{\mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{\overline{\nu}_g} \mleft( \pi^*_{\mathcal{G}}\mu \mright)}
+	_{\mathclap{ = \mleft. \pi^*_{\mathcal{G}}\mleft( \nabla^{\mathcal{G}}_{\mathrm{D} \pi_{\mathcal{G}} \mleft( \overline{\nu} \mright)} \mu \mright) \mright|_g = 0 }}}
+	- \mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{\overline{\mu}_g + X_g} \mleft( \pi^*_{\mathcal{G}}\nu \mright)
 \\
 &\hspace{1cm}
-	- \mleft(\mutot\mright)_g\mleft( [\widetilde{\nu}, \widetilde{\mu}] \mright)
-	- \mleft(\mutot\mright)_g\mleft( [\widetilde{\nu}, X] \mright)
+	- \mleft(\mutot\mright)_g\mleft( [\overline{\nu}, \overline{\mu}] \mright)
+	- \mleft(\mutot\mright)_g\mleft( [\overline{\nu}, X] \mright)
 \\
 &=
 - \mleft( \pi_{\mathcal{G}}^*\nabla^{\mathcal{G}} \mright)_{X_g} \mleft( \pi^*_{\mathcal{G}}\nu \mright)
@@ -8669,9 +8863,9 @@ where we used a similar argument for the last equality as for the beginning of t
 We know by Remark \ref{rem:FundVecsAreLABActions} that the map to fundamental vector fields is a homomorphism of Lie algebras, so that
 %For the fourth summand recall that fundamental vector fields are fundamental vector fields along the fibres of $\mathcal{P}$; if we fix a base point $x \in M$, then each fibre $\mathcal{P}_x$ is an embedded submanifold of $\mathcal{P}$ onto which the Lie group $\mathcal{G}_x$ acts on the right. Thus, we know from Lie group action theory (see \textit{e.g.}\ \cite[\S 3.4, Prop.\ 3.4.4, page 144]{Hamilton}) that the Lie bracket of two fundamental vector fields over $\mathcal{P}_x$ is again a fundamental vector field over $\mathcal{P}_x$ given by
 %\bas
-%\mleft[ \widetilde{\mu}, \widetilde{\nu} \mright]
+%\mleft[ \overline{\mu}, \overline{\nu} \mright]
 %&=
-%\widetilde{\mleft[ \mu, \nu \mright]}_{\mathcal{g}_x}
+%\overline{\mleft[ \mu, \nu \mright]}_{\mathcal{g}_x}
 %\eas
 %for all $\mu, \nu \in \mathcal{g}_x$. This naturally extends to fundamental vector fields over $\mathcal{P}$, so that
 \bas
@@ -8894,15 +9088,15 @@ The idea of the proof is similar to the proof of the "classical" statement; foll
 
 $\bullet$ We have by Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}
 \bas
-F\mleft( \widetilde{\nu}, \widetilde{\mu} \mright)
+F\mleft( \overline{\nu}, \overline{\mu} \mright)
 &=
 0
 \eas
-for all $\mu, \nu \in \Gamma(\mathcal{g})$. Regarding the right hand side of the structure equation, this trivially also holds for the third summand $\mleft(\pi^!\zeta\mright)\mleft( \widetilde{\nu}, \widetilde{\mu} \mright) = 0$. We also have
+for all $\mu, \nu \in \Gamma(\mathcal{g})$. Regarding the right hand side of the structure equation, this trivially also holds for the third summand $\mleft(\pi^!\zeta\mright)\mleft( \overline{\nu}, \overline{\mu} \mright) = 0$. We also have
 \bas
-\mleft(\frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}\mright)\mleft( \widetilde{\nu}, \widetilde{\mu} \mright)
+\mleft(\frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}\mright)\mleft( \overline{\nu}, \overline{\mu} \mright)
 &=
-\mleft[ A\mleft( \widetilde{\nu} \mright), A\mleft( \widetilde{\mu} \mright) \mright]_{\pi^*\mathcal{g}}
+\mleft[ A\mleft( \overline{\nu} \mright), A\mleft( \overline{\mu} \mright) \mright]_{\pi^*\mathcal{g}}
 =
 \mleft[ \pi^*\nu, \pi^*\mu \mright]_{\pi^*\mathcal{g}}
 =
@@ -8910,11 +9104,11 @@ for all $\mu, \nu \in \Gamma(\mathcal{g})$. Regarding the right hand side of the
 \eas
 and
 \bas
-\mleft(\mathrm{d}^{\pi^*\nabla^\caG} A\mright)\mleft( \widetilde{\nu}, \widetilde{\mu} \mright)
+\mleft(\mathrm{d}^{\pi^*\nabla^\caG} A\mright)\mleft( \overline{\nu}, \overline{\mu} \mright)
 &=
-{\underbrace{\mleft(\pi^*\nabla^\caG\mright)_{\widetilde{\nu}} \bigl(A\mleft( \widetilde{\mu} \mright) \bigr)}_{\mathclap{ = \pi^*\mleft( \nabla^\caG_{\mathrm{D}\pi\mleft( \widetilde{\nu} \mright)} \mu \mright) = 0 }}}
-	- \mleft(\pi^*\nabla^\caG\mright)_{\widetilde{\mu}} \bigl(A\mleft( \widetilde{\nu} \mright) \bigr)
-	- A {\underbrace{\bigl( \mleft[ \widetilde{\nu}, \widetilde{\mu} \mright] \bigr)}_{= \widetilde{[\nu, \mu]}}}
+{\underbrace{\mleft(\pi^*\nabla^\caG\mright)_{\overline{\nu}} \bigl(A\mleft( \overline{\mu} \mright) \bigr)}_{\mathclap{ = \pi^*\mleft( \nabla^\caG_{\mathrm{D}\pi\mleft( \overline{\nu} \mright)} \mu \mright) = 0 }}}
+	- \mleft(\pi^*\nabla^\caG\mright)_{\overline{\mu}} \bigl(A\mleft( \overline{\nu} \mright) \bigr)
+	- A {\underbrace{\bigl( \mleft[ \overline{\nu}, \overline{\mu} \mright] \bigr)}_{= \overline{[\nu, \mu]}}}
 =
 - \pi^*\mleft( \mleft[ \nu, \mu \mright]_{\mathcal{g}} \mright).
 \eas
@@ -8924,11 +9118,11 @@ Thus,
 	\mathrm{d}^{\pi^*\nabla^\caG} A
 	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
 	+ \pi^!\zeta
-\mright)\mleft( \widetilde{\nu}, \widetilde{\mu} \mright)
+\mright)\mleft( \overline{\nu}, \overline{\mu} \mright)
 &=
 0
 =
-F\mleft( \widetilde{\nu}, \widetilde{\mu} \mright).
+F\mleft( \overline{\nu}, \overline{\mu} \mright).
 \eas
 
 $\bullet$ Let $X$ and $Y$ be horizontal vector fields of $\mathcal{P}$, then clearly
@@ -8958,37 +9152,37 @@ where $\pi_h: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ denotes the canon
 
 $\bullet$ Now let $X \in \mathfrak{X}(\mathcal{P})$ be again horizontal and $\nu \in \Gamma(\mathcal{g})$; then again by Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}
 \bas
-F\mleft(X, \widetilde{\nu}\mright)
+F\mleft(X, \overline{\nu}\mright)
 &=
 0,
 \eas
-as also clearly $\mleft( \pi^!\zeta \mright)\mleft(X, \widetilde{\nu}\mright) = 0$,
+as also clearly $\mleft( \pi^!\zeta \mright)\mleft(X, \overline{\nu}\mright) = 0$,
 furthermore
 \bas
-\mleft(\frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}\mright)\mleft( X, \widetilde{\nu} \mright)
+\mleft(\frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}\mright)\mleft( X, \overline{\nu} \mright)
 &=
-\mleft[ A(X), A\mleft( \widetilde{\nu} \mright) \mright]_{\pi^*\mathcal{g}}
+\mleft[ A(X), A\mleft( \overline{\nu} \mright) \mright]_{\pi^*\mathcal{g}}
 =
 0,
 \eas
 and by Lemma \ref{lem:BracketVertHor}
 \bas
-\mleft(\mathrm{d}^{\pi^*\nabla^\caG} A\mright)\mleft( X, \widetilde{\nu} \mright)
+\mleft(\mathrm{d}^{\pi^*\nabla^\caG} A\mright)\mleft( X, \overline{\nu} \mright)
 &=
 \mleft( \pi^*\nabla^\caG \mright)_X \mleft( \pi^*\nu \mright)
-	- A\bigl( \mleft[ X, \widetilde{\nu} \mright] \bigr)
+	- A\bigl( \mleft[ X, \overline{\nu} \mright] \bigr)
 \stackrel{\ref{lem:BracketVertHor}}{=}
 0,
 \eas
 which concludes the proof with
 \bas
-F\mleft(X, \widetilde{\nu}\mright)
+F\mleft(X, \overline{\nu}\mright)
 &=
 \mleft(
 	\mathrm{d}^{\pi^*\nabla^\caG} A
 	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
 	+ \pi^!\zeta
-\mright)\mleft(X, \widetilde{\nu}\mright).
+\mright)\mleft(X, \overline{\nu}\mright).
 \eas
 \end{proof}
 
@@ -9044,23 +9238,23 @@ which is the field strength of $H^!A$. Now recall Eq.\ \eqref{DiffOfPrincAutom},
 \bas
 \mathrm{D}_p H(X)
 &=
-\mathcal{r}_{\widetilde{\sigma}_p*}(X)
+\mathcal{r}_{\overline{\sigma}_p*}(X)
 	+ \mleft.{\overline{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
 \eas
-for all $X \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$), where $\widetilde{\sigma}_p \coloneqq \mathrm{pr}_2\mleft( \sigma^H_p \mright)$. Thus, by Prop.\ \ref{prop:NewFieldStrengthWithCoolProps},
+for all $X \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$), where $\overline{\sigma}_p \coloneqq \mathrm{pr}_2\mleft( \sigma^H_p \mright)$. Thus, by Prop.\ \ref{prop:NewFieldStrengthWithCoolProps},
 \bas
 \mleft( H^!F \mright)_p(X, Y)
 &=
 F_{H(p)}\bigl( \mathrm{D}_pH(X), \mathrm{D}_pH(Y) \bigr)
 \\
 &=
-F_{p \cdot \widetilde{\sigma}_p}\bigl( \mathcal{r}_{\widetilde{\sigma}_p*}(X), \mathcal{r}_{\widetilde{\sigma}_p*}(Y) \bigr)
+F_{p \cdot \overline{\sigma}_p}\bigl( \mathcal{r}_{\overline{\sigma}_p*}(X), \mathcal{r}_{\overline{\sigma}_p*}(Y) \bigr)
 \\
 &=
-\mleft(\mathcal{r}_{\widetilde{\sigma}}^!F\mright)_p(X, Y)
+\mleft(\mathcal{r}_{\overline{\sigma}}^!F\mright)_p(X, Y)
 \\
 &=
-\mleft(\sAd_{\widetilde{\sigma}_p^{-1}} \circ F\mright)_p(X, Y)
+\mleft(\sAd_{\overline{\sigma}_p^{-1}} \circ F\mright)_p(X, Y)
 \eas
 for all $X, Y \in \mathrm{T}_p \mathcal{P}$; this finishes the proof.
 \end{proof}
@@ -9230,20 +9424,20 @@ Equivalently, since we introduced $\mutot$ as a composition of the vertical Maur
 \pi^{\mathrm{vert}, \lambda}
 &\coloneqq
 \pi^{\mathrm{vert}}
-	+ \widetilde{\pi_{\mathcal{G}}^! \lambda}^l
-	+ \widetilde{\pi_{\mathcal{G}}^! \lambda}^r,
+	+ \overline{\pi_{\mathcal{G}}^! \lambda}^l
+	+ \overline{\pi_{\mathcal{G}}^! \lambda}^r,
 \eas
-where $\widetilde{\pi_{\mathcal{G}^!} \lambda}^r$ denotes the fundamental vector field of $\pi_{\mathcal{G}}^! \lambda$ via right-multiplication, that is,
+where $\overline{\pi_{\mathcal{G}^!} \lambda}^r$ denotes the fundamental vector field of $\pi_{\mathcal{G}}^! \lambda$ via right-multiplication, that is,
 \bas
-\mleft.\widetilde{\pi_{\mathcal{G}^!} \lambda}^r\mright|_g
+\mleft.\overline{\pi_{\mathcal{G}^!} \lambda}^r\mright|_g
 &=
 \mathrm{D}_{e_x}R_g \circ \lambda_{x} \circ \mathrm{D}_x \pi_{\mathcal{G}}
 \eas
-for all $g \in \mathcal{G}_x$, and $\widetilde{\pi_{\mathcal{G}}^! \lambda}^l$ is just the typical definition for fundamental vector fields, with an emphasis on that it is via left-multiplication. 
+for all $g \in \mathcal{G}_x$, and $\overline{\pi_{\mathcal{G}}^! \lambda}^l$ is just the typical definition for fundamental vector fields, with an emphasis on that it is via left-multiplication. 
 \end{remark}
 
 \begin{propositions}{Field redefined multiplicative Yang-Mills connection a multiplicative Yang-Mills connection}{YMStaysYM}
-Given the context of Def.\ \ref{def:FieldRedefsAsDefIntegrated}, the field redefinition of $\mutot$ is a multiplicative Yang-Mills connection w.r.t.\ $\widetilde{\zeta}^\lambda$.
+Given the context of Def.\ \ref{def:FieldRedefsAsDefIntegrated}, the field redefinition of $\mutot$ is a multiplicative Yang-Mills connection w.r.t.\ $\overline{\zeta}^\lambda$.
 \end{propositions}
 
 \begin{proof}
@@ -9378,7 +9572,7 @@ Let us first point out the obvious:
 \begin{examples}{Classical examples}{ClassicalYMTheoriesRecovered}
 By Ex.\ \ref{ex:ClassicalYangMillsConnection}, we just recover the classical formalism of gauge theory if having a classical principal bundle $P$ on which a trivial LGB $\mathcal{G} = M \times G$ acts on the right, where $G$ is a Lie group with Lie algebra $\mathfrak{g}$. $\mathrm{H}\mathcal{G}$ is the canonical flat multiplicative Yang-Mills connection, $\nabla^\caG=\nabla^{\mathrm{cYM}}$ is the canonical flat connection on $\mathcal{g} = M \times \mathfrak{g}$, and $\zeta \equiv 0$. Then every example known in the classical formalism carries over.
 
-Furthermore, starting with such a classical example, by \cite[\S 6, Cor.\ 6.2]{My1stpaper} we know that if $\mathfrak{g}$ has a non-zero centre (and if $M$ is at least three-dimensional), then one can always add a centre-valued $\zeta$ to this gauge theory, transforming it into a flat pre-classical gauge theory, $\nabla^\caG = \nabla^{\mathrm{pYM}}$, with non-trivial $\zeta$. If $\mathrm{d}^{\nabla^{\mathrm{pYM}}} \zeta \neq 0$, then there is no $\lambda \in \Omega^1(M; \mathcal{g})$ with $\widetilde{\zeta}^\lambda = 0$.
+Furthermore, starting with such a classical example, by \cite[\S 6, Cor.\ 6.2]{My1stpaper} we know that if $\mathfrak{g}$ has a non-zero centre (and if $M$ is at least three-dimensional), then one can always add a centre-valued $\zeta$ to this gauge theory, transforming it into a flat pre-classical gauge theory, $\nabla^\caG = \nabla^{\mathrm{pYM}}$, with non-trivial $\zeta$. If $\mathrm{d}^{\nabla^{\mathrm{pYM}}} \zeta \neq 0$, then there is no $\lambda \in \Omega^1(M; \mathcal{g})$ with $\overline{\zeta}^\lambda = 0$.
 \end{examples}
 
 This shows that there are examples with non-trivial $\zeta$, stable w.r.t.\ field redefinitions. However, as shown in \cite[\S 5.2, Thm.\ 5.16]{My1stpaper} (or alternatively \cite[\S 5.1.5, Thm.\ 5.1.33]{MyThesis}), if $M$ is contractible, then there is $\lambda \in \Omega^1(M; \mathcal{g})$ so that $\nabla^{\mathrm{YM}, \lambda}$ is flat. Thus, if $M$ is contractible, then every curved Yang-Mills Lagrangian is equivalent to a Lagrangian of a pre-classical gauge theory ($\zeta$ may be non-vanishing). This may be due to that $\mathcal{G}$ is a trivial fibre bundle, and then the LGB action breaks down to Lie group action; recall all our discussions related to classical principal bundles equipped with an LGB action of a trivial LGB as in the previous example. 
@@ -9930,19 +10124,19 @@ for all $\lambda, \kappa \in \mathbb{R}$. Hence we achieve linearity with respec
 \end{remarks}
 
 \begin{remarks}{Alignment of both vector bundle structures on $\mathrm{TT}M$ on the restricted vertical bundle}{BothLinearStructuresTheSameOnTheVerticalBundle}
-By definition, the vertical bundle $\mathrm{VT}M$ of $\mathrm{T}M$ is a subbundle of $\mathrm{TT}M$. The zero section of $\mathrm{T}M$ is a natural embedding of $M$ into $\mathrm{T}M$; this embedded submanifold will be denoted by $\widetilde{M}$. Then Diagram \eqref{DoubleTangentAsDiagram} restricts onto
+By definition, the vertical bundle $\mathrm{VT}M$ of $\mathrm{T}M$ is a subbundle of $\mathrm{TT}M$. The zero section of $\mathrm{T}M$ is a natural embedding of $M$ into $\mathrm{T}M$; this embedded submanifold will be denoted by $\overline{M}$. Then Diagram \eqref{DoubleTangentAsDiagram} restricts onto
 \begin{center}
 	\begin{tikzcd}
-		 \mathrm{VT}M|_{\widetilde{M}} \arrow{r}{\mathrm{D}\pi_{\mathrm{T}M}} \arrow{d}{\pi_{\mathrm{TT}M}} & \widetilde{M} \arrow{d}{\cong} \\
-		\widetilde{M} \arrow[r, "\cong"]& M
+		 \mathrm{VT}M|_{\overline{M}} \arrow{r}{\mathrm{D}\pi_{\mathrm{T}M}} \arrow{d}{\pi_{\mathrm{TT}M}} & \overline{M} \arrow{d}{\cong} \\
+		\overline{M} \arrow[r, "\cong"]& M
 	\end{tikzcd}
 \end{center} 
-and $S=S_M$ does not only restrict onto that, $S$ is actually the identity on $\mathrm{VT}M|_{\widetilde{M}}$, as also stated in \cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}. This follows simply by the coordinate expressions Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy} (recall the involved notation). $\xi \in \mathrm{VT}M|_{\widetilde{M}}$ is in the kernel of both projections, $\mathrm{D}\pi_{\mathrm{T}M}$ and $\pi_{\mathrm{TT}M}$, thus $\omega = X_0 = 0 \in \mathrm{T}_pM$, therefore $S(\xi) = \xi$ by Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy}. By Remark \ref{rem:CanonicalInvolutionAnIsom} the addition $\RPlus$ and scalar multiplication $\boldsymbol{\cdot}$ then also align with the typical addition $+$ and scalar multiplication $\cdot$, respectively, of $\mathrm{TT}M$ as tangent bundle.
+and $S=S_M$ does not only restrict onto that, $S$ is actually the identity on $\mathrm{VT}M|_{\overline{M}}$, as also stated in \cite[\S 9.6, Thm.\ 9.6.1, page 363; but without proof]{mackenzieGeneralTheory}. This follows simply by the coordinate expressions Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy} (recall the involved notation). $\xi \in \mathrm{VT}M|_{\overline{M}}$ is in the kernel of both projections, $\mathrm{D}\pi_{\mathrm{T}M}$ and $\pi_{\mathrm{TT}M}$, thus $\omega = X_0 = 0 \in \mathrm{T}_pM$, therefore $S(\xi) = \xi$ by Eq.\ \eqref{CoordinateExpressionOfTTM} and \eqref{CoordinateExprOfFlippy}. By Remark \ref{rem:CanonicalInvolutionAnIsom} the addition $\RPlus$ and scalar multiplication $\boldsymbol{\cdot}$ then also align with the typical addition $+$ and scalar multiplication $\cdot$, respectively, of $\mathrm{TT}M$ as tangent bundle.
 
 Motivated by this, we can actually recover something similar for $\mathrm{VT}M$. In this case 
 \begin{center}
 	\begin{tikzcd}
-		 \mathrm{VT}M \arrow{r}{\mathrm{D}\pi_{\mathrm{T}M}} \arrow{d}{\pi_{\mathrm{TT}M}} & \widetilde{M} \arrow{d}{\cong} \\
+		 \mathrm{VT}M \arrow{r}{\mathrm{D}\pi_{\mathrm{T}M}} \arrow{d}{\pi_{\mathrm{TT}M}} & \overline{M} \arrow{d}{\cong} \\
 		\mathrm{T}M \arrow[r, "\pi_{\mathrm{T}M}"]& M
 	\end{tikzcd}
 \end{center} 
