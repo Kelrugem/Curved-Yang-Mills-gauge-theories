@@ -1834,12 +1834,12 @@ The mentioned reference, \cite{mackenzieGeneralTheory}, is rather general, formu
 %\bas
 %\phi_i \circ \pi_2 \circ \psi_i^{-1}
 %&=
-%\underbrace{\phi_i \circ \pi_2 \circ \mleft( f^*\phi_i \mright)^{-1}}_{= (f, \mathbb{1}_G)} \circ f^*\phi_i \circ \psi_i^{-1}
+%\underbrace{\phi_i \circ \pi_2 \circ \mleft( f^*\phi_i \mright)^{-1}}_{= (f, \mathrm{id}_G)} \circ f^*\phi_i \circ \psi_i^{-1}
 %=
-%(f, \mathbb{1}_G) \circ
+%(f, \mathrm{id}_G) \circ
 %f^*\phi_i \circ \psi_i^{-1},
 %\eas
-%$(f, \mathbb{1}_G)$ is clearly a Lie group isomorphism $f^{-1}(U_i) \times G \cong U_i \times G$ of trivial LGBs, and thus the condition about $\pi_2|_x$ being a Lie group isomorphism enforces that we can write
+%$(f, \mathrm{id}_G)$ is clearly a Lie group isomorphism $f^{-1}(U_i) \times G \cong U_i \times G$ of trivial LGBs, and thus the condition about $\pi_2|_x$ being a Lie group isomorphism enforces that we can write
 %\bas
 %\mleft(f^*\phi_i \circ \psi_i^{-1}\mright)(x, g)
 %&=
@@ -2209,7 +2209,7 @@ for all $p \in P_x$ ($x \in M$), $g \in G$ and $v \in F$. Recall that the group 
 %\begin{remarks}{Relation to automorphisms of principal bundles and gauge transformations}{ClassGaugeTrafosAndcgPMulti}
 %Recall that gauge transformations are related to principal bundle automorphisms $f$ of the principal bundle $P$; see \textit{e.g.}\ \cite[\S 5.3, Def.\ 5.3.1, page 256f.]{Hamilton}\ and \cite[\S 5.4, Thm.\ 5.4.4, page 273]{Hamilton}. That is, $f$ is a diffeomorphism $P \to P$ with
 %\bas
-%\pi_P \circ f &= \mathbb{1}_M,\\
+%\pi_P \circ f &= \mathrm{id}_M,\\
 %f(p \cdot g) &= f(p) \cdot g
 %\eas
 %for all $p \in P$ and $g \in G$. The group of such maps will be denoted by $\sAut(P)$. One can identify such automorphisms with certain $G$-valued maps on $P$, following \cite[\S 5.3, Def.\ 5.3.2 \& Prop.\ 5.3.3, page 266f.]{Hamilton}: We define the following set of smooth maps $P \to G$ by
@@ -2704,7 +2704,7 @@ for all $g \in \mathcal{G}_x$. Similarly for sections of $e^*\rmV\caG$, giving r
 %&=
 %e^*( \pi^*f ~ X)
 %=
-%(f\circ \underbrace{\pi \circ e}_{= \mathbb{1}_M}) ~ e^*X
+%(f\circ \underbrace{\pi \circ e}_{= \mathrm{id}_M}) ~ e^*X
 %=
 %f~ e^*X
 %\eas
@@ -2776,7 +2776,7 @@ for all $g \in \mathcal{G}_x$. Similarly for sections of $e^*\rmV\caG$, giving r
 %&=
 %\mleft.e^*X_\nu\mright|_x
 %=
-%\underbrace{\mathrm{D}_{e_x}L_{e_x}}_{= \mathbb{1}_{\mathrm{V}_{e_x}\mathcal{G}}}(\nu_x)
+%\underbrace{\mathrm{D}_{e_x}L_{e_x}}_{= \mathrm{id}_{\mathrm{V}_{e_x}\mathcal{G}}}(\nu_x)
 %=
 %\nu_x
 %\eas
@@ -3135,15 +3135,15 @@ for all $x\in M$, so that we also write
 %is a Lie algebra isomorphism for all $p \in N$, where $e_x$ is the neutral element of $\mathcal{G}_x$ for $x \coloneqq f(p)$, and $\mathcal{h}$ and $\mathcal{g}$ are the LABs of $f^*\mathcal{G}$ and $\mathcal{G}$, respectively; for all of that recall that $\mleft(f^*\mathcal{G}\mright)_p$ and $\mathcal{G}_x$ are Lie groups. Hence, we have a vector bundle morphism over $f$ given by the following commuting diagram
 %\begin{center}
 	%\begin{tikzcd}[column sep=huge]
-		%\mathcal{h} \arrow{d} \arrow{r}{\mathrm{D}_{\mleft( \mathbb{1}_N, e_f \mright)} \pi_2} & \mathcal{g} \arrow{d} \\
+		%\mathcal{h} \arrow{d} \arrow{r}{\mathrm{D}_{\mleft( \mathrm{id}_N, e_f \mright)} \pi_2} & \mathcal{g} \arrow{d} \\
 		%N \arrow{r}{f} & M
 	%\end{tikzcd}
 %\end{center}
 %which describes fibre-wise a Lie algebra isomorphism, where 
 %\bas
-%\mathrm{D}_{\mleft( \mathbb{1}_N, e_f \mright)} \pi_2
+%\mathrm{D}_{\mleft( \mathrm{id}_N, e_f \mright)} \pi_2
 %&\coloneqq
-%\mathrm{D}\pi_2 \circ \mleft( \mathbb{1}_N, e_f \mright)
+%\mathrm{D}\pi_2 \circ \mleft( \mathrm{id}_N, e_f \mright)
 %=
 %\mleft[
 	%N \ni p \mapsto \mathrm{D}_{\mleft( p, e_{f(p)} \mright)} \pi_2
@@ -3733,7 +3733,7 @@ for all $(p, g) \in N \fibtimes\Phi{\pi_\scG} \scG$ and $(X, Y) \in \rmT N \fibt
 %&\hspace{1cm}
 	%+ \mathrm{D}_{e_x} \mleft( \Phi_\tau \circ R_\sigma \mright)\bigl( \mathrm{D}_xe(\omega) \bigr),
 %\ea
-%where $\tau$ is any (local) section\footnote{That is, $f \circ \tau = \mathbb{1}_M$ (locally).} of $f$ with $\tau_x = p$, and $\Phi_\tau$ is the orbit map through $\tau$.
+%where $\tau$ is any (local) section\footnote{That is, $f \circ \tau = \mathrm{id}_M$ (locally).} of $f$ with $\tau_x = p$, and $\Phi_\tau$ is the orbit map through $\tau$.
 \end{propositions}
 
 %\begin{remark}
@@ -3921,7 +3921,7 @@ So, we get in total
 %\bas
 %\mathrm{D}_g\pi\bigl( Y - \mathrm{D}_x\sigma(\omega) \bigr)
 %&=
-%\mathrm{D}_g\pi( Y ) - \mathrm{D}_x\underbrace{(\pi \circ \sigma)}_{= \mathbb{1}_M}(\omega)
+%\mathrm{D}_g\pi( Y ) - \mathrm{D}_x\underbrace{(\pi \circ \sigma)}_{= \mathrm{id}_M}(\omega)
 %=
 %\mathrm{D}_g \pi (Y) - \omega
 %=
@@ -4005,7 +4005,7 @@ So, we get in total
 %\bas
 %\mathrm{D}_{(p, g)}\Phi\Bigl(X, \mathrm{D}_{e_x}R_\sigma \bigl( \mathrm{D}_x e (\omega) \bigr) \Bigr)
 %&=
-%\mathrm{D}_{(p, e_x)} \underbrace{\bigl( \Phi \circ \mleft( \mathbb{1}_N, R_\sigma \mright) \bigr)}_{\mathclap{ N * \mathcal{G} \ni (p, g) \mapsto p \cdot g \sigma_x = r_\sigma(p \cdot g) }}
+%\mathrm{D}_{(p, e_x)} \underbrace{\bigl( \Phi \circ \mleft( \mathrm{id}_N, R_\sigma \mright) \bigr)}_{\mathclap{ N * \mathcal{G} \ni (p, g) \mapsto p \cdot g \sigma_x = r_\sigma(p \cdot g) }}
 	%\bigl( X, \mathrm{D}_x e(\omega) \bigr)
 %\\
 %&=
@@ -4023,7 +4023,7 @@ So, we get in total
 %\\
 %&=
 %\mathrm{D}_p r_\sigma \Bigl(
-	%\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathbb{1}_N, e\circ f)\bigr)( X, X )
+	%\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathrm{id}_N, e\circ f)\bigr)( X, X )
 %\Bigr),
 %\eas
 %but on the diagonal $\mathrm{diag}(N\times N)$ of $N\times N$ we have
@@ -4031,7 +4031,7 @@ So, we get in total
 %\Bigl[
 %\mathrm{diag}(N \times N) \ni (p,p)
 %\mapsto
-%\bigl(\Phi \circ (\mathbb{1}_N, e\circ f)\bigr)(p,p)
+%\bigl(\Phi \circ (\mathrm{id}_N, e\circ f)\bigr)(p,p)
 %=
 %\Phi\mleft(p, e_{f(p)}\mright)
 %=
@@ -4044,7 +4044,7 @@ So, we get in total
 %\eas
 %where $\mathrm{pr}_i$ is just the projection onto any of both $i$-th components ($i \in \{1,2\}$) in $N \times N$. Due to $(X, X) \in \mathrm{T}_{(p,p)}\bigl( \mathrm{diag}(N\times N) \bigr)$ we derive
 %\bas
-%\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathbb{1}_N, e\circ f)\bigr)( X, X )
+%\mathrm{D}_{(p, p)} \bigl(\Phi \circ (\mathrm{id}_N, e\circ f)\bigr)( X, X )
 %&=
 %\mathrm{D}_{(p,p)} \mathrm{pr}_i( X, X )
 %=
@@ -4064,7 +4064,7 @@ So, we get in total
 	%+ \mleft.{\overline{\mleft( \MC\mright)_g (Y^v)}}\mright|_{p \cdot g}.
 %\eas
 %
-%If $f$ is a surjective submersion, then $x$ is a regular value and thus $f^{-1}(\{x\})$ is an embedded submanifold, and we can assure the existence of a smooth local section $\tau: U \to N$ of $f$ ($U$ an open neighbourhood of $x \in M$), \textit{i.e.}\ $f \circ \tau = \mathbb{1}_U$ with $\tau_x = p$; in case of doubt, this can be shown as in \cite[\S 3.7, Lemma 3.7.4, page 152f.]{Hamilton}\ via the Regular Point Theorem. Recalling the arguments of Rem. \ref{rem:AbstractNotationTwoForLeftInvarVfs}, we can rewrite the second summand of Eq.\ \eqref{DifferentialOfActionSplitFirst} instead to
+%If $f$ is a surjective submersion, then $x$ is a regular value and thus $f^{-1}(\{x\})$ is an embedded submanifold, and we can assure the existence of a smooth local section $\tau: U \to N$ of $f$ ($U$ an open neighbourhood of $x \in M$), \textit{i.e.}\ $f \circ \tau = \mathrm{id}_U$ with $\tau_x = p$; in case of doubt, this can be shown as in \cite[\S 3.7, Lemma 3.7.4, page 152f.]{Hamilton}\ via the Regular Point Theorem. Recalling the arguments of Rem. \ref{rem:AbstractNotationTwoForLeftInvarVfs}, we can rewrite the second summand of Eq.\ \eqref{DifferentialOfActionSplitFirst} instead to
 %\bas
 %\mathrm{D}_g\Phi_p (Y^v)
 %&=
@@ -4245,38 +4245,37 @@ There are several things in need to be discussed:
 
 Let us provide examples of such principal bundles.
 
-\begin{examples}{The "classical" principal bundle}{TheCLassicalPrincAsEx}
-We recover principal $G$-bundles as principal $\mathcal{G} \coloneqq M \times G$-bundles. Recall Ex.\ \ref{ex:TrivialLGBAction}, the LGB action of a trivial LGB $\mathcal{G} \cong M \times G$ is equivalent to a $G$-action, the right-translation with an element $g \in G$ is then the right-translation of the corresponding constant section in $\mathcal{G}$; this action is clearly simply transitive. The principal $G$-bundle atlas is then naturally inherited by the existing principal $\mathcal{G}$-bundle atlas. In fact, reverting this argument proves that principal $G$-bundles are equivalent to principal $\mathcal{G} \coloneqq M \times G$-bundles.
+\begin{examples}{The ``classical'' principal bundle}{TheCLassicalPrincAsEx}
+We recover principal $G$-bundles as principal $\mathcal{G} \coloneqq M \times G$-bundles. Recall \ref{ex:TrivialLGBAction}, the LGB action of a trivial LGB $\mathcal{G} \cong M \times G$ is equivalent to a $G$-action, the right-translation with an element $g \in G$ is then the right-translation of the corresponding constant section in $\mathcal{G}$; this action is clearly simply transitive. The principal $G$-bundle atlas is then naturally inherited by the existing principal $\mathcal{G}$-bundle atlas. In fact, reverting this argument proves that principal $G$-bundles are equivalent to principal $\mathcal{G} \coloneqq M \times G$-bundles.
 
 We often refer to principal bundles related to trivial LGBs as \textbf{typical} or \textbf{classical principal bundles}, or, as usual, principal $G$-bundle. 
 %We will later clarify why "pre-classical" as adjective instead of "classical"; however, at this point both adjectives are permutable.
 \end{examples}
 
-\begin{examples}{The "trivial" principal $\mathcal{G}$-bundle}{TrivialPrincAsLGB}
-$\mathcal{G}$ itself is a principal $\mathcal{G}$-bundle, equipped with its canonical right-action inherited by its multiplication $\mathcal{G}*\mathcal{G} \to \mathcal{G}$. The principal bundle atlas then just consists of the identity map $\mathbb{1}_{\mathcal{G}}$.
+\begin{examples}{The ``trivial'' principal $\mathcal{G}$-bundle}{TrivialPrincAsLGB}
+$\mathcal{G}$ itself is a principal $\mathcal{G}$-bundle, equipped with its canonical right-action inherited by its multiplication $\mathcal{G}*\mathcal{G} \to \mathcal{G}$. The principal bundle atlas then just consists of the identity map $\mathrm{id}_{\mathcal{G}}$.
 
-By Ex.\ \ref{ex:TheCLassicalPrincAsEx}, it may be natural to call this the \textbf{trivial $\mathcal{G}$-principal bundle} even if $\mathcal{G}$ itself might not be trivial. It will be clearer later why one may choose to do so.
-
-The remarkable property is that this example shows that we are going to define a gauge theory for which LGBs themselves are allowed as principal bundles. One might have wondered why classical gauge theory uses classical principal bundles instead of LGBs (especially including non-trivial LGBs), because LGBs could be viewed as a more natural choice due to the fact that they are an analogue to how vector bundles are the "bundle-construction" of vector spaces. The problems described in Subsection \ref{TheBigMotivationBehindEverything} show why it was easier to choose classical principal bundles, since these avoid the difficulties regarding the definition of a connection; however, we are going to solve these problems in such a way that one can either use LGBs or classical bundles or even something more general.
+By \ref{ex:TheCLassicalPrincAsEx}, it may be natural to call this the \textbf{trivial $\mathcal{G}$-principal bundle} even if $\mathcal{G}$ itself might not be trivial. It will be clearer later why one may choose to do so, but in particular one essential property is that this example shows that we are going to define a gauge theory for which the structural LGBs themselves are allowed as principal bundles.
+%One might have wondered why classical gauge theory uses classical principal bundles instead of LGBs (especially including non-trivial LGBs), because LGBs could be viewed as a more natural choice due to the fact that they are an analogue to how vector bundles are the "bundle-construction" of vector spaces. The problems described in \ref{TheBigMotivationBehindEverything} show why it was easier to choose classical principal bundles, since these avoid the difficulties regarding the definition of a connection; however, we are going to solve these problems in such a way that one can either use LGBs or classical bundles or even something more general.
 \end{examples}
 
-Our main example will be the inner bundle of a classical principal bundle, recall Ex.\ \ref{ex:InnerLGBs}. To explain the "triviality" of Ex.\ \ref{ex:TrivialPrincAsLGB} we need to introduce morphisms of principal bundles.
+Another example will be the inner bundle of a classical principal bundle, recall \ref{ex:InnerLGBs}. In order to explain the "triviality" of \ref{ex:TrivialPrincAsLGB} we need to introduce morphisms of principal bundles.
 
 \subsubsection{Morphism of principal LGB-bundles}
 
-Let us define morphisms of LGB-principal bundles
+Let us define morphisms of principal LGB-bundles
 
 \begin{definitions}{Morphism of principal bundles with structural LGB}{MorphOfPrincBundles}
-Let $M$ and $N$ be smooth manifolds, $\mathcal{H} \stackrel{\pi_{\mathcal{H}}}{\to} N$ and $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ LGBs, and $\mathcal{P}^\prime \stackrel{\pi^\prime}{\to} N$ and $\mathcal{P} \stackrel{\pi}{\to} M$ principal $\mathcal{H}$- and $\mathcal{G}$-bundles, respectively. A \textbf{principal bundle morphism} between $\mathcal{P}^\prime$ and $\mathcal{P}$ is a triple of smooth maps $F: \mathcal{H} \to \mathcal{G}$, $f: N \to M$ and $H: \mathcal{P}^\prime \to \mathcal{P}$ such that the pair $(F, f)$ is an LGB morphism as in Def.\ \ref{def:LGB morphism} and
-\ba
-\pi \circ H &= f \circ \pi^\prime,\label{PrincMorphoverBaseMap}\\
-H(p \cdot h) &= H(p) \cdot F(h)\label{PrincMorphLGBEquiv}
-\ea
+Let $M$ and $N$ be smooth manifolds, $\mathcal{H} \stackrel{\pi_{\mathcal{H}}}{\to} N$ and $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ LGBs, and $\mathcal{P}^\prime \stackrel{\pi^\prime}{\to} N$ and $\mathcal{P} \stackrel{\pi}{\to} M$ principal $\mathcal{H}$- and $\mathcal{G}$-bundles, respectively. A \textbf{principal bundle morphism} between $\mathcal{P}^\prime$ and $\mathcal{P}$ is a triple of smooth maps $F: \mathcal{H} \to \mathcal{G}$, $f: N \to M$ and $H: \mathcal{P}^\prime \to \mathcal{P}$ such that the pair $(F, f)$ is an LGB morphism as in \ref{def:LGB morphism} and
+\begin{align*}
+\pi \circ H &= f \circ \pi^\prime~, \\
+H(p \cdot h) &= H(p) \cdot F(h)
+\end{align*}
 for all $(p, h) \in \mathcal{P}^\prime * \mathcal{H} = \mleft(\pi^\prime\mright)^*\mathcal{H}$. We also speak of a \textbf{principal bundle morphism over $f$ w.r.t.\ the LGB morphism $F$}.
 
 We speak of a \textbf{principal bundle isomorphism (over $f$, w.r.t.\ $F$)} if $H$ is a diffeomorphism. 
 
-If $H$ is a base-preserving isomorphism $\mathcal{P} \to \mathcal{P}$ w.r.t.\ $F = \mathbb{1}_{\mathcal{G}}$, then we say that $H$ is a \textbf{(global) gauge transformation} or \textbf{principal bundle automorphism}, and the set of all such automorphisms is denoted by $\sAut(\mathcal{P})$. If $H$ is defined on an open subset of $M$, then we may also speak of a \textbf{local gauge transformation}.
+If $H$ is a base-preserving isomorphism $\mathcal{P} \to \mathcal{P}$ w.r.t.\ $F = \mathrm{id}_{\mathcal{G}}$, then we say that $H$ is a \textbf{(global) gauge transformation} or \textbf{principal bundle automorphism}, and the set of all such automorphisms is denoted by $\sAut(\mathcal{P})$. If $H$ is only defined on an open subset of $M$, then we may also speak of a \textbf{local gauge transformation}.
 \end{definitions}
 %Following remark is wrong, an equivalent statement may be related to the quotient space
 %\begin{remarks}{Equivalent definition}{EquivalentDefinitionForPrincMorphisms}
@@ -4285,46 +4284,48 @@ If $H$ is a base-preserving isomorphism $\mathcal{P} \to \mathcal{P}$ w.r.t.\ $F
 
 \begin{remark}
 \leavevmode\newline
-\indent $\bullet$ Observe that the right hand side of Eq.\ \eqref{PrincMorphLGBEquiv} is well-defined because of Eq.\ \eqref{PrincMorphoverBaseMap}, $(p, h) \in \mathcal{P}^\prime * \mathcal{H}$ and Def.\ \ref{def:LGB morphism}, that is,
-\bas
-\mleft( \pi_{\mathcal{G}} \circ F \mright)(h)
-&\stackrel{\text{\ref{def:LGB morphism}}}{=}
-\mleft( f \circ \pi_{\mathcal{H}} \mright)(h)
-\stackrel{\pi^\prime(p) = \pi_{\mathcal{H}}(h)}{=}
-\mleft( f \circ \pi^\prime \mright)(p)
-\stackrel{\eqref{PrincMorphoverBaseMap}}{=}
-\mleft( \pi \circ H \mright)(p),
-\eas
-thus,
-\bas
-\bigl( H(p), F(h) \bigr)
-&\in
-\mathcal{P} * \mathcal{G}
-=
-\pi^* \mathcal{G}.
-\eas
-Furthermore, by additionally using Remark \ref{rem:LGBPrincDefDiscussion} we know that LGB actions preserve the fibres of the principal bundles, therefore both, $H(p \cdot h)$ and $H(p) \cdot F(h)$, are over the same base point $\mleft(f \circ \pi^\prime\mright)(p)$, so that Eq.\ \eqref{PrincMorphLGBEquiv} as a whole is well-defined.
+\indent $\bullet$ 
+%Observe that the right hand side of Eq.\ \eqref{PrincMorphLGBEquiv} is well-defined because of Eq.\ \eqref{PrincMorphoverBaseMap}, $(p, h) \in \mathcal{P}^\prime * \mathcal{H}$ and Def.\ \ref{def:LGB morphism}, that is,
+%\bas
+%\mleft( \pi_{\mathcal{G}} \circ F \mright)(h)
+%&\stackrel{\text{\ref{def:LGB morphism}}}{=}
+%\mleft( f \circ \pi_{\mathcal{H}} \mright)(h)
+%\stackrel{\pi^\prime(p) = \pi_{\mathcal{H}}(h)}{=}
+%\mleft( f \circ \pi^\prime \mright)(p)
+%\stackrel{\eqref{PrincMorphoverBaseMap}}{=}
+%\mleft( \pi \circ H \mright)(p),
+%\eas
+%thus,
+%\bas
+%\bigl( H(p), F(h) \bigr)
+%&\in
+%\mathcal{P} * \mathcal{G}
+%=
+%\pi^* \mathcal{G}.
+%\eas
+%Furthermore, by additionally using Remark \ref{rem:LGBPrincDefDiscussion} we know that LGB actions preserve the fibres of the principal bundles, therefore both, $H(p \cdot h)$ and $H(p) \cdot F(h)$, are over the same base point $\mleft(f \circ \pi^\prime\mright)(p)$, so that Eq.\ \eqref{PrincMorphLGBEquiv} as a whole is
+It is straightforward to check that the equations are well-defined.
 
-$\bullet$ Also observe that one can conclude that $(F,f)$ has to be an LGB morphism in order to have a satisfied and well-defined Eq.\ \eqref{PrincMorphLGBEquiv}, assuming that $H$ is a map over $f$. To well-define the right hand side, $F$ has to be a map over $f$, since $H$ is defined over $f$. Assuming Eq.\ \eqref{PrincMorphLGBEquiv}, for $h^\prime \in \mathcal{H}_{\pi^\prime(p)}$ we have
-\bas
-H\mleft(p \cdot h^\prime h \mright)
-&=
-H(p) \cdot F\mleft(h^\prime h\mright),
-\eas
-but we also get by associativity
-\bas
-H\mleft(p \cdot h^\prime h \mright)
-&=
-H\mleft(p \cdot h^\prime \mright) \cdot F(h)
-=
-H(p) \cdot F\mleft(h^\prime\mright) ~ F(h).
-\eas
-Using that $\mathcal{G}$ acts simply transitive on $\mathcal{P}$, we derive
-\bas
-F\mleft(h^\prime h\mright)
-&=
-F\mleft(h^\prime\mright) ~ F(h).
-\eas
+%$\bullet$ Also observe that one can conclude that $(F,f)$ has to be an LGB morphism in order to have a satisfied and well-defined Eq.\ \eqref{PrincMorphLGBEquiv}, assuming that $H$ is a map over $f$. To well-define the right hand side, $F$ has to be a map over $f$, since $H$ is defined over $f$. Assuming Eq.\ \eqref{PrincMorphLGBEquiv}, for $h^\prime \in \mathcal{H}_{\pi^\prime(p)}$ we have
+%\bas
+%H\mleft(p \cdot h^\prime h \mright)
+%&=
+%H(p) \cdot F\mleft(h^\prime h\mright),
+%\eas
+%but we also get by associativity
+%\bas
+%H\mleft(p \cdot h^\prime h \mright)
+%&=
+%H\mleft(p \cdot h^\prime \mright) \cdot F(h)
+%=
+%H(p) \cdot F\mleft(h^\prime\mright) ~ F(h).
+%\eas
+%Using that $\mathcal{G}$ acts simply transitive on $\mathcal{P}$, we derive
+%\bas
+%F\mleft(h^\prime h\mright)
+%&=
+%F\mleft(h^\prime\mright) ~ F(h).
+%\eas
 
 $\bullet$ Assume $H$ is a diffeomorphism, then $F$ is an LGB isomorphism. For this we only have to show that $F$ is a diffeomorphism by Def.\ \ref{def:LGB morphism}; by Remark \ref{rem:LGBMOrphismRemark}, also $f$ is then a diffeomorphism. Thence, let us show that $F$ is a diffeomorphism. This follows by the fact that the LGB actions are simply transitive on the fibres of $\mathcal{P}^\prime$ and $\mathcal{P}$, \textit{i.e.}\ orbit maps are diffeomorphisms, also recall Remark \ref{rem:LGBPrincDefDiscussion}. Denoting the orbit maps inherited by the action on $\mathcal{P}^\prime$ and $\mathcal{P}$ by $\Phi^{\mathcal{P}^\prime}$ and $\Phi^{\mathcal{P}}$, respectively, we can write
 \bas
@@ -4355,9 +4356,9 @@ Thence, Def.\ \ref{def:MorphOfPrincBundles} is a valid definition for a principa
 \mleft(F^{-1} \circ \varphi_i \circ H\mright)|_{f^{-1}(U_i)}.
 \eas
 
-$\bullet$ Finally, observe that we have locally an isomorphism of every principal bundle $\mathcal{P}$ to $\mathcal{G}$: Fix a principal bundle chart $\varphi: \mathcal{P}|_U \to \mathcal{G}|_U$ ($U$ some open subset of $M$). Then take $H \coloneqq \varphi$, $F \coloneqq \mathbb{1}_{\mathcal{G}|_U}$ and $f \coloneqq \mathbb{1}_U$; by the definition of a principal bundle chart this gives a principal bundle isomorphism. Therefore one could say that every principal bundle is locally "trivial" in the sense of being an LGB; recall Ex.\ \ref{ex:TrivialPrincAsLGB}. 
+$\bullet$ Finally, observe that we have locally an isomorphism of every principal bundle $\mathcal{P}$ to $\mathcal{G}$: Fix a principal bundle chart $\varphi: \mathcal{P}|_U \to \mathcal{G}|_U$ ($U$ some open subset of $M$). Then take $H \coloneqq \varphi$, $F \coloneqq \mathrm{id}_{\mathcal{G}|_U}$ and $f \coloneqq \mathrm{id}_U$; by the definition of a principal bundle chart this gives a principal bundle isomorphism. Therefore one could say that every principal bundle is locally "trivial" in the sense of being an LGB; recall Ex.\ \ref{ex:TrivialPrincAsLGB}. 
 
-Additionally using Remark \ref{rem:LGBPrincDefDiscussion} we have locally an isomorphism of $\mathcal{P}$ to a trivial LGB; keeping the same notation as in Remark \ref{rem:LGBPrincDefDiscussion}, choose $H \coloneqq \xi_i$, $F \coloneqq \phi_i$ and $f \coloneqq \mathbb{1}_{U_i}$. Hence, locally every principal bundle is also classical in the sense of Ex.\ \ref{ex:TheCLassicalPrincAsEx}.
+Additionally using Remark \ref{rem:LGBPrincDefDiscussion} we have locally an isomorphism of $\mathcal{P}$ to a trivial LGB; keeping the same notation as in Remark \ref{rem:LGBPrincDefDiscussion}, choose $H \coloneqq \xi_i$, $F \coloneqq \phi_i$ and $f \coloneqq \mathrm{id}_{U_i}$. Hence, locally every principal bundle is also classical in the sense of Ex.\ \ref{ex:TheCLassicalPrincAsEx}.
 \end{remark}
 
 As expected, there is a natural isomorphism induced by local sections of $\mathcal{P}$, which are, however, no trivializations in general. In other words, by Remark \ref{rem:LGBPrincDefDiscussion} we know that orbit maps through the fibres of $\mathcal{P}$ are equivariant diffeomorphisms, we want to show the same for the orbit map through a section of $\mathcal{P}$.
@@ -4368,7 +4369,7 @@ Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth ma
 \mathcal{G}|_U &\to \mathcal{P}|_U,\\
 g &\mapsto s_{\pi_{\mathcal{G}}(g)} \cdot g,
 \eas
-is a base-preserving principal bundle isomorphism w.r.t.\ $\mathbb{1}_{\mathcal{G}|_U}$.
+is a base-preserving principal bundle isomorphism w.r.t.\ $\mathrm{id}_{\mathcal{G}|_U}$.
 \end{lemmata}
 
 \begin{remark}
@@ -4380,16 +4381,16 @@ The nomenclature about calling LGBs "trivial" principal bundles is also introduc
 
 \begin{proof}[Proof of Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv}]
 \leavevmode\newline
-The proof is similar to the "classical" statement as \textit{e.g.}\ given in \cite[\S 4.2, proof of Lemma 4.2.7, page 210ff.]{Hamilton}, but generalized since we have to treat a possible non-triviality of $\mathcal{G}|_U$. As already discussed, the orbit map $\Phi_s$ is well-defined because of $\pi_{\mathcal{P}} \circ s = \mathbb{1}_{U}$ such that $\mleft(s_{\pi_{\mathcal{G}}(g)}, g\mright) \in \mathcal{P}*\mathcal{G}$. Via Rem.\ \ref{rem:SmoothnessOfACtionTranslations} we also know that $\Phi_s$ is also smooth,
+The proof is similar to the "classical" statement as \textit{e.g.}\ given in \cite[\S 4.2, proof of Lemma 4.2.7, page 210ff.]{Hamilton}, but generalized since we have to treat a possible non-triviality of $\mathcal{G}|_U$. As already discussed, the orbit map $\Phi_s$ is well-defined because of $\pi_{\mathcal{P}} \circ s = \mathrm{id}_{U}$ such that $\mleft(s_{\pi_{\mathcal{G}}(g)}, g\mright) \in \mathcal{P}*\mathcal{G}$. Via Rem.\ \ref{rem:SmoothnessOfACtionTranslations} we also know that $\Phi_s$ is also smooth,
  %Let us denote with $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{G}$ the right $\mathcal{G}$-action $(p, g) \mapsto p \cdot g$ on $\mathcal{P}$, then
 %\ba\label{RewritingLocalTrivOfPrinc}
 %\Phi_s(g)
 %&=
 %\Phi\mleft( s_{\pi_{\mathcal{G}}(g)}, g\mright)
 %=
-%\bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathbb{1}_{\mathcal{G}} \mright) \bigr) (g,g).
+%\bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathrm{id}_{\mathcal{G}} \mright) \bigr) (g,g).
 %\ea
-%Thence, $\Phi_s$ is clearly a smooth map as the composition of smooth maps, that is, $\Phi$ is composed with the restriction of the smooth map $\mleft( \pi_{\mathcal{G}}^*s, \mathbb{1}_{\mathcal{G}} \mright): \mathcal{G} \times \mathcal{G} \to \mathcal{G}$, which is given by $(g, q) \mapsto \mleft( s_{\pi_{\mathcal{G}(g)}} , q \mright)$, and it is clearly smooth if restricted to the diagonal as embedded submanifold.
+%Thence, $\Phi_s$ is clearly a smooth map as the composition of smooth maps, that is, $\Phi$ is composed with the restriction of the smooth map $\mleft( \pi_{\mathcal{G}}^*s, \mathrm{id}_{\mathcal{G}} \mright): \mathcal{G} \times \mathcal{G} \to \mathcal{G}$, which is given by $(g, q) \mapsto \mleft( s_{\pi_{\mathcal{G}(g)}} , q \mright)$, and it is clearly smooth if restricted to the diagonal as embedded submanifold.
 %By Def.\ \ref{def:LiegroupACtion} we have
 %\bas
 %\mleft( \pi_{\mathcal{P}} \circ \Phi_s \mright)(g)
@@ -4398,13 +4399,13 @@ The proof is similar to the "classical" statement as \textit{e.g.}\ given in \ci
 %=
 %\pi_{\mathcal{G}}(g),
 %\eas
-%thus, $\Phi_s$ is base-preserving, similarly it follows that $\Phi_s$ is $\mathcal{G}$-equivariant w.r.t.\ $\mathbb{1}_{\mathcal{G}}$ by making use of $\pi_{\mathcal{G}}(g q) = \pi_{\mathcal{G}}(g)$ for all $g, q \in \mathcal{G}*\mathcal{G}$. Furthermore, $\Phi_s$ is bijective since the right $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive, that is, when we restrict $\Phi_s$ to an $x \in U$, then it is a map
+%thus, $\Phi_s$ is base-preserving, similarly it follows that $\Phi_s$ is $\mathcal{G}$-equivariant w.r.t.\ $\mathrm{id}_{\mathcal{G}}$ by making use of $\pi_{\mathcal{G}}(g q) = \pi_{\mathcal{G}}(g)$ for all $g, q \in \mathcal{G}*\mathcal{G}$. Furthermore, $\Phi_s$ is bijective since the right $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive, that is, when we restrict $\Phi_s$ to an $x \in U$, then it is a map
 %\bas
 %\mathcal{G}_x &\to \mathcal{P}_x,\\
 %g &\mapsto s_x \cdot g,
 %\eas
 %thence, as expected 
-and it is point-wise the orbit map $\Phi_{s_x}$ through $s_x$ which is a $\mathcal{G}_x$-equivariant diffeomorphism by Remark \ref{rem:LGBPrincDefDiscussion}. So, $\Phi_s$ is fibre-wise bijective and therefore bijective as a whole since it is base-preserving, and it is $\mathcal{G}$-equivariant w.r.t.\ $\mathbb{1}_{\mathcal{G}}$.
+and it is point-wise the orbit map $\Phi_{s_x}$ through $s_x$ which is a $\mathcal{G}_x$-equivariant diffeomorphism by Remark \ref{rem:LGBPrincDefDiscussion}. So, $\Phi_s$ is fibre-wise bijective and therefore bijective as a whole since it is base-preserving, and it is $\mathcal{G}$-equivariant w.r.t.\ $\mathrm{id}_{\mathcal{G}}$.
 
 Now we want to use the inverse function theorem to show that its inverse is also smooth. Once we know that the tangent map/total derivative $\mathrm{D}_g\Phi_s: \mathrm{T}_g \mathcal{G} \to \mathrm{T}_{s_{x} \cdot g}\mathcal{P}$ is an isomorphism of vector spaces for all $g \in \mathcal{G}|_U$, then we know by the inverse function theorem that $\Phi_s^{-1}$ is smooth. Hence, we will now show that $\mathrm{D}_g\Phi_s$ is injective, then it has to bijective by dimensional reasons ($\mathrm{dim}(\mathcal{G}) = \mathrm{dim}(\mathcal{P})$) so that we are done. Let us denote with $\Phi: \mathcal{P}* \mathcal{G} \to \mathcal{G}$ the right $\mathcal{G}$-action $(p, g) \mapsto p \cdot g$ on $\mathcal{P}$, then
 \bas
@@ -4412,7 +4413,7 @@ Now we want to use the inverse function theorem to show that its inverse is also
 &=
 \Phi\mleft( s_{\pi_{\mathcal{G}}(g)}, g\mright)
 =
-\bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathbb{1}_{\mathcal{G}} \mright) \bigr) (g,g).
+\bigl(\Phi \circ \mleft( \pi_{\mathcal{G}}^*s , \mathrm{id}_{\mathcal{G}} \mright) \bigr) (g,g).
 \eas
 Then $\mathrm{D}_g\Phi_s$ is given by Thm.\ \ref{prop:DiffOfLGBAction},
 \ba
@@ -4440,15 +4441,15 @@ because of
 \bas
 \pi_{\mathcal{G}} \circ \sigma
 &=
-\mathbb{1}_U
+\mathrm{id}_U
 \eas
 such that
 \ba\label{DsigmaIsASPlitting}
 \mathrm{D}\pi_{\mathcal{G}} \circ \mathrm{D}\sigma
 &=
-\mathbb{1}_{\mathrm{T}M|_U}.
+\mathrm{id}_{\mathrm{T}M|_U}.
 \ea
-Usually, we just make use of that without further mention; we repeat this trivial fact in order to emphasize that $\mathrm{D}\sigma$ is injective because $\mathbb{1}_{\mathrm{T}M|_U}$ is bijective, and to emphasize that we have
+Usually, we just make use of that without further mention; we repeat this trivial fact in order to emphasize that $\mathrm{D}\sigma$ is injective because $\mathrm{id}_{\mathrm{T}M|_U}$ is bijective, and to emphasize that we have
 \bas
 %\mathrm{T}_g\mathcal{G}
 %&=
@@ -4568,7 +4569,7 @@ A principal bundle atlas can be constructed by a pullback of principal bundle ch
 \coloneqq
 \mleft( x, \mleft.\mleft(\varphi_i\mright)\mright|_{f(x)}(p) \mright),
 \eas
-which is well-defined and by construction a base-preserving $f^*\mathcal{G}$-equivariant smooth map, and this map is equivalent to $\mleft(\mathbb{1}_{f^{-1}(U_i)}, \varphi_i\mright): N \times \mathcal{P} \to N \times \mathcal{G}$ restricted onto $f^*\mathcal{P}$ as an embedded submanifold of $N \times \mathcal{P}$. Therefore it is clearly a diffeomorphism, so that we can conclude that $f^*\mathcal{P}$ admits the structure as a principal $f^*\mathcal{G}$-bundle.
+which is well-defined and by construction a base-preserving $f^*\mathcal{G}$-equivariant smooth map, and this map is equivalent to $\mleft(\mathrm{id}_{f^{-1}(U_i)}, \varphi_i\mright): N \times \mathcal{P} \to N \times \mathcal{G}$ restricted onto $f^*\mathcal{P}$ as an embedded submanifold of $N \times \mathcal{P}$. Therefore it is clearly a diffeomorphism, so that we can conclude that $f^*\mathcal{P}$ admits the structure as a principal $f^*\mathcal{G}$-bundle.
 
 The last part of the proof about the uniqueness of the structure is precisely as in the proof of Cor.\ \ref{cor:PullbackLGB}, just replace the property of being an LGB morphism with being a principal bundle morphism w.r.t.\ the LGB morphism $\pi_2^{\mathcal{G}}$ (essentially, replace homomorphism with equivariance). Keeping the same notation as in the proof of Cor.\ \ref{cor:PullbackLGB}, we get analogously
 \bas
@@ -4611,7 +4612,7 @@ By \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} this isomorphism is explicitl
 \mathcal{P}*\mathcal{G} &\to \pi^*\mathcal{P},\\
 (p, g) &\mapsto (p,p) \cdot (p, g) = (p, p \cdot g).
 \eas
-In fact, the cited reference of \ref{def:PrinciBdleWithStruLGB}, \cite[simplification of the beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}, takes the existence of such a diffeomorphism as the essential sole part of defining principal bundles. Such an approach essentially avoids the second part of Def.\ \ref{def:PrinciBdleWithStruLGB}.
+In fact, the cited reference of \ref{def:PrinciBdleWithStruLGB}, \cite[simplification of the beginning of \S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}, takes the existence of such a diffeomorphism as the essential sole part of defining principal bundles. Such an approach essentially avoids the second part of D\ref{def:PrinciBdleWithStruLGB}.
 \end{remarks}
 
 \begin{remarks}{Why "principal"?}{ItIsAPrincipalAction}
@@ -4625,7 +4626,7 @@ is a closed map. In our case, $N = \mathcal{P}$, we clearly have a free action, 
 \mathcal{P} * \mathcal{G} &\to \pi^*\mathcal{P} \to \mathcal{P} \times \mathcal{P},\\
 (p, g) &\mapsto (p, p \cdot g) \mapsto (p, p \cdot g).
 \eas
-By Remark \ref{rem:AlternativePrincBdlDef} the first arrow is a diffeomorphism and thence a closed map. The second arrow is the inclusion, an embedding because $\pi^*\mathcal{P}$ is a closed embedded submanifold of $\mathcal{P} \times \mathcal{P}$ as the restriction of the fibre bundle $\mathcal{P} \times \mathcal{P} \stackrel{\mathbb{1}_{\mathcal{P}} \times \pi}{\to} \mathcal{P} \times M$ along the graph of $\pi$; see \textit{e.g.}\ \cite[\S 4.1, proof of Thm.\ 4.1.17, page 204ff.]{Hamilton}. Additionally, by the continuity of $\pi$, the graph $\Gamma$ of $\pi$ is closed and thus $\pi^*\mathcal{P} = \mleft(\mathbb{1}_{\mathcal{P}} \times \pi\mright)^{-1}(\Gamma)$, too. Using this, it is a quick exercise to show that a set closed in $\pi^*\mathcal{P}$ is also closed in $\mathcal{P} \times \mathcal{P}$, thus the second arrow as inclusion is also closed. Hence, the whole composition is closed.
+By Remark \ref{rem:AlternativePrincBdlDef} the first arrow is a diffeomorphism and thence a closed map. The second arrow is the inclusion, an embedding because $\pi^*\mathcal{P}$ is a closed embedded submanifold of $\mathcal{P} \times \mathcal{P}$ as the restriction of the fibre bundle $\mathcal{P} \times \mathcal{P} \stackrel{\mathrm{id}_{\mathcal{P}} \times \pi}{\to} \mathcal{P} \times M$ along the graph of $\pi$; see \textit{e.g.}\ \cite[\S 4.1, proof of Thm.\ 4.1.17, page 204ff.]{Hamilton}. Additionally, by the continuity of $\pi$, the graph $\Gamma$ of $\pi$ is closed and thus $\pi^*\mathcal{P} = \mleft(\mathrm{id}_{\mathcal{P}} \times \pi\mright)^{-1}(\Gamma)$, too. Using this, it is a quick exercise to show that a set closed in $\pi^*\mathcal{P}$ is also closed in $\mathcal{P} \times \mathcal{P}$, thus the second arrow as inclusion is also closed. Hence, the whole composition is closed.
 
 This knowledge should allow us to carry over a lot of similar results related to principal actions, as in \cite[\S 3.7.5, page 159ff.]{Hamilton}\ and \cite[\S 4.2.2, page 212ff.]{Hamilton}. Essentially Remark \ref{rem:AlternativePrincBdlDef} allows us to look at the quotient $\mathcal{P} \Big/ \mathcal{G}$ by using Godement's Theorem as given in \cite[\S 3.7, Thm.\ 3.7.10, page 155]{Hamilton}, leading to a manifold structure on $\mathcal{P} \Big/ \mathcal{G}$ and maybe similarly leading to a principal bundle structure on $\mathcal{P} \to \mathcal{P} \Big/ \mathcal{G}$.
 \end{remarks}
@@ -5397,7 +5398,7 @@ Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and $\mathcal{G} \colone
 where $\mathrm{pr}_2: M \times G \to G$ is the projection onto the second component,
 and the projection onto the vertical bundle is then equivalent to $\mathrm{Dpr}_2 \in \Omega^1\mleft(\mathcal{G}; \mathrm{pr}_2^*\mathrm{T}G\mright)$. 
 
-Now let us view $G$ as an LGB over a point $\{*\}$, then $\mathcal{G} = f^*G$, where $f: M \to \{*\}$. Making use of the uniqueness of $\pi^{\mathrm{vert}} = \mathbb{1}_{\mathrm{T}G}$ for $G \to \{*\}$, we have for the pullback connection $\mathrm{pr}_2^!\pi^{\mathrm{vert}} = \mathrm{Dpr}_2$ which is precisely the projection for $\mathcal{G}$, and therefore we can use Remark \ref{rem:PullbackTotMCForm} to derive
+Now let us view $G$ as an LGB over a point $\{*\}$, then $\mathcal{G} = f^*G$, where $f: M \to \{*\}$. Making use of the uniqueness of $\pi^{\mathrm{vert}} = \mathrm{id}_{\mathrm{T}G}$ for $G \to \{*\}$, we have for the pullback connection $\mathrm{pr}_2^!\pi^{\mathrm{vert}} = \mathrm{Dpr}_2$ which is precisely the projection for $\mathcal{G}$, and therefore we can use Remark \ref{rem:PullbackTotMCForm} to derive
 \bas
 \mutot
 &=
@@ -7008,7 +7009,7 @@ p \cdot \mathrm{pr}_2\mleft(\sigma^H_p\mright)
 =
 \Phi\mleft(p, \mathrm{pr}_2\mleft(\sigma^H_p \mright)\mright)
 =
-\Bigl( \Phi \circ \mleft( \mathbb{1}_{\mathcal{P}}, \mathrm{pr}_2\circ\sigma^H \mright) \Bigr)(p)
+\Bigl( \Phi \circ \mleft( \mathrm{id}_{\mathcal{P}}, \mathrm{pr}_2\circ\sigma^H \mright) \Bigr)(p)
 \eas
 for all $p \in \mathcal{P}_x$ ($x\in M$), where $\Phi$ is the right $\mathcal{G}$-action on $\mathcal{P}$, also recall Def.\ \ref{MultiWithPulli}, that is, $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. Define $\overline{\sigma} \coloneqq \mathrm{pr}_2 \circ \sigma^H$, $\mathcal{P} \ni p \mapsto \overline{\sigma}_p \in \mathcal{G}$; by Remark \ref{rem:PullbackTotMCForm}, \ref{rem:PullBackDarboux} and Thm.\ \ref{prop:DiffOfLGBAction}, especially Remark \ref{rem:DarbouxInActionInfinit}, we can calculate
 \ba\label{DiffOfPrincAutom}
@@ -7108,7 +7109,7 @@ s^!A.
 
 \begin{remark}\label{PullBackGaugeFieldRemark}
 \leavevmode\newline
-$A$ has values in $\pi^*\mathcal{g}$, and thus $A_s$ has values in $s^*\pi^*\mathcal{g} \cong (\pi \circ s)^*\mathcal{g} = \mathbb{1}_U^*\mathcal{g} \cong \mleft.\mathcal{g}\mright|_U$.
+$A$ has values in $\pi^*\mathcal{g}$, and thus $A_s$ has values in $s^*\pi^*\mathcal{g} \cong (\pi \circ s)^*\mathcal{g} = \mathrm{id}_U^*\mathcal{g} \cong \mleft.\mathcal{g}\mright|_U$.
 \end{remark}
 
 Gauge transformations now naturally arise in a change of the gauge $s$. So, let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$. For two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$ there is then a unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ such that
@@ -7179,7 +7180,7 @@ with $\Phi_s$ being the orbit map through $s$.
 \end{propositions}
 
 \begin{remarks}{Other notation}{OtherNotationForLGBSectionsAsGaugeTrafo}
-Due to the fact that $s^*\pi^*\mathcal{G} \cong (\pi \circ s)^*\mathcal{G} = \mathbb{1}_U^*\mathcal{G} \cong \mleft.\mathcal{G}\mright|_U$, and due to what we discussed in Subsection \ref{BasicNotations} about pullback sections, we could rewrite the first map to
+Due to the fact that $s^*\pi^*\mathcal{G} \cong (\pi \circ s)^*\mathcal{G} = \mathrm{id}_U^*\mathcal{G} \cong \mleft.\mathcal{G}\mright|_U$, and due to what we discussed in Subsection \ref{BasicNotations} about pullback sections, we could rewrite the first map to
 \bas
 C^\infty \mleft( \mleft.\mathcal{P}\mright|_U; \mleft.\mathcal{G}\mright|_U \mright)^{\mleft.\mathcal{G}\mright|_U} 
 &\to 
@@ -7199,7 +7200,7 @@ For $\sigma \in C^\infty \mleft( \mleft.\mathcal{P}\mright|_U; \mleft.\mathcal{G
 =
 \pi \circ s
 =
-\mathbb{1}_U,
+\mathrm{id}_U,
 \eas
 where $\mathrm{pr}_1: \pi^*\mathcal{G} \to \mathcal{P}$ is the projection onto the first component.
 For the supposed inverse we have similarly that $\sigma^\tau$ is a section of $\Gamma(\pi^*\mleft.\mathcal{G}\mright|_U)$ by construction; then observe, using Lemma \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv},
@@ -7743,7 +7744,7 @@ Hence,
 		%\mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
 	%}}\mright|_{\sigma_x \cdot \tau_x}
 %\eas
-%for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$, where we used that $\pi_{\mathcal{G}} \circ \sigma = \mathbb{1}_M$. Viewing $\mathcal{G}$ as a principal $\mathcal{G}$-bundle we can apply Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj}. Together with recalling Def.\ \ref{def:FundVecs} we derive
+%for all $x \in M$, $X \in \mathrm{T}_xM$ and $\sigma, \tau \in \Gamma(\mathcal{G})$, where we used that $\pi_{\mathcal{G}} \circ \sigma = \mathrm{id}_M$. Viewing $\mathcal{G}$ as a principal $\mathcal{G}$-bundle we can apply Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj}. Together with recalling Def.\ \ref{def:FundVecs} we derive
 %\bas
 %\Delta(\sigma\tau)_x(X)
 %&=
@@ -8219,11 +8220,11 @@ where $\nu$ is any section of $\mathcal{g}$ and $\sigma \in \Gamma(\mathcal{G})$
 \bas
 \gamma(t)^!\pi_{\mathcal{G}}^!\zeta
 &=
-{\underbrace{\bigl( \pi_{\mathcal{G}} \circ \gamma(t) \bigr)^!}_{\equiv \mathbb{1}_M^!}}\zeta
+{\underbrace{\bigl( \pi_{\mathcal{G}} \circ \gamma(t) \bigr)^!}_{\equiv \mathrm{id}_M^!}}\zeta
 =
 \zeta
 \eas
-and under the identification $\gamma^*\pi_{\mathcal{G}}^*\mathcal{g} \cong (\pi_{\mathcal{G}} \circ \gamma)^*\mathcal{g} = \mathbb{1}_M^*\mathcal{g} \cong \mathcal{g}$ we get similarly
+and under the identification $\gamma^*\pi_{\mathcal{G}}^*\mathcal{g} \cong (\pi_{\mathcal{G}} \circ \gamma)^*\mathcal{g} = \mathrm{id}_M^*\mathcal{g} \cong \mathcal{g}$ we get similarly
 \bas
 \mleft( \gamma(t)^!\mleft( g, \mathrm{Ad}_{g^{-1}}\circ \zeta_{\pi_{\mathcal{G}}(g)} \circ \mathrm{D}_g\pi_{\mathcal{G}} \mright) \mright)_x
 &\cong
@@ -9966,7 +9967,7 @@ X_0^i \mleft.\frac{\partial}{\partial \mleft(\pi_{\mathrm{T}M}^*x^i\mright)}\mri
 \ea
 It is now clear that $S(\xi)$ is independent of the choice of $\alpha$ and just depends on $[\alpha]$. Furthermore, due to what we have shown for $\beta$, it is also clear that $S$ is a base-preserving map either from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ or vice versa. 
 %Let $[\gamma] \in \mathrm{TT}M$, then by the same calculation as for the properties of $\beta$ we have $S([\tau]) = [\gamma]$, where $\tau(t, s) \coloneqq \gamma(s, t)$; thence, surjectivity of $S$ follows. Similarly, again by the properties of $\beta(t, s)$ above, if we have $S([\alpha]) = S\mleft( \mleft[ \alpha^\prime \mright] \mright)$, then we clearly get $[\alpha] = [\alpha^\prime]$, and hence injectivity. Alternatively, 
-Bijectivity follows by $S\circ S = \mathbb{1}_{\mathrm{TT}M}$.
+Bijectivity follows by $S\circ S = \mathrm{id}_{\mathrm{TT}M}$.
 
 It is only left to show that we have linearity for $S$ as a map from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ and vice versa. For this we use the derived coordinate expressions. Let $\eta \in \mathrm{TT}M$ be defined as before with associated area function $\gamma$ such that $\eta = [\gamma]$. Then one can derive by using what we have shown in the discussion about $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ as vector bundle that
 \ba\label{LinearStructureOfProlongInCoordinates}
@@ -10185,9 +10186,9 @@ Let $X \in \mathfrak{X}(M)$, then its total derivative is a map $\mathrm{D}X: \m
 \bas
 \mathrm{D}\pi_{\mathrm{T}M} \circ \mathrm{D}X
 &=
-\mathrm{D}\underbrace{\mleft( \pi_{\mathrm{T}M} \circ X \mright)}_{= \mathbb{1}_M}
+\mathrm{D}\underbrace{\mleft( \pi_{\mathrm{T}M} \circ X \mright)}_{= \mathrm{id}_M}
 =
-\mathbb{1}_{\mathrm{T}M},
+\mathrm{id}_{\mathrm{T}M},
 \eas
 so that $\mathrm{D}X$ is a section of $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$. Due to the fact that $S = S_M$ is a base-preserving vector bundle isomorphism from $\mathrm{TT}M \stackrel{\mathrm{D}\pi_{\mathrm{T}M}}{\to} \mathrm{T}M$ to $\mathrm{TT}M \stackrel{\pi_{\mathrm{TT}M}}{\to} \mathrm{T}M$ (and vice versa), we have a vector field $X_T \in \mathfrak{X}(\mathrm{T}M)$ given by
 \bas

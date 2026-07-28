@@ -24,20 +24,20 @@
 \contentsline {subsubsection}{\tocsubsubsection {}{6.1.1}{Definition}}{34}{subsubsection.102}%
 \contentsline {subsubsection}{\tocsubsubsection {}{6.1.2}{Examples}}{36}{subsubsection.113}%
 \contentsline {subsubsection}{\tocsubsubsection {}{6.1.3}{Morphism of principal LGB-bundles}}{36}{subsubsection.116}%
-\contentsline {subsection}{\tocsubsection {}{6.2}{Generalized distributions and connections}}{43}{subsection.136}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.2.1}{Idea and motivation}}{44}{subsubsection.143}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.2.2}{Darboux derivative on LGBs}}{47}{subsubsection.152}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.2.3}{First step towards towards associated bundles}}{56}{subsubsection.175}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.2.4}{Generalized connection 1-forms on principal bundles}}{58}{subsubsection.179}%
-\contentsline {subsection}{\tocsubsection {}{6.3}{Gauge transformations}}{65}{subsection.197}%
-\contentsline {subsection}{\tocsubsection {}{6.4}{Generalized curvature/field strength}}{74}{subsection.214}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.4.1}{multiplicative Yang-Mills connections on LGBs}}{74}{subsubsection.215}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.4.2}{Field strength related to multiplicative Yang-Mills connections}}{88}{subsubsection.254}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.4.3}{Gauge transformation of the generalized field strength}}{93}{subsubsection.262}%
-\contentsline {section}{\tocsection {}{7}{Curved Yang-Mills gauge theory}}{95}{section.268}%
-\contentsline {subsection}{\tocsubsection {}{7.1}{Definition and gauge invariance}}{95}{subsection.269}%
-\contentsline {subsection}{\tocsubsection {}{7.2}{Field redefinitions}}{97}{subsection.274}%
-\contentsline {subsection}{\tocsubsection {}{7.3}{Examples}}{99}{subsection.283}%
-\contentsline {subsection}{\tocsubsection {}{7.4}{Future prospects}}{102}{subsection.294}%
-\contentsline {section}{\tocsection {Appendix}{}{List of References}}{103}{section*.295}%
-\contentsline {section}{\tocsection {Appendix}{A}{Double tangent bundle and its canonical flip map}}{103}{appendix.296}%
+\contentsline {subsection}{\tocsubsection {}{6.2}{Generalized distributions and connections}}{42}{subsection.134}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.2.1}{Idea and motivation}}{43}{subsubsection.141}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.2.2}{Darboux derivative on LGBs}}{47}{subsubsection.150}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.2.3}{First step towards towards associated bundles}}{56}{subsubsection.173}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.2.4}{Generalized connection 1-forms on principal bundles}}{58}{subsubsection.177}%
+\contentsline {subsection}{\tocsubsection {}{6.3}{Gauge transformations}}{65}{subsection.195}%
+\contentsline {subsection}{\tocsubsection {}{6.4}{Generalized curvature/field strength}}{74}{subsection.212}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.4.1}{multiplicative Yang-Mills connections on LGBs}}{74}{subsubsection.213}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.4.2}{Field strength related to multiplicative Yang-Mills connections}}{87}{subsubsection.252}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.4.3}{Gauge transformation of the generalized field strength}}{93}{subsubsection.260}%
+\contentsline {section}{\tocsection {}{7}{Curved Yang-Mills gauge theory}}{94}{section.266}%
+\contentsline {subsection}{\tocsubsection {}{7.1}{Definition and gauge invariance}}{94}{subsection.267}%
+\contentsline {subsection}{\tocsubsection {}{7.2}{Field redefinitions}}{96}{subsection.272}%
+\contentsline {subsection}{\tocsubsection {}{7.3}{Examples}}{98}{subsection.281}%
+\contentsline {subsection}{\tocsubsection {}{7.4}{Future prospects}}{101}{subsection.292}%
+\contentsline {section}{\tocsection {Appendix}{}{List of References}}{102}{section*.293}%
+\contentsline {section}{\tocsection {Appendix}{A}{Double tangent bundle and its canonical flip map}}{102}{appendix.294}%
