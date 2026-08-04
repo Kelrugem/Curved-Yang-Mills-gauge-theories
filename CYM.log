@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  28 JUL 2026 18:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  4 AUG 2026 19:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1572,87 +1572,94 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [35]
 [36]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `PrincMorphLGBEquiv' on page 37 undefined on input lin
-e 4338.
+ [37]
+[38] [39]
 
-[37] [38] [39] [40] [41] [42]
-
-LaTeX Warning: Reference `LABActionAlongFibres' on page 43 undefined on input l
-ine 4706.
+LaTeX Warning: Reference `LABActionAlongFibres' on page 40 undefined on input l
+ine 4720.
 
 
-Overfull \hbox (18.01428pt too wide) in paragraph at lines 4776--4778
+Overfull \hbox (18.01428pt too wide) in paragraph at lines 4790--4792
  [] 
  []
+
+
+LaTeX Warning: Reference `rem:AbstractNotationTwoForLeftInvarVfs' on page 1 und
+efined on input line 4796.
+
+
+Overfull \hbox (18.01428pt too wide) in paragraph at lines 4854--4855
+ [] 
+ []
+
+[40] [41] [42]
+
+LaTeX Warning: Reference `rem:AbstractNotationTwoForLeftInvarVfs' on page 1 und
+efined on input line 5017.
 
 [43]
 
-LaTeX Warning: Reference `rem:AbstractNotationTwoForLeftInvarVfs' on page 1 und
-efined on input line 4782.
-
-
-Overfull \hbox (18.01428pt too wide) in paragraph at lines 4840--4841
- [] 
- []
-
-[44] [45]
-
-LaTeX Warning: Reference `rem:AbstractNotationTwoForLeftInvarVfs' on page 1 und
-efined on input line 5003.
-
-[46] [47]
-
 LaTeX Warning: Reference `cor:VertMCVormIsWellDefined' on page 1 undefined on i
-nput line 5312.
+nput line 5326.
 
+
+Underfull \vbox (badness 3312) has occurred while \output is active []
+
+ [44]
+Underfull \vbox (badness 4416) has occurred while \output is active []
+
+ [45]
+[46]
+Underfull \vbox (badness 4416) has occurred while \output is active []
+
+ [47]
 [48] [49]
-Underfull \vbox (badness 5403) has occurred while \output is active []
-
- [50]
-[51] [52]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 5835.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 5849.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 5835.
- [53] [54] [55]
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 5849.
+ [50] [51] [52]
 
-LaTeX Warning: Reference `InvarianceOffUnderGAction' on page 56 undefined on in
-put line 6110.
+LaTeX Warning: Reference `InvarianceOffUnderGAction' on page 53 undefined on in
+put line 6124.
 
-[56]
 
 LaTeX Warning: Reference `cor:LGBRepAsLGBMorph' on page 1 undefined on input li
-ne 6150.
+ne 6164.
 
-[57]
+[53] [54]
 
 LaTeX Warning: Reference `rem:AbstractNotationTwoForLeftInvarVfs' on page 1 und
-efined on input line 6232.
+efined on input line 6246.
 
-[58] [59] [60]
+[55] [56]
 
 LaTeX Warning: Reference `def:AssociatedLGB' on page 1 undefined on input line 
-6374.
+6388.
 
+[57] [58] [59] [60]
 
+LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
+on input line 6679.
+
+[61] [62] [63] [64] [65] [66] [67] [68] [69] [70]
+Underfull \vbox (badness 1038) has occurred while \output is active []
+
+ [71]
+[72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [61]
-[62] [63] [64]
+ [84]
+[85] [86] [87]
+Underfull \vbox (badness 2680) has occurred while \output is active []
+
+ [88]
+[89] [90] [91] [92] [93] [94] [95] [96] [97]
 
 LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
-on input line 6665.
-
-[65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79]
-[80] [81] [82] [83] [84]
-Underfull \vbox (badness 1215) has occurred while \output is active []
-
- [85]
-[86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100]
-
-LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
-on input line 9647.
+on input line 9661.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
@@ -1660,7 +1667,7 @@ File: UTF8.enc 2021/10/16 4.8.5
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
-(CYM.bbl [101]
+(CYM.bbl [98]
 Underfull \hbox (badness 10000) in paragraph at lines 15--19
 []\OT1/lmr/m/n/8 (+20) Thomas Strobl. Al-ge-broid Yang-Mills the-o-ries. \OT1/l
 mr/m/it/8 (+20) Phys-i-cal re-view let-ters\OT1/lmr/m/n/8 (+20) , 93(21):211601
@@ -1699,14 +1706,14 @@ t/8 (+20) Jour-nal of Ge-om-e-try and Physics\OT1/lmr/m/n/8 (+20) , 54(4):400--
 426, 2005.
  []
 
-) [102] [103] [104] [105]
+) [99] [100] [101] [102]
 Underfull \vbox (badness 1142) has occurred while \output is active []
 
- [106]
+ [103]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [107]
-[108] (CYM.aux)
+ [104]
+[105] (CYM.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1719,14 +1726,14 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `CYM.out' has not changed.
-(rerunfilecheck)             Checksum: 097E62E625DD495A71B8D69CDE161C08;6904.
+(rerunfilecheck)             Checksum: 3519D51D83137A329D6FAE96EB3DC8CE;6904.
  ) 
 Here is how much of TeX's memory you used:
- 42637 strings out of 467866
- 846626 string characters out of 5418325
- 1350972 words of memory out of 5000000
- 69750 multiletter control sequences out of 15000+600000
- 748108 words of font info for 359 fonts, out of 8000000 for 9000
+ 42588 strings out of 467866
+ 845588 string characters out of 5418325
+ 1350097 words of memory out of 5000000
+ 69722 multiletter control sequences out of 15000+600000
+ 747648 words of font info for 354 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  88i,21n,94p,3230b,1556s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu3
@@ -1791,9 +1798,9 @@ ograms/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb><C:/Users/kelru/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (109 pages, 2383672 bytes).
+Output written on CYM.pdf (106 pages, 2312591 bytes).
 PDF statistics:
- 2128 PDF objects out of 2487 (max. 8388607)
- 440 named destinations out of 1000 (max. 500000)
+ 2060 PDF objects out of 2073 (max. 8388607)
+ 429 named destinations out of 1000 (max. 500000)
  56177 words of extra memory for PDF output out of 61914 (max. 10000000)
 
