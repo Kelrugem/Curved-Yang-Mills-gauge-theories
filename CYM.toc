@@ -25,19 +25,19 @@
 \contentsline {subsubsection}{\tocsubsubsection {}{6.1.2}{Examples}}{36}{subsubsection.113}%
 \contentsline {subsubsection}{\tocsubsubsection {}{6.1.3}{Morphism of principal LGB-bundles}}{36}{subsubsection.116}%
 \contentsline {subsection}{\tocsubsection {}{6.2}{Generalized distributions and connections}}{39}{subsection.126}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.2.1}{Idea and motivation}}{40}{subsubsection.133}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.2.2}{Darboux derivative on LGBs}}{43}{subsubsection.142}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.2.3}{First step towards towards associated bundles}}{52}{subsubsection.165}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.2.4}{Generalized connection 1-forms on principal bundles}}{54}{subsubsection.169}%
-\contentsline {subsection}{\tocsubsection {}{6.3}{Gauge transformations}}{61}{subsection.187}%
-\contentsline {subsection}{\tocsubsection {}{6.4}{Generalized curvature/field strength}}{70}{subsection.204}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.4.1}{multiplicative Yang-Mills connections on LGBs}}{70}{subsubsection.205}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.4.2}{Field strength related to multiplicative Yang-Mills connections}}{84}{subsubsection.244}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.4.3}{Gauge transformation of the generalized field strength}}{89}{subsubsection.252}%
-\contentsline {section}{\tocsection {}{7}{Curved Yang-Mills gauge theory}}{91}{section.258}%
-\contentsline {subsection}{\tocsubsection {}{7.1}{Definition and gauge invariance}}{91}{subsection.259}%
-\contentsline {subsection}{\tocsubsection {}{7.2}{Field redefinitions}}{93}{subsection.264}%
-\contentsline {subsection}{\tocsubsection {}{7.3}{Examples}}{95}{subsection.273}%
-\contentsline {subsection}{\tocsubsection {}{7.4}{Future prospects}}{98}{subsection.284}%
-\contentsline {section}{\tocsection {Appendix}{}{List of References}}{99}{section*.285}%
-\contentsline {section}{\tocsection {Appendix}{A}{Double tangent bundle and its canonical flip map}}{99}{appendix.286}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.2.1}{Idea and motivation}}{40}{subsubsection.130}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.2.2}{Darboux derivative on LGBs}}{43}{subsubsection.138}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.2.3}{First step towards towards associated bundles}}{52}{subsubsection.161}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.2.4}{Generalized connection 1-forms on principal bundles}}{54}{subsubsection.165}%
+\contentsline {subsection}{\tocsubsection {}{6.3}{Gauge transformations}}{61}{subsection.183}%
+\contentsline {subsection}{\tocsubsection {}{6.4}{Generalized curvature/field strength}}{70}{subsection.200}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.4.1}{multiplicative Yang-Mills connections on LGBs}}{70}{subsubsection.201}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.4.2}{Field strength related to multiplicative Yang-Mills connections}}{84}{subsubsection.240}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.4.3}{Gauge transformation of the generalized field strength}}{89}{subsubsection.248}%
+\contentsline {section}{\tocsection {}{7}{Curved Yang-Mills gauge theory}}{91}{section.254}%
+\contentsline {subsection}{\tocsubsection {}{7.1}{Definition and gauge invariance}}{91}{subsection.255}%
+\contentsline {subsection}{\tocsubsection {}{7.2}{Field redefinitions}}{93}{subsection.260}%
+\contentsline {subsection}{\tocsubsection {}{7.3}{Examples}}{95}{subsection.269}%
+\contentsline {subsection}{\tocsubsection {}{7.4}{Future prospects}}{98}{subsection.280}%
+\contentsline {section}{\tocsection {Appendix}{}{List of References}}{99}{section*.281}%
+\contentsline {section}{\tocsection {Appendix}{A}{Double tangent bundle and its canonical flip map}}{99}{appendix.282}%
