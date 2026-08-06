@@ -146,17 +146,4 @@ DB~Bl{\'a}zquez-Sanz, Carlos~A Mar{\'\i}n~Arango, and Sedney Su{\'a}rez~Gordon.
 \newblock Group bundles and group connections.
 \newblock {\em Lobachevskii Journal of Mathematics}, 43(1):49--70, 2022.
 
-\bibitem{Highervectorbundles}
-Janusz Grabowski and Miko{\l}aj Rotkiewicz.
-\newblock Higher vector bundles and multi-graded symplectic manifolds.
-\newblock {\em Journal of Geometry and Physics}, 59(9):1285--1305, 2009.
-\newblock https://doi.org/10.1016/j.geomphys.2009.06.009.
-
-\bibitem{meinrenkensplitting}
-Henrique Bursztyn, Hudson Lima, and Eckhard Meinrenken.
-\newblock Splitting theorems for {P}oisson and related structures.
-\newblock {\em Journal f{\"u}r die reine und angewandte Mathematik (Crelles
-  Journal)}, 2017.
-\newblock https://doi.org/10.1515/crelle-2017-0014.
-
 \end{thebibliography}
