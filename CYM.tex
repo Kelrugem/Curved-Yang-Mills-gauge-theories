@@ -5762,7 +5762,7 @@ is a curve with values in $\mathcal{g}_x$, a vector space, so that one canonical
 
 \begin{proof}[Proof of \ref{prop:FinallyTheNablaInduction}]
 \leavevmode\newline
-We will not prove this statement in full generality: If a reader is interested into the proof, then please check out an earlier version on arXiv. However, the general statement was rather tedious to show in a rigorous manner, while we will only study $\nabla^\caG$ for \textit{multiplicative} $\rmH\caG$, that is, a parallel transport on $\caG$ by Lie group automorphism. This case is well-understood, and in the multiplicative situation \ref{prop:FinallyTheNablaInduction} is shown in \cite[Proposition 4.22]{LAURENTGENGOUXStienonXuMultiplicativeForms}.
+We will not prove this statement in full generality: If a reader is interested into the proof, then please check out an earlier version of this paper on arXiv. However, the general statement was rather tedious to show in a rigorous manner, while we will only study $\nabla^\caG$ for \textit{multiplicative} $\rmH\caG$, that is, a parallel transport on $\caG$ by Lie group automorphism. This case is well-understood, and in the multiplicative situation \ref{prop:FinallyTheNablaInduction} is shown in \cite[Proposition 4.22]{LAURENTGENGOUXStienonXuMultiplicativeForms}.
 %We will simplify the arguments by making use of the fact that 
 %\begin{equation*}
 %t \mapsto \mleft(\Delta \e^{t \nu}\mright)_x (X)
@@ -6008,47 +6008,47 @@ Let $\pi_{\mathcal{G}}\colon\mathcal{G} \to M$ be an LGB over a smooth manifold 
 %\end{remark}
 
 \begin{examples}{Canonical flat $\mathcal{G}$-connection}{CanonicalFlatGConnection}
-If we again focus on trivial LGBs with their canonical flat connection as in Remark \ref{rem:TrivialLGBsAndTheirMCForm} and \ref{rem:DarbouxOnCanonFlat}, we can quickly derive that $\nabla^{\mathcal{G}}$ is then the canonical flat connection on the trivial LAB $\mathcal{g} = M \times \mathfrak{g}$ of $\mathcal{G} = M \times G$, $\mathfrak{g}$ the Lie algebra of the Lie group $G$. Let $\nu$ be a constant section of $\mathcal{g}$, then $\e^{t\nu}$ is a constant section of $\mathcal{G}$ for all $t \in \mathbb{R}$, so that by Remark \ref{rem:DarbouxOnCanonFlat}
-\begin{align*}
+If we again focus on trivial LGBs with their canonical flat connection as in Remark \ref{rem:TrivialLGBsAndTheirMCForm} and \ref{rem:DarbouxOnCanonFlat}, we can quickly derive that $\nabla^{\mathcal{G}}$ is then the canonical flat connection on the trivial LAB $\mathcal{g} = M \times \mathfrak{g}$ of $\mathcal{G} = M \times G$, $\mathfrak{g}$ the Lie algebra of the Lie group $G$. Let $\nu$ be a constant section of $\mathcal{g}$, then $\e^{t\nu}$ is a constant section of $\mathcal{G}$ for all $t \in \mathbb{R}$, so that by \ref{rem:DarbouxOnCanonFlat}
+\begin{equation*}
 \Delta^{\mathcal{G}} \e^{t\nu}
-&=
+=
 0,
-\end{align*}
+\end{equation*}
 and thus
-\begin{align*}
+\begin{equation*}
 \nabla^{\mathcal{G}} \nu
-&=
+=
 0
-\end{align*}
+\end{equation*}
 for all constant sections $\nu \in \Gamma(\mathcal{g})$. By the uniqueness of the canonical flat connection (w.r.t.\ a trivialisation) we conclude that $\nabla^{\mathcal{G}}$ is the canonical flat connection on $\mathcal{g} = M \times \mathfrak{g}$.
 \end{examples}
 
 \begin{remarks}{Pullback situation: Part III}{PullBackConnectionOfNablaG}
-Following Remark \ref{rem:PullBackDarboux} (see Remark \ref{rem:GeneralPullBackLGBConnSituation} for the initial setup) and all the involved notation we can again derive something related to the pullback LGB $f^*\mathcal{G}$. First of all, let us denote the exponential of $f^*\mathcal{G}$ and $\mathcal{G}$ by $\e_{f^*\mathcal{G}}$ and $\e_{\mathcal{G}}$, respectively, then we clearly have
-\begin{align*}
+Following \ref{rem:PullBackDarboux} (see \ref{rem:GeneralPullBackLGBConnSituation} for the initial setup) and all the involved notation we can again derive something related to the pullback LGB $f^*\mathcal{G}$. First of all, let us denote the exponential of $f^*\mathcal{G}$ and $\mathcal{G}$ by $\e_{f^*\mathcal{G}}$ and $\e_{\mathcal{G}}$, respectively, then we clearly have
+\begin{equation*}
 \e_{f^*\mathcal{G}}^{(p, \nu_x)}
-&=
+=
 \exp_{\mleft(f^*\mathcal{G}\mright)_p}(p, \nu_x)
 =
 \mleft( p, \exp_{\mathcal{G}_x}(\nu_x) \mright)
 =
 \mleft( p, \e_{\mathcal{G}}^{\nu_x} \mright)
-\end{align*}
-for all $(p, \nu_x) \in \mleft(f^*\mathcal{g}\mright)_p$, where $x \coloneqq f(p)$ and so $\nu_x \in \mathcal{g}_x$, and where we made use of that $\mleft(f^*\mathcal{G}\mright)_p \cong \mathcal{G}_x$ as Lie groups via the projection $\mathrm{pr}_2$ onto the second component (recall Cor.\ \ref{cor:PullbackLGB}), that is, we have used the well-known relation
-\begin{align*}
+\end{equation*}
+for all $(p, \nu_x) \in \mleft(f^*\mathcal{g}\mright)_p$, where $x \coloneqq f(p)$ and so $\nu_x \in \mathcal{g}_x$, and where we made use of that $\mleft(f^*\mathcal{G}\mright)_p \cong \mathcal{G}_x$ as Lie groups via the projection $\mathrm{pr}_2$ onto the second component (recall \ref{cor:PullbackLGB}), that is, we have used the well-known relation
+\begin{equation*}
 \mathrm{pr}_2\mleft( \exp_{\mleft(f^*\mathcal{G}\mright)_p}(p, \nu_x) \mright)
-&=
+=
 \mleft(\exp_{\mathcal{G}_x} \circ~ \mathrm{D}_{(p, e_x)}\mathrm{pr}_2\mright)(p, \nu_x)
 =
 \exp_{\mathcal{G}_x}(\nu_x),
-\end{align*}
+\end{equation*}
 see \textit{e.g.}\ \cite[\S 1.7, Thm.\ 1.7.16, page 59]{Hamilton} for the general formula; then use that $\mathrm{pr}_2|_{\mleft( f^*\mathcal{G} \mright)_p}$ is bijective. Hence, we get
-\begin{align*}
+\begin{equation*}
 \e_{f^*\mathcal{G}}^{f^*\nu}
-&=
+=
 f^*\mleft( \e_{\mathcal{G}}^\nu \mright)
-\end{align*}
-for all $\nu \in \Gamma(\mathcal{g})$. Due to clatch of notation we relabel the projection $\mathrm{V}\mathcal{g} \to \mathcal{g}$ in Prop.\ \ref{prop:FinallyTheNablaInduction} to $\pi_2$, and then observe, by using Eq.\ \eqref{PullBackDarbouxOnPullbackSections},
+\end{equation*}
+for all $\nu \in \Gamma(\mathcal{g})$. Due to clatch of notation we relabel the projection $\mathrm{V}\mathcal{g} \to \mathcal{g}$ in \ref{prop:FinallyTheNablaInduction} to $\pi_2$, and then observe, by using Eq.\ \eqref{PullBackDarbouxOnPullbackSections},
 \begin{align*}
 \mleft.\nabla^{f^*\mathcal{G}}_Y (f^*\nu)\mright|_p
 &=
@@ -6091,19 +6091,20 @@ for all $\nu \in \Gamma(\mathcal{g})$. Due to clatch of notation we relabel the 
 \mleft.\nabla^{\mathcal{G}}_{\mathrm{D}_pf(Y)} \nu\mright|_{f(p)}
 \end{align*}
 for all $\nu \in \Gamma(\mathcal{g})$, $p \in N$ and $Y \in \mathrm{T}_p N$. By the uniqueness of pullback vector bundle connections we therefore get
-\begin{align*}
+\begin{equation*}
 \nabla^{f^*\mathcal{G}}
-&=
+=
 f^*\nabla^{\mathcal{G}}.
-\end{align*}
+\end{equation*}
 \end{remarks}
 
 \subsubsection{First step towards towards associated bundles}
 
-In order to provide a concise definition of connection 1-forms on principal bundles, we will need to introduce some canonical form of action which will be obviously related to the action needed for an analogue to the notion of associated bundles related to typical principal bundles. However, we will neither discuss nor introduce a more general notion of associated bundles in this paper; so, there will be just the "first step". The following action can be seen as another canonical action on the pullback of a principal bundle, but coming from $\mathcal{G}$ itself instead of its pullback, if $\mathcal{G}$ acts on the manifold one makes a pullback to.
+In order to provide a concise definition of connection 1-forms on principal bundles, we will need to introduce some canonical form of action which will be obviously related to the action needed for an analogue to the notion of associated bundles related to typical principal bundles. However, we will neither discuss nor introduce a more general notion of associated bundles in this paper; so, there will be just the "first step". 
+%The following action can be seen as another canonical action on the pullback of a principal bundle, but coming from $\mathcal{G}$ itself instead of its pullback, if $\mathcal{G}$ acts on the manifold one makes a pullback to.
 
 \begin{propositions}{Canonical LGB action on pullback bundles over principal LGB-bundles}{CanonicalLGBActionForAssociatedBundles}
-Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Furthermore let $N$ be another smooth manifold and $f: N \to M$ a smooth map on which $\mathcal{G}$ acts on the left as in Def.\ \ref{def:LiegroupACtion}. Then on the pullback manifold $\mathcal{P} \times_M N \coloneqq f^*\mathcal{P}$, whose pairs of points are now reordered as in
+Let $\pi_{\mathcal{G}}\colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Furthermore let $N$ be another smooth manifold and $f\colon N \to M$ a smooth map on which $\mathcal{G}$ acts on the left as in \ref{def:LiegroupACtion}. Then on the pullback manifold $\mathcal{P} \times_M N \coloneqq f^*\mathcal{P}$, whose pairs of points are now reordered as in
 \begin{align*}
 \mathcal{P} \times_M N
 &\coloneqq

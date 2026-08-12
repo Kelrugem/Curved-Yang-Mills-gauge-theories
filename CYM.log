@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  6 AUG 2026 18:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  12 AUG 2026 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1597,36 +1597,42 @@ Underfull \vbox (badness 2961) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [45]
-[46] [47] [48]
+[46] [47]
+Underfull \vbox (badness 7595) has occurred while \output is active []
+
+ [48]
 
 LaTeX Warning: Reference `InvarianceOffUnderGAction' on page 49 undefined on in
-put line 6139.
+put line 6140.
 
-[49]
+
+Underfull \vbox (badness 1048) has occurred while \output is active []
+
+ [49]
 
 LaTeX Warning: Reference `cor:LGBRepAsLGBMorph' on page 1 undefined on input li
-ne 6179.
+ne 6180.
 
 [50]
 
 LaTeX Warning: Reference `rem:AbstractNotationTwoForLeftInvarVfs' on page 1 und
-efined on input line 6261.
+efined on input line 6262.
 
 [51] [52] [53]
 
 LaTeX Warning: Reference `def:AssociatedLGB' on page 1 undefined on input line 
-6403.
+6404.
 
 [54] [55] [56] [57]
 
 LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
-on input line 6694.
+on input line 6695.
 
 [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72]
 [73] [74] [75] [76] [77] [78] [79]
 
 LaTeX Warning: Reference `PTLABComingFromPTLGB' on page 1 undefined on input li
-ne 8670.
+ne 8671.
 
 
 Underfull \vbox (badness 5726) has occurred while \output is active []
@@ -1635,7 +1641,7 @@ Underfull \vbox (badness 5726) has occurred while \output is active []
 [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93]
 
 LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
-on input line 9676.
+on input line 9677.
 
 [94] (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
@@ -1762,9 +1768,9 @@ grams/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb><C:/Users/kelru/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (96 pages, 2177099 bytes).
+Output written on CYM.pdf (96 pages, 2175428 bytes).
 PDF statistics:
- 1917 PDF objects out of 2073 (max. 8388607)
+ 1918 PDF objects out of 2073 (max. 8388607)
  395 named destinations out of 1000 (max. 500000)
  52073 words of extra memory for PDF output out of 61914 (max. 10000000)
 
