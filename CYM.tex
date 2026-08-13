@@ -1868,7 +1868,7 @@ As for Lie groups, we are interested into their actions: We have an LGB $\mathca
 
 \begin{definitions}{Lie group bundle actions}{LiegroupACtion}
 \tcbsubtitle[before skip=\baselineskip]{\cite[\S 1.6, special case of Def.\ 1.6.1, page 34]{mackenzieGeneralTheory}}
-Let $M, N$ be smooth manifolds, $\mathcal{G} \stackrel{\pi}{\to} M$ an LGB over $M$ and $f\colon N \to M$ a smooth map. Then a \textbf{right-action of $\mathcal{G}$ on $N$} is a smooth map 
+Let $M, N$ be smooth manifolds, $\pi\colon\mathcal{G} \to M$ an LGB over $M$ and $f\colon N \to M$ a smooth map. Then a \textbf{right-action of $\mathcal{G}$ on $N$} is a smooth map 
 \begin{align*}
 f^*\mathcal{G} &\to N~,\\
 (p, g) &\mapsto p \cdot g~,
@@ -6103,7 +6103,7 @@ f^*\nabla^{\mathcal{G}}.
 In order to provide a concise definition of connection 1-forms on principal bundles, we will need to introduce some canonical form of action which will be obviously related to the action needed for an analogue to the notion of associated bundles related to typical principal bundles. However, we will neither discuss nor introduce a more general notion of associated bundles in this paper; so, there will be just the "first step". 
 %The following action can be seen as another canonical action on the pullback of a principal bundle, but coming from $\mathcal{G}$ itself instead of its pullback, if $\mathcal{G}$ acts on the manifold one makes a pullback to.
 
-\begin{propositions}{Canonical LGB action on pullback bundles over principal LGB-bundles}{CanonicalLGBActionForAssociatedBundles}
+\begin{propositions}{Canonical $\caG$-action on pullbacks of principal bundles}{CanonicalLGBActionForAssociatedBundles}
 Let $\pi_{\mathcal{G}}\colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Furthermore let $N$ be another smooth manifold and $f\colon N \to M$ a smooth map on which $\mathcal{G}$ acts on the left as in \ref{def:LiegroupACtion}. Then on the pullback manifold $\mathcal{P} \times_M N \coloneqq f^*\mathcal{P}$, whose pairs of points are now reordered as in
 \begin{align*}
 \mathcal{P} \times_M N
@@ -6124,20 +6124,21 @@ where $\mleft(\mathcal{P} \times_M N\mright) * \mathcal{G}$ is given as pullback
 
 \begin{proof}
 \leavevmode\newline
-By Def.\ \ref{def:LiegroupACtion} it is clear that this action is well-defined, due to 
-\begin{align*}
+By \ref{def:LiegroupACtion} it is clear that this action is well-defined, due to $f(x)= \pi(p) = \pi_\caG(g) = \pi_\caG\mleft(g^{-1}\mright)$, and
+\begin{equation*}
 \pi(p\cdot g) = \pi_{\mathcal{G}}(g) = f\mleft( g^{-1} \cdot x \mright)
-\end{align*}
+\end{equation*}
 for all $(p,x,g) \in \mleft(\mathcal{P} \times_M N\mright) * \mathcal{G}$,
 and this also implies
-\begin{align*}
+\begin{equation*}
 \overline{\pi}\bigl( (p, x) \cdot g \bigr)
-&=
+=
 \pi(p\cdot g)
 =
-\pi_{\mathcal{G}}(g),
-\end{align*}
-so that Eq.\ \eqref{InvarianceOffUnderGAction} is satisfied. By construction we also have a smooth action, since it is the composition of maps
+\pi_{\mathcal{G}}(g)~.
+\end{equation*}
+%so that Eq.\ \eqref{InvarianceOffUnderGAction} is satisfied. 
+By construction we also have a smooth action, since it is the composition of maps
 \begin{align*}
 \mleft(\mathcal{P} \times_M N\mright) * \mathcal{G} &\to (\mathcal{P} * \mathcal{G}) \times (\mathcal{G} * N) \to \mathcal{P} \times_M N,\\
 (p, x, g) &\mapsto \bigl( (p, g), (g, x) \bigr) \mapsto \mleft( p \cdot g, g^{-1} \cdot x \mright).
@@ -6147,42 +6148,40 @@ The first arrow is clearly an embedding, and the second arrow is just the restri
 (\mathcal{P} * \mathcal{G}) \times (\mathcal{G} * N) &\to \mathcal{P} \times N,\\
 \bigl( (p, g), (q, p) \bigr) &\mapsto \mleft( p \cdot g, q^{-1} \cdot p \mright),
 \end{align*}
-onto an embedded submanifold, and for its image make use of that $\mathcal{P} \times_M N$ is an embedded submanifold of $\mathcal{P} \times N$, as we already did several times for pullback bundles.
-
-Associativity follows simply by
-\begin{align*}
+onto an embedded submanifold, and for its image make use of that $\mathcal{P} \times_M N$ is an embedded submanifold of $\mathcal{P} \times N$. Associativity follows simply by
+\begin{equation*}
 \bigl((p, x) \cdot g \bigr) \cdot q
-&=
+=
 \mleft( p \cdot g, g^{-1} \cdot x \mright) \cdot q
 =
 \mleft( p \cdot gq, (gq)^{-1} \cdot x \mright)
 =
 \mleft( p, x \mright) \cdot (gq)
-\end{align*}
+\end{equation*}
 for all $g, q \in \mathcal{G}_y$ ($y \coloneqq \pi(p) = f(x)$); it is trivial to check that $\mleft( p, x \mright) \cdot e_y = (p, x)$.
 \end{proof}
 
-As mentioned in Remark \ref{rem:ItIsAPrincipalAction}, constructions of quotients related to the LGB action may be possible here. Thus, using the last proposition, one should be able to construct associated bundles in this more general setting. We mainly need this proposition for the following examples.
+As mentioned in \ref{rem:ItIsAPrincipalAction}, constructions of quotients related to the LGB action are possible here. Thus, using the last proposition, one should be able to construct associated bundles in this more general setting, but in the same fashion as usual. We mainly need this proposition for the following examples.
 
 \begin{examples}{Adjoint action on the vertical bundle of $\mathcal{P}$}{AdjointACtionOnVP}
-Recall the adjoint representation of $\mathcal{G}$ on its LAB $\mathcal{g} \stackrel{\pi_{\mathcal{g}}}{\to} M$, Ex.\ \ref{ex:LGBAdjointRep}. Using the notation of Prop.\ \ref{prop:CanonicalLGBActionForAssociatedBundles} we have a right $\mathcal{G}$-action on $\mathcal{P} \times_M \mathcal{g} = \{(p, v) \in \mathcal{P} \times \mathcal{g} ~ | ~ \pi(p) = \pi_{\mathcal{g}}(v) \}$ given by
-\begin{align*}
+Recall the adjoint representation of $\mathcal{G}$ on its LAB $\pi_\cag\colon\mathcal{g} \to M$, \ref{ex:LGBAdjointRep}. Using the notation of \ref{prop:CanonicalLGBActionForAssociatedBundles} we have a right $\mathcal{G}$-action on $\mathcal{P} \times_M \mathcal{g} = \{(p, v) \in \mathcal{P} \times \mathcal{g} ~ | ~ \pi(p) = \pi_{\mathcal{g}}(v) \}$ given by
+\begin{equation*}
 (p, v) \cdot g
-&\coloneqq
+\coloneqq
 \mleft( p \cdot g, \mathrm{Ad}_{g^{-1}}(v) \mright)
-\end{align*}
-for all $p \in \mathcal{P}_x$ ($x \in M$), $v \in \mathcal{g}_x$ and $g \in \mathcal{G}_x$. Observe that $\mathcal{P} \times_M \mathcal{g} = \pi^*\mathcal{g}$ which is isomorphic to $\mathrm{V}\mathcal{P}$ by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}. We will denote this action shortly by
-\begin{align*}
+\end{equation*}
+for all $p \in \mathcal{P}_x$ ($x \in M$), $v \in \mathcal{g}_x$ and $g \in \mathcal{G}_x$. Observe that $\mathcal{P} \times_M \mathcal{g} = \pi^*\mathcal{g}$ which is isomorphic to $\mathrm{V}\mathcal{P}$ by \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}. We will denote this action shortly by
+\begin{equation*}
 \sAd_{g^{-1}}(p, v)
-&\coloneqq
+\coloneqq
 (p,v) \cdot g,
-\end{align*}
-the \textbf{adjoint representation of $\mathcal{G}$ on $\mathrm{V}\mathcal{P}$}; not to be confused with the adjoint representation of $\pi^*\mathcal{G}$ on $\pi^*\mathcal{g}$. In fact, it is trivial to check that $\sAd: \mathcal{G} \to \mathrm{Aut}(\pi^*\mathcal{g})$, $g \mapsto \sAd_{g}$, is a $\mathcal{G}$-representation on $\mathcal{P} \times_M \mathcal{g} = \pi^*\mathcal{g} \cong \mathrm{V}\mathcal{P}$ in the sense of Cor.\ \ref{cor:LGBRepAsLGBMorph}.
+\end{equation*}
+the \textbf{adjoint representation of $\mathcal{G}$ on $\mathrm{V}\mathcal{P}$}; not to be confused with the adjoint representation of $\pi^*\mathcal{G}$ on $\pi^*\mathcal{g}$. In fact, it is trivial to check that $\sAd\colon \mathcal{G} \to \mathrm{Aut}(\pi^*\mathcal{g})$, $g \mapsto \sAd_{g}$, is a $\mathcal{G}$-representation on $\mathcal{P} \times_M \mathcal{g} = \pi^*\mathcal{g} \cong \mathrm{V}\mathcal{P}$.
 
 The quotient of $\mathcal{P} \times_M \mathcal{g}$ w.r.t.\ this group action should lead to a structure which is the generalization of the adjoint bundle in typical formulations of gauge theory.
 \end{examples}
 
-Similarly, we can define the conjugation action on its integrated bundle; recall the conjugation defined in Def.\ \ref{def:LeftRightTranslationConjugation}. Especially observe that the conjugation defines a left $\mathcal{G}$-action on itself by
+Similarly, we can define the conjugation action on its integrated bundle; recall the conjugation defined in \ref{def:LeftRightTranslationConjugation}. Especially observe that the conjugation defines a left $\mathcal{G}$-action on itself by
 \begin{align*}
 \mathcal{G} * \mathcal{G} &\to \mathcal{G},\\
 (g,q) &\mapsto c_g(q) = g q g^{-1}.
@@ -6204,9 +6203,7 @@ We will denote this also by
 \coloneqq
 (p, q) \cdot g,
 \end{align*}
-the \textbf{conjugation of $\mathcal{G}$ on the integral of $\mathrm{V}\mathcal{P}$}.
-
-Taking a quotient of $\mathcal{P} \times_M \mathcal{G}$ over this action should lead to a generalization of inner group bundles as introduced in Ex.\ \ref{ex:InnerLGBs}.
+the \textbf{conjugation of $\mathcal{G}$ on the integral of $\mathrm{V}\mathcal{P}$}. Taking a quotient of $\mathcal{P} \times_M \mathcal{G}$ over this action should lead to a generalization of inner group bundles as introduced in \ref{ex:InnerLGBs}.
 \end{examples}
 
 Let us finally define connections on principal bundles.

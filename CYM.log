@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  12 AUG 2026 16:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  13 AUG 2026 19:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1601,54 +1601,46 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 7595) has occurred while \output is active []
 
  [48]
-
-LaTeX Warning: Reference `InvarianceOffUnderGAction' on page 49 undefined on in
-put line 6140.
-
-
-Underfull \vbox (badness 1048) has occurred while \output is active []
-
- [49]
-
-LaTeX Warning: Reference `cor:LGBRepAsLGBMorph' on page 1 undefined on input li
-ne 6180.
-
-[50]
+[49] [50]
 
 LaTeX Warning: Reference `rem:AbstractNotationTwoForLeftInvarVfs' on page 1 und
-efined on input line 6262.
+efined on input line 6259.
 
 [51] [52] [53]
 
 LaTeX Warning: Reference `def:AssociatedLGB' on page 1 undefined on input line 
-6404.
+6401.
 
-[54] [55] [56] [57]
+
+Underfull \vbox (badness 1478) has occurred while \output is active []
+
+ [54]
+[55] [56] [57]
 
 LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
-on input line 6695.
+on input line 6692.
 
 [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72]
-[73] [74] [75] [76] [77] [78] [79]
+[73] [74] [75] [76] [77]
+Underfull \vbox (badness 1215) has occurred while \output is active []
+
+ [78]
+[79]
 
 LaTeX Warning: Reference `PTLABComingFromPTLGB' on page 1 undefined on input li
-ne 8671.
+ne 8668.
 
-
-Underfull \vbox (badness 5726) has occurred while \output is active []
-
- [80]
-[81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93]
+[80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]
 
 LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
-on input line 9677.
+on input line 9674.
 
-[94] (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
+[93] (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
 ) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
-(CYM.bbl
+(CYM.bbl [94]
 Underfull \hbox (badness 10000) in paragraph at lines 15--19
 []\OT1/lmr/m/n/8 (+20) Thomas Strobl. Al-ge-broid Yang-Mills the-o-ries. \OT1/l
 mr/m/it/8 (+20) Phys-i-cal re-view let-ters\OT1/lmr/m/n/8 (+20) , 93(21):211601
@@ -1700,10 +1692,10 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: 542EB0EA94E6FB43D5969ADF8287DDF9;6530.
  ) 
 Here is how much of TeX's memory you used:
- 42234 strings out of 467866
- 837435 string characters out of 5418325
- 1333858 words of memory out of 5000000
- 69415 multiletter control sequences out of 15000+600000
+ 42235 strings out of 467866
+ 837432 string characters out of 5418325
+ 1332299 words of memory out of 5000000
+ 69416 multiletter control sequences out of 15000+600000
  739553 words of font info for 343 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  88i,21n,94p,3230b,1556s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1768,7 +1760,7 @@ grams/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb><C:/Users/kelru/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (96 pages, 2175428 bytes).
+Output written on CYM.pdf (96 pages, 2176306 bytes).
 PDF statistics:
  1918 PDF objects out of 2073 (max. 8388607)
  395 named destinations out of 1000 (max. 500000)

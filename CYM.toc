@@ -32,10 +32,10 @@
 \contentsline {subsection}{\tocsubsection {}{6.3}{Gauge transformations}}{58}{subsection.177}%
 \contentsline {subsection}{\tocsubsection {}{6.4}{Generalized curvature/field strength}}{67}{subsection.194}%
 \contentsline {subsubsection}{\tocsubsubsection {}{6.4.1}{multiplicative Yang-Mills connections on LGBs}}{67}{subsubsection.195}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.4.2}{Field strength related to multiplicative Yang-Mills connections}}{81}{subsubsection.234}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.4.2}{Field strength related to multiplicative Yang-Mills connections}}{80}{subsubsection.234}%
 \contentsline {subsubsection}{\tocsubsubsection {}{6.4.3}{Gauge transformation of the generalized field strength}}{86}{subsubsection.242}%
-\contentsline {section}{\tocsection {}{7}{Curved Yang-Mills gauge theory}}{88}{section.248}%
-\contentsline {subsection}{\tocsubsection {}{7.1}{Definition and gauge invariance}}{88}{subsection.249}%
+\contentsline {section}{\tocsection {}{7}{Curved Yang-Mills gauge theory}}{87}{section.248}%
+\contentsline {subsection}{\tocsubsection {}{7.1}{Definition and gauge invariance}}{87}{subsection.249}%
 \contentsline {subsection}{\tocsubsection {}{7.2}{Field redefinitions}}{89}{subsection.254}%
 \contentsline {subsection}{\tocsubsection {}{7.3}{Examples}}{91}{subsection.263}%
 \contentsline {subsection}{\tocsubsection {}{7.4}{Future prospects}}{94}{subsection.274}%
