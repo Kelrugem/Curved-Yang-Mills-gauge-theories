@@ -6210,14 +6210,14 @@ Let us finally define connections on principal bundles.
 
 \subsubsection{Generalized connection 1-forms on principal bundles}
 
-As also stated in \cite[\S 5.1, Prop.\ 5.1.5, page 260]{Hamilton}, for a given horizontal distribution $\mathrm{H}\mathcal{P}$ of a principal $\mathcal{G}$-bundle $\mathcal{P} \stackrel{\pi}{\to} M$ over a smooth manifold $M$ we have by construction that
+As usual, for a given horizontal distribution $\mathrm{H}\mathcal{P}$ of a principal $\mathcal{G}$-bundle $\pi\colon\mathcal{P} \to M$ over a smooth manifold $M$ we have by construction that
 \begin{align*}
-\mleft.\mathrm{D}_p \pi\mright|_{\mathrm{H}_p\mathcal{P}}: \mathrm{H}_p\mathcal{P} \to \mathrm{T}_xM
+\mleft.\mathrm{D}_p \pi\mright|_{\mathrm{H}_p\mathcal{P}}\colon \mathrm{H}_p\mathcal{P} \to \mathrm{T}_xM
 \end{align*}
-is a vector space isomorphism for all $x \in M$ and $p \in \mathcal{P}_x$; similarly for $\mathcal{G}$ itself. Using that, one has some sort of identification between the horizontal tangent spaces; we want to provide another identification in the sense of Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}; especially recall the Darboux derivative introduced in Subsubsection \ref{DiscussingDarbouxDerivativeGeneral}. The following proposition and definition will be needed.
+is a vector space isomorphism for all $x \in M$ and $p \in \mathcal{P}_x$; similarly for $\mathcal{G}$ itself. We want to provide an identification of horizontal spaces in the sense of Equation \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall \ref{rem:DefOfConnectionIdeaWithDarboux}; especially recall the Darboux derivative introduced in \ref{DiscussingDarbouxDerivativeGeneral}. The following proposition and definition will be needed.
 
-\begin{propositions}{The right-pushforward modified by the Darboux derivative is a well-defined isomorphism}{IsomorphismRightPushAndDarboux}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal a distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. Furthermore, for $g \in \mathcal{G}_x$ ($x \in M$) define the map
+\begin{propositions}{The modified right-pushforward as well-defined isomorphism}{IsomorphismRightPushAndDarboux}
+Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, and we have horizontal a distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. Furthermore, for $g \in \mathcal{G}_x$ ($x \in M$) define the map
 \begin{align*}
 \mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x} &\to \mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x},\\
 X 
@@ -6236,11 +6236,30 @@ where $p \in \mathcal{P}_x$, $X \in \mathrm{T}_p \mathcal{P}$, and $\sigma$ is a
 Furthermore, if we also have a horizontal distribution $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, then $\mathrm{H}_p\mathcal{P}$ is isomorphic via $\mathcal{r}_{g*}$ to a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$ (this complement is not necessarily $\mathrm{H}_{p \cdot g}\mathcal{P}$).
 \end{propositions}
 
-\begin{proof}
+\begin{remarks}{Alternative versions of the modified pushforward}{AlternModPush}
+As we saw in the discussion around Equation \eqref{OiTHatIsHowWeFormulateHorizSymmetry} and will now see again in the following proof, there are several alternative identities of the modified right-pushforward: 
+\begin{itemize}
+	\item There is a unique $Y \in \mathrm{H}_g\mathcal{G}$ with
+	\begin{equation*}
+	\mathcal{r}_{g*}(X)
+	=
+	\mathrm{D}_{(p, g)}\Phi(X,Y)
+	\end{equation*}
+	where $\Phi$ denotes the right $\mathcal{G}$-action on $\mathcal{P}$, which the reader may prefer over the formulation with the Darboux derivative. However, we will see in this work that the Darboux derivative allows to extend the ``classical'' arguments in a straight-forward way.
+	\item If $\sigma$ is parallel along $\omega \coloneqq \mathrm{D}_p\pi(X)$, that is $\mleft.\Delta \sigma\mright|_x(\omega) = 0$, then
+	\begin{equation*}
+	\mathcal{r}_{g*}(X)
+	=
+	\rmD_pr_\sigma(X)~.
+	\end{equation*}
+\end{itemize}
+\end{remarks}
+
+\begin{proof}[Proof of \ref{prop:IsomorphismRightPushAndDarboux}]
 \leavevmode\newline
 In the following we have $(p, g) \in \mathcal{P} * \mathcal{G}$, $X \in \mathrm{T}_p \mathcal{P}$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$ ($x \coloneqq \pi(p)$).
 
-$\bullet$ Let $\pi_{\mathcal{G}}$ be the projection of $\mathcal{G}$, then as mentioned before Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} there is a unique $Y \in \mathrm{H}_g\mathcal{G}$ with
+$\bullet$ The well-definedness is just a simple consequence of the discussion around Equation \eqref{OiTHatIsHowWeFormulateHorizSymmetry}. As mentioned previously there is a unique $Y \in \mathrm{H}_g\mathcal{G}$ with
 \begin{align*}
 \mathrm{D}_g\pi_{\mathcal{G}}(Y)
 &=
@@ -6248,83 +6267,89 @@ $\bullet$ Let $\pi_{\mathcal{G}}$ be the projection of $\mathcal{G}$, then as me
 \in
 \mathrm{T}_x M.
 \end{align*}
-By Remark \ref{rem:DarbouxInActionInfinit} we can derive
+By \ref{rem:DarbouxInActionInfinit} we can derive
 \begin{align*}
 \mathrm{D}_{(p, g)}\Phi(X,Y)
 &=
 \mathcal{r}_{g*}(X),
 \end{align*}
-where we made use of that $Y$ is horizontal in $\mathcal{G}$ so that $\mleft(\mutot\mright)_g(Y) = 0$, and where $\Phi$ denotes the right $\mathcal{G}$-action on $\mathcal{P}$ as a map $\mathcal{P}*\mathcal{G} \to \mathcal{P}$. Therefore the independence of $\mathcal{r}_{g*}$ w.r.t.\ the choice of $\sigma$ follows.
+where we made use of that $Y$ is horizontal in $\mathcal{G}$ so that $\mleft(\mutot\mright)_g(Y) = 0$, and where $\Phi$ denotes the right $\mathcal{G}$-action on $\mathcal{P}$ as a map $\mathcal{P}*\mathcal{G} \to \mathcal{P}$. Therefore the independence of $\mathcal{r}_{g*}$ w.r.t.\ the choice of $\sigma$ follows, and this also shows that $\car_{g*}$ is a smooth map since it is a composition of smooth maps (interpreting $Y$ as the image of a smooth horizontal lift).
 
-$\bullet$ $\mathcal{r}_{g*}$ is clearly linear by construction. Let us now show fibre-wise that $\mathcal{r}_{g*}$ is injective, then it is also bijective by dimensional reasons. By Remark \ref{rem:SmoothnessOfACtionTranslations} we know that $r_\sigma$ is a diffeomorphism, and thus $\mathrm{D}_pr_\sigma: \mathrm{T}_p\mathcal{P} \to \mathrm{T}_{p \cdot g}\mathcal{P}$ is a vector space isomorphism. Restricted onto the vertical subspace $\mathrm{V}_p\mathcal{P}$ we have by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}
-\begin{align*}
-\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{V}_p\mathcal{P}}
-&=
-\mathrm{D}_pr_g:\mathrm{V}_p\mathcal{P} \to \mathrm{V}_{p\cdot g}\mathcal{P},
-\end{align*}
-which is a vector space isomorphism by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} and dimensional reasons (which implies that $\mathrm{D}_pr_g$ is surjective and thus bijective). We rewrite $\mathrm{D}_pr_\sigma$ as
-\begin{align*}
-\mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P} &\to \mathrm{T}_{p \cdot g}\mathcal{P},\\
-\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright) &\mapsto 
-\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright)
-	+ \mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright),
-\end{align*}
-where we fix just any horizontal distribution $\mathrm{H}\mathcal{P}$.
-By dimensional reasons and due to the bijectivity of $\mathrm{D}_pr_\sigma$ and $\mathrm{D}_pr_g$ the image $\mathrm{Im}\mleft( \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}} \mright)$ of $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ has to be a complement subspace of $\mathrm{V}_{p \cdot g}\mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$; $\mathrm{Im}\mleft( \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}} \mright)$ is not necessarily equal to $\mathrm{H}_{p \cdot g}\mathcal{P}$ in general but of the same dimension, especially of the same dimension as $\mathrm{H}_p \mathcal{P}$. Thus, $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ is a vector space isomorphism onto its image which is complementary to $\mathrm{V}_{p\cdot g}\mathcal{P}$. Furthermore, observe
-\begin{align*}
-\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
-&=
-\mleft. \mleft( \Delta\sigma \mright) \mright|_x \mleft( \mathrm{D}_p\pi \mleft( X^{\mathrm{H}} + X^{\mathrm{V}} \mright) \mright)
-=
-\mleft. \mleft( \Delta\sigma \mright) \mright|_x \mleft( \mathrm{D}_p\pi \mleft( X^{\mathrm{H}} \mright) \mright)
-=
-\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( X^{\mathrm{H}} \mright),
-\end{align*}
-using that the vertical subbundle is given by the kernel of $\mathrm{D}\pi$, and
-where we split again $X = X^{\mathrm{H}} + X^{\mathrm{V}}$ for all $X\in\mathrm{T}_p\mathcal{P} = \mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P}$. Hence, we get in total that $\mathcal{r}_{g*}$ at $p$ is equivalent to
-\begin{align*}
-\mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P} 
-&\to 
-\mathrm{Im}\mleft( \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}} \mright) \oplus \mathrm{V}_{p \cdot g}\mathcal{P},\\
-\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright) 
-&\mapsto 
-\mleft(
-	\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright),~
-		\mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright)
-		- \mleft.{\overline{
-		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( X^{\mathrm{H}} \mright)
-	}}\mright|_{p \cdot g}
-\mright).
-\end{align*}
-Let $\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright)$ be now in the kernel of $\mathcal{r}_{g*}$, then $X^{\mathrm{H}} = 0$ by the bijectivity of $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ onto its image. The second component of $\mathcal{r}_{g*}$ is then just $\mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright)$; again by the bijectivity of $\mathrm{D}_pr_g: \mathrm{V}_p\mathcal{P} \to \mathrm{V}_{p\cdot g}\mathcal{P}$ we also get $X^{\mathrm{V}}=0$. Thus, $\mathcal{r}_{g*}$ is injective and therefore defines vector space isomorphisms $\mathrm{T}_p\mathcal{P} \to \mathrm{T}_{p \cdot g}\mathcal{P}$. It follows that $\mathcal{r}_{g*}$ is an automorphism of $\mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x}$ over $r_g$, independent of the choice of $\mathrm{H}\mathcal{P}$.
-
-$\bullet$ It is then clear that $\mleft.\mathcal{r}_{g*}\mright|_{\mathrm{H}_p\mathcal{P}}$, given by
-\begin{align*}
-\mathrm{H}_p\mathcal{P} 
-&\to 
-\mathrm{Im}\mleft( \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}} \mright) \oplus \mathrm{V}_{p \cdot g}\mathcal{P},\\
-X^{\mathrm{H}}
-&\mapsto 
-\mleft(
-	\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright),~
-		- \mleft.{\overline{
-		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( X^{\mathrm{H}} \mright)
-	}}\mright|_{p \cdot g}
-\mright),
-\end{align*}
-is also an isomorphism onto its image; its image is complementary to $\mathrm{V}_{p\cdot g}\mathcal{P}$ because its intersection with $\mathrm{V}_{p \cdot g}\mathcal{P}$ would require that
-\begin{align*}
-\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright)
-&=
-0,
-\end{align*}
-which implies that $X^{\mathrm{H}} = 0$ due to the fact that $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ is a vector space isomorphism onto its image, as we discussed before. But then
-\begin{align*}
-\mleft.\mathcal{r}_{g*}\mright|_{\mathrm{H}_p\mathcal{P}}(0)
-&=
-0,
-\end{align*}
-which implies that the image of $\mleft.\mathcal{r}_{g*}\mright|_{\mathrm{H}_p\mathcal{P}}$ is a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$. This finishes the proof.
+$\bullet$ $\mathcal{r}_{g*}$ is clearly a vector bundle morphism over $r_g$ by construction. Let us now show fibre-wise that $\mathcal{r}_{g*}$ is injective, then it is also bijective by dimensional reasons and thus an automorphism: First of all, given $p$ and $X$ choose a curve $\gamma\colon [0,1] \to M$ with $\gamma(0) = \pi(p) = x$ with velocity $\dot{\gamma}(0) = \rmD_p\pi(X)$. By usual arguments, there is a parallel section $\sigma$, that is, $\sigma_x=g$ and $\mleft.\Delta \sigma\mright|_x(\dot{\gamma}(0)) = 0$. Then 
+\begin{equation*}
+\car_{g*}(X) = \rmD_pr_\sigma(X)~,
+\end{equation*}
+so that it is clear that $\car_{g*}$ is injective (\ref{rem:SmoothnessOfACtionTranslations}). It also follows that $\rmD_{p}\pi(\car_{g*}(X)) = \rmD_{p}\pi(X)$, therefore altogether, also by dimensional reasons: The image $\mathrm{Im}\mleft( \mleft.\car_{g*}\mright|_{\mathrm{H}_p\mathcal{P}} \mright)$ of $\mleft.\car_{g*}\mright|_{\mathrm{H}_p\mathcal{P}}$ has to be a complement subspace of $\mathrm{V}_{p \cdot g}\mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$. $\mathrm{Im}\mleft( \mleft.\car_{g*}\mright|_{\mathrm{H}_p\mathcal{P}} \mright)$ is not necessarily equal to $\mathrm{H}_{p \cdot g}\mathcal{P}$ in general but of the same dimension, especially also of the same dimension as $\mathrm{H}_p \mathcal{P}$.
+%
+%By Remark \ref{rem:SmoothnessOfACtionTranslations} we know that $r_\sigma$ is a diffeomorphism, and thus $\mathrm{D}_pr_\sigma: \mathrm{T}_p\mathcal{P} \to \mathrm{T}_{p \cdot g}\mathcal{P}$ is a vector space isomorphism. Restricted onto the vertical subspace $\mathrm{V}_p\mathcal{P}$ we have by Remark \ref{rem:AbstractNotationTwoForLeftInvarVfs}
+%\begin{align*}
+%\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{V}_p\mathcal{P}}
+%&=
+%\mathrm{D}_pr_g:\mathrm{V}_p\mathcal{P} \to \mathrm{V}_{p\cdot g}\mathcal{P},
+%\end{align*}
+%which is a vector space isomorphism by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} and dimensional reasons (which implies that $\mathrm{D}_pr_g$ is surjective and thus bijective). We rewrite $\mathrm{D}_pr_\sigma$ as
+%\begin{align*}
+%\mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P} &\to \mathrm{T}_{p \cdot g}\mathcal{P},\\
+%\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright) &\mapsto 
+%\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright)
+	%+ \mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright),
+%\end{align*}
+%where we fix just any horizontal distribution $\mathrm{H}\mathcal{P}$.
+%By dimensional reasons and due to the bijectivity of $\mathrm{D}_pr_\sigma$ and $\mathrm{D}_pr_g$ the image $\mathrm{Im}\mleft( \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}} \mright)$ of $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ has to be a complement subspace of $\mathrm{V}_{p \cdot g}\mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$; $\mathrm{Im}\mleft( \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}} \mright)$ is not necessarily equal to $\mathrm{H}_{p \cdot g}\mathcal{P}$ in general but of the same dimension, especially of the same dimension as $\mathrm{H}_p \mathcal{P}$. Thus, $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ is a vector space isomorphism onto its image which is complementary to $\mathrm{V}_{p\cdot g}\mathcal{P}$. Furthermore, observe
+%\begin{align*}
+%\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
+%&=
+%\mleft. \mleft( \Delta\sigma \mright) \mright|_x \mleft( \mathrm{D}_p\pi \mleft( X^{\mathrm{H}} + X^{\mathrm{V}} \mright) \mright)
+%=
+%\mleft. \mleft( \Delta\sigma \mright) \mright|_x \mleft( \mathrm{D}_p\pi \mleft( X^{\mathrm{H}} \mright) \mright)
+%=
+%\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( X^{\mathrm{H}} \mright),
+%\end{align*}
+%using that the vertical subbundle is given by the kernel of $\mathrm{D}\pi$, and
+%where we split again $X = X^{\mathrm{H}} + X^{\mathrm{V}}$ for all $X\in\mathrm{T}_p\mathcal{P} = \mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P}$. Hence, we get in total that $\mathcal{r}_{g*}$ at $p$ is equivalent to
+%\begin{align*}
+%\mathrm{H}_p\mathcal{P} \oplus \mathrm{V}_p\mathcal{P} 
+%&\to 
+%\mathrm{Im}\mleft( \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}} \mright) \oplus \mathrm{V}_{p \cdot g}\mathcal{P},\\
+%\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright) 
+%&\mapsto 
+%\mleft(
+	%\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright),~
+		%\mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright)
+		%- \mleft.{\overline{
+		%\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( X^{\mathrm{H}} \mright)
+	%}}\mright|_{p \cdot g}
+%\mright).
+%\end{align*}
+%Let $\mleft(X^{\mathrm{H}},~ X^{\mathrm{V}}\mright)$ be now in the kernel of $\mathcal{r}_{g*}$, then $X^{\mathrm{H}} = 0$ by the bijectivity of $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ onto its image. The second component of $\mathcal{r}_{g*}$ is then just $\mathrm{D}_pr_g\mleft(X^{\mathrm{V}}\mright)$; again by the bijectivity of $\mathrm{D}_pr_g: \mathrm{V}_p\mathcal{P} \to \mathrm{V}_{p\cdot g}\mathcal{P}$ we also get $X^{\mathrm{V}}=0$. Thus, $\mathcal{r}_{g*}$ is injective and therefore defines vector space isomorphisms $\mathrm{T}_p\mathcal{P} \to \mathrm{T}_{p \cdot g}\mathcal{P}$. It follows that $\mathcal{r}_{g*}$ is an automorphism of $\mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x}$ over $r_g$, independent of the choice of $\mathrm{H}\mathcal{P}$.
+%
+%$\bullet$ It is then clear that $\mleft.\mathcal{r}_{g*}\mright|_{\mathrm{H}_p\mathcal{P}}$, given by
+%\begin{align*}
+%\mathrm{H}_p\mathcal{P} 
+%&\to 
+%\mathrm{Im}\mleft( \mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}} \mright) \oplus \mathrm{V}_{p \cdot g}\mathcal{P},\\
+%X^{\mathrm{H}}
+%&\mapsto 
+%\mleft(
+	%\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright),~
+		%- \mleft.{\overline{
+		%\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p\mleft( X^{\mathrm{H}} \mright)
+	%}}\mright|_{p \cdot g}
+%\mright),
+%\end{align*}
+%is also an isomorphism onto its image; its image is complementary to $\mathrm{V}_{p\cdot g}\mathcal{P}$ because its intersection with $\mathrm{V}_{p \cdot g}\mathcal{P}$ would require that
+%\begin{align*}
+%\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}\mleft(X^{\mathrm{H}}\mright)
+%&=
+%0,
+%\end{align*}
+%which implies that $X^{\mathrm{H}} = 0$ due to the fact that $\mleft.\mathrm{D}_pr_\sigma\mright|_{\mathrm{H}_p\mathcal{P}}$ is a vector space isomorphism onto its image, as we discussed before. But then
+%\begin{align*}
+%\mleft.\mathcal{r}_{g*}\mright|_{\mathrm{H}_p\mathcal{P}}(0)
+%&=
+%0,
+%\end{align*}
+%which implies that the image of $\mleft.\mathcal{r}_{g*}\mright|_{\mathrm{H}_p\mathcal{P}}$ is a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$. This finishes the proof.
 \end{proof}
 
 Hence, we formally define:
