@@ -4907,11 +4907,11 @@ Let us equip $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ with its \textbf{
 \mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}\mleft( \overline{g}_x \mright).
 \end{align*}
 This opens a gateway to define Eq.\ \eqref{ClassicalSymmetryofPTs} on general principal $\mathcal{G}$-bundles. That is, now let $\mathcal{P}$ be again a general principal $\mathcal{G}$-bundle. Fix any horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$ inducing a parallel transport $\mathrm{PT}_\alpha^{\mathcal{G}}$, then an \textbf{Ehresmann connection} on $\mathcal{P}$ is a parallel transport $\mathrm{PT}_\alpha^{\mathcal{P}}$ on $\mathcal{P}$ satisfying Eq.\ \eqref{PTProp1}, \eqref{PTProp2} and
-\begin{align}\label{PTHomomNEw}
+\begin{equation}\label{PTHomomNEw}
 \mathrm{PT}_\alpha^{\mathcal{P}}(p \cdot g)
-&=
+=
 \mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}(g)
-\end{align}
+\end{equation}
 for all $p \in \mathcal{P}_x$ and $g \in \mathcal{G}_x$. The right hand side is now well-defined since both, $\mathrm{PT}_\alpha^{\mathcal{P}}(p)$ and $\mathrm{PT}_\alpha^{\mathcal{G}}(g)$, are elements of $\Gamma(\alpha^*\mathcal{P})$ and $\Gamma\mleft(\alpha^*\mathcal{G}\mright)$, respectively. We now want to derive its infinitesimal analogue similar to Eq.\ \eqref{ClassicalSymmetryOfHorizontalDistr}. Recall that we can view the parallel transports like $\mathrm{PT}_\alpha^{\mathcal{P}}(p)$ also as a map $[0, t] \to \mathcal{P}$ with $\pi \circ \mathrm{PT}_\alpha^{\mathcal{P}}(p) = \alpha$ (recall \ref{BasicNotations}; alternatively use \ref{lem:PullbackFibreBundleItsTangentSp} and project onto the second component for the following derivatives). Then by construction
 \begin{equation*}
 Y
@@ -5762,7 +5762,7 @@ is a curve with values in $\mathcal{g}_x$, a vector space, so that one canonical
 
 \begin{proof}[Proof of \ref{prop:FinallyTheNablaInduction}]
 \leavevmode\newline
-We will not prove this statement in full generality: If a reader is interested into the proof, then please check out an earlier version of this paper on arXiv. However, the general statement was rather tedious to show in a rigorous manner, while we will only study $\nabla^\caG$ for \textit{multiplicative} $\rmH\caG$, that is, a parallel transport on $\caG$ by Lie group automorphism. This case is well-understood, and in the multiplicative situation \ref{prop:FinallyTheNablaInduction} is shown in \cite[Proposition 4.22]{LAURENTGENGOUXStienonXuMultiplicativeForms}.
+We will not prove this statement in full generality: If a reader is interested into the proof, then please check out an earlier version of this paper on arXiv. However, the general statement was rather tedious to show in a rigorous manner, while we will only study $\nabla^\caG$ for \textit{multiplicative} $\rmH\caG$, that is, a parallel transport on $\caG$ by Lie group automorphism (see later). This case is well-understood, and in the multiplicative situation \ref{prop:FinallyTheNablaInduction} is shown in \cite[Proposition 4.22]{LAURENTGENGOUXStienonXuMultiplicativeForms}.
 %We will simplify the arguments by making use of the fact that 
 %\begin{equation*}
 %t \mapsto \mleft(\Delta \e^{t \nu}\mright)_x (X)
@@ -6217,7 +6217,7 @@ As usual, for a given horizontal distribution $\mathrm{H}\mathcal{P}$ of a princ
 is a vector space isomorphism for all $x \in M$ and $p \in \mathcal{P}_x$; similarly for $\mathcal{G}$ itself. We want to provide an identification of horizontal spaces in the sense of Equation \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall \ref{rem:DefOfConnectionIdeaWithDarboux}; especially recall the Darboux derivative introduced in \ref{DiscussingDarbouxDerivativeGeneral}. The following proposition and definition will be needed.
 
 \begin{propositions}{The modified right-pushforward as well-defined isomorphism}{IsomorphismRightPushAndDarboux}
-Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, and we have horizontal a distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. Furthermore, for $g \in \mathcal{G}_x$ ($x \in M$) define the map
+Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, and we have horizontal a distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. Furthermore, for $g \in \mathcal{G}_x$ ($x \in M$) define the map\footnote{The font of $\mathcal{r}$ is a calligraphic r.}
 \begin{align*}
 \mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x} &\to \mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x},\\
 X 
@@ -6236,26 +6236,7 @@ where $p \in \mathcal{P}_x$, $X \in \mathrm{T}_p \mathcal{P}$, and $\sigma$ is a
 Furthermore, if we also have a horizontal distribution $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, then $\mathrm{H}_p\mathcal{P}$ is isomorphic via $\mathcal{r}_{g*}$ to a complement of $\mathrm{V}_{p \cdot g} \mathcal{P}$ in $\mathrm{T}_{p \cdot g}\mathcal{P}$ (this complement is not necessarily $\mathrm{H}_{p \cdot g}\mathcal{P}$).
 \end{propositions}
 
-\begin{remarks}{Alternative versions of the modified pushforward}{AlternModPush}
-As we saw in the discussion around Equation \eqref{OiTHatIsHowWeFormulateHorizSymmetry} and will now see again in the following proof, there are several alternative identities of the modified right-pushforward: 
-\begin{itemize}
-	\item There is a unique $Y \in \mathrm{H}_g\mathcal{G}$ with
-	\begin{equation*}
-	\mathcal{r}_{g*}(X)
-	=
-	\mathrm{D}_{(p, g)}\Phi(X,Y)
-	\end{equation*}
-	where $\Phi$ denotes the right $\mathcal{G}$-action on $\mathcal{P}$, which the reader may prefer over the formulation with the Darboux derivative. However, we will see in this work that the Darboux derivative allows to extend the ``classical'' arguments in a straight-forward way.
-	\item If $\sigma$ is parallel along $\omega \coloneqq \mathrm{D}_p\pi(X)$, that is $\mleft.\Delta \sigma\mright|_x(\omega) = 0$, then
-	\begin{equation*}
-	\mathcal{r}_{g*}(X)
-	=
-	\rmD_pr_\sigma(X)~.
-	\end{equation*}
-\end{itemize}
-\end{remarks}
-
-\begin{proof}[Proof of \ref{prop:IsomorphismRightPushAndDarboux}]
+\begin{proof}
 \leavevmode\newline
 In the following we have $(p, g) \in \mathcal{P} * \mathcal{G}$, $X \in \mathrm{T}_p \mathcal{P}$, and $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$ ($x \coloneqq \pi(p)$).
 
@@ -6355,52 +6336,70 @@ so that it is clear that $\car_{g*}$ is injective (\ref{rem:SmoothnessOfACtionTr
 Hence, we formally define:
 
 \begin{definitions}{Modified pushforward via right-translation}{WeModTheRIghtPush}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. Then we define the \textbf{modified right-pushforward\footnote{The font of $\mathcal{r}$ is a calligraphic r.} $\mathcal{r}_{g*}$ (with $g \in \mathcal{G}_x$, $x \in M$)} as the vector bundle isomorphism $\mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x} \to \mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x}$ over $r_g$ as given in Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} by
-\begin{align*}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, and we have a horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. Then we define the \textbf{modified right-pushforward $\mathcal{r}_{g*}$ (with $g \in \mathcal{G}_x$, $x \in M$)} as the vector bundle isomorphism $\mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x} \to \mleft.\mathrm{T}\mathcal{P}\mright|_{\mathcal{P}_x}$ over $r_g$ as given in \ref{prop:IsomorphismRightPushAndDarboux} by
+\begin{equation*}
 \mathcal{r}_{g*}(X)
-&\coloneqq
+\coloneqq
 \mathrm{D}_pr_\sigma\mleft( X \mright)
 	- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	}}\mright|_{p \cdot g}
-\end{align*}
+\end{equation*}
 for all $p \in \mathcal{P}_x$ and $X \in \mathrm{T}_p \mathcal{P}$, where $\sigma$ is any (local) section of $\mathcal{G}$ with $\sigma_x = g$.
 
 Similarly, for a (local) section $\sigma$ of $\mathcal{G}$ we define the \textbf{modified right-pushforward $\mathcal{r}_{\sigma*}$ with $\sigma$} as a (local) vector bundle isomorphism $\mathrm{T}\mathcal{P} \to \mathrm{T}\mathcal{P}$ by
-\begin{align*}
+\begin{equation*}
 \mathcal{r}_{\sigma*}(X)
-&\coloneqq
+\coloneqq
 \mathcal{r}_{\sigma_x*}(X)
 =
 \mathrm{D}_pr_\sigma\mleft( X \mright)
 	- \mleft.{\overline{
 		\mleft. \mleft( \pi^!\Delta\sigma \mright) \mright|_p(X)
 	}}\mright|_{p \cdot \sigma_{x}}
-\end{align*}
+\end{equation*}
 for all $X \in \mathrm{T}_p \mathcal{P}$ ($p \in \mathcal{P}_x$).
 \end{definitions}
 
+\begin{remarks}{Alternative versions of the modified pushforward}{AlternModPush}
+As we saw in the discussion around Equation \eqref{OiTHatIsHowWeFormulateHorizSymmetry} and as we also have seen in the proof of \ref{prop:IsomorphismRightPushAndDarboux}, there are several alternative identities of the modified right-pushforward: 
+\begin{itemize}
+	\item There is a unique $Y \in \mathrm{H}_g\mathcal{G}$ with
+	\begin{equation*}
+	\mathcal{r}_{g*}(X)
+	=
+	\mathrm{D}_{(p, g)}\Phi(X,Y)
+	\end{equation*}
+	where $\Phi$ denotes the right $\mathcal{G}$-action on $\mathcal{P}$, which the reader may prefer over the formulation with the Darboux derivative. However, we will see in this work that the Darboux derivative allows to extend the ``classical'' arguments in a straight-forward way.
+	\item If $\sigma$ is parallel along $\omega \coloneqq \mathrm{D}_p\pi(X)$, that is $\mleft.\Delta \sigma\mright|_x(\omega) = 0$, then
+	\begin{equation*}
+	\mathcal{r}_{g*}(X)
+	=
+	\rmD_pr_\sigma(X)~.
+	\end{equation*}
+\end{itemize}
+\end{remarks}
+
 \begin{remarks}{Restriction onto vertical bundle gives typical right-pushforward}{ModRightPushOnVertic}
 It is trivial to check that we have
-\begin{align*}
+\begin{equation*}
 \mathcal{r}_{g*}(X)
-&=
+=
 \mathrm{D}_pr_g(X)
 \eqqcolon
 r_{g*}(X)
-\end{align*}
-for all $X \in \mathrm{V}_p\mathcal{P}$; we actually have proven this directly after Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}. As also pinpointed in Remark \ref{rem:DefOfConnectionIdeaWithDarboux}, if $\mathcal{G}$ is a trivial LGB equipped with its canonical flat connection and $\sigma$ a constant section, then it is easy to see that $\mathcal{r}_{\sigma*} = \mathcal{r}_{g*} = r_{g*}$, where $r_g$ has to be understood as the right-translation of the canonical Lie group action inherited by $\mathcal{G}$ in the sense of Ex.\ \ref{ex:TrivialLGBAction}.
+\end{equation*}
+for all $X \in \mathrm{V}_p\mathcal{P}$; we actually have proven this directly after Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}. As also pinpointed in \ref{rem:DefOfConnectionIdeaWithDarboux}, if $\mathcal{G}$ is a trivial LGB equipped with its canonical flat connection and $\sigma$ a constant section, then it is easy to see that $\mathcal{r}_{\sigma*} = \mathcal{r}_{g*} = r_{g*}$, where $r_g$ has to be understood as the right-translation of the canonical Lie group action inherited by $\mathcal{G}$ in the sense of \ref{ex:TrivialLGBAction}.
 \end{remarks}
 
-\begin{remark}\label{RSigmaAnAuto}
-\leavevmode\newline
-Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} trivially extends to $\mathcal{r}_{\sigma*}$, that is, $\mathcal{r}_{\sigma*}$ is a (local) automorphism of $\mathrm{T}\mathcal{P}$ over $r_\sigma$. Thus, we can view $\mathcal{r}_{\sigma*}$ as an element of $\Omega^1\mleft(\mathcal{P}; r_\sigma^*\mathrm{T}\mathcal{P}\mright)$.
-\end{remark}
+\begin{remarks}{Modified pushforward as 1-form}{RSigmaAnAuto}
+\ref{prop:IsomorphismRightPushAndDarboux} trivially extends to $\mathcal{r}_{\sigma*}$, that is, $\mathcal{r}_{\sigma*}$ is a (local) automorphism of $\mathrm{T}\mathcal{P}$ over $r_\sigma$. Thus, we can view $\mathcal{r}_{\sigma*}$ as an element of $\Omega^1\mleft(\mathcal{P}; r_\sigma^*\mathrm{T}\mathcal{P}\mright)$.
+\end{remarks}
 
-Hence, the following definition makes sense, especially if thinking about what we discussed for Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall Rem.\ \ref{rem:DefOfConnectionIdeaWithDarboux}.
+Hence, the following definition makes sense, especially if thinking about what we discussed for Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry}, also recall \ref{rem:DefOfConnectionIdeaWithDarboux}.
 
 \begin{definitions}{Ehresmann connection on principal LGB-bundles}{FinallyTheConnection}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have horizontal distributions $\mathrm{H}\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ on $\mathcal{G}$ and $\mathcal{P}$, respectively. We call $\mathrm{H}\mathcal{P}$ an \textbf{Ehresmann connection} or a \textbf{connection on $\mathcal{P}$} if it is \textbf{right-invariant (w.r.t.\ modified right-pushforward)}, \textit{i.e.}\
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, and $\mathrm{H}\mathcal{G}$ and $\mathrm{H}\mathcal{P}$ horizontal distributions on $\mathcal{G}$ and $\mathcal{P}$, respectively. We call $\mathrm{H}\mathcal{P}$ an \textbf{Ehresmann connection connection on $\mathcal{P}$ (modified by $\rmH\caG$)} if it is \textbf{right-invariant (w.r.t.\ modified right-pushforward)}, \textit{i.e.}\
 \begin{align*}
 \mathcal{r}_{g*}\mleft( \mathrm{H}_p\mathcal{P} \mright)
 &=
@@ -6409,34 +6408,82 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 for all $p \in \mathcal{P}_x$ and $g \in \mathcal{G}_x$ ($x \coloneqq \pi(p)$).
 \end{definitions}
 
-\begin{remark}
+Most of the time we may just write \textit{connection} instead of \textit{Ehresmann connection}.
+
+\begin{remarks}{Moerdijk-Mrčun condition}{StienonsDef}
+There is also a definition of connections on such and more general principal bundles in \cite[\S 5.7, paragraph before Prop.\ 5.38, page 148]{GroupoidBasedPrincipalBundles} and a corresponding gauge theory in \cite{Signori:2008jd}. However, this reference provides a different type of definition; translated to our situation, it is based on assuming that $\mathcal{G}$ is defined over (in general) another base manifold $N$. In order to define the LGB action on $\mathcal{P}$ this reference introduces a moment map $\mu\colon \mathcal{P} \to N$ so that the action of an element $\mathcal{G}_y$ ($y \in N$) is defined on $\mu^{-1}(\{y\})$, especially the infinitesimal action $r_g$ of a fixed LGB element $g$ acts on tangent vectors of $\mu^{-1}(\{y\})$, not necessarily on the vertical structure of $\mathcal{P}$. Hence, in order to circumvent the problem we discussed in \ref{TheBigMotivationBehindEverything}, the reference's definition of a connection is then based on assuming that the horizontal distribution is tangent to the ``fibres'' $\mu^{-1}(\{y\})$, so the infinitesimal action $r_g$ now acts well-defined on the horizontal structure. Henceforth, the reference does not need to choose a connection on $\caG$.
+
+However, this is not a suitable definition for us, because we want to allow the projection of $\mathcal{P}$ itself as moment map such that the fibres of $\mu$ are the fibres of $\caP$ so that the horizontal distributions cannot be tangent to the fibres of $\mu$. The reference's definition is rather restrictive for us, while our definition works for all principal $\mathcal{G}$-bundles, but one has to choose a connection on $\mathcal{G}$.
+\end{remarks}
+
+Now recall that the whole motivation behind \ref{def:FinallyTheConnection} comes from \eqref{OiTHatIsHowWeFormulateHorizSymmetry} (also recall \ref{rem:DefOfConnectionIdeaWithDarboux}) which itself stems from \eqref{PTHomomNEw}. We see that that Eq.\ \eqref{PTHomomNEw} is satisfied here by usual arguments:
+
+\begin{corollaries}{Parallel transport and horizontal lift}{OtherDefsForEhresmann}
+Assume the situation as in \ref{def:FinallyTheConnection}, then the notion of Ehresmann connection is equivalent to the following definitions:
+\begin{enumerate}
+	\item An Ehresmann connection on $\caP$ is a \textbf{parallel transport ${\rm PT}^\caP$} satisfying
+	\begin{equation*}
+		\mathrm{PT}_\alpha^{\mathcal{P}}(p \cdot g)
+		=
+		\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}(g)
+	\end{equation*}
+	for all $p \in \caP_x$, $g \in \caG_x$ and curves $\alpha$ starting at $x \in M$, where ${\rm PT}^\caG$ is the parallel transport corresponding to $\rm H \caG$.
+	\item An Ehresmann connection on $\caP$ is a \textbf{horizontal lift} defined as a vector bundle morphism $\chi\colon \pi^*\rmT M \to \rmT \caP$ satisfying
+	\begin{equation*}
+	\chi(p\cdot g, X) = \car_{g*}\bigl( \chi(p, X) \bigr)
+	\end{equation*}
+	for all $p \in \caP_x$ ($x\in M$), $g \in \caG_x$ and $X \in \rmT_xM$.
+\end{enumerate}
+\end{corollaries}
+
+As in ordinary principal bundle settings one can show that parallel transports are complete here. Before we jump to the examples let us quickly discuss the existence of Ehresmann connections: 
+
+\begin{corollaries}{Existence of Ehresmann connections}{ExOfEhresmann}
+Assume the situation as in \ref{def:FinallyTheConnection}, then an Ehresmann connection on $\caP$ exists if and only if the connection on $\caG$ is \textbf{multiplicative}, that is, its associated parallel transport ${\rm PT}^\caG$ acts by Lie group automorphisms.
+\end{corollaries}
+
+\begin{proof}
 \leavevmode\newline
-There is also a definition of connections on such and more general principal bundles in \cite[\S 5.7, paragraph before Prop.\ 5.38, page 148]{GroupoidBasedPrincipalBundles}. However, this reference provides a different type of definition; translated to our situation, it is based on assuming that $\mathcal{G}$ is defined over another base manifold $N$. In order to define the LGB action on $\mathcal{P}$ this reference introduces a moment map $\mu: \mathcal{P} \to N$ so that the action of an element $\mathcal{G}_y$ ($y \in N$) is defined on $\mu^{-1}(\{y\})$, especially the infinitesimal action $r_g$ of a fixed LGB element $g$ acts on tangent vectors of $\mu^{-1}(\{y\})$, not necessarily on the vertical structure of $\mathcal{P}$. Hence, in order to circumvent the problem we discussed in Subsubsection \ref{TheBigMotivationBehindEverything}, the reference's definition of a connection is then based on assuming that the "fibres" $\mu^{-1}(\{y\})$ are complementary to the vertical structure of $\mathcal{P}$, so these fibres' tangent spaces define a horizontal distribution while the infinitesimal action $r_g$ now acts well-defined on the horizontal structure. Henceforth, the reference does not need to look at using sections $\sigma$ and their actions.
+We will argue with the notion of parallel transport as in \ref{cor:OtherDefsForEhresmann}.
+The proof of existence of the Ehresmann connection on $\caP$ given a multiplicative ${\rm PT}^\caG$ is similar to ordinary existence arguments because multiplicative connections are indeed Ehresmann connections on $\caG$ viewed as principal $\caG$-bundle, where $\rmH \caG$ modifies itself; then make use of \ref{lem:SectionsNowInduceIsomToLGBsNotNecTriv} and usual gluing arguments. For the other direction:
+\begin{equation*}
+\mathrm{PT}_\alpha^{\mathcal{P}}(p \cdot g \cdot q)
+=
+\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}(gq)
+\end{equation*}
+for all $(p, g, q) \in \mathcal{P}* \mathcal{G} * \mathcal{G}$ and a suitable curve $\alpha$, but also
+\begin{equation*}
+\mathrm{PT}_\alpha^{\mathcal{P}}(p \cdot g \cdot q)
+=
+\mathrm{PT}_\alpha^{\mathcal{P}}(p) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}(g) \cdot \mathrm{PT}_\alpha^{\mathcal{G}}(q)~.
+\end{equation*}
+Due to the fact that we have a simply transitive $\mathcal{G}$-action on $\mathcal{P}$, it follows that the connection on $\mathcal{G}$ is multiplicative. 
+\end{proof}
 
-However, this is not a suitable definition for us, because our moment map is the projection of $\mathcal{P}$ itself such that $r_g$ acts on the vertical structure. The reference's definition is rather restrictive, while our definition works for all principal $\mathcal{G}$-bundles by fixing a connection on $\mathcal{G}$.
-\end{remark}
+Multiplicative connections will be introduced later in more detail when we discuss the field strength.
+Let us now introduce several examples.
 
-Let us discuss several examples.
-
-\begin{examples}{Recovering of the classical definition}{OurConnectionIsReallyMoreGeneral}
-As we already discussed several times, especially recall Remark \ref{rem:ModRightPushOnVertic} and Ex.\ \ref{ex:TheCLassicalPrincAsEx}, but ultimately by the discussion for Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} which also applies to classical principal bundles and their notion of connection and parallel transport: We recover the typical definition of a connection on a principal bundle if $\mathcal{P}$ is a classical principal bundle and if the trivial LGB $\mathcal{G}$ is equipped with its canonical flat connection $\mathrm{H}\mathcal{G}$. We call such a connection a \textbf{classical connection}.
+\begin{examples}{Recovering the classical definition}{OurConnectionIsReallyMoreGeneral}
+As we already discussed several times, especially recall \ref{rem:ModRightPushOnVertic} and \ref{ex:TheCLassicalPrincAsEx}, but ultimately by the discussion for Equation \eqref{OiTHatIsHowWeFormulateHorizSymmetry}: We recover the typical definition of a connection on a principal bundle if $\mathcal{P}$ is a classical principal bundle and if the trivial LGB $\mathcal{G}$ is equipped with its canonical flat connection $\mathrm{H}\mathcal{G}$. We call such a connection a \textbf{classical connection}.
 \end{examples}
 
 \begin{examples}{Associated LGBs}{AssociatedLGBsAndTheirCanonicalConnection}
-Recall Def.\ \ref{def:AssociatedLGB}, and recall that LGBs themselves are principal bundles as in Ex.\ \ref{ex:TrivialPrincAsLGB}. That is, let $G, H$ be Lie groups, $P \to M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then we have the LGB associated to the principal bundle $P$ and the representation $\psi$ on $H$
+Recall that LGBs themselves are principal bundles as in \ref{ex:TrivialPrincAsLGB}. Let $G, H$ be Lie groups, $P \to M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then we have the LGB associated to the principal bundle $P$ and the representation $\psi$ on $H$
 \begin{center}
 	\begin{tikzcd}
 	H \arrow{r}& \mathcal{H} \coloneqq P \times_\psi H \arrow{d} \\
 	& M
 	\end{tikzcd}
 \end{center}
-Fix a typical classical connection on $P$; as also introduced in Subsubsection \ref{TheBigMotivationBehindEverything} we have an associated parallel transport $\mathrm{PT}_\alpha^P: P_x \to \Gamma(\alpha^*P)$ along a curve $\alpha: [0, t] \to M$ ($t > 0$), where $\alpha(0) \eqqcolon x$. As proven in \cite[\S 5.9, Thm.\ 5.9.1, page 289f.]{Hamilton}, we have a canonical well-defined parallel transport $\mathrm{PT}_\alpha^\mathcal{H}: \mathcal{H}_x \to \Gamma(\alpha^*\mathcal{H})$ given by
+Fix a typical classical connection on $P$; as also introduced in \ref{TheBigMotivationBehindEverything} we have an associated parallel transport $\mathrm{PT}_\alpha^P\colon P_x \to \Gamma(\alpha^*P)$ along a curve $\alpha\colon [0, t] \to M$ ($t > 0$), where $\alpha(0) \eqqcolon x$. We have a canonical well-defined parallel transport $\mathrm{PT}_\alpha^\mathcal{H}\colon \mathcal{H}_x \to \Gamma(\alpha^*\mathcal{H})$ given by the \textbf{associated connection}, that is,
 \begin{align*}
 \mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
 &=
 \mleft[ \mathrm{PT}_\alpha^P(p), h \mright]
 \end{align*}
-for all $[p, h] \in \mathcal{H}_x$. This has a 1:1 correspondence to a horizontal distribution $\mathrm{H}\mathcal{H}$ on $\mathcal{H}$. Observe that we have
+for all $[p, h] \in \mathcal{H}_x$. 
+%This has a 1:1 correspondence to a horizontal distribution $\mathrm{H}\mathcal{H}$ on $\mathcal{H}$. 
+Observe that we have
 \begin{align*}
 \mathrm{PT}_\alpha^\mathcal{H}\Bigl( [p, h] \cdot \mleft[ p, h^\prime \mright] \Bigr)
 &=
@@ -6453,19 +6500,20 @@ for all $[p, h] \in \mathcal{H}_x$. This has a 1:1 correspondence to a horizonta
 \mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
 	\cdot \mathrm{PT}_\alpha^\mathcal{H}\Bigl( \mleft[p, h^\prime\mright] \Bigr)
 \end{align*}
-for all $[p, h], \mleft[ p, h^\prime \mright] \in \mathcal{H}_x$. Now recall that the whole motivation behind Def.\ \ref{def:FinallyTheConnection} comes from Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} (also recall Remark \ref{rem:DefOfConnectionIdeaWithDarboux}) which itself stems from Eq.\ \eqref{PTHomomNEw}. We see that that Eq.\ \eqref{PTHomomNEw} is satisfied here, and thus Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} follows, \textit{i.e.}\
-\begin{align*}
-\mathcal{r}_{\mleft[ p, h^\prime \mright]*}(X)
-&\in
-\mathrm{H}_{[p,h] \cdot \mleft[ p, h^\prime \mright]}\mathcal{H}
-\end{align*}
-for all $X \in \mathrm{H}_{[p,h]}\mathcal{H}$.
-By Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} and dimensional reasons (horizontal subspaces are of the same dimension) it follows immediately that $\mathrm{H}\mathcal{H}$ is an (Ehresmann) connection on $\mathcal{H}$ in sense of Def.\ \ref{def:FinallyTheConnection}.
-
-We call such connections on LGBs associated to a classical principal bundle an \textbf{associated connection}.
+for all $[p, h], \mleft[ p, h^\prime \mright] \in \mathcal{H}_x$. Thus, associated connections define multiplicative and in particular Ehresmann connections on $\caH$(whose horizontal distribution modifies itself). Observe however, that not every Ehresmann connection is multiplicative; we will come back to this in \ref{CYMExamples}.
+%and thus Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} follows, \textit{i.e.}\
+%\begin{align*}
+%\mathcal{r}_{\mleft[ p, h^\prime \mright]*}(X)
+%&\in
+%\mathrm{H}_{[p,h] \cdot \mleft[ p, h^\prime \mright]}\mathcal{H}
+%\end{align*}
+%for all $X \in \mathrm{H}_{[p,h]}\mathcal{H}$.
+%By Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} and dimensional reasons (horizontal subspaces are of the same dimension) it follows immediately that $\mathrm{H}\mathcal{H}$ is an (Ehresmann) connection on $\mathcal{H}$ in sense of Def.\ \ref{def:FinallyTheConnection}.
+%
+%We call such connections on LGBs associated to a classical principal bundle an \textbf{associated connection}.
 \end{examples}
 
-As expected, we have a corresponding connection 1-form. For this we need to formally define the pullback of 1-forms with respect to the modified right-pushforward.
+Last but not least, we have a corresponding connection 1-form. For this we need to formally define the pullback of 1-forms with respect to the modified right-pushforward.
 
 \begin{definitions}{The pullback of forms via modified right-pushforward}{PullbackOfFormsViaModRight}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a fixed horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. For $\omega \in \Omega^k(\mathcal{P}; \pi^*\mathcal{g})$ ($k \in \mathbb{N}_0$) we define the \textbf{pullback via the modified right-pushforward $\mathcal{r}_g^!\mleft(\mleft.\omega\mright|_{\mathcal{P}_x}\mright)$ (with $g\in\mathcal{G}_x$, over $\mathcal{P}_x$, $x \in M$)} as an element of $\Gamma \mleft( \Lambda^k\mleft.\mathrm{T}^*\mathcal{P}\mright|_{\mathcal{P}_x} \otimes \mathcal{g}_x \mright)$ by
@@ -6487,7 +6535,7 @@ for all $p \in \mathcal{P}_x$ and $Y_1, \dotsc, Y_k \in \mathrm{T}_p\mathcal{P}$
 
 \begin{remark}
 \leavevmode\newline
-By Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} (and Remark \ref{RSigmaAnAuto}) these definitions are well-defined. A short note about the notation on the very right hand side of the second definition: This notation allows us to extend it to vector fields, that is,
+By Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} (and Remark \ref{rem:RSigmaAnAuto}) these definitions are well-defined. A short note about the notation on the very right hand side of the second definition: This notation allows us to extend it to vector fields, that is,
 \begin{align*}
 \mleft(\mathcal{r}_\sigma^!\omega\mright) \mleft( Y_1, \dotsc, Y_k\mright)
 =
