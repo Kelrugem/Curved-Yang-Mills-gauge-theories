@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  17 AUG 2026 16:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  18 AUG 2026 15:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1605,35 +1605,34 @@ Underfull \vbox (badness 7595) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [52]
-[53] [54] [55] [56] [57]
+[53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67]
+[68] [69] [70] [71] [72] [73] [74] [75] [76] [77]
+Underfull \vbox (badness 1215) has occurred while \output is active []
 
-LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
-on input line 6765.
-
-[58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72]
-[73] [74] [75] [76] [77] [78] [79]
+ [78]
+[79]
 
 LaTeX Warning: Reference `PTLABComingFromPTLGB' on page 1 undefined on input li
-ne 8741.
+ne 8737.
 
-[80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93]
+[80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]
 
 LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
-on input line 9747.
+on input line 9743.
 
-[94] (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
+[93] (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
 ) (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
-(CYM.bbl
+(CYM.bbl [94]
 Underfull \hbox (badness 10000) in paragraph at lines 15--19
 []\OT1/lmr/m/n/8 (+20) Thomas Strobl. Al-ge-broid Yang-Mills the-o-ries. \OT1/l
 mr/m/it/8 (+20) Phys-i-cal re-view let-ters\OT1/lmr/m/n/8 (+20) , 93(21):211601
 , 2004.
  []
 
-[95]
+
 Underfull \hbox (badness 3386) in paragraph at lines 100--106
 []\OT1/lmr/m/n/8 (+20) Simon-Raphael Fis-cher, Mehran Jalali Fara-hani, Hyun-gr
 ok Kim, and Chris-tian Sae-mann. Topo-
@@ -1665,7 +1664,7 @@ t/8 (+20) Jour-nal of Ge-om-e-try and Physics\OT1/lmr/m/n/8 (+20) , 54(4):400--
 426, 2005.
  []
 
-) [96] (CYM.aux)
+) [95] (CYM.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1674,18 +1673,15 @@ L3 programming layer <2026-01-19>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: 5281D02410FB5A0A93B6F2392B74C979;6530.
  ) 
 Here is how much of TeX's memory you used:
- 42258 strings out of 467866
- 837799 string characters out of 5418325
- 1331325 words of memory out of 5000000
- 69432 multiletter control sequences out of 15000+600000
- 739630 words of font info for 343 fonts, out of 8000000 for 9000
+ 42263 strings out of 467866
+ 837943 string characters out of 5418325
+ 1332822 words of memory out of 5000000
+ 69440 multiletter control sequences out of 15000+600000
+ 739580 words of font info for 342 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  88i,21n,94p,3230b,1556s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu3
@@ -1749,9 +1745,9 @@ grams/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb><C:/Users/kelru/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (97 pages, 2187666 bytes).
+Output written on CYM.pdf (96 pages, 2176839 bytes).
 PDF statistics:
- 1934 PDF objects out of 2073 (max. 8388607)
- 402 named destinations out of 1000 (max. 500000)
+ 1928 PDF objects out of 2073 (max. 8388607)
+ 401 named destinations out of 1000 (max. 500000)
  52073 words of extra memory for PDF output out of 61914 (max. 10000000)
 

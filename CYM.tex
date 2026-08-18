@@ -716,7 +716,7 @@ Due to the length of this paper, we will start outlining the paper's main result
 
 \subsection{Summary}
 
-The gauge theory presented here will be based on principal bundles $\mathcal{P} \stackrel{\pi}{\to} M$, $M$ a smooth manifold, related to a right action of a Lie group bundle (LGB) $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$. The most important distinction to classical gauge theory is that the action $\Phi$ is a map
+The gauge theory presented here will be based on principal bundles $\pi\colon\mathcal{P} \to M$, $M$ a smooth manifold, related to a right action of a Lie group bundle (LGB) $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$. The most important distinction to classical gauge theory is that the action $\Phi$ is a map
 \begin{align*}
 \mathcal{P} * \mathcal{G} \coloneqq \pi^*\mathcal{G} &\to \mathcal{P},\\
 (p, g) &\mapsto p \cdot g,
@@ -4269,7 +4269,7 @@ Let us define morphisms of principal LGB-bundles
 
 \begin{definitions}{Morphism of principal bundles with structural LGB}{MorphOfPrincBundles}
 \reference{\cite[\S 5.7, page 144f.]{GroupoidBasedPrincipalBundles}}
-Let $M$ and $N$ be smooth manifolds, $\mathcal{H} \stackrel{\pi_{\mathcal{H}}}{\to} N$ and $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ LGBs, and $\mathcal{P}^\prime \stackrel{\pi^\prime}{\to} N$ and $\mathcal{P} \stackrel{\pi}{\to} M$ principal $\mathcal{H}$- and $\mathcal{G}$-bundles, respectively. A \textbf{principal bundle morphism} between $\mathcal{P}^\prime$ and $\mathcal{P}$ is a triple of smooth maps $F: \mathcal{H} \to \mathcal{G}$, $f: N \to M$ and $H: \mathcal{P}^\prime \to \mathcal{P}$ such that the pair $(F, f)$ is an LGB morphism as in \ref{def:LGB morphism} and
+Let $M$ and $N$ be smooth manifolds, $\mathcal{H} \stackrel{\pi_{\mathcal{H}}}{\to} N$ and $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ LGBs, and $\mathcal{P}^\prime \stackrel{\pi^\prime}{\to} N$ and $\pi\colon\mathcal{P} \to M$ principal $\mathcal{H}$- and $\mathcal{G}$-bundles, respectively. A \textbf{principal bundle morphism} between $\mathcal{P}^\prime$ and $\mathcal{P}$ is a triple of smooth maps $F: \mathcal{H} \to \mathcal{G}$, $f: N \to M$ and $H: \mathcal{P}^\prime \to \mathcal{P}$ such that the pair $(F, f)$ is an LGB morphism as in \ref{def:LGB morphism} and
 \begin{align*}
 \pi \circ H &= f \circ \pi^\prime~, \\
 H(p \cdot h) &= H(p) \cdot F(h)
@@ -4601,7 +4601,7 @@ We will refer to this structure often without further mention.
 We can actually show that $\mathcal{P}*\mathcal{G}$ is not only $\pi^*\mathcal{G}$ as pullback LGB by definition but it is also isomorphic to $\pi^*\mathcal{P}$ as principal bundle. For this recall \ref{ex:TrivialPrincAsLGB}, i.e.\ LGBs are "trivially" also principal bundles, hence we know that $\mathcal{P} * \mathcal{G}$ is a principal $\pi^*\mathcal{G}$-bundle.
 
 \begin{corollaries}{$\mathcal{P}*\mathcal{G}$ is the pullback of $\mathcal{P}$ along its projection}{ProductSpaceIsPItself}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Then we have a base-preserving principal bundle isomorphism 
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Then we have a base-preserving principal bundle isomorphism 
 \begin{align*}
 \mathcal{P}*\mathcal{G} &\cong \pi^*\mathcal{P}
 \end{align*}
@@ -4794,7 +4794,7 @@ This result was highly expected, however, the right-invariance for horizontal di
 %\end{figure}
 \end{center}
 
-For $\pi_\caG\colon\mathcal{G} \to M$ an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle we fix a point $p \in \mathcal{P}_x$ ($x \in M$) and can multiply that with an element $g \in \mathcal{G}_x$. Infinitesimally, we are interested into how this multiplication by $g$ affects tangent vectors, especially non-vertical ones.
+For $\pi_\caG\colon\mathcal{G} \to M$ an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle we fix a point $p \in \mathcal{P}_x$ ($x \in M$) and can multiply that with an element $g \in \mathcal{G}_x$. Infinitesimally, we are interested into how this multiplication by $g$ affects tangent vectors, especially non-vertical ones.
 
 However, as we have seen in \ref{def:LRTranslations} and \ref{prop:DiffOfLGBAction} (and its proof) the push-forward of horizontal vectors is not well-defined anymore on non-vertical vectors if one uses a fixed element of an LGB; $r_g$ is just a map $\mathcal{P}_x \to \mathcal{P}_x$. In order to study push-forwards of non-vertical vectors, we need information of the $\mathcal{G}$-action in an open neighbourhood $U$ around the fibres over $x$. Hence we want to use a section $\sigma \in \Gamma(\mathcal{G}|_U)$ with $\sigma_x= g$ instead.
 
@@ -6516,7 +6516,7 @@ for all $[p, h], \mleft[ p, h^\prime \mright] \in \mathcal{H}_x$. Thus, associat
 Last but not least, we have a corresponding connection 1-form. For this we need to formally define the pullback of 1-forms with respect to the modified right-pushforward.
 
 \begin{definitions}{The pullback of forms via modified right-pushforward}{PullbackOfFormsViaModRight}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a fixed horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. For $\omega \in \Omega^k(\mathcal{P}; \pi^*\mathcal{g})$ ($k \in \mathbb{N}_0$) we define the \textbf{pullback via the modified right-pushforward $\mathcal{r}_g^!\mleft(\mleft.\omega\mright|_{\mathcal{P}_x}\mright)$ (with $g\in\mathcal{G}_x$, over $\mathcal{P}_x$, $x \in M$)} as an element of $\Gamma \mleft( \Lambda^k\mleft.\mathrm{T}^*\mathcal{P}\mright|_{\mathcal{P}_x} \otimes \mathcal{g}_x \mright)$ by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$. For $\omega \in \Omega^k(\mathcal{P}; \pi^*\mathcal{g})$ ($k \in \mathbb{N}_0$) we define the \textbf{pullback via the modified right-pushforward $\mathcal{r}_g^!\mleft(\mleft.\omega\mright|_{\mathcal{P}_x}\mright)$ (with $g\in\mathcal{G}_x$, over $\mathcal{P}_x$, $x \in M$)} as an element of $\Gamma \mleft( \Lambda^k\mleft.\mathrm{T}^*\mathcal{P}\mright|_{\mathcal{P}_x} \otimes \mathcal{g}_x \mright)$ by
 \begin{align*}
 \mleft.\mleft(\mathcal{r}_g^!\mleft(\mleft.\omega\mright|_{\mathcal{P}_x}\mright)\mright)\mright|_p \mleft( Y_1, \dotsc, Y_k\mright)
 &\coloneqq
@@ -6533,21 +6533,20 @@ for all $p \in \mathcal{P}_x$ and $Y_1, \dotsc, Y_k \in \mathrm{T}_p\mathcal{P}$
 for all $p \in \mathcal{P}_x$ and $Y_1, \dotsc, Y_k \in \mathrm{T}_p\mathcal{P}$.
 \end{definitions}
 
-\begin{remark}
-\leavevmode\newline
-By Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} (and Remark \ref{rem:RSigmaAnAuto}) these definitions are well-defined. A short note about the notation on the very right hand side of the second definition: This notation allows us to extend it to vector fields, that is,
+\begin{remarks}{Extending to vector fields}{SectionPullbackModif}
+By \ref{prop:IsomorphismRightPushAndDarboux} (and \ref{rem:RSigmaAnAuto}) these definitions are well-defined. A short note about the notation on the very right hand side of the second definition: This notation allows us to extend it to vector fields, that is,
 \begin{align*}
 \mleft(\mathcal{r}_\sigma^!\omega\mright) \mleft( Y_1, \dotsc, Y_k\mright)
 =
 \mleft(r_\sigma^*\omega\mright)\bigl( \mathcal{r}_{\sigma*}(Y_1), \dotsc, \mathcal{r}_{\sigma*}(Y_k)\bigr)
 \end{align*}
-for all $p \in \mathcal{P}_x$ and $Y_1, \dotsc, Y_k \in \mathfrak{X}(\mathcal{P})$. Observe that we have $\mathcal{r}_{\sigma*}(Y_l) \in \Gamma\mleft(r_\sigma^*\mathrm{T}\mathcal{P}\mright)$ ($l \in \{1, \dotsc, k\}$) and $r_\sigma^*\omega \in \Gamma\mleft( \Lambda^k r_\sigma^*\mathrm{T}\mathcal{P} \otimes \pi^*\mathcal{g} \mright)$, using $r_\sigma^*\pi^*\mathcal{g} \cong (\pi \circ r_\sigma)^*\mathcal{g} = \pi^*\mathcal{g}$, such that the right hand side is well-defined.
-\end{remark}
+for all $Y_1, \dotsc, Y_k \in \mathfrak{X}(\mathcal{P})$. Observe that we have $\mathcal{r}_{\sigma*}(Y_l) \in \Gamma\mleft(r_\sigma^*\mathrm{T}\mathcal{P}\mright)$ ($l \in \{1, \dotsc, k\}$) and $r_\sigma^*\omega \in \Gamma\mleft( \Lambda^k r_\sigma^*\mathrm{T}\mathcal{P} \otimes \pi^*\mathcal{g} \mright)$, using $r_\sigma^*\pi^*\mathcal{g} \cong (\pi \circ r_\sigma)^*\mathcal{g} = \pi^*\mathcal{g}$, such that the right hand side is well-defined.
+\end{remarks}
 
-For the following definition recall the adjoint $\mathcal{G}$-representation on $\mathrm{V}\mathcal{P}$, Ex.\ \ref{ex:AdjointACtionOnVP}, and the isomorphism for $\mathrm{V}\mathcal{P}$ in Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}.
+For the following definition recall the adjoint $\mathcal{G}$-representation on $\mathrm{V}\mathcal{P}$, \ref{ex:AdjointACtionOnVP}, and the isomorphism for $\mathrm{V}\mathcal{P}$ in \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}.
 
 \begin{definitions}{Connection 1-forms on principal LGB-bundles}{GaugeBosonsOnLGBPrincies}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and we have a fixed horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$. A \textbf{connection 1-form} or \textbf{gauge field} on $\mathcal{P}$ is a 1-form $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ satisfying:
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$. A \textbf{connection 1-form} or \textbf{gauge field} on $\mathcal{P}$ is a 1-form $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ satisfying:
 \begin{itemize}
 	\item \textbf{($\mathcal{G}$-equivariance, but w.r.t.\ modified right-pushforward)}
 		\begin{align*} 
@@ -6566,60 +6565,58 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \end{itemize}
 \end{definitions}
 
-\begin{remark}\label{PointwiseNotationOfConnectioNOneForms}
-\leavevmode\newline
-\indent $\bullet$ Due to the fact that we formulated the $\mathcal{G}$-equivariance using Ex.\ \ref{ex:AdjointACtionOnVP}, one may already be able to show an analogue of the 1:1 correspondence of typical (classical) connection 1-forms to connection reforms and splittings of the Atiyah sequence; that is, a generalization of \cite[\S 3.2, page 90 ff.]{mackenzieGeneralTheory}.
-
-$\bullet$ The $\mathcal{G}$-equivariance reads point-wise for $g \coloneqq \sigma_x$ ($x\in M$)
-\begin{align*}
+\begin{remarks}{Pointwise notation}{PointwiseNotationOfConnectioNOneForms}
+%\indent $\bullet$ Due to the fact that we formulated the $\mathcal{G}$-equivariance using Ex.\ \ref{ex:AdjointACtionOnVP}, one may already be able to show an analogue of the 1:1 correspondence of typical (classical) connection 1-forms to connection reforms and splittings of the Atiyah sequence; that is, a generalization of \cite[\S 3.2, page 90 ff.]{mackenzieGeneralTheory}.
+The $\mathcal{G}$-equivariance reads point-wise for $g \coloneqq \sigma_x$ ($x\in M$)
+\begin{equation*}
 \mleft.\mleft(\mathcal{r}_g^! \mleft(A|_{\mathcal{P}_x}\mright)\mright)\mright|_{p}(X)
-&=
+=
 \mleft(
 	p \cdot g, 
 	\mathrm{Ad}_{g^{-1}}\mleft( \hat{A}_p(X) \mright)
 \mright)
-\end{align*}
+\end{equation*}
 for all $p \in \mathcal{P}_x$ and $X \in \mathrm{T}_p\mathcal{P}$,
 where we wrote $A_p = \mleft(p, \hat{A}_p\mright)$ with $\hat{A}_p \in \Gamma\mleft( \mathrm{T}^*_p\mathcal{P} \otimes \mathcal{g}_x \mright)$, and $\mathrm{Ad}$ is the adjoint representation of $\mathcal{G}$. In the typical formulation of gauge theory the base point component is usually omitted due to that $\mathcal{g}$ is then trivial and so also $\mathrm{V}\mathcal{P} (\cong \pi^*\mathcal{g})$.
 
 The identity on $\mathrm{V}\mathcal{P}$ reads pointwise
-\begin{align*}
+\begin{equation*}
 A_p(\overline{v_p})
-&=
+=
 (p, v_p)
-\end{align*}
+\end{equation*}
 for all $v_p \in \mathcal{g}_x$. For readability we may also omit the basepoint information and just write
-\begin{align*}
+\begin{equation*}
 A_p(\overline{v_p})
-&\equiv
+\equiv
 v_p.
-\end{align*}
-Furthermore, recall the notation introduced in Remark \ref{rem:FundVecNotationOnPullbackBundle}, then for $\mu \coloneqq (p, v_p)$ we can therefore write
-\begin{align*}
+\end{equation*}
+Furthermore, recall the notation introduced in \ref{rem:FundVecNotationOnPullbackBundle}, then for $\mu \coloneqq (p, v_p)$ we can therefore write
+\begin{equation*}
 A_p\mleft( \overline{\mu}_p \mright)
-&=
+=
 \mu.
-\end{align*}
-\end{remark}
+\end{equation*}
+\end{remarks}
 
 Finally, we identify (Ehresmann) connections and connection 1-forms on principal LGB-bundles in the typical way; for this recall Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}.
 
-\begin{theorems}{1:1 correspondence of Ehresmann connections and connection 1-forms}{OurConnectionHasAUniqueoneForm}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, and let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$. Then there is a 1:1 correspondence between Ehresmann connections and connection 1-forms on $\mathcal{P}$:
+\begin{theorems}{Ehresmann connections and connection 1-forms are 1:1}{OurConnectionHasAUniqueoneForm}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, and let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$. Then there is a 1:1 correspondence between Ehresmann connections and connection 1-forms on $\mathcal{P}$:
 \begin{itemize}
 	\item Let $\mathrm{H}\mathcal{P}$ be an Ehresmann connection on $\mathcal{P}$. Then $\mathrm{H}\mathcal{P}$ defines a connection 1-form $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ by
-	\begin{align*}
+	\begin{equation*}
 	A_p\bigl( \overline{v}_p + X_p \bigr)
-	&=
+	=
 	(p, v)
-	\end{align*}
+	\end{equation*}
 	for all $p \in \mathcal{P}_x$ ($x \in M$), $v \in \mathcal{g}_x$ and $X \in \mathrm{H}_p\mathcal{P}$.
 	\item Let $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then $A$ defines an Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$ via its kernel $\mathrm{Ker}(A)$, that is,
-	\begin{align*}
+	\begin{equation*}
 	\mathrm{H}_p\mathcal{P}
-	&=
+	=
 	\mathrm{Ker}(A_p)
-	\end{align*}
+	\end{equation*}
 	for all $p \in \mathcal{P}$.
 \end{itemize}
 \end{theorems}
@@ -6628,7 +6625,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 \leavevmode\newline
 The proof is very similar to the proof of "typical connections", as \textit{e.g.}\ provided in \cite[\S 5.2, Thm.\ 5.2.2, page 262]{Hamilton}.
 
-$\bullet$ For the first bullet point we need to show that Def.\ \ref{def:GaugeBosonsOnLGBPrincies} is satisfied, and the identity behaviour on $\mathrm{V}\mathcal{P}$ quickly follows by definition: We have
+$\bullet$ For the first bullet point we need to show that \ref{def:GaugeBosonsOnLGBPrincies} is satisfied, and the identity behaviour on $\mathrm{V}\mathcal{P}$ quickly follows by definition: We have
 \begin{align*}
 \mleft.A\mleft( \overline{\nu} \mright)\mright|_{p}
 &=
@@ -6638,7 +6635,7 @@ A_p\mleft( \overline{\nu}_p \mright)
 =
 \mleft.\mleft(\pi^*\nu\mright)\mright|_p
 \end{align*}
-for all $\nu \in \Gamma(\mathcal{g})$ and $p \in \mathcal{P}_x$ ($x \in M$). Therefore it is only left to show the $\mathcal{G}$-equivariance. As mentioned in Remark \ref{rem:FundVecsNotations}, for $v\in \mathcal{g}_x$ the vector field $\overline{v}$ on $\mathcal{P}_x$ is a fundamental vector field coming from the $\mathcal{G}_x$-action on $\mathcal{P}_x$. Hence, we know by \cite[\S 3.4, Prop.\ 3.4.6, page 145f.]{Hamilton}\ that
+for all $\nu \in \Gamma(\mathcal{g})$ and $p \in \mathcal{P}_x$ ($x \in M$). Therefore it is only left to show the $\mathcal{G}$-equivariance. As mentioned in \ref{rem:FundVecsNotations}, for $v\in \mathcal{g}_x$ the vector field $\overline{v}$ on $\mathcal{P}_x$ is a fundamental vector field coming from the $\mathcal{G}_x$-action on $\mathcal{P}_x$. Hence, we know, e.g.\ by \cite[\S 3.4, Prop.\ 3.4.6, page 145f.]{Hamilton}, that
 \begin{align*}
 \mathcal{r}_{g*}\mleft( \overline{v} \mright)
 &=
@@ -6646,7 +6643,7 @@ r_{g*}\mleft( \overline{v} \mright)
 =
 \overline{\mathrm{Ad}_{g^{-1}}(v)}
 \end{align*}
-for all $g \in \mathcal{G}_x$, also using Remark \ref{rem:ModRightPushOnVertic}.\footnote{This is very straightforward to prove.} Thus,
+for all $g \in \mathcal{G}_x$, also using \ref{rem:ModRightPushOnVertic}.\footnote{This is very straightforward to prove.} Thus,
 \begin{align*}
 \mleft.\mleft(\mathcal{r}^!_\sigma A\mright)\mright|_p\bigl( \overline{v}_p + X_p \bigr)
 &=
@@ -6670,40 +6667,40 @@ A_{p \cdot \sigma_x}\bigl(
 \end{align*}
 for all $p \in \mathcal{P}_x$, $\sigma \in \Gamma(\mathcal{G})$, $v \in \mathcal{g}_x$ and $X_p \in \mathrm{H}_p\mathcal{P}$. This finishes the proof for the first bullet point.
 
-$\bullet$ For the second bullet point we make use of Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} and
+$\bullet$ For the second bullet point we make use of \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} and
 \begin{align*}
 A\mleft( \overline{\nu} \mright)
 &=
 \pi^*\nu
 \end{align*}
-for all (local) sections $\nu \in \Gamma(\mathcal{g})$. This implies that $A$ has not only values in $\mathrm{V}\mathcal{P}$, but acts also as identity on $\mathrm{V}\mathcal{P}$. Thus, $\mathrm{H}\mathcal{P} = \mathrm{Ker}(A_p)$ is a complementary subspace of $\mathrm{V}_p\mathcal{P}$ in $\mathrm{T}_p\mathcal{P}$ for all $p \in \mathcal{P}$. In order to show that $\mathrm{H}\mathcal{P}$ is a horizontal distribution of $\mathcal{P}$, we fix a local frame $\mleft( e_a \mright)_a$ of $\mathcal{g}$ over $U$ (an open subset of $M$), so that $\mleft( \pi^*e_a \mright)_a$ is a frame of $\pi^*\mathcal{g}|_{\pi^{-1}(U)}$. Therefore we write
-\begin{align*}
-A
-&=
-A^a \otimes \pi^*e_a,
-\end{align*}
-where $A^a \in \Omega^1\mleft( \mathcal{P}|_U \mright)$. Due to $A\mleft( \overline{\nu} \mright) = \pi^*\nu$ we get
-\begin{align*}
-A^a\mleft( \overline{e_b} \mright)
-&=
-\delta^a_b,
-\end{align*}
-where $\delta^a_b$ is the Kronecker delta. Hence, $\mleft( A^a \mright)_a$ is the dual frame of $\mleft( \overline{e_a} \mright)_a$, which is a frame of $\mathrm{V}\mathcal{P}$ by Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}, and so the $A^a$ are linear independent to each other. Fix an auxiliary fibre metric $\langle \cdot, \cdot \rangle$ on $\mathrm{T}\mathcal{P}$, and denote with $\mleft(V^a\mright)_a$ the $\langle \cdot, \cdot \rangle$-dual frame to $\mleft(A^a\mright)_a$, \textit{i.e.}\
-\begin{align*}
-A^a 
-&=
-\langle V^a, \cdot \rangle.
-\end{align*}
-Due to the smoothness of $A$ and due to that $\langle \cdot, \cdot \rangle$ is a fibre metric, $\mleft(V^a\mright)_a$ are smooth (local) vector fields on $\mathcal{P}$, linear independent to each other. Observe that any orthogonal frame $\mleft(W^\alpha\mright)_\alpha$ to $\mleft(V^a\mright)_a$ satisfies
-\begin{align*}
-A^a(W^\alpha)
-&=
-\langle V^a, W^\alpha \rangle
-=
-0.
-\end{align*}
-Thus, we derived that $\mathrm{Ker}(A)|_U$ is spanned by such frames $\mleft(W^\alpha\mright)_\alpha$, in total, $\mathrm{Ker}(A)$ is spanned by a locally free sheaf of modules of constant rank. By the 1:1 correspondence of vector bundle and locally free sheaf of modules of constant rank, we can conclude that $\mathrm{H}\mathcal{P} = \mathrm{Ker}(A)$ is a subbundle of $\mathrm{T}\mathcal{P}$; complementary to $\mathrm{V}\mathcal{P}$ due to what we have shown earlier.
-
+for all (local) sections $\nu \in \Gamma(\mathcal{g})$. This implies that $A$ has not only values in $\mathrm{V}\mathcal{P}$, but acts also as identity on $\mathrm{V}\mathcal{P}$ and has thus constant rank. Thus, $\mathrm{H}\mathcal{P} = \mathrm{Ker}(A)$ is a distribution complementary to $\mathrm{V}\mathcal{P}$.
+%In order to show that $\mathrm{H}\mathcal{P}$ is a horizontal distribution of $\mathcal{P}$, we fix a local frame $\mleft( e_a \mright)_a$ of $\mathcal{g}$ over $U$ (an open subset of $M$), so that $\mleft( \pi^*e_a \mright)_a$ is a frame of $\pi^*\mathcal{g}|_{\pi^{-1}(U)}$. Therefore we write
+%\begin{align*}
+%A
+%&=
+%A^a \otimes \pi^*e_a,
+%\end{align*}
+%where $A^a \in \Omega^1\mleft( \mathcal{P}|_U \mright)$. Due to $A\mleft( \overline{\nu} \mright) = \pi^*\nu$ we get
+%\begin{align*}
+%A^a\mleft( \overline{e_b} \mright)
+%&=
+%\delta^a_b,
+%\end{align*}
+%where $\delta^a_b$ is the Kronecker delta. Hence, $\mleft( A^a \mright)_a$ is the dual frame of $\mleft( \overline{e_a} \mright)_a$, which is a frame of $\mathrm{V}\mathcal{P}$ by \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual}, and so the $A^a$ are linear independent to each other. Fix an auxiliary fibre metric $\langle \cdot, \cdot \rangle$ on $\mathrm{T}\mathcal{P}$, and denote with $\mleft(V^a\mright)_a$ the $\langle \cdot, \cdot \rangle$-dual frame to $\mleft(A^a\mright)_a$, \textit{i.e.}\
+%\begin{align*}
+%A^a 
+%&=
+%\langle V^a, \cdot \rangle.
+%\end{align*}
+%Due to the smoothness of $A$ and due to that $\langle \cdot, \cdot \rangle$ is a fibre metric, $\mleft(V^a\mright)_a$ are smooth (local) vector fields on $\mathcal{P}$, linear independent to each other. Observe that any orthogonal frame $\mleft(W^\alpha\mright)_\alpha$ to $\mleft(V^a\mright)_a$ satisfies
+%\begin{align*}
+%A^a(W^\alpha)
+%&=
+%\langle V^a, W^\alpha \rangle
+%=
+%0.
+%\end{align*}
+%Thus, we derived that $\mathrm{Ker}(A)|_U$ is spanned by such frames $\mleft(W^\alpha\mright)_\alpha$, in total, $\mathrm{Ker}(A)$ is spanned by a locally free sheaf of modules of constant rank. By the 1:1 correspondence of vector bundles and locally free sheaves of modules of constant rank, we can conclude that $\mathrm{H}\mathcal{P} = \mathrm{Ker}(A)$ is a subbundle of $\mathrm{T}\mathcal{P}$; complementary to $\mathrm{V}\mathcal{P}$ due to what we have shown earlier.
 It is only left to show the right-invariance of $\mathrm{H}\mathcal{P}$. So let $X \in \mathrm{H}_p\mathcal{P}$ for $p \in \mathcal{P}$. Then
 \begin{align*}
 A_{p \cdot \sigma_x}\bigl( \mathcal{r}_{\sigma*}(X) \bigr)
@@ -6714,7 +6711,7 @@ A_{p \cdot \sigma_x}\bigl( \mathcal{r}_{\sigma*}(X) \bigr)
 =
 0
 \end{align*}
-for all (local) $\sigma \in \Gamma(\mathcal{G})$, where $x \coloneqq \pi(p)$. Thence, $\mathcal{r}_{\sigma*}(X) = \mathcal{r}_{\sigma_x*}(X) \in \mathrm{H}_{p \cdot \sigma_x}\mathcal{P}$, and therefore we derive by Prop.\ \ref{prop:IsomorphismRightPushAndDarboux} and dimensional reasons that $\mathcal{r}_{\sigma_x*}\mleft(\mathrm{H}_p \mathcal{P}\mright) = \mathrm{H}_{p \cdot \sigma_x}\mathcal{P}$. We eventually conclude that $\mathrm{H}\mathcal{P}$ is an Ehresmann connection.
+for all (local) $\sigma \in \Gamma(\mathcal{G})$, where $x \coloneqq \pi(p)$. Thence, $\mathcal{r}_{\sigma*}(X) = \mathcal{r}_{\sigma_x*}(X) \in \mathrm{H}_{p \cdot \sigma_x}\mathcal{P}$, and therefore we derive by \ref{prop:IsomorphismRightPushAndDarboux} and dimensional reasons that $\mathcal{r}_{\sigma_x*}\mleft(\mathrm{H}_p \mathcal{P}\mright) = \mathrm{H}_{p \cdot \sigma_x}\mathcal{P}$. Henceforth $\mathrm{H}\mathcal{P}$ is an Ehresmann connection.
 \end{proof}
 
 We finish this subsection with the following technical and useful corollary.
@@ -6732,9 +6729,8 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \t
 for all $g \in \mathcal{G}$.
 \end{corollaries}
 
-\begin{remark}\label{RemOohThesePullbacksConfusOrNotToConfus}
-\leavevmode\newline
-This extends of course to (local) sections $\sigma \in \Gamma(\mathcal{G})$, and as discussed in Remark \ref{rem:RemarkABoutDarbouxNotationWRTPullback} we can extend these equations to vector fields on $\mathcal{P}$ via pullbacks, that is,
+\begin{remarks}{Extending to sections}{RemOohThesePullbacksConfusOrNotToConfus}
+This extends of course to (local) sections $\sigma \in \Gamma(\mathcal{G})$, and as discussed in \ref{rem:RemarkABoutDarbouxNotationWRTPullback} we can extend these equations to vector fields on $\mathcal{P}$ via pullbacks, that is,
 \begin{align*}
 \mathcal{r}_{\sigma*} \circ \pi_h
 &=
@@ -6743,12 +6739,12 @@ r_\sigma^*\pi_h \circ \mathcal{r}_{\sigma*},\\
 &=
 r_\sigma^*\pi_v \circ \mathcal{r}_{\sigma*},
 \end{align*}
-making use of that $\mathcal{r}_{\sigma*}$ is an isomorphism over $r_{\sigma*}$, recall Prop.\ \ref{prop:IsomorphismRightPushAndDarboux}.
-\end{remark}
+making use of that $\mathcal{r}_{\sigma*}$ is an isomorphism over $r_{\sigma*}$, recall \ref{prop:IsomorphismRightPushAndDarboux}.
+\end{remarks}
 
-\begin{proof}
+\begin{proof}[Proof of \ref{cor:ModifiedRightPushyCommutesWithProj}]
 \leavevmode\newline
-By Cor.\ \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} (also recall Remark \ref{rem:ModRightPushOnVertic}) and Def.\ \ref{def:FinallyTheConnection} we have
+By \ref{cor:VerticalBundleOfPrincIsNearlyAsUsual} (also recall \ref{rem:ModRightPushOnVertic}) and \ref{def:FinallyTheConnection} we have
 \begin{align*}
 \mathcal{r}_{g*}\mleft(\mathrm{V}_p\mathcal{P}\mright)
 &=
@@ -6762,10 +6758,10 @@ thus, $\mathcal{r}_{g*}$ preserves the splitting $\mathrm{T}\mathcal{P} = \mathr
 
 \subsection{Gauge transformations}\label{GaugeTrafoForA}
 
-Let us now look at how gauge transformations of $A$ look like in this setting; for this recall the definition of gauge transformations in Def.\ \ref{def:MorphOfPrincBundles}. As in Remark \ref{rem:ClassGaugeTrafosAndcgPMulti} we expect a relationship between gauge transformations and certain LGB valued maps. For the following also recall Ex.\ \ref{ex:ConjugationActionForTheGeneralInnerGroupBundle}.
+Let us now study gauge transformations of $A$; for this recall the definition of gauge transformations in \ref{def:MorphOfPrincBundles}. As in ordinary gauge theory we expect a relationship between gauge transformations and certain LGB valued maps. For the following also recall \ref{ex:ConjugationActionForTheGeneralInnerGroupBundle}.
 
 \begin{definitions}{LGB-valued conjugation maps}{GaugeTrafosLGBMaps}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Then we define the group \textbf{$C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ of $\mathcal{G}$-valued conjugation maps} as a set by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Then we define the group \textbf{$C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ of $\mathcal{G}$-valued conjugation maps} as a set by
 \begin{align*}
 C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}
 &=
@@ -6778,7 +6774,7 @@ C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}
 	\text{ for all } (p, g) \in \mathcal{P}*\mathcal{G}
 \bigr\}.
 \end{align*}
-Its group structure is inherited by the point-wise group structure of $\Gamma(\pi^*\mathcal{G})$; recall Cor.\ \ref{cor:PullbackLGB}.
+Its group structure is inherited by the point-wise group structure of $\Gamma(\pi^*\mathcal{G})$; recall \ref{cor:PullbackLGB}.
 \end{definitions}
 
 \begin{remarks}{Group structure on $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$}{GroupStructureOnCInftPGG}
@@ -6786,32 +6782,32 @@ It is trivial to check that $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ i
 \end{remarks}
 
 $C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ canonically acts on $\mathcal{P}$ on the right via the given $\mathcal{G}$-action: Let $\sigma \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$, then we define
-\begin{align}\label{MultiWithPulli}
+\begin{equation}\label{MultiWithPulli}
 p \cdot \sigma_p
-&\coloneqq
+\coloneqq
 p \cdot \mathrm{pr}_2\mleft( \sigma_p \mright)
-\end{align}
-for all $p \in \mathcal{P}$, where $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. In essence, we drop the notation of $\mathrm{pr}_2$, as if we view $\sigma$ as a map $\mathcal{P} \to \mathcal{G}$ of fibre bundles over $\pi$; recall Subsection \ref{BasicNotations}. If we denote the right $\mathcal{G}$-action on $\mathcal{P}$ by $\Phi$, then observe by $\sigma_p = (p, \mathrm{pr}_2(\sigma_p))$ that we could also write
-\begin{align*}
+\end{equation}
+for all $p \in \mathcal{P}$, where $\mathrm{pr}_2\colon \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. In essence, we drop the notation of $\mathrm{pr}_2$, as if we view $\sigma$ as a map $\mathcal{P} \to \mathcal{G}$ of fibre bundles over $\pi$; recall \ref{BasicNotations}. If we denote the right $\mathcal{G}$-action on $\mathcal{P}$ by $\Phi$, then observe by $\sigma_p = (p, \mathrm{pr}_2(\sigma_p))$ that we could also write
+\begin{equation*}
 p \cdot \sigma_p
-&=
+=
 \Phi \bigl( p, \mathrm{pr}_2\mleft( \sigma_p \mright) \bigr)
 =
-\Phi\mleft( \sigma_p \mright).
-\end{align*}
+\Phi\mleft( \sigma_p \mright)~.
+\end{equation*}
 
 As in the case of typical/classical principal bundles, we have the following statement.
 
 \begin{propositions}{Gauge transformations as $\mathcal{G}$-valued conjugation maps}{GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Then there is a well-defined group isomorphism of gauge transformations and $\mathcal{G}$-valued conjugation maps given by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Then there is a well-defined group isomorphism of gauge transformations and $\mathcal{G}$-valued conjugation maps given by
 \begin{align*}
 \sAut(\mathcal{P}) &\to C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}},\\
 H &\mapsto \sigma^H,
 \end{align*}
 where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined by
-\begin{align*}
-H(p) &= p \cdot \sigma^H_p
-\end{align*}
+\begin{equation*}
+H(p) = p \cdot \sigma^H_p
+\end{equation*}
 for all $p \in \mathcal{P}$.
 \end{propositions}
 
@@ -6820,14 +6816,14 @@ for all $p \in \mathcal{P}$.
 This result can be proven similarly as for Lie group based principal bundles; however smoothness needs to be discussed a bit. In the following we make use of that pullback manifolds like $\mathcal{P}*\mathcal{G}$ are embedded submanifolds of product manifolds like $\mathcal{P}\times\mathcal{G}$, we will not further mention it.
 
 $\bullet$ First of all, due to the fact that $H$ is base-preserving we know that $H(p)$ is in the same fibre as $p$ ($p \in \mathcal{P}$), and due to that the $\mathcal{G}$-action on $\mathcal{P}$ is simply transitive there is a unique element of $\pi^*\mathcal{G}|_p$, denoted by $\sigma^H_p$, such that
-\begin{align*}
+\begin{equation*}
 H(p)
-&=
+=
 p \cdot \sigma_p^H
 =
 p \cdot \mathrm{pr}_2\mleft(\sigma_p^H\mright),
-\end{align*}
-where $\mathrm{pr}_2: \mathcal{P}*\mathcal{G} = \pi^*\mathcal{G} \to \mathcal{G}$ is the smooth projection onto the second component.
+\end{equation*}
+where $\mathrm{pr}_2\colon \mathcal{P}*\mathcal{G} = \pi^*\mathcal{G} \to \mathcal{G}$ is the smooth projection onto the second component.
 Let us first show smoothness of $p \mapsto \sigma_p^H$: We can write
 \begin{align*}
 H(p) &= \Phi_p \Bigl( \mathrm{pr}_2\mleft(\sigma_p^H\mright) \Bigr),
@@ -6948,7 +6944,7 @@ for all $(p, g) \in \mathcal{P} * \mathcal{G}$. Thus, $H^\sigma \in \sAut(\mathc
 Using this, we can finally formulate the gauge transformations of connection 1-forms; for this recall Cor.\ \ref{cor:PullBacksArePrincToo} and the Darboux derivative, Def.\ \ref{def:DarbouxDerivativeOnLGBs}. Also recall the pullback Darboux derivative, Remark \ref{rem:PullBackDarboux}.
 
 \begin{propositions}{Gauge transformations of connection 1-forms}{GaugeTrafoOfGaugeBoson}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. We then have that $H^!A$ is a connection 1-form on $\mathcal{P}$ and
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. We then have that $H^!A$ is a connection 1-form on $\mathcal{P}$ and
 \begin{align*}
 H^!A
 &=
@@ -7199,7 +7195,7 @@ which finishes the proof, where we used the trivial relation (alternatively reca
 Of course there is also the sense of gauge transformation with respect to gauges as in typical gauge theory (see \textit{e.g.}\ \cite[\S 5.4, page 270ff.]{Hamilton}), recall Def.\ \ref{def:GaugesOfPrincipalBundles}.
 
 \begin{definitions}{Local gauge field}{LocalGaugeField}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we define the \textbf{local connection 1-form} of \textbf{local gauge field $A_s \in \Omega^1\mleft(U; \mleft.\mathcal{g}\mright|_U\mright)$ (w.r.t.\ $s$)} by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we define the \textbf{local connection 1-form} of \textbf{local gauge field $A_s \in \Omega^1\mleft(U; \mleft.\mathcal{g}\mright|_U\mright)$ (w.r.t.\ $s$)} by
 \begin{align*}
 A_s
 &\coloneqq
@@ -7246,11 +7242,11 @@ for all $p \in \mathcal{P}_{U_j}$, that is, $\Phi^{-1}_{s_j}$ is the inverse of 
 Instead of calculating directly how $A_{s_i}$ and $A_{s_j}$ are related we want to use Thm.\ \ref{prop:GaugeTrafoOfGaugeBoson}. For this it will be useful to understand that gauge transformations $\sAut(\mathcal{P})$ are locally isomorphic to the group of sections $\Gamma(\mathcal{G})$ via a gauge, analogously to the typical formulation of gauge theory as \textit{e.g.}\ illustrated in \cite[\S 5.3.2, page 268f.]{Hamilton}. While the isomorphism of $\sAut(\mathcal{P})$ to $C^\infty(\mathcal{P};\mathcal{G})^{\mathcal{G}} \subset \Gamma(\pi^*\mathcal{G})$ is global, the following isomorphism is in general only local.
 %
 %\begin{definitions}{Physical gauge transformation}{PhysicalGaugeTrafo}
-%Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. A \textbf{physical gauge transformation $\tau$} is an element of $\Gamma(\mathcal{G})$.
+%Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. A \textbf{physical gauge transformation $\tau$} is an element of $\Gamma(\mathcal{G})$.
 %\end{definitions}
 
 \begin{propositions}{Gauge transformations and sections of the structural LGB}{GaugeTrafosAsLGBSectionsLocal}
-Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Also let $s \in \Gamma\mleft(\mleft.\mathcal{P}\mright|_U\mright)$ be a gauge defined over some open subset $U$ of $M$. Then we have a group isomorphism given by
+Let $\mathcal{G} \stackrel{\pi_{\mathcal{G}}}{\to} M$ be an LGB over a smooth manifold $M$, and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Also let $s \in \Gamma\mleft(\mleft.\mathcal{P}\mright|_U\mright)$ be a gauge defined over some open subset $U$ of $M$. Then we have a group isomorphism given by
 \begin{align*}
 C^\infty \mleft( \mleft.\mathcal{P}\mright|_U; \mleft.\mathcal{G}\mright|_U \mright)^{\mleft.\mathcal{G}\mright|_U} 
 &\to 
@@ -7385,7 +7381,7 @@ for all $x \in M$. This finishes the proof.
 \end{proof}
 
 \begin{propositions}{Change of gauge as a local bundle automorphism}{GaugeChangeAsBundleAutomorph}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
 
 Then the map $H_{ji}$ defined by
 \begin{align*}
@@ -7472,7 +7468,7 @@ thus, $\sigma^{H_{ji}}$ is related to $\sigma_{ji}$ w.r.t.\ $s_j$ in sense of Pr
 Using this gauge transformation we can now relate $A_{s_i}$ and $A_{s_j}$.
 
 \begin{propositions}{Gauge transformations as a change of gauge}{LocalGaugeTrafoChangeGauge}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
 
 Then we have over $U_i \cap U_j$ that
 \begin{align*}
@@ -7715,7 +7711,7 @@ To answer whether or not $\mathrm{H}\mathcal{G}$ is an Ehresmann connection we j
 &=
 \pi_{\mathcal{G}}^*\nu.
 \end{align*}
-%By Cor.\ \ref{cor:TotMCFormIsConnectionForm} we know that $\mutot$ satisfies Def.\ \ref{def:GaugeBosonsOnLGBPrincies}; also recall the second part of Rem.\ \ref{PointwiseNotationOfConnectioNOneForms}. 
+%By Cor.\ \ref{cor:TotMCFormIsConnectionForm} we know that $\mutot$ satisfies Def.\ \ref{def:GaugeBosonsOnLGBPrincies}; also recall the second part of Rem.\ \ref{rem:PointwiseNotationOfConnectioNOneForms}. 
 By additionally using Thm.\ \ref{prop:DiffOfLGBAction} (especially the associated Rem.\ \ref{rem:DarbouxInActionInfinit}) we show
 \begin{align*}
 \mleft(\mutot\mright)_{gq}\mleft( \mathrm{D}_{(g,q)}\Phi(X, Y) \mright)
@@ -8023,7 +8019,7 @@ Combining both identities for $R_{\overline{\nabla}^\sigma}$ we conclude with a 
 We also get a generalization of statements like \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}:
 
 \begin{lemmata}{Lie bracket of horizontal and vertical vector}{BracketVertHor}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have
 \begin{align*}
 A\mleft( \mleft[ X, \overline{\nu} \mright] \mright)
 &=
@@ -8748,7 +8744,7 @@ This proof gives a certain interpretation of $\nabla^\caG$ and $\zeta$: In the c
 Let us now introduce and discuss the field strength.
 
 \begin{definitions}{(Generalized) Field strength}{NewFieldStrength}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we define the \textbf{(generalized) curvature} or \textbf{(generalized) field strength $F$ (of $A$)} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we define the \textbf{(generalized) curvature} or \textbf{(generalized) field strength $F$ (of $A$)} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
 \begin{align*}
 F
 &\coloneqq
@@ -8768,7 +8764,7 @@ for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
 Of course, we expect certain properties, naturally generalized by our previous discussions:
 
 \begin{propositions}{Properties of the generalized field strength}{NewFieldStrengthWithCoolProps}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
 \begin{itemize}
 	\item \textbf{(Form of type $\sAd$)}
 	\begin{align*}
@@ -8823,7 +8819,7 @@ We have for $\sigma \in \Gamma(\mathcal{G})$
 &=
 \mleft(\pi^!\zeta\mright)_p(X, Y)
 \end{align*}
-for all $p \in \mathcal{P}_x$ ($x \in M$) and $X, Y \in \mathrm{T}_p\mathcal{P}$, making use of that fundamental vector fields are in the kernel of $\mathrm{D}\pi$ so that $\mathrm{D}\pi \circ \mathcal{r}_{\sigma_x*} = \mathrm{D}\pi \circ r_{\sigma_x*}$. For the first term in the field strength use Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj} and Remark \ref{RemOohThesePullbacksConfusOrNotToConfus} so that
+for all $p \in \mathcal{P}_x$ ($x \in M$) and $X, Y \in \mathrm{T}_p\mathcal{P}$, making use of that fundamental vector fields are in the kernel of $\mathrm{D}\pi$ so that $\mathrm{D}\pi \circ \mathcal{r}_{\sigma_x*} = \mathrm{D}\pi \circ r_{\sigma_x*}$. For the first term in the field strength use Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj} and Remark \ref{rem:RemOohThesePullbacksConfusOrNotToConfus} so that
 \begin{align*}
 \mathcal{r}_\sigma^!\mleft(\mathrm{d}^{\pi^*\nabla^\caG} A \circ \mleft( \pi_h, \pi_h \mright)\mright)
 &=
@@ -9145,7 +9141,7 @@ Finally, we can conclude this proof by combining the previous result with our fi
 We achieve of course also a structure equation.
 
 \begin{propositions}{Structure equation of the generalized field strength}{StructureEq}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the \textbf{structure equation}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the \textbf{structure equation}
 \begin{align*}
 F
 =
@@ -9292,7 +9288,7 @@ F\mleft(X, \overline{\nu}\mright)
 Concluding this subsubsection, we also achieve a generalized Bianchi identity, which we already have proven in \cite[\S 7, Thm.\ 7.3]{My1stpaper} and \cite[\S 5, Thm.\ 5.1.42]{MyThesis}; the proof is straightforward to show, making use of the infinitesimal compatibility conditions, Def.\ \ref{def:YangMillsConnection}.
 
 \begin{lemmata}{Generalized Bianchi identity, \cite[\S 5, Thm.\ 5.1.42]{MyThesis}}{GenBianchi}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the \textbf{(generalized) Bianchi identity}
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the \textbf{(generalized) Bianchi identity}
 \begin{align*}
 \mathrm{d}^{\pi^*\nabla^\caG}F
 	+ \mleft[ A \stackrel{\wedge}{,} F \mright]_{\pi^*\mathcal{g}}
@@ -9306,7 +9302,7 @@ Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \s
 Similar to Subsection \ref{GaugeTrafoForA} we will now discuss the gauge transformation of the generalized field strength $F$; recall Thm.\ \ref{prop:GaugeTrafoOfGaugeBoson}.
 
 \begin{propositions}{Gauge transformation of the generalized field strength}{GaugeTrafoOfCurv}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. We then have that $H^!F$ is the field strength related to $H^!A$ and
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. We then have that $H^!F$ is the field strength related to $H^!A$ and
 \begin{align*}
 H^!F
 &=
@@ -9365,7 +9361,7 @@ for all $X, Y \in \mathrm{T}_p \mathcal{P}$; this finishes the proof.
 We will now extend this again to a local change of gauges (sections of $\mathcal{P}$).
 
 \begin{definitions}{Local field strength}{LocalFieldStrength}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we define the \textbf{local curvature} of \textbf{local field strength $F_s \in \Omega^2\mleft(U; \mleft.\mathcal{g}\mright|_U\mright)$ (w.r.t.\ $s$)} by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we define the \textbf{local curvature} of \textbf{local field strength $F_s \in \Omega^2\mleft(U; \mleft.\mathcal{g}\mright|_U\mright)$ (w.r.t.\ $s$)} by
 \begin{align*}
 F_s
 &\coloneqq
@@ -9376,7 +9372,7 @@ s^!F.
 In previous calculations for the total Maurer-Cartan form and the generalized Maurer-Cartan equation we have basically already shown the pullback of the structure equation.
 
 \begin{corollaries}{Pullback of the structure equation}{PullbackOfStructureEq}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we can express the local field strength as the pullback of the structure equation, that is,
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we can express the local field strength as the pullback of the structure equation, that is,
 \begin{align*}
 F_s
 &=
@@ -9394,7 +9390,7 @@ This follows quickly by the same calculation as for proving Eq.\ \eqref{Pullback
 The gauge transformation of the field strength $F$ describes the behaviour of $F$ under a change of gauge.
 
 \begin{propositions}{Gauge transformations again as a change of gauge}{LocalGaugeTrafoChangeGaugeFieldStrength}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\mathcal{P} \stackrel{\pi}{\to} M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
 
 Then we have for the fields strength of $A$ over $U_i \cap U_j$ that
 \begin{align*}
@@ -9428,7 +9424,7 @@ We eventually are able to conclude this paper with the definition of what we wil
 for all $g \in \mathcal{G}_x$ ($x \in M$) and $\mu, \nu \in \mathcal{g}_x$.
 
 \begin{corollaries}{Contraction of local field strength with Ad-invariant fibre metric is well-defined}{ContractionOfLocalFIeldWellDefined}
-Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $\mleft( U_i \mright)_i$ be an open covering of $M$ so that there are subordinate gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$.
+Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\pi\colon\mathcal{P} \to M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $\mleft( U_i \mright)_i$ be an open covering of $M$ so that there are subordinate gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$.
 
 Then the top-degree form $\mathfrak{L}_{\mathrm{CYM}}[A] \in \Omega^{\mathrm{dim}(M)}(M; \mathbb{R})$, defined locally by
 \begin{align*}
@@ -9453,7 +9449,7 @@ using the $\mathrm{Ad}$-invariance of $\kappa$. This concludes the proof.
 \end{proof}
 
 \begin{definitions}{Curved Yang-Mills gauge theory}{CYMGTFinally}
-Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
+Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\pi\colon\mathcal{P} \to M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
 
 Then the functional $A \mapsto \mathfrak{L}_{\mathrm{CYM}}[A]$ is called the \textbf{curved Yang-Mills Lagrangian}, where $\mathfrak{L}_{\mathrm{CYM}}[A]$ is defined in Cor.\ \ref{cor:ContractionOfLocalFIeldWellDefined}.
 \end{definitions}
@@ -9461,7 +9457,7 @@ Then the functional $A \mapsto \mathfrak{L}_{\mathrm{CYM}}[A]$ is called the \te
 By construction, this Lagrangian is gauge-invariant.
 
 \begin{theorems}{Gauge invariance of the curved Yang-Mills Lagrangian}{GaugeInvarianceOfLagrangian}
-Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
+Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\pi\colon\mathcal{P} \to M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
 
 Then we have
 \begin{align*}
@@ -9565,7 +9561,7 @@ In fact, a simple field redefinition of an Ehresmann connection preserves the co
 \ees
 
 \begin{theorems}{Field redefinition of Ehresmann connections}{EhresmannTransformedEhresmann}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\mathcal{P} \stackrel{\pi}{\to} M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mutot$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \cag)$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$ w.r.t.\ $\mutot$. We define the \textbf{field redefinitions w.r.t.\ $\lambda \in \Omega^1(M; \mathcal{g})$ of $A$} by
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\pi\colon\mathcal{P} \to M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mutot$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \cag)$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$ w.r.t.\ $\mutot$. We define the \textbf{field redefinitions w.r.t.\ $\lambda \in \Omega^1(M; \mathcal{g})$ of $A$} by
 \bes
 A^\lambda
 \coloneqq
