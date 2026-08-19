@@ -7691,7 +7691,7 @@ for all $(g, q) \in \mathcal{G}*\mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(g, q)}
 where $\Phi\colon \mathcal{G} * \mathcal{G} \to \mathcal{G}$ is the multiplication in $\mathcal{G}$, and $\widehat{\omega} \coloneqq \mathrm{pr}_2 \circ \omega$, where $\mathrm{pr}_2\colon \pi_{\mathcal{G}}^*\mathcal{g} \to \mathcal{g}$ is the natural projection onto the second component.
 \end{definitions}
 
-\begin{remarks}{Ah, those nasty base points}{sloppynotationformultiplicativity}
+\begin{remarks}{Ah, those nasty base points}{rem:sloppynotationformultiplicativity}
 The shape of the second summand is again just because of technical reasons due to the definition of pullback bundles and their base points. If we do not care so much about the involved base points since these are clear by context, then we can also shortly write
 \begin{equation*}
 \mleft(\Phi^!\omega\mright)_{(g, q)}(X, Y)
@@ -7702,24 +7702,24 @@ The shape of the second summand is again just because of technical reasons due t
 Also recall what we mentioned in \ref{BasicNotations} about pullback sections.
 \end{remarks}
 
-\begin{propositions}{Ehresmann connection 1-forms on LGBs are multiplicative}{TotMaurerIsMultiplicativeIfSEqual0}
+\begin{theorems}{Ehresmann connection 1-forms on LGBs are multiplicative}{TotMaurerIsMultiplicativeIfSEqual0}
 \tcbsubtitle[before skip=\baselineskip]{\cite[\S 4.4, implication of Lemma 4.14]{LAURENTGENGOUXStienonXuMultiplicativeForms}}
 Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a horizontal distribution on $\mathcal{G}$ with corresponding total Maurer-Cartan form $\mutot$. Then $\mathrm{H}\mathcal{G}$ is a multiplicative (Ehresmann) connection on $\mathcal{G}$ as principal bundle if and only if $\mutot$ is multiplicative.
-\end{propositions}
+\end{theorems}
 
 \begin{proof}
 \leavevmode\newline
-The general approach in the mentioned reference is different to ours; hence, let us provide a proof suitable to our constructions to highlight and provide further justification of the notion of Ehresmann connection provided here. We will view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle whose horizontal distribution is also $\mathrm{H}\mathcal{G}$. We will also use the same notation as in \ref{def:MultiplicativeFormsDef}.
+The general approach in the mentioned reference is different to ours; hence, let us provide a proof suitable to our constructions. We will view $\mathcal{G}$ as a principal $\mathcal{G}$-bundle whose horizontal distribution is also $\mathrm{H}\mathcal{G}$. We will also use the same notation as in Def.\ \ref{def:MultiplicativeFormsDef}.
 
 %Let us first assume that $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, therefore we now initially show that the associated total Maurer-Cartan form is multiplicative. 
-To answer whether or not $\mathrm{H}\mathcal{G}$ is a multiplicative Ehresmann connection we just need to discuss whether $\mutot$ is a connection 1-form on $\mathcal{G}$ due to the fact that $\mathrm{H}\mathcal{G}$ is the kernel of $\mutot$ by definition (see also \ref{cor:TotMCFormIsConnectionForm}), also using \ref{thm:OurConnectionHasAUniqueoneForm}. Also by definition, $\mutot$ already satisfies
-\begin{equation*}
+To answer whether or not $\mathrm{H}\mathcal{G}$ is an Ehresmann connection we just need to discuss whether $\mutot$ is a connection 1-form on $\mathcal{G}$ due to the fact that $\mathrm{H}\mathcal{G}$ is the kernel of $\mutot$ by definition (see also Cor.\ \ref{cor:TotMCFormIsConnectionForm}), also using Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}. Also by definition, $\mutot$ already satisfies
+\begin{align*}
 \mutot\mleft( \overline{\nu} \mright)
-=
+&=
 \pi_{\mathcal{G}}^*\nu.
-\end{equation*}
+\end{align*}
 %By Cor.\ \ref{cor:TotMCFormIsConnectionForm} we know that $\mutot$ satisfies Def.\ \ref{def:GaugeBosonsOnLGBPrincies}; also recall the second part of Rem.\ \ref{rem:PointwiseNotationOfConnectioNOneForms}. 
-By additionally using \ref{prop:DiffOfLGBAction} (especially the associated \ref{rem:DarbouxInActionInfinit}) we show
+By additionally using Thm.\ \ref{prop:DiffOfLGBAction} (especially the associated Rem.\ \ref{rem:DarbouxInActionInfinit}) we show
 \begin{align*}
 \mleft(\mutot\mright)_{gq}\mleft( \mathrm{D}_{(g,q)}\Phi(X, Y) \mright)
 &=
@@ -7744,19 +7744,19 @@ By additionally using \ref{prop:DiffOfLGBAction} (especially the associated \ref
 		%+ \mleft( gq, \mleft( \widehat{\mutot}\mright)_{q} (Y) \mright)
 \end{align*} 
 for all $(g, q) \in \mathcal{G}*\mathcal{G}$ and $(X, Y) \in \mathrm{T}_{(g, q)}(\mathcal{G}*\mathcal{G})$, where $\sigma$ is a (local) section of $\mathcal{G}$ such that $\sigma_{x} = q$. Thus, $\mutot$ is multiplicative if and only if
-\begin{equation*}
+\begin{align*}
 \sAd_{q^{-1}}\mleft(\mleft(\mutot\mright)_{g}(X)\mright)
 		+ \mleft( gq, \mleft( \widehat{\mutot}\mright)_{q} (Y) \mright)
-=
+&=
 \mleft(\mathcal{r}_q^!\mutot\mright)_{g}(X)
 		+ \mleft( gq, \mleft( \widehat{\mutot}\mright)_{q} (Y) \mright)
-\end{equation*}
+\end{align*}
 if and only if
-\begin{equation*}
+\begin{align*}
 \sAd_{q^{-1}}\mleft(\mleft(\mutot\mright)_{g}(X)\mright)
-=
+&=
 \mleft(\mathcal{r}_q^!\mutot\mright)_{g}(X)
-\end{equation*}
+\end{align*}
 if and only if $\mutot$ is a connection 1-form. This finishes the proof.
 %
 %$\bullet$ Now we assume that $\mutot$ is multiplicative. 
@@ -7766,31 +7766,32 @@ This Theorem also implies the Leibniz rule of the Darboux derivative.
 
 
 \begin{propositions}{Leibniz rule of the Darboux derivative}{DarbouxLeibnizRule}
-Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a multiplicative Ehresmann connection on $\mathcal{G}$. Then we have
-\begin{equation*}
+Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then we have
+\begin{align*}
 \Delta(\sigma \tau)
-=
+&=
 \mathrm{Ad}_{\tau^{-1}} \circ \Delta \sigma
 	+ \Delta\tau
-\end{equation*}
+\end{align*}
 and
-\begin{equation*}
+\begin{align*}
 \Delta\mleft(\sigma^{-1}\mright)
-=
+&=
 - \mathrm{Ad}_{\sigma} \circ \Delta \sigma
-\end{equation*}
+\end{align*}
 for all $\sigma, \tau \in \Gamma(\mathcal{G})$.
 \end{propositions}
 
-\begin{remarks}{Old equations new}{OldIsNew}
+\begin{remark}
+\leavevmode\newline
 These are precisely the formulas one expects, see \textit{e.g.}\ \cite[\S 5.1, Eq.\ (2) and (3), page 182]{mackenzieGeneralTheory} for the "classical" case; beware that the reference uses right- instead of left-invariant vector fields to describe the Lie algebra, so that the referenced formulas look explicitly a bit different. Nevertheless, the similarity of the structure should be obvious.
 
-The mentioned reference for \ref{prop:TotMaurerIsMultiplicativeIfSEqual0}, \cite[\S 4.4, Lemma 4.14]{LAURENTGENGOUXStienonXuMultiplicativeForms}, actually uses the Leibniz rule of the Darboux derivative as an equivalent description of multiplicative connections, and essentially links multiplicativeness to closedness w.r.t.\ a natural simplicial differential; see also \ref{rem:SimplicialDifferentialStuff} later.
-\end{remarks}
+The mentioned reference for Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0}, \cite[\S 4.4, Lemma 4.14]{LAURENTGENGOUXStienonXuMultiplicativeForms}, actually uses the Leibniz rule of the Darboux derivative as an equivalent description of Ehresmann connections.
+\end{remark}
 
-\begin{proof}[Proof of \ref{prop:DarbouxLeibnizRule}]
+\begin{proof}[Proof of Prop.\ \ref{prop:DarbouxLeibnizRule}]
 \leavevmode\newline
-For this calculation we will take care about base points of pullback bundles w.r.t.\ the Darboux derivative, thus recall the last part of \ref{rem:RemarkABoutDarbouxNotationWRTPullback}. Using the same notation as in \ref{def:MultiplicativeFormsDef}, this proposition follows simply by \ref{prop:TotMaurerIsMultiplicativeIfSEqual0}, that is, set $Y \coloneqq \mathrm{D}_x\sigma(X)$ and $Z \coloneqq \mathrm{D}_x\tau(X)$ for $X \in \mathrm{T}_xM$ ($x \in M$), then
+For this calculation we will take care about base points of pullback bundles w.r.t.\ the Darboux derivative, thus recall the last part of Remark \ref{rem:RemarkABoutDarbouxNotationWRTPullback}. Using the same notation as in Def.\ \ref{def:MultiplicativeFormsDef}, this proposition follows simply by Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0}, that is, set $Y \coloneqq \mathrm{D}_x\sigma(X)$ and $Z \coloneqq \mathrm{D}_x\tau(X)$ for $X \in \mathrm{T}_xM$ ($x \in M$), then
 \begin{align*}
 \bigl( \sigma_x\tau_x, \Delta(\sigma\tau)_x(X) \bigr)
 &=
@@ -7818,12 +7819,12 @@ For this calculation we will take care about base points of pullback bundles w.r
 \mright).
 \end{align*}
 Hence,
-\begin{equation*}
+\begin{align*}
 \Delta(\sigma \tau)
-=
+&=
 \mathrm{Ad}_{\tau^{-1}} \circ \Delta \sigma
 	+ \Delta\tau.
-\end{equation*}
+\end{align*}
 %
 %We have
 %\bas
@@ -7881,68 +7882,68 @@ Hence,
 	%+ \mleft. \mleft( \Delta\tau \mright) \mright|_{x}(X)
 %\eas
 %where $\pi_v$ is the projection onto the vertical structure in $\mathcal{G}$, $e_x$ the neutral element of $\mathcal{G}_x$, and using Remark \ref{rem:ModRightPushOnVertic}, \textit{i.e.} ${\mathcal{r}_{\tau_x*}} \circ \pi_v = r_{\tau_x*} \circ \pi_v$.
-%
-Now recall \ref{rem:baseManifoldHoriz} which implies for the neutral element section $e$ that
-\begin{equation*}
+
+Now recall Remark \ref{rem:baseManifoldHoriz}; this implies for the neutral element section $e$ that
+\begin{align*}
 \Delta e
-\equiv
+&\equiv
 0,
-\end{equation*}
+\end{align*}
 and therefore, using the previous result just derived,
-\begin{equation*}
+\begin{align*}
 0
-=
+&=
 \Delta e
 =
 \Delta \mleft( \sigma \sigma^{-1} \mright)
 =
 \mathrm{Ad}_{\sigma} \circ \Delta \sigma
 	+ \Delta\mleft(\sigma^{-1}\mright),
-\end{equation*}
+\end{align*}
 thus, concluding the proof with
-\begin{equation*}
+\begin{align*}
 \Delta\mleft(\sigma^{-1}\mright)
-=
+&=
 - \mathrm{Ad}_{\sigma} \circ \Delta \sigma.
-\end{equation*}
+\end{align*}
 \end{proof}
 
 The Leibniz rule of the Darboux derivative extends to $\nabla^{\mathcal{G}}$.
 
-\begin{lemmata}{Conjugation preserving infinitesimal compatibility conditions}{FieldRedefViaLGBSection}
-Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ a multiplicative Ehresmann connection on $\mathcal{G}$. Then we have
-\begin{equation}\label{SpecialFieldRedef}
+\begin{lemmata}{The conjugation of the canonical LAB connection is a multiplicative Yang-Mills connection}{FieldRedefViaLGBSection}
+Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$. Then we have
+\begin{align}\label{SpecialFieldRedef}
 \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathcal{G}} \circ \mathrm{Ad}_\sigma
-=
+&=
 \nabla^{\mathcal{G}}
 	+ \mathrm{ad}_{\Delta \sigma}
-\end{equation}
+\end{align}
 for all $\sigma \in \Gamma(\mathcal{G})$, that is,
-\begin{equation*}
+\begin{align*}
 \mleft(\mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathcal{G}}_X \circ \mathrm{Ad}_\sigma\mright)\nu
-=
+&=
 \nabla^{\mathcal{G}}_X\nu
 	+ \mleft[ \Delta\sigma(X), \nu \mright]_{\mathcal{g}}
-\end{equation*}
+\end{align*}
 for all $\nu \in \Gamma(\mathcal{g})$ and $X \in \mathfrak{X}(M)$.
-If $\mathrm{H}\mathcal{G}$ is an infinitesimal multiplicative Yang-Mills connection, in particular $R_{\nabla^\caG} = \mathrm{ad}_\zeta$ for $\zeta \in \Omega^2(M; \mathcal{g})$, then $\overline{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^\caG \circ \mathrm{Ad}_\sigma$ is also an infinitesimal multiplicative Yang-Mills connection with
-\begin{equation*}
+If $\mathrm{H}\mathcal{G}$ is an infinitesimal multiplicative Yang-Mills connection, $\nabla^{\mathcal{G}} = \nabla^\caG$, especially $R_{\nabla^\caG} = \mathrm{ad}_\zeta$ for $\zeta \in \Omega^2(M; \mathcal{g})$, then $\overline{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^\caG \circ \mathrm{Ad}_\sigma$ is also an infinitesimal multiplicative Yang-Mills connection with
+\begin{align*}
 R_{\overline{\nabla}^\sigma}
-=
+&=
 \mathrm{ad}_{\mathrm{Ad}_{\sigma^{-1}}(\zeta)},
-\end{equation*}
+\end{align*}
 in particular we get
-\begin{equation}\label{AlmostGeneralizedMaurerCartanEquation}
+\begin{align}\label{AlmostGeneralizedMaurerCartanEquation}
 \mleft[ \mathrm{d}^{\nabla^\caG} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} + \zeta - \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, ~ \nu \mright]_{\mathcal{g}}
-=
+&=
 0
-\end{equation}
+\end{align}
 for all $\nu \in \Gamma(\mathcal{g})$.
 \end{lemmata}
 
 \begin{proof}
 \leavevmode\newline
-By \ref{prop:DarbouxLeibnizRule} we get
+By Prop.\ \ref{prop:DarbouxLeibnizRule} we get
 \begin{align*}
 \Delta\mleft( \e^{\mathrm{Ad}_\sigma (\nu)} \mright)
 &=
@@ -7983,12 +7984,12 @@ for all $\sigma \in \Gamma(\mathcal{G})$ and $\nu \in \Gamma(\mathcal{g})$, wher
 	+ \nabla^{\mathcal{G}} \nu \mright)
 \end{align*}
 making use of that this calculation is pointwise at $x \in M$ just a standard derivative in the vector space $\mathcal{g}_x$. Thus,
-\begin{equation*}
+\begin{align*}
 \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^{\mathcal{G}} \circ \mathrm{Ad}_\sigma
-=
+&=
 \nabla^{\mathcal{G}}
 	+ \mathrm{ad}_{\Delta \sigma}.
-\end{equation*}
+\end{align*}
 In order to show $R_{\overline{\nabla}^\sigma} = \mathrm{ad}_{\mathrm{Ad}_{\sigma^{-1}}(\zeta)}$ one uses the definition $\overline{\nabla}^\sigma \coloneqq \mathrm{Ad}_{\sigma^{-1}} \circ \nabla^\caG \circ \mathrm{Ad}_\sigma$ to calculate the curvature, 
 \begin{align*}
 R_{\overline{\nabla}^\sigma} (X, Y) \nu
@@ -8013,75 +8014,75 @@ R_{\overline{\nabla}^\sigma} (X, Y) \nu
 &=
 \mleft[ \mathrm{Ad}_{\sigma^{-1}}\bigl(\zeta(X, Y)\bigr), \nu \mright]_{\mathcal{g}}
 \end{align*}
-for all $X, Y \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathcal{g})$. The remaining parts of the statement are trivial and straight-forward calculations, making use of \ref{def:YangMillsConnection}; in fact, we have proven all the remaining statements already in \cite[\S 3, part of Thm.\ 3.6]{My1stpaper} and in a more general manner in \cite[\S 4.6, Thm.\ 4.6.9]{MyThesis}: That $\overline{\nabla}^\sigma$ is a Lie bracket derivation is trivial to show with \ref{SpecialFieldRedef}, and one uses the right hand side of \ref{SpecialFieldRedef} to show another identity of its curvature,
-\begin{equation*}
+for all $X, Y \in \mathfrak{X}(M)$ and $\nu \in \Gamma(\mathcal{g})$. The remaining parts of the statement are trivial and straight-forward calculations, making use of Def.\ \ref{def:YangMillsConnection}; in fact, we have proven all the remaining statements already in \cite[\S 3, part of Thm.\ 3.6]{My1stpaper} and in a more general manner in \cite[\S 4.6, Thm.\ 4.6.9]{MyThesis}: That $\overline{\nabla}^\sigma$ is a Lie bracket derivation is trivial to show, and one uses identity \eqref{SpecialFieldRedef} to show another identity of its curvature,
+\begin{align*}
 R_{\overline{\nabla}^\sigma} 
-=
+&=
 \mleft[ \mathrm{d}^{\nabla^\caG} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} + \zeta, \cdot \mright]_{\mathcal{g}}.
-\end{equation*}
-Combining both identities for $R_{\overline{\nabla}^\sigma}$ we conclude with a proof of \ref{AlmostGeneralizedMaurerCartanEquation}. 
+\end{align*}
+Combining both identities for $R_{\overline{\nabla}^\sigma}$ we conclude with a proof of Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation}. 
 \end{proof}
 
 We also get a generalization of statements like \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}:
 
 \begin{lemmata}{Lie bracket of horizontal and vertical vector}{BracketVertHor}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a horizontal distribution on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have
-%\begin{align*}
-%A\mleft( \mleft[ X, \overline{\nu} \mright] \mright)
-%&=
-%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
-		%\mleft( \pi^! \Delta \e^{t\nu} \mright)\mleft(X\mright) \circ r_{\e^{-t\nu}}
-	%\Bigr)
-%\end{align*}
-%for all $\nu \in \Gamma(\mathcal{g})$ and horizontal vector fields $X \in \mathfrak{X}(\mathcal{P})$. If there is an $\omega \in \mathfrak{X}(M)$ such that $\mathrm{D}\pi(X) = \pi^*\omega$, then
-%\begin{align*}
-%A\bigl( \mleft[ X, \overline{\nu} \mright] \bigr)
-%&=
-%\mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu)
-%=
-%\pi^*\mleft( \nabla^{\mathcal{G}}_\omega \nu \mright).
-%\end{align*}
-%
-%If $\mathrm{H}\mathcal{G}$ is a multiplicative Ehresmann connection, then we can conclude for all horizontal vector fields $X$ that
-\begin{equation*}
+\begin{align*}
+A\mleft( \mleft[ X, \overline{\nu} \mright] \mright)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
+		\mleft( \pi^! \Delta \e^{t\nu} \mright)\mleft(X\mright) \circ r_{\e^{-t\nu}}
+	\Bigr)
+\end{align*}
+for all $\nu \in \Gamma(\mathcal{g})$ and horizontal vector fields $X \in \mathfrak{X}(\mathcal{P})$. If there is an $\omega \in \mathfrak{X}(M)$ such that $\mathrm{D}\pi(X) = \pi^*\omega$, then
+\begin{align*}
 A\bigl( \mleft[ X, \overline{\nu} \mright] \bigr)
-=
+&=
 \mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu)
-\end{equation*}
-for all $\nu \in \Gamma(\mathcal{g})$ and horizontal vector fields $X \in \mathfrak{X}(\mathcal{P})$.
+=
+\pi^*\mleft( \nabla^{\mathcal{G}}_\omega \nu \mright).
+\end{align*}
+
+If $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, then we can conclude for all horizontal vector fields $X$ that
+\begin{align*}
+A\bigl( \mleft[ X, \overline{\nu} \mright] \bigr)
+&=
+\mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu).
+\end{align*}
 \end{lemmata}
 
-\begin{remarks}{Other references}{OtherRefsForAOnBracket}
-For $\caP = \caG$ , this statement got also stated in \cite[Eq.\ (2.8)]{FernandesMarcutMultiplicativeForms}; we were unaware of this proof, which is why our proof is a bit different.
-\end{remarks}
-
-\begin{proof}[Proof of \ref{lem:BracketVertHor}]
+\begin{remark}
 \leavevmode\newline
-First of all recall the very basic fact (see \textit{e.g.}\ \cite[\S A.1, Thm.\ A.1.46, page 615]{Hamilton}) that for two vector fields $X, Y \in \mathfrak{X}(\mathcal{P})$ we have\footnote{Rigorously, similarly to \ref{prop:FinallyTheNablaInduction} one has a projection involved, but as explained in \ref{rem:RemarkAboutPrTwoInDarbouxDerivative} we will omit notating this projection; in the context of this proof we can allow ourselves to take the typical ``less rigorous'' approach for simplicity.}
-\begin{equation*}
+The last statement got also stated in \cite[Eq.\ (2.8)]{FernandesMarcutMultiplicativeForms} in the case of the LGB as principal bundle; we were unaware of this proof, which is why our proof is a bit different.
+\end{remark}
+
+\begin{proof}[Proof of Lemma \ref{lem:BracketVertHor}]
+\leavevmode\newline
+First of all recall the very basic fact (see \textit{e.g.}\ \cite[\S A.1, Thm.\ A.1.46, page 615]{Hamilton}) that for two vector fields $X, Y \in \mathfrak{X}(\mathcal{P})$ we have\footnote{Rigorously, similarly to Prop.\ \ref{prop:FinallyTheNablaInduction} one has a projection involved, but as explained in Remark \ref{rem:RemarkAboutPrTwoInDarbouxDerivative} we will omit notating this projection; in the context of this proof we can allow ourselves to take the typical "less rigorous" approach for simplicity.}
+\begin{align*}
 \mleft[ X, Y \mright]_p
-=
+&=
 -\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}
 	\mathrm{D}_{\phi_t(p)}\phi_{-t} \mleft(X_{\phi_t(p)}\mright)
-\end{equation*}
-for all $p \in \mathcal{P}$, where $\phi_t$ is the local flow of $Y$ (with parameter $t$ in an open interval of $\mathbb{R}$ containing 0). Now let $X$ be a horizontal vector field and $Y = \overline{\nu}$. For such a $Y$ we know by \ref{def:FundVecs} that
-\begin{equation*}
+\end{align*}
+for all $p \in \mathcal{P}$, where $\phi_t$ is the local flow of $Y$ (with parameter $t$ in an open interval of $\mathbb{R}$ containing 0). Now let $X$ be a horizontal vector field and $Y = \overline{\nu}$. For such a $Y$ we know by Def.\ \ref{def:FundVecs} that
+\begin{align*}
 \overline{\nu}_p
-=
+&=
 \mathrm{D}_{e_{x}}\Phi_p\mleft(\nu_{x}\mright)
 =
 \mleft. \frac{\mathrm{d}}{\mathrm{d}t} \mright|_{t=0}
 \mleft( p \cdot \e^{t\nu_x} \mright)
-\end{equation*}
+\end{align*}
 for all $p \in \mathcal{P}$, where $\Phi_p$ is the orbit map through $p$, $x \coloneqq \pi(p)$, and $e_{x}$ the neutral element of $\mathcal{G}_x$. Thus, 
-\begin{equation*}
+\begin{align*}
 \phi_t(p)
-=
+&=
 p \cdot \e^{t\nu_x}
 =
 r_{\e^{t\nu}}(p),
-\end{equation*}
-and by rewriting in sense of \ref{def:WeModTheRIghtPush} we achieve
+\end{align*}
+and by rewriting in sense of Def.\ \ref{def:WeModTheRIghtPush} we achieve
 \begin{align*}
 \mleft[ X, \overline{\nu} \mright]_p
 &=
@@ -8116,26 +8117,26 @@ and by rewriting in sense of \ref{def:WeModTheRIghtPush} we achieve
 \mright).
 \end{align*}
 The first summand, $t \mapsto \mathcal{r}_{\e^{-t\nu_x}*}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)$, is a curve with values in $\mathrm{H}_{p}\mathcal{P}$ due to the fact that $X$ is a horizontal vector field. Thus, the velocity of this curve at $t=0$ will also be an element of $\mathrm{H}_p\mathcal{P}$, and the first summand is therefore in the kernel of $A$. Similarly,
-\begin{equation*}
-t \mapsto \eta(t) \coloneqq
+\begin{align*}
+t &\mapsto \eta(t) \coloneqq
 \mleft. \mleft( \pi^!\Delta \e^{-t\nu} \mright) \mright|_{p \cdot \e^{t\nu_x}}\mleft(X_{p \cdot \e^{t\nu_x}}\mright)
 =
 \mleft. \mleft( \Delta \e^{-t\nu} \mright) \mright|_{x}\mleft(\mathrm{D}_{p \cdot \e^{t\nu_x}}\pi \mleft(X_{p \cdot \e^{t\nu_x}}\mright)\mright)
-\end{equation*}
+\end{align*}
 is a curve with values in $\mathcal{g}_x$, and therefore its fundamental vector field at $p$ is a curve with values in $\mathrm{V}_p\mathcal{P}$. Hence, we can calculate in the sense of vector spaces to derive
-\begin{equation*}
+\begin{align*}
 - \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \overline{\eta(t)}_p
-=
+&=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl( \mathrm{D}_{e_x}\Phi_p \bigl(\eta(-t)\bigr) \Bigr)
 =
 \mathrm{D}_{e_x}\Phi_p \mleft( \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \eta(-t)\mright)
 =
 \mleft.\overline{\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \eta(-t)}\mright|_p
-\end{equation*}
+\end{align*}
 where we substituted $t \leftrightarrow -t$ after the first equality sign. In total we achieve
-\begin{equation*}
+\begin{align*}
 A_p\mleft( \mleft[ X, \overline{\nu} \mright]_p \mright)
-=
+&=
 A_p\mleft( \mleft.\overline{\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \eta(-t)}\mright|_p \mright)
 =
 \mleft( 
@@ -8143,52 +8144,52 @@ A_p\mleft( \mleft.\overline{\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} 
 	\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
 		\mleft. \mleft( \Delta \e^{t\nu} \mright) \mright|_{x}\mleft(\mathrm{D}_{p \cdot \e^{-t\nu_x}}\pi \mleft(X_{p \cdot \e^{-t\nu_x}}\mright)\mright)
 	\Bigr)
-\mright)~,
-\end{equation*}
-%and thus
-%\begin{equation*}
-%A\mleft( \mleft[ X, \overline{\nu} \mright] \mright)
-%=
-%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
-		%\mleft( \pi^! \Delta \e^{t\nu} \mright)\mleft(X\mright) \circ r_{\e^{-t\nu}}
-	%\Bigr).
-%\end{equation*}
-%Now: If there is an $\omega \in \mathfrak{X}(M)$ such that $\mathrm{D}\pi(X) = \pi^*\omega$, then
-%\begin{equation*}
-%A_p\mleft( \mleft[ X, \overline{\nu} \mright]_p \mright)
-%=
-%\mleft( 
-	%p,
-	%\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
-		%\mleft. \mleft( \Delta \e^{t\nu} \mright) \mright|_{x}\mleft(\omega_{x}\mright)
-	%\Bigr)
-%\mright),
-%\end{equation*}
-%and therefore by \ref{def:ConnectionOnLAB}
-%\begin{equation*}
-%A_p\mleft( \mleft[ X, \overline{\nu} \mright]_p \mright)
-%=
-%\mleft( 
-	%p,
-	%\mleft.\nabla^{\mathcal{G}}_\omega \nu \mright|_x
-%\mright)
-%=
-%\mleft. \pi^*\mleft( \nabla^{\mathcal{G}}_\omega \nu \mright) \mright|_p.
-%\end{equation*}
-%By the definition of pullback connections we could also write
-%\begin{equation*}
-%A\bigl( \mleft[ X, \overline{\nu} \mright] \bigr)
-%=
-%\mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu).
-%\end{equation*}
-%
-By \ref{cor:ExOfEhresmann}, $\rmH \caG$ is multiplicative, thus recall \ref{rem:baseManifoldHoriz}; that is, for the neutral element section $e$,
-\begin{equation*}
+\mright),
+\end{align*}
+and thus
+\begin{align*}
+A\mleft( \mleft[ X, \overline{\nu} \mright] \mright)
+&=
+\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
+		\mleft( \pi^! \Delta \e^{t\nu} \mright)\mleft(X\mright) \circ r_{\e^{-t\nu}}
+	\Bigr).
+\end{align*}
+If there is an $\omega \in \mathfrak{X}(M)$ such that $\mathrm{D}\pi(X) = \pi^*\omega$, then
+\begin{align*}
+A_p\mleft( \mleft[ X, \overline{\nu} \mright]_p \mright)
+&=
+\mleft( 
+	p,
+	\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
+		\mleft. \mleft( \Delta \e^{t\nu} \mright) \mright|_{x}\mleft(\omega_{x}\mright)
+	\Bigr)
+\mright),
+\end{align*}
+and therefore by Def.\ \ref{def:ConnectionOnLAB}
+\begin{align*}
+A_p\mleft( \mleft[ X, \overline{\nu} \mright]_p \mright)
+&=
+\mleft( 
+	p,
+	\mleft.\nabla^{\mathcal{G}}_\omega \nu \mright|_x
+\mright)
+=
+\mleft. \pi^*\mleft( \nabla^{\mathcal{G}}_\omega \nu \mright) \mright|_p.
+\end{align*}
+By the definition of pullback connections we could also write
+\begin{align*}
+A\bigl( \mleft[ X, \overline{\nu} \mright] \bigr)
+&=
+\mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu).
+\end{align*}
+
+If $\mathrm{H}\mathcal{G}$ is an Ehresmann connection, then recall Remark \ref{rem:baseManifoldHoriz}; this implies for the neutral element section $e$ that
+\begin{align*}
 \Delta e
-\equiv
-0~,
-\end{equation*}
-and, again, $t \mapsto \mleft( \Delta \e^{t\nu} \mright)_x$ and $t \mapsto \mathrm{D}_{p \cdot \e^{-t\nu_x}}\pi \mleft(X_{p \cdot \e^{-t\nu_x}}\mright)$ are curves with values in the vector spaces $\mathrm{T}^*_xM \otimes \mathcal{g}_x$ and $\mathrm{T}_xM$, respectively. Thus, we can just apply typical Leibniz rules to calculate the derivative of the contraction, also using \ref{def:ConnectionOnLAB},
+&\equiv
+0,
+\end{align*}
+and, again, $t \mapsto \mleft( \Delta \e^{t\nu} \mright)_x$ and $t \mapsto \mathrm{D}_{p \cdot \e^{-t\nu_x}}\pi \mleft(X_{p \cdot \e^{-t\nu_x}}\mright)$ are curves with values in the vector spaces $\mathrm{T}^*_xM \otimes \mathcal{g}_x$ and $\mathrm{T}_xM$, respectively. Thus, we can just apply typical Leibniz rules to calculate the derivative of the contraction
 \begin{align*}
 &\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \Bigl(
 		\mleft. \mleft( \Delta \e^{t\nu} \mright) \mright|_{x}\mleft(\mathrm{D}_{p \cdot \e^{-t\nu_x}}\pi \mleft(X_{p \cdot \e^{-t\nu_x}}\mright)\mright)
@@ -8199,39 +8200,40 @@ and, again, $t \mapsto \mleft( \Delta \e^{t\nu} \mright)_x$ and $t \mapsto \math
 	+ {\underbrace{\mleft. \mleft( \Delta e \mright) \mright|_{x}}_{= 0}}\mleft(\mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\mathrm{D}_{p \cdot \e^{-t\nu_x}}\pi \mleft(X_{p \cdot \e^{-t\nu_x}}\mright)\mright)
 \\
 &\hspace{1cm}=
-\nabla^{\mathcal{G}}_{\mathrm{D}_{p}\pi \mleft(X_{p}\mright)} \nu~,
+\nabla^{\mathcal{G}}_{\mathrm{D}_{p}\pi \mleft(X_{p}\mright)} \nu,
 \end{align*}
-and by the definition of pullback connections we conclude
-\begin{equation*}
+and as before we conclude
+\begin{align*}
 A\bigl( \mleft[ X, \overline{\nu} \mright] \bigr)
-=
-\mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu)~.
-\end{equation*}
+&=
+\mleft( \pi^*\nabla^{\mathcal{G}} \mright)_{X}(\pi^*\nu).
+\end{align*}
 \end{proof}
 
-This concludes our discussion about the infinitesimal compatibility condition \eqref{CondSGleichNullLAB} and its integrated version. Via \ref{prop:TotMaurerIsMultiplicativeIfSEqual0} and \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if the connection 1-form on $\cag$ is multiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB} and its integration.
+This concludes our discussion about the infinitesimal compatibility condition \eqref{CondSGleichNullLAB} and its integrated version, "$\mathrm{H}\mathcal{G} =$ Ehresmann connection"'. Via Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} and Lemma \ref{lem:YangMillsConnAnEhresmann} we therefore concluded that compatibility condition \eqref{CondSGleichNullLAB} holds if the total Maurer-Cartan form is multiplicative. Let us therefore now turn to compatibility condition \eqref{CondKruemmungmitBLAB}, which we can actually integrate to an equivalent statement.
 
 \begin{theorems}{Generalized Maurer-Cartan equation}{GenMCEq}
-Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$ with connected fibres, $\mathrm{H}\mathcal{G}$ a multiplicative Ehresmann connection on $\mathcal{G}$, and $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then $\mathrm{H}\mathcal{G}$ satisfies the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB} w.r.t.\ $\zeta$ if and only if $\mutot$ satisfies
-\begin{equation}\label{THEGeneralizedMCEq}
+Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$ with connected fibres, $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$, and $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then $\mathrm{H}\mathcal{G}$ satisfies the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB} w.r.t.\ $\zeta$ if and only if the total Maurer-Cartan form $\mutot$ satisfies
+\begin{align}\label{THEGeneralizedMCEq}
 \mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mutot
 	+ \frac{1}{2} \mleft[ \mutot \stackrel{\wedge}{,} \mutot \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
 	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
-=
+&=
 %\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
 \mleft( g, \mathrm{Ad}_{g^{-1}} \circ \zeta_x \circ \mleft(\mathrm{D}_g \pi_{\mathcal{G}}, \mathrm{D}_g \pi_{\mathcal{G}}\mright) \mright)
-\end{equation}
+\end{align}
 for all $g \in \mathcal{G}_x$ ($x \in M$). We then say that $\mutot$ solves the \textbf{generalized Maurer-Cartan equation (w.r.t.\ $\zeta$)}.
 \end{theorems}
 
-\begin{remarks}{Dropping the base points, again...}{BasePointDifficultiesinGenMCEq}
+\begin{remark}\label{BasePointDifficultiesinGenMCEq}
+\leavevmode\newline
 The structure on the right hand side is again due to denoting the base point in pullback bundles; one may decide to drop the base point for simplicity in the notation. In that case, since the base point is clear by context, one may also just write
-\begin{equation*}
+\begin{align*}
 \sAd_{g^{-1}} \circ \mleft.\pi_{\mathcal{G}}^!\zeta\mright|_g
 ~\text{ or }~
 \mathrm{Ad}_{g^{-1}} \circ \mleft.\pi_{\mathcal{G}}^!\zeta\mright|_g
-\end{equation*}
-on the right hand side. As we will discuss in \ref{rem:SimplicialDifferentialStuff}, this equation says that the curvature of $\mutot$ is multiplicative-exact.
+\end{align*}
+on the right hand side.
 %
 %W.r.t.\ a section $\sigma \in \Gamma(\mathcal{G})$ the notation simplifies again to
 %\bas
@@ -8242,42 +8244,42 @@ on the right hand side. As we will discuss in \ref{rem:SimplicialDifferentialStu
 %%\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
 %\pi_{\mathcal{G}}^!\mleft(\mathrm{Ad}_{\sigma^{-1}} \circ \zeta \mright).
 %\eas
-\end{remarks}
+\end{remark}
 
 \begin{remarks}{Classical Maurer-Cartan equation recovered}{ClassicalMCEqinGeneralizedOne}
-Recall \ref{rem:DarbouxOnCanonFlat}. If $\mathcal{G}$ is a trivial LGB, $\mathrm{H}\mathcal{G}$ its canonical flat connection and $\zeta \equiv 0$, then $\nabla^{\mathcal{G}}$ is the canonical flat connection on the trivial LAB $\mathcal{g}$ (recall \ref{ex:CanonicalFlatGConnection}) and it clearly satisfies the compatibility conditions in \ref{def:YangMillsConnection} w.r.t.\ $\zeta \equiv 0$. Furthermore, the generalized Maurer-Cartan equation then reduces to the classical Maurer-Cartan equation.
+Recall Rem.\ \ref{rem:DarbouxOnCanonFlat}. If $\mathcal{G}$ is a trivial LGB, $\mathrm{H}\mathcal{G}$ its canonical flat connection and $\zeta \equiv 0$, then $\nabla^{\mathcal{G}}$ is the canonical flat connection on the trivial LAB $\mathcal{g}$ (recall Ex.\ \ref{ex:CanonicalFlatGConnection}) and it clearly satisfies the compatibility conditions in Def.\ \ref{def:YangMillsConnection} w.r.t.\ $\zeta \equiv 0$. Furthermore, the generalized Maurer-Cartan equation then reduces to the classical Maurer-Cartan equation.
 \end{remarks}
 
-\begin{proof}[Proof of \ref{thm:GenMCEq}]
+\begin{proof}[Proof of Thm.\ \ref{thm:GenMCEq}]
 \leavevmode\newline
-The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms\footnote{See \ref{rem:SimplicialDifferentialStuff} later; multiplicativity is related to closedness w.r.t.\ a differential. However, we will not need this general notion.} are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. That is, we want to discuss under what conditions 
-\begin{equation*}
-\mathcal{G} \ni g \mapsto \omega_g \coloneqq
+The idea of the proof is similar to the proof of a statement about when two multiplicative 2-forms\footnote{See Rem.\ \ref{rem:SimplicialDifferentialStuff} later; multiplicativity is related to closedness w.r.t.\ a differential. However, we will not need this general notion.} are equal, see \textit{e.g.}\ \cite[\S 3, Cor.\ 3.4]{bursztyn2004integration}. That is, we want to discuss under what conditions 
+\begin{align*}
+\mathcal{G} \ni g &\mapsto \omega_g \coloneqq
 \mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mutot
 	+ \frac{1}{2} \mleft[ \mutot \stackrel{\wedge}{,} \mutot \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
 	+ \pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
 	- \mleft( g, \mathrm{Ad}_{g^{-1}} \circ \zeta_x \circ \mleft(\mathrm{D}_g \pi_{\mathcal{G}}, \mathrm{D}_g \pi_{\mathcal{G}}\mright) \mright)
-\end{equation*}
-is constant along the fibres of $\mathcal{G}$, that is, constant along the flows of vertical tangent vectors, the left-invariant vector fields (recall \ref{cor:TLGBAsLGB}). 
+\end{align*}
+is constant along the fibres of $\mathcal{G}$, that is, constant along the flows of vertical tangent vectors, the left-invariant vector fields (recall Cor.\ \ref{cor:TLGBAsLGB}). 
 
-$\bullet$ First of all observe that $\omega$ vanishes if it is contracted with at least one tangent vector is vertical. Let $Y \in \mathrm{V}_g\mathcal{G}$ ($g \in \mathcal{G}_x$, $x \in M$), and write $Y = \mleft.\overline{\nu_x}\mright|_g$ for a $\nu_x \in \mathcal{g}_x$. Due to $\mathrm{D}\pi_{\mathcal{G}} \mleft( Y \mright) = 0$ it is clear that the contraction of $\pi_{\mathcal{G}}^! \zeta$ with $Y$ is 0. Let $Z \in \mathrm{T}_g\mathcal{G}$ for which we write
-\begin{equation*}
+$\bullet$ First of all observe that $\omega$ vanishes if at least one tangent vector is vertical. Let $Y \in \mathrm{V}_g\mathcal{G}$ ($g \in \mathcal{G}_x$, $x \in M$), and write $Y = \mleft.\overline{\nu_x}\mright|_g$ for a $\nu_x \in \mathcal{g}_x$. Due to $\mathrm{D}\pi_{\mathcal{G}} \mleft( Y \mright) = 0$ it is clear that the contraction of $\pi_{\mathcal{G}}^! \zeta$ with $Y$ is 0. Let $Z \in \mathrm{T}_g\mathcal{G}$ for which we write
+\begin{align*}
 Z 
-\coloneqq
+&\coloneqq
 \mleft.\overline{\mu_x}\mright|_g
 	+ X_g
-\end{equation*}
+\end{align*}
 for a $\mu_x \in \mathcal{g}_x$ and $X_g \in \mathrm{H}_g\mathcal{G}$;
-then by \ref{cor:TotMCFormIsConnectionForm}
-\begin{equation*}
+then by Cor.\ \ref{cor:TotMCFormIsConnectionForm}
+\begin{align*}
 \frac{1}{2} \mleft.\mleft[ \mutot \stackrel{\wedge}{,} \mutot \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}\mright|_g (Y, Z)
-=
+&=
 \mleft[ \mleft(\mutot\mright)_g(Y), \mleft(\mutot\mright)_g(Z) \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}
 =
 \mleft( g,
 \mleft[ \nu_x, \mu_x \mright]_{\mathcal{g}_x}
 \mright).
-\end{equation*}
+\end{align*}
 Extend $Y$ and $Z$ naturally to vector fields on $\mathcal{G}$ (for simplicity also denoted by $Y$ and $Z$, respectively) by viewing $\nu_x$ and $\mu_x$ as values of sections $\nu$ and $\mu$, respectively, of $\mathcal{g}$ at $x$, and extending $X_g$ (locally) to a horizontal vector field $X$; thence,
 \begin{align*}
 \mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mutot\mright)_g(Y, Z)
@@ -8303,13 +8305,13 @@ Extend $Y$ and $Z$ naturally to vector fields on $\mathcal{G}$ (for simplicity a
 &=
 - \mleft( g, \mleft[ \nu_x, \mu_x \mright]_{\mathcal{g}_x} \mright)
 \end{align*}
-using \ref{rem:FundVecsAreLABActions} (bracket of fundamental/left-invariant vector fields is fundamental/left-invariant) and \ref{lem:BracketVertHor}. Thus,
-\begin{equation*}
+using Rem.\ \ref{rem:FundVecsAreLABActions} (bracket of fundamental/left-invariant vector fields is fundamental/left-invariant) and Lemma \ref{lem:BracketVertHor}. Thus,
+\begin{align*}
 \mleft.\mleft(\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mutot
 	+ \frac{1}{2} \mleft[ \mutot \stackrel{\wedge}{,} \mutot \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}\mright)\mright|_g(Y, Z)
-=
+&=
 0.
-\end{equation*}
+\end{align*}
 It follows that $\omega$ vanishes if contracted with a vertical tangent vector.
 
 $\bullet$ Therefore we can study $\omega$ just w.r.t.\ tangent vectors complementary to the vertical structure, these do not necessarily need to be elements of $\mathrm{H}\mathcal{G}$. For a given $g \in \mathcal{G}_x$ ($x \in M$) define
@@ -8317,32 +8319,32 @@ $\bullet$ Therefore we can study $\omega$ just w.r.t.\ tangent vectors complemen
 \mathbb{R} &\to \Gamma(\mathcal{G}),\\
 t &\mapsto \gamma(t) \coloneqq \sigma \e^{t\nu},
 \end{align*}
-where $\nu$ is any section of $\mathcal{g}$ and $\sigma \in \Gamma(\mathcal{G})$ (local) with $\sigma_x = g$; pointwise we denote $\gamma(t)$ as a map $M \ni x \mapsto \gamma_x(t)$. By \ref{cor:TLGBAsLGB} the flows of elements of $\mathrm{V}_g\mathcal{G}$ can be precisely described by curves like $\gamma$, so that the derivative w.r.t.\ $t$ of pullbacks of tensors with $\gamma$ characterizes any derivative along a fibre of $\mathcal{G}$. Furthermore, $\gamma(t)$ is by definition a section of $\mathcal{G}$ for all $t$ and thence describes a (local) embedding of $M$ into $\mathcal{G}$. Thus, the $t$-derivatives of terms like $\gamma(t)^!\omega$ describe the derivatives of $\omega$ along fibres of $\mathcal{G}$ contracted with tangent vectors complementary to the vertical structure. Therefore let us calculate $\gamma(t)^!\omega$: We have
-\begin{equation*}
+where $\nu$ is any section of $\mathcal{g}$ and $\sigma \in \Gamma(\mathcal{G})$ (local) with $\sigma_x = g$; pointwise we denote $\gamma(t)$ as a map $M \ni x \mapsto \gamma_x(t)$. By Cor.\ \ref{cor:TLGBAsLGB} the flows of elements of $\mathrm{V}_g\mathcal{G}$ can be precisely described by curves like $\gamma$, so that the derivative w.r.t.\ $t$ of pullbacks of tensors with $\gamma$ characterizes any derivative along a fibre of $\mathcal{G}$. Furthermore, $\gamma(t)$ is by definition a section of $\mathcal{G}$ for all $t$ and thence describes an embedding of $M$ into $\mathcal{G}$. Thus, the $t$-derivatives of terms like $\gamma(t)^!\omega$ describe the derivatives of $\omega$ along fibres of $\mathcal{G}$ contracted with tangent vectors complementary to the vertical structure. Therefore let us calculate $\gamma(t)^!\omega$; we have
+\begin{align*}
 \gamma(t)^!\pi_{\mathcal{G}}^!\zeta
-=
+&=
 {\underbrace{\bigl( \pi_{\mathcal{G}} \circ \gamma(t) \bigr)^!}_{\equiv \mathrm{id}_M^!}}\zeta
 =
 \zeta
-\end{equation*}
+\end{align*}
 and under the identification $\gamma^*\pi_{\mathcal{G}}^*\mathcal{g} \cong (\pi_{\mathcal{G}} \circ \gamma)^*\mathcal{g} = \mathrm{id}_M^*\mathcal{g} \cong \mathcal{g}$ we get similarly
-\begin{equation*}
+\begin{align*}
 \mleft( \gamma(t)^!\mleft( g, \mathrm{Ad}_{g^{-1}}\circ \zeta_{\pi_{\mathcal{G}}(g)} \circ \mathrm{D}_g\pi_{\mathcal{G}} \mright) \mright)_x
-\cong
+&\cong
 \mathrm{Ad}_{\gamma^{-1}_x(t)} \circ \zeta_{\pi_{\mathcal{G}}\mleft(\gamma_x(t)\mright)} \circ \mathrm{D}_x\bigl( \pi_{\mathcal{G}} \circ \gamma(t) \bigr)
 =
 \mathrm{Ad}_{\gamma^{-1}_x(t)} \circ \zeta_{x}
-\end{equation*}
+\end{align*}
 for all $x \in M$, where $\gamma^{-1}(t)$ is the $\mathcal{G}$-inverse of $\gamma(t)$. It is also a straight-forward calculation to show that 
-\begin{equation*}
+\begin{align*}
 \gamma(t)^!\mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mutot
-=
+&=
 \mathrm{d}^{\gamma(t)^*\pi_{\mathcal{G}}^*\nabla^{\mathcal{G}}} \mleft( \gamma(t)^!\mutot\mright)
 =
 \mathrm{d}^{\mleft(\pi_{\mathcal{G}}\circ \gamma(t)\mright)^*\nabla^{\mathcal{G}}} \mleft( \gamma(t)^!\mutot\mright)
 =
 \mathrm{d}^{\nabla^{\mathcal{G}}} \mleft( \gamma(t)^!\mutot\mright),
-\end{equation*}
+\end{align*}
 using the definition of pullback vector bundle connections; alternatively see the explicit calulations in \cite[Appendix, Prop.\ A.1, Eq.\ (A.1)]{My1stpaper} or \cite[Appendix, Prop.\ A.1.1, Eq.\ (A.2)]{MyThesis}, and we have
 \begin{align*}
 &\mleft(\gamma(t)^!\mleft( \frac{1}{2} \mleft[ \mutot \stackrel{\wedge}{,} \mutot \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}} \mright)\mright)_x(X,Y)
@@ -8379,14 +8381,14 @@ for all $x \in M$ and $X, Y \in \mathrm{T}_xM$. Thus, we have so far
 	+ \zeta
 	- \mathrm{Ad}_{\gamma^{-1}(t)} \circ \zeta.
 \end{align}
-By \ref{prop:DarbouxLeibnizRule} we get
-\begin{equation*}
+By Prop.\ \ref{prop:DarbouxLeibnizRule} we get
+\begin{align*}
 \Delta\gamma(t)
-=
+&=
 \mathrm{Ad}_{\e^{-t\nu}} \circ \Delta \sigma
 	+ \Delta \e^{t\nu},
-\end{equation*}
-and via \ref{lem:FieldRedefViaLGBSection} we can derive
+\end{align*}
+and via Lemma \ref{lem:FieldRedefViaLGBSection} we can derive
 \begin{align*}
 &\mleft(\mathrm{d}^{\nabla^{\mathcal{G}}} \mleft(\mathrm{Ad}_{\e^{-t\nu}} \circ \Delta \sigma \mright)\mright)(X, Y)
 \\
@@ -8438,13 +8440,13 @@ for all $X, Y \in \mathfrak{X}(M)$, hence,
 	- \mleft[\Delta \sigma \stackrel{\wedge}{,} \nabla^{\mathcal{G}}\nu \mright]_{\mathcal{g}}
 	+ R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
 \end{align*}
-making use of that this calculation is pointwise at $x \in M$ just a standard derivative in the vector space $\mathcal{g}_x$ and that $\Delta e \equiv 0$ \ref{rem:baseManifoldHoriz}; we also used \ref{prop:GradedExtensionPlusAntiSymm}. In a similar fashion,
-\begin{equation*}
+making use of that this calculation is pointwise at $x \in M$ just a standard derivative in the vector space $\mathcal{g}_x$ and that $\Delta e \equiv 0$ by Remark \ref{rem:baseManifoldHoriz}; we also used Prop.\ \ref{prop:GradedExtensionPlusAntiSymm}. In a similar fashion,
+\begin{align*}
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0}\mleft[ \Delta\gamma(t) \stackrel{\wedge}{,} \Delta\gamma(t) \mright]_{\mathcal{g}}
-=
+&=
 2\mleft[ \mleft[\Delta\sigma, \nu \mright]_{\mathcal{g}} \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}
 	+ 2\mleft[ \Delta \sigma \stackrel{\wedge}{,} \nabla^{\mathcal{G}}\nu \mright]_{\mathcal{g}},
-\end{equation*}
+\end{align*}
 which we can rewrite by the Jacobi identity
 \begin{align*}
 \mleft[ \mleft[\Delta\sigma, \nu \mright]_{\mathcal{g}} \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}(X, Y)
@@ -8459,13 +8461,13 @@ which we can rewrite by the Jacobi identity
 \mleft[ \frac{1}{2} \mleft[\Delta\sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} , \nu \mright]_{\mathcal{g}}(X, Y)
 \end{align*}
 for all $X, Y \in \mathfrak{X}(M)$, and we also trivially have
-\begin{equation*}
+\begin{align*}
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mathrm{Ad}_{\gamma^{-1}(t)} \circ \zeta
-=
+&=
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \mathrm{Ad}_{\e^{-t\nu}} \circ \mathrm{Ad}_{\sigma^{-1}} \circ \zeta
 =
 \mleft[ \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, \nu \mright]_{\mathcal{g}}.
-\end{equation*}
+\end{align*}
 Collecting everything we derive
 \begin{align}\label{PullbackofMCEqGivesCurv}
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \gamma(t)^!\omega
@@ -8492,113 +8494,115 @@ R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
 for all $\nu \in \Gamma(\mathcal{g})$ and $\sigma \in \Gamma(\mathcal{G})$.
 
 $\bullet$ On the one hand, if $\mutot$ satisfies Eq.\ \eqref{THEGeneralizedMCEq}, then $\omega \equiv 0$. As previously mentioned, we have $\Delta e \equiv 0$, so that we then get in total for Eq.\ \eqref{PullbackofMCEqGivesCurv} w.r.t.\ $\sigma \coloneqq e$ that
-\begin{equation*}
+\begin{align*}
 R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
-=
+&=
 \mleft[ \zeta, \nu \mright]_{\mathcal{g}}
-\end{equation*}
+\end{align*}
 for all $\nu \in \Gamma(\mathcal{g})$, which is the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB}.
 
-$\bullet$ On the other hand, if $\mathrm{H}\mathcal{G}$ satisfies the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB}, $R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu = \mleft[ \zeta, \cdot \mright]_{\mathcal{g}}$, then $\mathrm{H}\mathcal{G}$ is an infinitesimal multiplicative Yang-Mills connection by \ref{lem:YangMillsConnAnEhresmann}, and so we know by Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation} (\ref{lem:FieldRedefViaLGBSection}) that 
-\begin{equation*}
+$\bullet$ On the other hand, if $\mathrm{H}\mathcal{G}$ satisfies the infinitesimal compatibility condition \eqref{CondKruemmungmitBLAB}, $R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu = \mleft[ \zeta, \cdot \mright]_{\mathcal{g}}$, then $\mathrm{H}\mathcal{G}$ is an infinitesimal multiplicative Yang-Mills connection by Lemma \ref{lem:YangMillsConnAnEhresmann}, $\nabla^{\mathcal{G}} = \nabla^\caG$, and we know by Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation} (Lemma \ref{lem:FieldRedefViaLGBSection}) that 
+\begin{align*}
 \mleft[ \mathrm{d}^{\nabla^\caG} \Delta \sigma + \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} - \mathrm{Ad}_{\sigma^{-1}} \circ \zeta, ~ \nu \mright]_{\mathcal{g}}
-=
+&=
 - \mleft[ \zeta, \nu \mright]_{\mathcal{g}},
-\end{equation*}
+\end{align*}
 so that Eq.\ \eqref{PullbackofMCEqGivesCurv} then has the form
-\begin{equation*}
+\begin{align*}
 \mleft.\frac{\mathrm{d}}{\mathrm{d}t}\mright|_{t=0} \gamma(t)^!\omega
-=
+&=
 R_{\nabla^{\mathcal{G}}} (\cdot, \cdot) \nu
 	- \mleft[ \zeta, \nu \mright]_{\mathcal{g}}
 \stackrel{\eqref{CondKruemmungmitBLAB}}{=}
 0
-\end{equation*}
+\end{align*}
 for all $\nu \in \Gamma(\mathcal{g})$ and $\sigma \in \Gamma(\mathcal{G})$.
 As aforementioned in the discussion around the definition of $\gamma$, also recall that $\omega$ vanishes if contracted with a vertical vector, we can conclude that $\omega$ is constant along the fibres of $\mathcal{G}$ which are connected, so that this implies
-\begin{equation*}
+\begin{align*}
 \omega
 =
 \pi_{\mathcal{G}}^!\xi
-\end{equation*}
-for a $\xi \in \Omega^2(M;\mathcal{g})$ defined by 
-\begin{equation*}
+\end{align*}
+for a $\xi \in \Omega^2(M;\mathcal{g})$, especially 
+\begin{align*}
 e^!\omega 
+&=
+\mleft(\pi_{\mathcal{G}}\circ e\mright)^!\xi
 =
-\xi~.
-\end{equation*}
-But we already have calculated this in Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra}: Set $t=0$ and $\sigma \coloneqq e$, then also again by $\Delta e = 0$ we have
-\begin{equation*}
+\xi.
+\end{align*}
+But we already have calculated this in Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra}, set $t=0$ and $\sigma \coloneqq e$, then also again by $\Delta e = 0$ we have
+\begin{align*}
 \xi
-=
+&=
 e^!\omega
 \stackrel{\eqref{PullbackofMCGeneralCurvPlusExtra}}{=}
 \zeta
 	- \zeta
 =
 0.
-\end{equation*}
+\end{align*}
 Finally we get
-\begin{equation*}
+\begin{align*}
 \omega
-=
+&=
 \pi_{\mathcal{G}}^!\xi
 =
 0,
-\end{equation*}
+\end{align*}
 which finishes the proof.
 \end{proof}
 
-Trivially, this theorem is an extension of Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation} (\ref{lem:FieldRedefViaLGBSection}).
+Trivially, this theorem is an extension of Eq.\ \eqref{AlmostGeneralizedMaurerCartanEquation} (Lemma \ref{lem:FieldRedefViaLGBSection}).
 
 \begin{corollaries}{Pullback of generalized Maurer-Cartan equation}{PullbackOfMCSupperEquation}
-Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$, $\mathrm{H}\mathcal{G}$ a multiplicative Ehresmann connection on $\mathcal{G}$ so that $\mutot$ satisfies the generalized Maurer-Cartan equation \eqref{THEGeneralizedMCEq} w.r.t.\ a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then
-\begin{equation*}
+Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$, $\mathrm{H}\mathcal{G}$ an Ehresmann connection on $\mathcal{G}$ so that the total Maurer-Cartan form $\mutot$ satisfies the generalized Maurer-Cartan equation \eqref{THEGeneralizedMCEq} w.r.t.\ a $\zeta \in \Omega^2\mleft( M; \mathcal{g} \mright)$. Then
+\begin{align*}
 \mathrm{d}^{\nabla^\caG} \Delta \sigma 
 	+ \frac{1}{2} \mleft[ \Delta \sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}} 
 	+ \zeta 
-=
+&=
 \mathrm{Ad}_{\sigma^{-1}} \circ \zeta
-\end{equation*}
+\end{align*}
 for all $\sigma \in \Gamma(\mathcal{G})$.
 \end{corollaries}
 
 \begin{proof}
 \leavevmode\newline
-Keeping the same notation as in the proof of \ref{thm:GenMCEq}, we have derived Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra}, and due to \ref{thm:GenMCEq} we get $\omega = 0$; altogether Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra} at $t=0$ gives then
-\begin{equation*}
+Keeping the same notation as in the proof of Thm.\ \ref{thm:GenMCEq}, we have derived Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra}, and due to Thm.\ \ref{thm:GenMCEq} we get $\omega = 0$; altogether Eq.\ \eqref{PullbackofMCGeneralCurvPlusExtra} at $t=0$ gives then
+\begin{align*}
 0
-=
+&=
 \mathrm{d}^{\nabla^\caG} \Delta\sigma
 	+ \frac{1}{2} \mleft[ \Delta\sigma \stackrel{\wedge}{,} \Delta\sigma \mright]_{\mathcal{g}}
 	+ \zeta
-	- \mathrm{Ad}_{\sigma^{-1}} \circ \zeta~.
-\end{equation*}
+	- \mathrm{Ad}_{\sigma^{-1}} \circ \zeta.
+\end{align*}
 \end{proof}
 
-Thus, we can finally define the connection we are going to need on the LGB.
+Thus, we can finally define the connection we need on the LGB.
 
 \begin{definitions}{multiplicative Yang-Mills connection}{NowReallyYangMillsConnectio}
-Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is a \textbf{multiplicative Yang-Mills (YM) connection (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$)}, if it satisfies the \textbf{compatibility conditions}:
+Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$, and $\mathrm{H}\mathcal{G}$ be a horizontal distribution of $\mathcal{G}$. Then we say that $\mathrm{H}\mathcal{G}$ is a \textbf{multiplicative Yang-Mills connection (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$)}, if it satisfies the \textbf{compatibility conditions}:
 \begin{enumerate}
-	\item $\mathrm{H}\mathcal{G}$ is a multiplicative Ehresmann connection,
-	\item The associated connection 1-form $\mutot$ satisfies the generalized Maurer-Cartan equation (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$).
+	\item $\mathrm{H}\mathcal{G}$ is an Ehresmann connection,
+	\item the total Maurer-Cartan form $\mutot$ satisfies the generalized Maurer-Cartan equation (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$).
 \end{enumerate}
-%By \ref{prop:TotMaurerIsMultiplicativeIfSEqual0} we can equivalently define $\mathrm{H}\mathcal{G}$ as a multiplicative Yang-Mills connection if
-%\begin{enumerate}
-	%\item $\mutot$ is multiplicative,
-	%\item $\mutot$ satisfies the generalized Maurer-Cartan equation (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$).
-%\end{enumerate}
-%
-We then label $\mutot$ as a multiplicative YM connection, too.
+By Thm.\ \ref{thm:TotMaurerIsMultiplicativeIfSEqual0} we can equivalently define $\mathrm{H}\mathcal{G}$ as a multiplicative Yang-Mills connection if
+\begin{enumerate}
+	\item $\mutot$ is multiplicative,
+	\item $\mutot$ satisfies the generalized Maurer-Cartan equation (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$).
+\end{enumerate}
+
+We then label $\mutot$ as a multiplicative Yang-Mills connection, too.
 \end{definitions}
 
-\begin{remarks}{Integration of compatibilities}{YangMillsEqualsInfYM}
-By \ref{lem:YangMillsConnAnEhresmann} and \ref{thm:GenMCEq}, every multiplicative Yang-Mills connection is also an infinitesimal multiplicative Yang-Mills connections, i.e.\ the infinitesimal compatibility conditions are naturally satisfied.
+\begin{remarks}{Multiplicative Yang-Mills connections integrate infinitesimal multiplicative Yang-Mills connections}{YangMillsEqualsInfYM}
+By Lemma \ref{lem:YangMillsConnAnEhresmann} and Thm.\ \ref{thm:GenMCEq}, every multiplicative Yang-Mills connection is also an infinitesimal multiplicative Yang-Mills connections, \textit{i.e.}\ the infinitesimal compatibility conditions are also satisfied.
 \end{remarks}
 
 \begin{remarks}{Relation to simplicial differential}{SimplicialDifferentialStuff}
-In fact, \ref{def:MultiplicativeFormsDef} comes from a simplicial differential (w.r.t.\ points on $\mathcal{G}$) defined in \cite[beginning of \S 1.2]{crainic2003differentiable}. We do not have time to introduce it completely, but we give a short sketch about its definitions, also following the style of \cite[appendix]{FernandesMarcutMultiplicativeForms}. On degree one the cited differential is a map
+In fact, Def.\ \ref{def:MultiplicativeFormsDef} comes from a simplicial differential (w.r.t.\ points on $\mathcal{G}$) defined in \cite[beginning of \S 1.2]{crainic2003differentiable}. We do not have time to introduce it completely, but we give a short sketch about its definitions, also following the style of \cite[appendix]{FernandesMarcutMultiplicativeForms}. On degree one the cited differential is a map
 \begin{align*}
 \Omega^\bullet\mleft(\mathcal{G}; \pi_{\mathcal{G}}^*\mathcal{g}\mright)
 &\to
@@ -8616,7 +8620,7 @@ with
 	+ \mleft(\mathrm{pr}_2^!\omega\mright)_{(g, q)}
 	- \mleft( \Phi^!\omega \mright)_{(g,q)}
 \end{align*}
-for all $(g, q) \in \mathcal{G} * \mathcal{G}$, where $\Phi: \mathcal{G}*\mathcal{G}\to \mathcal{G}$ is the $\mathcal{G}$-multiplication, and $\mathrm{pr}_i\colon \mathcal{G}*\mathcal{G} \to \mathcal{G}$ are the canonical projections onto the $i$-th component ($i \in \{1,2\}$); $\pi_{\mathcal{G}}$ is canonically extended to $\mathcal{G} * \mathcal{G}$. Recall Def.\ \ref{def:MultiplicativeFormsDef} and its Rem.\ \ref{rem:sloppynotationformultiplicativity}, $\omega$ can be defined to be multiplicative if $\delta\omega = 0$, \textit{i.e.}\ $\omega$ is closed w.r.t.\ $\delta$. 
+for all $(g, q) \in \mathcal{G} * \mathcal{G}$, where $\Phi: \mathcal{G}*\mathcal{G}\to \mathcal{G}$ is the $\mathcal{G}$-multiplication, and $\mathrm{pr}_i: \mathcal{G}*\mathcal{G} \to \mathcal{G}$ are the canonical projections onto the $i$-th component ($i \in \{1,2\}$); $\pi_{\mathcal{G}}$ is canonically extended to $\mathcal{G} \times \mathcal{G}$. Recall Def.\ \ref{def:MultiplicativeFormsDef} and its Rem.\ \ref{rem:sloppynotationformultiplicativity}, $\omega$ can be defined to be multiplicative if $\delta\omega = 0$, \textit{i.e.}\ $\omega$ is closed w.r.t.\ $\delta$. 
 
 On degree 0 $\delta$ is a map $\Omega^\bullet(M; \mathcal{g}) \to \Omega^\bullet\mleft(\mathcal{G}; \pi^{*}_{\mathcal{g}}\mright)$ given for $\xi \in \Omega^\bullet(M; \mathcal{g})$ by
 \begin{align*}
@@ -9155,7 +9159,7 @@ F
 \end{propositions}
 
 \begin{remarks}{The generalized field strength of the total Maurer-Cartan form}{CurvoftotMCForm}
-Again viewing $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ as the principal bundle itself with $\mathrm{H}\mathcal{P} = \mathrm{H}\mathcal{G}$, we know by Cor.\ \ref{cor:TotMCFormIsConnectionForm} that the total Maurer-Cartan form $\mutot$ is the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$. Denoting the associated generalized field strength by $F\mleft( \mutot \mright)$, the structure equation and the generalized Maurer-Cartan equation, Thm.\ \ref{thm:GenMCEq} (also recall Rem.\ \ref{rem:BasePointDifficultiesinGenMCEq}), imply
+Again viewing $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ as the principal bundle itself with $\mathrm{H}\mathcal{P} = \mathrm{H}\mathcal{G}$, we know by Cor.\ \ref{cor:TotMCFormIsConnectionForm} that the total Maurer-Cartan form $\mutot$ is the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$. Denoting the associated generalized field strength by $F\mleft( \mutot \mright)$, the structure equation and the generalized Maurer-Cartan equation, Thm.\ \ref{thm:GenMCEq} (also recall Rem.\ \ref{BasePointDifficultiesinGenMCEq}), imply
 \begin{align*}
 F_g\mleft( \mutot \mright)
 &=

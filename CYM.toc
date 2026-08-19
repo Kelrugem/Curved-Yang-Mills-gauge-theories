@@ -30,13 +30,13 @@
 \contentsline {subsubsection}{\tocsubsubsection {}{6.2.3}{First step towards towards associated bundles}}{49}{subsubsection.155}%
 \contentsline {subsubsection}{\tocsubsubsection {}{6.2.4}{Generalized connection 1-forms on principal bundles}}{51}{subsubsection.159}%
 \contentsline {subsection}{\tocsubsection {}{6.3}{Gauge transformations}}{58}{subsection.182}%
-\contentsline {subsection}{\tocsubsection {}{6.4}{Generalized curvature/field strength}}{67}{subsection.199}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.4.1}{multiplicative Yang-Mills connections on LGBs}}{67}{subsubsection.200}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.4.2}{Field strength related to multiplicative Yang-Mills connections}}{80}{subsubsection.239}%
-\contentsline {subsubsection}{\tocsubsubsection {}{6.4.3}{Gauge transformation of the generalized field strength}}{86}{subsubsection.247}%
-\contentsline {section}{\tocsection {}{7}{Curved Yang-Mills gauge theory}}{87}{section.253}%
-\contentsline {subsection}{\tocsubsection {}{7.1}{Definition and gauge invariance}}{87}{subsection.254}%
-\contentsline {subsection}{\tocsubsection {}{7.2}{Field redefinitions}}{89}{subsection.259}%
-\contentsline {subsection}{\tocsubsection {}{7.3}{Examples}}{91}{subsection.268}%
-\contentsline {subsection}{\tocsubsection {}{7.4}{Future prospects}}{94}{subsection.279}%
-\contentsline {section}{\tocsection {Appendix}{}{List of References}}{95}{section*.280}%
+\contentsline {subsection}{\tocsubsection {}{6.4}{Generalized curvature/field strength}}{66}{subsection.199}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.4.1}{Multiplicative Yang-Mills connections on LGBs}}{66}{subsubsection.200}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.4.2}{Field strength related to multiplicative Yang-Mills connections}}{79}{subsubsection.238}%
+\contentsline {subsubsection}{\tocsubsubsection {}{6.4.3}{Gauge transformation of the generalized field strength}}{84}{subsubsection.246}%
+\contentsline {section}{\tocsection {}{7}{Curved Yang-Mills gauge theory}}{86}{section.252}%
+\contentsline {subsection}{\tocsubsection {}{7.1}{Definition and gauge invariance}}{86}{subsection.253}%
+\contentsline {subsection}{\tocsubsection {}{7.2}{Field redefinitions}}{87}{subsection.258}%
+\contentsline {subsection}{\tocsubsection {}{7.3}{Examples}}{90}{subsection.267}%
+\contentsline {subsection}{\tocsubsection {}{7.4}{Future prospects}}{93}{subsection.278}%
+\contentsline {section}{\tocsection {Appendix}{}{List of References}}{93}{section*.279}%
