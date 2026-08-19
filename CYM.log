@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  19 AUG 2026 19:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  19 AUG 2026 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1610,19 +1610,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (5.14194pt too high) has occurred while \output is active []
 
 
-[71] [72] [73] [74] [75] [76] [77]
-
-LaTeX Warning: Reference `MackenziesStuffRelation' on page 1 undefined on input
- line 8716.
-
-
-LaTeX Warning: Reference `PTLABComingFromPTLGB' on page 1 undefined on input li
-ne 8740.
-
-[78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91]
+[71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85]
+[86] [87] [88] [89] [90] [91]
 
 LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
-on input line 9746.
+on input line 9752.
 
 
 Underfull \vbox (badness 1314) has occurred while \output is active []
@@ -1686,11 +1678,11 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: 33042E6292D0204EDF2A40E9E8D50A2F;6530.
  ) 
 Here is how much of TeX's memory you used:
- 42279 strings out of 467866
- 838322 string characters out of 5418325
- 1331159 words of memory out of 5000000
- 69462 multiletter control sequences out of 15000+600000
- 739234 words of font info for 340 fonts, out of 8000000 for 9000
+ 42275 strings out of 467866
+ 838241 string characters out of 5418325
+ 1330528 words of memory out of 5000000
+ 69460 multiletter control sequences out of 15000+600000
+ 739169 words of font info for 339 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  88i,21n,94p,3230b,1556s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu3
@@ -1754,9 +1746,9 @@ grams/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb><C:/Users/kelru/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (95 pages, 2171382 bytes).
+Output written on CYM.pdf (95 pages, 2171747 bytes).
 PDF statistics:
- 1918 PDF objects out of 2073 (max. 8388607)
+ 1919 PDF objects out of 2073 (max. 8388607)
  399 named destinations out of 1000 (max. 500000)
  52073 words of extra memory for PDF output out of 61914 (max. 10000000)
 
