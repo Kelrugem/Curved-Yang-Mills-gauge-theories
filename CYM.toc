@@ -38,5 +38,6 @@
 \contentsline {subsection}{\tocsubsection {}{7.1}{Definition and gauge invariance}}{86}{subsection.253}%
 \contentsline {subsection}{\tocsubsection {}{7.2}{Field redefinitions}}{87}{subsection.258}%
 \contentsline {subsection}{\tocsubsection {}{7.3}{Examples}}{90}{subsection.267}%
-\contentsline {subsection}{\tocsubsection {}{7.4}{Future prospects}}{93}{subsection.278}%
-\contentsline {section}{\tocsection {Appendix}{}{List of References}}{93}{section*.279}%
+\contentsline {section}{\tocsection {}{8}{Future prospects}}{93}{section.281}%
+\contentsline {subsection}{\tocsubsection {}{8.1}{Principal Lie groupoid bundles}}{94}{subsection.282}%
+\contentsline {section}{\tocsection {Appendix}{}{List of References}}{95}{section*.284}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  19 AUG 2026 19:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  20 AUG 2026 18:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1520,7 +1520,7 @@ ocal/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] (CYM.toc)
 \openout6 = `CYM.toc'.
 
  [1]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 615
+LaTeX Font Info:    Trying to load font information for U+euf on input line 613
 .
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
@@ -1531,13 +1531,9 @@ File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
 [2{C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
-c}]
-Underfull \vbox (badness 2126) has occurred while \output is active []
-
- [3]
-[4] [5] [6] [7] [8] [9] [10] [11]
+c}] [3] [4] [5] [6] [7] [8] [9] [10] [11]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-1162.
+1160.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1548,12 +1544,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [12]
 [13] [14] [15] [16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1881--1884
+Underfull \hbox (badness 10000) in paragraph at lines 1879--1882
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1898--1901
+Underfull \hbox (badness 10000) in paragraph at lines 1896--1899
 
  []
 
@@ -1580,12 +1576,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [37]
 [38] [39]
-Overfull \hbox (18.01428pt too wide) in paragraph at lines 4793--4795
+Overfull \hbox (18.01428pt too wide) in paragraph at lines 4791--4793
  [] 
  []
 
 
-Overfull \hbox (18.01428pt too wide) in paragraph at lines 4857--4858
+Overfull \hbox (18.01428pt too wide) in paragraph at lines 4855--4856
  [] 
  []
 
@@ -1611,29 +1607,14 @@ Overfull \vbox (5.14194pt too high) has occurred while \output is active []
 
 
 [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85]
-[86] [87] [88] [89] [90] [91]
-
-LaTeX Warning: Reference `rem:ClassGaugeTrafosAndcgPMulti' on page 1 undefined 
-on input line 9752.
-
-
-Underfull \vbox (badness 1314) has occurred while \output is active []
-
- [92]
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.enc
-File: UTF8.enc 2021/10/16 4.8.5
-)
-(C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/cjk/UTF8\UTF8.chr
-File: UTF8.chr 2021/10/16 4.8.5
-)
-(CYM.bbl
+[86] [87] [88] [89] [90] [91] [92] [93] [94] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 15--19
 []\OT1/lmr/m/n/8 (+20) Thomas Strobl. Al-ge-broid Yang-Mills the-o-ries. \OT1/l
 mr/m/it/8 (+20) Phys-i-cal re-view let-ters\OT1/lmr/m/n/8 (+20) , 93(21):211601
 , 2004.
  []
 
-[93]
+
 Underfull \hbox (badness 3386) in paragraph at lines 100--106
 []\OT1/lmr/m/n/8 (+20) Simon-Raphael Fis-cher, Mehran Jalali Fara-hani, Hyun-gr
 ok Kim, and Chris-tian Sae-mann. Topo-
@@ -1659,30 +1640,29 @@ Underfull \hbox (badness 3460) in paragraph at lines 114--119
  []
 
 
+Underfull \vbox (badness 1087) has occurred while \output is active []
+
+ [95]
 Underfull \hbox (badness 1325) in paragraph at lines 127--132
 \OT1/lmr/m/n/8 (+20) els, and off-shell closed gauge sym-me-tries. \OT1/lmr/m/i
 t/8 (+20) Jour-nal of Ge-om-e-try and Physics\OT1/lmr/m/n/8 (+20) , 54(4):400--
 426, 2005.
  []
 
-) [94] (CYM.aux)
+) [96] (CYM.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `CYM.out' has not changed.
-(rerunfilecheck)             Checksum: 33042E6292D0204EDF2A40E9E8D50A2F;6530.
+(rerunfilecheck)             Checksum: 599782DF3E7428D89896228C33E00417;6753.
  ) 
 Here is how much of TeX's memory you used:
- 42275 strings out of 467866
- 838241 string characters out of 5418325
- 1330528 words of memory out of 5000000
- 69460 multiletter control sequences out of 15000+600000
- 739169 words of font info for 339 fonts, out of 8000000 for 9000
+ 42271 strings out of 467866
+ 837913 string characters out of 5418325
+ 1330403 words of memory out of 5000000
+ 69464 multiletter control sequences out of 15000+600000
+ 738664 words of font info for 334 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  88i,21n,94p,3230b,1556s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kelru/AppData/Local/Programs/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu3
@@ -1746,9 +1726,9 @@ grams/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb><C:/Users/kelru/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (95 pages, 2171747 bytes).
+Output written on CYM.pdf (97 pages, 2206864 bytes).
 PDF statistics:
- 1919 PDF objects out of 2073 (max. 8388607)
- 399 named destinations out of 1000 (max. 500000)
- 52073 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1956 PDF objects out of 2073 (max. 8388607)
+ 405 named destinations out of 1000 (max. 500000)
+ 52081 words of extra memory for PDF output out of 61914 (max. 10000000)
 

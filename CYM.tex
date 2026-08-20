@@ -539,7 +539,7 @@
             {
 						{\Large {Simon-Raphael \textsc{Fischer}\textsuperscript*\textsuperscript{$\dagger$}}}
 						\vskip0.5cm
-						October 6, 2022: First version \\ May 2, 2025: More examples and classifying setup with simple Lie group bundles \\ \today: Major rewrite (without adding new statements), in particular for shortening the paper
+						October 6, 2022: First version \\ May 2, 2025: More examples and classifying setup with simple Lie group bundles \\ \today: Major rewrite, in particular for shortening the paper; no new statements, but an added summary about how to formulate the Lagrangian for principal groupoid bundles
             \vskip0.5cm
             {
                 \textsuperscript* 2021–2024: National Center for Theoretical Sciences (\begin{CJK*}{UTF8}{bkai}國家理論科學研究中心\end{CJK*}),
@@ -564,9 +564,7 @@
             \textbf{Abstract}\footnote{Abbreviations used in this paper: \textbf{LGB(s)} for Lie group bundle(s), \textbf{LAB(s)} for Lie algebra bundle(s).}
         \end{center}
         \begin{quote}
-				We construct a gauge theory based on principal bundles $\mathcal{P}$ equipped with a right $\mathcal{G}$-action, where $\mathcal{G}$ is a Lie group bundle instead of a Lie group. Due to the fact that a $\mathcal{G}$-action acts fibre by fibre, pushforwards of tangent vectors via a right-translation act now only on the vertical structure of $\mathcal{P}$. Thus, we generalize pushforwards using a connection on $\mathcal{G}$ which will modify the pushforward. A horizontal distribution on $\mathcal{P}$ invariant under such a modified pushforward will provide a proper notion of Ehresmann connection. For achieving gauge invariance we impose conditions on the connection 1-form $\mu$ on $\mathcal{G}$: $\mu$ has to be a multiplicative form, \textit{i.e.}\ closed w.r.t.\ a certain simplicial differential $\delta$ on $\mathcal{G}$, and the curvature $R_\mu$ of $\mu$ has to be $\delta$-exact with primitive $\zeta$; $\mu$ will be the generalization of the Maurer-Cartan form of the classical gauge theory, while the $\delta$-exactness of $R_\mu$ will generalize the role of the Maurer-Cartan equation. This introduces the notion of multiplicative Yang-Mills connections, a connection which helped classifying singular foliations and (topological) symmetry breaking. For allowing curved connections on $\mathcal{G}$ in the dynamical theory we will need to generalize the typical definition of the curvature/field strength $F$ on $\mathcal{P}$ by adding $\zeta$ to $F$.
-	
-				Several examples for a gauge theory with a curved $\mu$ will be provided, including the inner group bundle of the Hopf fibration $\mathbb{S}^7 \to \mathbb{S}^4$, and including a classification for whether these theories admit a classical description.
+				We construct a gauge theory based on principal bundles $\mathcal{P}$ equipped with a right $\mathcal{G}$-action, where $\mathcal{G}$ is a Lie group bundle instead of a Lie group. Due to the fact that a $\mathcal{G}$-action acts fibre by fibre, pushforwards of tangent vectors via a right-translation act now only on the vertical structure of $\mathcal{P}$. Thus, we generalize pushforwards using a connection on $\mathcal{G}$ which will modify the pushforward. A horizontal distribution on $\mathcal{P}$ invariant under such a modified pushforward will provide a proper notion of Ehresmann connection. For achieving gauge invariance we impose conditions on the connection 1-form $\mu$ on $\mathcal{G}$: $\mu$ has to be a multiplicative form, i.e.\ closed w.r.t.\ a certain simplicial differential $\delta$ on $\mathcal{G}$, and the curvature $R_\mu$ of $\mu$ has to be $\delta$-exact with primitive $\zeta$; $\mu$ will be the generalization of the Maurer-Cartan form of the classical gauge theory, while the $\delta$-exactness of $R_\mu$ will generalize the role of the Maurer-Cartan equation. This introduces the notion of multiplicative Yang-Mills connections, a connection which helped classifying singular foliations and (topological) symmetry breaking. For allowing curved connections on $\mathcal{G}$ in the dynamical theory we will need to generalize the typical definition of the curvature/field strength $F$ on $\mathcal{P}$, too, by adding $\zeta$ to $F$. Concluding with a description of how redo those steps when $\caG$ is a Lie groupoid. Several examples for a gauge theory with a curved $\mu$ will be provided, including the inner group bundle of the Hopf fibration $\mathbb{S}^7 \to \mathbb{S}^4$, and including a classification for whether these theories admit a classical description. 
         \end{quote}
     \end{titlepage}
 
@@ -640,7 +638,7 @@ for $(p, v) \in E$, and Lie bracket
 As it is shown in the mentioned references for this type of infinitesimal gauge theory, one gets back to the standard Yang-Mills-Higgs gauge theory if additionally $\zeta \equiv 0$. Thus, the theory represents a covariantized version of gauge theory equipped with an additional 2-form $\zeta$. If $\nabla$ is flat we say in general that we have a \textbf{pre-classical} gauge theory, and if additionally $\zeta \equiv 0$ we have a \textbf{classical} gauge theory. In fact, we will observe in this work that the integration of $\nabla$ is a generalisation of the Maurer-Cartan form, while $\zeta$ sort of reflects the curvature of $\nabla$. Thus, the theory presented here will represent a gauge theory covariantised w.r.t.\ the Maurer-Cartan form; see later.
 
 The 2-form $\zeta$ is needed to allow non-flat $\nabla$, because otherwise only flat $\nabla$ could satisfy the compatibility conditions. But $\zeta$ is not just an auxiliary map, in \cite{MyThesis} I have shown that there is also a class of \textbf{field redefinitions}\footnote{So far, there is no proper name for them.} for the classical formulation of gauge theory. This field redefinition breaks the gauge invariance; so, in order to keep gauge invariance, one needs to add $\zeta$ to the field strength, and at the same time one achieves a richer framework for gauge theories. 
-In fact, these field redefinitions are not just any transformation preserving the physics. As pointed out in \cite{MyThesis}, curved Yang-Mills gauge theory is a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions, similar to how one reformulates Classical Mechanics so that it is form-invariant w.r.t.\ Galilei or Lorentz transformations. This reformulation precisely introduces those extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength. Thus, this gauge theory is not just a ``simple'' generalisation where one simply adds extra terms, and henceforth it is natural to study whether there is a gauge theory where $\zeta$ is non-zero and cannot be transformed to zero by the mentioned field redefinitions; see the Tables \ref{tab:ClassicalCov}, \ref{tab:cYM}, and \ref{tab:cYMH}.
+In fact, these field redefinitions are not just any transformation preserving the physics. As pointed out in \cite{MyThesis}, curved Yang-Mills gauge theory is a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions, similar to how one reformulates Classical Mechanics so that it is form-invariant w.r.t.\ Galilei or Lorentz transformations. This reformulation precisely introduces those extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength. Thus, this gauge theory is not just a ``simple'' generalisation where one simply adds extra terms, and henceforth it is natural to study whether there is an example of a gauge theory where $\zeta$ is non-zero and cannot be transformed to zero by the mentioned field redefinitions; see the \ref{tab:ClassicalCov}, \ref{tab:cYM}, and \ref{tab:cYMH}.
 
 {\renewcommand{\arraystretch}{2}
 \begin{table}[H]
@@ -700,10 +698,10 @@ In fact, these field redefinitions are not just any transformation preserving th
 \phantom{Coordinate changes may lead} \arrow[bend right, equal]{r} \& \phantom{Expressions form-invariant}
 	\end{tikzcd}
 	
-	In particular, we will study and introduce the notions for curved Yang-Mills gauge theories (Table \ref{tab:cYM}), and we will provide a full family of examples of new gauge theories which cannot be flattened via field redefinitions. For completeness, gauge theories with a structural groupoid, curved Yang-Mills-Higgs theory, were introduced in \cite{Fischer:2024vak} after this work. In fact, many of the examples provided here were first introduced in \cite{Fischer:2024vak}, and later added to this work here; these examples are a direct consequence of \cite{Fischer:2401.05966}, a first application of the kinematics of curved Yang-Mills gauge theories.
+	In particular, we will study and introduce the notions for curved Yang-Mills gauge theories (\ref{tab:cYM}), and we will provide a full family of examples of new gauge theories which cannot be flattened via field redefinitions. For completeness, gauge theories with a structural groupoid, curved Yang-Mills-Higgs theory, were introduced in \cite{Fischer:2024vak} after this work. In fact, many of the examples provided here were first introduced in \cite{Fischer:2024vak}, and later added to this work here; these examples are a direct consequence of \cite{Fischer:2401.05966}, a first application of the kinematics of curved Yang-Mills gauge theories.
 	
 	\begin{remarks}{References for connections on principal LGB-bundles}{AnotherPreprintWork}
-It is important to mention beforehand that there is another great paper, \cite{OtherPreprintAboutConnection}, which also discusses the notion of connections on principal LGB-bundles. When I wrote this paper, I was not aware of this paper so that there will be some shared results which I found independently of the other authors. This will be obvious due to the fact that our approach is different. Both, this and the other paper, lead to the same sense of Ehresmann connection (based on the same idea of the behaviour of the parallel transport), but are explicitly not directly the same formulation. More like equivalent definitions of the same object, two sides of the same coin, so that it should be worth it to read both research works. Hence, our approach will be different with some shared and some different results. \cite{OtherPreprintAboutConnection} sole purpose was in defining connections on principal bundles with Lie group bundle action (with an application in variational calculus), while we will also introduce and discuss Darboux derivatives, Yang-Mills gauge theory, and related concepts in this context, also pinpointing what happens for Yang-Mills-Higgs theories. Furthermore, our field strength on the principal bundle will be different and more general as already pointed out previously; it will consist of the typical curvature measuring the failure of a distribution to be integrable, plus an adjustment term $\zeta$.
+It is important to mention beforehand that there is another great paper, \cite{OtherPreprintAboutConnection}, which also discusses the notion of connections on principal LGB-bundles. When I wrote this paper, I was not aware of this paper so that there will be some shared results which I found independently of the other authors. This will be obvious due to the fact that our approach is different. Both, this and the other paper, lead to the same sense of Ehresmann connection (based on the same idea of the behaviour of the parallel transport), but are explicitly not directly the same formulation. More like equivalent definitions of the same object, two sides of the same coin, so that it should be worth it to read both research works. Hence, our approach will be different with some shared and some different results: \cite{OtherPreprintAboutConnection} sole purpose was in defining connections on principal bundles with Lie group bundle action (with an application in variational calculus), while we will also introduce and discuss Darboux derivatives, Yang-Mills gauge theory, and related concepts in this context, also pinpointing what happens for Yang-Mills-Higgs theories. Furthermore, our field strength on the principal bundle will be different and more general as already pointed out previously; it will consist of the typical curvature measuring the failure of a distribution to be integrable, plus an adjustment term $\zeta$.
 \end{remarks}
 
 In \cite{MyThesis} I first focused on Lie algebroids where the anchor map is an isomorphism and, thus, the Lie algebroid is just the tangent bundle of $M$. Locally, such examples can be excluded: The curvature can be always transformed to zero by the field redefinitions. However, globally, this is not always true: I have shown that the tangent bundle of the seven-dimensional sphere $\mathbb{S}^7$ is an example of a curved gauge theory which cannot be transformed to a flat pre-classical gauge theory, otherwise it would be a Lie group which is not possible.
@@ -760,9 +758,9 @@ In \ref{ConnCurvOnPrincLGBBundle} we will introduce connections and generalized 
 %\end{lemmata*}
 
 In \ref{ConnectionSubsection} we finally turn to the notion of connections on $\mathcal{P}$, described as horizontal subbundle $\mathrm{H}\mathcal{P}$ of the tangent bundle $\mathrm{T}\mathcal{P}$, complementary to the vertical bundle $\mathrm{V}\mathcal{P}$, and equivalently we want to describe $\mathrm{H}\mathcal{P}$ as a connection 1-form $A$. As one can already see in the previous proposition about the derivative of the action $\Phi$, due to the fact that right-translations $r_g$ of an element $g \in \mathcal{G}_x$ now only acts on $\mathcal{P}_x$, its derivative $\mathrm{D}r_g$ only acts on the tangent bundle of $\mathcal{P}_x$, the vertical tangent vectors of $\mathcal{P}$ (over $x$). Hence, in order to define the pushforward of non-vertical vectors we make use of auxiliary sections. However, this leads to the problem that there are many different sections with the same value over a fixed base point $x \in M$, all of whose pushforwards of non-vertical vectors are in general different. To get rid of the ambiguity in the choice of section we are going to modify and generalize the pushforward of tangent vectors by right-translations. To do so, we fix a horizontal distribution $\mathrm{H}\mathcal{G}$ on $\mathcal{G}$, without further assumptions than the bare-bones for horizontal distributions. The \textbf{(modified) right-pushforward} of $X \in \rmT_p \caP$ ($p \in \caP_x$) by $g \in \caG_x$ is then defined as
-\bes
+\begin{equation*}
 \car_{g*}(X) \coloneqq \rmD_{(p, g)}\Phi(X, Y),
-\ees
+\end{equation*}
 where $Y \in \rmH_g\caG$ is the unique horizontal vector at $g$ lifting $\rmD_p\pi(X)$.
 
 Then we start to construct the horizontal distribution $\mathrm{H}\mathcal{P}$ initially by its associated parallel transport, shortly denoted now by $\mathrm{PT}^{\mathcal{P}}$; similarly we denote the parallel transport associated to $\mathrm{H}\mathcal{G}$ by $\mathrm{PT}^{\mathcal{G}}$. We define an Ehresmann connection on $\mathcal{P}$ by
@@ -2461,7 +2459,7 @@ We have similar remarks as in \ref{rem:LGBMOrphismRemark}. Additionally, we have
 \coloneqq
 \mleft[ X, Y \mright]_{\mathcal{g}_x}
 \end{equation*}
-for all $X, Y \in \mathcal{g}_x$ ($x \in M$). Using a local trivialization, this bracket is locally of the form as in Rem.\ \ref{rem:LGBMOrphismRemark} such that smoothness follows. In fact, as also argued in \cite[\S 16.2, Example 2, page 114]{DaSilva}, every vector bundle equipped with a smooth field of Lie brackets is an LAB.
+for all $X, Y \in \mathcal{g}_x$ ($x \in M$). Using a local trivialization, this bracket is locally of the form as in \ref{rem:LGBMOrphismRemark} such that smoothness follows. In fact, as also argued in \cite[\S 16.2, Example 2, page 114]{DaSilva}, every vector bundle equipped with a smooth field of Lie brackets is an LAB.
 \end{remarks}
 
 Endomorphisms of a vector bundle are of course another important example of LABs.
@@ -4492,11 +4490,11 @@ is a base-preserving principal bundle isomorphism w.r.t.\ $\mathrm{id}_{\mathcal
 %Y^h + Y^v,
 %\eas
 %$v$ stands for the vertical part and $h$ for its complementary part ("horizontal"). In fact, as it is well-known, a section $\sigma$ of a bundle induces a splitting of the short exact sequence of vector bundles
-%\bes
+%\begin{equation*}
 	%\begin{tikzcd}
 		%\sigma^*\mathrm{V}\mathcal{G}|_U \arrow[hook]{r} & \sigma^*\mathrm{T}\mathcal{G}|_U \arrow[two heads]{r}{\mathrm{D}\pi_{\mathcal{G}}} & \mathrm{T}M|_U,
 	%\end{tikzcd}
-%\ees
+%\end{equation*}
 %and $\mathrm{D}\sigma$ is a splitting/section of this sequence
 %so that we have $\sigma^*\mathrm{T}\mathcal{G} \cong \mathrm{Im}(\mathrm{D}\sigma) \oplus \sigma^*\mathrm{V}\mathcal{G}$.\footnote{$\sigma$ is actually an embedding, and thus $\mathrm{Im}(\mathrm{D}\sigma)$ is a well-defined subbundle isomorphic to $\mathrm{T}M$.} Furthermore, again due to Eq.\ \eqref{DsigmaIsASPlitting}, we have $\mathrm{Im}(\mathrm{D}_x\sigma) \cong \mathrm{T}_xM$ as vector spaces by $Y^h \mapsto \mathrm{D}_g\pi_{\mathcal{G}}\mleft(Y^h\mright) = \mathrm{D}_g\pi_{\mathcal{G}}(Y) = \omega$ since $Y^v$ is vertical. Hence, we can rewrite Eq.\ \eqref{DiffOfOrbitMap} as a map
 %\bas
@@ -8754,19 +8752,19 @@ Let us now introduce and discuss the field strength.
 
 \begin{definitions}{(Generalized) Field strength}{NewFieldStrength}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we define the \textbf{(generalized) curvature} or \textbf{(generalized) field strength $F$ (of $A$)} as an element of $\Omega^2\mleft( \mathcal{P}; \pi^*\mathcal{g} \mright)$ by
-\begin{align*}
+\begin{equation*}
 F
-&\coloneqq
+\coloneqq
 \mathrm{d}^{\pi^*\nabla^\caG} A \circ \mleft( \pi^{\mathrm{H}\mathcal{P}}, \pi^{\mathrm{H}\mathcal{P}} \mright)
 	+ \pi^!\zeta,
-\end{align*}
-where $\pi^{\mathrm{H}\mathcal{P}}: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ is the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$; that is,
-\begin{align*}
+\end{equation*}
+where $\pi^{\mathrm{H}\mathcal{P}}\colon \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ is the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$; that is,
+\begin{equation*}
 F(X, Y)
-&=
+=
 \mathrm{d}^{\pi^*\nabla^\caG} A \mleft( \pi^{\mathrm{H}\mathcal{P}}(X), \pi^{\mathrm{H}\mathcal{P}}(Y) \mright)
 	+ \mleft(\pi^*\zeta\mright) \bigl( \mathrm{D}\pi(X), \mathrm{D}\pi(Y) \bigr)
-\end{align*}
+\end{equation*}
 for all $X, Y \in \mathfrak{X}(\mathcal{P})$.
 \end{definitions}
 
@@ -8776,40 +8774,40 @@ Of course, we expect certain properties, naturally generalized by our previous d
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the following properties of the field strength:
 \begin{itemize}
 	\item \textbf{(Form of type $\sAd$)}
-	\begin{align*}
+	\begin{equation*}
 	\mathcal{r}_{\sigma}^!F
-	&=
+	=
 	\sAd_{\sigma^{-1}} \circ F
-	\end{align*}
+	\end{equation*}
 	for all (local) $\sigma \in \Gamma(\mathcal{G})$.
 	\item \textbf{(Horizontal form)}
 	\newline
 	For $X, Y \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$) we have
-	\begin{align*}
+	\begin{equation*}
 	F(X, Y)
-	&=
+	=
 	0
-	\end{align*}
+	\end{equation*}
 	if either of $X$ and $Y$ is vertical.
 \end{itemize}
 \end{propositions}
 
-However, despite the easy proof in the classical theory, the proof of the first property in Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} will be rather involved; most of the proof is straight-forward calculation, and then use our discussion about multiplicative Yang-Mills connections; the quintessence will be about using Lemma \ref{lem:BracketVertHor} (for first order terms w.r.t.\ $\sigma$) and Cor.\ \ref{cor:PullbackOfMCSupperEquation} (for second order terms w.r.t.\ $\sigma$).
+However, despite the easy proof in the classical theory, the proof of the first property in \ref{prop:NewFieldStrengthWithCoolProps} will be rather involved, but most of the proof is still straight-forward calculation, and then use our discussion about multiplicative Yang-Mills connections; the quintessence will be using \ref{lem:BracketVertHor} (for first order terms w.r.t.\ $\sigma$) and \ref{cor:PullbackOfMCSupperEquation} (for second order terms w.r.t.\ $\sigma$).
 %Now we can finally prove Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}.
 
-\begin{proof}[Proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}]
+\begin{proof}[Proof of \ref{prop:NewFieldStrengthWithCoolProps}]
 \leavevmode\newline
-For this proof we will neglect caring for the base point information in the involved pullback bundles since the base point information is clear by context; recall Subsection \ref{BasicNotations}. In that sense we also have $\sAd_\sigma \cong \pi^*\mathrm{Ad}_\sigma \cong \mathrm{Ad}_\sigma$ for all $\sigma \in \Gamma(\mathcal{G})$ \textit{etc.}; this will simplify the following notation a bit.
+For this proof we will neglect caring for the base point information in the involved pullback bundles since the base point information is clear by context; recall \ref{BasicNotations}. In that sense we also have $\sAd_\sigma \cong \pi^*\mathrm{Ad}_\sigma \cong \mathrm{Ad}_\sigma$ for all $\sigma \in \Gamma(\mathcal{G})$ \textit{etc.}; this will simplify the following notation a bit.
 
-$\bullet$ The second bullet point quickly follows by construction: The first summand of $F$ (recall Def.\ \ref{def:NewFieldStrength}) is clearly zero if either of $X$ and $Y$ is vertical; similar holds for the second summand because the vertical bundle is the kernel of $\mathrm{D}\pi$.
+$\bullet$ The second bullet point quickly follows by construction: The first summand of $F$ (recall \ref{def:NewFieldStrength}) is clearly zero if either of $X$ and $Y$ is vertical; similar holds for the second summand because the vertical bundle is the kernel of $\mathrm{D}\pi$.
 
-$\bullet$ Thence, let us focus on proving the first bullet point, and denote with $\pi_h: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, so that we write
-\begin{align*}
+$\bullet$ Thence, let us focus on proving the first bullet point, and denote with $\pi_h\colon \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ the canonical projection onto the associated Ehresmann connection $\mathrm{H}\mathcal{P}$ on $\mathcal{P}$, so that we write
+\begin{equation*}
 F
-&=
+=
 \mathrm{d}^{\pi^*\nabla^\caG} A \circ \mleft( \pi_h, \pi_h \mright)
 	+ \pi^!\zeta.
-\end{align*}
+\end{equation*}
 We have for $\sigma \in \Gamma(\mathcal{G})$
 \begin{align*}
 \mleft(\mathcal{r}_\sigma^!\pi^!\zeta\mright)_p(X, Y)
@@ -8828,7 +8826,7 @@ We have for $\sigma \in \Gamma(\mathcal{G})$
 &=
 \mleft(\pi^!\zeta\mright)_p(X, Y)
 \end{align*}
-for all $p \in \mathcal{P}_x$ ($x \in M$) and $X, Y \in \mathrm{T}_p\mathcal{P}$, making use of that fundamental vector fields are in the kernel of $\mathrm{D}\pi$ so that $\mathrm{D}\pi \circ \mathcal{r}_{\sigma_x*} = \mathrm{D}\pi \circ r_{\sigma_x*}$. For the first term in the field strength use Cor.\ \ref{cor:ModifiedRightPushyCommutesWithProj} and Remark \ref{rem:RemOohThesePullbacksConfusOrNotToConfus} so that
+for all $p \in \mathcal{P}_x$ ($x \in M$) and $X, Y \in \mathrm{T}_p\mathcal{P}$, making use of that fundamental vector fields are in the kernel of $\mathrm{D}\pi$ so that $\mathrm{D}\pi \circ \mathcal{r}_{\sigma_x*} = \mathrm{D}\pi \circ r_{\sigma_x*}$. For the first term in the field strength use \ref{cor:ModifiedRightPushyCommutesWithProj} and \ref{rem:RemOohThesePullbacksConfusOrNotToConfus} so that
 \begin{align*}
 \mathcal{r}_\sigma^!\mleft(\mathrm{d}^{\pi^*\nabla^\caG} A \circ \mleft( \pi_h, \pi_h \mright)\mright)
 &=
@@ -8864,14 +8862,14 @@ for all $p \in \mathcal{P}_x$ ($x \in M$) and $X, Y \in \mathrm{T}_p\mathcal{P}$
 \end{align*}
 Let us denote $X^h \coloneqq \pi_h(X)$ and $Y^h \coloneqq \pi_h(Y)$, where $X$ and $Y$ are now elements of $\mathfrak{X}(\mathcal{P})$; since we are looking at tensorial equations we can w.l.o.g.\ assume that $X^h$ and $Y^h$ are the horizontal lifts of vector fields $\omega^X$ and $\omega^Y$, respectively, on $M$, especially $\mathrm{D}\pi\mleft( X^h \mright) = \mathrm{D}\pi\mleft( X \mright) = \pi^*\omega^X$ and $\mathrm{D}\pi\mleft( Y^h \mright) = \mathrm{D}\pi\mleft( Y \mright) = \pi^*\omega^Y$.
 We also rewrite
-\begin{align*}
+\begin{equation*}
 \mathcal{r}_{\sigma*}(X)
-&=
+=
 \mathrm{D}r_{\sigma}(X)
 	- r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) (X)}}\mright)
 \in
 \Gamma\mleft( r_\sigma^* \mathrm{T}\mathcal{P} \mright) \cong \mathfrak{X}(\mathcal{P}).
-\end{align*}
+\end{equation*}
 In the following we will make use of the canonical identification $\mathfrak{X}(\mathcal{P}) \cong \Gamma\mleft( r_\sigma^* \mathrm{T}\mathcal{P} \mright)$, $X \mapsto r_\sigma^*X$, especially in order to calculate Lie brackets.
 %
 %Also observe that we have 
@@ -8886,7 +8884,7 @@ In the following we will make use of the canonical identification $\mathfrak{X}(
 %\eas
 %whose first equality is a very straight-forward generalization of the commutation of pullbacks and de-Rham differentials; this is easy to check, but in case the reader is interested in an explicit proof, then see either \cite[Appendix, Prop.\ A.1, Eq.\ (A.1)]{My1stpaper} or \cite[Appendix, Prop.\ A.1.1, Eq.\ (A.2)]{MyThesis}. 
 
-Then make use of Def.\ \ref{def:FinallyTheConnection} and Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm} to show
+Then make use of \ref{def:FinallyTheConnection} and \ref{thm:OurConnectionHasAUniqueoneForm} to show
 \begin{align}\label{TransformedClassicStrengthTerm}
 &
 r_\sigma^*\mleft(
@@ -8938,12 +8936,12 @@ r_\sigma^*\biggl(
 \Biggr).
 \end{align}
 Let us look at each summand individually; for the first summand we use the very well-known fact (see \textit{e.g.}\ \cite[\S A.1.11, Cor.\ A.1.51, page 615]{Hamilton}) that
-\begin{align*}
+\begin{equation*}
 \mleft[\mathrm{D}r_\sigma\mleft( X^h \mright), \mathrm{D}r_\sigma\mleft(Y^h\mright)\mright]
-&=
+=
 \mathrm{D}r_\sigma\mleft(\mleft[ X^h, Y^h\mright]\mright),
-\end{align*}
-making use of that $r_\sigma$ is an isomorphism, and thus we get for the first summand by using Def.\ \ref{def:GaugeBosonsOnLGBPrincies}
+\end{equation*}
+making use of that $r_\sigma$ is an isomorphism, and thus we get for the first summand by using \ref{def:GaugeBosonsOnLGBPrincies}
 \begin{align*}
 &r_\sigma^*\biggl(
 - A\mleft(
@@ -8968,7 +8966,7 @@ making use of that $r_\sigma$ is an isomorphism, and thus we get for the first s
 	- r_{\sigma}^*\mleft(\mleft(\pi^! \Delta \sigma \mright) \mleft(\mleft[ X^h, Y^h\mright]\mright)\mright),
 \end{align*}
 where we used a similar argument for the last equality as for the beginning of the calculation for Eq.\ \eqref{TransformedClassicStrengthTerm}.
-We know by Remark \ref{rem:FundVecsAreLABActions} that the map to fundamental vector fields is a homomorphism of Lie algebras, so that
+We know by \ref{rem:FundVecsAreLABActions} that the map to fundamental vector fields is a homomorphism of Lie algebras, so that
 %For the fourth summand recall that fundamental vector fields are fundamental vector fields along the fibres of $\mathcal{P}$; if we fix a base point $x \in M$, then each fibre $\mathcal{P}_x$ is an embedded submanifold of $\mathcal{P}$ onto which the Lie group $\mathcal{G}_x$ acts on the right. Thus, we know from Lie group action theory (see \textit{e.g.}\ \cite[\S 3.4, Prop.\ 3.4.4, page 144]{Hamilton}) that the Lie bracket of two fundamental vector fields over $\mathcal{P}_x$ is again a fundamental vector field over $\mathcal{P}_x$ given by
 %\bas
 %\mleft[ \overline{\mu}, \overline{\nu} \mright]
@@ -8976,26 +8974,26 @@ We know by Remark \ref{rem:FundVecsAreLABActions} that the map to fundamental ve
 %\overline{\mleft[ \mu, \nu \mright]}_{\mathcal{g}_x}
 %\eas
 %for all $\mu, \nu \in \mathcal{g}_x$. This naturally extends to fundamental vector fields over $\mathcal{P}$, so that
-\begin{align*}
+\begin{equation*}
 \mleft[r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
-&=
+=
 r_\sigma^*\mleft(
 {\overline{
 	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]_{\mathcal{\pi^*\mathcal{g}}}
 }}
 \mright),
-\end{align*}
+\end{equation*}
 and therefore we can derive for the fourth term in Eq.\ \eqref{TransformedClassicStrengthTerm} that
-\begin{align*}
+\begin{equation*}
 \mleft( r_\sigma^*A \mright)\mleft(
 	\mleft[r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright) }}\mright), r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) }}\mright) \mright]
 	\mright)
-&=
+=
 r_\sigma^*\mleft(
 	\mleft[ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h \mright), \mleft(\pi^! \Delta \sigma \mright)\mleft(Y^h \mright) \mright]_{\mathcal{\pi^*\mathcal{g}}}
 \mright).
-\end{align*}
-For the second and third summands in Eq.\ \eqref{TransformedClassicStrengthTerm} we want to use Lemma \ref{lem:BracketVertHor} and our result of the fourth summand to show
+\end{equation*}
+For the second and third summands in Eq.\ \eqref{TransformedClassicStrengthTerm} we want to use \ref{lem:BracketVertHor} and our result of the fourth summand to show
 \begin{align*}
 &\mleft( r_\sigma^*A \mright)\mleft(
 	\mleft[\mathrm{D}r_\sigma\mleft(X^h\mright), r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright) }}\mright) \mright]
@@ -9021,33 +9019,33 @@ r_\sigma^*\Biggl(
 \mright)
 \end{align*}
 using that $\mathcal{r}_{\sigma*}\mleft(X^h\mright)$ is horizontal due to the fact that $X^h$ is horizontal, and, last but not least, we can write for terms like
-\begin{align*}
+\begin{equation*}
 \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)
-&=
+=
 \mleft(\pi^* \Delta \sigma \mright) \mleft(\mathrm{D}\pi\mleft(Y^h\mright)\mright)
 =
 \mleft(\pi^* \Delta \sigma \mright) \mleft(\pi^*\omega^Y\mright)
 =
 \pi^*\Bigl( \mleft(\Delta \sigma \mright) \mleft(\omega^Y\mright) \Bigr),
-\end{align*}
+\end{equation*}
 and
-\begin{align*}
+\begin{equation*}
 \mathrm{D}\pi\mleft( \mathcal{r}_{\sigma*}\mleft(X^h\mright) \mright)
-&=
+=
 \mathrm{D}\pi\mleft( \mathrm{D}r_{\sigma}\mleft(X^h\mright)
 	- r_{\sigma}^*\mleft({\overline{ \mleft(\pi^! \Delta \sigma \mright) \mleft(X^h\mright)}}\mright) \mright)
 =
 \mathrm{D}{\underbrace{\mleft( \pi \circ r_\sigma \mright)}_{= \pi}}\mleft(X^h\mright)
 =
 \pi^*\omega^X,
-\end{align*}
+\end{equation*}
 using that fundamental vector fields are in the kernel of $\mathrm{D}\pi$, 
 and therefore
-\begin{align*}
+\begin{equation*}
 %r_\sigma^*\Biggl(
 \mleft( \pi^*\nabla^\caG \mright)_{\mathcal{r}_{\sigma*}\mleft(X^h\mright)}\biggl( \mleft(\pi^! \Delta \sigma \mright) \mleft(Y^h\mright)\biggr)
 %\Biggr)
-&=
+=
 \pi^*\mleft(
 	\nabla^\caG_{\omega^X}\Bigl( \mleft(\Delta \sigma \mright) \mleft(\omega^Y\mright)\Bigr)
 \mright).
@@ -9061,10 +9059,10 @@ and therefore
 %\mleft(\pi^* \Delta \sigma \mright)\mleft(\mathrm{D}\pi\mleft( \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright) \mright)
 %=
 %\mleft(\pi^! \Delta \sigma \mright)\mleft( \mathcal{r}_{\sigma*}\mleft(Y^h\mright) \mright)
-\end{align*}
+\end{equation*}
 %for all $p \in \mathcal{P}_x$ ($x \in M$).
 
-Collecting all these results and using Cor.\ \ref{cor:PullbackOfMCSupperEquation} we can write Eq.\ \eqref{TransformedClassicStrengthTerm} as
+Collecting all these results and using \ref{cor:PullbackOfMCSupperEquation} we can write Eq.\ \eqref{TransformedClassicStrengthTerm} as
 \begin{align*}
 &
 r_\sigma^*\mleft(
@@ -9128,203 +9126,202 @@ r_\sigma^*\mleft(
 %\Biggr)
 \end{align*}
 where we used that $\mathrm{D}\pi (X) = \pi^*\omega^X$ and $\mathrm{D}\pi (Y) = \pi^*\omega^Y$, which immediately implies
-\begin{align*}
+\begin{equation*}
 \mathrm{D}\pi\mleft( [X, Y] \mright)
-&=
+=
 \pi^*\mleft( \mleft[\omega^X, \omega^Y\mright] \mright),
-\end{align*}
+\end{equation*}
 which is a well-known fact, as also given in \cite[Proposition A.1.49; page 615]{Hamilton}, but also straight-forward to check. 
 
 Finally, we can conclude this proof by combining the previous result with our first calculation of this proof, that is,
-\begin{align*}
+\begin{equation*}
 \mathcal{r}_{\sigma}^!F
-&=
+=
 \sAd_{\sigma^{-1}}\circ \mleft( \mathrm{d}^{\pi^*\nabla^\caG}A \circ ( \pi_h, \pi_h) + \pi^!\zeta \mright) 
 		- \pi^!\zeta
 		+ \pi^!\zeta
 =
-\sAd_{\sigma^{-1}} \circ F.
-\end{align*}
+\sAd_{\sigma^{-1}} \circ F~.
+\end{equation*}
 \end{proof}
 
 We achieve of course also a structure equation.
 
 \begin{propositions}{Structure equation of the generalized field strength}{StructureEq}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the \textbf{structure equation}
-\begin{align*}
+\begin{equation*}
 F
 =
 \mathrm{d}^{\pi^*\nabla^\caG} A
 	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
-	+ \pi^!\zeta.
-\end{align*}
+	+ \pi^!\zeta~.
+\end{equation*}
 \end{propositions}
 
-\begin{remarks}{The generalized field strength of the total Maurer-Cartan form}{CurvoftotMCForm}
-Again viewing $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ as the principal bundle itself with $\mathrm{H}\mathcal{P} = \mathrm{H}\mathcal{G}$, we know by Cor.\ \ref{cor:TotMCFormIsConnectionForm} that the total Maurer-Cartan form $\mutot$ is the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$. Denoting the associated generalized field strength by $F\mleft( \mutot \mright)$, the structure equation and the generalized Maurer-Cartan equation, Thm.\ \ref{thm:GenMCEq} (also recall Rem.\ \ref{rem:BasePointDifficultiesinGenMCEq}), imply
-\begin{align*}
+\begin{remarks}{$\rmH \caP$ and foliations}{CurvoftotMCForm}
+Again viewing $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ as the principal bundle itself with $\mathrm{H}\mathcal{P} = \mathrm{H}\mathcal{G}$, we know by \ref{cor:TotMCFormIsConnectionForm} that $\mutot$ is the connection 1-form corresponding to $\mathrm{H}\mathcal{G}$. Denoting the associated generalized field strength by $F\mleft( \mutot \mright)$, the structure equation and the generalized Maurer-Cartan equation, \ref{thm:GenMCEq} (also recall \ref{rem:BasePointDifficultiesinGenMCEq}), imply
+\begin{equation*}
 F_g\mleft( \mutot \mright)
-&=
+=
 \sAd_{g^{-1}} \circ \mleft. \pi_{\mathcal{G}}^!\zeta \mright|_g
-\end{align*}
+\end{equation*}
 for all $g \in \mathcal{G}_x$ ($x \in M$). This implies that $F\mleft( \mutot \mright)$ is fully encoded by $\zeta$, especially we have
-\begin{align}\label{ZetaIsTheCurvatureOnG}
+\begin{equation}\label{ZetaIsTheCurvatureOnG}
 e^!\Bigl(F\mleft( \mutot \mright)\Bigr)
-&=
+=
 \zeta,
-\end{align}
-where $e$ is the neutral section of $\mathcal{G}$. Thus, $\zeta$ is the curvature of $\mutot$ restricted on $M$, and 
-\begin{align*}
+\end{equation}
+where $e$ is the neutral section of $\mathcal{G}$. Thus, $\zeta$ is the (generalised) curvature of $\mutot$ restricted on $M$, and 
+\begin{equation*}
 F
-&=
+=
 \mathrm{d}^{\pi^*\nabla^\caG} A
 	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
 	+ (e \circ \pi)^!\Bigl(F\mleft( \mutot \mright)\Bigr).
-\end{align*}
-Following similar calculations as in the proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}, it is trivial to show that the first two summands measure the failure of $\mathrm{H}\mathcal{P}$ being a foliation, hence this meaning carries over from the classical theory as also argued in \cite[\S 2.5, Cor.\ 2.23]{FernandesMarcutMultiplicativeForms} for LGBs. Due to the third summand, $\mathrm{H}\mathcal{P}$ is involutive if and only if
-\begin{align*}
+\end{equation*}
+Following similar calculations as in the proof of \ref{prop:NewFieldStrengthWithCoolProps}, it is trivial to show that the first two summands measure the failure of $\mathrm{H}\mathcal{P}$ being a foliation, hence this meaning carries over from the classical theory as also argued in \cite[\S 2.5, Cor.\ 2.23]{FernandesMarcutMultiplicativeForms} for LGBs. Due to the third summand, $\mathrm{H}\mathcal{P}$ is involutive if and only if
+\begin{equation*}
 F
-&=
+=
 (e \circ \pi)^!\Bigl(F\mleft( \mutot \mright)\Bigr).
-\end{align*}
+\end{equation*}
 In that sense Eq.\ \eqref{ZetaIsTheCurvatureOnG} reflects the fact that $M$ is a horizontal leave of $\mathrm{H}\mathcal{G}$. Furthermore, $F$ can be non-zero while $\mathrm{H}\mathcal{P}$ is involutive, if $F\mleft( \mutot \mright)$ is non-zero along $M$.
 \end{remarks}
 
-\begin{proof}[Proof of Thm.\ \ref{prop:StructureEq}]
+\begin{proof}[Proof of \ref{prop:StructureEq}]
 \leavevmode\newline
-The idea of the proof is similar to the proof of the "classical" statement; following the structure of \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}, see also works like \cite[\S 4.6, Lemma 4.25]{LAURENTGENGOUXStienonXuMultiplicativeForms} and \cite[\S 2.5, Prop.\ 2.24]{FernandesMarcutMultiplicativeForms} where something similar is shown on Lie groupoids instead of principal bundles, but with no $\zeta$. That is, we will look at vertical and horizontal tangent vectors and their mixed terms; recall Def.\ \ref{def:GaugeBosonsOnLGBPrincies} and Thm.\ \ref{thm:OurConnectionHasAUniqueoneForm}.
+The idea of the proof is similar to the proof of the "classical" statement; following the structure of \cite[\S 5.5, Lemma 5.5.5, page 276]{Hamilton}, see also works like \cite[\S 4.6, Lemma 4.25]{LAURENTGENGOUXStienonXuMultiplicativeForms} and \cite[\S 2.5, Prop.\ 2.24]{FernandesMarcutMultiplicativeForms} where something similar is shown on Lie groupoids instead of principal bundles, but with no $\zeta$. That is, we will look at vertical and horizontal tangent vectors and their mixed terms; recall \ref{def:GaugeBosonsOnLGBPrincies} and \ref{thm:OurConnectionHasAUniqueoneForm}.
 
-$\bullet$ We have by Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}
-\begin{align*}
+$\bullet$ We have by \ref{prop:NewFieldStrengthWithCoolProps}
+\begin{equation*}
 F\mleft( \overline{\nu}, \overline{\mu} \mright)
-&=
+=
 0
-\end{align*}
+\end{equation*}
 for all $\mu, \nu \in \Gamma(\mathcal{g})$. Regarding the right hand side of the structure equation, this trivially also holds for the third summand $\mleft(\pi^!\zeta\mright)\mleft( \overline{\nu}, \overline{\mu} \mright) = 0$. We also have
-\begin{align*}
+\begin{equation*}
 \mleft(\frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}\mright)\mleft( \overline{\nu}, \overline{\mu} \mright)
-&=
+=
 \mleft[ A\mleft( \overline{\nu} \mright), A\mleft( \overline{\mu} \mright) \mright]_{\pi^*\mathcal{g}}
 =
 \mleft[ \pi^*\nu, \pi^*\mu \mright]_{\pi^*\mathcal{g}}
 =
 \pi^*\mleft( \mleft[ \nu, \mu \mright]_{\mathcal{g}} \mright),
-\end{align*}
+\end{equation*}
 and
-\begin{align*}
+\begin{equation*}
 \mleft(\mathrm{d}^{\pi^*\nabla^\caG} A\mright)\mleft( \overline{\nu}, \overline{\mu} \mright)
-&=
+=
 {\underbrace{\mleft(\pi^*\nabla^\caG\mright)_{\overline{\nu}} \bigl(A\mleft( \overline{\mu} \mright) \bigr)}_{\mathclap{ = \pi^*\mleft( \nabla^\caG_{\mathrm{D}\pi\mleft( \overline{\nu} \mright)} \mu \mright) = 0 }}}
 	- \mleft(\pi^*\nabla^\caG\mright)_{\overline{\mu}} \bigl(A\mleft( \overline{\nu} \mright) \bigr)
 	- A {\underbrace{\bigl( \mleft[ \overline{\nu}, \overline{\mu} \mright] \bigr)}_{= \overline{[\nu, \mu]}}}
 =
 - \pi^*\mleft( \mleft[ \nu, \mu \mright]_{\mathcal{g}} \mright).
-\end{align*}
+\end{equation*}
 Thus,
-\begin{align*}
+\begin{equation*}
 \mleft(
 	\mathrm{d}^{\pi^*\nabla^\caG} A
 	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
 	+ \pi^!\zeta
 \mright)\mleft( \overline{\nu}, \overline{\mu} \mright)
-&=
+=
 0
 =
 F\mleft( \overline{\nu}, \overline{\mu} \mright).
-\end{align*}
+\end{equation*}
 
 $\bullet$ Let $X$ and $Y$ be horizontal vector fields of $\mathcal{P}$, then clearly
-\begin{align*}
+\begin{equation*}
 \mleft(\frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}\mright)(X, Y)
-&=
+=
 \bigl[ A\mleft( X \mright), A\mleft( Y \mright) \bigr]_{\pi^*\mathcal{g}}
 =
 0,
-\end{align*}
+\end{equation*}
 then clearly
-\begin{align*}
+\begin{equation*}
 \mleft(
 	\mathrm{d}^{\pi^*\nabla^\caG} A
 	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
 	+ \pi^!\zeta
 \mright)(X, Y)
-&=
+=
 \mleft(
 	\mathrm{d}^{\pi^*\nabla^\caG} A \circ \mleft( \pi_h, \pi_h \mright)
 	+ \pi^!\zeta
 \mright)(X, Y)
 =
 F(X, Y),
-\end{align*}
-where $\pi_h: \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ denotes the canonical projection onto the horizontal bundle $\mathrm{H}\mathcal{P}$ (especially, $\pi_h(X) = X$, $\pi_h(Y)= Y$).
+\end{equation*}
+where $\pi_h\colon \mathrm{T}\mathcal{P} \to \mathrm{H}\mathcal{P}$ denotes the canonical projection onto the horizontal bundle $\mathrm{H}\mathcal{P}$ (especially, $\pi_h(X) = X$, $\pi_h(Y)= Y$).
 
-$\bullet$ Now let $X \in \mathfrak{X}(\mathcal{P})$ be again horizontal and $\nu \in \Gamma(\mathcal{g})$; then again by Prop.\ \ref{prop:NewFieldStrengthWithCoolProps}
-\begin{align*}
+$\bullet$ Now let $X \in \mathfrak{X}(\mathcal{P})$ be again horizontal and $\nu \in \Gamma(\mathcal{g})$; then again by \ref{prop:NewFieldStrengthWithCoolProps}
+\begin{equation*}
 F\mleft(X, \overline{\nu}\mright)
-&=
+=
 0,
-\end{align*}
+\end{equation*}
 as also clearly $\mleft( \pi^!\zeta \mright)\mleft(X, \overline{\nu}\mright) = 0$,
 furthermore
-\begin{align*}
+\begin{equation*}
 \mleft(\frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}\mright)\mleft( X, \overline{\nu} \mright)
-&=
+=
 \mleft[ A(X), A\mleft( \overline{\nu} \mright) \mright]_{\pi^*\mathcal{g}}
 =
 0,
-\end{align*}
-and by Lemma \ref{lem:BracketVertHor}
-\begin{align*}
+\end{equation*}
+and by \ref{lem:BracketVertHor}
+\begin{equation*}
 \mleft(\mathrm{d}^{\pi^*\nabla^\caG} A\mright)\mleft( X, \overline{\nu} \mright)
-&=
+=
 \mleft( \pi^*\nabla^\caG \mright)_X \mleft( \pi^*\nu \mright)
 	- A\bigl( \mleft[ X, \overline{\nu} \mright] \bigr)
-\stackrel{\ref{lem:BracketVertHor}}{=}
+=
 0,
-\end{align*}
+\end{equation*}
 which concludes the proof with
-\begin{align*}
+\begin{equation*}
 F\mleft(X, \overline{\nu}\mright)
-&=
+=
 \mleft(
 	\mathrm{d}^{\pi^*\nabla^\caG} A
 	+ \frac{1}{2} \mleft[ A \stackrel{\wedge}{,} A \mright]_{\pi^*\mathcal{g}}
 	+ \pi^!\zeta
 \mright)\mleft(X, \overline{\nu}\mright).
-\end{align*}
+\end{equation*}
 \end{proof}
 
-Concluding this subsubsection, we also achieve a generalized Bianchi identity, which we already have proven in \cite[\S 7, Thm.\ 7.3]{My1stpaper} and \cite[\S 5, Thm.\ 5.1.42]{MyThesis}; the proof is straightforward to show, making use of the infinitesimal compatibility conditions, Def.\ \ref{def:YangMillsConnection}.
+Concluding this subsubsection, we also achieve a generalized Bianchi identity, which we already have proven in \cite[\S 7, Thm.\ 7.3]{My1stpaper} and \cite[\S 5, Thm.\ 5.1.42]{MyThesis}; the proof is straightforward to show, making use of the infinitesimal compatibility conditions, \ref{def:YangMillsConnection}.
 
-\begin{lemmata}{Generalized Bianchi identity, \cite[\S 5, Thm.\ 5.1.42]{MyThesis}}{GenBianchi}
+\begin{lemmata}{Generalized Bianchi identity}{GenBianchi}
+\tcbsubtitle[before skip=\baselineskip]{\cite[\S 5, Thm.\ 5.1.42]{MyThesis}}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \mathcal{g})$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Then we have the \textbf{(generalized) Bianchi identity}
-\begin{align*}
+\begin{equation*}
 \mathrm{d}^{\pi^*\nabla^\caG}F
 	+ \mleft[ A \stackrel{\wedge}{,} F \mright]_{\pi^*\mathcal{g}}
-&=
-\pi^! \mathrm{d}^{\nabla^\caG} \zeta.
-\end{align*}
+=
+\pi^! \mathrm{d}^{\nabla^\caG} \zeta~.
+\end{equation*}
 \end{lemmata}
 
 \subsubsection{Gauge transformation of the generalized field strength}
 
-Similar to Subsection \ref{GaugeTrafoForA} we will now discuss the gauge transformation of the generalized field strength $F$; recall Thm.\ \ref{prop:GaugeTrafoOfGaugeBoson}.
+Similar to \ref{GaugeTrafoForA} we will now discuss the gauge transformation of the generalized field strength $F$; recall \ref{prop:GaugeTrafoOfGaugeBoson}.
 
 \begin{propositions}{Gauge transformation of the generalized field strength}{GaugeTrafoOfCurv}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $H \in \sAut(\mathcal{P})$. We then have that $H^!F$ is the field strength related to $H^!A$ and
-\begin{align*}
+\begin{equation*}
 H^!F
-&=
+=
 {\sAd_{\mathrm{pr}_2\circ\mleft(\sigma^H\mright)^{-1}}} \circ F,
-\end{align*}
-where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined as in Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} and $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component.
-
-Similar to Def.\ \eqref{MultiWithPulli} we may shortly just write 
-\begin{align*}
+\end{equation*}
+where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined as in \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} and $\mathrm{pr}_2\colon \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. Similar to Definition \eqref{MultiWithPulli} we may shortly just write 
+\begin{equation*}
 H^!F
-&=
+=
 {\sAd_{\mleft(\sigma^H\mright)^{-1}}} \circ F.
-\end{align*}
+\end{equation*}
 \end{propositions}
 
 \begin{proof}
@@ -9343,13 +9340,13 @@ H^!F
 	+ \pi^!\zeta,
 \end{align*}
 which is the field strength of $H^!A$. Now recall Eq.\ \eqref{DiffOfPrincAutom}, that is,
-\begin{align*}
+\begin{equation*}
 \mathrm{D}_p H(X)
-&=
+=
 \mathcal{r}_{\overline{\sigma}_p*}(X)
 	+ \mleft.{\overline{ \mleft(\mleft(\pi^*\Delta\mright)\sigma^H\mright)_p(X) }}\mright|_{H(p)}
-\end{align*}
-for all $X \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$), where $\overline{\sigma}_p \coloneqq \mathrm{pr}_2\mleft( \sigma^H_p \mright)$. Thus, by Prop.\ \ref{prop:NewFieldStrengthWithCoolProps},
+\end{equation*}
+for all $X \in \mathrm{T}_p\mathcal{P}$ ($p \in \mathcal{P}$), where $\overline{\sigma}_p \coloneqq \mathrm{pr}_2\mleft( \sigma^H_p \mright)$. Thus, by \ref{prop:NewFieldStrengthWithCoolProps},
 \begin{align*}
 \mleft( H^!F \mright)_p(X, Y)
 &=
@@ -9371,24 +9368,24 @@ We will now extend this again to a local change of gauges (sections of $\mathcal
 
 \begin{definitions}{Local field strength}{LocalFieldStrength}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we define the \textbf{local curvature} of \textbf{local field strength $F_s \in \Omega^2\mleft(U; \mleft.\mathcal{g}\mright|_U\mright)$ (w.r.t.\ $s$)} by
-\begin{align*}
+\begin{equation*}
 F_s
-&\coloneqq
+\coloneqq
 s^!F.
-\end{align*}
+\end{equation*}
 \end{definitions}
 
-In previous calculations for the total Maurer-Cartan form and the generalized Maurer-Cartan equation we have basically already shown the pullback of the structure equation.
+In previous calculations regarding $\mutot$ and the generalized Maurer-Cartan equation we have basically already shown the pullback of the structure equation.
 
 \begin{corollaries}{Pullback of the structure equation}{PullbackOfStructureEq}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $s \in \Gamma(\mathcal{P}|_U)$ be a (local) gauge over an open subset $U \subset M$. Then we can express the local field strength as the pullback of the structure equation, that is,
-\begin{align*}
+\begin{equation*}
 F_s
-&=
+=
 \mathrm{d}^{\nabla^\caG}A_s
 	+ \frac{1}{2} \mleft[ A_s \stackrel{\wedge}{,} A_s \mright]_{\mathcal{g}}
 	+ \zeta.
-\end{align*}
+\end{equation*}
 \end{corollaries}
 
 \begin{proof}
@@ -9402,20 +9399,20 @@ The gauge transformation of the field strength $F$ describes the behaviour of $F
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ and $\pi\colon\mathcal{P} \to M$ a principal $\mathcal{G}$-bundle, also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Also let $U_i$ and $U_j$ be two open subsets of $M$ so that $U_i \cap U_j \neq \emptyset$, two gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$ and $s_j \in \Gamma\mleft(\mathcal{P}|_{U_j}\mright)$, and the unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$.
 
 Then we have for the fields strength of $A$ over $U_i \cap U_j$ that
-\begin{align*}
+\begin{equation*}
 F_{s_i}
-&=
+=
 \mathrm{Ad}_{\sigma_{ji}^{-1}}\circ F_{s_j}.
-\end{align*}
+\end{equation*}
 \end{propositions}
 
 \begin{proof}
 \leavevmode\newline
-The proof is precisely as for Thm.\ \ref{prop:LocalGaugeTrafoChangeGauge}, just without catering for the Darboux derivative in the gauge transformation due to that one uses Thm.\ \ref{prop:GaugeTrafoOfCurv} instead of Thm.\ \ref{prop:GaugeTrafoOfGaugeBoson}.
+The proof is precisely as for \ref{prop:LocalGaugeTrafoChangeGauge}, just without catering for the Darboux derivative in the gauge transformation due to that one uses \ref{prop:GaugeTrafoOfCurv} instead of \ref{prop:GaugeTrafoOfGaugeBoson}.
 \end{proof}
 
 \begin{remarks}{Integrating curved Yang-Mills gauge theories, part II}{IntegratingKotovStroblFieldStrength}
-Similar to Rem.\ \ref{rem:IntegratingKotovStrobl}, Cor.\ \ref{cor:PullbackOfStructureEq} and Thm.\ \ref{prop:LocalGaugeTrafoChangeGaugeFieldStrength} show that we recover the field strength and its gauge transformation as developed by Alexei Kotov and Thomas Strobl, see \cite{CurvedYMH} for a concise summary or \cite{MyThesis} for an extended introduction. These references are for the very general situation using Lie algebroids, hence see alternatively \cite{My1stpaper} for this type of gauge theory restricted to Lie algebra bundles.
+Similar to \ref{rem:IntegratingKotovStrobl}, \ref{cor:PullbackOfStructureEq} and \ref{prop:LocalGaugeTrafoChangeGaugeFieldStrength} show that we recover the field strength and its gauge transformation as developed by Alexei Kotov and Thomas Strobl, see \cite{CurvedYMH} for a concise summary or \cite{MyThesis} for an extended introduction. These references are for the very general situation using Lie algebroids, hence see alternatively \cite{My1stpaper} for this type of gauge theory restricted to Lie algebra bundles.
 \end{remarks}
 
 %\subsection{Generalized covariant derivative/minimal coupling}
@@ -9425,42 +9422,42 @@ Similar to Rem.\ \ref{rem:IntegratingKotovStrobl}, Cor.\ \ref{cor:PullbackOfStru
 \subsection{Definition and gauge invariance}\label{CYMDefGaugeInv}
 
 We eventually are able to conclude this paper with the definition of what we will call \textbf{curved Yang-Mills gauge theory}, highlighting that this theory is an integral of the infinitesimal gauge theory originally developed by Alexei Kotov and Thomas Strobl. For the following we say that a fibre metric $\kappa$ of $\mathcal{g}$ is \textbf{$\mathrm{Ad}$-invariant} if
-\begin{align*}
+\begin{equation*}
 \kappa\bigl( \mathrm{Ad}_g(\nu), \mathrm{Ad}_g(\mu) \bigr)
-&=
+=
 \kappa (\nu, \mu)
-\end{align*}
+\end{equation*}
 for all $g \in \mathcal{G}_x$ ($x \in M$) and $\mu, \nu \in \mathcal{g}_x$.
 
-\begin{corollaries}{Contraction of local field strength with Ad-invariant fibre metric is well-defined}{ContractionOfLocalFIeldWellDefined}
+\begin{corollaries}{The Lagrangian}{ContractionOfLocalFIeldWellDefined}
 Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\pi\colon\mathcal{P} \to M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$. Furthermore, let $\mleft( U_i \mright)_i$ be an open covering of $M$ so that there are subordinate gauges $s_i \in \Gamma\mleft(\mathcal{P}|_{U_i}\mright)$.
 
 Then the top-degree form $\mathfrak{L}_{\mathrm{CYM}}[A] \in \Omega^{\mathrm{dim}(M)}(M; \mathbb{R})$, defined locally by
-\begin{align*}
+\begin{equation*}
 \mleft.\bigl(\mathfrak{L}_{\mathrm{CYM}}[A]\bigr)\mright|_{U_i}
-&\coloneqq 
+\coloneqq 
 - \frac{1}{2} \kappa \mleft( F_{s_i} \stackrel{\wedge}{,} *F_{s_i} \mright),
-\end{align*}
+\end{equation*}
 is well-defined and independent of the choice of gauge, where $*$ is the Hodge star operator w.r.t.\ the spacetime metric of $M$.
 \end{corollaries}
 
 \begin{proof}
 \leavevmode\newline
-Let $s_j$ be another gauge corresponding to $U_j$ so that $U_i \cap U_j \neq \emptyset$, and we have a unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$. Then it follows by Thm.\ \ref{prop:LocalGaugeTrafoChangeGaugeFieldStrength} and the definition of the Hodge star operator (which is just a certain contraction w.r.t.\ $M$) that
-\begin{align*}
+Let $s_j$ be another gauge corresponding to $U_j$ so that $U_i \cap U_j \neq \emptyset$, and we have a unique $\sigma_{ji} \in \Gamma\mleft( \mleft.\mathcal{G}\mright|_{U_i \cap U_j} \mright)$ with $s_i = s_j \cdot \sigma_{ji}$ on $U_i \cap U_j$. Then it follows by \ref{prop:LocalGaugeTrafoChangeGaugeFieldStrength} and the definition of the Hodge star operator (which is just a certain contraction w.r.t.\ $M$) that
+\begin{equation*}
 \kappa \mleft( F_{s_i} \stackrel{\wedge}{,} *F_{s_i} \mright)
-&=
+=
 \kappa \mleft( \mleft(\mathrm{Ad}_{\sigma_{ji}^{-1}}\circ F_{s_j} \mright) \stackrel{\wedge}{,} *\mleft( \mathrm{Ad}_{\sigma_{ji}^{-1}}\circ F_{s_j} \mright) \mright)
 =
 \kappa \mleft( F_{s_j} \stackrel{\wedge}{,} *F_{s_j} \mright),
-\end{align*}
+\end{equation*}
 using the $\mathrm{Ad}$-invariance of $\kappa$. This concludes the proof.
 \end{proof}
 
 \begin{definitions}{Curved Yang-Mills gauge theory}{CYMGTFinally}
 Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\pi\colon\mathcal{P} \to M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
 
-Then the functional $A \mapsto \mathfrak{L}_{\mathrm{CYM}}[A]$ is called the \textbf{curved Yang-Mills Lagrangian}, where $\mathfrak{L}_{\mathrm{CYM}}[A]$ is defined in Cor.\ \ref{cor:ContractionOfLocalFIeldWellDefined}.
+Then the functional $A \mapsto \mathfrak{L}_{\mathrm{CYM}}[A]$ is called the \textbf{curved Yang-Mills Lagrangian}, where $\mathfrak{L}_{\mathrm{CYM}}[A]$ is defined in \ref{cor:ContractionOfLocalFIeldWellDefined}.
 \end{definitions}
 
 By construction, this Lagrangian is gauge-invariant.
@@ -9469,141 +9466,141 @@ By construction, this Lagrangian is gauge-invariant.
 Let $\mathcal{G} \to M$ be an LGB over a spacetime $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\pi\colon\mathcal{P} \to M$ be a principal $\mathcal{G}$-bundle; also let $\mathrm{H}\mathcal{G}$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$.
 
 Then we have
-\begin{align*}
+\begin{equation*}
 \mathfrak{L}_{\mathrm{CYM}}\mleft[ H^!A \mright]
-&=
+=
 \mathfrak{L}_{\mathrm{CYM}}[A]
-\end{align*}
+\end{equation*}
 for all $H \in \sAut(\mathcal{P})$.
 \end{theorems}
 
 \begin{proof}
 \leavevmode\newline
-By Thm.\ \ref{prop:GaugeTrafoOfCurv} we have 
-\begin{align*}
+By \ref{prop:GaugeTrafoOfCurv} we have 
+\begin{equation*}
 H^!F
-&=
+=
 {\sAd_{\mathrm{pr}_2\circ\mleft(\sigma^H\mright)^{-1}}} \circ F,
-\end{align*}
-where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined as in Prop.\ \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} and $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. Similar to the argument in the proof of Thm.\ \ref{prop:LocalGaugeTrafoChangeGauge} we have
-\begin{align*}
+\end{equation*}
+where $\sigma^H \in C^\infty(\mathcal{P}; \mathcal{G})^{\mathcal{G}}$ is defined as in \ref{prop:GaugeTrafoAsBundleIsomIsASectionOfConjugationMaps} and $\mathrm{pr}_2: \pi^*\mathcal{G} \to \mathcal{G}$ is the projection onto the second component. Similar to the argument in the proof of \ref{prop:LocalGaugeTrafoChangeGauge} we have
+\begin{equation*}
 \mleft( H^!F \mright)_s
-&=
+=
 \mathrm{Ad}_{\mathrm{pr}_2\circ\mleft(\sigma^H\mright)^{-1} \circ s} \circ F_s
-\end{align*}
-for a given gauge $s \in \Gamma(\mathcal{P}|_U)$, where $U$ is an open subset of $M$. With the same argument as in Cor.\ \ref{cor:ContractionOfLocalFIeldWellDefined} it follows that
-\begin{align*}
+\end{equation*}
+for a given gauge $s \in \Gamma(\mathcal{P}|_U)$, where $U$ is an open subset of $M$. With the same argument as in \ref{cor:ContractionOfLocalFIeldWellDefined} it follows that
+\begin{equation*}
 \mathfrak{L}_{\mathrm{CYM}}\mleft[ H^!A \mright]
-&=
+=
 \mathfrak{L}_{\mathrm{CYM}}[A].
-\end{align*}
+\end{equation*}
 \end{proof}
 
 \begin{remarks}{Infinitesimal gauge invariance}{InfinitesimalGaugeInv}
-As we have seen previously, the compatibility conditions (Def.\ \ref{def:NowReallyYangMillsConnectio}) were important to derive how $F$ behaves under modified right push-forwards. Recall Rem.\ \ref{rem:IntegratingKotovStrobl}, we have a corresponding formulation of infinitesimal gauge transformation and it is straight-forward to show that we achieve \textbf{infinitesimal gauge invariance} as in the classical theory. However, as argued by Alexei Kotov and Thomas Strobl in \cite{CurvedYMH} (for a concise summary; \cite{MyThesis} for an extended introduction, or alternatively \cite{My1stpaper} for a simplified language) the corresponding infinitesimal gauge invariance just needs the infinitesimal compatibility conditions (Def.\ \ref{def:YangMillsConnection}).
+As we have seen previously, the compatibility conditions (\ref{def:NowReallyYangMillsConnectio}) were important to derive how $F$ behaves under modified right push-forwards. Recall \ref{rem:IntegratingKotovStrobl}, we have a corresponding formulation of infinitesimal gauge transformation and it is straight-forward to show that we achieve \textbf{infinitesimal gauge invariance} as in the classical theory. However, as argued by Alexei Kotov and Thomas Strobl in \cite{CurvedYMH} (for a concise summary; \cite{MyThesis} for an extended introduction, or alternatively \cite{My1stpaper} for a simplified language) the corresponding infinitesimal gauge invariance just needs the infinitesimal compatibility conditions (\ref{def:YangMillsConnection}).
 \end{remarks}
 
 \subsection{Field redefinitions}
 
-As developed in \cite[the latter reference developed the following for Lie algebroids and groupoids as structure]{My1stpaper, MyThesis}: There is an equivalence relation of curved Yang-Mills gauge theories, preserving the dynamics and kinematics of this theory. Let us recapitulate and integrate these:
+As mentioned in the introduction and developed in \cite[the latter reference developed the following for Lie algebroids and groupoids as structure]{My1stpaper, MyThesis}: There is an equivalence relation of curved Yang-Mills gauge theories, preserving the dynamics and kinematics of this theory. Let us recapitulate and integrate these:
 
 \begin{definitions}{Field redefinitions on the LGB}{FieldRedefsAsDefIntegrated}
 Let $\pi_{\mathcal{G}} \colon \mathcal{G} \to M$ be an LGB over a smooth manifold $M$ with LAB $\mathcal{g}$; furthermore let $\mutot$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \cag)$). We then define \textbf{field redefinitions w.r.t.\ $\lambda \in \Omega^1(M; \mathcal{g})$} of $\mutot$ by
-\bes
+\begin{equation*}
 \mleft.\mutot^{\lambda}\mright|_g
 \coloneqq
 \mleft.\mutot\mright|_g
 	+ \sAd_{g^{-1}} \circ \mleft. \pi_{\mathcal{G}}^!\lambda\mright|_g
 	- \mleft.\pi_{\mathcal{G}}^!\lambda\mright|_g
-\ees
+\end{equation*}
 for all $g \in \caG$
 and of $\zeta$ by
-\bes
+\begin{equation*}
 \zeta^\lambda
 \coloneqq
 \zeta
 	+ \mathrm{d}^{\nabla^\caG}\lambda + \frac{1}{2} \mleft[ \lambda \stackrel{\wedge}{,} \lambda \mright]_{\mathcal{g}}.
-\ees
+\end{equation*}
 \end{definitions}
 
 \begin{remark}
 Equivalently, since we introduced $\mutot$ as a composition of the vertical Maurer-Cartan form with the projection $\pi^{\mathrm{vert}}$ onto the vertical part w.r.t.\ the horizontal distribution on $\mathcal{G}$, we can define the field redefinition of $\pi^{\mathrm{vert}}$ by
-\begin{align*}
+\begin{equation*}
 \pi^{\mathrm{vert}, \lambda}
-&\coloneqq
+\coloneqq
 \pi^{\mathrm{vert}}
 	+ \overline{\pi_{\mathcal{G}}^! \lambda}^l
 	+ \overline{\pi_{\mathcal{G}}^! \lambda}^r,
-\end{align*}
+\end{equation*}
 where $\overline{\pi_{\mathcal{G}^!} \lambda}^r$ denotes the fundamental vector field of $\pi_{\mathcal{G}}^! \lambda$ via right-multiplication, that is,
-\begin{align*}
+\begin{equation*}
 \mleft.\overline{\pi_{\mathcal{G}^!} \lambda}^r\mright|_g
-&=
+=
 \mathrm{D}_{e_x}R_g \circ \lambda_{x} \circ \mathrm{D}_x \pi_{\mathcal{G}}
-\end{align*}
+\end{equation*}
 for all $g \in \mathcal{G}_x$, and $\overline{\pi_{\mathcal{G}}^! \lambda}^l$ is just the typical definition for fundamental vector fields, with an emphasis on that it is via left-multiplication. 
 \end{remark}
 
-\begin{propositions}{Field redefined multiplicative Yang-Mills connection a multiplicative Yang-Mills connection}{YMStaysYM}
-Given the context of Def.\ \ref{def:FieldRedefsAsDefIntegrated}, the field redefinition of $\mutot$ is a multiplicative Yang-Mills connection w.r.t.\ $\overline{\zeta}^\lambda$.
+\begin{propositions}{Field redefinitions preserving multiplicative YM connections}{YMStaysYM}
+Given the context of \ref{def:FieldRedefsAsDefIntegrated}, the field redefinition of $\mutot$ is a multiplicative Yang-Mills connection w.r.t.\ $\zeta^\lambda$.
 \end{propositions}
 
 \begin{proof}
 %[Proof of Prop.\ \ref{prop:YMStaysYM}]
 \leavevmode\newline
-It is a straight-forward check to see that $\mutot^{\lambda}$ is still multiplicative, and well-known in the mentioned literature regarding multiplicative connections; a quick way to see this is by following Rem.\ \ref{rem:SimplicialDifferentialStuff}: We actually add an exact term,
-\bes
+It is a straight-forward check to see that $\mutot^{\lambda}$ is still multiplicative, and well-known in the mentioned literature regarding multiplicative connections; a quick way to see this is by following \ref{rem:SimplicialDifferentialStuff}: We actually add an exact term,
+\begin{equation*}
 \mutot^{\lambda}
 =
 \mutot
 	+ \delta \lambda ~.
-\ees
-Thus, $\mutot^{\lambda}$ stays closed, and hence it is multiplicative. That it satisfies the generalised Maurer-Cartan equation w.r.t.\ $\zeta^\lambda$ is a straight-forward but a bit lengthy calculation, which is why we keep this as an exercise for the reader; for the infinitesimal, i.e.\ in the connected case by Thm.\ \ref{thm:GenMCEq}, see \cite{My1stpaper, MyThesis}.
+\end{equation*}
+Thus, $\mutot^{\lambda}$ stays multiplicatively closed, and hence it is multiplicative. That it satisfies the generalised Maurer-Cartan equation w.r.t.\ $\zeta^\lambda$ is a straight-forward but a bit lengthy calculation, which is why we keep this as an exercise for the reader; for the infinitesimal, i.e.\ in the connected case by \ref{thm:GenMCEq}, see \cite{My1stpaper, MyThesis}.
 \end{proof}
 
 In fact, a simple field redefinition of an Ehresmann connection preserves the compatibilities with the new multiplicative connection, and this is precisely one of the ideas of the field redefinitions. As usual, the difference of two connection 1-forms $A - A^\prime$ should be a one-form which is horizontal and transforms via the Adjoint representations under the modified push-forward. However, we have seen here that the modified push-forward depends on a connection on the group bundle. Thus, is it possible to vary $A$ with a 1-form which is horizontal \textit{and} does not transform via the Adjoint transformation such that $A^\prime$ is a connection 1-form but w.r.t.\ a different connection on the group bundle? The answer to this are the field redefinitions; for the following observe that the field redefinition of $\mutot$ induces a field redefinition of $\nabla^\caG$ given by
-\bes
-\nabla^{\mathrm{YM}, \lambda}
+\begin{equation*}
+\nabla^{\caG, \lambda}
 =
 \nabla^\caG
 	+ \mathrm{ad} \circ \lambda ~ .
-\ees
+\end{equation*}
 
-\begin{theorems}{Field redefinition of Ehresmann connections}{EhresmannTransformedEhresmann}
+\begin{theorems}{Field redefinitions preserving the physics}{EhresmannTransformedEhresmann}
 Let $\mathcal{G} \to M$ be an LGB over a smooth manifold $M$ so that its LAB $\mathcal{g}$ admits an $\mathrm{Ad}$-invariant fibre metric $\kappa$, and let $\pi\colon\mathcal{P} \to M$ be a principal $\mathcal{G}$-bundle; furthermore let $\mutot$ be a multiplicative Yang-Mills connection on $\mathcal{G}$ (w.r.t.\ a $\zeta \in \Omega^2(M; \cag)$) and $A \in \Omega^1(\mathcal{P}; \pi^*\mathcal{g})$ be a connection 1-form on $\mathcal{P}$ w.r.t.\ $\mutot$. We define the \textbf{field redefinitions w.r.t.\ $\lambda \in \Omega^1(M; \mathcal{g})$ of $A$} by
-\bes
+\begin{equation*}
 A^\lambda
 \coloneqq
 A - \pi^!\lambda ~.
-\ees
+\end{equation*}
 
 Then $A^\lambda$ is a connection 1-form w.r.t.\ $\mu^{\lambda}$ and
-\begin{align*}
+\begin{equation*}
 F^\lambda
-&\coloneqq
+\coloneqq
 \mathrm{d}^{\pi^*\nabla^{\mathrm{YM},\lambda}} A^\lambda
 	+ \frac{1}{2} \mleft[ A^\lambda \stackrel{\wedge}{,} A^\lambda \mright]_{\pi^*\mathcal{g}}
 	+ \pi^!\zeta^\lambda
 \equiv
 F
-\end{align*}
+\end{equation*}
 for all $\lambda \in \Omega^1(M; \mathcal{G})$. 
 \end{theorems}
 
 \begin{proof}
 \leavevmode\newline
 That $F^\lambda = F$ follows by similar calculations as in \cite{My1stpaper, MyThesis}. Therefore let us only prove that $A^\lambda$ is still a connection 1-form. $A^\lambda$ is clearly still the identity on the vertical structure, and henceforth let us check its behaviour w.r.t.\ the modified pushforward induced by $\mutot^{\lambda}$, denoted by $\mathcal{r}_\sigma^\lambda$ for $\sigma \in \Gamma(\mathcal{G})$: We have to study
-\begin{align*}
+\begin{equation*}
 \mleft(\mleft(\mathcal{r}_\sigma^\lambda\mright)^!A^\lambda\mright)_p(Y)
-\end{align*}
-for all $p \in \mathcal{P}_x$ and $Y \in \mathrm{T}_p\mathcal{P}$. First of all, similar to the beginning of the proof of Prop.\ \ref{prop:NewFieldStrengthWithCoolProps} we have
-\bes
+\end{equation*}
+for all $p \in \mathcal{P}_x$ and $Y \in \mathrm{T}_p\mathcal{P}$. First of all, similar to the beginning of the proof of \ref{prop:NewFieldStrengthWithCoolProps} we have
+\begin{equation*}
 \mleft(\mathcal{r}_\sigma^\lambda\mright)^! \mleft(\pi^! \lambda\mright)
 =
 \pi^! \lambda ~ ,
-\ees
+\end{equation*}
 and thus we essentially only need to study the field redefined Darboux derivative:
-\bes
+\begin{equation*}
 \Delta^\lambda \sigma
 \coloneqq
 \sigma^! \mutot^{\lambda}
@@ -9611,7 +9608,7 @@ and thus we essentially only need to study the field redefined Darboux derivativ
 \Delta \sigma 
 	+ \mathrm{Ad}_{\sigma^{-1}} \circ \lambda
 	- \lambda ~ .
-\ees
+\end{equation*}
 In total,
 \begin{align*}
 \mleft(\mleft(\mathcal{r}_\sigma^\lambda\mright)^!A^\lambda\mright)_p(Y)
@@ -9633,30 +9630,30 @@ A_{p \cdot \sigma_x}
 where $X \coloneqq \mathrm{D}_p\pi(Y)$, $\mathcal{r}_\sigma$ denotes the modified pushforward via $\mutot$ as usual, and we made use of $A$ being a connection 1-form w.r.t.\ $\mutot$.
 \end{proof}
 
-We see there is a transformation keeping the Lagrangian invariant such that the dynamics are preserved; $\mathcal{P}$ itself does not change and thus the gauge transformations in form of (local) principal bundle automorphisms also stay the same, and so the kinematics are preserved, too. However, field redefinitions non-trivially transform data like $\nabla^\caG$ so that it may become flat, and we may end up at a pre-classical theory describing the same physics. $\zeta$ itself might survive as shown in \cite{My1stpaper, MyThesis}. Let us summarize these results from the point of view as in Rem.\ \ref{rem:SimplicialDifferentialStuff}.
+We see there is a transformation keeping the Lagrangian invariant such that the dynamics are preserved; $\mathcal{P}$ itself does not change and thus the gauge transformations in form of (local) principal bundle automorphisms also stay the same, and so the kinematics are preserved, too. However, field redefinitions non-trivially transform data like $\mutot$ so that it may become flat, and we may end up at a pre-classical theory describing the same physics. $\zeta$ itself might survive as shown in \cite{My1stpaper, MyThesis}, but in general the field redefinitions make it difficult to find ``truly new'' examples, especially from a local point of view. Before we discuss this, let us summarize these results from the point of view as in \ref{rem:SimplicialDifferentialStuff}.
 
 \begin{remarks}{Meaning of Field redefinitions}{FieldRedefIntegrated}
-Recall Rem.\ \ref{rem:SimplicialDifferentialStuff} and its notation, \textit{i.e.}\ there is a simplicial differential $\delta$ so that
+Recall \ref{rem:SimplicialDifferentialStuff} and its notation, \textit{i.e.}\ there is a simplicial differential $\delta$ so that
 \begin{align*}
-\delta \mutot &= 0,\\
-F_{\mathcal{G}} &= \delta\zeta,
+\delta \mutot &= 0~,\\
+F_{\mathcal{G}} &= \delta\zeta~,
 \end{align*}
-where $F_{\mathcal{G}}$ denotes the curvature of $\mutot$ in a classical approach, that is,
-\begin{align*}
+where $F_{\mathcal{G}}$ denotes the curvature of $\mutot$ in an ordinary way, that is,
+\begin{equation*}
 F_{\mathcal{G}}
-&=
+=
 \mathrm{d}^{\pi_{\mathcal{G}}^*\nabla^\caG} \mutot
-	+ \frac{1}{2} \mleft[ \mutot \stackrel{\wedge}{,} \mutot \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}},
-\end{align*}
+	+ \frac{1}{2} \mleft[ \mutot \stackrel{\wedge}{,} \mutot \mright]_{\pi_{\mathcal{G}}^*\mathcal{g}}~,
+\end{equation*}
 where $\pi_{\mathcal{G}}$ is the projection of $\mathcal{G}$.
 The field redefinition of $\mutot$ can be written as
-\begin{align*}
+\begin{equation*}
 \mutot^{\lambda}
-&=
+=
 \mutot
 	+ \delta \lambda ~ .
-\end{align*}
-Prop.\ \ref{prop:YMStaysYM} and Thm.\ \ref{thm:EhresmannTransformedEhresmann} has now several interpretations and implications, where we denote with $\mleft[\mutot\mright]_{\delta}$ the equivalence class of $\mutot$ inherited by $\delta$:
+\end{equation*}
+\ref{prop:YMStaysYM} and \ref{thm:EhresmannTransformedEhresmann} have now several interpretations and implications, where we denote with $\mleft[\mutot\mright]_{\delta}$ the equivalence class of $\mutot$ inherited by $\delta$:
 \begin{enumerate}
 	\item The field redefinition of $\mutot$ is about picking any other representative for $\mleft[\mutot\mright]_{\delta}$.
 	\item Every other representative of $\mleft[\mutot\mright]_{\delta}$ is not just multiplicative, but also a multiplicative Yang-Mills connection, that is,
@@ -9669,21 +9666,21 @@ Prop.\ \ref{prop:YMStaysYM} and Thm.\ \ref{thm:EhresmannTransformedEhresmann} ha
 \end{enumerate}
 \end{remarks}
 
-Last but not least, as also mentioned in the introduction, these field redefinitions are not just any transformation preserving the physics. Curved Yang-Mills gauge theory is a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions. This reformulation introduces extra terms, $\zeta$ and connection 1-forms of $\nabla$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength. From that point of view it is tempting to ask whether there are examples which cannot be flattened by field redefinitions:
+Last but not least, as also mentioned in the introduction, these field redefinitions are not just any transformation preserving the physics. Curved Yang-Mills gauge theory is a reformulation of classical gauge theory in such a way that gauge theory is form-invariant w.r.t.\ the field redefinitions. This reformulation introduces extra terms, $\zeta$ and connection 1-forms of $\mutot$ and $\nabla^\caG$, that is, every classical gauge theory is equivalent to a possibly curved theory with a non-zero $\zeta$ contributing to the field strength. From that point of view it is tempting to ask whether there are examples which cannot be flattened by field redefinitions:
 
 \subsection{Examples}\label{CYMExamples}
 
-First examples which cannot be flattened by field redefinitions were found in \cite{My1stpaper, MyThesis}; but many more were found after the upload of this work: It turned out that connections like $\mutot$ help classifying singular foliations (\cite{Fischer:2401.05966}), and in return singular foliation theory provides a full theory of examples and even a classification of such examples as long as the group bundle is centerless (\cite[the appendix]{Fischer:2401.05966}); motivated by Ex.\ \ref{ex:NablaYMAsAdjointConnection} (recall also \ref{ex:OurVeryImportantExample}) such a classification is via viewing the LGB and its connection as associated to a ``suitable'' principal bundle.
+First examples which cannot be flattened by field redefinitions were found in \cite{My1stpaper, MyThesis}; but many more were found after the initial upload of this work: It turned out that connections like $\mutot$ help classifying singular foliations (\cite{Fischer:2401.05966}), and in return singular foliation theory provides a full theory of examples and even a classification of such examples as long as the group bundle is centerless (\cite[the appendix]{Fischer:2401.05966}); motivated by \ref{ex:NablaYMAsAdjointConnection} (recall also \ref{ex:OurVeryImportantExample}) such a classification is via viewing the LGB and its connection as associated to a ``suitable'' principal bundle.
 
 Let us first point out the obvious:
 
 \begin{examples}{Classical examples}{ClassicalYMTheoriesRecovered}
-By Ex.\ \ref{ex:ClassicalYangMillsConnection}, we just recover the classical formalism of gauge theory if having a classical principal bundle $P$ on which a trivial LGB $\mathcal{G} = M \times G$ acts on the right, where $G$ is a Lie group with Lie algebra $\mathfrak{g}$. $\mathrm{H}\mathcal{G}$ is the canonical flat multiplicative Yang-Mills connection, $\nabla^\caG=\nabla^{\mathrm{cYM}}$ is the canonical flat connection on $\mathcal{g} = M \times \mathfrak{g}$, and $\zeta \equiv 0$. Then every example known in the classical formalism carries over.
+By \ref{ex:ClassicalYangMillsConnection}, we just recover the classical formalism of gauge theory if having a classical principal bundle $P$ on which a trivial LGB $\mathcal{G} = M \times G$ acts on the right, where $G$ is a Lie group with Lie algebra $\mathfrak{g}$. $\mathrm{H}\mathcal{G}$ is the canonical flat multiplicative Yang-Mills connection, $\nabla^\caG$ is the canonical flat connection on $\mathcal{g} = M \times \mathfrak{g}$, and $\zeta \equiv 0$. Then every example known in the classical formalism carries over.
 
-Furthermore, starting with such a classical example, by \cite[\S 6, Cor.\ 6.2]{My1stpaper} we know that if $\mathfrak{g}$ has a non-zero centre (and if $M$ is at least three-dimensional), then one can always add a centre-valued $\zeta$ to this gauge theory, transforming it into a flat pre-classical gauge theory, $\nabla^\caG = \nabla^{\mathrm{pYM}}$, with non-trivial $\zeta$. If $\mathrm{d}^{\nabla^{\mathrm{pYM}}} \zeta \neq 0$, then there is no $\lambda \in \Omega^1(M; \mathcal{g})$ with $\overline{\zeta}^\lambda = 0$.
+Furthermore, starting with such a classical example, by \cite[\S 6, Cor.\ 6.2]{My1stpaper} we know that if $\mathfrak{g}$ has a non-zero centre, then one can always add a centre-valued $\zeta$ to this gauge theory, transforming it into a flat pre-classical gauge theory with non-trivial $\zeta$. If $M$ is at least three-dimensional, then it is possible to have $\mathrm{d}^{\nabla^\caG} \zeta \neq 0$, and thus there is no $\lambda \in \Omega^1(M; \mathcal{g})$ with $\zeta^\lambda = 0$.
 \end{examples}
 
-This shows that there are examples with non-trivial $\zeta$, stable w.r.t.\ field redefinitions. However, as shown in \cite[\S 5.2, Thm.\ 5.16]{My1stpaper} (or alternatively \cite[\S 5.1.5, Thm.\ 5.1.33]{MyThesis}), if $M$ is contractible, then there is $\lambda \in \Omega^1(M; \mathcal{g})$ so that $\nabla^{\mathrm{YM}, \lambda}$ is flat. Thus, if $M$ is contractible, then every curved Yang-Mills Lagrangian is equivalent to a Lagrangian of a pre-classical gauge theory ($\zeta$ may be non-vanishing). This may be due to that $\mathcal{G}$ is a trivial fibre bundle, and then the LGB action breaks down to Lie group action; recall all our discussions related to classical principal bundles equipped with an LGB action of a trivial LGB as in the previous example. 
+This shows that there are examples with non-trivial $\zeta$, stable w.r.t.\ field redefinitions. However, as shown in \cite[\S 5.2, Thm.\ 5.16]{My1stpaper} (or alternatively \cite[\S 5.1.5, Thm.\ 5.1.33]{MyThesis}), if $M$ is contractible, then there is $\lambda \in \Omega^1(M; \mathcal{g})$ so that $\nabla^{\caG, \lambda}$ is flat. Thus, if $M$ is contractible, then every curved Yang-Mills Lagrangian is equivalent to a Lagrangian of a pre-classical gauge theory ($\zeta$ may be non-vanishing). This may be due to that $\mathcal{G}$ is a trivial fibre bundle, and then the LGB action breaks down to Lie group action; recall all our discussions related to classical principal bundles equipped with an LGB action of a trivial LGB as in the previous example. 
 Hence we conjecture:
 
 \begin{conjectures}{Trivial LGBs are associated with pre-classical theories}{TrivialLGBIsPreclassical}
@@ -9692,29 +9689,48 @@ Let $\mathcal{G} \to M$ be a trivial LGB over a smooth manifold $M$; furthermore
 
 For centerless simple Lie group bundles over connected $M$ this turns out to be true, see \cite{Fischer:2024vak}. Obviously, non-trivial LGBs are not used in the classical formalism, and by the previous discussion one may ask if there is a (global) example with a curved multiplicative Yang-Mills connection starting with a non-trivial LGB. Let us describe these examples, already presented in \cite{MyThesis, Fischer:2024vak}.
 
-There is a natural class of multiplicative Yang-Mills connections which cannot be flattened via field redefinitions. In order to understand this, we follow and use results of~\cite[in particular the appendix]{Fischer:2401.05966}: Assume an ordinary principal $\sfH$-bundle $P$, where $\sfH$ is a Lie group, and assume that $M$ is connected. Also assume that we have a manifold $\sfT$ on which $\sfH$ acts (from the left).\footnote{$\sfT$ and its related constructions and assumptions are only needed to provide an extra geometric interpretation as in \ref{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}.} Then we have two associated bundles: 
+There is a natural class of multiplicative Yang-Mills connections which cannot be flattened via field redefinitions. In order to understand this, we follow and use results of~\cite[in particular the appendix]{Fischer:2401.05966}: Assume an ordinary principal $G$-bundle $P$, where $G$ is a Lie group, and assume that $M$ is connected. Also assume that we have a manifold $\sfT$ on which $G$ acts (from the left).\footnote{$\sfT$ and its related constructions and assumptions are only needed to provide an extra geometric interpretation as in \ref{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}.} Then we have two associated bundles: 
     \begin{equation}
         \begin{aligned}
-            c_\sfH(P) &\coloneqq (P \times \sfH) \Big/ \sfH~,
+            c_G(P) &\coloneqq (P \times G) \Big/ G~,
             \\
-            \scT &\coloneqq (P \times \sfT) \Big/ \sfH~.
+            \scT &\coloneqq (P \times \sfT) \Big/ G~.
         \end{aligned}
     \end{equation}
-		As discussed, we have a canonical left-action, $c_\sfH(P) \curvearrowright \scT$, and an Ehresmann connection on $P$ (in the usual sense) induces associated connections on $c_\sfH(P)$ and $\scT$. The one on $c_\sfH(P)$ is a multiplicative Yang-Mills connection on $c_\sfH(P)$ whose primitive is given by the corresponding curvature on $P$, and the one on $\scT$ is a connection that has been called \emph{compatible Yang--Mills connection}~\cite{Fischer:2401.05966}. That is, this is an Ehresmann connection on $\scT$ w.r.t.~the $c_\sfH(P)$-action and the adjustment on $c_\sfH(P)$, which satisfies a certain curvature equation.
+		As discussed, we have a canonical left-action, $c_G(P) \curvearrowright \scT$, and an Ehresmann connection on $P$ (in the usual sense) induces associated connections on $c_G(P)$ and $\scT$. The one on $c_G(P)$ is a multiplicative Yang-Mills connection on $c_G(P)$ whose primitive ($= \zeta$) is given by the corresponding curvature on $P$, and the one on $\scT$ is a connection that has been called \emph{compatible Yang--Mills connection}~\cite{Fischer:2401.05966}. That is, this is an Ehresmann connection on $\scT$ w.r.t.~the $c_G(P)$-action and the adjustment on $c_G(P)$, which satisfies a certain curvature equation.
     
-    The following remark provides further motivation for considering Lie group bundles like $c_\sfH(P)$ beyond the existence of natural multiplicative Yang-Mills connections.
+    The following classification of \cite{Fischer:2401.05966} provides further motivation for considering Lie group bundles like $c_G(P)$ beyond the existence of natural multiplicative Yang-Mills connections; the following correspondence is via associated bundle constructions, more general than $\caG$ being an inner group bundle.
+		
+		\begin{corollaries}{Classification of Yang-Mills bundles with trivial center}
+		{classYMcenterless}
+		\tcbsubtitle[before skip=\baselineskip]{\cite[Appendix]{Fischer:2401.05966}}
+		Let $G$ be a Lie group with trivial center, the identity component of $\caG$ we denote by $G_0$, and $M$ is a connected manifold with point $\ell \in M$. We have a natural 1:1 correspondence between:
+
+		\begin{itemize}
+			\item Pairs $(\caG, [\mutot])$ made of Lie group bundles $\caG \to M$ with structural Lie group $G = \mathcal G_\ell$ and a class, up to field redefinition, of multiplicative Yang-Mills connections $\mutot$.
+			\item Equivalence classes of pairs made of:
+				\begin{enumerate}
+				\item a group morphism\footnote{Here $G_0$ is seen as a sub-group of $ \mathrm{Aut}(G)$ through conjugation. Notice that if $G$ is connected, $ \mathrm{Aut}(G)/G_0= \mathrm{Out}(G)$.} $\Xi \colon \pi_1(M,\ell) \longrightarrow \mathrm{Aut}(G)/G_0$, that we call the outer holonomy, where $\pi_1(M,\ell)$ is the first fundamental group based at $\ell$,
+				\item a principal $H$-bundle $P \to M $ with $H \subset {\mathrm{Aut}}(G)$ the inverse image through ${\mathrm{Aut}}(G) \to {\mathrm{Aut}}(G)/G_0$ of the image of $\Xi$, naturally inducing that the quotient $P/G_0$ is the Galois bundle $ \tilde M \to M$ associated to the kernel of $ \Xi$. 
+				% Here $ H \subset \Aut(G)$ is the subgroup of automorphisms of $G$ whose class in $\mathrm{Aut}(G)/G_0 $ belongs to the image of $ \Xi$.
+				\end{enumerate}
+				We identify to such pairs $(\Xi_1,P_1) $ and $ (\Xi_2,P_2)$, with $P_1$ a principal $ H_1$-bundle and $ P_2$ a principal $ H_2 $-bundle, if there exists $ \Psi \in {\rm Aut}(G)$ such that $ \Xi_1= \overline{\Psi}\circ \Xi_2 \circ \overline{\Psi}^{-1}$, where $\overline \Psi$ is the class of $\Psi$ in $\mathrm{Aut}(G)/G_0$, and if there exists an fiber preserving diffeomorphism $ \chi \colon P_1 \simeq P_2 $ such that $ \chi (p \cdot g) = \chi(p) \cdot \Psi(g)$ for all $g \in H_1$.
+				Notice that $ \Psi(g)$ automatically belongs to $ H_2$, so that this condition makes sense.
+				\end{itemize} 
+		\end{corollaries}
     
-    \begin{remark}\label{rem:JustifyingExample}
-        As argued in the appendix of \cite{Fischer:2401.05966} every Lie group bundle $\scH$ with a covariant adjustment and whose structural Lie group $\sfH$ has a trivial center is associated to some principal bundle $P$ (whose structural Lie group $\sfK$ is the extension of a Galois group by $\sfH$); see also \cite{meinrenken2021integration} for similar arguments. That is, $\scH \cong (P \times \sfH) \Big/ K$, and the covariant adjustment is given as an associated connection.
-    \end{remark}
+    %\begin{remark}\label{rem:JustifyingExample}
+        %As argued in the appendix of \cite{Fischer:2401.05966} every Lie group bundle $\scH$ with a covariant adjustment and whose structural Lie group $G$ has a trivial center is associated to some principal bundle $P$ (whose structural Lie group $\sfK$ is the extension of a Galois group by $G$); see also \cite{meinrenken2021integration} for similar arguments. That is, $\scH \cong (P \times G) \Big/ K$, and the covariant adjustment is given as an associated connection.
+    %\end{remark}
     
     In particular \cite{Fischer:2401.05966} provides the following (a modification of \cite{blazquez2022group}):
     
     \begin{lemmata}{Simple Lie group bundles, \cite{mackenzieGeneralTheory}}{SemiSimpleLGBAdjust}
-        If $\sfH$ is simple and centerless, then all covariant adjustments on $\scH$ are associated to an Ehresmann connection of a unique principal $\sfH$-bundle $P$, and their primitive is the corresponding curvature on $P$.
+		\tcbsubtitle[before skip=\baselineskip]{\cite[Appendix]{Fischer:2401.05966}}
+        If $G$ is simple and centerless, then all covariant adjustments on $\scG$ are associated to an Ehresmann connection of a unique principal $G$-bundle $P$, and their primitive is the corresponding curvature on $P$.
     \end{lemmata}
 		
-		Simplicity also implies that the correspondence in Lemma \ref{lem:SemiSimpleLGBAdjust} is one-to-one. Slightly generalized, assuming that $\sfH$ has a trivial center implies that the associated connection on $c_\sfH(P)$ is in one-to-one correspondence with the Ehresmann connection on $P$. Thus, let us now assume that $\sfH$ and hence $c_\sfH(P)$ have a trivial center; furthermore assume that $\sfT = \mathbb{R}^d$, and that $\sfH$ acts faithfully on $\sfT$ with 0 as fixed point. Then there is a canonical singular foliation $\scF$ on $\scT$ with $M$ as a leaf generated by vector fields of the form
+		Simplicity also implies that the correspondence in \ref{lem:SemiSimpleLGBAdjust} is one-to-one. Thus, assuming that $G$ is simple and has a trivial center implies that the associated connection on $c_G(P)$ is in one-to-one correspondence with the Ehresmann connection on $P$. Furthermore assume that $\sfT = \mathbb{R}^d$, and that $G$ acts faithfully on $\sfT$ with 0 as fixed point. Then there is a canonical singular foliation $\scF$ on $\scT$ with $M$ as a leaf generated by vector fields of the form
     \begin{equation}\label{anchor}
         \chi_\scT(X) + \overline{\nu}
     \end{equation}
@@ -9722,20 +9738,20 @@ There is a natural class of multiplicative Yang-Mills connections which cannot b
     
     Because the action is faithful, there is the following one-to-one correspondence between:
     \begin{itemize}
-        \item the multiplicative Yang-Mills connection on $c_\sfH(P)$~;
+        \item the multiplicative Yang-Mills connection on $c_G(P)$~;
         \item the Ehresmann connection on $P$~;
         \item the $\scF$-connection on $\scT$~.
     \end{itemize}
-    The major result of~\cite{Fischer:2401.05966} implies that (in a formal setting, and in a neighborhood around a leaf) every foliation can be modeled like this; however $P$ is then in general infinite-dimensional.\footnote{In our context we simply assume a finite-dimensional $P$ so that the arguments of~\cite{Fischer:2401.05966} carry over to a smooth setting.} Altogether, we can study multiplicative Yang-Mills connections on such $c_\sfH(P)$ as structure group bundle by looking at $\scF$ and $P$. In particular, $c_\sfH(P)$ admits a flat multiplicative Yang-Mills connection if and only if $\scF$ admits a flat $\scF$-connection, which is the case if and only if $P$ is flat. Furthermore,~\cite{Fischer:2401.05966} provides a clear geometric interpretation of the field redefinitions, extending the discussion of~\cite{My1stpaper} and~\cite[\S 5.1]{MyThesis}.
+    The major result of~\cite{Fischer:2401.05966} implies that (in a formal setting, and in a neighborhood around a leaf) every foliation can be modeled like this; however $P$ is then in general infinite-dimensional.\footnote{In our context we simply assume a finite-dimensional $P$ so that the arguments of~\cite{Fischer:2401.05966} carry over to a smooth setting.} Altogether, we can study multiplicative Yang-Mills connections on such $c_G(P)$ as structure group bundle by looking at $\scF$ and $P$. In particular, $c_G(P)$ admits a flat multiplicative Yang-Mills connection if and only if $\scF$ admits a flat $\scF$-connection, which is the case if and only if $P$ is flat. Furthermore,~\cite{Fischer:2401.05966} provides a clear geometric interpretation of the field redefinitions, extending the discussion of~\cite{My1stpaper} and~\cite[\S 5.1]{MyThesis}.
     
     \begin{table*}[htbp]
-        \caption{Comparing the geometry of multiplicative Yang-Mills connections (YM conn.) with the geometry of singular foliations. Here, $\scF$-connections only serve to highlight a geometric interpretation, but we actually provided a notion only defined as associated to $P$; however, the general notion of $\scF$-connections allows for more than such connections if $H$ is not simple; this will not matter here, see~\cite{Fischer:2401.05966} for the general classification of $\scF$-connections and their relation to multiplicative Yang-Mills connections.}
+        \caption{Comparing the geometry of multiplicative Yang-Mills connections (YM conn.) with the geometry of singular foliations. Here, $\scF$-connections only serve to highlight a geometric interpretation, but we actually provided a notion only defined as associated to $P$ as defined above; however, the general notion of $\scF$-connections allows for more than such connections if $G$ is not simple, needing a ``bigger'' principal bundle as in \ref{cor:classYMcenterless}; this will not matter here, see~\cite{Fischer:2401.05966} for the general classification of $\scF$-connections and their relation to multiplicative Yang-Mills connections.}
         \label{tab:ComparingTheGeometryGaugeTheoryWithSingularFoliations}
         \centering
         \begin{tabular}{l|l|l}
-            Lie group bundle $c_\sfH(P)$ & Singular foliations $\scF$ & principal $\sfH$-bundle $P$\\ \hline
+            Lie group bundle $c_G(P)$ & Singular foliations $\scF$ & principal $G$-bundle $P$\\ \hline
             multiplicative YM conn.\ $\mu$ & $\scF$-connection & Ehresmann connection \\
-            $c_\sfH(P)$ admits flat $\mu$ & $\scF$ is flat & $P$ is flat \\
+            $c_G(P)$ admits flat $\mu$ & $\scF$ is flat & $P$ is flat \\
             field redefinition of $\mu$ & change of $\scF$-connection & change of Ehresmann connection
         \end{tabular}
     \end{table*}
@@ -9743,38 +9759,38 @@ There is a natural class of multiplicative Yang-Mills connections which cannot b
     Thus, in order to find non-trivial multiplicative Yang-Mills connections which cannot be flattened by field redefinitions one only needs to apply the previous construction on principal bundles $P$ which do not admit flat connections; alternatively search for foliations $\scF$ which do not admit flat $\scF$-connections. There is plenty of literature on both cases.
     
     \begin{examples}{Cooking recipe}{Hopf}
-        Using non-flat principal bundles, for example a non-trivial principal bundle $P$ over a simply connected base manifold, such as the Hopf fibration $\mathbb{S}^7 \to \mathbb{S}^4$, leads to curved multiplicative Yang-Mills connections on $c_\sfH(P)$ in the above construction which cannot be flattened by field redefinitions.
+        Using non-flat principal bundles with a simple and centerless structural group, for example a non-trivial principal bundle $P$ over a simply connected base manifold, such as the Hopf fibration $\mathbb{S}^7 \to \mathbb{S}^4$, leads to curved multiplicative Yang-Mills connections on $c_G(P)$ in the above construction which cannot be flattened by field redefinitions. The general examples with centerless Lie groups are associated to principal bundles $P$ as defined in \ref{cor:classYMcenterless}.
     \end{examples}
 		
-		What about the full theory? For this we need to require the existence of an $\mathrm{Ad}$-invariant connection on $c_H(P)$ which is simply given by the assumption that $H$ is simple what is covered by the previous discussion; recall Rem.\ \ref{rem:JustifyingExample}. Thus, it is only left to find a principal $c_H(P)$-bundle $\scP$; for this we have several canonical choices:
+		What about the full theory? For this we need to require the existence of an $\mathrm{Ad}$-invariant connection on $c_G(P)$ which is simply given by the assumption that $G$ is simple what is covered by the previous discussion. Thus, it is only left to find a principal $c_G(P)$-bundle $\scP$; for this we have several canonical choices, which are of course not the only ones:
 		\begin{itemize}
-			\item $\scP = c_H(P)$ itself;
-			\item $\scP = P$ via the action of gauge transformations; recall Rem.\ \ref{rem:ClassGaugeTrafosAndcgPMulti};
-			\item $\scP = (P \times P) \Big/ H$, the Atiyah groupoid of $P$, where $H$ acts diagonally on $P \times P$.
+			\item $\scP = c_G(P)$ itself;
+			\item $\scP = P$, where $c_G(P)$ acts via gauge transformations ($\sAut(\caP) \cong \Gamma(c_G(P))$);
+			\item $\scP = (P \times P) \Big/ G$, the Atiyah groupoid of $P$, where $G$ acts diagonally on $P \times P$.
 		\end{itemize}
 		
 		About the last bullet point, for the experienced reader: We have a short exact sequence of Lie groupoids
 		\begin{equation*}
         \begin{tikzcd}
-            c_\sfH(P) \arrow[hook]{r} &
-            (P \times P) \Big/ H \arrow[two heads]{r} &
+            c_G(P) \arrow[hook]{r} &
+            (P \times P) \Big/ G \arrow[two heads]{r} &
             \scP\mathrm{air}(M)~,
         \end{tikzcd}
     \end{equation*}
-		where $\scP\mathrm{air}(M)$ is the pair groupoid of $M$. It is a straightforward task to show that the Atiyah groupoid is a principal $c_H(P)$-bundle,
+		where $\scP\mathrm{air}(M)$ is the pair groupoid of $M$. It is a straightforward task to show that the Atiyah groupoid is a principal $c_G(P)$-bundle,
 \begin{equation*}
 	\begin{tikzcd}
-		\mathcal{P} = (P \times P) \Big/ H \arrow{d}{\pi_{\mathcal{P}}} \arrow{dr}{s_{\scP}} & \arrow[bend right]{l} c_H(P) \arrow{d} \\
+		\mathcal{P} = (P \times P) \Big/ G \arrow{d}{\pi_{\mathcal{P}}} \arrow{dr}{s_{\scP}} & \arrow[bend right]{l} c_G(P) \arrow{d} \\
 		\scP\mathrm{air}(M) \arrow[swap]{r}{s_{\scP\mathrm{air}(M)}} & M
 	\end{tikzcd}
 \end{equation*}
-where $s_\scP$ and $s_{\scP\mathrm{air}(M)}$ are the source arrows of $(P \times P) \Big/ H$ and $\scP\mathrm{air}(M)$, respectively. Here one needs the notion of LGB-actions along a moment map, here $s_\scP$, which we did not discuss here, but it is straight-forward to extend the previous constructions to such setups; see \cite{Fischer:2024vak}. Observe however, that the base manifold of the Atiyah groupoid as such a principal bundle is the pair groupoid.
+where $s_\scP$ and $s_{\scP\mathrm{air}(M)}$ are the source arrows of $(P \times P) \Big/ G$ and $\scP\mathrm{air}(M)$, respectively. Here one needs the notion of LGB-actions along a moment map, here $s_\scP$, which we did not discuss here, but it is straight-forward to extend the previous constructions to such setups; see \cite{Fischer:2024vak}. Observe however, that the base manifold of the Atiyah groupoid as such a principal bundle is the pair groupoid.
 
 Using such principal bundles thence lead to a curved Yang-Mills gauge theory which cannot be described in a classical way.
 
-\subsection{Future prospects}\label{conclusions}
+\section{Future prospects}\label{conclusions}
 
-As a next step one could now define minimal couplings. Given a vector bundle $V \to M$, equipped with a LGB representation $\rho \colon \mathcal{G} \to \mathrm{Aut}(V)$, we should be able to define associated vector bundles $\mathcal{V} \coloneqq ( \mathcal{P} \times_M V ) \Big/ \mathcal{G}$, as we already mentioned before. W.r.t.\ a local gauge $s$ of $\mathcal{P}$ every section $\Psi \in \Gamma(\mathcal{V})$ has locally the form
+As a next step one should classify all possible setups, extending \ref{cor:classYMcenterless}, which is already in progress, and one could now define minimal couplings. Given a vector bundle $V \to M$, equipped with a LGB representation $\rho \colon \mathcal{G} \to \mathrm{Aut}(V)$, we should be able to define associated vector bundles $\mathcal{V} \coloneqq ( \mathcal{P} \times_M V ) \Big/ \mathcal{G}$, as we already mentioned before. W.r.t.\ a local gauge $s$ of $\mathcal{P}$ every section $\Psi \in \Gamma(\mathcal{V})$ has locally the form
 \begin{align*}
 [s, \psi_s],
 \end{align*}
@@ -9796,11 +9812,60 @@ R_\nabla
 \rho_* \circ \zeta
 \end{align*}
 for all $\sigma \in \Gamma(\mathcal{G})$.
-Observe the similarity with the infinitesimal compatibility conditions Def.\ \ref{def:YangMillsConnection} and Lemma \ref{lem:FieldRedefViaLGBSection}; the first condition should lead to that that $\nabla^A \Psi$ is well-defined and independent of the choice of $s$. The second condition should imply that the curvature of $\nabla^A$ is given by the generalised field strength of $A$. After showing this one could try to construct all the other obvious analogues of the classical formalism and discuss their applications. Essentially, one achieves a special type of curved Yang-Mills-Higgs theory as introduced in \cite{Fischer:2024vak}.
+Observe the similarity with the infinitesimal compatibility conditions \ref{def:YangMillsConnection} and \ref{lem:FieldRedefViaLGBSection}; the first condition should lead to that that $\nabla^A \Psi$ is well-defined and independent of the choice of $s$. The second condition should imply that the curvature of $\nabla^A$ is given by the generalised field strength of $A$. In sense of parallel transports, denoted as usual with $\rm PT$ and a superscript denoting the corresponding bundle, one will have
+\begin{equation*}
+{\rm PT}^V(v\cdot g)
+=
+{\rm PT}^V(v) \cdot
+{\rm PT}^\caG(g)
+\end{equation*}
+for all $(v, g) \in V*\caG$ (as for $\caF$-connections in \cite{Fischer:2401.05966}) and a corresponding curvature equation. The minimal coupling is then defined as
+\begin{equation*}
+{\rm PT}^\caV([p, v])
+=
+\mleft[ {\rm PT}^\caP(p), {\rm PT}^V(v) \mright]
+\end{equation*}
+for all $[p, v] \in \caV$. After showing all of this one could try to construct all the other obvious analogues of the classical formalism and discuss their applications. Essentially, one achieves a special type of curved Yang-Mills-Higgs theory as introduced in \cite{Fischer:2024vak}, related to the corresponding action groupoid. Which leads us to:
 
-\textbf{Acknowledgements:} I want to thank Siye Wu, Camille Laurent-Gengoux, Mark John David Hamilton and Alessandra Frabetti for their great help and support in making this paper. Also big thanks to my mother, father, Dennis, Gregor, Marco, Nico, Jakob, Kathi, Konstantin, Lukas, Locki, Gareth, Philipp, Ramona, Annerose, Michael, Maxim, Anna, and my girlfriend Rachelle for all their love.
+\subsection{Principal Lie groupoid bundles}
 
-\textbf{Funding:} The paper is part of my post-doc fellowship at the National Center for Theoretical Sciences (NCTS, \begin{CJK*}{UTF8}{bkai}國家理論科學研究中心\end{CJK*}), which is why I also want to thank the NCTS.
+As mentioned, there is also the notion of curved Yang-Mills-Higgs theories, where the structure on the principal bundle is given by a Lie groupoid; infinitesimally introduced in \cite{CurvedYMH}, and summarized in \cite{MyThesis}. Essentially, this theory got already integrated: \cite{Fischer:2024vak} integrated the gauge transformations, Ehresmann connections and generalised field strength which is the most difficult part; the Lagrangian is already trivially given by the infinitesimal picture. A summary of all of that is work in progress by the authors of \cite{Fischer:2024vak}, let us therefore just give a quick summary of the mentioned references:
+
+As we have seen, there are two steps: Generalising the notion of Ehresmann connection by fixing a multiplicative connection on the structure, and generalising the notion of field strength making use of suitable curvature equations on the structure. Thus, if $\caG$ is a Lie groupoid over a manifold $N$, then the proper generalisation of multiplicative Yang-Mills connections is called \textbf{covariant adjustment}: That is, a \textbf{Cartan connection} $\mutot$ which is a horizontal and multiplicative distribution complementary to the target arrow,\footnote{We define Lie algebroids as left-invariant vector fields, i.e.\ via the vertical structure of the target arrow.} and we are interested into those Cartan connections which satisfy the proper generalisation of the Maurer-Cartan equation given by saying that the curvature of $\mutot$ is multiplicative-exact, i.e.\ there is a $\zeta \in \Omega^2(N; s^*\cag)$
+\begin{equation*}
+		\left.\left(\mathrm{d}^{s^*\nabla^\caG} \mutot
+		- \frac{1}{2} \left(s^*t_{\nabla^\caG_\rho}\right)\left( \mutot \stackrel{\wedge}{,} \mutot \right) \right) \right|_{g}
+		=
+		%\sAd_{g^{-1}} \circ \mleft.\mleft(\pi_{\mathcal{G}}^! \zeta\mright)\mright|_g
+		\mathrm{Ad}_{g^{-1}}\circ \left.t^! \zeta\right|_g 
+		- \left.s^! \zeta\right|_g~,
+\end{equation*}
+for all $g \in \caG$, where $s$ and $t$ is the source and target arrow, respectively, $\cag$ the Lie algebroid of $\caG$ with anchor $\rho$ and bracket $[\cdot, \cdot]_\cag$, $\mathrm{Ad}$ is the adjoint representation induced by the choice of Cartan connection (\cite{crainic2015multiplicative}), and $t_{\nabla^\caG_\rho}$ the torsion of the induced connection $\nabla^\caG$ on $\cag$ where $\nabla^\caG$ is contracted with $\rho$ in the lower argument:
+\begin{equation*}
+t_{\nabla^\caG_\rho}(\mu, \nu)
+\coloneqq
+\nabla^\caG_{\rho(\mu)}\nu
+	- \nabla^\caG_{\rho(\nu)}\mu
+	- \mleft[ \mu, \nu \mright]_\cag
+\end{equation*}
+for all $\mu, \nu \in \Gamma(\cag)$.
+A Cartan connection satisfying such a curvature condition is a covariant adjustment. 
+
+Now assume a principal $\caG$-bundle $\caP$ over a possible different manifold $M$ on which $\caG$ acts along a map $\phi \colon \caP \to N$, the \textbf{lifted Higgs field}. An Ehresmann connection on $\caP$ in the sense of \cite{Fischer:2024vak} is a horizontal distribution on $\caP$ invariant under the modified push-forward which is defined as here, e.g.\ as in the first bullet point of \ref{rem:AlternModPush} which also has a similar expression via the corresponding Darboux derivative. As here, the existence and notion of an Ehresmann connection does not require the curvature condition. However, the curvature condition on $\mutot$ appears in defining the generalised field strength of a lifted Higgs field $\phi$ and a connection 1-form $A \in \Omega^1(\caP; \phi^*\cag)$, given by:
+\begin{equation*}
+F
+=
+\mathrm{d}^{\phi^*\nabla^\caG} A
+	- \frac{1}{2} \mleft(\phi^*t_{\nabla^\caG_\rho}\mright)\mleft( A \stackrel{\wedge}{,} A \mright)
+	+ \frac12 \mleft(\phi^*\zeta\mright)\bigl( \rmD\phi - (\phi^*\rho)(A) \stackrel{\wedge}{,} \rmD\phi - (\phi^*\rho)(A) \bigr)~.
+\end{equation*}
+Note the appearance of the minimal coupling in the last term (\cite{CurvedYMH, MyThesis, Fischer:2024vak}) and that we also vary w.r.t.\ $\phi$. The corresponding Lagrangian is now contracting $F$, contracting the minimal coupling, and adding a potential, similar to how we usually construct Yang-Mills-Higgs theories; in order to contract those terms one needs metrics invariant under the adjoint representations in the context of Lie groupoids (which in general depend on the choice of $\mutot$!). See the mentioned references for this construction and a proof for gauge invariance, e.g.\ \cite{CurvedYMH} or \cite{MyThesis}.
+
+As before there are field redefinitions, an equivalence relation in this context, \cite[Def.\ 4.5.1 and 4.7.10]{MyThesis} which are now heavily more complicated due to the simple fact that $\rm Ad$ now depends in general on $\mutot$. Curved examples stable under field redefinitions were provided in \cite{Fischer:2024vak} and (partial) classifications are work in progress. Sadly, the field redefinitions may imply that locally such theories are not that new, and even globally may be reconstructed by LGBs equipped with an action, so that the language of groupoids may be nice language-wise but may otherwise not add many new examples. This could also be seen as the possibly restrictive nature of choosing a Cartan connection (with curvature conditions) on the structure. See future works regarding these phenomena.
+
+\textbf{Acknowledgements:} I want to thank Siye Wu, Camille Laurent-Gengoux, Mark John David Hamilton and Alessandra Frabetti for their great help and support in making this paper. Also big thanks to my wife Rachelle, my mother, father, Dennis, Gregor, Marco, Nico, Jakob, Kathi, Konstantin, Lukas, Locki, Gareth, Philipp, Ramona, Annerose, Michael, Maxim, and Anna for all their love and support. Special thanks also to Žan Grad for very fruitful discussions.
+
+%\textbf{Funding:} The paper is part of my post-doc fellowship at the National Center for Theoretical Sciences (NCTS, \begin{CJK*}{UTF8}{bkai}國家理論科學研究中心\end{CJK*}), which is why I also want to thank the NCTS.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Hier beginnt der Anhang %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
