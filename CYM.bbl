@@ -10,6 +10,7 @@ Alexei Kotov and Thomas Strobl.
 Ana~Cannas Da~Silva and Alan Weinstein.
 \newblock {\em Geometric models for noncommutative algebras}, volume~10.
 \newblock American Mathematical Soc., 1999.
+\newblock https://bookstore.ams.org/bmln-10.
 
 \bibitem{OriginofCYMH}
 Thomas Strobl.
@@ -40,8 +41,8 @@ Simon-Raphael Fischer.
 \bibitem{Fischer:2024vak}
 Simon-Raphael Fischer, Mehran Jalali~Farahani, Hyungrok Kim, and Christian
   Saemann.
-\newblock {Adjusted connections I: Differential cocycles for principal groupoid
-  bundles with connection}.
+\newblock {Adjusted connections I: {D}ifferential cocycles for principal
+  groupoid bundles with connection}.
 \newblock 2024.
 \newblock arXiv:2406.16755, https://doi.org/10.48550/arXiv.2406.16755.
 
@@ -146,5 +147,12 @@ Henrique Bursztyn, Marius Crainic, Alan Weinstein, and Chenchang Zhu.
 DB~Bl{\'a}zquez-Sanz, Carlos~A Mar{\'\i}n~Arango, and Sedney Su{\'a}rez~Gordon.
 \newblock Group bundles and group connections.
 \newblock {\em Lobachevskii Journal of Mathematics}, 43(1):49--70, 2022.
+\newblock https://doi.org/10.1134/S1995080222040072.
+
+\bibitem{grad2026yangmillstheorymultiplicativeehresmann}
+Žan Grad.
+\newblock Yang-mills theory for multiplicative {E}hresmann connections.
+\newblock 2026.
+\newblock arXiv:2607.10904, https://doi.org/10.48550/arXiv.2607.10904.
 
 \end{thebibliography}
