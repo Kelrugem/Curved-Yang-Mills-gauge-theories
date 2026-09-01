@@ -8,6 +8,7 @@
 \usepackage{float}
 \definecolor{MyDarkBlue}{rgb}{0.15,0.25,0.45}
 \definecolor{Cred}{rgb}{0,0,0}
+\definecolor{Cred2}{rgb}{1,0,0}
 \usepackage{epsfig,rotating}
 \usepackage{amsmath,amssymb}
 \usepackage{amsfonts}
@@ -6507,7 +6508,7 @@ for all $(p, g, q) \in \mathcal{P}* \mathcal{G} * \mathcal{G}$ and a suitable cu
 Due to the fact that we have a simply transitive $\mathcal{G}$-action on $\mathcal{P}$, it follows that the connection on $\mathcal{G}$ is multiplicative. 
 \end{proof}
 
-Multiplicative connections will be introduced later in more detail when we discuss the field strength.
+Multiplicative connections will be introduced later in more detail when we discuss the field strength, {\color{Cred2} however, let us already note that it is well-known that multiplicative connections always exist on LGBs $\caG$; see also the following examples}.
 Let us now introduce several examples.
 
 \begin{examples}{Recovering the classical definition}{OurConnectionIsReallyMoreGeneral}
@@ -6515,7 +6516,7 @@ As we already discussed several times, especially recall \ref{rem:ModRightPushOn
 \end{examples}
 
 \begin{examples}{Associated LGBs}{AssociatedLGBsAndTheirCanonicalConnection}
-Recall that LGBs themselves are principal bundles as in \ref{ex:TrivialPrincAsLGB}. Let $G, H$ be Lie groups, $P \to M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. Then we have the LGB associated to the principal bundle $P$ and the representation $\psi$ on $H$
+Recall that LGBs themselves are principal bundles as in \ref{ex:TrivialPrincAsLGB}. Let $G, H$ be Lie groups, $P \to M$ a principal $G$-bundle over a smooth manifold $M$, and $\psi$ a $G$-representation on $H$. We have the LGB associated to the principal bundle $P$ and the representation $\psi$ on $H$
 \begin{center}
 	\begin{tikzcd}
 	H \arrow{r}& \mathcal{H} \coloneqq P \times_\psi H \arrow{d} \\
@@ -6547,7 +6548,7 @@ Observe that we have
 \mathrm{PT}_\alpha^\mathcal{H}\bigl( [p, h] \bigr)
 	\cdot \mathrm{PT}_\alpha^\mathcal{H}\Bigl( \mleft[p, h^\prime\mright] \Bigr)
 \end{align*}
-for all $[p, h], \mleft[ p, h^\prime \mright] \in \mathcal{H}_x$. Thus, associated connections define multiplicative and in particular Ehresmann connections on $\caH$(whose horizontal distribution modifies itself). Observe however, that not every Ehresmann connection is multiplicative; we will come back to this in \ref{CYMExamples}.
+for all $[p, h], \mleft[ p, h^\prime \mright] \in \mathcal{H}_x$. Thus, associated connections define multiplicative and in particular Ehresmann connections on $\caH$(whose horizontal distribution modifies itself). Observe however, that not every Ehresmann connection is multiplicative; we will come back to this in \ref{CYMExamples}. {\color{Cred2} Last but not least, observe that this also shows that every LGB $\caH$ admits a multiplicative connection, by viewing $\caH$ canonically associated to a principal ${\rm Aut}(H)$-bundle.}
 %and thus Eq.\ \eqref{OiTHatIsHowWeFormulateHorizSymmetry} follows, \textit{i.e.}\
 %\begin{align*}
 %\mathcal{r}_{\mleft[ p, h^\prime \mright]*}(X)
