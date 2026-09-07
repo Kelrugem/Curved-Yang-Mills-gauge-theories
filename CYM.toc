@@ -41,5 +41,5 @@
 \contentsline {subsection}{\tocsubsection {}{4.3}{Examples}}{89}{subsection.266}%
 \contentsline {section}{\tocsection {}{5}{Future prospects}}{93}{section.281}%
 \contentsline {subsection}{\tocsubsection {}{5.1}{Associated bundles and connections}}{93}{subsection.282}%
-\contentsline {subsection}{\tocsubsection {}{5.2}{Principal Lie groupoid bundles}}{93}{subsection.283}%
-\contentsline {section}{\tocsection {Appendix}{}{List of References}}{94}{section*.285}%
+\contentsline {subsection}{\tocsubsection {}{5.2}{Principal Lie groupoid bundles}}{94}{subsection.283}%
+\contentsline {section}{\tocsection {Appendix}{}{List of References}}{95}{section*.285}%

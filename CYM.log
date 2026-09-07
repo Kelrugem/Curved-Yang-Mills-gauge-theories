@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  1 SEP 2026 18:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.18)  3 SEP 2026 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1597,7 +1597,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [78]
 [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-9742.
+9751.
 
 (C:\Users\kelru\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1607,7 +1607,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [90]
-[91] [92] [93] (CYM.bbl [94]
+[91]
+Underfull \vbox (badness 1199) has occurred while \output is active []
+
+ [92]
+[93] [94] (CYM.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 16--20
 []\OT1/lmr/m/n/8 (+20) Thomas Strobl. Al-ge-broid Yang-Mills the-o-ries. \OT1/l
 mr/m/it/8 (+20) Phys-i-cal re-view let-ters\OT1/lmr/m/n/8 (+20) , 93(21):211601
@@ -1652,7 +1656,7 @@ Underfull \hbox (badness 5832) in paragraph at lines 153--157
 es-mann con-nec-tions. 2026. arXiv:2607.10904,
  []
 
-) [95] (CYM.aux)
+[95]) [96] (CYM.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1661,8 +1665,8 @@ Package rerunfilecheck Info: File `CYM.out' has not changed.
 (rerunfilecheck)             Checksum: 675D0393D67A07E4898CB831DA7BA8FD;5083.
  ) 
 Here is how much of TeX's memory you used:
- 42256 strings out of 467866
- 837819 string characters out of 5418325
+ 42257 strings out of 467866
+ 837826 string characters out of 5418325
  1332970 words of memory out of 5000000
  69456 multiletter control sequences out of 15000+600000
  738362 words of font info for 330 fonts, out of 8000000 for 9000
@@ -1729,9 +1733,9 @@ grams/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/kelru/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/kelru/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb><C:/Users/kelru/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on CYM.pdf (96 pages, 2201197 bytes).
+Output written on CYM.pdf (97 pages, 2205075 bytes).
 PDF statistics:
- 1920 PDF objects out of 2073 (max. 8388607)
- 406 named destinations out of 1000 (max. 500000)
+ 1927 PDF objects out of 2073 (max. 8388607)
+ 407 named destinations out of 1000 (max. 500000)
  52001 words of extra memory for PDF output out of 61914 (max. 10000000)
 
